@@ -12,98 +12,98 @@ tags:
 - definition
 title: Abstract syntax tree
 ---
-   
-In computer science, an abstract syntax tree (AST), or just syntax tree, is a   
-tree representation of the abstract syntactic structure of text (often source   
-code) written in a formal language. Each node of the tree denotes a construct   
-occurring in the text.   
-   
-The syntax is \"abstract\" in the sense that it does not represent every detail   
-appearing in the real syntax, but rather just the structural or content-related   
-details. For instance, grouping parentheses are implicit in the tree structure,   
-so these do not have to be represented as separate nodes. Likewise, a syntactic   
-construct like an if-condition-then statement may be denoted by means of a   
-single node with three branches.   
-   
-This distinguishes abstract syntax trees from concrete syntax trees,   
-traditionally designated parse trees. Parse trees are typically built by a   
-parser during the source code translation and compiling process. Once built,   
-additional information is added to the AST by means of subsequent processing,   
-e.g., contextual analysis.   
-   
-Abstract syntax trees are also used in program analysis and program   
-transformation systems.   
-   
 
-   
-==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==   
-   
-   
-# Text Elements   
-Statement sequence ^rsuWT3jv   
-   
-while ^n8FREbgN   
-   
-return ^TgZfo8TB   
-   
-variable name: a ^ub6j1wPk   
-   
-compare op: != ^bsP5pN20   
-   
-branch ^dWxXSQV8   
-   
-assign ^sZ1eujdV   
-   
-variable name: b ^FImPpgmQ   
-   
-constant value: 0 ^2dJmfZtg   
-   
-compare op: > ^pk2hK0fi   
-   
-variable name: a ^U5NoQjj0   
-   
-variable name: b ^oV93ur8u   
-   
-variable name: a ^zIz0Kbqa   
-   
-bin op op: - ^K4iSowRc   
-   
-variable name: a ^2qKJrk5N   
-   
-variable name: b ^6ajNjjDY   
-   
-body ^BQXfseiY   
-   
-An abstract syntax tree for the   
- following code for the Euclidean algorithm: ^090UvbBt   
-   
-while b ≠ 0:   
-    if a > b:   
-        a := a - b   
-    else:   
-        b := b - a   
-return a ^cWGVBoHd   
-   
-Condition ^65lpcQnk   
-   
-assign ^DEpsrSsu   
-   
-variable name: b ^hZ1hBgTP   
-   
-bin op op: - ^sD0gWJsS   
-   
-variable name: b ^sU3CpDSv   
-   
-variable name: a ^dNEZ6sgA   
-   
-if-body ^tagIFt4J   
-   
-else-body ^mrOpiFQa   
-   
-condition ^gLGgXpqq   
-   
-%%   
-# Drawing   
+In computer science, an abstract syntax tree (AST), or just syntax tree, is a
+tree representation of the abstract syntactic structure of text (often source
+code) written in a formal language. Each node of the tree denotes a construct
+occurring in the text.
+
+The syntax is \"abstract\" in the sense that it does not represent every detail
+appearing in the real syntax, but rather just the structural or content-related
+details. For instance, grouping parentheses are implicit in the tree structure,
+so these do not have to be represented as separate nodes. Likewise, a syntactic
+construct like an if-condition-then statement may be denoted by means of a
+single node with three branches.
+
+This distinguishes abstract syntax trees from concrete syntax trees,
+traditionally designated parse trees. Parse trees are typically built by a
+parser during the source code translation and compiling process. Once built,
+additional information is added to the AST by means of subsequent processing,
+e.g., contextual analysis.
+
+Abstract syntax trees are also used in program analysis and program
+transformation systems.
+
+
+
+==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
+
+
+# Text Elements
+Statement sequence ^rsuWT3jv
+
+while ^n8FREbgN
+
+return ^TgZfo8TB
+
+variable name: a ^ub6j1wPk
+
+compare op: != ^bsP5pN20
+
+branch ^dWxXSQV8
+
+assign ^sZ1eujdV
+
+variable name: b ^FImPpgmQ
+
+constant value: 0 ^2dJmfZtg
+
+compare op: > ^pk2hK0fi
+
+variable name: a ^U5NoQjj0
+
+variable name: b ^oV93ur8u
+
+variable name: a ^zIz0Kbqa
+
+bin op op: - ^K4iSowRc
+
+variable name: a ^2qKJrk5N
+
+variable name: b ^6ajNjjDY
+
+body ^BQXfseiY
+
+An abstract syntax tree for the
+ following code for the Euclidean algorithm: ^090UvbBt
+
+while b ≠ 0:
+    if a > b:
+        a := a - b
+    else:
+        b := b - a
+return a ^cWGVBoHd
+
+Condition ^65lpcQnk
+
+assign ^DEpsrSsu
+
+variable name: b ^hZ1hBgTP
+
+bin op op: - ^sD0gWJsS
+
+variable name: b ^sU3CpDSv
+
+variable name: a ^dNEZ6sgA
+
+if-body ^tagIFt4J
+
+else-body ^mrOpiFQa
+
+condition ^gLGgXpqq
+
+%%
+# Drawing
 ```json
 {
 	"type": "excalidraw",
@@ -2920,7 +2920,7 @@ condition ^gLGgXpqq
 	"files": {}
 }
 ```
-   
+
 %%
-   
+
 *An abstract syntax tree for the Euclidean algorithm*

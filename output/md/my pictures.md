@@ -9,11 +9,11 @@ tags:
 - permanent
 title: My Pictures
 ---
-   
-   
-- Personal Photo   
-- Personal ART   
-- Artistic   
-- Cheatsheets   
-- Photos   
+
+
+- Personal Photo
+- Personal ART
+- Artistic
+- Cheatsheets
+- Photos
 - GIF's & Memes

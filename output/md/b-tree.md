@@ -9,17 +9,17 @@ tags:
 - definition
 title: B-tree
 ---
-   
-> B-tree is a self-balancing tree data structure that maintains sorted data and   
-> allows searches, sequential access, insertions, and deletions in   
-> [logarithmic](./logarithm%20%28logs%29.md) time. The B-tree generalizes the   
-> binary search tree, allowing for nodes with more than two children. Unlike   
-> other self-balancing binary search trees, the B-tree is well suited for   
-> storage systems that read and write relatively large blocks of data, such as   
-> databases and file systems.   
->   
-> -- [Wikipedia](https://en.wikipedia.org/wiki/B-tree)   
-   
+
+> B-tree is a self-balancing tree data structure that maintains sorted data and
+> allows searches, sequential access, insertions, and deletions in
+> [logarithmic](./logarithm%20%28logs%29.md) time. The B-tree generalizes the
+> binary search tree, allowing for nodes with more than two children. Unlike
+> other self-balancing binary search trees, the B-tree is well suited for
+> storage systems that read and write relatively large blocks of data, such as
+> databases and file systems.
+>
+> -- [Wikipedia](https://en.wikipedia.org/wiki/B-tree)
+
 ```
             hello
       ┌───────┴───────┐
@@ -29,12 +29,12 @@ title: B-tree
 ┌─┴─┐   ┌─┴─┐   ┌─┴─┐   ┌─┴─┐
 4   5       6   4   5       6
 ```
-   
-   
-|           |             |                |   
-|-----------|-------------|----------------|   
-| Algorithm | **Average** | **Worst case** |   
-| Space     | O(*n*)      | O(*n*)         |   
-| Search    | O(log *n*)  | O(log *n*)     |   
-| Insert    | O(log *n*)  | O(log *n*)     |   
+
+
+|           |             |                |
+|-----------|-------------|----------------|
+| Algorithm | **Average** | **Worst case** |
+| Space     | O(*n*)      | O(*n*)         |
+| Search    | O(log *n*)  | O(log *n*)     |
+| Insert    | O(log *n*)  | O(log *n*)     |
 | Delete    | O(log *n*)  | O(log *n*)     |

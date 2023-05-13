@@ -9,7 +9,7 @@ tags:
 - definition
 title: Iterator
 ---
-   
-Iterator is an object that can be used to traverse a   
-[collection (abstract data type)](./collection%20%28abstract%20data%20type%29.md), practically   
+
+Iterator is an object that can be used to traverse a
+[collection (abstract data type)](./collection%20%28abstract%20data%20type%29.md), practically
 [lists](./list%20%28abstract%20data%20type%29.md).

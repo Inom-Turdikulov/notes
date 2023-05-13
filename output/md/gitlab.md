@@ -10,19 +10,19 @@ tags:
 - definition
 title: GitLab
 ---
-   
-DevOps software package which can develop, secure, and operate software.   
-Alternative to [github](./github.md).   
-   
-Includes:   
-   
-   
-- Git repository   
-- CI/CD   
-- Issue tracking   
-- Code review (merge requests)   
-- Project management   
-- Wiki   
-- Pages for static sites / documentation   
-- Container registry   
+
+DevOps software package which can develop, secure, and operate software.
+Alternative to [github](./github.md).
+
+Includes:
+
+
+- Git repository
+- CI/CD
+- Issue tracking
+- Code review (merge requests)
+- Project management
+- Wiki
+- Pages for static sites / documentation
+- Container registry
 - Can be [self-hosted](./self-hosting%20%28web%20services%29.md)

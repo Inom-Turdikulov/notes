@@ -9,24 +9,24 @@ tags:
 - definition
 title: Floating-point arithmetic
 ---
-   
-> Floating-point arithmetic (FP) is arithmetic that represents real numbers   
-> approximately, using an integer with a fixed precision, called the   
-> `significand`, scaled by an integer exponent of a fixed base.   
->   
-> Example:   
-> $12.345 = \underbrace{12345}_\text{significand} \times \underbrace{10}_\text{base}\!\!\!\!\!\!^{\overbrace{-3}^\text{exponent}}$   
->   
-> In practice, most floating-point systems use base two, though base ten   
-> (decimal floating point) is also common.   
->   
-> -- [Wikipedia](https://en.wikipedia.org/wiki/Floating-point_arithmetic)   
-   
-Base two floating pointing is used by default and can produce rounding errors.   
-   
-This [code example](https://onlinegdb.com/EsZMTfVd8) for example never   
-terminates:   
-   
+
+> Floating-point arithmetic (FP) is arithmetic that represents real numbers
+> approximately, using an integer with a fixed precision, called the
+> `significand`, scaled by an integer exponent of a fixed base.
+>
+> Example:
+> $12.345 = \underbrace{12345}_\text{significand} \times \underbrace{10}_\text{base}\!\!\!\!\!\!^{\overbrace{-3}^\text{exponent}}$
+>
+> In practice, most floating-point systems use base two, though base ten
+> (decimal floating point) is also common.
+>
+> -- [Wikipedia](https://en.wikipedia.org/wiki/Floating-point_arithmetic)
+
+Base two floating pointing is used by default and can produce rounding errors.
+
+This [code example](https://onlinegdb.com/EsZMTfVd8) for example never
+terminates:
+
 ```c
 #include <stdio.h>
 
@@ -37,7 +37,7 @@ int main() {
     return 0;
 }
 ```
-   
-   
-Decimal (base ten) floating-point usable to work with money values. TODO: add   
+
+
+Decimal (base ten) floating-point usable to work with money values. TODO: add
 note?

@@ -9,13 +9,13 @@ tags:
 - permanent
 title: My Videos
 ---
-   
-   
-- [mpv](./mpv.md)   
-- [youtube](./youtube.md)   
-- selfhosted   
-- short   
-- learn, CS, gamedev, irl   
-- movies   
-- series   
+
+
+- [mpv](./mpv.md)
+- [youtube](./youtube.md)
+- selfhosted
+- short
+- learn, CS, gamedev, irl
+- movies
+- series
 - wtwitch

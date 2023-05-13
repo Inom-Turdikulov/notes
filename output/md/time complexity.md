@@ -10,7 +10,7 @@ tags:
 - CS
 title: Time complexity
 ---
-   
-Measuring the speed of an operation (how many steps' operation will take) is also   
-known as measuring its ==time complexity==.   
+
+Measuring the speed of an operation (how many steps' operation will take) is also
+known as measuring its ==time complexity==.
 <!--SR:!2023-04-16,3,250-->

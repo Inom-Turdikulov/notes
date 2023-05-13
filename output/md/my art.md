@@ -9,8 +9,8 @@ tags:
 - outline
 title: 202303121811-My Art
 ---
-   
-I have some art but need to organize it. And I really want to start drawing with   
-this book: [@AndrewLoomisFunPencilHow2013](./%40AndrewLoomisFunPencilHow2013.md).   
-   
+
+I have some art but need to organize it. And I really want to start drawing with
+this book: [@AndrewLoomisFunPencilHow2013](./%40AndrewLoomisFunPencilHow2013.md).
+
 TODO: organize art

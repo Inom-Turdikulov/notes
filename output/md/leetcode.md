@@ -9,5 +9,5 @@ tags:
 - definition
 title: LeetCode
 ---
-   
+
 Site - [LeetCode](https://leetcode.com/)

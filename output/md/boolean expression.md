@@ -9,12 +9,12 @@ tags:
 - definition
 title: Boolean expression
 ---
-   
-Expression which produce a `Boolean` value when evaluated. Used in many   
-[programming languages](./programming%20language.md) as built-in type.   
-   
-In C you need to include `stdbool.h` to use `bool` type.   
-   
+
+Expression which produce a `Boolean` value when evaluated. Used in many
+[programming languages](./programming%20language.md) as built-in type.
+
+In C you need to include `stdbool.h` to use `bool` type.
+
 ```c
 #include <stdbool.h>
 printf("true: %d\n", true); // true: 1

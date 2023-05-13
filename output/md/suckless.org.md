@@ -9,9 +9,9 @@ tags:
 - definition
 title: suckless.org
 ---
-   
-# Slock installation   
-   
+
+# Slock installation
+
 ```{.bash org-language="sh"}
 cd ~/Projects/suckless
 git clone git://git.suckless.org/slock
@@ -26,7 +26,7 @@ cp config.def.h config.h
 make
 sudo make install
 ```
-   
-   
-   
+
+
+
 - [dwm](./dwm.md)

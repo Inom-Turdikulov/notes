@@ -9,6 +9,6 @@ tags:
 - definition
 title: Instant messaging
 ---
-   
-   
+
+
 - [how do i work with instant messages](./how%20do%20i%20work%20with%20instant%20messages.md)

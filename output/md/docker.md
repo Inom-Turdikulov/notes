@@ -9,5 +9,5 @@ tags:
 - definition
 title: Docker
 ---
-   
+
 [Docker Hub Container Image Library | App Containerization](https://hub.docker.com/)

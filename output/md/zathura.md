@@ -9,16 +9,16 @@ tags:
 - inbox
 title: Zathura
 ---
-   
-Open recent flles::`:open /`   
-   
-# Useful shortcuts, from most useful to least   
-   
-| Keybinding | Description |   
-|------------|-------------|   
-| {a}, {s}     |  Adjust window in best-fit or width mode |   
-| {j}, {k}     |  Go to the next or previous page |   
-   
+
+Open recent flles::`:open /`
+
+# Useful shortcuts, from most useful to least
+
+| Keybinding | Description |
+|------------|-------------|
+| {a}, {s}     |  Adjust window in best-fit or width mode |
+| {j}, {k}     |  Go to the next or previous page |
+
 ```
 C-c, Escape Abort
 

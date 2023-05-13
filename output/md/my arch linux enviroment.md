@@ -9,85 +9,85 @@ tags:
 - permanent
 title: My Arch Linux enviroment
 ---
-   
-[Improving performance - ArchWiki](https://wiki.archlinux.org/title/improving_performance)   
-   
-> Arch Linux is an independently developed, x86-64 general-purpose   
-> GNU/Linux distribution that strives to provide the latest stable   
-> versions of most software by following a rolling-release model. The   
-> default installation is a minimal base system, configured by the user   
-> to only add what is purposely required.   
-   
-For me Arch Linux is feature-complete Linux distribution, with small   
-dependencies, rich documentation and a good community.   
-   
-I use it a lot, and know how to work with it.   
-   
-# Fix problems   
-   
-- [magic sysrq key](./magic%20sysrq%20key.md)   
-   
-# Update packages   
-   
-- [pacman (software)](./pacman%20%28software%29.md)   
-   
-# Befor start   
-   
-- chceck [datasets/hostnames](/not_created.md) and network   
-   
-# Principles   
-   
-   
--   simplicity, less problems for users, minimal changes.   
--   modernity, since it\'s rolling-release distribution used latest   
-    stable releases of software.   
-   
--   pragmatism, no ideological, political or popular opinion\'s.   
--   user centrality, fill the needs of arch community users - proficient   
-    GNU/Linux users, or anyone who is willing to read documentation, and   
-    solve their own problems.   
-   
--   versatility, arch is general-purpose distribution, it provide   
-    ability to build custom system (do-it-yourself), by choosing of   
-    thousands packages from official repository or AUR. Arch also   
-    provide tools like simple and fast package manager, arch build   
-    system, custom repositories, etc.   
-   
-# 0. Prepare environment   
-   
-## Download distributive and verify checksum   
-   
-<[https://archlinux.org/download/>](https://archlinux.org/download/>)   
-   
+
+[Improving performance - ArchWiki](https://wiki.archlinux.org/title/improving_performance)
+
+> Arch Linux is an independently developed, x86-64 general-purpose
+> GNU/Linux distribution that strives to provide the latest stable
+> versions of most software by following a rolling-release model. The
+> default installation is a minimal base system, configured by the user
+> to only add what is purposely required.
+
+For me Arch Linux is feature-complete Linux distribution, with small
+dependencies, rich documentation and a good community.
+
+I use it a lot, and know how to work with it.
+
+# Fix problems
+
+- [magic sysrq key](./magic%20sysrq%20key.md)
+
+# Update packages
+
+- [pacman (software)](./pacman%20%28software%29.md)
+
+# Befor start
+
+- chceck [datasets/hostnames](/not_created.md) and network
+
+# Principles
+
+
+-   simplicity, less problems for users, minimal changes.
+-   modernity, since it\'s rolling-release distribution used latest
+    stable releases of software.
+
+-   pragmatism, no ideological, political or popular opinion\'s.
+-   user centrality, fill the needs of arch community users - proficient
+    GNU/Linux users, or anyone who is willing to read documentation, and
+    solve their own problems.
+
+-   versatility, arch is general-purpose distribution, it provide
+    ability to build custom system (do-it-yourself), by choosing of
+    thousands packages from official repository or AUR. Arch also
+    provide tools like simple and fast package manager, arch build
+    system, custom repositories, etc.
+
+# 0. Prepare environment
+
+## Download distributive and verify checksum
+
+<[https://archlinux.org/download/>](https://archlinux.org/download/>)
+
 ``` {.bash org-language="sh"}
 curl -O "..." # I recommed download iso directli into USB drive (ventoy)
 b2sum archlinux-2022.08.05-x86_64.iso
 # compare it (simplest method) copy / C-f,C-v on download page
 ```
-   
-   
-After downloading and checking, copy it to flash drive, I use ventoy.   
-   
-## Setup installation via SSH, recommended way   
-   
-1.  Set a root password `passwd`{.verbatim}   
-   
-2.  Confirm that `PermitRootLogin`{.verbatim} yes is set in   
-    `/etc/ssh/sshd_config`{.verbatim}. If it is not, set it and reload   
-    the OpenSSH daemon `sshd.service`{.verbatim}   
-   
-3.  On the local machine, connect to the target machine via SSH with the   
-    following commands:   
-   
+
+
+After downloading and checking, copy it to flash drive, I use ventoy.
+
+## Setup installation via SSH, recommended way
+
+1.  Set a root password `passwd`{.verbatim}
+
+2.  Confirm that `PermitRootLogin`{.verbatim} yes is set in
+    `/etc/ssh/sshd_config`{.verbatim}. If it is not, set it and reload
+    the OpenSSH daemon `sshd.service`{.verbatim}
+
+3.  On the local machine, connect to the target machine via SSH with the
+    following commands:
+
 ``` {.bash org-language="sh"}
     ip a                # find machine IP, need run inside remote machine
     ssh root@address    # need run from client machine
     ping archlinux.org  # check internet connection
 ```
-   
-   
-## Prepare   
-   
+
+
+## Prepare
+
 ``` {.bash org-language="sh"}
 pacman -Syy # update mirrors
 
@@ -117,25 +117,25 @@ ls /sys/firmware/efi/efivars
 timedatectl set-ntp true
 timedatectl status
 ```
-   
-   
-# 1. Btrfs (better FS) disk layout   
-   
-## Features   
-   
-   
--   self-healing in some configurations (nature of COW)   
--   online defragmentation   
--   online volume grow and shrinking   
--   online block device addition and removal   
--   RAID0, RAID1 and RAID10   
--   Atomic writable (via copy-on-write)   
--   Checksums   
--   Incremental backup   
--   ...   
-   
-# 1. Wipe existing disks   
-   
+
+
+# 1. Btrfs (better FS) disk layout
+
+## Features
+
+
+-   self-healing in some configurations (nature of COW)
+-   online defragmentation
+-   online volume grow and shrinking
+-   online block device addition and removal
+-   RAID0, RAID1 and RAID10
+-   Atomic writable (via copy-on-write)
+-   Checksums
+-   Incremental backup
+-   ...
+
+# 1. Wipe existing disks
+
 ``` {.bash org-language="sh"}
 # cleanup partition information
 sgdisk --zap-all $DISK_DRIVE_1
@@ -148,16 +148,16 @@ sgdisk --zap-all $DISK_DRIVE_2
 shred --verbose --random-source=/dev/urandom -n1 --zero $DISK_DRIVE_1 &
 shred --verbose --random-source=/dev/urandom -n1 --zero $DISK_DRIVE_2 &
 ```
-   
-   
-# 2. Partitioning   
-   
-Since we use cgdisk, it use 1 MiB alignment automatically (useful for   
-performance). Here example how to do partitioning on 1 disk drive, you   
-need repeat this steps on drive 2.   
-   
-## Start partitioning from free space, usually last line in TUI.   
-   
+
+
+# 2. Partitioning
+
+Since we use cgdisk, it use 1 MiB alignment automatically (useful for
+performance). Here example how to do partitioning on 1 disk drive, you
+need repeat this steps on drive 2.
+
+## Start partitioning from free space, usually last line in TUI.
+
 ``` {.bash org-language="sh"}
 cgdisk $DISK_DRIVE_1
 # Create an EFI (EF00) partition with this commands
@@ -186,14 +186,14 @@ w
 yes # confirm
 
 ```
-   
-   
+
+
 ```{=org}
 #+RESULTS:
 ```
-   
-## Backup GPT scheme and import GPT scheme to different disk, for RAID1 setup   
-   
+
+## Backup GPT scheme and import GPT scheme to different disk, for RAID1 setup
+
 ``` {.bash org-language="sh"}
 sgdisk --backup=partiton_table $DISK_DRIVE_1 # backup GPT first
 sgdisk --load-backup=partition_table $DISK_DRIVE_2
@@ -203,10 +203,10 @@ sgdisk -G $DISK_DRIVE_2
 # alternative direct transfer gpt scheme
 # sgdisk $DISK_DRIVE_1 -R $DISK_DRIVE_2
 ```
-   
-   
-## Create environment variables for each partitons   
-   
+
+
+## Create environment variables for each partitons
+
 ``` {.bash org-language="sh"}
 export DISK_PARTITON_A1=$DISK_DRIVE_1'1'
 export DISK_PARTITON_A2=$DISK_DRIVE_1'2'
@@ -225,10 +225,10 @@ test -e "$DISK_PARTITON_B2" && echo "$DISK_PARTITON_B2" OK || echo fail
 test -e "$DISK_PARTITON_B3" && echo "$DISK_PARTITON_B3" OK || echo fail
 
 ```
-   
-   
-## 3. File systems creation   
-   
+
+
+## 3. File systems creation
+
 ``` {.bash org-language="sh"}
 # Create EFI (FAT32) filesystem:
 mkfs.fat -F 32 $DISK_PARTITON_A1
@@ -240,10 +240,10 @@ mkfs.fat -F 32 $DISK_PARTITON_A1
 mkfs -t btrfs -L BOOT -m raid1 -d raid1 $DISK_PARTITON_A2 $DISK_PARTITON_B2
 mkfs -t btrfs -L ROOT -m raid1 -d raid1 $DISK_PARTITON_A3 $DISK_PARTITON_B3
 ```
-   
-   
-## Step 4 - Create and Mount Subvolumes   
-   
+
+
+## Step 4 - Create and Mount Subvolumes
+
 ``` {.bash org-language="sh"}
 # Create subvolumes
 mount $DISK_PARTITON_A3 /mnt/
@@ -298,10 +298,10 @@ mount -o defaults,noatime $DISK_PARTITON_A2 /mnt/boot
 # Mount the EFI partition
 mkdir -p /mnt/boot/efi && mount $DISK_PARTITON_A1 /mnt/boot/efi
 ```
-   
-   
-## Step 5 - Base System and /etc/fstab   
-   
+
+
+## Step 5 - Base System and /etc/fstab
+
 ``` {.bash org-language="sh"}
 # Select the HTTPS mirrors 100 up-to-date, and located in either Russia, Netherlands, Sweden  or Germany, sort them by download speed, and overwrite the file /etc/pacman.d/mirrorlist with the results:
 reflector --country Russia,Netherlands,Sweden,Germany  --latest 100 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
@@ -341,10 +341,10 @@ genfstab -U /mnt >> /mnt/etc/fstab
 # Validate fstab
 less /mnt/etc/fstab
 ```
-   
-   
-## Step 6 - System Configuration   
-   
+
+
+## Step 6 - System Configuration
+
 ``` {.bash org-language="sh"}
 # Add some zsh configs for a nicer experience
 cp /etc/zsh/zprofile /mnt/root/.zprofile && \
@@ -396,10 +396,10 @@ passwd $USER
 # Uncomment to allow members of group wheel to execute any command
 # %wheel ALL=(ALL) ALL
 ```
-   
-   
-## Step 7 - Configure initramfs   
-   
+
+
+## Step 7 - Configure initramfs
+
 ``` {.bash org-language="sh"}
 cp /etc/mkinitcpio.conf /tmp/mkinitcpio.conf.bak
 
@@ -416,10 +416,10 @@ diff /etc/mkinitcpio.conf /tmp/mkinitcpio.conf.bak
 # recreate initramfs
 mkinitcpio -p linux
 ```
-   
-   
-## Step 8 - Bootloader installation   
-   
+
+
+## Step 8 - Bootloader installation
+
 ``` {.bash org-language="sh"}
 # https://wiki.archlinux.org/title/GRUB#Installation
 # need run this command in chrooted /mnt
@@ -442,10 +442,10 @@ mount /dev/sdb1 /tmp/efi2
 ls -lR /tmp/efi2
 umount /tmp/efi2
 ```
-   
-   
-## Step 9 - Optimizations   
-   
+
+
+## Step 9 - Optimizations
+
 ``` {.bash org-language="sh"}
 # Install pipewire & pavucontrol
 pacman -S pipewire pavucontrol
@@ -521,20 +521,20 @@ su $USER
 cd ~ && git clone https://aur.archlinux.org/pikaur.git && \
 cd pikaur && makepkg -fsri && cd .. && sudo rm -dR pikaur && exit
 ```
-   
-   
-## Step 11 - Exit chroot unmount and reboot   
-   
+
+
+## Step 11 - Exit chroot unmount and reboot
+
 ``` {.bash org-language="sh"}
 exit
 
 umount -R /mnt
 reboot
 ```
-   
-   
-## Step 12 - Post install   
-   
+
+
+## Step 12 - Post install
+
 ``` {.bash org-language="sh"}
 # Validate btrfs state
 sudo btrfs device stats /
@@ -543,60 +543,60 @@ sudo btrfs filesystem df /
 df
 
 ```
-   
-   
-# Useful Links   
-   
-   
--   <[https://wiki.archlinux.org/title/System_maintenance>](https://wiki.archlinux.org/title/System_maintenance>)   
--   <[https://wiki.archlinux.org/title/improving_performance>](https://wiki.archlinux.org/title/improving_performance>)   
--   <[https://wiki.archlinux.org/title/General_recommendations>](https://wiki.archlinux.org/title/General_recommendations>)   
-   
-# Sources   
-   
-   
--   <[https://wiki.archlinux.org/title/Frequently_asked_questions>](https://wiki.archlinux.org/title/Frequently_asked_questions>)   
--   <[https://wiki.archlinux.org/title/installation_guide>](https://wiki.archlinux.org/title/installation_guide>)   
--   <[https://wiki.archlinux.org/title/Install_Arch_Linux_via_SSH>](https://wiki.archlinux.org/title/Install_Arch_Linux_via_SSH>)   
--   <[https://wiki.gentoo.org/wiki/Btrfs/Native_System_Root_Guide#Partitioning>](https://wiki.gentoo.org/wiki/Btrfs/Native_System_Root_Guide#Partitioning>)   
--   <[https://wiki.archlinux.org/title/btrfs#Compression>](https://wiki.archlinux.org/title/btrfs#Compression>)   
--   <[https://gist.github.com/Th3Whit3Wolf/2f24b29183be7f8e9c0b05115aefb693>](https://gist.github.com/Th3Whit3Wolf/2f24b29183be7f8e9c0b05115aefb693>)   
--   <[https://gist.github.com/broedli/5604637d5855bef68f3e#72-bootloader-grub2-install>](https://gist.github.com/broedli/5604637d5855bef68f3e#72-bootloader-grub2-install>)   
-   
-yadm anaconda   
-<[https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications>](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications>)   
-<[https://wiki.archlinux.org/index.php/GTK+#Themes>](https://wiki.archlinux.org/index.php/GTK+#Themes>)   
-<[https://wiki.archlinux.org/index.php/qt#Appearance>](https://wiki.archlinux.org/index.php/qt#Appearance>)   
-   
-<[https://lukesmith.xyz/programs/ock>](https://lukesmith.xyz/programs/ock>) surf, ungoogled-chrome core & tools   
-   
-1.  Network   
-   
+
+
+# Useful Links
+
+
+-   <[https://wiki.archlinux.org/title/System_maintenance>](https://wiki.archlinux.org/title/System_maintenance>)
+-   <[https://wiki.archlinux.org/title/improving_performance>](https://wiki.archlinux.org/title/improving_performance>)
+-   <[https://wiki.archlinux.org/title/General_recommendations>](https://wiki.archlinux.org/title/General_recommendations>)
+
+# Sources
+
+
+-   <[https://wiki.archlinux.org/title/Frequently_asked_questions>](https://wiki.archlinux.org/title/Frequently_asked_questions>)
+-   <[https://wiki.archlinux.org/title/installation_guide>](https://wiki.archlinux.org/title/installation_guide>)
+-   <[https://wiki.archlinux.org/title/Install_Arch_Linux_via_SSH>](https://wiki.archlinux.org/title/Install_Arch_Linux_via_SSH>)
+-   <[https://wiki.gentoo.org/wiki/Btrfs/Native_System_Root_Guide#Partitioning>](https://wiki.gentoo.org/wiki/Btrfs/Native_System_Root_Guide#Partitioning>)
+-   <[https://wiki.archlinux.org/title/btrfs#Compression>](https://wiki.archlinux.org/title/btrfs#Compression>)
+-   <[https://gist.github.com/Th3Whit3Wolf/2f24b29183be7f8e9c0b05115aefb693>](https://gist.github.com/Th3Whit3Wolf/2f24b29183be7f8e9c0b05115aefb693>)
+-   <[https://gist.github.com/broedli/5604637d5855bef68f3e#72-bootloader-grub2-install>](https://gist.github.com/broedli/5604637d5855bef68f3e#72-bootloader-grub2-install>)
+
+yadm anaconda
+<[https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications>](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications>)
+<[https://wiki.archlinux.org/index.php/GTK+#Themes>](https://wiki.archlinux.org/index.php/GTK+#Themes>)
+<[https://wiki.archlinux.org/index.php/qt#Appearance>](https://wiki.archlinux.org/index.php/qt#Appearance>)
+
+<[https://lukesmith.xyz/programs/ock>](https://lukesmith.xyz/programs/ock>) surf, ungoogled-chrome core & tools
+
+1.  Network
+
 ``` {.bash org-language="sh"}
     # Up network device if needed
     sudo ip link set dev enp10s0 up
 ```
-   
-   
-2.  Custom Font install   
-   
+
+
+2.  Custom Font install
+
 ``` {.bash org-language="sh"}
     # -LJ to download from github
     curl -LJ -o ~/.local/share/fonts/Meslo.zip --create-dirs https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.1/MPlus.zip
     trash ~/.local/share/fonts/MPlus.zip
     fc-cache -v
 ```
-   
-   
-3.  Ansible install <[https://github.com/inomoz/inomoz-quickstart>](https://github.com/inomoz/inomoz-quickstart>)   
-   
-# What to do on a failed disk (btrfs)   
-   
-<[https://superuser.com/questions/1087787/linux-btrfs-convert-to-single-with-failed-drive#>:\~:text=Begin%20a%20rebalancing%20operation%20with,and%20size%20of%20your%20array.](https://superuser.com/questions/1087787/linux-btrfs-convert-to-single-with-failed-drive#>:\~:text=Begin%20a%20rebalancing%20operation%20with,and%20size%20of%20your%20array.)   
-Do this in arch live-iso.   
-   
-Convert Btrfs raid1 to single Btrfs   
-   
+
+
+3.  Ansible install <[https://github.com/inomoz/inomoz-quickstart>](https://github.com/inomoz/inomoz-quickstart>)
+
+# What to do on a failed disk (btrfs)
+
+<[https://superuser.com/questions/1087787/linux-btrfs-convert-to-single-with-failed-drive#>:\~:text=Begin%20a%20rebalancing%20operation%20with,and%20size%20of%20your%20array.](https://superuser.com/questions/1087787/linux-btrfs-convert-to-single-with-failed-drive#>:\~:text=Begin%20a%20rebalancing%20operation%20with,and%20size%20of%20your%20array.)
+Do this in arch live-iso.
+
+Convert Btrfs raid1 to single Btrfs
+
 ``` {.bash org-language="sh"}
 # Disable auto-mounting btrfs array in /etc/fstab, reboot
 DISK_DEVICE=/dev/sd[x]  # change to your disk name
@@ -628,18 +628,18 @@ btrfs balance start -mconvert=dup "$MOUNTPOINT"3
 btrfs fi show
 btrfs fi usage
 ```
-   
-   
-<[https://btrfs.wiki.kernel.org/index.php/Using_Btrfs_with_Multiple_Devices>](https://btrfs.wiki.kernel.org/index.php/Using_Btrfs_with_Multiple_Devices>)   
-   
-We then shut down the system, plugged the replacement disk in (actually   
-the disk we had earlier ruined by double degraded booting, after wiping   
-the BTRFS partition), booted and then did the usual dance to turn the   
-now-single BTRFS into a RAID1 again.   
-   
-Restore gpt partiton from backup to new drive first (partition~table~),   
-and recommended restore EFI partition too. Instructions above.   
-   
+
+
+<[https://btrfs.wiki.kernel.org/index.php/Using_Btrfs_with_Multiple_Devices>](https://btrfs.wiki.kernel.org/index.php/Using_Btrfs_with_Multiple_Devices>)
+
+We then shut down the system, plugged the replacement disk in (actually
+the disk we had earlier ruined by double degraded booting, after wiping
+the BTRFS partition), booted and then did the usual dance to turn the
+now-single BTRFS into a RAID1 again.
+
+Restore gpt partiton from backup to new drive first (partition~table~),
+and recommended restore EFI partition too. Instructions above.
+
 ``` {.bash org-language="sh"}
 # add multiple devices
 btrfs device add /dev/sd[x] /boot
@@ -653,19 +653,19 @@ btrfs balance start -dconvert=raid1 -mconvert=raid1 /
 btrfs fi show
 btrfs filesystem df /
 ```
-   
-   
-As a result, we had a RAID1 again. If you wonder why we did not use   
-Btrfs replace: We would have to connect the new disk before the second   
-reboot, which is not always practical. With the method above, once we   
-have rebalanced the file system to a single one, we can reboot as often   
-as we like to get the new drive online.   
-   
-Alternative   
-<[https://btrfs.wiki.kernel.org/index.php/Using_Btrfs_with_Multiple_Devices#Using_btrfs_replace>](https://btrfs.wiki.kernel.org/index.php/Using_Btrfs_with_Multiple_Devices#Using_btrfs_replace>)   
-   
-# Enable SSH access (sshd) after installation   
-   
+
+
+As a result, we had a RAID1 again. If you wonder why we did not use
+Btrfs replace: We would have to connect the new disk before the second
+reboot, which is not always practical. With the method above, once we
+have rebalanced the file system to a single one, we can reboot as often
+as we like to get the new drive online.
+
+Alternative
+<[https://btrfs.wiki.kernel.org/index.php/Using_Btrfs_with_Multiple_Devices#Using_btrfs_replace>](https://btrfs.wiki.kernel.org/index.php/Using_Btrfs_with_Multiple_Devices#Using_btrfs_replace>)
+
+# Enable SSH access (sshd) after installation
+
 ``` {.bash org-language="sh"}
 # edit /etc/ssh/sshd_config
 # AllowUsers  username
@@ -677,27 +677,27 @@ sudo systemctl enable --now sshd
 # check ip and then you can connect
 ip a|grep enp
 ```
-   
-   
-TODO:   
-<[https://www.cyberciti.biz/faq/linux-backup-restore-a-partition-table-with-sfdisk-command/>](https://www.cyberciti.biz/faq/linux-backup-restore-a-partition-table-with-sfdisk-command/>)   
-<[https://wiki.archlinux.org/title/System_time#Time_synchronization>](https://wiki.archlinux.org/title/System_time#Time_synchronization>)   
-   
-# systemd-timesyncd   
-   
-<[https://blog.programs74.ru/how-to-use-systemd-timesyncd/>](https://blog.programs74.ru/how-to-use-systemd-timesyncd/>)   
-   
-# xdg project dir   
-   
-# [TODO]{.todo .TODO} zram-generator {#zram-generator}   
-   
-<[https://aur.archlinux.org/cgit/aur.git/tree/zram-generator.conf?h=zram-generator-defaults>](https://aur.archlinux.org/cgit/aur.git/tree/zram-generator.conf?h=zram-generator-defaults>)   
-<[https://github.com/systemd/zram-generator>](https://github.com/systemd/zram-generator>)   
-   
-Install zram-generator using one of the methods listed above. Create a   
-zram-generator.conf config file. Run systemctl daemon-reload to create   
-new device units. Run systemctl start /dev/zram0 (adjust the name as   
-appropriate to match the config). Call zramctl or swapon to confirm that   
-the device has been created and is in use. Once installed and   
-configured, the generator will be invoked by systemd early at boot,   
+
+
+TODO:
+<[https://www.cyberciti.biz/faq/linux-backup-restore-a-partition-table-with-sfdisk-command/>](https://www.cyberciti.biz/faq/linux-backup-restore-a-partition-table-with-sfdisk-command/>)
+<[https://wiki.archlinux.org/title/System_time#Time_synchronization>](https://wiki.archlinux.org/title/System_time#Time_synchronization>)
+
+# systemd-timesyncd
+
+<[https://blog.programs74.ru/how-to-use-systemd-timesyncd/>](https://blog.programs74.ru/how-to-use-systemd-timesyncd/>)
+
+# xdg project dir
+
+# [TODO]{.todo .TODO} zram-generator {#zram-generator}
+
+<[https://aur.archlinux.org/cgit/aur.git/tree/zram-generator.conf?h=zram-generator-defaults>](https://aur.archlinux.org/cgit/aur.git/tree/zram-generator.conf?h=zram-generator-defaults>)
+<[https://github.com/systemd/zram-generator>](https://github.com/systemd/zram-generator>)
+
+Install zram-generator using one of the methods listed above. Create a
+zram-generator.conf config file. Run systemctl daemon-reload to create
+new device units. Run systemctl start /dev/zram0 (adjust the name as
+appropriate to match the config). Call zramctl or swapon to confirm that
+the device has been created and is in use. Once installed and
+configured, the generator will be invoked by systemd early at boot,
 there is no need to do anything else.

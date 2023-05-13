@@ -9,8 +9,8 @@ tags:
 - definition
 title: Creamy Mashed Potatoes
 ---
-   
-   
-- TODO: add more info about potatoes, how to cook them, etc.   
-- TODO: [https://based.cooking/creamy-mashed-potatoes/](https://based.cooking/creamy-mashed-potatoes/)   
+
+
+- TODO: add more info about potatoes, how to cook them, etc.
+- TODO: [https://based.cooking/creamy-mashed-potatoes/](https://based.cooking/creamy-mashed-potatoes/)
 - TODO: [https://en.wikipedia.org/wiki/Mashed_potato](https://en.wikipedia.org/wiki/Mashed_potato)

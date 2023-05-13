@@ -6,7 +6,7 @@ tags:
 - definition
 title: MySQL
 ---
-   
-   
-- [ ] dev.mysql.com   
+
+
+- [ ] dev.mysql.com
 - [ ] mariadb

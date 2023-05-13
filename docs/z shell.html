@@ -547,268 +547,268 @@
 </div>
             <div class="container">
                 <div class="content"><h1 id="todo-check-this">TODO: check this...</h1>
-<p>&lt;<a href="https://github.com/alexanderepstein/Bash-Snippets&gt;" class="external-link">https://github.com/alexanderepstein/Bash-Snippets&gt;</a>   </p>
+<p>&lt;<a href="https://github.com/alexanderepstein/Bash-Snippets&gt;" class="external-link">https://github.com/alexanderepstein/Bash-Snippets&gt;</a></p>
 <h1 id="kill-process-by-pattern">Kill process by pattern</h1>
-<p>Use pkill -f, which matches the pattern for any part of the command line   </p>
-<p><code>pkill -f my_pattern</code>   </p>
-<p>Just in case it doesn\'t work, try to use this one as well:   </p>
-<p><code>pkill -9 -f my_pattern</code>   </p>
-<p>&lt;<a href="https://stackoverflow.com/questions/8987037/how-to-kill-all-processes-with-a-given-partial-name&gt;" class="external-link">https://stackoverflow.com/questions/8987037/how-to-kill-all-processes-with-a-given-partial-name&gt;</a>   </p>
+<p>Use pkill -f, which matches the pattern for any part of the command line</p>
+<p><code>pkill -f my_pattern</code></p>
+<p>Just in case it doesn\'t work, try to use this one as well:</p>
+<p><code>pkill -9 -f my_pattern</code></p>
+<p>&lt;<a href="https://stackoverflow.com/questions/8987037/how-to-kill-all-processes-with-a-given-partial-name&gt;" class="external-link">https://stackoverflow.com/questions/8987037/how-to-kill-all-processes-with-a-given-partial-name&gt;</a></p>
 <ul>
 <li>
-<p>TODO <br />
-<a href="https://github.com/alexanderepstein/Bash-Snippets" class="external-link">https://github.com/alexanderepstein/Bash-Snippets</a>   </p>
+<p>TODO
+  <a href="https://github.com/alexanderepstein/Bash-Snippets" class="external-link">https://github.com/alexanderepstein/Bash-Snippets</a></p>
 </li>
 <li>
-<p>Kill process by pattern   </p>
+<p>Kill process by pattern</p>
 </li>
 </ul>
-<p>Use pkill -f, which matches the pattern for any part of the command line   </p>
-<p>~pkill -f my_pattern~   </p>
-<p>Just in case it doesn't work, try to use this one as well:   </p>
-<p>~pkill -9 -f my_pattern~   </p>
-<p><a href="https://stackoverflow.com/questions/8987037/how-to-kill-all-processes-with-a-given-partial-name" class="external-link">https://stackoverflow.com/questions/8987037/how-to-kill-all-processes-with-a-given-partial-name</a>   </p>
-<p>Moving <br />
-command description <br />
-ctrl + a    Goto BEGINNING of command line <br />
-ctrl + e    Goto END of command line <br />
-ctrl + b    move back one character <br />
-ctrl + f    move forward one character <br />
-alt + f move cursor FORWARD one word <br />
-alt + b move cursor BACK one word <br />
-ctrl + xx   Toggle between the start of line and current cursor position <br />
-ctrl + ] + x    Where x is any character, moves the cursor forward to the next occurance of x <br />
-alt + ctrl + ] + x  Where x is any character, moves the cursor backwards to the previous occurance of x <br />
-Edit / Other <br />
-command description <br />
-ctrl + d    Delete the character under the cursor <br />
-ctrl + h    Delete the previous character before cursor <br />
-ctrl + u    Clear all / cut BEFORE cursor <br />
-ctrl + k    Clear all / cut AFTER cursor <br />
-ctrl + w    delete the word BEFORE the cursor <br />
-alt + d delete the word FROM the cursor <br />
-ctrl + y    paste (if you used a previous command to delete) <br />
-ctrl + i    command completion like Tab <br />
-ctrl + l    Clear the screen (same as clear command) <br />
-ctrl + c    kill whatever is running <br />
-ctrl + d    Exit shell (same as exit command when cursor line is empty) <br />
-ctrl + z    Place current process in background <br />
-ctrl + _    Undo <br />
-ctrl + x ctrl + u   Undo the last changes. ctrl+ _ does the same <br />
-ctrl + t    Swap the last two characters before the cursor <br />
-esc + t Swap last two words before the cursor <br />
-alt + t swap current word with previous <br />
-esc + . <br />
-esc + _ <br />
-alt + [Backspace]   delete PREVIOUS word <br />
-alt + &lt; Move to the first line in the history <br />
-alt + &gt; Move to the end of the input history, i.e., the line currently being entered <br />
-alt + ? display the file/folder names in the current path as help <br />
-alt + * print all the file/folder names in the current path as parameter <br />
-alt + . print the LAST ARGUMENT (ie "vim file1.txt file2.txt" will yield "file2.txt") <br />
-alt + c capitalize the first character to end of word starting at cursor (whole word if cursor is at the beginning of word) <br />
-alt + u make uppercase from cursor to end of word <br />
-alt + l make lowercase from cursor to end of word <br />
-alt + n <br />
-alt + p Non-incremental reverse search of history. <br />
-alt + r Undo all changes to the line <br />
-alt + ctl + e   Expand command line. <br />
-~[TAB][TAB] List all users <br />
-<span class="arithmatex">\([TAB][TAB] List all system variables   
-@[TAB][TAB] List all entries in your /etc/hosts file   
-[TAB]   Auto complete   
-cd -    change to PREVIOUS working directory   
-History   
-command description   
-ctrl + r    Search backward starting at the current line and moving 'up' through the history as necessary   
-crtl + s    Search forward starting at the current line and moving 'down' through the history as necessary   
-ctrl + p    Fetch the previous command from the history list, moving back in the list (same as up arrow)   
-ctrl + n    Fetch the next command from the history list, moving forward in the list (same as down arrow)   
-ctrl + o    Execute the command found via Ctrl+r or Ctrl+s   
-ctrl + g    Escape from history searching mode   
-!!  Run PREVIOUS command (ie sudo !!)   
-!vi Run PREVIOUS command that BEGINS with vi   
-!vi:p   Print previously run command that BEGINS with vi   
-!n  Execute nth command in history   
-!\)</span>  Last argument of last command <br />
-!^  First argument of last command <br />
-^abc^xyz    Replace first occurance of abc with xyz in last command and execute it <br />
-Kill a job <br />
-n = job number, to list jobs, run jobs   </p>
-<p>kill %n <br />
-Example:   </p>
-<p>kill %1 <br />
-References <br />
-<a href="http://cnswww.cns.cwru.edu/php/chet/readline/readline.html" class="external-link">http://cnswww.cns.cwru.edu/php/chet/readline/readline.html</a> <br />
-<a href="https://github.com/fliptheweb/bash-shortcuts-cheat-sheet/blob/master/README.md" class="external-link">https://github.com/fliptheweb/bash-shortcuts-cheat-sheet/blob/master/README.md</a>   </p>
+<p>Use pkill -f, which matches the pattern for any part of the command line</p>
+<p>~pkill -f my_pattern~</p>
+<p>Just in case it doesn't work, try to use this one as well:</p>
+<p>~pkill -9 -f my_pattern~</p>
+<p><a href="https://stackoverflow.com/questions/8987037/how-to-kill-all-processes-with-a-given-partial-name" class="external-link">https://stackoverflow.com/questions/8987037/how-to-kill-all-processes-with-a-given-partial-name</a></p>
+<p>Moving
+command description
+ctrl + a    Goto BEGINNING of command line
+ctrl + e    Goto END of command line
+ctrl + b    move back one character
+ctrl + f    move forward one character
+alt + f move cursor FORWARD one word
+alt + b move cursor BACK one word
+ctrl + xx   Toggle between the start of line and current cursor position
+ctrl + ] + x    Where x is any character, moves the cursor forward to the next occurance of x
+alt + ctrl + ] + x  Where x is any character, moves the cursor backwards to the previous occurance of x
+Edit / Other
+command description
+ctrl + d    Delete the character under the cursor
+ctrl + h    Delete the previous character before cursor
+ctrl + u    Clear all / cut BEFORE cursor
+ctrl + k    Clear all / cut AFTER cursor
+ctrl + w    delete the word BEFORE the cursor
+alt + d delete the word FROM the cursor
+ctrl + y    paste (if you used a previous command to delete)
+ctrl + i    command completion like Tab
+ctrl + l    Clear the screen (same as clear command)
+ctrl + c    kill whatever is running
+ctrl + d    Exit shell (same as exit command when cursor line is empty)
+ctrl + z    Place current process in background
+ctrl + _    Undo
+ctrl + x ctrl + u   Undo the last changes. ctrl+ _ does the same
+ctrl + t    Swap the last two characters before the cursor
+esc + t Swap last two words before the cursor
+alt + t swap current word with previous
+esc + .
+esc + _
+alt + [Backspace]   delete PREVIOUS word
+alt + &lt; Move to the first line in the history
+alt + &gt; Move to the end of the input history, i.e., the line currently being entered
+alt + ? display the file/folder names in the current path as help
+alt + * print all the file/folder names in the current path as parameter
+alt + . print the LAST ARGUMENT (ie "vim file1.txt file2.txt" will yield "file2.txt")
+alt + c capitalize the first character to end of word starting at cursor (whole word if cursor is at the beginning of word)
+alt + u make uppercase from cursor to end of word
+alt + l make lowercase from cursor to end of word
+alt + n
+alt + p Non-incremental reverse search of history.
+alt + r Undo all changes to the line
+alt + ctl + e   Expand command line.
+~[TAB][TAB] List all users
+<span class="arithmatex">\([TAB][TAB] List all system variables
+@[TAB][TAB] List all entries in your /etc/hosts file
+[TAB]   Auto complete
+cd -    change to PREVIOUS working directory
+History
+command description
+ctrl + r    Search backward starting at the current line and moving 'up' through the history as necessary
+crtl + s    Search forward starting at the current line and moving 'down' through the history as necessary
+ctrl + p    Fetch the previous command from the history list, moving back in the list (same as up arrow)
+ctrl + n    Fetch the next command from the history list, moving forward in the list (same as down arrow)
+ctrl + o    Execute the command found via Ctrl+r or Ctrl+s
+ctrl + g    Escape from history searching mode
+!!  Run PREVIOUS command (ie sudo !!)
+!vi Run PREVIOUS command that BEGINS with vi
+!vi:p   Print previously run command that BEGINS with vi
+!n  Execute nth command in history
+!\)</span>  Last argument of last command
+!^  First argument of last command
+^abc^xyz    Replace first occurance of abc with xyz in last command and execute it
+Kill a job
+n = job number, to list jobs, run jobs</p>
+<p>kill %n
+Example:</p>
+<p>kill %1
+References
+<a href="http://cnswww.cns.cwru.edu/php/chet/readline/readline.html" class="external-link">http://cnswww.cns.cwru.edu/php/chet/readline/readline.html</a>
+<a href="https://github.com/fliptheweb/bash-shortcuts-cheat-sheet/blob/master/README.md" class="external-link">https://github.com/fliptheweb/bash-shortcuts-cheat-sheet/blob/master/README.md</a></p>
 <h2 id="keybindings">Keybindings</h2>
-<p>Use <code>ESC</code> or <code>CTRL-[</code> to enter <code>Normal mode</code>.   </p>
-<p>Check also <a href="/gnu%20readline.html">gnu readline</a> additional keybinding.   </p>
+<p>Use <code>ESC</code> or <code>CTRL-[</code> to enter <code>Normal mode</code>.</p>
+<p>Check also <a href="/gnu%20readline.html">gnu readline</a> additional keybinding.</p>
 <h1 id="zsh-vi-mode">ZSH vi mode</h1>
 <h2 id="history">History</h2>
 <ul>
-<li><code>ctrl-p</code> : Previous command in history   </li>
-<li><code>ctrl-n</code> : Next command in history   </li>
-<li><code>/</code>      : Search backward in history   </li>
-<li><code>n</code>      : Repeat the last <code>/</code>   </li>
+<li><code>ctrl-p</code> : Previous command in history</li>
+<li><code>ctrl-n</code> : Next command in history</li>
+<li><code>/</code>      : Search backward in history</li>
+<li><code>n</code>      : Repeat the last <code>/</code></li>
 </ul>
 <h2 id="mode-indicators">Mode indicators</h2>
-<p><code>Normal mode</code> is indicated with block style cursor, and <code>Insert mode</code> with <br />
-beam style cursor by default.   </p>
+<p><code>Normal mode</code> is indicated with block style cursor, and <code>Insert mode</code> with
+beam style cursor by default.</p>
 <h2 id="vim-edition">Vim edition</h2>
-<p>In <code>Normal mode</code> you can use <code>vv</code> to edit current command line in an editor <br />
-(e.g. <code>vi</code>/<code>vim</code>/<code>nvim</code>...), because it is bound to the <code>Visual mode</code>.   </p>
-<p>You can change the editor by <code>ZVM_VI_EDITOR</code> option, by default it is <br />
-<code>$EDITOR</code>.   </p>
+<p>In <code>Normal mode</code> you can use <code>vv</code> to edit current command line in an editor
+(e.g. <code>vi</code>/<code>vim</code>/<code>nvim</code>...), because it is bound to the <code>Visual mode</code>.</p>
+<p>You can change the editor by <code>ZVM_VI_EDITOR</code> option, by default it is
+<code>$EDITOR</code>.</p>
 <h2 id="movement">Movement</h2>
 <ul>
-<li><code>$</code>   : To the end of the line   </li>
-<li><code>^</code>   : To the first non-blank character of the line   </li>
-<li><code>0</code>   : To the first character of the line   </li>
-<li><code>w</code>   : [count] words forward   </li>
-<li><code>W</code>   : [count] WORDS forward   </li>
-<li><code>e</code>   : Forward to the end of word [count] inclusive   </li>
-<li><code>E</code>   : Forward to the end of WORD [count] inclusive   </li>
-<li><code>b</code>   : [count] words backward   </li>
-<li><code>B</code>   : [count] WORDS backward   </li>
-<li><code>t{char}</code>   : Till before [count]'th occurrence of {char} to the right   </li>
-<li><code>T{char}</code>   : Till before [count]'th occurrence of {char} to the left   </li>
-<li><code>f{char}</code>   : To [count]'th occurrence of {char} to the right   </li>
-<li><code>F{char}</code>   : To [count]'th occurrence of {char} to the left   </li>
-<li><code>;</code>   : Repeat latest f, t, F or T [count] times   </li>
-<li><code>,</code>   : Repeat latest f, t, F or T in opposite direction   </li>
+<li><code>$</code>   : To the end of the line</li>
+<li><code>^</code>   : To the first non-blank character of the line</li>
+<li><code>0</code>   : To the first character of the line</li>
+<li><code>w</code>   : [count] words forward</li>
+<li><code>W</code>   : [count] WORDS forward</li>
+<li><code>e</code>   : Forward to the end of word [count] inclusive</li>
+<li><code>E</code>   : Forward to the end of WORD [count] inclusive</li>
+<li><code>b</code>   : [count] words backward</li>
+<li><code>B</code>   : [count] WORDS backward</li>
+<li><code>t{char}</code>   : Till before [count]'th occurrence of {char} to the right</li>
+<li><code>T{char}</code>   : Till before [count]'th occurrence of {char} to the left</li>
+<li><code>f{char}</code>   : To [count]'th occurrence of {char} to the right</li>
+<li><code>F{char}</code>   : To [count]'th occurrence of {char} to the left</li>
+<li><code>;</code>   : Repeat latest f, t, F or T [count] times</li>
+<li><code>,</code>   : Repeat latest f, t, F or T in opposite direction</li>
 </ul>
 <h2 id="insertion">Insertion</h2>
 <ul>
-<li><code>i</code>   : Insert text before the cursor   </li>
-<li><code>I</code>   : Insert text before the first character in the line   </li>
-<li><code>a</code>   : Append text after the cursor   </li>
-<li><code>A</code>   : Append text at the end of the line   </li>
-<li><code>o</code>   : Insert new command line below the current one   </li>
-<li><code>O</code>   : Insert new command line above the current one   </li>
+<li><code>i</code>   : Insert text before the cursor</li>
+<li><code>I</code>   : Insert text before the first character in the line</li>
+<li><code>a</code>   : Append text after the cursor</li>
+<li><code>A</code>   : Append text at the end of the line</li>
+<li><code>o</code>   : Insert new command line below the current one</li>
+<li><code>O</code>   : Insert new command line above the current one</li>
 </ul>
 <h2 id="surround">Surround</h2>
-<p>There are 2 kinds of keybinding mode for surround operating, default is <br />
-<code>classic</code> mode, you can choose the mode by setting <code>ZVM_VI_SURROUND_BINDKEY</code> <br />
-option.   </p>
+<p>There are 2 kinds of keybinding mode for surround operating, default is
+<code>classic</code> mode, you can choose the mode by setting <code>ZVM_VI_SURROUND_BINDKEY</code>
+option.</p>
 <ol>
 <li>
-<p><code>classic</code> mode (verb-&gt;s-&gt;surround)   </p>
+<p><code>classic</code> mode (verb-&gt;s-&gt;surround)</p>
 </li>
 <li>
-<p><code>S"</code>    : Add <code>"</code> for visual selection   </p>
+<p><code>S"</code>    : Add <code>"</code> for visual selection</p>
 </li>
-<li><code>ys"</code>   : Add <code>"</code> for visual selection   </li>
-<li><code>cs"'</code>  : Change <code>"</code> to <code>'</code>   </li>
+<li><code>ys"</code>   : Add <code>"</code> for visual selection</li>
+<li><code>cs"'</code>  : Change <code>"</code> to <code>'</code></li>
 <li>
-<p><code>ds"</code>   : Delete <code>"</code>   </p>
-</li>
-<li>
-<p><code>s-prefix</code> mode (s-&gt;verb-&gt;surround)   </p>
+<p><code>ds"</code>   : Delete <code>"</code></p>
 </li>
 <li>
-<p><code>sa"</code>   : Add <code>"</code> for visual selection   </p>
+<p><code>s-prefix</code> mode (s-&gt;verb-&gt;surround)</p>
 </li>
-<li><code>sd"</code>   : Delete <code>"</code>   </li>
-<li><code>sr"'</code>  : Change <code>"</code> to <code>'</code>   </li>
+<li>
+<p><code>sa"</code>   : Add <code>"</code> for visual selection</p>
+</li>
+<li><code>sd"</code>   : Delete <code>"</code></li>
+<li><code>sr"'</code>  : Change <code>"</code> to <code>'</code></li>
 </ol>
-<p>Note that key sequences must be pressed in fairly quick succession to avoid a timeout. You may extend this timeout with the <a href="#readkey-engine" class="anchor-link"><code>ZVM_KEYTIMEOUT</code> option</a>.   </p>
+<p>Note that key sequences must be pressed in fairly quick succession to avoid a timeout. You may extend this timeout with the <a href="#readkey-engine" class="anchor-link"><code>ZVM_KEYTIMEOUT</code> option</a>.</p>
 <h3 id="how-to-select-surround-text-object">How to select surround text object?</h3>
 <ul>
-<li><code>vi"</code>   : Select the text object inside the quotes   </li>
-<li><code>va(</code>   : Select the text object including the brackets   </li>
+<li><code>vi"</code>   : Select the text object inside the quotes</li>
+<li><code>va(</code>   : Select the text object including the brackets</li>
 </ul>
-<p>Then you can do any operation for the selection:   </p>
+<p>Then you can do any operation for the selection:</p>
 <ol>
 <li>
-<p>Add surrounds for text object   </p>
+<p>Add surrounds for text object</p>
 </li>
 <li>
-<p><code>vi"</code> -&gt; <code>S[</code> or <code>sa[</code> =&gt; <code>"object"</code> -&gt; <code>"[object]"</code>   </p>
+<p><code>vi"</code> -&gt; <code>S[</code> or <code>sa[</code> =&gt; <code>"object"</code> -&gt; <code>"[object]"</code></p>
 </li>
 <li>
-<p><code>va"</code> -&gt; <code>S[</code> or <code>sa[</code> =&gt; <code>"object"</code> -&gt; <code>["object"]</code>   </p>
+<p><code>va"</code> -&gt; <code>S[</code> or <code>sa[</code> =&gt; <code>"object"</code> -&gt; <code>["object"]</code></p>
 </li>
 <li>
-<p>Delete/Yank/Change text object   </p>
+<p>Delete/Yank/Change text object</p>
 </li>
 <li>
-<p><code>di(</code> or <code>vi(</code> -&gt; <code>d</code>   </p>
+<p><code>di(</code> or <code>vi(</code> -&gt; <code>d</code></p>
 </li>
-<li><code>ca(</code> or <code>va(</code> -&gt; <code>c</code>   </li>
-<li><code>yi(</code> or <code>vi(</code> -&gt; <code>y</code>   </li>
+<li><code>ca(</code> or <code>va(</code> -&gt; <code>c</code></li>
+<li><code>yi(</code> or <code>vi(</code> -&gt; <code>y</code></li>
 </ol>
 <h2 id="increment-and-decrement">Increment and Decrement</h2>
-<p>In normal mode, typing <code>ctrl-a</code> will increase to the next keyword, and typing <br />
-<code>ctrl-x</code> will decrease to the next keyword. The keyword can be at the cursor, <br />
-or to the right of the cursor (on the same line). The keyword could be as <br />
-below:   </p>
+<p>In normal mode, typing <code>ctrl-a</code> will increase to the next keyword, and typing
+<code>ctrl-x</code> will decrease to the next keyword. The keyword can be at the cursor,
+or to the right of the cursor (on the same line). The keyword could be as
+below:</p>
 <ul>
-<li>Number (Decimal, Hexadecimal, Binary...)   </li>
-<li>Boolean (True or False, Yes or No, On or Off...)   </li>
-<li>Weekday (Sunday, Monday, Tuesday, Wednesday...)   </li>
-<li>Month (January, February, March, April, May...)   </li>
-<li>Operator (&amp;&amp;, ||, ++, --, <mark class="formatting_highlight">, !</mark>, and, or...)   </li>
-<li>...   </li>
+<li>Number (Decimal, Hexadecimal, Binary...)</li>
+<li>Boolean (True or False, Yes or No, On or Off...)</li>
+<li>Weekday (Sunday, Monday, Tuesday, Wednesday...)</li>
+<li>Month (January, February, March, April, May...)</li>
+<li>Operator (&amp;&amp;, ||, ++, --, <mark class="formatting_highlight">, !</mark>, and, or...)</li>
+<li>...</li>
 </ul>
-<p>For example:   </p>
+<p>For example:</p>
 <ol>
 <li>
-<p>Increment   </p>
+<p>Increment</p>
 </li>
 <li>
-<p><code>9</code> =&gt; <code>10</code>   </p>
+<p><code>9</code> =&gt; <code>10</code></p>
 </li>
-<li><code>aa99bb</code> =&gt; <code>aa100bb</code>   </li>
-<li><code>aa100bc</code> =&gt; <code>aa101bc</code>   </li>
-<li><code>0xDe</code> =&gt; <code>0xdf</code>   </li>
-<li><code>0Xdf</code> =&gt; <code>0Xe0</code>   </li>
-<li><code>0b101</code> =&gt; <code>0b110</code>   </li>
-<li><code>0B11</code> =&gt; <code>0B101</code>   </li>
-<li><code>true</code> =&gt; <code>false</code>   </li>
-<li><code>yes</code> =&gt; <code>no</code>   </li>
-<li><code>on</code> =&gt; <code>off</code>   </li>
-<li><code>T</code> =&gt; <code>F</code>   </li>
-<li><code>Fri</code> =&gt; <code>Sat</code>   </li>
-<li><code>Oct</code> =&gt; <code>Nov</code>   </li>
-<li><code>Monday</code> =&gt; <code>Tuesday</code>   </li>
-<li><code>January</code> =&gt; <code>February</code>   </li>
-<li><code>+</code> =&gt; <code>-</code>   </li>
-<li><code>++</code> =&gt; <code>--</code>   </li>
-<li><code>==</code> =&gt; <code>!=</code>   </li>
-<li><code>!==</code> =&gt; <code>===</code>   </li>
-<li><code>&amp;&amp;</code> =&gt; <code>||</code>   </li>
-<li><code>and</code> =&gt; <code>or</code>   </li>
+<li><code>aa99bb</code> =&gt; <code>aa100bb</code></li>
+<li><code>aa100bc</code> =&gt; <code>aa101bc</code></li>
+<li><code>0xDe</code> =&gt; <code>0xdf</code></li>
+<li><code>0Xdf</code> =&gt; <code>0Xe0</code></li>
+<li><code>0b101</code> =&gt; <code>0b110</code></li>
+<li><code>0B11</code> =&gt; <code>0B101</code></li>
+<li><code>true</code> =&gt; <code>false</code></li>
+<li><code>yes</code> =&gt; <code>no</code></li>
+<li><code>on</code> =&gt; <code>off</code></li>
+<li><code>T</code> =&gt; <code>F</code></li>
+<li><code>Fri</code> =&gt; <code>Sat</code></li>
+<li><code>Oct</code> =&gt; <code>Nov</code></li>
+<li><code>Monday</code> =&gt; <code>Tuesday</code></li>
+<li><code>January</code> =&gt; <code>February</code></li>
+<li><code>+</code> =&gt; <code>-</code></li>
+<li><code>++</code> =&gt; <code>--</code></li>
+<li><code>==</code> =&gt; <code>!=</code></li>
+<li><code>!==</code> =&gt; <code>===</code></li>
+<li><code>&amp;&amp;</code> =&gt; <code>||</code></li>
+<li><code>and</code> =&gt; <code>or</code></li>
 <li>
-<p>...   </p>
-</li>
-<li>
-<p>Decrement:   </p>
+<p>...</p>
 </li>
 <li>
-<p><code>100</code> =&gt; <code>99</code>   </p>
+<p>Decrement:</p>
 </li>
-<li><code>aa100bb</code> =&gt; <code>aa99bb</code>   </li>
-<li><code>0</code> =&gt; <code>-1</code>   </li>
-<li><code>0xdE0</code> =&gt; <code>0xDDF</code>   </li>
-<li><code>0xffFf0</code> =&gt; <code>0xfffef</code>   </li>
-<li><code>0xfffF0</code> =&gt; <code>0xFFFEF</code>   </li>
-<li><code>0x0</code> =&gt; <code>0xffffffffffffffff</code>   </li>
-<li><code>0Xf</code> =&gt; <code>0Xe</code>   </li>
-<li><code>0b100</code> =&gt; <code>0b010</code>   </li>
-<li><code>0B100</code> =&gt; <code>0B011</code>   </li>
-<li><code>True</code> =&gt; <code>False</code>   </li>
-<li><code>On</code> =&gt; <code>Off</code>   </li>
-<li><code>Sun</code> =&gt; <code>Sat</code>   </li>
-<li><code>Jan</code> =&gt; <code>Dec</code>   </li>
-<li><code>Monday</code> =&gt; <code>Sunday</code>   </li>
-<li><code>August</code> =&gt; <code>July</code>   </li>
-<li><code>/</code> =&gt; <code>*</code>   </li>
-<li><code>++</code> =&gt; <code>--</code>   </li>
-<li><code>==</code> =&gt; <code>!=</code>   </li>
-<li><code>!==</code> =&gt; <code>===</code>   </li>
-<li><code>||</code> =&gt; <code>&amp;&amp;</code>   </li>
-<li><code>or</code> =&gt; <code>and</code>   </li>
+<li>
+<p><code>100</code> =&gt; <code>99</code></p>
+</li>
+<li><code>aa100bb</code> =&gt; <code>aa99bb</code></li>
+<li><code>0</code> =&gt; <code>-1</code></li>
+<li><code>0xdE0</code> =&gt; <code>0xDDF</code></li>
+<li><code>0xffFf0</code> =&gt; <code>0xfffef</code></li>
+<li><code>0xfffF0</code> =&gt; <code>0xFFFEF</code></li>
+<li><code>0x0</code> =&gt; <code>0xffffffffffffffff</code></li>
+<li><code>0Xf</code> =&gt; <code>0Xe</code></li>
+<li><code>0b100</code> =&gt; <code>0b010</code></li>
+<li><code>0B100</code> =&gt; <code>0B011</code></li>
+<li><code>True</code> =&gt; <code>False</code></li>
+<li><code>On</code> =&gt; <code>Off</code></li>
+<li><code>Sun</code> =&gt; <code>Sat</code></li>
+<li><code>Jan</code> =&gt; <code>Dec</code></li>
+<li><code>Monday</code> =&gt; <code>Sunday</code></li>
+<li><code>August</code> =&gt; <code>July</code></li>
+<li><code>/</code> =&gt; <code>*</code></li>
+<li><code>++</code> =&gt; <code>--</code></li>
+<li><code>==</code> =&gt; <code>!=</code></li>
+<li><code>!==</code> =&gt; <code>===</code></li>
+<li><code>||</code> =&gt; <code>&amp;&amp;</code></li>
+<li><code>or</code> =&gt; <code>and</code></li>
 <li>...</li>
 </ol></div>
 <div class="note-footer">
@@ -829,13 +829,13 @@ below:   </p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A66764844051838359237341013089213726189{level}" class="graph_div"></div>
+    <div id="A167461626667581262289755788483453326316{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B66764844051838359237341013089213726189{level}" level="{level}" note_temp_id="66764844051838359237341013089213726189" onclick="window.ObsHtmlGraph.run(this, '66764844051838359237341013089213726189', 'z shell');">
+        <button class="graph_button graph_show_button" id="B167461626667581262289755788483453326316{level}" level="{level}" note_temp_id="167461626667581262289755788483453326316" onclick="window.ObsHtmlGraph.run(this, '167461626667581262289755788483453326316', 'z shell');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C66764844051838359237341013089213726189{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C167461626667581262289755788483453326316{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

@@ -547,18 +547,18 @@
 </div>
             <div class="container">
                 <embeddedtitle>diff</embeddedtitle>
-<div class="content"><p>Diff - tool to compare files line by line.   </p>
-<p>Basic usage: <code>diff old_file new_file</code>.   </p>
-<p>Diff has a lot of options, for example:   </p>
+<div class="content"><p>Diff - tool to compare files line by line.</p>
+<p>Basic usage: <code>diff old_file new_file</code>.</p>
+<p>Diff has a lot of options, for example:</p>
 <ul>
-<li><code>--ignore-all-space</code> - ignore all white space;   </li>
-<li><code>--side-by-side</code> - show the differences side by side;   </li>
-<li><code>--unified</code> - show the differences in unified format.   </li>
+<li><code>--ignore-all-space</code> - ignore all white space;</li>
+<li><code>--side-by-side</code> - show the differences side by side;</li>
+<li><code>--unified</code> - show the differences in unified format.</li>
 </ul>
 <h3 id="basic-unified-format-explanation">Basic unified format explanation</h3>
-<p>Unified format (unidiff) is most commonly used to generate patch files. For <br />
-example you have 2 files, <code>old_file</code> and <code>new_file</code>.   </p>
-<p>old_file:   </p>
+<p>Unified format (unidiff) is most commonly used to generate patch files. For
+example you have 2 files, <code>old_file</code> and <code>new_file</code>.</p>
+<p>old_file:</p>
 <div class="lang-general">
 
 <div class="codehilite"><pre><span></span><code>This is a test file.
@@ -569,7 +569,7 @@ Have a nice day.
 
 </div>
 
-<p>new_file:   </p>
+<p>new_file:</p>
 <div class="lang-general">
 
 <div class="codehilite"><pre><span></span><code>This is a test file.
@@ -581,7 +581,7 @@ Goodbye.
 
 </div>
 
-<p>If you run <code>diff -u old_file new_file</code> you will get this output:   </p>
+<p>If you run <code>diff -u old_file new_file</code> you will get this output:</p>
 <div class="lang-general">
 
 <div class="codehilite"><pre><span></span><code><span class="gd">--- old_file    2023-01-27 22:29:49.387944539 +0600</span>
@@ -597,9 +597,9 @@ Goodbye.
 
 </div>
 
-<p>Explanation:   </p>
+<p>Explanation:</p>
 <ol>
-<li>Two-line header with file names and modification times.   </li>
+<li>Two-line header with file names and modification times.</li>
 </ol>
 <div class="lang-general">
 
@@ -611,8 +611,8 @@ Goodbye.
 </div>
 
 <ol>
-<li>Hunk of differences, which starts with <code>@@</code> (diff can contain multiple <br />
-   hunks).   </li>
+<li>Hunk of differences, which starts with <code>@@</code> (diff can contain multiple
+   hunks).</li>
 </ol>
 <div class="lang-general">
 
@@ -635,16 +635,16 @@ Goodbye.
 </div>
 
 <h3 id="how-to-generate-a-patch-file">How to generate a patch file</h3>
-<p>You can generate a patch file in unified formt - <br />
-<code>diff -u old_file new_file &gt; patch_file</code>.   </p>
-<p>Or generate directories diff with this command - <br />
-<code>diff -Naur &lt;dir1&gt; &lt;dir2&gt; &gt; patch_file</code>.   </p>
-<p>Here:   </p>
+<p>You can generate a patch file in unified formt -
+<code>diff -u old_file new_file &gt; patch_file</code>.</p>
+<p>Or generate directories diff with this command -
+<code>diff -Naur &lt;dir1&gt; &lt;dir2&gt; &gt; patch_file</code>.</p>
+<p>Here:</p>
 <ul>
-<li><code>-N</code> - treat absent files as empty;   </li>
-<li><code>-a</code> - treat all files as text;   </li>
-<li><code>-u</code> - generate output in the unified format.   </li>
-<li><code>-r</code> - generate recursive diff.   </li>
+<li><code>-N</code> - treat absent files as empty;</li>
+<li><code>-a</code> - treat all files as text;</li>
+<li><code>-u</code> - generate output in the unified format.</li>
+<li><code>-r</code> - generate recursive diff.</li>
 </ul>
 <p>Patch - apply a diff file to an original file.</p></div>
 <div class="note-footer">
@@ -665,13 +665,13 @@ Goodbye.
 
 </div>
 <div class="graph requires_js ">
-    <div id="A249545045962138584173427945459625667831{level}" class="graph_div"></div>
+    <div id="A296397984606746559103932694356693325135{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B249545045962138584173427945459625667831{level}" level="{level}" note_temp_id="249545045962138584173427945459625667831" onclick="window.ObsHtmlGraph.run(this, '249545045962138584173427945459625667831', 'diff');">
+        <button class="graph_button graph_show_button" id="B296397984606746559103932694356693325135{level}" level="{level}" note_temp_id="296397984606746559103932694356693325135" onclick="window.ObsHtmlGraph.run(this, '296397984606746559103932694356693325135', 'diff');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C249545045962138584173427945459625667831{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C296397984606746559103932694356693325135{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

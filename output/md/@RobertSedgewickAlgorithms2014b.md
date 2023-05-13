@@ -10,5 +10,5 @@ tags:
 - research
 title: 'Algorithms: Part 2'
 ---
-   
+
 Second part of the [@RobertSedgewickAlgorithms2014a](./%40RobertSedgewickAlgorithms2014a.md)

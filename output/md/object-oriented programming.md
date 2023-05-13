@@ -9,13 +9,13 @@ tags:
 - definition
 title: Object-oriented programming (OOP)
 ---
-   
-> Way of writing computer programs using "objects" to stand for data and   
-> methods. Often, computer programs that are not object-oriented are a list of   
-> instructions for the computer, telling it to do certain things in a certain   
-> way.   
->   
-> -- [Wikipedia](https://simple.wikipedia.org/wiki/Object-oriented_programming)   
-   
-Be careful, OOP can produce a lot of boilerplate code. It's not always the best   
+
+> Way of writing computer programs using "objects" to stand for data and
+> methods. Often, computer programs that are not object-oriented are a list of
+> instructions for the computer, telling it to do certain things in a certain
+> way.
+>
+> -- [Wikipedia](https://simple.wikipedia.org/wiki/Object-oriented_programming)
+
+Be careful, OOP can produce a lot of boilerplate code. It's not always the best
 solution.

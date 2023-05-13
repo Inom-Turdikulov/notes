@@ -9,5 +9,5 @@ tags:
 - definition
 title: Government
 ---
-   
+
 [gosuslugi.ru](https://www.gosuslugi.ru/)

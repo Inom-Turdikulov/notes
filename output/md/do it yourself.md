@@ -9,7 +9,7 @@ tags:
 - definition
 title: Do it yourself (DIY)
 ---
-   
-[Instructables](https://www.instructables.com/)   
-[http://www.craftsmanspace.com/free-patterns/band-patterns.html](http://www.craftsmanspace.com/free-patterns/band-patterns.html)   
+
+[Instructables](https://www.instructables.com/)
+[http://www.craftsmanspace.com/free-patterns/band-patterns.html](http://www.craftsmanspace.com/free-patterns/band-patterns.html)
 [https://www.wikihow.com/Category:DIY](https://www.wikihow.com/Category:DIY)

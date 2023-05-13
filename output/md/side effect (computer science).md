@@ -9,4 +9,4 @@ tags:
 - definition
 title: Side effect (computer science)
 ---
-   
+

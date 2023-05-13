@@ -9,11 +9,11 @@ tags:
 - definition
 title: Vector graphics
 ---
-   
-## Resources   
-   
-   
-- [https://www.vecteezy.com/](https://www.vecteezy.com/)   
-- [https://thenounproject.com/](https://thenounproject.com/)   
-- [Figma](https://www.figma.com/)   
+
+## Resources
+
+
+- [https://www.vecteezy.com/](https://www.vecteezy.com/)
+- [https://thenounproject.com/](https://thenounproject.com/)
+- [Figma](https://www.figma.com/)
 - [Adobe Express SVG converter](https://express.adobe.com/tools/convert-to-svg)

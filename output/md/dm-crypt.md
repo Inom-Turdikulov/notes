@@ -9,9 +9,9 @@ tags:
 - definition
 title: dm-crypt
 ---
-   
-# Create encrypted file container   
-   
+
+# Create encrypted file container
+
 ```{.bash org-language="sh"}
 # Redirect output of /dev/zero to initialize container file
 dd if=/dev/zero bs=1M count=100 of=encrypted_change_name.img
@@ -25,10 +25,10 @@ sudo cryptsetup luksOpen encrypted_change_name.img
 # Because we just created container, need create filesystem on it (one-time)
 sudo mkfs.ext4
 ```
-   
-   
-# Mount and unmount file container   
-   
+
+
+# Mount and unmount file container
+
 ```{.bash org-language="sh"}
 # Open luks partition
 sudo cryptsetup luksOpen encrypted_change_name.img

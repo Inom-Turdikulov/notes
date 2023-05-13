@@ -548,78 +548,78 @@
             <div class="container">
                 <embeddedtitle>git tips</embeddedtitle>
 <div class="content"><h2 id="general">General</h2>
-<p>Check the Git version: <br />
-? <br />
-<code>git --version</code>   </p>
-<p>Show general help: <br />
-? <br />
-<code>git --help</code>   </p>
-<p>Show help on a Git subcommand (like <code>clone</code>, <code>add</code>, <code>push</code>, <code>log</code>, etc.): <br />
-? <br />
-<code>git help subcommand</code>   </p>
-<p>Execute a Git subcommand: <br />
-? <br />
-<code>git subcommand</code>   </p>
-<p>Execute a Git subcommand on a custom repository root path: <br />
-? <br />
-<code>git -C path/to/repo subcommand</code>   </p>
-<p>Execute a Git subcommand with a given configuration set: <br />
-? <br />
-<code>git -c 'config.key=value' subcommand</code>   </p>
+<p>Check the Git version:
+?
+<code>git --version</code></p>
+<p>Show general help:
+?
+<code>git --help</code></p>
+<p>Show help on a Git subcommand (like <code>clone</code>, <code>add</code>, <code>push</code>, <code>log</code>, etc.):
+?
+<code>git help subcommand</code></p>
+<p>Execute a Git subcommand:
+?
+<code>git subcommand</code></p>
+<p>Execute a Git subcommand on a custom repository root path:
+?
+<code>git -C path/to/repo subcommand</code></p>
+<p>Execute a Git subcommand with a given configuration set:
+?
+<code>git -c 'config.key=value' subcommand</code></p>
 <h2 id="create-repository">Create repository</h2>
-<p>Create a new local repository, <em>project_name</em> is optional. If no project name specified you'll create git repository in current directory. You can also use non-existing <strong>nested</strong> directories, git automatically create needed structure. <br />
-? <br />
-<code>git init [project_name]</code>   </p>
-<p>Download from an existing repository. URL can be <code>http[s]...</code> or <code>git@...</code> (require specific private ssh key). If project path specified, git will clone into this directory. <br />
-? <br />
-<code>git clone URL [project_path]</code>   </p>
-<p>Perform a shallow clone, to only get the latest commits, which helps to save data (good for limited data connections) when cloning large repos. <br />
-? <br />
-<code>git clone --depth 1 &lt;remote-url&gt;</code>   </p>
-<p>Unshallow a clone. <br />
-? <br />
-<code>git pull --unshallow</code>   </p>
+<p>Create a new local repository, <em>project_name</em> is optional. If no project name specified you'll create git repository in current directory. You can also use non-existing <strong>nested</strong> directories, git automatically create needed structure.
+?
+<code>git init [project_name]</code></p>
+<p>Download from an existing repository. URL can be <code>http[s]...</code> or <code>git@...</code> (require specific private ssh key). If project path specified, git will clone into this directory.
+?
+<code>git clone URL [project_path]</code></p>
+<p>Perform a shallow clone, to only get the latest commits, which helps to save data (good for limited data connections) when cloning large repos.
+?
+<code>git clone --depth 1 &lt;remote-url&gt;</code></p>
+<p>Unshallow a clone.
+?
+<code>git pull --unshallow</code></p>
 <h2 id="git-aliases">Git aliases</h2>
-<p>Alternative commands, like <code>git s</code> and <code>g</code> are special aliases, require specific git alias configuration.   </p>
-<p>Check your aliases:   </p>
-<p><code>bat ~/.gitconfig</code>   </p>
+<p>Alternative commands, like <code>git s</code> and <code>g</code> are special aliases, require specific git alias configuration.</p>
+<p>Check your aliases:</p>
+<p><code>bat ~/.gitconfig</code></p>
 <h2 id="observe-a-repository">Observe a Repository</h2>
-<p>List new or modified files not yet committed (changes from last commit) <br />
-? <br />
-<code>git status</code> or <code>git s</code>   </p>
-<p>Show the changes to files not yet staged (committed before). <br />
-Pretty useful to see what you changed before stage it. <br />
-? <br />
-<code>git diff</code>   </p>
+<p>List new or modified files not yet committed (changes from last commit)
+?
+<code>git status</code> or <code>git s</code></p>
+<p>Show the changes to files not yet staged (committed before).
+Pretty useful to see what you changed before stage it.
+?
+<code>git diff</code></p>
 <!--SR:!2023-03-31,1,208-->
 
-<p>Show the changes to staged files (not committed) <br />
-? <br />
-<code>git diff --cached</code>   </p>
-<p>Show all staged and unstaged file changes <br />
-? <br />
-<code>git diff HEAD</code>   </p>
-<p>Show the changes between two commit ID's <br />
-? <br />
-<code>git diff commit_id_1 commit_id_2</code> Can be used with <code>HEAD</code> as well.   </p>
-<p>Show changes to files WITHOUT considering them a part of git. This can be used to diff files which are not part of a git repo! <br />
-? <br />
-<code>git diff --no-index path/to/file/A path/to/file/B</code>   </p>
-<p>List the change dates and authors (who committed) for a file <br />
-? <br />
-<code>git blame [file]</code>   </p>
-<p>Show the file changes for a commit ID and/or file <br />
-? <br />
-<code>git show [commit]:[file]</code>   </p>
-<p>Show full change history <br />
-? <br />
-<code>git log</code> <br />
-<code>git l</code> - custom alias   </p>
-<p>View commits which would be pushed (commits in current local branch). <br />
-? <br />
-<code>git log @{u}..</code>   </p>
-<p>View changes which are new on a feature branch. <br />
-?   </p>
+<p>Show the changes to staged files (not committed)
+?
+<code>git diff --cached</code></p>
+<p>Show all staged and unstaged file changes
+?
+<code>git diff HEAD</code></p>
+<p>Show the changes between two commit ID's
+?
+<code>git diff commit_id_1 commit_id_2</code> Can be used with <code>HEAD</code> as well.</p>
+<p>Show changes to files WITHOUT considering them a part of git. This can be used to diff files which are not part of a git repo!
+?
+<code>git diff --no-index path/to/file/A path/to/file/B</code></p>
+<p>List the change dates and authors (who committed) for a file
+?
+<code>git blame [file]</code></p>
+<p>Show the file changes for a commit ID and/or file
+?
+<code>git show [commit]:[file]</code></p>
+<p>Show full change history
+?
+<code>git log</code>
+<code>git l</code> - custom alias</p>
+<p>View commits which would be pushed (commits in current local branch).
+?
+<code>git log @{u}..</code></p>
+<p>View changes which are new on a feature branch.
+?</p>
 <div class="lang-bash">
 
 <div class="codehilite"><pre><span></span><code>git<span class="w"> </span>log<span class="w"> </span>-p<span class="w"> </span>feature<span class="w"> </span>--not<span class="w"> </span>main
@@ -629,108 +629,108 @@ git<span class="w"> </span>diff<span class="w"> </span>main...feature
 
 </div>
 
-<p>Show change history for file/directory including diffs <br />
-? <br />
-<code>git log -p [file/directory]</code>   </p>
+<p>Show change history for file/directory including diffs
+?
+<code>git log -p [file/directory]</code></p>
 <h2 id="branches">Branches</h2>
-<p>Working With Branches List all local branches <br />
-? <br />
-<code>git branch</code>   </p>
-<p>List all branches, local and remote <br />
-? <br />
-<code>git branch -a[v]</code>   </p>
-<p>Create a new branch called new <strong>branch</strong> <br />
-? <br />
-<code>git branch new_branch</code>   </p>
-<p>Delete the branch called my <strong>branch</strong> <br />
-? <br />
-<code>git branch -d my_branch</code>   </p>
-<p>Force Delete the branch "branch_name". <br />
-? <br />
-<code>git branch -D [branch_name]</code>   </p>
-<p>Branches: To delete a remote branch "branch_name": <br />
-? <br />
-<code>git push --delete origin [branch_name]</code>   </p>
-<p>Branches: To delete all branches on remote that are already merged: <br />
-? <br />
-<code>git branch --merged | egrep -v "(^*|main|dev)" | xargs git branch -d</code>   </p>
-<p>Switch to a branch, my <strong>branch</strong>, and update working directory <br />
-? <br />
-<code>git checkout my_branch</code>   </p>
-<p>Merge branch <strong>foo</strong> into branch <strong>bar</strong> <br />
-? <br />
-<code>git checkout bar; git merge foo</code>   </p>
-<p>Create a bare branch; without any commits. <br />
-? <br />
-<code>git checkout --orphan branch_name</code>   </p>
-<p>Checkout a new branch from a different starting point. <br />
-? <br />
-<code>git checkout -b main upstream/main</code>   </p>
-<p>Reset local branch to upstream branch, then checkout it. <br />
-? <br />
-<code>git checkout -B main upstream/main</code>   </p>
-<p>Undo parts of the last commit in a specific file. <br />
-? <br />
-<code>git checkout -p HEAD^ -- /path/to/file</code>   </p>
-<p>Revert a commit, but keep the history of the event as a separate commit. <br />
-? <br />
-<code>git revert &lt;commit SHA&gt;</code>   </p>
-<p>Perform an interactive rebase for the last (prior) 7 commits: <br />
-? <br />
-<code>git rebase -i @~7</code>   </p>
-<p>Tag the current commit <br />
-? <br />
-<code>git tag my_tag</code> <br />
-<code>git tag -a &lt;tag&gt; &lt;commit&gt; -m "&lt;commit message&gt;"</code>   </p>
-<p>Push a tag to remote: <br />
-? <br />
-<code>git push origin &lt;tagname&gt;</code>   </p>
-<p>To delete a tag locally <br />
-? <br />
-<code>git tag -d &lt;tagname&gt;</code>   </p>
-<p>Sign new tags: <br />
-? <br />
-<code>git tag -s v1.5 -m 'my signed 1.5 tag'</code>   </p>
-<p>Delete a tag <code>&lt;tagname&gt;</code> on remote <br />
-? <br />
-<code>git push --delete origin &lt;tagname&gt;</code>   </p>
-<p>Make an existing branch track a remote branch. <br />
-? <br />
-<code>git branch -u upstream/foo</code>   </p>
+<p>Working With Branches List all local branches
+?
+<code>git branch</code></p>
+<p>List all branches, local and remote
+?
+<code>git branch -a[v]</code></p>
+<p>Create a new branch called new <strong>branch</strong>
+?
+<code>git branch new_branch</code></p>
+<p>Delete the branch called my <strong>branch</strong>
+?
+<code>git branch -d my_branch</code></p>
+<p>Force Delete the branch "branch_name".
+?
+<code>git branch -D [branch_name]</code></p>
+<p>Branches: To delete a remote branch "branch_name":
+?
+<code>git push --delete origin [branch_name]</code></p>
+<p>Branches: To delete all branches on remote that are already merged:
+?
+<code>git branch --merged | egrep -v "(^*|main|dev)" | xargs git branch -d</code></p>
+<p>Switch to a branch, my <strong>branch</strong>, and update working directory
+?
+<code>git checkout my_branch</code></p>
+<p>Merge branch <strong>foo</strong> into branch <strong>bar</strong>
+?
+<code>git checkout bar; git merge foo</code></p>
+<p>Create a bare branch; without any commits.
+?
+<code>git checkout --orphan branch_name</code></p>
+<p>Checkout a new branch from a different starting point.
+?
+<code>git checkout -b main upstream/main</code></p>
+<p>Reset local branch to upstream branch, then checkout it.
+?
+<code>git checkout -B main upstream/main</code></p>
+<p>Undo parts of the last commit in a specific file.
+?
+<code>git checkout -p HEAD^ -- /path/to/file</code></p>
+<p>Revert a commit, but keep the history of the event as a separate commit.
+?
+<code>git revert &lt;commit SHA&gt;</code></p>
+<p>Perform an interactive rebase for the last (prior) 7 commits:
+?
+<code>git rebase -i @~7</code></p>
+<p>Tag the current commit
+?
+<code>git tag my_tag</code>
+<code>git tag -a &lt;tag&gt; &lt;commit&gt; -m "&lt;commit message&gt;"</code></p>
+<p>Push a tag to remote:
+?
+<code>git push origin &lt;tagname&gt;</code></p>
+<p>To delete a tag locally
+?
+<code>git tag -d &lt;tagname&gt;</code></p>
+<p>Sign new tags:
+?
+<code>git tag -s v1.5 -m 'my signed 1.5 tag'</code></p>
+<p>Delete a tag <code>&lt;tagname&gt;</code> on remote
+?
+<code>git push --delete origin &lt;tagname&gt;</code></p>
+<p>Make an existing branch track a remote branch.
+?
+<code>git branch -u upstream/foo</code></p>
 <h2 id="changes-into-repository">Changes into repository</h2>
-<p>Stages the file, ready for commit <br />
-? <br />
-<code>git add [file]</code> <br />
-<code>git fza</code> - custom alias, interactive add   </p>
-<p>Stage all changed files, ready for commit <br />
-? <br />
-<code>git add .</code> <br />
-<code>git add [--all|-A]</code>   </p>
-<p>Stop tracking the file completely (leave it on disk) <br />
-? <br />
-<code>git rm --cached [file]</code>   </p>
-<p>To list untracked files. <br />
-? <br />
-<code>git ls-files --others --exclude-standard</code>   </p>
-<p>Remove untracked files. <br />
-? <br />
-Use it with <code>-n</code> to see what will be removed. <br />
-`git clean -f -d``   </p>
-<p>Remove untracked and ignored files. <br />
-? <br />
-Use it with <code>-n</code> to see what will be removed. <br />
-<code>git clean -f -d -x</code>   </p>
-<p>Commit all staged files (staged changes) to versioned history <br />
-? <br />
-<code>git commit -m "Your commit message"</code>   </p>
-<p>Edit previous commit message. <br />
-? <br />
-<code>git commit --amend</code>   </p>
-<p>Change author of a commit. <br />
-? <br />
-<code>git commit --amend --author="Author Name &lt;email@address.com&gt;"</code>   </p>
-<p>Commit in the past. Newer versions of Git allow <code>--date="2 days ago"</code> usage. <br />
-?   </p>
+<p>Stages the file, ready for commit
+?
+<code>git add [file]</code>
+<code>git fza</code> - custom alias, interactive add</p>
+<p>Stage all changed files, ready for commit
+?
+<code>git add .</code>
+<code>git add [--all|-A]</code></p>
+<p>Stop tracking the file completely (leave it on disk)
+?
+<code>git rm --cached [file]</code></p>
+<p>To list untracked files.
+?
+<code>git ls-files --others --exclude-standard</code></p>
+<p>Remove untracked files.
+?
+Use it with <code>-n</code> to see what will be removed.
+`git clean -f -d``</p>
+<p>Remove untracked and ignored files.
+?
+Use it with <code>-n</code> to see what will be removed.
+<code>git clean -f -d -x</code></p>
+<p>Commit all staged files (staged changes) to versioned history
+?
+<code>git commit -m "Your commit message"</code></p>
+<p>Edit previous commit message.
+?
+<code>git commit --amend</code></p>
+<p>Change author of a commit.
+?
+<code>git commit --amend --author="Author Name &lt;email@address.com&gt;"</code></p>
+<p>Commit in the past. Newer versions of Git allow <code>--date="2 days ago"</code> usage.
+?</p>
 <div class="lang-bash">
 
 <div class="codehilite"><pre><span></span><code><span class="c1"># more recent versions of Git also support --date=&quot;2 days ago&quot; directly</span>
@@ -741,50 +741,50 @@ git<span class="w"> </span>commit<span class="w"> </span>--date<span class="o">=
 
 </div>
 
-<p>Commit all your tracked files to versioned history <br />
-? <br />
-<code>git commit -am "commit message</code>   </p>
-<p>Sign a commit <br />
-? <br />
-<code>git commit -a -S -m 'Signed commit'</code>   </p>
-<p>Unstaged file, keeping the file changes <br />
-? <br />
-<code>git reset [file]</code>   </p>
-<p>Undo last commit but keep the changes <br />
-? <br />
-<code>git reset --soft HEAD~1</code>   </p>
-<p>Revert everything to the last commit. <br />
-So it removes staged and working directory changes. <br />
-? <br />
-<code>git reset --hard</code> but be careful, you can lose your changes. Maybe need stash them first.   </p>
-<p>Undo last commit. If you want to nuke commit C to never see it again: <br />
-(F) <br />
-A-B-C <br />
-↑ <br />
-main <br />
-? <br />
-<code>git reset --hard HEAD~1</code>   </p>
-<p>Undo last commit. If you want to undo the commit, but keep your changes: <br />
-(F) <br />
-A-B-C <br />
-↑ <br />
-main <br />
-? <br />
-<code>git reset HEAD~1</code>   </p>
-<p>Go 2 commits back. <br />
-? <br />
-<code>git reset --hard HEAD~2</code>   </p>
-<p>Checkout the current branch, and rebase from <code>&lt;remote&gt;</code> <br />
-? <br />
-<code>git reset --hard &lt;remote&gt;/&lt;branch&gt;</code>   </p>
-<p>Apply only the changes made within a given commit. This is different to the <code>merge</code> command, as it would otherwise apply all commits from a branch. <br />
-<code>git cherry-pick [HASH]</code>   </p>
+<p>Commit all your tracked files to versioned history
+?
+<code>git commit -am "commit message</code></p>
+<p>Sign a commit
+?
+<code>git commit -a -S -m 'Signed commit'</code></p>
+<p>Unstaged file, keeping the file changes
+?
+<code>git reset [file]</code></p>
+<p>Undo last commit but keep the changes
+?
+<code>git reset --soft HEAD~1</code></p>
+<p>Revert everything to the last commit.
+So it removes staged and working directory changes.
+?
+<code>git reset --hard</code> but be careful, you can lose your changes. Maybe need stash them first.</p>
+<p>Undo last commit. If you want to nuke commit C to never see it again:
+(F)
+A-B-C
+↑
+main
+?
+<code>git reset --hard HEAD~1</code></p>
+<p>Undo last commit. If you want to undo the commit, but keep your changes:
+(F)
+A-B-C
+↑
+main
+?
+<code>git reset HEAD~1</code></p>
+<p>Go 2 commits back.
+?
+<code>git reset --hard HEAD~2</code></p>
+<p>Checkout the current branch, and rebase from <code>&lt;remote&gt;</code>
+?
+<code>git reset --hard &lt;remote&gt;/&lt;branch&gt;</code></p>
+<p>Apply only the changes made within a given commit. This is different to the <code>merge</code> command, as it would otherwise apply all commits from a branch.
+<code>git cherry-pick [HASH]</code></p>
 <h2 id="synchronize-changes">Synchronize changes</h2>
-<p>Get the latest changes from origin (no merge) <br />
-? <br />
-<code>git fetch</code>   </p>
-<p>Pull changes, while overwriting any local commits. <br />
-?   </p>
+<p>Get the latest changes from origin (no merge)
+?
+<code>git fetch</code></p>
+<p>Pull changes, while overwriting any local commits.
+?</p>
 <div class="lang-bash">
 
 <div class="codehilite"><pre><span></span><code>git<span class="w"> </span>fetch<span class="w"> </span>--all
@@ -794,84 +794,84 @@ git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> <
 
 </div>
 
-<p>Fetch the latest changes from origin and merge <br />
-? <br />
-<code>git pull</code>   </p>
-<p>Fetch the latest changes from origin and rebase <br />
-? <br />
-<code>git pull --rebase</code>   </p>
+<p>Fetch the latest changes from origin and merge
+?
+<code>git pull</code></p>
+<p>Fetch the latest changes from origin and rebase
+?
+<code>git pull --rebase</code></p>
 <!--SR:!2023-05-17,4,270-->
 
-<p>Pull down a remote branch, but rebase any locally differing commits onto the top of the incoming commits: <br />
-? <br />
-<code>git pull &lt;remote&gt; &lt;branch&gt; --rebase</code>   </p>
-<p>Push local changes to the origin <br />
-? <br />
-<code>git push</code>   </p>
-<p>To force a push, when you know what you're doing! <br />
-? <br />
-<code>git push -f</code>   </p>
-<p>Push to the tracked main branch. <br />
-? <br />
-<code>git push origin main</code>   </p>
+<p>Pull down a remote branch, but rebase any locally differing commits onto the top of the incoming commits:
+?
+<code>git pull &lt;remote&gt; &lt;branch&gt; --rebase</code></p>
+<p>Push local changes to the origin
+?
+<code>git push</code></p>
+<p>To force a push, when you know what you're doing!
+?
+<code>git push -f</code></p>
+<p>Push to the tracked main branch.
+?
+<code>git push origin main</code></p>
 <!--SR:!2023-04-02,3,248-->
 
-<p>Push to a specified repository. <br />
-? <br />
-<code>git push git@github.com:[USER_NAME]/[REPO_NAME].git</code>   </p>
+<p>Push to a specified repository.
+?
+<code>git push git@github.com:[USER_NAME]/[REPO_NAME].git</code></p>
 <h2 id="git-stash">Git stash</h2>
-<p>Stash changes locally. This will keep the changes in a separate changelist, - called 'stash', and the working directory is cleaned. You can apply changes from the stash at any time. <br />
-? <br />
-<code>git stash</code>   </p>
-<p>Stash changes with a message. <br />
-? <br />
-git stash push accepts the message with option -m and accepts a list of files to stash as arguments. <br />
-<code>git stash push -m &lt;message&gt;</code>   </p>
-<p>List all the stashed changes. <br />
-? <br />
-<code>git stash list</code>   </p>
-<p>Apply the most recent change and remove the stash from the stash list. <br />
-? <br />
-<code>git stash pop</code>   </p>
-<p>Apply stash from the stash list, but does not remove the stash from the list. <br />
-? <br />
-<code>git stash apply stash@{6}</code>   </p>
+<p>Stash changes locally. This will keep the changes in a separate changelist, - called 'stash', and the working directory is cleaned. You can apply changes from the stash at any time.
+?
+<code>git stash</code></p>
+<p>Stash changes with a message.
+?
+git stash push accepts the message with option -m and accepts a list of files to stash as arguments.
+<code>git stash push -m &lt;message&gt;</code></p>
+<p>List all the stashed changes.
+?
+<code>git stash list</code></p>
+<p>Apply the most recent change and remove the stash from the stash list.
+?
+<code>git stash pop</code></p>
+<p>Apply stash from the stash list, but does not remove the stash from the list.
+?
+<code>git stash apply stash@{6}</code></p>
 <h2 id="git-remote">Git remote</h2>
-<p>Remove all stale branches; ones that have been deleted on remote. So if you have a lot of useless branches, delete them on GitHub and then run this. <br />
-? <br />
-<code>git remote prune origin</code>   </p>
-<p>Prune all remotes at once. <br />
-? <br />
-<code>git remote prune $(git remote | tr '\n' ' ')</code>   </p>
+<p>Remove all stale branches; ones that have been deleted on remote. So if you have a lot of useless branches, delete them on GitHub and then run this.
+?
+<code>git remote prune origin</code></p>
+<p>Prune all remotes at once.
+?
+<code>git remote prune $(git remote | tr '\n' ' ')</code></p>
 <h2 id="tips">Tips</h2>
-<p>List files changed in a given commit. <br />
-? <br />
-<code>git diff-tree --no-commit-id --name-only -r [HASH]</code>   </p>
-<p>Revisions can also be identified with <code>:/text</code>. So, this will show the first <br />
-commit that has the string "cool" in its message body. <br />
-? <br />
-<code>git show :/cool</code>   </p>
-<p>List files changed in a given commit; user-facing approach. <br />
-? <br />
-<code>git show --pretty="" --name-only bd61ad98</code>   </p>
-<p>See everything you have done, across branches, in a glance, then go to the place right before you broke everything. <br />
-? <br />
-<code>git reflog</code> <br />
-<code>git reset HEAD@{hash}</code>   </p>
-<p>To revert first/initial commit on a branch: <br />
-Running git reset --hard HEAD~1 will give error: <br />
-fatal: ambiguous argument <code>'HEAD~1'</code>: unknown revision or path not in the working tree. <br />
-? <br />
-<code>git update-ref -d HEAD</code>   </p>
-<p>To import commits from another repo: <br />
-? <br />
-<code>git --git-dir=../some_other_repo/.git format-patch -k -1 --stdout &lt;commit SHA&gt; | git am -3 -k</code>   </p>
-<p>Update all submodules. <br />
-? <br />
-<code>git submodule update --init --recursive</code>   </p>
-<p>Check any signatures it finds and list them in its output: <br />
-<code>git log --pretty="format:%h %G? %aN %s"</code>   </p>
-<p>Sync a fork with the master repo.   </p>
+<p>List files changed in a given commit.
+?
+<code>git diff-tree --no-commit-id --name-only -r [HASH]</code></p>
+<p>Revisions can also be identified with <code>:/text</code>. So, this will show the first
+commit that has the string "cool" in its message body.
+?
+<code>git show :/cool</code></p>
+<p>List files changed in a given commit; user-facing approach.
+?
+<code>git show --pretty="" --name-only bd61ad98</code></p>
+<p>See everything you have done, across branches, in a glance, then go to the place right before you broke everything.
+?
+<code>git reflog</code>
+<code>git reset HEAD@{hash}</code></p>
+<p>To revert first/initial commit on a branch:
+Running git reset --hard HEAD~1 will give error:
+fatal: ambiguous argument <code>'HEAD~1'</code>: unknown revision or path not in the working tree.
+?
+<code>git update-ref -d HEAD</code></p>
+<p>To import commits from another repo:
+?
+<code>git --git-dir=../some_other_repo/.git format-patch -k -1 --stdout &lt;commit SHA&gt; | git am -3 -k</code></p>
+<p>Update all submodules.
+?
+<code>git submodule update --init --recursive</code></p>
+<p>Check any signatures it finds and list them in its output:
+<code>git log --pretty="format:%h %G? %aN %s"</code></p>
+<p>Sync a fork with the master repo.</p>
 <div class="lang-bash">
 
 <div class="codehilite"><pre><span></span><code>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>git@github.com:name/repo.git<span class="w"> </span><span class="c1"># &lt;-- Set a new repo.</span>
@@ -891,7 +891,7 @@ git<span class="w"> </span>status<span class="w"> </span><span class="c1"># &lt;
 
 </div>
 
-<p>Set your identity.   </p>
+<p>Set your identity.</p>
 <div class="lang-bash">
 
 <div class="codehilite"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;John Doe&quot;</span>
@@ -901,15 +901,15 @@ git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"
 
 </div>
 
-<p>The GPG key used for signing your commits <br />
-<code>git config --global user.signingkey 0A46826A</code>   </p>
-<p>Set signing of commits globally <br />
-<code>git config --global commit.gpgsign true</code>   </p>
-<p>Set your editor. <br />
-<code>git config --global core.editor nvim</code>   </p>
-<p>Enable color support for commands like <code>git diff</code>. <br />
-<code>git config --global color.ui true</code>   </p>
-<p>Remove file from git after adding it into <code>.gitignore</code>   </p>
+<p>The GPG key used for signing your commits
+<code>git config --global user.signingkey 0A46826A</code></p>
+<p>Set signing of commits globally
+<code>git config --global commit.gpgsign true</code></p>
+<p>Set your editor.
+<code>git config --global core.editor nvim</code></p>
+<p>Enable color support for commands like <code>git diff</code>.
+<code>git config --global color.ui true</code></p>
+<p>Remove file from git after adding it into <code>.gitignore</code></p>
 <div class="lang-bash">
 
 <div class="codehilite"><pre><span></span><code><span class="c1"># Check, you committed all required changes before</span>
@@ -921,7 +921,7 @@ git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </sp
 
 </div>
 
-<p>Change the date of an existing commit.   </p>
+<p>Change the date of an existing commit.</p>
 <div class="lang-bash">
 
 <div class="codehilite"><pre><span></span><code>git<span class="w"> </span>filter-branch<span class="w"> </span>--env-filter<span class="w"> </span><span class="se">\</span>
@@ -935,9 +935,9 @@ git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </sp
 
 </div>
 
-<p>Display the commit history of a set of files. <br />
-<code>git log --pretty=email --patch-with-stat --reverse --full-index -- Admin\*.py &gt; Sripts.patch</code>   </p>
-<p>Move your most recent commit from one branch, to stage it on [BRANCH].   </p>
+<p>Display the commit history of a set of files.
+<code>git log --pretty=email --patch-with-stat --reverse --full-index -- Admin\*.py &gt; Sripts.patch</code></p>
+<p>Move your most recent commit from one branch, to stage it on [BRANCH].</p>
 <div class="lang-bash">
 
 <div class="codehilite"><pre><span></span><code>git<span class="w"> </span>reset<span class="w"> </span>HEAD~<span class="w"> </span>--soft
@@ -966,13 +966,13 @@ git<span class="w"> </span>add<span class="w"> </span>.
 
 </div>
 <div class="graph requires_js ">
-    <div id="A153192019532035514753193566735018309400{level}" class="graph_div"></div>
+    <div id="A81247205873010494695206104435473432321{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B153192019532035514753193566735018309400{level}" level="{level}" note_temp_id="153192019532035514753193566735018309400" onclick="window.ObsHtmlGraph.run(this, '153192019532035514753193566735018309400', 'git tips');">
+        <button class="graph_button graph_show_button" id="B81247205873010494695206104435473432321{level}" level="{level}" note_temp_id="81247205873010494695206104435473432321" onclick="window.ObsHtmlGraph.run(this, '81247205873010494695206104435473432321', 'git tips');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C153192019532035514753193566735018309400{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C81247205873010494695206104435473432321{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

@@ -9,10 +9,10 @@ tags:
 - definition
 title: Control flow
 ---
-   
-Remember, you start loop from 0 and check condition by ==N== if you use `<`   
-[boolean expression](./boolean%20expression.md). So it's canonical to write some like this:   
-   
+
+Remember, you start loop from 0 and check condition by ==N== if you use `<`
+[boolean expression](./boolean%20expression.md). So it's canonical to write some like this:
+
 ```c
 int i = 0;
 int N = 10; // easly readable bounday condition

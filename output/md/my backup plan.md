@@ -9,7 +9,7 @@ tags:
 - defenition
 title: My backup plan
 ---
-   
-1. [x] Raid 1 for all data   
-2. [ ] Borg + SSH, rclone sync, logs [https://torsion.org/borgmatic/](https://torsion.org/borgmatic/) DB strategy?   
+
+1. [x] Raid 1 for all data
+2. [ ] Borg + SSH, rclone sync, logs [https://torsion.org/borgmatic/](https://torsion.org/borgmatic/) DB strategy?
        Ignore cache?

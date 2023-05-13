@@ -15,6 +15,6 @@ tags:
 - inbox
 title: Learn Vim
 ---
-   
-Learning Vim and Vimscript doesn't have to be hard. This is the guide that   
+
+Learning Vim and Vimscript doesn't have to be hard. This is the guide that
 you're looking for.

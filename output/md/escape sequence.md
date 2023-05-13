@@ -9,18 +9,18 @@ tags:
 - definition
 title: Escape sequences
 ---
-   
-Combination of characters, which meaning something other than the literal   
-characters contained therein.   
-   
-Usually 2 characters, one is preceding and second is actual character (which   
-explain that escape sequence).   
-   
-In C escape sequence is one character (`char` integer type), which is preceded   
-by backslash.   
-   
-## Escape sequences in C   
-   
+
+Combination of characters, which meaning something other than the literal
+characters contained therein.
+
+Usually 2 characters, one is preceding and second is actual character (which
+explain that escape sequence).
+
+In C escape sequence is one character (`char` integer type), which is preceded
+by backslash.
+
+## Escape sequences in C
+
 ```c
 printf("\a - alert (bell) character");
 printf("\b - backspace");

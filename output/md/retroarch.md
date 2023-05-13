@@ -9,11 +9,11 @@ tags:
 - definition
 title: RetroArch
 ---
-   
-Install & configure RetroArch on arch-based system!   
-   
-# Install   
-   
+
+Install & configure RetroArch on arch-based system!
+
+# Install
+
 ```bash
 # install package
 pacman -S retroarch
@@ -25,10 +25,10 @@ retroarch
 retroarch-assets-ozone # for a more desktop-friendly GUI.
 
 ```
-   
-   
-# Configuration files   
-   
+
+
+# Configuration files
+
 ```bash
 $HOME/.config/retroarch/retroarch.cfg
 
@@ -39,12 +39,12 @@ system - bios files
 state - save states
 saves - saves
 ```
-   
-   
-# Recommended cores   
-   
-<[https://emulation.gametechwiki.com/index.php/Main_Page>](https://emulation.gametechwiki.com/index.php/Main_Page>)   
-   
+
+
+# Recommended cores
+
+<[https://emulation.gametechwiki.com/index.php/Main_Page>](https://emulation.gametechwiki.com/index.php/Main_Page>)
+
 ```bash
 libretro-duckstation # ps 1
 libretro-pcsx2 # ps 2
@@ -54,10 +54,10 @@ libretro-bsnes-hd # Super Nintendo Entertainment System
 libretro-mupen64plus-next # Nintendo 64 core
 libretro-ppsspp # Sony PlayStation Portable core
 ```
-   
-   
-# Useful links   
-   
-<[https://r-roms.github.io/megathread/retro/>](https://r-roms.github.io/megathread/retro/>)   
-<[https://archive.org/download/RetroarchSystemFiles/Retroarch-System/>](https://archive.org/download/RetroarchSystemFiles/Retroarch-System/>)   
+
+
+# Useful links
+
+<[https://r-roms.github.io/megathread/retro/>](https://r-roms.github.io/megathread/retro/>)
+<[https://archive.org/download/RetroarchSystemFiles/Retroarch-System/>](https://archive.org/download/RetroarchSystemFiles/Retroarch-System/>)
 <[http://81.234.103.195/>](http://81.234.103.195/>)

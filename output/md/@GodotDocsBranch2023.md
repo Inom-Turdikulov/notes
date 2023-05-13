@@ -11,7 +11,7 @@ tags:
 - research
 title: Godot Docs
 ---
-   
-My notes from official [godot engine](./godot%20engine.md) documentation,   
-4.x branch. In plan complete some tutorials and guides, nothing deep and   
+
+My notes from official [godot engine](./godot%20engine.md) documentation,
+4.x branch. In plan complete some tutorials and guides, nothing deep and
 detailed for now.

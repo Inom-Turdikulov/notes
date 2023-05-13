@@ -9,13 +9,13 @@ tags:
 - definition
 title: Markdown
 ---
-   
-## Useful HTML tags   
-   
-   
-- <sup>1 \<sup\></sup>   
-- <sub>2 \<sub\></sub>   
-- <var>variable</var>   
-- <mark>highlight</mark>   
-- <cite>Author</cite>   
+
+## Useful HTML tags
+
+
+- <sup>1 \<sup\></sup>
+- <sub>2 \<sub\></sub>
+- <var>variable</var>
+- <mark>highlight</mark>
+- <cite>Author</cite>
 - <ins>inserted</ins>

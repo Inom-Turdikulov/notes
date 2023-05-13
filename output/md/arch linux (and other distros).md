@@ -9,10 +9,10 @@ tags:
 - inbox
 title: Arch Linux (and other distros)
 ---
-   
-[my arch linux enviroment](./my%20arch%20linux%20enviroment.md)   
-   
-## Resources   
-   
-   
+
+[my arch linux enviroment](./my%20arch%20linux%20enviroment.md)
+
+## Resources
+
+
 - [ ] [https://linux-hardware.org/](https://linux-hardware.org/)

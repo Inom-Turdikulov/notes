@@ -9,44 +9,44 @@ tags:
 - definition
 title: ledger
 ---
-   
-> Ledger is a powerful, double-entry accounting system that is accessed from the   
-> UNIX command-line.   
->   
-> &mdash; [https://www.ledger-cli.org/](https://www.ledger-cli.org/)   
-   
-I'm almost not used ledger-cli before. But I want try to use it IRL.   
-   
-Ledger offer double-entry accounting journal, where you track your transactions   
-(plain text file). It's use a standart bookkeeping approach.   
-   
-Ledger transaction examle:   
-   
+
+> Ledger is a powerful, double-entry accounting system that is accessed from the
+> UNIX command-line.
+>
+> &mdash; [https://www.ledger-cli.org/](https://www.ledger-cli.org/)
+
+I'm almost not used ledger-cli before. But I want try to use it IRL.
+
+Ledger offer double-entry accounting journal, where you track your transactions
+(plain text file). It's use a standart bookkeeping approach.
+
+Ledger transaction examle:
+
 ```
 2042/02/21 Shopping
     Expenses:Food:Groceries                 $42.00
     Assets:Checking                        -$42.00
 ```
-   
-   
-In accounting every type of income or expense and every "place" which holds some   
-value is "account" (sort of category).   
-   
-Accounts examples:   
-   
-   
-- expenses;   
-- income;   
-- assets;   
-- liabilities;   
-- receivables;   
-- equity.   
-   
-We track the flow of money from one account to another, amount of money figures   
-twice, total balance of all accounts is always zero.   
-   
-## Journal examle   
-   
+
+
+In accounting every type of income or expense and every "place" which holds some
+value is "account" (sort of category).
+
+Accounts examples:
+
+
+- expenses;
+- income;
+- assets;
+- liabilities;
+- receivables;
+- equity.
+
+We track the flow of money from one account to another, amount of money figures
+twice, total balance of all accounts is always zero.
+
+## Journal examle
+
 ```
 ; The opening balance (first transaction) sets up your initial financial state.
 2041/12/31 * Opening Balance
@@ -88,16 +88,16 @@ twice, total balance of all accounts is always zero.
     Expenses:Food:Groceries
     Expenses:Unknown                       -$42.00
 ```
-   
-   
-## Quickstart   
-   
-First install `ledger`, for me it's aviable in ArchLinux community repo.   
-   
-Then you need create `journal.txt` file, use examle above.   
-   
-Then run this commands to quickly understand how it's basicaly working:   
-   
+
+
+## Quickstart
+
+First install `ledger`, for me it's aviable in ArchLinux community repo.
+
+Then you need create `journal.txt` file, use examle above.
+
+Then run this commands to quickly understand how it's basicaly working:
+
 ```
 $ # Usage: ledger -f <journal-file> [...]
 $ ledger -f journal.txt balance
@@ -109,11 +109,11 @@ $ ledger -f journal.txt register
 # (press ctrl+d to quit)
 $ ledger -f journal.txt
 ```
-   
-   
-## Useful links   
-   
-   
-- [https://rolfschr.github.io/gswl-book/latest.html](https://rolfschr.github.io/gswl-book/latest.html)   
-- [https://www.ledger-cli.org/](https://www.ledger-cli.org/)3.0/doc/ledger3.html   
+
+
+## Useful links
+
+
+- [https://rolfschr.github.io/gswl-book/latest.html](https://rolfschr.github.io/gswl-book/latest.html)
+- [https://www.ledger-cli.org/](https://www.ledger-cli.org/)3.0/doc/ledger3.html
 - [https://pig-monkey.com/search.html?q=ledger](https://pig-monkey.com/search.html?q=ledger)

@@ -9,5 +9,5 @@ tags:
 - definition
 title: List (abstract data type)
 ---
-   
+
 List are not [array](./array%20%28computer%20science%29.md).

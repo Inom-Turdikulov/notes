@@ -547,55 +547,55 @@
 </div>
             <div class="container">
                 <embeddedtitle>my arch linux enviroment</embeddedtitle>
-<div class="content"><p><a href="https://wiki.archlinux.org/title/improving_performance" class="external-link">Improving performance - ArchWiki</a>   </p>
+<div class="content"><p><a href="https://wiki.archlinux.org/title/improving_performance" class="external-link">Improving performance - ArchWiki</a></p>
 <blockquote>
-<p>Arch Linux is an independently developed, x86-64 general-purpose <br />
-GNU/Linux distribution that strives to provide the latest stable <br />
-versions of most software by following a rolling-release model. The <br />
-default installation is a minimal base system, configured by the user <br />
-to only add what is purposely required.   </p>
+<p>Arch Linux is an independently developed, x86-64 general-purpose
+GNU/Linux distribution that strives to provide the latest stable
+versions of most software by following a rolling-release model. The
+default installation is a minimal base system, configured by the user
+to only add what is purposely required.</p>
 </blockquote>
-<p>For me Arch Linux is feature-complete Linux distribution, with small <br />
-dependencies, rich documentation and a good community.   </p>
-<p>I use it a lot, and know how to work with it.   </p>
+<p>For me Arch Linux is feature-complete Linux distribution, with small
+dependencies, rich documentation and a good community.</p>
+<p>I use it a lot, and know how to work with it.</p>
 <h1 id="fix-problems">Fix problems</h1>
 <ul>
-<li><a href="/magic%20sysrq%20key.html">magic sysrq key</a>   </li>
+<li><a href="/magic%20sysrq%20key.html">magic sysrq key</a></li>
 </ul>
 <h1 id="update-packages">Update packages</h1>
 <ul>
-<li><a href="/pacman%20%28software%29.html">pacman (software)</a>   </li>
+<li><a href="/pacman%20%28software%29.html">pacman (software)</a></li>
 </ul>
 <h1 id="befor-start">Befor start</h1>
 <ul>
-<li>chceck <a href="/not_created.html" class="nonexistent-link">datasets/hostnames</a> and network   </li>
+<li>chceck <a href="/not_created.html" class="nonexistent-link">datasets/hostnames</a> and network</li>
 </ul>
 <h1 id="principles">Principles</h1>
 <ul>
-<li>simplicity, less problems for users, minimal changes.   </li>
+<li>simplicity, less problems for users, minimal changes.</li>
 <li>
-<p>modernity, since it\'s rolling-release distribution used latest <br />
-    stable releases of software.   </p>
+<p>modernity, since it\'s rolling-release distribution used latest
+    stable releases of software.</p>
 </li>
 <li>
-<p>pragmatism, no ideological, political or popular opinion\'s.   </p>
+<p>pragmatism, no ideological, political or popular opinion\'s.</p>
 </li>
 <li>
-<p>user centrality, fill the needs of arch community users - proficient <br />
-    GNU/Linux users, or anyone who is willing to read documentation, and <br />
-    solve their own problems.   </p>
+<p>user centrality, fill the needs of arch community users - proficient
+    GNU/Linux users, or anyone who is willing to read documentation, and
+    solve their own problems.</p>
 </li>
 <li>
-<p>versatility, arch is general-purpose distribution, it provide <br />
-    ability to build custom system (do-it-yourself), by choosing of <br />
-    thousands packages from official repository or AUR. Arch also <br />
-    provide tools like simple and fast package manager, arch build <br />
-    system, custom repositories, etc.   </p>
+<p>versatility, arch is general-purpose distribution, it provide
+    ability to build custom system (do-it-yourself), by choosing of
+    thousands packages from official repository or AUR. Arch also
+    provide tools like simple and fast package manager, arch build
+    system, custom repositories, etc.</p>
 </li>
 </ul>
 <h1 id="0-prepare-environment">0. Prepare environment</h1>
 <h2 id="download-distributive-and-verify-checksum">Download distributive and verify checksum</h2>
-<p>&lt;<a href="https://archlinux.org/download/&gt;" class="external-link">https://archlinux.org/download/&gt;</a>   </p>
+<p>&lt;<a href="https://archlinux.org/download/&gt;" class="external-link">https://archlinux.org/download/&gt;</a></p>
 <div class="lang-{.bash org-language="sh"}">
 
 <div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-O<span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="w"> </span><span class="c1"># I recommed download iso directli into USB drive (ventoy)</span>
@@ -606,20 +606,20 @@ b2sum<span class="w"> </span>archlinux-2022.08.05-x86_64.iso
 
 </div>
 
-<p>After downloading and checking, copy it to flash drive, I use ventoy.   </p>
+<p>After downloading and checking, copy it to flash drive, I use ventoy.</p>
 <h2 id="setup-installation-via-ssh-recommended-way">Setup installation via SSH, recommended way</h2>
 <ol>
 <li>
-<p>Set a root password <code class="verbatim">passwd</code>   </p>
+<p>Set a root password <code class="verbatim">passwd</code></p>
 </li>
 <li>
-<p>Confirm that <code class="verbatim">PermitRootLogin</code> yes is set in <br />
-<code class="verbatim">/etc/ssh/sshd_config</code>. If it is not, set it and reload <br />
-    the OpenSSH daemon <code class="verbatim">sshd.service</code>   </p>
+<p>Confirm that <code class="verbatim">PermitRootLogin</code> yes is set in
+    <code class="verbatim">/etc/ssh/sshd_config</code>. If it is not, set it and reload
+    the OpenSSH daemon <code class="verbatim">sshd.service</code></p>
 </li>
 <li>
-<p>On the local machine, connect to the target machine via SSH with the <br />
-    following commands:   </p>
+<p>On the local machine, connect to the target machine via SSH with the
+    following commands:</p>
 </li>
 </ol>
 <div class="lang-{.bash org-language="sh"}">
@@ -670,15 +670,15 @@ timedatectl<span class="w"> </span>status
 <h1 id="1-btrfs-better-fs-disk-layout">1. Btrfs (better FS) disk layout</h1>
 <h2 id="features">Features</h2>
 <ul>
-<li>self-healing in some configurations (nature of COW)   </li>
-<li>online defragmentation   </li>
-<li>online volume grow and shrinking   </li>
-<li>online block device addition and removal   </li>
-<li>RAID0, RAID1 and RAID10   </li>
-<li>Atomic writable (via copy-on-write)   </li>
-<li>Checksums   </li>
-<li>Incremental backup   </li>
-<li>...   </li>
+<li>self-healing in some configurations (nature of COW)</li>
+<li>online defragmentation</li>
+<li>online volume grow and shrinking</li>
+<li>online block device addition and removal</li>
+<li>RAID0, RAID1 and RAID10</li>
+<li>Atomic writable (via copy-on-write)</li>
+<li>Checksums</li>
+<li>Incremental backup</li>
+<li>...</li>
 </ul>
 <h1 id="1-wipe-existing-disks">1. Wipe existing disks</h1>
 <div class="lang-{.bash org-language="sh"}">
@@ -699,9 +699,9 @@ shred<span class="w"> </span>--verbose<span class="w"> </span>--random-source<sp
 </div>
 
 <h1 id="2-partitioning">2. Partitioning</h1>
-<p>Since we use cgdisk, it use 1 MiB alignment automatically (useful for <br />
-performance). Here example how to do partitioning on 1 disk drive, you <br />
-need repeat this steps on drive 2.   </p>
+<p>Since we use cgdisk, it use 1 MiB alignment automatically (useful for
+performance). Here example how to do partitioning on 1 disk drive, you
+need repeat this steps on drive 2.</p>
 <h2 id="start-partitioning-from-free-space-usually-last-line-in-tui">Start partitioning from free space, usually last line in TUI.</h2>
 <div class="lang-{.bash org-language="sh"}">
 
@@ -1118,27 +1118,27 @@ df
 
 <h1 id="useful-links">Useful Links</h1>
 <ul>
-<li>&lt;<a href="https://wiki.archlinux.org/title/System_maintenance&gt;" class="external-link">https://wiki.archlinux.org/title/System_maintenance&gt;</a>   </li>
-<li>&lt;<a href="https://wiki.archlinux.org/title/improving_performance&gt;" class="external-link">https://wiki.archlinux.org/title/improving_performance&gt;</a>   </li>
-<li>&lt;<a href="https://wiki.archlinux.org/title/General_recommendations&gt;" class="external-link">https://wiki.archlinux.org/title/General_recommendations&gt;</a>   </li>
+<li>&lt;<a href="https://wiki.archlinux.org/title/System_maintenance&gt;" class="external-link">https://wiki.archlinux.org/title/System_maintenance&gt;</a></li>
+<li>&lt;<a href="https://wiki.archlinux.org/title/improving_performance&gt;" class="external-link">https://wiki.archlinux.org/title/improving_performance&gt;</a></li>
+<li>&lt;<a href="https://wiki.archlinux.org/title/General_recommendations&gt;" class="external-link">https://wiki.archlinux.org/title/General_recommendations&gt;</a></li>
 </ul>
 <h1 id="sources">Sources</h1>
 <ul>
-<li>&lt;<a href="https://wiki.archlinux.org/title/Frequently_asked_questions&gt;" class="external-link">https://wiki.archlinux.org/title/Frequently_asked_questions&gt;</a>   </li>
-<li>&lt;<a href="https://wiki.archlinux.org/title/installation_guide&gt;" class="external-link">https://wiki.archlinux.org/title/installation_guide&gt;</a>   </li>
-<li>&lt;<a href="https://wiki.archlinux.org/title/Install_Arch_Linux_via_SSH&gt;" class="external-link">https://wiki.archlinux.org/title/Install_Arch_Linux_via_SSH&gt;</a>   </li>
-<li>&lt;<a href="https://wiki.gentoo.org/wiki/Btrfs/Native_System_Root_Guide#Partitioning&gt;" class="external-link">https://wiki.gentoo.org/wiki/Btrfs/Native_System_Root_Guide#Partitioning&gt;</a>   </li>
-<li>&lt;<a href="https://wiki.archlinux.org/title/btrfs#Compression&gt;" class="external-link">https://wiki.archlinux.org/title/btrfs#Compression&gt;</a>   </li>
-<li>&lt;<a href="https://gist.github.com/Th3Whit3Wolf/2f24b29183be7f8e9c0b05115aefb693&gt;" class="external-link">https://gist.github.com/Th3Whit3Wolf/2f24b29183be7f8e9c0b05115aefb693&gt;</a>   </li>
-<li>&lt;<a href="https://gist.github.com/broedli/5604637d5855bef68f3e#72-bootloader-grub2-install&gt;" class="external-link">https://gist.github.com/broedli/5604637d5855bef68f3e#72-bootloader-grub2-install&gt;</a>   </li>
+<li>&lt;<a href="https://wiki.archlinux.org/title/Frequently_asked_questions&gt;" class="external-link">https://wiki.archlinux.org/title/Frequently_asked_questions&gt;</a></li>
+<li>&lt;<a href="https://wiki.archlinux.org/title/installation_guide&gt;" class="external-link">https://wiki.archlinux.org/title/installation_guide&gt;</a></li>
+<li>&lt;<a href="https://wiki.archlinux.org/title/Install_Arch_Linux_via_SSH&gt;" class="external-link">https://wiki.archlinux.org/title/Install_Arch_Linux_via_SSH&gt;</a></li>
+<li>&lt;<a href="https://wiki.gentoo.org/wiki/Btrfs/Native_System_Root_Guide#Partitioning&gt;" class="external-link">https://wiki.gentoo.org/wiki/Btrfs/Native_System_Root_Guide#Partitioning&gt;</a></li>
+<li>&lt;<a href="https://wiki.archlinux.org/title/btrfs#Compression&gt;" class="external-link">https://wiki.archlinux.org/title/btrfs#Compression&gt;</a></li>
+<li>&lt;<a href="https://gist.github.com/Th3Whit3Wolf/2f24b29183be7f8e9c0b05115aefb693&gt;" class="external-link">https://gist.github.com/Th3Whit3Wolf/2f24b29183be7f8e9c0b05115aefb693&gt;</a></li>
+<li>&lt;<a href="https://gist.github.com/broedli/5604637d5855bef68f3e#72-bootloader-grub2-install&gt;" class="external-link">https://gist.github.com/broedli/5604637d5855bef68f3e#72-bootloader-grub2-install&gt;</a></li>
 </ul>
-<p>yadm anaconda <br />
-&lt;<a href="https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications&gt;" class="external-link">https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications&gt;</a> <br />
-&lt;<a href="https://wiki.archlinux.org/index.php/GTK+#Themes&gt;" class="external-link">https://wiki.archlinux.org/index.php/GTK+#Themes&gt;</a> <br />
-&lt;<a href="https://wiki.archlinux.org/index.php/qt#Appearance&gt;" class="external-link">https://wiki.archlinux.org/index.php/qt#Appearance&gt;</a>   </p>
-<p>&lt;<a href="https://lukesmith.xyz/programs/ock&gt;" class="external-link">https://lukesmith.xyz/programs/ock&gt;</a> surf, ungoogled-chrome core &amp; tools   </p>
+<p>yadm anaconda
+&lt;<a href="https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications&gt;" class="external-link">https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications&gt;</a>
+&lt;<a href="https://wiki.archlinux.org/index.php/GTK+#Themes&gt;" class="external-link">https://wiki.archlinux.org/index.php/GTK+#Themes&gt;</a>
+&lt;<a href="https://wiki.archlinux.org/index.php/qt#Appearance&gt;" class="external-link">https://wiki.archlinux.org/index.php/qt#Appearance&gt;</a></p>
+<p>&lt;<a href="https://lukesmith.xyz/programs/ock&gt;" class="external-link">https://lukesmith.xyz/programs/ock&gt;</a> surf, ungoogled-chrome core &amp; tools</p>
 <ol>
-<li>Network   </li>
+<li>Network</li>
 </ol>
 <div class="lang-{.bash org-language="sh"}">
 
@@ -1150,7 +1150,7 @@ df
 </div>
 
 <ol>
-<li>Custom Font install   </li>
+<li>Custom Font install</li>
 </ol>
 <div class="lang-{.bash org-language="sh"}">
 
@@ -1164,12 +1164,12 @@ df
 </div>
 
 <ol>
-<li>Ansible install &lt;<a href="https://github.com/inomoz/inomoz-quickstart&gt;" class="external-link">https://github.com/inomoz/inomoz-quickstart&gt;</a>   </li>
+<li>Ansible install &lt;<a href="https://github.com/inomoz/inomoz-quickstart&gt;" class="external-link">https://github.com/inomoz/inomoz-quickstart&gt;</a></li>
 </ol>
 <h1 id="what-to-do-on-a-failed-disk-btrfs">What to do on a failed disk (btrfs)</h1>
-<p>&lt;<a href="https://superuser.com/questions/1087787/linux-btrfs-convert-to-single-with-failed-drive#&gt;:\~:text=Begin%20a%20rebalancing%20operation%20with,and%20size%20of%20your%20array." class="external-link">https://superuser.com/questions/1087787/linux-btrfs-convert-to-single-with-failed-drive#&gt;:\~:text=Begin%20a%20rebalancing%20operation%20with,and%20size%20of%20your%20array.</a> <br />
-Do this in arch live-iso.   </p>
-<p>Convert Btrfs raid1 to single Btrfs   </p>
+<p>&lt;<a href="https://superuser.com/questions/1087787/linux-btrfs-convert-to-single-with-failed-drive#&gt;:\~:text=Begin%20a%20rebalancing%20operation%20with,and%20size%20of%20your%20array." class="external-link">https://superuser.com/questions/1087787/linux-btrfs-convert-to-single-with-failed-drive#&gt;:\~:text=Begin%20a%20rebalancing%20operation%20with,and%20size%20of%20your%20array.</a>
+Do this in arch live-iso.</p>
+<p>Convert Btrfs raid1 to single Btrfs</p>
 <div class="lang-{.bash org-language="sh"}">
 
 <div class="codehilite"><pre><span></span><code><span class="c1"># Disable auto-mounting btrfs array in /etc/fstab, reboot</span>
@@ -1206,13 +1206,13 @@ btrfs<span class="w"> </span><span class="k">fi</span><span class="w"> </span>us
 
 </div>
 
-<p>&lt;<a href="https://btrfs.wiki.kernel.org/index.php/Using_Btrfs_with_Multiple_Devices&gt;" class="external-link">https://btrfs.wiki.kernel.org/index.php/Using_Btrfs_with_Multiple_Devices&gt;</a>   </p>
-<p>We then shut down the system, plugged the replacement disk in (actually <br />
-the disk we had earlier ruined by double degraded booting, after wiping <br />
-the BTRFS partition), booted and then did the usual dance to turn the <br />
-now-single BTRFS into a RAID1 again.   </p>
-<p>Restore gpt partiton from backup to new drive first (partition~table~), <br />
-and recommended restore EFI partition too. Instructions above.   </p>
+<p>&lt;<a href="https://btrfs.wiki.kernel.org/index.php/Using_Btrfs_with_Multiple_Devices&gt;" class="external-link">https://btrfs.wiki.kernel.org/index.php/Using_Btrfs_with_Multiple_Devices&gt;</a></p>
+<p>We then shut down the system, plugged the replacement disk in (actually
+the disk we had earlier ruined by double degraded booting, after wiping
+the BTRFS partition), booted and then did the usual dance to turn the
+now-single BTRFS into a RAID1 again.</p>
+<p>Restore gpt partiton from backup to new drive first (partition~table~),
+and recommended restore EFI partition too. Instructions above.</p>
 <div class="lang-{.bash org-language="sh"}">
 
 <div class="codehilite"><pre><span></span><code><span class="c1"># add multiple devices</span>
@@ -1231,13 +1231,13 @@ btrfs<span class="w"> </span>filesystem<span class="w"> </span>df<span class="w"
 
 </div>
 
-<p>As a result, we had a RAID1 again. If you wonder why we did not use <br />
-Btrfs replace: We would have to connect the new disk before the second <br />
-reboot, which is not always practical. With the method above, once we <br />
-have rebalanced the file system to a single one, we can reboot as often <br />
-as we like to get the new drive online.   </p>
-<p>Alternative <br />
-&lt;<a href="https://btrfs.wiki.kernel.org/index.php/Using_Btrfs_with_Multiple_Devices#Using_btrfs_replace&gt;" class="external-link">https://btrfs.wiki.kernel.org/index.php/Using_Btrfs_with_Multiple_Devices#Using_btrfs_replace&gt;</a>   </p>
+<p>As a result, we had a RAID1 again. If you wonder why we did not use
+Btrfs replace: We would have to connect the new disk before the second
+reboot, which is not always practical. With the method above, once we
+have rebalanced the file system to a single one, we can reboot as often
+as we like to get the new drive online.</p>
+<p>Alternative
+&lt;<a href="https://btrfs.wiki.kernel.org/index.php/Using_Btrfs_with_Multiple_Devices#Using_btrfs_replace&gt;" class="external-link">https://btrfs.wiki.kernel.org/index.php/Using_Btrfs_with_Multiple_Devices#Using_btrfs_replace&gt;</a></p>
 <h1 id="enable-ssh-access-sshd-after-installation">Enable SSH access (sshd) after installation</h1>
 <div class="lang-{.bash org-language="sh"}">
 
@@ -1255,21 +1255,21 @@ ip<span class="w"> </span>a<span class="p">|</span>grep<span class="w"> </span>e
 
 </div>
 
-<p>TODO: <br />
-&lt;<a href="https://www.cyberciti.biz/faq/linux-backup-restore-a-partition-table-with-sfdisk-command/&gt;" class="external-link">https://www.cyberciti.biz/faq/linux-backup-restore-a-partition-table-with-sfdisk-command/&gt;</a> <br />
-&lt;<a href="https://wiki.archlinux.org/title/System_time#Time_synchronization&gt;" class="external-link">https://wiki.archlinux.org/title/System_time#Time_synchronization&gt;</a>   </p>
+<p>TODO:
+&lt;<a href="https://www.cyberciti.biz/faq/linux-backup-restore-a-partition-table-with-sfdisk-command/&gt;" class="external-link">https://www.cyberciti.biz/faq/linux-backup-restore-a-partition-table-with-sfdisk-command/&gt;</a>
+&lt;<a href="https://wiki.archlinux.org/title/System_time#Time_synchronization&gt;" class="external-link">https://wiki.archlinux.org/title/System_time#Time_synchronization&gt;</a></p>
 <h1 id="systemd-timesyncd">systemd-timesyncd</h1>
-<p>&lt;<a href="https://blog.programs74.ru/how-to-use-systemd-timesyncd/&gt;" class="external-link">https://blog.programs74.ru/how-to-use-systemd-timesyncd/&gt;</a>   </p>
+<p>&lt;<a href="https://blog.programs74.ru/how-to-use-systemd-timesyncd/&gt;" class="external-link">https://blog.programs74.ru/how-to-use-systemd-timesyncd/&gt;</a></p>
 <h1 id="xdg-project-dir">xdg project dir</h1>
 <h1 id="zram-generator">[TODO]{.todo .TODO} zram-generator</h1>
-<p>&lt;<a href="https://aur.archlinux.org/cgit/aur.git/tree/zram-generator.conf?h=zram-generator-defaults&gt;" class="external-link">https://aur.archlinux.org/cgit/aur.git/tree/zram-generator.conf?h=zram-generator-defaults&gt;</a> <br />
-&lt;<a href="https://github.com/systemd/zram-generator&gt;" class="external-link">https://github.com/systemd/zram-generator&gt;</a>   </p>
-<p>Install zram-generator using one of the methods listed above. Create a <br />
-zram-generator.conf config file. Run systemctl daemon-reload to create <br />
-new device units. Run systemctl start /dev/zram0 (adjust the name as <br />
-appropriate to match the config). Call zramctl or swapon to confirm that <br />
-the device has been created and is in use. Once installed and <br />
-configured, the generator will be invoked by systemd early at boot, <br />
+<p>&lt;<a href="https://aur.archlinux.org/cgit/aur.git/tree/zram-generator.conf?h=zram-generator-defaults&gt;" class="external-link">https://aur.archlinux.org/cgit/aur.git/tree/zram-generator.conf?h=zram-generator-defaults&gt;</a>
+&lt;<a href="https://github.com/systemd/zram-generator&gt;" class="external-link">https://github.com/systemd/zram-generator&gt;</a></p>
+<p>Install zram-generator using one of the methods listed above. Create a
+zram-generator.conf config file. Run systemctl daemon-reload to create
+new device units. Run systemctl start /dev/zram0 (adjust the name as
+appropriate to match the config). Call zramctl or swapon to confirm that
+the device has been created and is in use. Once installed and
+configured, the generator will be invoked by systemd early at boot,
 there is no need to do anything else.</p></div>
 <div class="note-footer">
 <div class="backlinks">
@@ -1289,13 +1289,13 @@ there is no need to do anything else.</p></div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A262407180277662769589294015549823645193{level}" class="graph_div"></div>
+    <div id="A258788850475964407525841957258316902512{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B262407180277662769589294015549823645193{level}" level="{level}" note_temp_id="262407180277662769589294015549823645193" onclick="window.ObsHtmlGraph.run(this, '262407180277662769589294015549823645193', 'my arch linux enviroment');">
+        <button class="graph_button graph_show_button" id="B258788850475964407525841957258316902512{level}" level="{level}" note_temp_id="258788850475964407525841957258316902512" onclick="window.ObsHtmlGraph.run(this, '258788850475964407525841957258316902512', 'my arch linux enviroment');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C262407180277662769589294015549823645193{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C258788850475964407525841957258316902512{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

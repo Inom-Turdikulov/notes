@@ -9,4 +9,4 @@ tags:
 - definition
 title: Collection (abstract data type)
 ---
-   
+

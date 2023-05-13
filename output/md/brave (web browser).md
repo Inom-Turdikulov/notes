@@ -10,35 +10,35 @@ tags:
 - definition
 title: Brave (web browser)
 ---
-   
-Free open source browser.   
-   
-Key features for me:   
-   
-   
-- Rich ad blocking (Shield), and it's available for all   
-  [computing platform](./computing%20platform.md) which I use.   
-   
-- Support for extensions.   
-- [video acceleration api](./video%20acceleration%20api.md) support on [linux](./linux.md)   
-- [chrome devtools](./chrome%20devtools.md) support.   
-- Built-in browser sync, and it's available for all platforms which I use.   
-   
-## Useful URL's   
-   
-   
-- [brave://settings/searchEngines](brave://settings/searchEngines) - search   
-  engines settings   
-   
-- [brave://settings/extensions](brave://settings/extensions) - extensions   
-  settings   
-   
-- [brave://flags](brave://flags) - flags settings   
-- [brave://media-internals](brave://media-internals) - media internals   
-- [brave://gpu](brave://gpu) - gpu info   
-- [brave://version](brave://version) - version info   
-   
-## Troubleshooting   
-   
-Stuck video playback in Android.   
+
+Free open source browser.
+
+Key features for me:
+
+
+- Rich ad blocking (Shield), and it's available for all
+  [computing platform](./computing%20platform.md) which I use.
+
+- Support for extensions.
+- [video acceleration api](./video%20acceleration%20api.md) support on [linux](./linux.md)
+- [chrome devtools](./chrome%20devtools.md) support.
+- Built-in browser sync, and it's available for all platforms which I use.
+
+## Useful URL's
+
+
+- [brave://settings/searchEngines](brave://settings/searchEngines) - search
+  engines settings
+
+- [brave://settings/extensions](brave://settings/extensions) - extensions
+  settings
+
+- [brave://flags](brave://flags) - flags settings
+- [brave://media-internals](brave://media-internals) - media internals
+- [brave://gpu](brave://gpu) - gpu info
+- [brave://version](brave://version) - version info
+
+## Troubleshooting
+
+Stuck video playback in Android.
 Try to disable Android SurfaceControl.

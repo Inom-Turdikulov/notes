@@ -10,8 +10,8 @@ tags:
 - definition
 title: Copilot
 ---
-   
-> GitHub Copilot uses the OpenAI Codex to suggest code and entire functions in   
-> real-time, right from your editor.   
-   
+
+> GitHub Copilot uses the OpenAI Codex to suggest code and entire functions in
+> real-time, right from your editor.
+
 Currently, I use it mostly to automate repetitive tasks.

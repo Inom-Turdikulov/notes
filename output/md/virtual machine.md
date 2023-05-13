@@ -6,4 +6,4 @@ tags:
 - definition
 title: Virtual machine
 ---
-   
+

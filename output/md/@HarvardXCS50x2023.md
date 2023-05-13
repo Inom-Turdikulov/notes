@@ -14,20 +14,20 @@ tags:
 - inbox
 title: HarvardX CS50x
 ---
-   
-## Week 0   
-   
-TODO: Convert to zettelkasten definitions?   
-Long intro video with some basics:   
-   
-- Binary numbers   
-- ASCII and Unicode   
-- Emojis and ZWJ (zero-width joiner/zero-width non-joiner)   
-- RGB color model and pixels   
-- Sound and Video encoding   
-- Binary search algorithm   
-- Time complexity   
-- Pseudocode   
+
+## Week 0
+
+TODO: Convert to zettelkasten definitions?
+Long intro video with some basics:
+
+- Binary numbers
+- ASCII and Unicode
+- Emojis and ZWJ (zero-width joiner/zero-width non-joiner)
+- RGB color model and pixels
+- Sound and Video encoding
+- Binary search algorithm
+- Time complexity
+- Pseudocode
 ```
 1 Pick up phone book
 2 Open to middle of phone book
@@ -43,21 +43,21 @@ Long intro video with some basics:
 12 Else
 13      Person is not in phone book (end of algorithm)
 ```
-   
-   
-- Scratch programming language   
-<[https://scratch.mit.edu/projects/editor/?tutorial=getStarted>](https://scratch.mit.edu/projects/editor/?tutorial=getStarted>)   
-   
-   
-## Week 1   
-   
-<[https://inom-turdikulov-humble-space-train-g65pjqvq7hw4pr.github.dev/>](https://inom-turdikulov-humble-space-train-g65pjqvq7hw4pr.github.dev/>)   
-<[https://manual.cs50.io>](https://manual.cs50.io>)   
-<[https://manual.cs50.io/#cs50.h>](https://manual.cs50.io/#cs50.h>)   
-   
-Describe V$Code from Micro$oft 😀   
-   
-Write and compile C program:   
+
+
+- Scratch programming language
+<[https://scratch.mit.edu/projects/editor/?tutorial=getStarted>](https://scratch.mit.edu/projects/editor/?tutorial=getStarted>)
+
+
+## Week 1
+
+<[https://inom-turdikulov-humble-space-train-g65pjqvq7hw4pr.github.dev/>](https://inom-turdikulov-humble-space-train-g65pjqvq7hw4pr.github.dev/>)
+<[https://manual.cs50.io>](https://manual.cs50.io>)
+<[https://manual.cs50.io/#cs50.h>](https://manual.cs50.io/#cs50.h>)
+
+Describe V$Code from Micro$oft 😀
+
+Write and compile C program:
 ```c
 #include <stdio.h>
 
@@ -66,19 +66,19 @@ int main(void)
     printf("hello, world\n"); // this is [[statement (computer science)]]
 }
 ```
-   
-   
+
+
 ```bash
 make hello
 ./hello
 ```
-   
-   
-   
-- [printf format string](./printf%20format%20string.md) explanation   
-- [conditional (computer programming)](./conditional%20%28computer%20programming%29.md) explanation   
-   
-Conditional program:   
+
+
+
+- [printf format string](./printf%20format%20string.md) explanation
+- [conditional (computer programming)](./conditional%20%28computer%20programming%29.md) explanation
+
+Conditional program:
 ```c
 #include <cs50.h>
 #include <stdio.h>
@@ -101,11 +101,11 @@ int main(void)
     }
 }
 ```
-   
-   
-   
-- Linux basic [command-line interface](./command-line%20interface.md)   
-- Do while loop usable sometimes, for example for input validation   
-- [truncation](./truncation.md)   
-- [type conversion](./type%20conversion.md)   
+
+
+
+- Linux basic [command-line interface](./command-line%20interface.md)
+- Do while loop usable sometimes, for example for input validation
+- [truncation](./truncation.md)
+- [type conversion](./type%20conversion.md)
 - [floating-point arithmetic](./floating-point%20arithmetic.md)

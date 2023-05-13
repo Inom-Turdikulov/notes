@@ -9,4 +9,4 @@ tags:
 - definition
 title: Operator (computer programming)
 ---
-   
+

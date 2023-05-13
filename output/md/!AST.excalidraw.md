@@ -3,75 +3,75 @@ excalidraw-plugin: parsed
 tags:
 - excalidraw
 ---
-   
-==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==   
-   
-   
-# Text Elements   
-Statement sequence ^rsuWT3jv   
-   
-while ^n8FREbgN   
-   
-return ^TgZfo8TB   
-   
-variable name: a ^ub6j1wPk   
-   
-compare op: != ^bsP5pN20   
-   
-branch ^dWxXSQV8   
-   
-assign ^sZ1eujdV   
-   
-variable name: b ^FImPpgmQ   
-   
-constant value: 0 ^2dJmfZtg   
-   
-compare op: > ^pk2hK0fi   
-   
-variable name: a ^U5NoQjj0   
-   
-variable name: b ^oV93ur8u   
-   
-variable name: a ^zIz0Kbqa   
-   
-bin op op: - ^K4iSowRc   
-   
-variable name: a ^2qKJrk5N   
-   
-variable name: b ^6ajNjjDY   
-   
-body ^BQXfseiY   
-   
-An abstract syntax tree for the   
- following code for the Euclidean algorithm: ^090UvbBt   
-   
-while b ≠ 0:   
-    if a > b:   
-        a := a - b   
-    else:   
-        b := b - a   
-return a ^cWGVBoHd   
-   
-Condition ^65lpcQnk   
-   
-assign ^DEpsrSsu   
-   
-variable name: b ^hZ1hBgTP   
-   
-bin op op: - ^sD0gWJsS   
-   
-variable name: b ^sU3CpDSv   
-   
-variable name: a ^dNEZ6sgA   
-   
-if-body ^tagIFt4J   
-   
-else-body ^mrOpiFQa   
-   
-condition ^gLGgXpqq   
-   
-%%   
-# Drawing   
+
+==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
+
+
+# Text Elements
+Statement sequence ^rsuWT3jv
+
+while ^n8FREbgN
+
+return ^TgZfo8TB
+
+variable name: a ^ub6j1wPk
+
+compare op: != ^bsP5pN20
+
+branch ^dWxXSQV8
+
+assign ^sZ1eujdV
+
+variable name: b ^FImPpgmQ
+
+constant value: 0 ^2dJmfZtg
+
+compare op: > ^pk2hK0fi
+
+variable name: a ^U5NoQjj0
+
+variable name: b ^oV93ur8u
+
+variable name: a ^zIz0Kbqa
+
+bin op op: - ^K4iSowRc
+
+variable name: a ^2qKJrk5N
+
+variable name: b ^6ajNjjDY
+
+body ^BQXfseiY
+
+An abstract syntax tree for the
+ following code for the Euclidean algorithm: ^090UvbBt
+
+while b ≠ 0:
+    if a > b:
+        a := a - b
+    else:
+        b := b - a
+return a ^cWGVBoHd
+
+Condition ^65lpcQnk
+
+assign ^DEpsrSsu
+
+variable name: b ^hZ1hBgTP
+
+bin op op: - ^sD0gWJsS
+
+variable name: b ^sU3CpDSv
+
+variable name: a ^dNEZ6sgA
+
+if-body ^tagIFt4J
+
+else-body ^mrOpiFQa
+
+condition ^gLGgXpqq
+
+%%
+# Drawing
 ```json
 {
 	"type": "excalidraw",
@@ -2888,5 +2888,5 @@ condition ^gLGgXpqq
 	"files": {}
 }
 ```
-   
+
 %%

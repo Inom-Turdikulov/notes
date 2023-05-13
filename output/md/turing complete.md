@@ -9,5 +9,5 @@ tags:
 - definition
 title: Turing completeness
 ---
-   
+
 NEXT: I need to check this.

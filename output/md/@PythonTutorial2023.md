@@ -15,54 +15,54 @@ tags:
 - loop
 title: The Python Tutorial
 ---
-   
-My notes taken from the Python Tutorial.   
-This tutorial is cover basic concepts of Python, most noteworthy features and language elements.   
-   
-# [1. Whetting Your Appetite](https://docs.python.org/3/tutorial/appetite.html)   
-   
-In this section described when Python usable. For examlpe scripting, simple GUI, etc.   
-   
-Also described strong points of Python, such as rapid development, interactive, integration, batteries-included, etc.   
-   
-Moreover, are given difference between Python and other languages, such as C, C++, Java, etc.   
-   
-# [2. Using the Python Interpreter](https://docs.python.org/3/tutorial/interpreter.html)   
-   
-   
-- Start interactive interpreter mode: `python3`.   
-- Exit <kbd>C-d</kbd>, <kbd>C-z</kbd> or `quit()`.   
-- Interpreter support [gnu readline](./gnu%20readline.md) library.   
-- `python -c` - execute Python code.   
-- `python -m [arg]` - execute Python module.   
-- `python -i` - start interactive interpreter mode, can be combined with `-c` and `-m`.   
-   
-Python support argument parsing. You can use `sys.argv` to get arguments.   
-Minimal length of `sys.argv` is 1, can be empty, script name (`python -`, `-` is standard input) or module name (`python -m -i lzma`).   
-   
-In `sys.argv` also stored `-c` (not sure) and `-m` arguments.   
-   
-By default, Python source files are treated as encoded in [UTF-8](./unicode.md), but standard library only use [ascii](./ascii.md) characters for identifiers, this convention that any portable code should follow.   
-   
-If you need to set not UTF-8 encoding, use `# -*- coding: encoding -*-` comment as first line or after [shebang (unix)](./shebang%20%28unix%29.md):   
-   
+
+My notes taken from the Python Tutorial.
+This tutorial is cover basic concepts of Python, most noteworthy features and language elements.
+
+# [1. Whetting Your Appetite](https://docs.python.org/3/tutorial/appetite.html)
+
+In this section described when Python usable. For examlpe scripting, simple GUI, etc.
+
+Also described strong points of Python, such as rapid development, interactive, integration, batteries-included, etc.
+
+Moreover, are given difference between Python and other languages, such as C, C++, Java, etc.
+
+# [2. Using the Python Interpreter](https://docs.python.org/3/tutorial/interpreter.html)
+
+
+- Start interactive interpreter mode: `python3`.
+- Exit <kbd>C-d</kbd>, <kbd>C-z</kbd> or `quit()`.
+- Interpreter support [gnu readline](./gnu%20readline.md) library.
+- `python -c` - execute Python code.
+- `python -m [arg]` - execute Python module.
+- `python -i` - start interactive interpreter mode, can be combined with `-c` and `-m`.
+
+Python support argument parsing. You can use `sys.argv` to get arguments.
+Minimal length of `sys.argv` is 1, can be empty, script name (`python -`, `-` is standard input) or module name (`python -m -i lzma`).
+
+In `sys.argv` also stored `-c` (not sure) and `-m` arguments.
+
+By default, Python source files are treated as encoded in [UTF-8](./unicode.md), but standard library only use [ascii](./ascii.md) characters for identifiers, this convention that any portable code should follow.
+
+If you need to set not UTF-8 encoding, use `# -*- coding: encoding -*-` comment as first line or after [shebang (unix)](./shebang%20%28unix%29.md):
+
 ```python
 #!/usr/bin/env python3
 # -*- coding: cp1251 -*-
 ```
-   
-# [3. An Informal Introduction to Python](https://docs.python.org/3/tutorial/introduction.html)   
-   
+
+# [3. An Informal Introduction to Python](https://docs.python.org/3/tutorial/introduction.html)
+
 ```python
 # this is the first comment
 spam = 1  # and this is the second comment
           # ... and now a third!
 text = "# This is not a comment because it's inside quotes."
 ```
-   
-   
-Testing Python as Calculator:   
-   
+
+
+Testing Python as Calculator:
+
 ```python
 print(2 + 2)  # int
 print(50 - 5*6) # int
@@ -77,33 +77,33 @@ print(17 / 3)  # result 5.666666666666667
 print(5 ** 2)  # 5 squared
 print(2 ** 7)  # 2 to the power of 7
 ```
-   
-   
-[Operators](./operator%20%28computer%20programming%29.md) with mixed type [operand](./operand.md)'s convert the integer operand to floating point   
-   
+
+
+[Operators](./operator%20%28computer%20programming%29.md) with mixed type [operand](./operand.md)'s convert the integer operand to floating point
+
 ```python
 print(4 * 3.75 - 1) # 14.0
 ```
-   
-   
-Set variables:   
-   
+
+
+Set variables:
+
 ```python
 width = 20
 height = 5 * 9
 print(width * height)
 ```
-   
-   
-Use undefined variable, will raise `NameError`:   
-   
+
+
+Use undefined variable, will raise `NameError`:
+
 ```python
 n  # try to access an undefined variable
 ```
-   
-   
-In interactive mode, the last printed expression is assigned to the variable `_`.   
-   
+
+
+In interactive mode, the last printed expression is assigned to the variable `_`.
+
 ```python
 tax = 12.5 / 100  # tax
 price = 100.50    # price
@@ -111,14 +111,14 @@ price * tax       # 12.5625
 price + _         # 113.0625
 round(_, 2)       # 113.06
 ```
-   
-   
-Python support various [data type](./data%20type.md)'s such as: Int, Float, Decimal and Fraction, [complex number](./complex%20number.md)'s (using `j` or `J` suffix - `3+5j`).   
-   
-In Python all these types are objects, so they have methods and attributes.   
-   
-Python strings:   
-   
+
+
+Python support various [data type](./data%20type.md)'s such as: Int, Float, Decimal and Fraction, [complex number](./complex%20number.md)'s (using `j` or `J` suffix - `3+5j`).
+
+In Python all these types are objects, so they have methods and attributes.
+
+Python strings:
+
 ```python
 print('spam eggs')  # single quotes
 print('doesn\'t')   # use \' to escape the single quote...
@@ -127,23 +127,23 @@ print('"Yes, " they said.')
 print("\"Yes,\" they said.")
 print('"Isn\'t", they said.')
 ```
-   
-   
-In interactive mode [escape sequence](./escape%20sequence.md) not recognized, so use `print()` function.   
-   
-You can disable escaping by using raw strings:   
-   
+
+
+In interactive mode [escape sequence](./escape%20sequence.md) not recognized, so use `print()` function.
+
+You can disable escaping by using raw strings:
+
 ```python
 print('C:\some\name')   # here \n means newline!
 print(r'C:\some\name')  # note the r before the quote
 ```
-   
-   
-A raw string may not end in an odd number of \ characters; see the FAQ ::TODO: Make clickable :: entry for more information and workarounds.   
-   
-You can use multiline strings:   
-`\` - used here to prevent printing newline.   
-   
+
+
+A raw string may not end in an odd number of \ characters; see the FAQ ::TODO: Make clickable :: entry for more information and workarounds.
+
+You can use multiline strings:
+`\` - used here to prevent printing newline.
+
 ```python
 print("""\
 Usage: thingy [OPTIONS]
@@ -151,15 +151,15 @@ Usage: thingy [OPTIONS]
      -H hostname               Hostname to connect to
 """)
 ```
-   
-   
-> Unlike other languages, special characters such as \n have the same meaning with both single ('...') and double ("...") quotes. The only difference between the two is that within single quotes you don’t need to escape " (but you have to escape \') and vice versa.   
-   
-[string literal](./string%20literal.md) can be multiple lines by `"""` triple double or single `'''` quotes. You can use `\` character to prevent automatically inserting new line in output (useful for formatting).   
-   
-You can also concatenate string with `+` operator or by breaking them into new lines or space.   
-`*` used for repeating string (multiplication).   
-   
+
+
+> Unlike other languages, special characters such as \n have the same meaning with both single ('...') and double ("...") quotes. The only difference between the two is that within single quotes you don’t need to escape " (but you have to escape \') and vice versa.
+
+[string literal](./string%20literal.md) can be multiple lines by `"""` triple double or single `'''` quotes. You can use `\` character to prevent automatically inserting new line in output (useful for formatting).
+
+You can also concatenate string with `+` operator or by breaking them into new lines or space.
+`*` used for repeating string (multiplication).
+
 ```python
 print(3 * 'un' + 'ium')   # 'unununium'
 print('Py' 'thon')        # 'Python'
@@ -173,11 +173,11 @@ print(text + "?")  # concatenation using +
 print(f"{text}?")  # concatenation using f-string
 print(text.__add__("?"))  # concatenation using __add__ method
 ```
-   
-   
-Strings can be indexed (subscripted).   
-In python no separate character type, a character is a string of size one.   
-   
+
+
+Strings can be indexed (subscripted).
+In python no separate character type, a character is a string of size one.
+
 ```python
 word = 'Python'
 print(word[0])  # character in position 0 <- P
@@ -191,10 +191,10 @@ print(word[-6]) # first character,
 print(word[6])  # IndexError: string index out of range
 print(word[-7]) # IndexError: string index out of range
 ```
-   
-   
-Strings can be sliced, to obtain substring   
-   
+
+
+Strings can be sliced, to obtain substring
+
 ```python
 word = "Hello, World!"
 print(word[0:5])  # Hello
@@ -205,29 +205,29 @@ print(word[7:13]) # World!
 
 print(word[-6:])  # World!, offest 6 from end
 ```
-   
-   
-Note: `s[:i] + s[i:] == s`   
-   
+
+
+Note: `s[:i] + s[i:] == s`
+
 ```python
 word = "Hello, World!"
 print(word[:5] + word[5:]) == word  # True
 ```
-   
-   
-Attempting to use invalid index in range slice handled?   
-?   
-Gracefully, without raising an exception.   
+
+
+Attempting to use invalid index in range slice handled?
+?
+Gracefully, without raising an exception.
 ```python
 word = 'Python'
 print(word[42:])
 print(word[4:42])
 ```
-   
-   
-To remember you can use this table.   
-Think indices are pointing between characters.   
-How do you think this table is constructed (row 1, 2, 3)?   
+
+
+To remember you can use this table.
+Think indices are pointing between characters.
+How do you think this table is constructed (row 1, 2, 3)?
 ```
 +---+---+---+---+---+---+
 | H | e | l | l | o | , |
@@ -235,75 +235,75 @@ How do you think this table is constructed (row 1, 2, 3)?
  .0  .1  .2  .3  .4  .5   6
  -6. -5. -4. -3. -2. -1.
 ```
-   
-   
-Python strings are ==[immutable object](./immutable%20object.md)'s==.   
-   
-So you can't assign new value to character in string.   
-   
+
+
+Python strings are ==[immutable object](./immutable%20object.md)'s==.
+
+So you can't assign new value to character in string.
+
 ```python
 word = 'Python'
 word[0] = 'J'    # TypeError: 'str' object does not support item assignment
 word[2:] = 'py'  # TypeError: 'str' object does not support item assignment
 ```
-   
-   
-But you generate new string by concatenation.   
-   
+
+
+But you generate new string by concatenation.
+
 ```python
 word = 'Python'
 print('J' + word[1:])  # Jython
 print(word[:2] + 'py') # Pypy
 ```
-   
-   
-String has various built-in methods - [String Methods](https://docs.python.org/3/library/stdtypes.html#string-methods).   
-   
-Built-in function `len()` returns length of string.   
-   
+
+
+String has various built-in methods - [String Methods](https://docs.python.org/3/library/stdtypes.html#string-methods).
+
+Built-in function `len()` returns length of string.
+
 ```python
 s = 'WhosYourDaddy ISeedeadpeople'
 print(len(s))  # 14
 s = '😀😀😀😀😀😀😀😀😀😀' '😀😀😀😀😀😀😀😀😀😀' '😀😀😀😀😀😀😀😀'
 print(len(s))  # 4
 ```
-   
-   
-Most versatile [data type](./data%20type.md) is [list (abstract data type)](./list%20%28abstract%20data%20type%29.md).   
-In Python list can contain elements of different types, but usually used one type.   
-   
+
+
+Most versatile [data type](./data%20type.md) is [list (abstract data type)](./list%20%28abstract%20data%20type%29.md).
+In Python list can contain elements of different types, but usually used one type.
+
 ```python
 squares = [1, 4, 9, 16, 25]
 print(squares)  # [1, 4, 9, 16, 25]
 ```
-   
-   
-Lists like [string literal](./string%20literal.md) and [iterator](./iterator.md) can be indexed and sliced.   
-   
+
+
+Lists like [string literal](./string%20literal.md) and [iterator](./iterator.md) can be indexed and sliced.
+
 ```python
 squares = [1, 4, 9, 16, 25]
 print(squares[0])  # indexing returns the item
 print(squares[-1])
 print(squares[-3:])  # slicing returns a new list
 ```
-   
-   
-All slice operations return a new list (shallow copy) containing the requested elements.   
+
+
+All slice operations return a new list (shallow copy) containing the requested elements.
 ```python
 squares = [1, 4, 9, 16, 25]
 print(squares[:])  # [1, 4, 9, 16, 25]
 ```
-   
-   
-Lists also support operations like concatenation.   
-   
+
+
+Lists also support operations like concatenation.
+
 ```python
 squares = [9, 8, 7, 6, 5]
 print(squares + [4, 3, 2, 1])  # [9, 8, 7, 6, 5, 4, 3, 2, 1]
 ```
-   
-   
-List are, mutable, unlike strings.   
+
+
+List are, mutable, unlike strings.
 ```python
 cubes = [1, 8, 27, 65, 125]  # something's wrong here, let's check 4th element
 print(4 ** 3)  # 64, the cube of 4 is 64, not 65!
@@ -315,10 +315,10 @@ cubes.append(216)  # add the cube of 6
 cubes.append(7 ** 3)  # and the cube of 7
 print(cubes)
 ```
-   
-   
-You can also do assignments to lists (inserting/replace), which can change their size or clear them entirely.   
-   
+
+
+You can also do assignments to lists (inserting/replace), which can change their size or clear them entirely.
+
 ```python
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 # replace some values
@@ -331,24 +331,24 @@ print(letters)  # ['a', 'b', 'f', 'g']
 letters[:] = []
 print(letters)
 ```
-   
-   
-List also support built-in functions `len()` and `+`.   
+
+
+List also support built-in functions `len()` and `+`.
 ```python
 print(len(["Hello", "World"]))  # 2
 ```
-   
-   
-You can also use nested lists (list containing other lists).   
-   
+
+
+You can also use nested lists (list containing other lists).
+
 ```python
 a = ['a', 'b', 'c']
 n = [1, 2, 3]
 x = [a, n]
 print(x) # [['a', 'b', 'c'], [1, 2, 3]]
 ```
-   
-[fibonacci sequence](./fibonacci%20sequence.md):   
+
+[fibonacci sequence](./fibonacci%20sequence.md):
 ```python
 a, b = 0, 1  # multiple assignment, initialize variables
 while a < 10:
@@ -362,23 +362,23 @@ while a < 10:
     # 2, 3
     # 3, 5
 ```
-   
-   
-Order of Evaluation in Python expression   
-?   
-In Python, the left operand is always evaluated before the right operand.   
-   
-Non-zero and (zero or [None](./null%20pointer.md)) values in Python (and C) considered as ([boolean data type](./boolean%20data%20type.md))?   
-Non-zero and zero length values considered as?   
-?   
-True and False.   
-Length also True and False.   
-   
-   
-## [4. More Control Flow Tools](https://docs.python.org/3/tutorial/controlflow.html)   
-   
-[control flow](./control%20flow.md) - more info.   
-   
+
+
+Order of Evaluation in Python expression
+?
+In Python, the left operand is always evaluated before the right operand.
+
+Non-zero and (zero or [None](./null%20pointer.md)) values in Python (and C) considered as ([boolean data type](./boolean%20data%20type.md))?
+Non-zero and zero length values considered as?
+?
+True and False.
+Length also True and False.
+
+
+## [4. More Control Flow Tools](https://docs.python.org/3/tutorial/controlflow.html)
+
+[control flow](./control%20flow.md) - more info.
+
 ```python
 if x < 0:
     ...
@@ -387,18 +387,18 @@ elif x == 0:
 else:  # optional, sort of default
     print('More')
 ```
-   
-   
-For statement in Python iterates over the sequence items, in the order that they appear.   
-And finish when sequence is exhausted.   
-   
+
+
+For statement in Python iterates over the sequence items, in the order that they appear.
+And finish when sequence is exhausted.
+
 ```python
 [print(x, end="😮") for x in list("Hnr")]  # H😮n😮r😮
 ```
-   
-   
-> Code that modifies a collection while iterating over that same collection can be tricky to get right. Instead, it is usually more straight-forward to loop over a copy of the collection or to create a new collection:   
-   
+
+
+> Code that modifies a collection while iterating over that same collection can be tricky to get right. Instead, it is usually more straight-forward to loop over a copy of the collection or to create a new collection:
+
 ```python
 # Create a sample collection
 users = {'Hans': 'active', 'Éléonore': 'inactive', '景太郎': 'active'}
@@ -416,32 +416,32 @@ for user, status in users.items():
         active_users[user] = status
 print(active_users)
 ```
-   
-   
-`range()` is sort of converting given length to known array (`0,1,...,X`). It generates arithmetic progression.   
-   
+
+
+`range()` is sort of converting given length to known array (`0,1,...,X`). It generates arithmetic progression.
+
 ```python
 print(list(range(10))) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
                        # ten isn't included in the generated sequence.
 ```
-   
-   
-You can select range start number (not index).   
-Some like to generate numbers from X to Y-1.   
+
+
+You can select range start number (not index).
+Some like to generate numbers from X to Y-1.
 ```python
 print(list(range(5, 10)))  # [5, 6, 7, 8, 9]
 ```
-   
-   
-What you will see in interactive python session if you enter this: `list(range(0, 10))`   
-?   
+
+
+What you will see in interactive python session if you enter this: `list(range(0, 10))`
+?
 ```python
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
-   
-   
-And you can also specify [increment](./increment%20and%20decrement%20operators.md) for step size. Which can be positive or negative.   
-   
+
+
+And you can also specify [increment](./increment%20and%20decrement%20operators.md) for step size. Which can be positive or negative.
+
 ```python
 print(list(range(0, 10, 1)))  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 print(list(range(0, 10, 2)))  # [0, 2, 4, 6, 8]
@@ -453,39 +453,39 @@ print(list(range(10, 0, -1)))  # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 print(list(range(-10, -100, -30))) # [-10, -40, -70]
 print(list(range(-10, 10, 30))) # [-10], first item only
 ```
-   
-   
-To iterate over the indices of a sequence, you can combine `range()` and `len()` as follows:   
+
+
+To iterate over the indices of a sequence, you can combine `range()` and `len()` as follows:
 ```python
 a = ['Mary', 'had', 'a', 'little', 'lamb']
 for i in range(len(a)):
     print(i, a[i])
 ```
-   
-   
-But better just use `enumerate()` function.   
+
+
+But better just use `enumerate()` function.
 ```python
 a = ['Mary', 'had', 'a', 'little', 'lamb']
 for i, item in enumerate(a):
     print(i, item)
 ```
-   
-   
-If we don't iterate over range and just print it, we will get object reference.   
+
+
+If we don't iterate over range and just print it, we will get object reference.
 ```python
 print(range(10))  # range(0, 10)
 ```
-   
-   
-> The `break` statement, like in C, `breaks out` of the innermost enclosing `for` or `while` loop.   
-   
-::TODO: add `{_obsidian_pattern_tag_loop}` into control flow ::   
-   
-In python [control flow`{_obsidian_pattern_tag_loop}`](./control%20flow.md`{_obsidian_pattern_tag_loop}`) statements may have a `else` clause.   
-   
-It is executed if loop wasn't `break`ed (we iterated over all items in `for` or `while` condition become `False`).   
-   
-::TODO: better review this ::   
+
+
+> The `break` statement, like in C, `breaks out` of the innermost enclosing `for` or `while` loop.
+
+::TODO: add `{_obsidian_pattern_tag_loop}` into control flow ::
+
+In python [control flow`{_obsidian_pattern_tag_loop}`](./control%20flow.md`{_obsidian_pattern_tag_loop}`) statements may have a `else` clause.
+
+It is executed if loop wasn't `break`ed (we iterated over all items in `for` or `while` condition become `False`).
+
+::TODO: better review this ::
 ```python
 for n in range(2, 10):
     # multiple loops
@@ -497,12 +497,12 @@ for n in range(2, 10):
         # loop fell through without finding a factor
         print(n, 'is a prime number')
 ```
-   
-   
-In `try-except` statement, `else` runs if no exception was raised.   
-   
-The `continue` statement, continues with the next iteration of the loop:   
-   
+
+
+In `try-except` statement, `else` runs if no exception was raised.
+
+The `continue` statement, continues with the next iteration of the loop:
+
 ```python
 for num in range(2, 10):
     if num % 2 == 0:
@@ -516,12 +516,12 @@ for num in range(2, 10):
     else:
         print("Found an odd number", num)
 ```
-   
-   
-`pass` is a [null operation](./null%20function.md) (statement, while `None` is an object).   
-When it is executed, nothing happens.   
-It is useful as a placeholder when a statement is required syntactically, but no code needs to be executed   
-   
+
+
+`pass` is a [null operation](./null%20function.md) (statement, while `None` is an object).
+When it is executed, nothing happens.
+It is useful as a placeholder when a statement is required syntactically, but no code needs to be executed
+
 ```python
 while True:
     pass  # Busy-wait for keyboard interrupt (Ctrl+C)
@@ -535,14 +535,14 @@ try:
 except ImportError:
     pass  # this is bad pracitce DO NOT DO THIS
 ```
-   
-   
-::TODO: watch this - [https://www.youtube.com/watch?v=-79HGfWmH_w](https://www.youtube.com/watch?v=-79HGfWmH_w) ::   
-   
-A match statement compare expression with successive patterns until one or more matches.   
-So this is [pattern matching](./pattern%20matching.md).   
-> Only the first pattern that matches gets executed and it can also extract components (sequence elements or object attributes) from the value into variables.   
-   
+
+
+::TODO: watch this - [https://www.youtube.com/watch?v=-79HGfWmH_w](https://www.youtube.com/watch?v=-79HGfWmH_w) ::
+
+A match statement compare expression with successive patterns until one or more matches.
+So this is [pattern matching](./pattern%20matching.md).
+> Only the first pattern that matches gets executed and it can also extract components (sequence elements or object attributes) from the value into variables.
+
 ```python
 def http_error(status):
     match status:
@@ -557,10 +557,10 @@ def http_error(status):
         case _:  # _ is a wildcard pattern and never fails to match
             return "Something's wrong with the internet"
 ```
-   
-   
-Patterns can look like unpacking assignments, and can be used to bind variables:   
-   
+
+
+Patterns can look like unpacking assignments, and can be used to bind variables:
+
 ```python
 point = (0, 100)
 
@@ -576,29 +576,29 @@ match point:
     case _:
         raise ValueError("Not a point")
 ```
-   
-   
-   
-## [5. Data Structures](https://docs.python.org/3/tutorial/datastructures.html)   
-   
-## [6. Modules](https://docs.python.org/3/tutorial/modules.html)   
-   
-## [7. Input and Output](https://docs.python.org/3/tutorial/inputoutput.html)   
-   
-## [8. Errors and Exceptions](https://docs.python.org/3/tutorial/errors.html)   
-   
-## [9. Classes](https://docs.python.org/3/tutorial/classes.html)   
-   
-## [10. Brief Tour of the Standard Library](https://docs.python.org/3/tutorial/stdlib.html)   
-   
-## [11. Brief Tour of the Standard Library — Part II](https://docs.python.org/3/tutorial/stdlib2.html)   
-   
-## [12. Virtual Environments and Packages](https://docs.python.org/3/tutorial/venv.html)   
-   
-## [13. What Now?](https://docs.python.org/3/tutorial/whatnow.html)   
-   
-## [14. Interactive Input Editing and History Substitution](https://docs.python.org/3/tutorial/interactive.html)   
-   
-## [15. Floating Point Arithmetic: Issues and Limitations](https://docs.python.org/3/tutorial/floatingpoint.html)   
-   
+
+
+
+## [5. Data Structures](https://docs.python.org/3/tutorial/datastructures.html)
+
+## [6. Modules](https://docs.python.org/3/tutorial/modules.html)
+
+## [7. Input and Output](https://docs.python.org/3/tutorial/inputoutput.html)
+
+## [8. Errors and Exceptions](https://docs.python.org/3/tutorial/errors.html)
+
+## [9. Classes](https://docs.python.org/3/tutorial/classes.html)
+
+## [10. Brief Tour of the Standard Library](https://docs.python.org/3/tutorial/stdlib.html)
+
+## [11. Brief Tour of the Standard Library — Part II](https://docs.python.org/3/tutorial/stdlib2.html)
+
+## [12. Virtual Environments and Packages](https://docs.python.org/3/tutorial/venv.html)
+
+## [13. What Now?](https://docs.python.org/3/tutorial/whatnow.html)
+
+## [14. Interactive Input Editing and History Substitution](https://docs.python.org/3/tutorial/interactive.html)
+
+## [15. Floating Point Arithmetic: Issues and Limitations](https://docs.python.org/3/tutorial/floatingpoint.html)
+
 ## [16. Appendix](https://docs.python.org/3/tutorial/appendix.html)

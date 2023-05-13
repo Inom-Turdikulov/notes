@@ -9,12 +9,12 @@ tags:
 - definition
 title: Cooking
 ---
-   
-   
-- [https://based.cooking/](https://based.cooking/)   
-- [cutlets](./cutlets.md)   
-- [creamy mashed potatoes](./creamy%20mashed%20potatoes.md)   
-- [CalorieKing](https://www.calorieking.com/us/en/)   
-- [Based Cooking](https://based.cooking/)   
-- [Cocktail Builder](https://www.cocktailbuilder.com/)   
+
+
+- [https://based.cooking/](https://based.cooking/)
+- [cutlets](./cutlets.md)
+- [creamy mashed potatoes](./creamy%20mashed%20potatoes.md)
+- [CalorieKing](https://www.calorieking.com/us/en/)
+- [Based Cooking](https://based.cooking/)
+- [Cocktail Builder](https://www.cocktailbuilder.com/)
 - [MyFridgeFood](https://myfridgefood.com/)

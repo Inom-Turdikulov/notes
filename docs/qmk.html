@@ -548,27 +548,27 @@
             <div class="container">
                 <embeddedtitle>qmk</embeddedtitle>
 <div class="content"><blockquote>
-<p>The goal of the QMK software project is to develop a completely customizable, <br />
-powerful, and enjoyable firmware experience for any project - keyboard or <br />
-otherwise - and to provide helpful, encouraging, and kind support and feedback <br />
-for people with any software development experience.   </p>
+<p>The goal of the QMK software project is to develop a completely customizable,
+powerful, and enjoyable firmware experience for any project - keyboard or
+otherwise - and to provide helpful, encouraging, and kind support and feedback
+for people with any software development experience.</p>
 </blockquote>
 <ul>
-<li>QMK official site: <a href="https://qmk.fm/" class="external-link">https://qmk.fm/</a>   </li>
-<li>My fork of QMK: <a href="https://github.com/inomoz/qmk_firmware" class="external-link">https://github.com/inomoz/qmk_firmware</a>   </li>
+<li>QMK official site: <a href="https://qmk.fm/" class="external-link">https://qmk.fm/</a></li>
+<li>My fork of QMK: <a href="https://github.com/inomoz/qmk_firmware" class="external-link">https://github.com/inomoz/qmk_firmware</a></li>
 </ul>
-<p>I use QMK on my keyboard (KBD75 rev2). I'have done some basic customizations to <br />
-keymap. I use Colemak-DH layout, but on system level (because I use also russian <br />
-ЙЦУКЕН layout, so it's depends on qwerty layout).   </p>
-<p>Keycodes: <a href="https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md" class="external-link">https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md</a>   </p>
-<p>Flash firmware steps:   </p>
+<p>I use QMK on my keyboard (KBD75 rev2). I'have done some basic customizations to
+keymap. I use Colemak-DH layout, but on system level (because I use also russian
+ЙЦУКЕН layout, so it's depends on qwerty layout).</p>
+<p>Keycodes: <a href="https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md" class="external-link">https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md</a></p>
+<p>Flash firmware steps:</p>
 <ol>
 <li>
-<p>Go to directory with QMK firmware <code>cd qmk_firmware</code>   </p>
+<p>Go to directory with QMK firmware <code>cd qmk_firmware</code></p>
 </li>
 <li>
-<p>Prepare environment: <br />
-<a href="https://docs.qmk.fm/#/newbs_getting_started?id=prerequisites-3" class="external-link">https://docs.qmk.fm/#/newbs_getting_started?id=prerequisites-3</a>   </p>
+<p>Prepare environment:
+   <a href="https://docs.qmk.fm/#/newbs_getting_started?id=prerequisites-3" class="external-link">https://docs.qmk.fm/#/newbs_getting_started?id=prerequisites-3</a></p>
 </li>
 </ol>
 <div class="lang-general">
@@ -582,18 +582,18 @@ sudo pacman -S qmk  # optionally you can install qmk from PIP
 
 <ol>
 <li>
-<p>Run qmk setup, in most situations you will answer <code>y</code> to all questions <br />
-<code>qmk setup</code>   </p>
+<p>Run qmk setup, in most situations you will answer <code>y</code> to all questions
+   <code>qmk setup</code></p>
 </li>
 <li>
-<p>Test Your Build Environment (frimware can be compiled), kbdfans/kbd75/rev2 is <br />
-   my keyboard. <code>qmk compile -kb kbdfans/kbd75/rev2 -km default</code>   </p>
+<p>Test Your Build Environment (frimware can be compiled), kbdfans/kbd75/rev2 is
+   my keyboard. <code>qmk compile -kb kbdfans/kbd75/rev2 -km default</code></p>
 </li>
 <li>
-<p>Configure keyboard <code>qmk config user.keyboard=kbdfans/kbd75/rev2</code>   </p>
+<p>Configure keyboard <code>qmk config user.keyboard=kbdfans/kbd75/rev2</code></p>
 </li>
 <li>
-<p>Create keymap and set it as default   </p>
+<p>Create keymap and set it as default</p>
 </li>
 </ol>
 <div class="lang-general">
@@ -605,34 +605,34 @@ qmk config user.keymap=inomoz
 
 </div>
 
-<p>Now you have own keymap, you can edit it in <br />
-<code>keyboards/kbdfans/kbd75/keymaps/inomoz/keymap.c</code>   </p>
+<p>Now you have own keymap, you can edit it in
+<code>keyboards/kbdfans/kbd75/keymaps/inomoz/keymap.c</code></p>
 <ol>
-<li>Compile and flash Firmware <code>qmk compile -kb kbdfans/kbd75/rev2 -km inomoz</code>   </li>
+<li>Compile and flash Firmware <code>qmk compile -kb kbdfans/kbd75/rev2 -km inomoz</code></li>
 </ol>
-<p>it's equivavent to <code>qmk compile</code> if keyboard and keymap are set in config.   </p>
+<p>it's equivavent to <code>qmk compile</code> if keyboard and keymap are set in config.</p>
 <ol>
-<li>Flash Firmware <code>qmk flash -kb kbdfans/kbd75/rev2 -km inomoz</code>   </li>
+<li>Flash Firmware <code>qmk flash -kb kbdfans/kbd75/rev2 -km inomoz</code></li>
 </ol>
-<p>it's equivavent to <code>qmk flash</code> if keyboard and keymap are set in config.   </p>
-<p>Put Your Keyboard into DFU (Bootloader) Mode, after entering command above. In <br />
-my case I need to hold <code>ESC</code> and plug USB cable.   </p>
-<p><a href="https://docs.qmk.fm/#/newbs_flashing?id=put-your-keyboard-into-dfu-bootloader-mode" class="external-link">https://docs.qmk.fm/#/newbs_flashing?id=put-your-keyboard-into-dfu-bootloader-mode</a>   </p>
+<p>it's equivavent to <code>qmk flash</code> if keyboard and keymap are set in config.</p>
+<p>Put Your Keyboard into DFU (Bootloader) Mode, after entering command above. In
+my case I need to hold <code>ESC</code> and plug USB cable.</p>
+<p><a href="https://docs.qmk.fm/#/newbs_flashing?id=put-your-keyboard-into-dfu-bootloader-mode" class="external-link">https://docs.qmk.fm/#/newbs_flashing?id=put-your-keyboard-into-dfu-bootloader-mode</a></p>
 <h2 id="keys">Keys</h2>
-<p>qmk {#FN-l}, {#FN+h}::from <code>l</code> to right, from <code>h</code> to left qmk {#FN-j}, <br />
-{#FN-h}::from <code>j</code> to down, from <code>k</code> to up   </p>
+<p>qmk {#FN-l}, {#FN+h}::from <code>l</code> to right, from <code>h</code> to left qmk {#FN-j},
+{#FN-h}::from <code>j</code> to down, from <code>k</code> to up</p>
 <h2 id="my-keymap-variant">My keymap variant</h2>
-<figure>   
-  <img src="/img/colemak_dh_ansi.png" width="" alt="Colemak-DH ansi" title="Colemak-DH ansi" />   
-  <figcaption>Colemak-DH ansi</figcaption>   
+<figure>
+  <img src="/img/colemak_dh_ansi.png" width="" alt="Colemak-DH ansi" title="Colemak-DH ansi" />
+  <figcaption>Colemak-DH ansi</figcaption>
 </figure>
 
 <h2 id="inspiration">Inspiration</h2>
-<p><a href="https://peterxjang.com/img/miryoku-layout.png" class="external-link">https://peterxjang.com/img/miryoku-layout.png</a>   </p>
+<p><a href="https://peterxjang.com/img/miryoku-layout.png" class="external-link">https://peterxjang.com/img/miryoku-layout.png</a></p>
 <h2 id="resources">Resources</h2>
 <ul>
-<li><a href="https://config.qmk.fm/#/kbdfans/kbd75/rev2/LAYOUT" class="external-link">QMK Configurator</a>   </li>
-<li><a href="https://jhelvy.shinyapps.io/qmkjsonconverter/" class="external-link">QMK JSON converter</a>   </li>
+<li><a href="https://config.qmk.fm/#/kbdfans/kbd75/rev2/LAYOUT" class="external-link">QMK Configurator</a></li>
+<li><a href="https://jhelvy.shinyapps.io/qmkjsonconverter/" class="external-link">QMK JSON converter</a></li>
 </ul>
 <h2 id="todo">TODO</h2>
 <ul>
@@ -656,13 +656,13 @@ my case I need to hold <code>ESC</code> and plug USB cable.   </p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A64754266385540408604723054914940805266{level}" class="graph_div"></div>
+    <div id="A140938754718612389623181959897972053475{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B64754266385540408604723054914940805266{level}" level="{level}" note_temp_id="64754266385540408604723054914940805266" onclick="window.ObsHtmlGraph.run(this, '64754266385540408604723054914940805266', 'qmk');">
+        <button class="graph_button graph_show_button" id="B140938754718612389623181959897972053475{level}" level="{level}" note_temp_id="140938754718612389623181959897972053475" onclick="window.ObsHtmlGraph.run(this, '140938754718612389623181959897972053475', 'qmk');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C64754266385540408604723054914940805266{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C140938754718612389623181959897972053475{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

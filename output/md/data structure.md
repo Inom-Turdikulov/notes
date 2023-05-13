@@ -9,13 +9,13 @@ tags:
 - definition
 title: Data structures
 ---
-   
-Analyzing the number of steps an operation takes is the heart of understanding   
-the performance of data structures.   
-   
-   
-- <[https://en.wikipedia.org/wiki/Fizz_buzz>](https://en.wikipedia.org/wiki/Fizz_buzz>)   
-- imperative and functional versions   
-- greedy   
-- dynamic strategies   
+
+Analyzing the number of steps an operation takes is the heart of understanding
+the performance of data structures.
+
+
+- <[https://en.wikipedia.org/wiki/Fizz_buzz>](https://en.wikipedia.org/wiki/Fizz_buzz>)
+- imperative and functional versions
+- greedy
+- dynamic strategies
 - directed and undirected graphs

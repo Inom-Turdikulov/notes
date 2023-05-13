@@ -9,5 +9,5 @@ tags:
 - definition
 title: Stack Overflow
 ---
-   
+
 [Stack overflow quistons](https://stackoverflow.com/questions)

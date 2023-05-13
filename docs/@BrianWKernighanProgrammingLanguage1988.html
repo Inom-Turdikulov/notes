@@ -547,59 +547,59 @@
 </div>
             <div class="container">
                 <embeddedtitle>@BrianWKernighanProgrammingLanguage1988</embeddedtitle>
-<div class="content"><p>The authors of this book [@BrianWKernighanProgrammingLanguage1988] present the <br />
-complete guide to ANSI standard C language programming. Written by the <br />
-developers of C, this new version helps readers keep up with the finalized ANSI <br />
-standard for C while showing how to take advantage of C's rich set of operators, <br />
-economy of expression, improved control flow, and data structures.   </p>
-<p>Questions and answers formatted as flashcards.   </p>
+<div class="content"><p>The authors of this book [@BrianWKernighanProgrammingLanguage1988] present the
+complete guide to ANSI standard C language programming. Written by the
+developers of C, this new version helps readers keep up with the finalized ANSI
+standard for C while showing how to take advantage of C's rich set of operators,
+economy of expression, improved control flow, and data structures.</p>
+<p>Questions and answers formatted as flashcards.</p>
 <h1 id="preface-6">Preface /6</h1>
-<p>Looks like any popular language changes over the time, and C is not an <br />
-exception.   </p>
-<p>Goal of the <a href="/ANSI%20C.html">ANSI C</a> standard <br />
-? <br />
-Produce an unambiguous and machine-independent definition of the language C. <br />
-In my words - universal, clear and easy to understand language because it can only mean one thing.   </p>
+<p>Looks like any popular language changes over the time, and C is not an
+exception.</p>
+<p>Goal of the <a href="/ANSI%20C.html">ANSI C</a> standard
+?
+Produce an unambiguous and machine-independent definition of the language C.
+In my words - universal, clear and easy to understand language because it can only mean one thing.</p>
 <!--SR:!2023-05-13,1,227-->
 
-<p>Write useful programs probably the best goal to learn any language.   </p>
-<p>C wears well as one's <mark class="formatting_highlight">experience</mark> with it grows.   </p>
+<p>Write useful programs probably the best goal to learn any language.</p>
+<p>C wears well as one's <mark class="formatting_highlight">experience</mark> with it grows.</p>
 <!--SR:!2023-05-14,2,247-->
 
 <h1 id="preface-to-the-first-edition-8">Preface to the first edition /8</h1>
-<p>Is C is a general-purpose language? <br />
-? <br />
-Yes, general-purpose something like universal language, to use it in any domain, and not have limited functions to specific domain.   </p>
+<p>Is C is a general-purpose language?
+?
+Yes, general-purpose something like universal language, to use it in any domain, and not have limited functions to specific domain.</p>
 <!--SR:!2023-05-15,3,267-->
 
-<p>Is C is high-level language? <br />
-? <br />
-Yes, but it not a "very high-level" language, nor a "big" one. <br />
-But its absence of restrictions and its generality make it more convenient and effective for many tasks than supposedly more powerful languages.   </p>
+<p>Is C is high-level language?
+?
+Yes, but it not a "very high-level" language, nor a "big" one.
+But its absence of restrictions and its generality make it more convenient and effective for many tasks than supposedly more powerful languages.</p>
 <!--SR:!2023-05-16,3,247-->
 
 <h1 id="chapter-1-a-tutorial-introduction-9">Chapter 1 - A Tutorial Introduction /9</h1>
-<p>Basics of C (as language, like <a href="/variable%20%28computer%20science%29.html">variable (computer science)</a> and arithmetic <br />
-<a href="/expression%20%28computer%20science%29.html">expression (computer science)</a>). <br />
-?   </p>
+<p>Basics of C (as language, like <a href="/variable%20%28computer%20science%29.html">variable (computer science)</a> and arithmetic
+<a href="/expression%20%28computer%20science%29.html">expression (computer science)</a>).
+?</p>
 <ul>
-<li>Declarations   </li>
-<li>Variables and constants   </li>
-<li>Arithmetic expressions   </li>
-<li>Operators and operands   </li>
-<li>Control flow   </li>
-<li>Loops   </li>
-<li>Functions   </li>
-<li>Input and output   </li>
-<li>Pointers   </li>
-<li>Standard library   </li>
+<li>Declarations</li>
+<li>Variables and constants</li>
+<li>Arithmetic expressions</li>
+<li>Operators and operands</li>
+<li>Control flow</li>
+<li>Loops</li>
+<li>Functions</li>
+<li>Input and output</li>
+<li>Pointers</li>
+<li>Standard library</li>
 </ul>
 <h2 id="1-1-getting-started-9">1.1 Getting Started /9</h2>
-<p>The only way to learn a new programming language is by <mark class="formatting_highlight">writing programs</mark> in <br />
-it.   </p>
+<p>The only way to learn a new programming language is by <mark class="formatting_highlight">writing programs</mark> in
+it.</p>
 <!--SR:!2023-05-14,2,247-->
 
-<p>Hello world program, can you describe it, each parts?   </p>
+<p>Hello world program, can you describe it, each parts?</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
@@ -613,7 +613,7 @@ it.   </p>
 
 </div>
 
-<p>?   </p>
+<p>?</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="c1"> // include standart input/output library (this is commentary)</span>
@@ -632,81 +632,81 @@ it.   </p>
 
 <!--SR:!2023-05-28,16,248-->
 
-<p>Process of create the program text somewhere, compile it successfully, load it, <br />
-run it, and find out where your output went a big deal. After that you usually <br />
-can continue with comparatively easy tasks.   </p>
-<p>Steps to compile and run a C program <br />
-? <br />
-1. Create the program text somewhere <br />
-2. Compile it successfully (multiple steps), usually with <code>gcc</code> command or <br />
-<code>clang</code> or <code>cc</code>. In modern world you need to use some build system. <br />
-3. Load it &amp; Run it <br />
-5. Find out where your output went   </p>
-<p>Describe this <a href="/escape%20sequence.html">escape sequence</a>'s:   </p>
+<p>Process of create the program text somewhere, compile it successfully, load it,
+run it, and find out where your output went a big deal. After that you usually
+can continue with comparatively easy tasks.</p>
+<p>Steps to compile and run a C program
+?
+1. Create the program text somewhere
+2. Compile it successfully (multiple steps), usually with <code>gcc</code> command or
+   <code>clang</code> or <code>cc</code>. In modern world you need to use some build system.
+3. Load it &amp; Run it
+5. Find out where your output went</p>
+<p>Describe this <a href="/escape%20sequence.html">escape sequence</a>'s:</p>
 <ul>
-<li><code>\n</code>   </li>
-<li><code>\t</code>   </li>
-<li><code>\b</code>   </li>
-<li><code>\\</code>   </li>
-<li><code>\"</code>   </li>
+<li><code>\n</code></li>
+<li><code>\t</code></li>
+<li><code>\b</code></li>
+<li><code>\\</code></li>
+<li><code>\"</code></li>
 <li>
-<p><code>\'</code> <br />
-?   </p>
+<p><code>\'</code>
+?</p>
 </li>
 <li>
-<p><code>\n</code> - newline   </p>
+<p><code>\n</code> - newline</p>
 </li>
-<li><code>\t</code> - tab   </li>
-<li><code>\b</code> - backspace   </li>
-<li><code>\\</code> - backslash   </li>
-<li><code>\"</code> - double quote   </li>
-<li><code>\'</code> - single quote   </li>
+<li><code>\t</code> - tab</li>
+<li><code>\b</code> - backspace</li>
+<li><code>\\</code> - backslash</li>
+<li><code>\"</code> - double quote</li>
+<li><code>\'</code> - single quote</li>
 </ul>
 <!--SR:!2023-11-24,206,268-->
 
-<p>C program, whatever its size, consists of <mark class="formatting_highlight">functions and variables</mark>.   </p>
+<p>C program, whatever its size, consists of <mark class="formatting_highlight">functions and variables</mark>.</p>
 <!--SR:!2023-05-15,3,267-->
 
-<p>Function contains ... that specify its computing operations to be done, and ... <br />
-store values used during the computation. <br />
-? <br />
-<a href="/statement%20%28computer%20science%29.html">statement (computer science)</a> and <br />
-<a href="/variable%20%28computer%20science%29.html">variable (computer science)</a>.   </p>
-<p>A function contains <mark class="formatting_highlight">statements</mark> that specify the computing <br />
-operations to be done.   </p>
+<p>Function contains ... that specify its computing operations to be done, and ...
+store values used during the computation.
+?
+<a href="/statement%20%28computer%20science%29.html">statement (computer science)</a> and
+<a href="/variable%20%28computer%20science%29.html">variable (computer science)</a>.</p>
+<p>A function contains <mark class="formatting_highlight">statements</mark> that specify the computing
+operations to be done.</p>
 <!--SR:!2023-05-15,3,267-->
 
-<p>Main difference between statement and expression? <br />
-? <br />
-An expression evaluates to a value. A statement does something.   </p>
+<p>Main difference between statement and expression?
+?
+An expression evaluates to a value. A statement does something.</p>
 <!--SR:!2023-05-14,1,234-->
 
-<p>The every program must have a function called <mark class="formatting_highlight">main</mark>. <br />
-Your program begins executing at the beginning of this function.   </p>
+<p>The every program must have a function called <mark class="formatting_highlight">main</mark>.
+Your program begins executing at the beginning of this function.</p>
 <!--SR:!2023-06-18,37,288-->
 
-<p>One method (simplest) to communicate data between functions is? <br />
-? <br />
-Use arguments between calling function and called function.   </p>
+<p>One method (simplest) to communicate data between functions is?
+?
+Use arguments between calling function and called function.</p>
 <!--SR:!2023-05-15,3,267-->
 
-<p>A function is called by <mark class="formatting_highlight">naming it</mark>, followed by a parenthesized list of <br />
-arguments.   </p>
+<p>A function is called by <mark class="formatting_highlight">naming it</mark>, followed by a parenthesized list of
+arguments.</p>
 <!--SR:!2023-05-15,3,267-->
 
-<p><code>"hello, world\n"</code> this is a <mark class="formatting_highlight">character string</mark> or <mark class="formatting_highlight">string constant</mark>.   </p>
+<p><code>"hello, world\n"</code> this is a <mark class="formatting_highlight">character string</mark> or <mark class="formatting_highlight">string constant</mark>.</p>
 <!--SR:!2023-05-25,13,228!2023-05-25,13,228-->
 
-<p><a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-1_hello_world.c" class="external-link"><strong>Exercise 1-1.</strong></a> <br />
-<a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-2_printf_experiments.c" class="external-link"><strong>Exercise 1-2.</strong></a>   </p>
+<p><a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-1_hello_world.c" class="external-link"><strong>Exercise 1-1.</strong></a>
+<a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-2_printf_experiments.c" class="external-link"><strong>Exercise 1-2.</strong></a></p>
 <h2 id="1-2-variables-and-arithmetic-expressions-11">1.2 Variables and Arithmetic Expressions /11</h2>
-<p>Formula to convert Fahrenheit to Celsius is <mark class="formatting_highlight"><code>℃  = (5/9) * (℉  - 32)</code></mark>.   </p>
-<p>How to define single and block comments? <br />
-?   </p>
+<p>Formula to convert Fahrenheit to Celsius is <mark class="formatting_highlight"><code>℃  = (5/9) * (℉  - 32)</code></mark>.</p>
+<p>How to define single and block comments?
+?</p>
 <ul>
-<li><code>// &lt;text&gt;</code> - single line comment   </li>
-<li><code>/* &lt;text&gt; */</code> - block comment   </li>
-<li>Multiline comment from kernel.org code style, <a href="https://www.kernel.org/doc/Documentation/process/coding-style.rst" class="external-link"></a>   </li>
+<li><code>// &lt;text&gt;</code> - single line comment</li>
+<li><code>/* &lt;text&gt; */</code> - block comment</li>
+<li>Multiline comment from kernel.org code style, <a href="https://www.kernel.org/doc/Documentation/process/coding-style.rst" class="external-link"></a></li>
 </ul>
 <div class="lang-general">
 
@@ -723,16 +723,16 @@ arguments.   </p>
 
 </div>
 
-<p>Comments may appear anywhere where a <mark class="formatting_highlight">blank, tab or newline</mark> can appear (whitespace character).   </p>
-<p>In C you must <mark class="formatting_highlight">declare all</mark> variables before they are used.   </p>
+<p>Comments may appear anywhere where a <mark class="formatting_highlight">blank, tab or newline</mark> can appear (whitespace character).</p>
+<p>In C you must <mark class="formatting_highlight">declare all</mark> variables before they are used.</p>
 <!--SR:!2023-05-15,3,267-->
 
-<p>A declaration announces <mark class="formatting_highlight">the properties</mark> of variables.   </p>
-<p>Declaration consists of a <mark class="formatting_highlight"><a href="/c%20data%20types.html">type</a>, a list of one or more <br />
-variable names, optionally initial value</mark>. Example: <code>int fahr, celsius = 0</code>.   </p>
+<p>A declaration announces <mark class="formatting_highlight">the properties</mark> of variables.</p>
+<p>Declaration consists of a <mark class="formatting_highlight"><a href="/c%20data%20types.html">type</a>, a list of one or more
+variable names, optionally initial value</mark>. Example: <code>int fahr, celsius = 0</code>.</p>
 <!--SR:!2023-05-23,11,228-->
 
-<p>What this code can output?   </p>
+<p>What this code can output?</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
@@ -743,8 +743,8 @@ variable names, optionally initial value</mark>. Example: <code>int fahr, celsiu
 
 </div>
 
-<p>? <br />
-Now days it will output (of course, depends on your system, machine, compiler, etc.):   </p>
+<p>?
+Now days it will output (of course, depends on your system, machine, compiler, etc.):</p>
 <div class="lang-general">
 
 <div class="codehilite"><pre><span></span><code>Int size: 4 byte sizeof(int)
@@ -756,21 +756,21 @@ Float size: 4 byte sizeof(float)
 
 <!--SR:!2023-05-26,14,248-->
 
-<p>Which <a href="/c%20data%20types.html">c data types</a> you know, for example 7 basic data types? <br />
-?   </p>
+<p>Which <a href="/c%20data%20types.html">c data types</a> you know, for example 7 basic data types?
+?</p>
 <ul>
-<li><code>char</code> - Character   </li>
-<li><code>int</code> - Integer (signed or unsigned, short, long, long long)   </li>
-<li><code>float</code> - Floating point number   </li>
-<li><code>double</code> - Double precision floating point number   </li>
-<li><code>array</code> - Array of values (this values described above)   </li>
-<li><code>struct</code> - Structure of values   </li>
-<li><code>union</code> - Union of values   </li>
-<li><code>pointer</code> - Pointer to a value, universal type   </li>
-<li><code>functions</code> that return values of any type   </li>
+<li><code>char</code> - Character</li>
+<li><code>int</code> - Integer (signed or unsigned, short, long, long long)</li>
+<li><code>float</code> - Floating point number</li>
+<li><code>double</code> - Double precision floating point number</li>
+<li><code>array</code> - Array of values (this values described above)</li>
+<li><code>struct</code> - Structure of values</li>
+<li><code>union</code> - Union of values</li>
+<li><code>pointer</code> - Pointer to a value, universal type</li>
+<li><code>functions</code> that return values of any type</li>
 </ul>
-<p>Assignment statement can be described as <mark class="formatting_highlight"><code>&lt;variable&gt; = &lt;expression&gt;;</code></mark>.   </p>
-<p>For example, we have while loop, when we break it?   </p>
+<p>Assignment statement can be described as <mark class="formatting_highlight"><code>&lt;variable&gt; = &lt;expression&gt;;</code></mark>.</p>
+<p>For example, we have while loop, when we break it?</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getchar</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">EOF</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -781,18 +781,18 @@ Float size: 4 byte sizeof(float)
 
 </div>
 
-<p>? <br />
-When we press <code>Ctrl+D</code> (EOF) or <code>Ctrl+C</code> (SIGINT). <br />
-If we in loop body, we execute all statements, and then check condition, so we <br />
-will get <code>1</code> or <code>0</code> (true or false). If false, we will break loop. <br />
-SIGINT - terminate process by signal (Ctrl+C), so we break program itself.   </p>
+<p>?
+When we press <code>Ctrl+D</code> (EOF) or <code>Ctrl+C</code> (SIGINT).
+If we in loop body, we execute all statements, and then check condition, so we
+will get <code>1</code> or <code>0</code> (true or false). If false, we will break loop.
+SIGINT - terminate process by signal (Ctrl+C), so we break program itself.</p>
 <!--SR:!2023-07-24,83,268-->
 
-<p>The indentation emphasizes the <mark class="formatting_highlight">logical structure</mark> of the program.   </p>
-<p>Why in C we need to-use proper indentation, with some style? <br />
-? <br />
-Because it's critical in making programs easy for people to read.   </p>
-<p>What you receive if execute this code?   </p>
+<p>The indentation emphasizes the <mark class="formatting_highlight">logical structure</mark> of the program.</p>
+<p>Why in C we need to-use proper indentation, with some style?
+?
+Because it's critical in making programs easy for people to read.</p>
+<p>What you receive if execute this code?</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="o">/</span><span class="mi">9</span><span class="p">);</span>
@@ -801,7 +801,7 @@ Because it's critical in making programs easy for people to read.   </p>
 
 </div>
 
-<p>?   </p>
+<p>?</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="c1">// C truncates any fractional part of an integer result.</span>
@@ -813,8 +813,8 @@ Because it's critical in making programs easy for people to read.   </p>
 
 <!--SR:!2023-05-15,3,267-->
 
-<p>Can you describe main sections of this code? For example first line is an <br />
-include header...   </p>
+<p>Can you describe main sections of this code? For example first line is an
+include header...</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
@@ -840,24 +840,24 @@ include header...   </p>
 
 </div>
 
-<p>? <br />
-Including header file, main function, variables declaration, assignment <br />
-statements, while loop, loop body statements.   </p>
-<p><code>printf("%d\t%d\n", fahr, celsius);</code> Each % construction in the first argument <br />
-of <a href="/printf%20format%20string.html">printf format string</a> is paired with the: <br />
-corresponding <mark class="formatting_highlight">second argument</mark>.   </p>
-<p>Is printf part of C language, does it's unified? <br />
-? <br />
-No it's part of standard library, and the behavior of <code>printf</code> is defined in the <br />
-ANSI standard, so its properties should be the same with any compiler.   </p>
+<p>?
+Including header file, main function, variables declaration, assignment
+statements, while loop, loop body statements.</p>
+<p><code>printf("%d\t%d\n", fahr, celsius);</code> Each % construction in the first argument
+of <a href="/printf%20format%20string.html">printf format string</a> is paired with the:
+corresponding <mark class="formatting_highlight">second argument</mark>.</p>
+<p>Is printf part of C language, does it's unified?
+?
+No it's part of standard library, and the behavior of <code>printf</code> is defined in the
+ANSI standard, so its properties should be the same with any compiler.</p>
 <!--SR:!2023-05-14,2,247-->
 
-<p><code>scanf</code> is like <mark class="formatting_highlight"><code>printf</code></mark>   </p>
+<p><code>scanf</code> is like <mark class="formatting_highlight"><code>printf</code></mark></p>
 <!--SR:!2023-05-15,3,267-->
 
-<p>Print the first number <code>fahr</code> in a field three digits wide, and the second <br />
-<code>celsius</code> in a field six digits wide. Write statement. <br />
-?   </p>
+<p>Print the first number <code>fahr</code> in a field three digits wide, and the second
+<code>celsius</code> in a field six digits wide. Write statement.
+?</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%3d %6d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">fahr</span><span class="p">,</span><span class="w"> </span><span class="n">celsius</span><span class="p">);</span>
@@ -868,27 +868,27 @@ ANSI standard, so its properties should be the same with any compiler.   </p>
 
 <!--SR:!2023-06-15,34,268-->
 
-<p>If an arithmetic operator has only integer operands, an <mark class="formatting_highlight">integer</mark> operation is <br />
-performed.   </p>
+<p>If an arithmetic operator has only integer operands, an <mark class="formatting_highlight">integer</mark> operation is
+performed.</p>
 <!--SR:!2023-06-16,35,268-->
 
-<p>If an arithmetic operator has floating-point operands and integer operands, a <br />
-<mark class="formatting_highlight">floating-point operation is performed, integers will be converted</mark>.   </p>
-<p>If variable has floating-point nature, but can be written using integral values <br />
-(C will convert it), better to write it with explicit with <br />
-<mark class="formatting_highlight">decimal points for human readers</mark>.   </p>
+<p>If an arithmetic operator has floating-point operands and integer operands, a
+<mark class="formatting_highlight">floating-point operation is performed, integers will be converted</mark>.</p>
+<p>If variable has floating-point nature, but can be written using integral values
+(C will convert it), better to write it with explicit with
+<mark class="formatting_highlight">decimal points for human readers</mark>.</p>
 <!--SR:!2023-06-12,31,248-->
 
-<p><a href="/printf%20format%20string.html">printf format string</a> check this note for details how '%' <br />
-placeholder in printf work.   </p>
-<p><a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-3_modify_temp_conversion.c" class="external-link"><strong>Exercise 1-3.</strong></a>   </p>
-<p><a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-4_celsius_to_fahrenheit.c" class="external-link"><strong>Exercise 1-4.</strong></a>   </p>
+<p><a href="/printf%20format%20string.html">printf format string</a> check this note for details how '%'
+placeholder in printf work.</p>
+<p><a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-3_modify_temp_conversion.c" class="external-link"><strong>Exercise 1-3.</strong></a></p>
+<p><a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-4_celsius_to_fahrenheit.c" class="external-link"><strong>Exercise 1-4.</strong></a></p>
 <h2 id="1-3-the-for-statement-16">1.3 The for statement /16</h2>
-<p>In any context where it is permissible to use the value of some type, you can <br />
-use <mark class="formatting_highlight">a more complicated expression of that type</mark>.   </p>
+<p>In any context where it is permissible to use the value of some type, you can
+use <mark class="formatting_highlight">a more complicated expression of that type</mark>.</p>
 <!--SR:!2023-05-14,2,247-->
 
-<p>Describe each part of for loop control structure.   </p>
+<p>Describe each part of for loop control structure.</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="cm">/* print Fahrenheit-Celsius table */</span>
@@ -901,33 +901,33 @@ use <mark class="formatting_highlight">a more complicated expression of that typ
 
 </div>
 
-<p>?   </p>
+<p>?</p>
 <ul>
-<li><code>fahr = 0</code> - <strong>initialization</strong>, done once before loop starts   </li>
+<li><code>fahr = 0</code> - <strong>initialization</strong>, done once before loop starts</li>
 <li>
-<p><code>fahr &lt;= 300</code> - <strong>condition</strong> (test), controls the loop (execute if true), runs <br />
-  before each iteration   </p>
+<p><code>fahr &lt;= 300</code> - <strong>condition</strong> (test), controls the loop (execute if true), runs
+  before each iteration</p>
 </li>
 <li>
-<p><code>fahr = fahr + 20</code> or <code>fahr += 20</code> - <strong>increment</strong> step, after this step executed <br />
-  condition will be revalidated.   </p>
+<p><code>fahr = fahr + 20</code> or <code>fahr += 20</code> - <strong>increment</strong> step, after this step executed
+  condition will be revalidated.</p>
 </li>
 </ul>
-<p>The initialization, condition and increment can be any expressions, is that true? <br />
-? <br />
-Yes, any <strong>valid</strong> expressions. TODO: test it.   </p>
-<p><a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-5_celsius_to_fahrenheit_reverse.c" class="external-link"><strong>Exercise 1-5</strong></a>   </p>
+<p>The initialization, condition and increment can be any expressions, is that true?
+?
+Yes, any <strong>valid</strong> expressions. TODO: test it.</p>
+<p><a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-5_celsius_to_fahrenheit_reverse.c" class="external-link"><strong>Exercise 1-5</strong></a></p>
 <h2 id="1-4-symbolic-constants-17">1.4 Symbolic Constants /17</h2>
-<p>A <code>#define</code> line defines a <mark class="formatting_highlight"><code>symbolic name</code> or <code>symbolic constant</code></mark> to be a <br />
-particular string of character (token string). Generally speaking <code>#define</code> <br />
-directive defines a <strong>macro</strong>.   </p>
+<p>A <code>#define</code> line defines a <mark class="formatting_highlight"><code>symbolic name</code> or <code>symbolic constant</code></mark> to be a
+particular string of character (token string). Generally speaking <code>#define</code>
+directive defines a <strong>macro</strong>.</p>
 <!--SR:!2023-05-14,2,247-->
 
-<p>How to define symbolic name or symbolic constant? <br />
-? <br />
-Need use <code>#define name replacement list</code> statement.   </p>
-<p>Why we used here <code>#define</code> here? Why not just place this definitions in for loop <br />
-control structure?   </p>
+<p>How to define symbolic name or symbolic constant?
+?
+Need use <code>#define name replacement list</code> statement.</p>
+<p>Why we used here <code>#define</code> here? Why not just place this definitions in for loop
+control structure?</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
@@ -947,16 +947,16 @@ control structure?   </p>
 
 </div>
 
-<p>? <br />
-Its bad practice to bury <strong>magic numbers</strong> like 300 and 20 in program.   </p>
+<p>?
+Its bad practice to bury <strong>magic numbers</strong> like 300 and 20 in program.</p>
 <h2 id="1-5-character-input-and-output-18">1.5 Character Input and Output /18</h2>
-<p>A text stream is a sequence of <mark class="formatting_highlight">characters</mark>   </p>
+<p>A text stream is a sequence of <mark class="formatting_highlight">characters</mark></p>
 <!--SR:!2023-06-19,38,268-->
 
-<p>Each line in text stream is terminated by a special character, called a <mark class="formatting_highlight">newline</mark>.   </p>
+<p>Each line in text stream is terminated by a special character, called a <mark class="formatting_highlight">newline</mark>.</p>
 <!--SR:!2023-05-14,2,208-->
 
-<p>What output you receive if you run this program?   </p>
+<p>What output you receive if you run this program?</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="n">putchar</span><span class="p">(</span><span class="sc">&#39;H&#39;</span><span class="p">);</span>
@@ -967,7 +967,7 @@ Its bad practice to bury <strong>magic numbers</strong> like 300 and 20 in progr
 
 </div>
 
-<p>?   </p>
+<p>?</p>
 <div class="lang-general">
 
 <div class="codehilite"><pre><span></span><code>Hello, world!
@@ -980,7 +980,7 @@ G
 <!--SR:!2023-05-30,18,268-->
 
 <h3 id="1-5-1-file-copying-18">1.5.1 File Copying /18</h3>
-<p>What does this code do, describe main steps?   </p>
+<p>What does this code do, describe main steps?</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
@@ -994,7 +994,7 @@ G
 
 </div>
 
-<p>?   </p>
+<p>?</p>
 <div class="lang-general">
 
 <div class="codehilite"><pre><span></span><code><span class="nv">Read</span><span class="w"> </span><span class="nv">character</span><span class="w"> </span><span class="nv">from</span><span class="w"> </span><span class="nv">input</span><span class="w"> </span><span class="nv">stream</span>
@@ -1009,7 +1009,7 @@ G
 <!--SR:!2023-05-15,3,267-->
 
 <h3 id="1-5-2-character-counting-20">1.5.2 Character Counting /20</h3>
-<p>Can this program to count characters simplified?   </p>
+<p>Can this program to count characters simplified?</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="kt">long</span><span class="w"> </span><span class="n">nc</span><span class="p">;</span>
@@ -1023,8 +1023,8 @@ G
 
 </div>
 
-<p>? <br />
-Yes, we can use <code>for</code> loop instead of <code>while</code> loop. And additionally we can use double to count characters.   </p>
+<p>?
+Yes, we can use <code>for</code> loop instead of <code>while</code> loop. And additionally we can use double to count characters.</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="n">nc</span><span class="p">;</span>
@@ -1039,20 +1039,20 @@ Yes, we can use <code>for</code> loop instead of <code>while</code> loop. And ad
 
 <!--SR:!2023-05-15,2,227-->
 
-<p>Programs should act intelligently when given <mark class="formatting_highlight">zero</mark>-length input.   </p>
+<p>Programs should act intelligently when given <mark class="formatting_highlight">zero</mark>-length input.</p>
 <!--SR:!2023-05-15,3,267-->
 
-<p>Difference between <code>++nc</code> and <code>nc++</code> <br />
-? <br />
-<code>++nc</code> - increment <code>nc</code> before use it, and return incremented value. <br />
-<code>nc++</code> - return <code>nc</code> value and then increment it.   </p>
+<p>Difference between <code>++nc</code> and <code>nc++</code>
+?
+<code>++nc</code> - increment <code>nc</code> before use it, and return incremented value.
+<code>nc++</code> - return <code>nc</code> value and then increment it.</p>
 <!--SR:!2023-05-15,3,267-->
 
-<p><code>%ld</code> is <mark class="formatting_highlight"><code>long</code></mark> integer placeholder   </p>
-<p><code>%.0f</code> how this placeholder format this value: <code>3.14159</code> - <mark class="formatting_highlight"><code>3</code></mark>   </p>
-<p><code>%6.1f</code> what this placeholder means? <br />
-? <br />
-<code>6</code> - minimum field width, <code>1</code> - precision, <code>f</code> - floating point number.   </p>
+<p><code>%ld</code> is <mark class="formatting_highlight"><code>long</code></mark> integer placeholder</p>
+<p><code>%.0f</code> how this placeholder format this value: <code>3.14159</code> - <mark class="formatting_highlight"><code>3</code></mark></p>
+<p><code>%6.1f</code> what this placeholder means?
+?
+<code>6</code> - minimum field width, <code>1</code> - precision, <code>f</code> - floating point number.</p>
 <h3 id="1-5-3-line-counting-21">1.5.3 Line Counting /21</h3>
 <div class="lang-c">
 
@@ -1076,12 +1076,12 @@ Yes, we can use <code>for</code> loop instead of <code>while</code> loop. And ad
 
 </div>
 
-<p><code>'\n'</code>is a <mark class="formatting_highlight">newline character</mark>, <code>0x0A</code> in hex, <code>10</code> in decimal.   </p>
+<p><code>'\n'</code>is a <mark class="formatting_highlight">newline character</mark>, <code>0x0A</code> in hex, <code>10</code> in decimal.</p>
 <!--SR:!2024-01-12,244,268-->
 
-<p><strong>Exercise 1-8</strong>. <a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-8_wc_alternative.c" class="external-link">Write a program to count blanks, tabs, and newlines.</a>   </p>
-<p><strong>Exercise 1-9</strong>. <a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-9_fix_blanks.c" class="external-link">Write a program to copy its input to its output, replacing each string of one or more blanks by a single blank.</a>   </p>
-<p><strong>Exercise 1-10</strong>. <a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-10_show_escape_sequences.c" class="external-link">Write a program to copy its input to its output, replacing each tab by \t, each backspace by \b, and each backslash by \. This makes tabs and backspaces visible in an unambiguous way.</a>   </p>
+<p><strong>Exercise 1-8</strong>. <a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-8_wc_alternative.c" class="external-link">Write a program to count blanks, tabs, and newlines.</a></p>
+<p><strong>Exercise 1-9</strong>. <a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-9_fix_blanks.c" class="external-link">Write a program to copy its input to its output, replacing each string of one or more blanks by a single blank.</a></p>
+<p><strong>Exercise 1-10</strong>. <a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-10_show_escape_sequences.c" class="external-link">Write a program to copy its input to its output, replacing each tab by \t, each backspace by \b, and each backslash by \. This makes tabs and backspaces visible in an unambiguous way.</a></p>
 <h3 id="1-5-4-word-counting-22">1.5.4 Word Counting /22</h3>
 <div class="lang-c">
 
@@ -1118,30 +1118,30 @@ Yes, we can use <code>for</code> loop instead of <code>while</code> loop. And ad
 
 </div>
 
-<p>An assignment is an expression with the value and assignments associated from (direction) <mark class="formatting_highlight">right to left, like <code>nl = (nw = (nc = 0));</code></mark>.   </p>
+<p>An assignment is an expression with the value and assignments associated from (direction) <mark class="formatting_highlight">right to left, like <code>nl = (nw = (nc = 0));</code></mark>.</p>
 <!--SR:!2023-05-27,15,248-->
 
-<p>Expressions connected by &amp;&amp; or || are evaluated (direction) <mark class="formatting_highlight">left to right</mark>.   </p>
+<p>Expressions connected by &amp;&amp; or || are evaluated (direction) <mark class="formatting_highlight">left to right</mark>.</p>
 <!--SR:!2023-07-17,76,248-->
 
-<p><strong>Exercise 1-11</strong>. How would you test the word count program? What kinds of input are most likely to uncover bugs if there are any? <br />
-? <br />
-I think probably some Unicode specific sequences can be false detected as words? <br />
-Or some like this <code>!!!</code> will be detected as word. To test I just stream big enough data and compare output with <code>wc</code> UNIX program.   </p>
+<p><strong>Exercise 1-11</strong>. How would you test the word count program? What kinds of input are most likely to uncover bugs if there are any?
+?
+I think probably some Unicode specific sequences can be false detected as words?
+Or some like this <code>!!!</code> will be detected as word. To test I just stream big enough data and compare output with <code>wc</code> UNIX program.</p>
 <!--SR:!2023-06-14,33,248-->
 
-<p><strong>Exercise 1-12</strong>. <a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-12_input_join_into_words.c" class="external-link">Write a program that prints its input one word per line</a>   </p>
+<p><strong>Exercise 1-12</strong>. <a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-12_input_join_into_words.c" class="external-link">Write a program that prints its input one word per line</a></p>
 <h2 id="1-6-arrays-23">1.6 Arrays /23</h2>
-<p>White space characters are <br />
-?   </p>
+<p>White space characters are
+?</p>
 <ul>
-<li><code></code> Space   </li>
-<li><code>\t</code> Tab   </li>
-<li><code>\n</code> Newline, or line feed   </li>
-<li><code>\v</code> Vertical tab   </li>
-<li><code>\f</code> Form feed   </li>
-<li><code>\r</code> Carriage return <br />
-Because they serve the same purpose as the spaces between words and lines on a printed page — they make reading easier.   </li>
+<li><code></code> Space</li>
+<li><code>\t</code> Tab</li>
+<li><code>\n</code> Newline, or line feed</li>
+<li><code>\v</code> Vertical tab</li>
+<li><code>\f</code> Form feed</li>
+<li><code>\r</code> Carriage return
+Because they serve the same purpose as the spaces between words and lines on a printed page — they make reading easier.</li>
 </ul>
 <!--SR:!2023-06-13,32,248-->
 
@@ -1183,7 +1183,7 @@ Because they serve the same purpose as the spaces between words and lines on a p
 
 </div>
 
-<p>By definition, <code>chars</code> are just small <mark class="formatting_highlight">integers</mark>   </p>
+<p>By definition, <code>chars</code> are just small <mark class="formatting_highlight">integers</mark></p>
 <!--SR:!2023-07-19,78,250-->
 
 <div class="lang-c">
@@ -1197,24 +1197,24 @@ Because they serve the same purpose as the spaces between words and lines on a p
 
 </div>
 
-<p><strong>Exercise 1-13.</strong> <a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-13_input_histogram.c" class="external-link">Write a program to print a histogram of the lengths of words in its input. It is easy to draw the histogram with the bars horizontal; a vertical orientation is more challenging</a>.   </p>
-<p><strong>Exercise 1-14.</strong> <a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-14_input_histogram_chars.c" class="external-link">Write a program to print a histogram of the frequencies of different characters in its input</a>.   </p>
+<p><strong>Exercise 1-13.</strong> <a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-13_input_histogram.c" class="external-link">Write a program to print a histogram of the lengths of words in its input. It is easy to draw the histogram with the bars horizontal; a vertical orientation is more challenging</a>.</p>
+<p><strong>Exercise 1-14.</strong> <a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-14_input_histogram_chars.c" class="external-link">Write a program to print a histogram of the frequencies of different characters in its input</a>.</p>
 <h2 id="1-7-functions-25">1.7 Functions /25</h2>
-<p>Function encapsulate things, so we can reuse it in different places and don't worry about <mark class="formatting_highlight">its implementation</mark>.   </p>
+<p>Function encapsulate things, so we can reuse it in different places and don't worry about <mark class="formatting_highlight">its implementation</mark>.</p>
 <!--SR:!2023-06-17,36,288-->
 
-<p>If you have properly designed function, you can <mark class="formatting_highlight">ignore how job is done and just know what is done is sufficient</mark>.   </p>
+<p>If you have properly designed function, you can <mark class="formatting_highlight">ignore how job is done and just know what is done is sufficient</mark>.</p>
 <!--SR:!2023-05-29,17,268-->
 
-<p><span class="arithmatex">\(2^5\)</span> is <mark class="formatting_highlight">32</mark>.   </p>
+<p><span class="arithmatex">\(2^5\)</span> is <mark class="formatting_highlight">32</mark>.</p>
 <!--SR:!2023-08-10,89,248-->
 
-<p><code>pow(x,y)</code> is equal to? <br />
-? <br />
-<span class="arithmatex">\(X^y\)</span>   </p>
-<p>Where better to put function comment description? <br />
-? <br />
-Above function declaration.   </p>
+<p><code>pow(x,y)</code> is equal to?
+?
+<span class="arithmatex">\(X^y\)</span></p>
+<p>Where better to put function comment description?
+?
+Above function declaration.</p>
 <!--SR:!2023-05-17,4,274-->
 
 <div class="lang-c">
@@ -1247,8 +1247,8 @@ Above function declaration.   </p>
 
 </div>
 
-<p>Can you describe form of function definition? <br />
-?   </p>
+<p>Can you describe form of function definition?
+?</p>
 <div class="lang-general">
 
 <div class="codehilite"><pre><span></span><code><span class="k">return</span><span class="w"> </span><span class="nv">type</span><span class="w"> </span><span class="nv">function_name</span><span class="w"> </span><span class="ss">(</span><span class="nv">parameter</span><span class="w"> </span><span class="nv">declarations</span>,<span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nv">any</span><span class="ss">)</span><span class="w"> </span>{
@@ -1260,16 +1260,16 @@ Above function declaration.   </p>
 
 </div>
 
-<p>Where functions arguments (parameters) and local variables available. <br />
-? <br />
-This is functions scope, and it's local to function.   </p>
+<p>Where functions arguments (parameters) and local variables available.
+?
+This is functions scope, and it's local to function.</p>
 <!--SR:!2023-07-09,68,228-->
 
-<p>Just like local variables, formal arguments are <mark class="formatting_highlight">destroyed</mark> when the function ends.   </p>
+<p>Just like local variables, formal arguments are <mark class="formatting_highlight">destroyed</mark> when the function ends.</p>
 <!--SR:!2023-12-22,224,250-->
 
-<p>Can you write formal and actual parameters for power function? <br />
-?   </p>
+<p>Can you write formal and actual parameters for power function?
+?</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">power</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">base</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="c1">// formal parameters</span>
@@ -1281,16 +1281,16 @@ This is functions scope, and it's local to function.   </p>
 
 <!--SR:!2023-05-24,12,228-->
 
-<p>Describe this return values of main function: 0, 1 <br />
-? <br />
-0 - usually this means normal termination <br />
-1 - some signal, unusual or erroneous termination condition   </p>
+<p>Describe this return values of main function: 0, 1
+?
+0 - usually this means normal termination
+1 - some signal, unusual or erroneous termination condition</p>
 <!--SR:!2023-05-14,2,247-->
 
-<p>How/where declare function prototype? <br />
-? <br />
-You need to write function prototype, before it will be used. <br />
-It can be declared like this:   </p>
+<p>How/where declare function prototype?
+?
+You need to write function prototype, before it will be used.
+It can be declared like this:</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">power</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">base</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="c1">// formal parameters</span>
@@ -1307,34 +1307,34 @@ It can be declared like this:   </p>
 
 <!--SR:!2023-06-11,30,248-->
 
-<p>Well-chosen names are good self-<mark class="formatting_highlight">documenting</mark> code   </p>
+<p>Well-chosen names are good self-<mark class="formatting_highlight">documenting</mark> code</p>
 <!--SR:!2023-05-14,2,247-->
 
-<p><strong>Exercise 1.15.</strong> <a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-15_temerature_conversion_using_func.c" class="external-link">Rewrite the temperature conversion program of Section 1.2 to use a function for conversion.</a>   </p>
+<p><strong>Exercise 1.15.</strong> <a href="/%40BrianWKernighanProgrammingLanguage1988/chapter_1/1-15_temerature_conversion_using_func.c" class="external-link">Rewrite the temperature conversion program of Section 1.2 to use a function for conversion.</a></p>
 <h2 id="1-8-arguments-call-by-value-28">1.8 Arguments - Call by Value /28</h2>
-<p>In C, all function arguments are passed by <mark class="formatting_highlight">value, unless argument is <br />
-pointer/array</mark>.   </p>
-<p>Passing arguments by value called <mark class="formatting_highlight">call by value</mark>, while some other languages <br />
-use call by reference (FORTRAN as example).   </p>
+<p>In C, all function arguments are passed by <mark class="formatting_highlight">value, unless argument is
+pointer/array</mark>.</p>
+<p>Passing arguments by value called <mark class="formatting_highlight">call by value</mark>, while some other languages
+use call by reference (FORTRAN as example).</p>
 <!--SR:!2023-05-15,3,267-->
 
-<p>Worth to check <a href="/evaluation%20strategy.html">evaluation strategy</a>.   </p>
-<p>Call by value usually leads to more compact programs with fewer extraneous <br />
-variables, because parameters can be treated as conveniently initialized local <br />
-variables in the called routine. In other words can be used as <mark class="formatting_highlight">temporary <br />
-variables</mark>.   </p>
-<p>C allows use call by reference by using <mark class="formatting_highlight">pointers</mark> to variables.   </p>
+<p>Worth to check <a href="/evaluation%20strategy.html">evaluation strategy</a>.</p>
+<p>Call by value usually leads to more compact programs with fewer extraneous
+variables, because parameters can be treated as conveniently initialized local
+variables in the called routine. In other words can be used as <mark class="formatting_highlight">temporary
+variables</mark>.</p>
+<p>C allows use call by reference by using <mark class="formatting_highlight">pointers</mark> to variables.</p>
 <!--SR:!2023-05-15,3,267-->
 
-<p>When the name of an array is used as an argument, the value passed to the <br />
-function is <mark class="formatting_highlight">the location or address of the beginning of the array</mark>.   </p>
+<p>When the name of an array is used as an argument, the value passed to the
+function is <mark class="formatting_highlight">the location or address of the beginning of the array</mark>.</p>
 <!--SR:!2023-05-15,3,267-->
 
 <h2 id="1-9-character-arrays-29">1.9 Character Arrays /29</h2>
-<p>The most common type of array in C is the <mark class="formatting_highlight">array of characters</mark>.   </p>
+<p>The most common type of array in C is the <mark class="formatting_highlight">array of characters</mark>.</p>
 <!--SR:!2023-05-15,3,267-->
 
-<p>Pseudocode to get the longest line from stdin:   </p>
+<p>Pseudocode to get the longest line from stdin:</p>
 <div class="lang-general">
 
 <div class="codehilite"><pre><span></span><code><span class="k">while</span><span class="w"> </span><span class="ss">(</span><span class="nv">there</span><span class="err">&#39;s another line)</span>
@@ -1347,7 +1347,7 @@ function is <mark class="formatting_highlight">the location or address of the be
 
 </div>
 
-<p>C implementation:   </p>
+<p>C implementation:</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="cm">/*</span>
@@ -1407,29 +1407,29 @@ function is <mark class="formatting_highlight">the location or address of the be
 
 </div>
 
-<p>If a return type isn't specified, the C compiler assumes a default return type <br />
-of <mark class="formatting_highlight">int</mark>.   </p>
+<p>If a return type isn't specified, the C compiler assumes a default return type
+of <mark class="formatting_highlight">int</mark>.</p>
 <!--SR:!2023-05-15,3,267-->
 
-<p>The return type of <mark class="formatting_highlight">void</mark> states explicitly that no value is returned.   </p>
+<p>The return type of <mark class="formatting_highlight">void</mark> states explicitly that no value is returned.</p>
 <!--SR:!2023-05-15,3,267-->
 
-<p>Each string terminates with a <mark class="formatting_highlight">null character, '\0' equal to 0</mark>.   </p>
+<p>Each string terminates with a <mark class="formatting_highlight">null character, '\0' equal to 0</mark>.</p>
 <!--SR:!2023-05-15,3,267-->
 
-<p>Null character is not part of normal text.   </p>
-<p>Each local variable in a function comes into existence only when the function is <br />
-called, and disappears when the function is exited. This is why such variables <br />
-are usually known as <mark class="formatting_highlight">automatic variables</mark>.   </p>
+<p>Null character is not part of normal text.</p>
+<p>Each local variable in a function comes into existence only when the function is
+called, and disappears when the function is exited. This is why such variables
+are usually known as <mark class="formatting_highlight">automatic variables</mark>.</p>
 <!--SR:!2023-05-16,3,254-->
 
 <h2 id="1-10-external-variables-and-scope-31">1.10 External Variables and Scope /31</h2>
-<p>To use external variable you need to <mark class="formatting_highlight">define and declare</mark> it.   </p>
+<p>To use external variable you need to <mark class="formatting_highlight">define and declare</mark> it.</p>
 <!--SR:!2023-05-15,2,227-->
 
-<p>"Definition" refers to the place where the variable is created or assigned <br />
-storage; "declaration" refers to places where the nature of the variable is <br />
-stated, but no storage is allocated.   </p>
+<p>"Definition" refers to the place where the variable is created or assigned
+storage; "declaration" refers to places where the nature of the variable is
+stated, but no storage is allocated.</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
@@ -1493,190 +1493,190 @@ stated, but no storage is allocated.   </p>
 
 </div>
 
-<p>Syntactically, external definitions are just like definitions of local <br />
-variables, but since they occur <mark class="formatting_highlight">outside</mark> of functions, the variables are <br />
-external.   </p>
+<p>Syntactically, external definitions are just like definitions of local
+variables, but since they occur <mark class="formatting_highlight">outside</mark> of functions, the variables are
+external.</p>
 <!--SR:!2023-05-14,2,247-->
 
-<p>Keyword <code>extern</code> used to? <br />
-? <br />
-Before a function can use an external variable, the name of the variable must be <br />
-made known to the function. And write <code>extern</code> keyword in declaration is the way <br />
-to do that. So it's used to declare external declaration, for global variable, <br />
-function, or template declaration.   </p>
-<p>In fact, common practice is to place definitions of all external variables at <br />
-the beginning of the source file to? <br />
-? <br />
-To omit all <code>extern</code> declarations. Since definitions of external variables <br />
-occurs before any function, the <code>extern</code> keyword is not necessary.   </p>
-<p>The usual practice is to collect <code>extern</code> declarations of variables and <br />
-functions in a separate file, historically called a <mark class="formatting_highlight">header</mark>, that is included <br />
-by <code>#include</code> at the front of each source file. The header can be included in <br />
-more than one source file, so the declarations need to be written only once <br />
-(since we follow rule to omit <code>extern</code> keyword in definition).   </p>
+<p>Keyword <code>extern</code> used to?
+?
+Before a function can use an external variable, the name of the variable must be
+made known to the function. And write <code>extern</code> keyword in declaration is the way
+to do that. So it's used to declare external declaration, for global variable,
+function, or template declaration.</p>
+<p>In fact, common practice is to place definitions of all external variables at
+the beginning of the source file to?
+?
+To omit all <code>extern</code> declarations. Since definitions of external variables
+occurs before any function, the <code>extern</code> keyword is not necessary.</p>
+<p>The usual practice is to collect <code>extern</code> declarations of variables and
+functions in a separate file, historically called a <mark class="formatting_highlight">header</mark>, that is included
+by <code>#include</code> at the front of each source file. The header can be included in
+more than one source file, so the declarations need to be written only once
+(since we follow rule to omit <code>extern</code> keyword in definition).</p>
 <!--SR:!2023-05-15,3,267-->
 
-<p>Does need to heavily use <code>extern</code> variables? <br />
-? <br />
-It's complicate things, if you have a lot of <code>extern</code> variables, it's hard to <br />
-keep track of them (their values can be change unexpectably) and hard to modify <br />
-program.   </p>
+<p>Does need to heavily use <code>extern</code> variables?
+?
+It's complicate things, if you have a lot of <code>extern</code> variables, it's hard to
+keep track of them (their values can be change unexpectably) and hard to modify
+program.</p>
 <!--SR:!2023-05-14,2,247-->
 
 <h1 id="chapter-2-types-operators-and-expressions-35">Chapter 2 - Types, Operators and Expressions /35</h1>
-<p>Which core language parts usually program consists of? <br />
-? <br />
-1. variables and constants <br />
-2. declaration lists for those variables and constants (type, size, initial <br />
-   values) <br />
-3. operators which specify what to do with the variables and constants <br />
-4. expressions which combine variables and constants into larger units and <br />
-   produce new values   </p>
+<p>Which core language parts usually program consists of?
+?
+1. variables and constants
+2. declaration lists for those variables and constants (type, size, initial
+   values)
+3. operators which specify what to do with the variables and constants
+4. expressions which combine variables and constants into larger units and
+   produce new values</p>
 <!--SR:!2023-05-14,1,214-->
 
-<p>The type of object determines (variable, expression...)? <br />
-? <br />
-The set of values it can have and what operations can be performed on it.   </p>
+<p>The type of object determines (variable, expression...)?
+?
+The set of values it can have and what operations can be performed on it.</p>
 <h2 id="2-1-variable-names-35">2.1 Variable Names /35</h2>
-<p>Which variable names rules you should follow? <br />
-?   </p>
+<p>Which variable names rules you should follow?
+?</p>
 <ul>
-<li>begin with a letter, <code>aA-zZ</code>   </li>
+<li>begin with a letter, <code>aA-zZ</code></li>
 <li>
-<p>underscore counts as a letter, but don't use it as first character, since <br />
-  library routines often use such names   </p>
+<p>underscore counts as a letter, but don't use it as first character, since
+  library routines often use such names</p>
 </li>
 <li>
-<p>case-sensitive, so <code>x</code> and <code>X</code> are different variables   </p>
+<p>case-sensitive, so <code>x</code> and <code>X</code> are different variables</p>
 </li>
-<li>traditionally used lower case for variable names, upper case for symbolic <br />
-  constants   </li>
+<li>traditionally used lower case for variable names, upper case for symbolic
+  constants</li>
 </ul>
 <!--SR:!2023-05-15,3,254-->
 
-<p>At least first <mark class="formatting_highlight">31</mark> characters of an internal name are significant.   </p>
+<p>At least first <mark class="formatting_highlight">31</mark> characters of an internal name are significant.</p>
 <!--SR:!2023-05-15,3,254-->
 
-<p>For external names, the standard guarantees' uniqueness only for <mark class="formatting_highlight">6</mark> <br />
-characters and single case.   </p>
+<p>For external names, the standard guarantees' uniqueness only for <mark class="formatting_highlight">6</mark>
+characters and single case.</p>
 <!--SR:!2023-05-16,3,254-->
 
-<p>Which reserved keywords in C you know, can they be used as variable names? <br />
-? <br />
-<code>if, else, int, float, char, for, while, do, return, switch</code>, no they can't be <br />
-used as variable names.   </p>
+<p>Which reserved keywords in C you know, can they be used as variable names?
+?
+<code>if, else, int, float, char, for, while, do, return, switch</code>, no they can't be
+used as variable names.</p>
 <!--SR:!2023-05-15,3,254-->
 
-<p>If you choose variable name, how you choose its name? <br />
-? <br />
-lowercase, <code>_</code> as word separator, can be short for local variables (especially <br />
-loop indices), for external can be longer, but in limit's range.   </p>
+<p>If you choose variable name, how you choose its name?
+?
+lowercase, <code>_</code> as word separator, can be short for local variables (especially
+loop indices), for external can be longer, but in limit's range.</p>
 <h2 id="2-2-data-types-and-sizes-35">2.2 Data Types and Sizes /35</h2>
-<p>Can we omit <code>int</code> in <code>short</code> and <code>long</code> declarations? <br />
-? <br />
-Yes, <code>int</code> is assumed if not specified and typically omitted.   </p>
-<p>Which number bigger <code>float</code> or <code>double</code>? <br />
-? <br />
-<code>double</code> is bigger than <code>float</code>.   </p>
-<p>Can <code>float</code> and <code>double</code> have <code>short</code> and <code>long</code> modifiers? <br />
-? <br />
-No, only <code>int</code> can have <code>short</code> and <code>long</code> modifiers.   </p>
-<p>Can <code>signed</code> and <code>unsigned</code> be used with <code>float</code> and <code>double</code>? <br />
-? <br />
-No, only <code>int</code> and <code>char</code> can have <code>signed</code> and <code>unsigned</code> modifiers.   </p>
-<p>Min size of <code>short</code> and <code>int</code> is <mark class="formatting_highlight">16</mark> bits. But <code>int</code> usually <mark class="formatting_highlight">32</mark> bits.   </p>
-<p>What value range have <code>unsigned char</code>? <br />
-? <br />
-<code>0</code> to <code>255</code>.   </p>
-<p>What value range have <code>signed char</code>? <br />
-? <br />
-<code>-128</code> to <code>127</code>.   </p>
-<p>Default <code>char</code> is <code>signed</code> or <code>unsigned</code>? <br />
-? <br />
-It's implementation-defined, so it's better to specify explicitly. But printable <br />
-characters are always positive.   </p>
-<p>Plain <code>int</code> is equivalent to <mark class="formatting_highlight"><code>signed int</code></mark>.   </p>
+<p>Can we omit <code>int</code> in <code>short</code> and <code>long</code> declarations?
+?
+Yes, <code>int</code> is assumed if not specified and typically omitted.</p>
+<p>Which number bigger <code>float</code> or <code>double</code>?
+?
+<code>double</code> is bigger than <code>float</code>.</p>
+<p>Can <code>float</code> and <code>double</code> have <code>short</code> and <code>long</code> modifiers?
+?
+No, only <code>int</code> can have <code>short</code> and <code>long</code> modifiers.</p>
+<p>Can <code>signed</code> and <code>unsigned</code> be used with <code>float</code> and <code>double</code>?
+?
+No, only <code>int</code> and <code>char</code> can have <code>signed</code> and <code>unsigned</code> modifiers.</p>
+<p>Min size of <code>short</code> and <code>int</code> is <mark class="formatting_highlight">16</mark> bits. But <code>int</code> usually <mark class="formatting_highlight">32</mark> bits.</p>
+<p>What value range have <code>unsigned char</code>?
+?
+<code>0</code> to <code>255</code>.</p>
+<p>What value range have <code>signed char</code>?
+?
+<code>-128</code> to <code>127</code>.</p>
+<p>Default <code>char</code> is <code>signed</code> or <code>unsigned</code>?
+?
+It's implementation-defined, so it's better to specify explicitly. But printable
+characters are always positive.</p>
+<p>Plain <code>int</code> is equivalent to <mark class="formatting_highlight"><code>signed int</code></mark>.</p>
 <!--SR:!2023-05-16,3,254-->
 
 <h2 id="2-3-constants-36">2.3 Constants /36</h2>
-<p><code>1234</code> as is in code it's? <br />
-? <br />
-<code>int</code> constant.   </p>
-<p><code>123456789L</code> as is in code it's? <br />
-? <br />
-<code>long</code> constant.   </p>
+<p><code>1234</code> as is in code it's?
+?
+<code>int</code> constant.</p>
+<p><code>123456789L</code> as is in code it's?
+?
+<code>long</code> constant.</p>
 <!--SR:!2023-05-16,3,254-->
 
-<p><code>123456789U</code> as is in code it's? <br />
-? <br />
-<code>unsigned int</code> constant.   </p>
-<p><code>123456789UL</code> as is in code it's? <br />
-? <br />
-<code>unsigned long</code> constant.   </p>
-<p><code>037</code> as is in code it's? <br />
-? <br />
-<code>int</code> constant in octal.   </p>
-<p><code>0xdeadbeef</code> as is in code it's? <br />
-? <br />
-<code>int</code> constant in hexadecimal.   </p>
-<p><code>0XDEADBEEFUL</code> as is in code it's? <br />
-? <br />
-<code>unsigned long</code> constant in hexadecimal.   </p>
-<p><code>'x'</code> as is in code it's? <br />
-? <br />
-a character constant, integer, written as one character within single quotes.   </p>
-<p><code>'0'</code> has the value <mark class="formatting_highlight">48</mark> in the ASCII character set, which is unrelated to the <br />
-numeric 0 value.   </p>
-<p>Can we use numeric operators with <code>char</code>? <br />
-? <br />
-Yes, <code>char</code> is just small integer. But often <code>char</code> used in comparisons with <br />
-other characters.   </p>
-<p>Is escape sequences like <code>'\n'</code> represent two characters or one? <br />
-? <br />
-One, it's single character.   </p>
+<p><code>123456789U</code> as is in code it's?
+?
+<code>unsigned int</code> constant.</p>
+<p><code>123456789UL</code> as is in code it's?
+?
+<code>unsigned long</code> constant.</p>
+<p><code>037</code> as is in code it's?
+?
+<code>int</code> constant in octal.</p>
+<p><code>0xdeadbeef</code> as is in code it's?
+?
+<code>int</code> constant in hexadecimal.</p>
+<p><code>0XDEADBEEFUL</code> as is in code it's?
+?
+<code>unsigned long</code> constant in hexadecimal.</p>
+<p><code>'x'</code> as is in code it's?
+?
+a character constant, integer, written as one character within single quotes.</p>
+<p><code>'0'</code> has the value <mark class="formatting_highlight">48</mark> in the ASCII character set, which is unrelated to the
+numeric 0 value.</p>
+<p>Can we use numeric operators with <code>char</code>?
+?
+Yes, <code>char</code> is just small integer. But often <code>char</code> used in comparisons with
+other characters.</p>
+<p>Is escape sequences like <code>'\n'</code> represent two characters or one?
+?
+One, it's single character.</p>
 <!--SR:!2023-05-17,4,274-->
 
-<p>Is <code>'\000'</code> represent one character or three? <br />
-? <br />
-One, it's single character. <code>000</code> is one to three octal digits. <br />
-ASCII vertical tab is <code>'\013'</code>. <br />
-ASCII bell character is <code>'\007'</code>.   </p>
-<p>Is <code>'\xhh'</code> represent one character or two? <br />
-? <br />
-One, it's single character. <code>hh</code> is one or more hexadecimal digits. <br />
-ASCII vertical tab is <code>'\xb'</code>. <br />
-ASCII bell character is <code>'\x7'</code>.   </p>
+<p>Is <code>'\000'</code> represent one character or three?
+?
+One, it's single character. <code>000</code> is one to three octal digits.
+ASCII vertical tab is <code>'\013'</code>.
+ASCII bell character is <code>'\007'</code>.</p>
+<p>Is <code>'\xhh'</code> represent one character or two?
+?
+One, it's single character. <code>hh</code> is one or more hexadecimal digits.
+ASCII vertical tab is <code>'\xb'</code>.
+ASCII bell character is <code>'\x7'</code>.</p>
 <!--SR:!2023-05-16,3,254-->
 
-<p>The character <code>'\0'</code> represents the character with <mark class="formatting_highlight">zero</mark> value, the null <br />
-character.   </p>
-<p><code>'\0'</code> is often written instead of <mark class="formatting_highlight"><code>0</code> (numeric value)</mark> to emphasize the character nature of some <br />
-expression.   </p>
-<p>A <code>constant expression</code> is an expression that involves <mark class="formatting_highlight">only constants</mark>.   </p>
-<p>Constant expression can be evaluated during compilation rather than run time, <br />
-and can be used in any place that a <mark class="formatting_highlight">constant can</mark>.   </p>
-<p>Is this constant expression - <code>int days[31+28+LEAP+31]</code> where <code>LEAP</code> = <code>#define   
-LEAP 1</code>? <br />
-? <br />
-Yes, it's constant expression.   </p>
-<p>Is <code>string constant</code> different from <code>string literal</code>? <br />
-? <br />
-No, they are the same. <code>"hello, world\n"</code> is a string constant, or string <br />
-literal, is a sequence of characters surrounded by double quotes.   </p>
+<p>The character <code>'\0'</code> represents the character with <mark class="formatting_highlight">zero</mark> value, the null
+character.</p>
+<p><code>'\0'</code> is often written instead of <mark class="formatting_highlight"><code>0</code> (numeric value)</mark> to emphasize the character nature of some
+expression.</p>
+<p>A <code>constant expression</code> is an expression that involves <mark class="formatting_highlight">only constants</mark>.</p>
+<p>Constant expression can be evaluated during compilation rather than run time,
+and can be used in any place that a <mark class="formatting_highlight">constant can</mark>.</p>
+<p>Is this constant expression - <code>int days[31+28+LEAP+31]</code> where <code>LEAP</code> = <code>#define
+LEAP 1</code>?
+?
+Yes, it's constant expression.</p>
+<p>Is <code>string constant</code> different from <code>string literal</code>?
+?
+No, they are the same. <code>"hello, world\n"</code> is a string constant, or string
+literal, is a sequence of characters surrounded by double quotes.</p>
 <!--SR:!2023-05-15,3,254-->
 
-<p>How concatenation of string literals works? <br />
-? <br />
-Adjacent string literals are concatenated into a single string.   </p>
-<p><code>"hello, " "world"</code> is equivalent to <code>"hello, world"</code>. <br />
-String constants can be concatenated at compile time.   </p>
-<p>Is <code>array of characters</code> different from <code>string</code>? <br />
-? <br />
-No, they are the same. A string is an array of characters terminated by <code>\0</code>.   </p>
-<p><code>strlen</code> function (from <code>string.h</code>) equivalent core logic is? <br />
-? <br />
-You need scan array of characters until <code>\0</code> is found, and increment counter <br />
-during this scan.   </p>
+<p>How concatenation of string literals works?
+?
+Adjacent string literals are concatenated into a single string.</p>
+<p><code>"hello, " "world"</code> is equivalent to <code>"hello, world"</code>.
+String constants can be concatenated at compile time.</p>
+<p>Is <code>array of characters</code> different from <code>string</code>?
+?
+No, they are the same. A string is an array of characters terminated by <code>\0</code>.</p>
+<p><code>strlen</code> function (from <code>string.h</code>) equivalent core logic is?
+?
+You need scan array of characters until <code>\0</code> is found, and increment counter
+during this scan.</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="cm">/* strlen: return length of s */</span>
@@ -1694,28 +1694,28 @@ during this scan.   </p>
 
 </div>
 
-<p>Is <code>'x'</code> is same as <code>"x"</code>? <br />
-? <br />
-No, <code>'x'</code> is a single character, <code>"x"</code> is a string constant (contains 2 <br />
-entities).   </p>
+<p>Is <code>'x'</code> is same as <code>"x"</code>?
+?
+No, <code>'x'</code> is a single character, <code>"x"</code> is a string constant (contains 2
+entities).</p>
 <!--SR:!2023-05-17,4,274-->
 
-<p><strong>Enumeration constant</strong> is a list of constant <mark class="formatting_highlight">integer values</mark>, like <code>enum   
-boolean { NO, YES };</code>.   </p>
-<p><code>enum months { JAN = 1, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC   
-};</code>, where <code>JAN</code> = <code>1</code>, <code>FEB</code> = ?, ... <br />
-? <br />
-<code>FEB</code> = <code>2</code>, <code>MAR</code> = <code>3</code>, ..., <code>DEC</code> = <code>12</code>.   </p>
+<p><strong>Enumeration constant</strong> is a list of constant <mark class="formatting_highlight">integer values</mark>, like <code>enum
+boolean { NO, YES };</code>.</p>
+<p><code>enum months { JAN = 1, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC
+};</code>, where <code>JAN</code> = <code>1</code>, <code>FEB</code> = ?, ...
+?
+<code>FEB</code> = <code>2</code>, <code>MAR</code> = <code>3</code>, ..., <code>DEC</code> = <code>12</code>.</p>
 <!--SR:!2023-05-17,4,274-->
 
-<p>Can we use identical names in different enumerations in same enumeration <br />
-constant? <br />
-? <br />
-No, names in different enumerations must be distinct. But values can be same.   </p>
-<p>Is enumeration usually better than <code>#define</code>? <br />
-? <br />
-Yes, enumeration is usually better than <code>#define</code> because enumeration offer the chance <br />
-of checking and debugger may print enumeration values in their symbolic form.   </p>
+<p>Can we use identical names in different enumerations in same enumeration
+constant?
+?
+No, names in different enumerations must be distinct. But values can be same.</p>
+<p>Is enumeration usually better than <code>#define</code>?
+?
+Yes, enumeration is usually better than <code>#define</code> because enumeration offer the chance
+of checking and debugger may print enumeration values in their symbolic form.</p>
 <h2 id="2-4-declarations-39">2.4 Declarations /39</h2>
 <div class="lang-c">
 
@@ -1730,9 +1730,9 @@ of checking and debugger may print enumeration values in their symbolic form.   
 
 </div>
 
-<p>What is <code>c</code> and <code>line</code>? <br />
-? <br />
-<code>c</code> is a <code>char</code> variable, <code>line</code> is an array of <code>char</code>.   </p>
+<p>What is <code>c</code> and <code>line</code>?
+?
+<code>c</code> is a <code>char</code> variable, <code>line</code> is an array of <code>char</code>.</p>
 <!--SR:!2023-05-16,3,254-->
 
 <div class="lang-c">
@@ -1755,34 +1755,34 @@ Yes, it&#39;s valid, you can use expressions in initializers.
 
 </div>
 
-<p>Difference between automatic and non-automatic variables in terms of <br />
-initialization? <br />
-? <br />
-Not-automatic initialized once, before program starts execution. <br />
-Explicitly initialized automatic variables are initialized each time the function <br />
-or block it is in is entered.   </p>
+<p>Difference between automatic and non-automatic variables in terms of
+initialization?
+?
+Not-automatic initialized once, before program starts execution.
+Explicitly initialized automatic variables are initialized each time the function
+or block it is in is entered.</p>
 <!--SR:!2023-05-16,4,274-->
 
-<p>External and static variables are initialized to <mark class="formatting_highlight">zero</mark> by default.   </p>
-<p>Automatic variables for which there is no explicit initializer have <br />
-<mark class="formatting_highlight">undefined or garbage</mark> values.   </p>
-<p>How to define constant in declaration? <br />
-? <br />
-Use <code>const</code> keyword, like <code>const double e = 2.71828182845905;</code> or <code>const char   
-msg[] = "warning: ";</code>.   </p>
-<p>Is here allowed to use <code>const</code> keyword <code>int strlen(const char[]);</code>, if yes why? <br />
-? <br />
-Yes, it can be used with array arguments to indicate that the function does not <br />
-change that array. Result is implementation dependent if an attempt is made to <br />
-change a <code>const</code> object.   </p>
+<p>External and static variables are initialized to <mark class="formatting_highlight">zero</mark> by default.</p>
+<p>Automatic variables for which there is no explicit initializer have
+<mark class="formatting_highlight">undefined or garbage</mark> values.</p>
+<p>How to define constant in declaration?
+?
+Use <code>const</code> keyword, like <code>const double e = 2.71828182845905;</code> or <code>const char
+msg[] = "warning: ";</code>.</p>
+<p>Is here allowed to use <code>const</code> keyword <code>int strlen(const char[]);</code>, if yes why?
+?
+Yes, it can be used with array arguments to indicate that the function does not
+change that array. Result is implementation dependent if an attempt is made to
+change a <code>const</code> object.</p>
 <!--SR:!2023-05-15,2,234-->
 
 <h2 id="2-5-arithmetic-operators-40">2.5 Arithmetic Operators /40</h2>
-<p>Which arithmetic operations you know (5 operations)? <br />
-? <br />
-<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code> (modulus, truncating any fractional part)   </p>
-<p>What values you get from 100 % 3, 21 % 5, 1 % 3, 20 % 4? <br />
-?   </p>
+<p>Which arithmetic operations you know (5 operations)?
+?
+<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code> (modulus, truncating any fractional part)</p>
+<p>What values you get from 100 % 3, 21 % 5, 1 % 3, 20 % 4?
+?</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"> </span><span class="cm">/* 1 */</span>
@@ -1794,42 +1794,42 @@ change a <code>const</code> object.   </p>
 
 </div>
 
-<p>Can <code>%</code> used with <code>float</code> or <code>double</code>? <br />
-? <br />
-No, <code>%</code> can be used only with <code>int</code> operands.   </p>
-<p>Oder of precedence of arithmetic operators (higher first)? <br />
-? <br />
-1. Unary operators: <code>+</code>, <code>-</code> <br />
-2. Multiplicative operators: <code>*</code>, <code>/</code>, <code>%</code> <br />
-3. Additive operators: <code>+</code>, <code>-</code>   </p>
+<p>Can <code>%</code> used with <code>float</code> or <code>double</code>?
+?
+No, <code>%</code> can be used only with <code>int</code> operands.</p>
+<p>Oder of precedence of arithmetic operators (higher first)?
+?
+1. Unary operators: <code>+</code>, <code>-</code>
+2. Multiplicative operators: <code>*</code>, <code>/</code>, <code>%</code>
+3. Additive operators: <code>+</code>, <code>-</code></p>
 <h2 id="2-6-relational-and-logical-operators-40">2.6 Relational and Logical Operators /40</h2>
-<p><code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>==</code>, <code>!=</code> are relational and equality operators. Which <br />
-precedence they have? <br />
-? <br />
-1. Relational operators: <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code> <br />
-2. Equality operators: <code>==</code>, <code>!=</code>   </p>
-<p>Is relational operators has higher precedence than arithmetic operators? <br />
-? <br />
-No, arithmetic operators has higher precedence than relational operators. <br />
-<code>i &lt; lim - 1</code> is equivalent to <code>i &lt; (lim - 1)</code>.   </p>
-<p>How expression with <code>&amp;&amp;</code> and <code>||</code> is evaluated? <br />
-? <br />
-<code>&amp;&amp;</code> and <code>||</code> are evaluated left to right, and evaluation stops as soon as the <br />
-truth or falsehood of the result is known.   </p>
-<p>Which precedence has <code>&amp;&amp;</code> and <code>||</code>? <br />
-? <br />
-1. Logical AND: <code>&amp;&amp;</code> <br />
-2. Logical OR: <code>||</code>   </p>
-<p>Is <code>&amp;&amp;</code> and <code>||</code> has higher precedence than relational or equality <br />
-operations? <br />
-? <br />
-No, relational and equality operations has higher precedence than <code>&amp;&amp;</code> and <code>||</code>.   </p>
-<p>The numeric value of a relational or logical expression are? <br />
-? <br />
-<code>0</code> if <mark class="formatting_highlight">false</mark>, <code>1</code> if <mark class="formatting_highlight">true</mark>.   </p>
-<p>Unary negation operator <code>!</code> converts non-zero operand and zero operand to? <br />
-? <br />
-<code>0</code> and <code>1</code> respectively.   </p>
+<p><code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>==</code>, <code>!=</code> are relational and equality operators. Which
+precedence they have?
+?
+1. Relational operators: <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>
+2. Equality operators: <code>==</code>, <code>!=</code></p>
+<p>Is relational operators has higher precedence than arithmetic operators?
+?
+No, arithmetic operators has higher precedence than relational operators.
+<code>i &lt; lim - 1</code> is equivalent to <code>i &lt; (lim - 1)</code>.</p>
+<p>How expression with <code>&amp;&amp;</code> and <code>||</code> is evaluated?
+?
+<code>&amp;&amp;</code> and <code>||</code> are evaluated left to right, and evaluation stops as soon as the
+truth or falsehood of the result is known.</p>
+<p>Which precedence has <code>&amp;&amp;</code> and <code>||</code>?
+?
+1. Logical AND: <code>&amp;&amp;</code>
+2. Logical OR: <code>||</code></p>
+<p>Is <code>&amp;&amp;</code> and <code>||</code> has higher precedence than relational or equality
+operations?
+?
+No, relational and equality operations has higher precedence than <code>&amp;&amp;</code> and <code>||</code>.</p>
+<p>The numeric value of a relational or logical expression are?
+?
+<code>0</code> if <mark class="formatting_highlight">false</mark>, <code>1</code> if <mark class="formatting_highlight">true</mark>.</p>
+<p>Unary negation operator <code>!</code> converts non-zero operand and zero operand to?
+?
+<code>0</code> and <code>1</code> respectively.</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">!</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="cm">/* 1 */</span>
@@ -1843,9 +1843,9 @@ No, relational and equality operations has higher precedence than <code>&amp;&am
 </div>
 
 <h2 id="2-7-type-conversions-41">2.7 Type Conversions /41</h2>
-<p>Which one is operand, operator and operation in <code>a = b + c;</code>? <br />
-? <br />
-<code>b</code> and <code>c</code> are operands, <code>+</code> is operator, <code>b + c</code> is operation.   </p>
+<p>Which one is operand, operator and operation in <code>a = b + c;</code>?
+?
+<code>b</code> and <code>c</code> are operands, <code>+</code> is operator, <code>b + c</code> is operation.</p>
 <div class="lang-c">
 
 <div class="codehilite"><pre><span></span><code><span class="cm">/* atoi: convert s to integer */</span>
@@ -1878,34 +1878,34 @@ No, relational and equality operations has higher precedence than <code>&amp;&am
 
 </div>
 
-<p>Which header file is needed for <code>tolower</code> and <code>isdigit</code>? <br />
-? <br />
-<code>ctype.h</code>   </p>
-<p>Why need to specify <code>signed</code> or <code>unsigned</code> if non-character data is to be stored <br />
-in <code>char</code> variables? <br />
-? <br />
-If you're relaying on <code>char</code> numeric value, and you store non-character data, <br />
-you need explicitly specify <code>signed</code> or <code>unsigned</code> to avoid undefined behavior.   </p>
-<p>Which value <code>d</code> have if <code>c</code> is a digit or not in <code>if</code> test part? <br />
-<code>if d = c &gt;= '0' &amp;&amp; c &lt;= '9';</code> <br />
-? <br />
-<code>d</code> is <code>1</code> if <code>c</code> is a digit, otherwise <code>0</code>. <br />
-In <code>if, while, for, etc.</code>, "true" just means "non-zero".   </p>
-<p>General rule in implicit conversions? <br />
-? <br />
-"Lower" type is converted to "higher" type. The result is of the "higher" type. <br />
-Check section 6 of appendix A for more details.   </p>
-<p>Can you describe 5 steps of conversion of different types if there are no <br />
-unsigned operands (some expression with multiple operands)? <br />
-? <br />
-1. If either operand is <code>long double</code>, convert the other to <code>long double</code>. <br />
-2. Otherwise, if either operand is <code>double</code>, convert the other to <code>double</code>. <br />
-3. Otherwise, if either operand is <code>float</code>, convert the other to <code>float</code>. <br />
-4. Otherwise, convert <code>char</code> and <code>short</code> to <code>int</code>. <br />
-5. Then, if either operand is <code>long</code>, convert the other to <code>long</code>.   </p>
-<p>Will we convert value of right side to left, on assignment? <br />
-? <br />
-Yes, the value of the right side is converted to the type of the left side.   </p>
+<p>Which header file is needed for <code>tolower</code> and <code>isdigit</code>?
+?
+<code>ctype.h</code></p>
+<p>Why need to specify <code>signed</code> or <code>unsigned</code> if non-character data is to be stored
+in <code>char</code> variables?
+?
+If you're relaying on <code>char</code> numeric value, and you store non-character data,
+you need explicitly specify <code>signed</code> or <code>unsigned</code> to avoid undefined behavior.</p>
+<p>Which value <code>d</code> have if <code>c</code> is a digit or not in <code>if</code> test part?
+<code>if d = c &gt;= '0' &amp;&amp; c &lt;= '9';</code>
+?
+<code>d</code> is <code>1</code> if <code>c</code> is a digit, otherwise <code>0</code>.
+In <code>if, while, for, etc.</code>, "true" just means "non-zero".</p>
+<p>General rule in implicit conversions?
+?
+"Lower" type is converted to "higher" type. The result is of the "higher" type.
+Check section 6 of appendix A for more details.</p>
+<p>Can you describe 5 steps of conversion of different types if there are no
+unsigned operands (some expression with multiple operands)?
+?
+1. If either operand is <code>long double</code>, convert the other to <code>long double</code>.
+2. Otherwise, if either operand is <code>double</code>, convert the other to <code>double</code>.
+3. Otherwise, if either operand is <code>float</code>, convert the other to <code>float</code>.
+4. Otherwise, convert <code>char</code> and <code>short</code> to <code>int</code>.
+5. Then, if either operand is <code>long</code>, convert the other to <code>long</code>.</p>
+<p>Will we convert value of right side to left, on assignment?
+?
+Yes, the value of the right side is converted to the type of the left side.</p>
 <h2 id="2-8-increment-and-decrement-operators-44">2.8 Increment and Decrement Operators /44</h2>
 <h2 id="2-9-bitwise-operators-46">2.9 Bitwise Operators /46</h2>
 <h2 id="2-10-assignment-operators-and-expressions-47">2.10 Assignment Operators and Expressions /47</h2>
@@ -2123,13 +2123,13 @@ Yes, the value of the right side is converted to the type of the left side.   </
 
 </div>
 <div class="graph requires_js ">
-    <div id="A207702449964434170685918118908012991732{level}" class="graph_div"></div>
+    <div id="A253591170248276678354318364701370085324{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B207702449964434170685918118908012991732{level}" level="{level}" note_temp_id="207702449964434170685918118908012991732" onclick="window.ObsHtmlGraph.run(this, '207702449964434170685918118908012991732', '@brianwkernighanprogramminglanguage1988');">
+        <button class="graph_button graph_show_button" id="B253591170248276678354318364701370085324{level}" level="{level}" note_temp_id="253591170248276678354318364701370085324" onclick="window.ObsHtmlGraph.run(this, '253591170248276678354318364701370085324', '@brianwkernighanprogramminglanguage1988');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C207702449964434170685918118908012991732{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C253591170248276678354318364701370085324{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

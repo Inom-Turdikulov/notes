@@ -7,7 +7,7 @@ tags:
 - definition
 title: Nomad Sculpt
 ---
-   
-A sculpting and painting mobile application.   
-   
+
+A sculpting and painting mobile application.
+
 [Nomad Sculpt - YouTube](https://www.youtube.com/playlist?list=PLYgW0C-nQEFNSS2llnNjkx8NpN6MXhfdI)

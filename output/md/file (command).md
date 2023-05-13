@@ -9,14 +9,14 @@ tags:
 - definition
 title: File (command)
 ---
-   
-Determines the type of file. Additional information: `man file`   
-   
-Determine the MIME encoding type of all file in a directory: ?   
-`file -i path/to/dir/*`   
-   
-Other examples:   
-   
+
+Determines the type of file. Additional information: `man file`
+
+Determine the MIME encoding type of all file in a directory: ?
+`file -i path/to/dir/*`
+
+Other examples:
+
 ```bash
 # Give a description of the type of the specified file. Works fine for files with no file extension:
 file path/to/file
