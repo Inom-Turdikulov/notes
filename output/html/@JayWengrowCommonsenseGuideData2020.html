@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page information -->
+    <meta charset="UTF-8" />
+    <meta name="node_id" content="@jaywengrowcommonsenseguidedata2020" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Set title -->
+    <title>Obsidian-Html/Notes</title>
+
+    <!-- Includes -->
+    
+<script src="/obs.html/static/obsidian_core.js"></script>
+<script src="/obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="/obs.html/static/master.css" />
+<script src="/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="/obs.html/static/flexsearch.bundle.js"></script>
+<script src="/obs.html/static/pako.js"></script>
+<script src="/obs.html/static/search.js"></script>
+<script src="/obs.html/static/dirtree.js"></script>
+
+
+    <!-- Onload tweaks -->
+    <script>
+        const CURRENT_NODE = "@jaywengrowcommonsenseguidedata2020";
+        const HTML_URL_PREFIX = "";
+        const PAGE_DEPTH = 0;
+    </script>
+
+    <style>
+        .container{
+            font-size: 14pt;
+        }
+    </style>
+</head>
+
+<body class="theme-obs-light">
+    <div id="antiflash" style="display: none"></div>
+    <script>
+        document.getElementById("antiflash").style.display = "block";
+    </script>
+    <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+    <div id="page_holder" class="flex_col">
+        <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="/index.html" id="homelink" title="Clear screen and go to homepage">Obsidian-Html/Notes</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=@jaywengrowcommonsenseguidedata2020" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="/obs.html/dir_index.html" title="View directory tree">
+                    <img src = "/obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="/obs.html/tags/index.html" title="Open tag view">
+            <img src = "/obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+        <div class="flex_row">
+            <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div class="dirtree"><button id="folder-1" class="dir-button" onclick="toggle_dir(this.id)">@BrianWKernighanProgrammingLanguage1988</button>
+<div id="folder-container-1" class="dir-container requires_js " path="/@BrianWKernighanProgrammingLanguage1988">
+	<button id="folder-2" class="dir-button" onclick="toggle_dir(this.id)">chapter_1</button>
+	<div id="folder-container-2" class="dir-container requires_js " path="/@BrianWKernighanProgrammingLanguage1988/chapter_1">
+		<ul class="dir-list">
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-10_show_escape_sequences.c"  class="external-link">1-10_show_escape_sequences</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-12_input_join_into_words.c"  class="external-link">1-12_input_join_into_words</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-13_input_histogram.c"  class="external-link">1-13_input_histogram</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-14_input_histogram_chars.c"  class="external-link">1-14_input_histogram_chars</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-15_temerature_conversion_using_func.c"  class="external-link">1-15_temerature_conversion_using_func</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-1_hello_world.c"  class="external-link">1-1_hello_world</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-2_printf_experiments.c"  class="external-link">1-2_printf_experiments</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-3_modify_temp_conversion.c"  class="external-link">1-3_modify_temp_conversion</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-4_celsius_to_fahrenheit.c"  class="external-link">1-4_celsius_to_fahrenheit</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-5_celsius_to_fahrenheit_reverse.c"  class="external-link">1-5_celsius_to_fahrenheit_reverse</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-8_wc_alternative.c"  class="external-link">1-8_wc_alternative</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-9_fix_blanks.c"  class="external-link">1-9_fix_blanks</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+	</ul>
+</div>
+<button id="folder-3" class="dir-button" onclick="toggle_dir(this.id)">img</button>
+<div id="folder-container-3" class="dir-container requires_js " path="/img">
+	<ul class="dir-list">
+		<li><a class="" href="/img/Universal_Turing_machine.svg"  class="external-link">Universal_Turing_machine</a></li>
+		<li><a class="" href="/img/Unix_timeline.svg"  class="external-link">Unix_timeline</a></li>
+		<li><a class="" href="/img/colemak_dh_ansi.png"  class="external-link">colemak_dh_ansi</a></li>
+		<li><a class="" href="/img/mongolian-gerbil.png"  class="external-link">mongolian-gerbil</a></li>
+		<li><a class="" href="/img/pasted_img_20230102033318.png"  class="external-link">pasted_img_20230102033318</a></li>
+		<li><a class="" href="/img/pasted_img_20230415175922.png"  class="external-link">pasted_img_20230415175922</a></li>
+		<li><a class="" href="/img/screenshoot-zotero.png"  class="external-link">screenshoot-zotero</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><a class="" href="/!AST.excalidraw.html"  >!AST.excalidraw</a></li>
+	<li><a class="" href="/30 day drawing challenge.html"  >30 day drawing challenge</a></li>
+	<li><a class="" href="/@AlgorithmsComputerScience2005.html"  >@AlgorithmsComputerScience2005</a></li>
+	<li><a class="" href="/@AndreiPetrovichKiselyovAlgebraChast2006.html"  >@AndreiPetrovichKiselyovAlgebraChast2006</a></li>
+	<li><a class="" href="/@AndrewHuntPragmaticProgrammerYour2019.html"  >@AndrewHuntPragmaticProgrammerYour2019</a></li>
+	<li><a class="" href="/@AndrewLoomisFunPencilHow2013.html"  >@AndrewLoomisFunPencilHow2013</a></li>
+	<li><a class="" href="/@AndreyViktorovichStolyarovProgrammirovanieVvedenieProfessiyu2021b.html"  >@AndreyViktorovichStolyarovProgrammirovanieVvedenieProfessiyu2021b</a></li>
+	<li><a class="" href="/@ArielManzurGodotEngineGame2018.html"  >@ArielManzurGodotEngineGame2018</a></li>
+	<li><a class="" href="/@BrettSlatkinEffectivePython902020.html"  >@BrettSlatkinEffectivePython902020</a></li>
+	<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988.html"  >@BrianWKernighanProgrammingLanguage1988</a></li>
+	<li><a class="" href="/@CaseyMuratoriHandmadeHero2014.html"  >@CaseyMuratoriHandmadeHero2014</a></li>
+	<li><a class="" href="/@CharlesPetzoldCodeHiddenLanguage2000.html"  >@CharlesPetzoldCodeHiddenLanguage2000</a></li>
+	<li><a class="" href="/@DavidFlanaganJavaScriptDefinitiveGuide2020.html"  >@DavidFlanaganJavaScriptDefinitiveGuide2020</a></li>
+	<li><a class="" href="/@DrewNeilModernVimCraft2018.html"  >@DrewNeilModernVimCraft2018</a></li>
+	<li><a class="" href="/@DrewNeilPracticalVimEdit2015.html"  >@DrewNeilPracticalVimEdit2015</a></li>
+	<li><a class="" href="/@EmelinAleksandrKratchayshiyKursShkolnoy.html"  >@EmelinAleksandrKratchayshiyKursShkolnoy</a></li>
+	<li><a class="" href="/@EricMatthesPythonCrashCourse2023.html"  >@EricMatthesPythonCrashCourse2023</a></li>
+	<li><a class="" href="/@GodotDocsBranch2023.html"  >@GodotDocsBranch2023</a></li>
+	<li><a class="" href="/@HarvardXCS50x2023.html"  >@HarvardXCS50x2023</a></li>
+	<li><a class="" href="/@IgorIriantoLearnVim2021.html"  >@IgorIriantoLearnVim2021</a></li>
+	<li><a class="" href="/@InterviewCakeCodingInterviewPractice.html"  >@InterviewCakeCodingInterviewPractice</a></li>
+	<li><a class="" href="/@JasonvanGumsterBlenderDummies4th2020.html"  >@JasonvanGumsterBlenderDummies4th2020</a></li>
+	<li><a class="active" href="/@JayWengrowCommonsenseGuideData2020.html"  >@JayWengrowCommonsenseGuideData2020</a></li>
+	<li><a class="" href="/@KilpatrickDavidSvetOsveshchenie1988.html"  >@KilpatrickDavidSvetOsveshchenie1988</a></li>
+	<li><a class="" href="/@LucianoRamalhoFluentPython2021.html"  >@LucianoRamalhoFluentPython2021</a></li>
+	<li><a class="" href="/@PythonProgrammingFAQ2023.html"  >@PythonProgrammingFAQ2023</a></li>
+	<li><a class="" href="/@PythonStandardLibrary2023.html"  >@PythonStandardLibrary2023</a></li>
+	<li><a class="" href="/@PythonTutorial2023.html"  >@PythonTutorial2023</a></li>
+	<li><a class="" href="/@RobertSedgewickAlgorithms2014a.html"  >@RobertSedgewickAlgorithms2014a</a></li>
+	<li><a class="" href="/@RobertSedgewickAlgorithms2014b.html"  >@RobertSedgewickAlgorithms2014b</a></li>
+	<li><a class="" href="/@RusShulerHowDoesInternet2002.html"  >@RusShulerHowDoesInternet2002</a></li>
+	<li><a class="" href="/@ScottChaconProGit2022.html"  >@ScottChaconProGit2022</a></li>
+	<li><a class="" href="/@SteveMcConnellCodeComplete2004.html"  >@SteveMcConnellCodeComplete2004</a></li>
+	<li><a class="" href="/@ThomasHCormenAlgorithmsUnlocked2013.html"  >@ThomasHCormenAlgorithmsUnlocked2013</a></li>
+	<li><a class="" href="/@ThomasHCormenIntroductionAlgorithms2022.html"  >@ThomasHCormenIntroductionAlgorithms2022</a></li>
+	<li><a class="" href="/@TimothyBLeeInternetExplained2014.html"  >@TimothyBLeeInternetExplained2014</a></li>
+	<li><a class="" href="/ANSI C.html"  >ANSI C</a></li>
+	<li><a class="" href="/abstract syntax tree.html"  >abstract syntax tree</a></li>
+	<li><a class="" href="/algorithm.html"  >algorithm</a></li>
+	<li><a class="" href="/android (operating system).html"  >android (operating system)</a></li>
+	<li><a class="" href="/arch linux (and other distros).html"  >arch linux (and other distros)</a></li>
+	<li><a class="" href="/array (computer science).html"  >array (computer science)</a></li>
+	<li><a class="" href="/art.html"  >art</a></li>
+	<li><a class="" href="/ascii.html"  >ascii</a></li>
+	<li><a class="" href="/b-tree.html"  >b-tree</a></li>
+	<li><a class="" href="/backup.html"  >backup</a></li>
+	<li><a class="" href="/bibliography.html"  >bibliography</a></li>
+	<li><a class="" href="/bibtex.html"  >bibtex</a></li>
+	<li><a class="" href="/binary search algorithm.html"  >binary search algorithm</a></li>
+	<li><a class="" href="/binary search tree.html"  >binary search tree</a></li>
+	<li><a class="" href="/bitlbee.html"  >bitlbee</a></li>
+	<li><a class="" href="/blender.html"  >blender</a></li>
+	<li><a class="" href="/boolean data type.html"  >boolean data type</a></li>
+	<li><a class="" href="/boolean expression.html"  >boolean expression</a></li>
+	<li><a class="" href="/borg.html"  >borg</a></li>
+	<li><a class="" href="/brave (web browser).html"  >brave (web browser)</a></li>
+	<li><a class="" href="/btrfs.html"  >btrfs</a></li>
+	<li><a class="" href="/bytecode.html"  >bytecode</a></li>
+	<li><a class="" href="/c (programming language).html"  >c (programming language)</a></li>
+	<li><a class="" href="/c data types.html"  >c data types</a></li>
+	<li><a class="" href="/calendar.html"  >calendar</a></li>
+	<li><a class="" href="/camera.html"  >camera</a></li>
+	<li><a class="" href="/chemistry.html"  >chemistry</a></li>
+	<li><a class="" href="/chrome devtools.html"  >chrome devtools</a></li>
+	<li><a class="" href="/citation.html"  >citation</a></li>
+	<li><a class="" href="/code.html"  >code</a></li>
+	<li><a class="" href="/collection (abstract data type).html"  >collection (abstract data type)</a></li>
+	<li><a class="" href="/comics.html"  >comics</a></li>
+	<li><a class="" href="/command-line interface.html"  >command-line interface</a></li>
+	<li><a class="" href="/complex number.html"  >complex number</a></li>
+	<li><a class="" href="/computation.html"  >computation</a></li>
+	<li><a class="" href="/computational complexity.html"  >computational complexity</a></li>
+	<li><a class="" href="/computer.html"  >computer</a></li>
+	<li><a class="" href="/computer graphics.html"  >computer graphics</a></li>
+	<li><a class="" href="/computer memory.html"  >computer memory</a></li>
+	<li><a class="" href="/computer program.html"  >computer program</a></li>
+	<li><a class="" href="/computer programming.html"  >computer programming</a></li>
+	<li><a class="" href="/computer science.html"  >computer science</a></li>
+	<li><a class="" href="/computer science learning resources.html"  >computer science learning resources</a></li>
+	<li><a class="" href="/computer security.html"  >computer security</a></li>
+	<li><a class="" href="/computer software.html"  >computer software</a></li>
+	<li><a class="" href="/computing platform.html"  >computing platform</a></li>
+	<li><a class="" href="/conditional (computer programming).html"  >conditional (computer programming)</a></li>
+	<li><a class="" href="/control flow.html"  >control flow</a></li>
+	<li><a class="" href="/cooking.html"  >cooking</a></li>
+	<li><a class="" href="/copilot.html"  >copilot</a></li>
+	<li><a class="" href="/creamy mashed potatoes.html"  >creamy mashed potatoes</a></li>
+	<li><a class="" href="/cutlets.html"  >cutlets</a></li>
+	<li><a class="" href="/data structure.html"  >data structure</a></li>
+	<li><a class="" href="/data type.html"  >data type</a></li>
+	<li><a class="" href="/debugger.html"  >debugger</a></li>
+	<li><a class="" href="/development environment.html"  >development environment</a></li>
+	<li><a class="" href="/diff.html"  >diff</a></li>
+	<li><a class="" href="/digital electronics.html"  >digital electronics</a></li>
+	<li><a class="" href="/dm-crypt.html"  >dm-crypt</a></li>
+	<li><a class="" href="/dmenu.html"  >dmenu</a></li>
+	<li><a class="" href="/dmenu keybindings.html"  >dmenu keybindings</a></li>
+	<li><a class="" href="/do it yourself.html"  >do it yourself</a></li>
+	<li><a class="" href="/docker.html"  >docker</a></li>
+	<li><a class="" href="/duolingo.html"  >duolingo</a></li>
+	<li><a class="" href="/dwm.html"  >dwm</a></li>
+	<li><a class="" href="/dwm keyboard shortcuts.html"  >dwm keyboard shortcuts</a></li>
+	<li><a class="" href="/education.html"  >education</a></li>
+	<li><a class="" href="/elementary particle.html"  >elementary particle</a></li>
+	<li><a class="" href="/email.html"  >email</a></li>
+	<li><a class="" href="/english language.html"  >english language</a></li>
+	<li><a class="" href="/english language transcription.html"  >english language transcription</a></li>
+	<li><a class="" href="/escape sequence.html"  >escape sequence</a></li>
+	<li><a class="" href="/evaluation strategy.html"  >evaluation strategy</a></li>
+	<li><a class="" href="/exercise plan.html"  >exercise plan</a></li>
+	<li><a class="" href="/expression (computer science).html"  >expression (computer science)</a></li>
+	<li><a class="" href="/fibonacci sequence.html"  >fibonacci sequence</a></li>
+	<li><a class="" href="/file (command).html"  >file (command)</a></li>
+	<li><a class="" href="/finance.html"  >finance</a></li>
+	<li><a class="" href="/firefox.html"  >firefox</a></li>
+	<li><a class="" href="/floating-point arithmetic.html"  >floating-point arithmetic</a></li>
+	<li><a class="" href="/flowchart.html"  >flowchart</a></li>
+	<li><a class="" href="/function (computer programming).html"  >function (computer programming)</a></li>
+	<li><a class="" href="/functional programming.html"  >functional programming</a></li>
+	<li><a class="" href="/fzf.html"  >fzf</a></li>
+	<li><a class="" href="/game.html"  >game</a></li>
+	<li><a class="" href="/general-purpose programming language.html"  >general-purpose programming language</a></li>
+	<li><a class="" href="/getting things done (gtd).html"  >getting things done (gtd)</a></li>
+	<li><a class="" href="/git.html"  >git</a></li>
+	<li><a class="" href="/git tips.html"  >git tips</a></li>
+	<li><a class="" href="/github.html"  >github</a></li>
+	<li><a class="" href="/gitlab.html"  >gitlab</a></li>
+	<li><a class="" href="/gnu compiler collection.html"  >gnu compiler collection</a></li>
+	<li><a class="" href="/gnu privacy guard.html"  >gnu privacy guard</a></li>
+	<li><a class="" href="/gnu project debugger.html"  >gnu project debugger</a></li>
+	<li><a class="" href="/gnu readline.html"  >gnu readline</a></li>
+	<li><a class="" href="/gnu sed.html"  >gnu sed</a></li>
+	<li><a class="" href="/godot engine.html"  >godot engine</a></li>
+	<li><a class="" href="/government.html"  >government</a></li>
+	<li><a class="" href="/guido van rossum.html"  >guido van rossum</a></li>
+	<li><a class="" href="/hacker news.html"  >hacker news</a></li>
+	<li><a class="" href="/haskell.html"  >haskell</a></li>
+	<li><a class="" href="/heap (data structure).html"  >heap (data structure)</a></li>
+	<li><a class="" href="/hidden file and hidden directory (.dotfiles).html"  >hidden file and hidden directory (.dotfiles)</a></li>
+	<li><a class="" href="/high-level programming language.html"  >high-level programming language</a></li>
+	<li><a class="" href="/home construction.html"  >home construction</a></li>
+	<li><a class="" href="/how do i work with contacts.html"  >how do i work with contacts</a></li>
+	<li><a class="" href="/how do i work with email.html"  >how do i work with email</a></li>
+	<li><a class="" href="/how do i work with instant messages.html"  >how do i work with instant messages</a></li>
+	<li><a class="" href="/how do i work with the calendar.html"  >how do i work with the calendar</a></li>
+	<li><a class="" href="/how i learn computer programming.html"  >how i learn computer programming</a></li>
+	<li><a class="" href="/how i study computer science.html"  >how i study computer science</a></li>
+	<li><a class="" href="/how i study english language.html"  >how i study english language</a></li>
+	<li><a class="" href="/how i study mathematics.html"  >how i study mathematics</a></li>
+	<li><a class="" href="/how to solve it.html"  >how to solve it</a></li>
+	<li><a class="" href="/how to study.html"  >how to study</a></li>
+	<li><a class="" href="/htop.html"  >htop</a></li>
+	<li><a class="" href="/hugo.html"  >hugo</a></li>
+	<li><a class="" href="/immutable object.html"  >immutable object</a></li>
+	<li><a class="" href="/in real life (irl).html"  >in real life (irl)</a></li>
+	<li><a class="" href="/increment and decrement operators.html"  >increment and decrement operators</a></li>
+	<li><a class="" href="/index.html"  >index</a></li>
+	<li><a class="" href="/initialization (programming).html"  >initialization (programming)</a></li>
+	<li><a class="" href="/inkscape.html"  >inkscape</a></li>
+	<li><a class="" href="/instant messaging.html"  >instant messaging</a></li>
+	<li><a class="" href="/iterator.html"  >iterator</a></li>
+	<li><a class="" href="/java (programming language).html"  >java (programming language)</a></li>
+	<li><a class="" href="/keyboard shortcut.html"  >keyboard shortcut</a></li>
+	<li><a class="" href="/khan academy.html"  >khan academy</a></li>
+	<li><a class="" href="/kitty (terminal emulator).html"  >kitty (terminal emulator)</a></li>
+	<li><a class="" href="/krita.html"  >krita</a></li>
+	<li><a class="" href="/latex.html"  >latex</a></li>
+	<li><a class="" href="/ledger.html"  >ledger</a></li>
+	<li><a class="" href="/leetcode.html"  >leetcode</a></li>
+	<li><a class="" href="/light.html"  >light</a></li>
+	<li><a class="" href="/lineage 2 tools.html"  >lineage 2 tools</a></li>
+	<li><a class="" href="/linux.html"  >linux</a></li>
+	<li><a class="" href="/list (abstract data type).html"  >list (abstract data type)</a></li>
+	<li><a class="" href="/literature.html"  >literature</a></li>
+	<li><a class="" href="/logarithm (logs).html"  >logarithm (logs)</a></li>
+	<li><a class="" href="/logic.html"  >logic</a></li>
+	<li><a class="" href="/low-level programming language.html"  >low-level programming language</a></li>
+	<li><a class="" href="/magic sysrq key.html"  >magic sysrq key</a></li>
+	<li><a class="" href="/maintenance.html"  >maintenance</a></li>
+	<li><a class="" href="/markdown.html"  >markdown</a></li>
+	<li><a class="" href="/mathematics.html"  >mathematics</a></li>
+	<li><a class="" href="/mathjax.html"  >mathjax</a></li>
+	<li><a class="" href="/media (communication).html"  >media (communication)</a></li>
+	<li><a class="" href="/microsoft windows.html"  >microsoft windows</a></li>
+	<li><a class="" href="/miniflux.html"  >miniflux</a></li>
+	<li><a class="" href="/mouseless workflow.html"  >mouseless workflow</a></li>
+	<li><a class="" href="/mpv.html"  >mpv</a></li>
+	<li><a class="" href="/multi-factor authentication.html"  >multi-factor authentication</a></li>
+	<li><a class="" href="/multiplication table.html"  >multiplication table</a></li>
+	<li><a class="" href="/my arch linux enviroment.html"  >my arch linux enviroment</a></li>
+	<li><a class="" href="/my art.html"  >my art</a></li>
+	<li><a class="" href="/my articles list (publishing).html"  >my articles list (publishing)</a></li>
+	<li><a class="" href="/my awesome software list.html"  >my awesome software list</a></li>
+	<li><a class="" href="/my backend developer roadmap.html"  >my backend developer roadmap</a></li>
+	<li><a class="" href="/my backup plan.html"  >my backup plan</a></li>
+	<li><a class="" href="/my books.html"  >my books</a></li>
+	<li><a class="" href="/my buy list.html"  >my buy list</a></li>
+	<li><a class="" href="/my computer science roadmap.html"  >my computer science roadmap</a></li>
+	<li><a class="" href="/my everyday life (routine).html"  >my everyday life (routine)</a></li>
+	<li><a class="" href="/my games.html"  >my games</a></li>
+	<li><a class="" href="/my inventory.html"  >my inventory</a></li>
+	<li><a class="" href="/my music.html"  >my music</a></li>
+	<li><a class="" href="/my pet projects.html"  >my pet projects</a></li>
+	<li><a class="" href="/my pictures.html"  >my pictures</a></li>
+	<li><a class="" href="/my python developer roadmap.html"  >my python developer roadmap</a></li>
+	<li><a class="" href="/my shell scripts.html"  >my shell scripts</a></li>
+	<li><a class="" href="/my videos.html"  >my videos</a></li>
+	<li><a class="" href="/my watched movies.html"  >my watched movies</a></li>
+	<li><a class="" href="/mysql.html"  >mysql</a></li>
+	<li><a class="" href="/neomutt.html"  >neomutt</a></li>
+	<li><a class="" href="/neovim (text editor).html"  >neovim (text editor)</a></li>
+	<li><a class="" href="/news.html"  >news</a></li>
+	<li><a class="" href="/nnn file manager.html"  >nnn file manager</a></li>
+	<li><a class="" href="/nomad sculpt.html"  >nomad sculpt</a></li>
+	<li><a class="" href="/notes types.html"  >notes types</a></li>
+	<li><a class="" href="/null function.html"  >null function</a></li>
+	<li><a class="" href="/null pointer.html"  >null pointer</a></li>
+	<li><a class="" href="/object-oriented programming.html"  >object-oriented programming</a></li>
+	<li><a class="" href="/obsidian.html"  >obsidian</a></li>
+	<li><a class="" href="/online shopping.html"  >online shopping</a></li>
+	<li><a class="" href="/operand.html"  >operand</a></li>
+	<li><a class="" href="/operating system.html"  >operating system</a></li>
+	<li><a class="" href="/operator (computer programming).html"  >operator (computer programming)</a></li>
+	<li><a class="" href="/pacman (software).html"  >pacman (software)</a></li>
+	<li><a class="" href="/pandoc.html"  >pandoc</a></li>
+	<li><a class="" href="/pass (software).html"  >pass (software)</a></li>
+	<li><a class="" href="/patch (unix).html"  >patch (unix)</a></li>
+	<li><a class="" href="/pattern matching.html"  >pattern matching</a></li>
+	<li><a class="" href="/photography.html"  >photography</a></li>
+	<li><a class="" href="/physics.html"  >physics</a></li>
+	<li><a class="" href="/postgresql.html"  >postgresql</a></li>
+	<li><a class="" href="/printf format string.html"  >printf format string</a></li>
+	<li><a class="" href="/procedural programming.html"  >procedural programming</a></li>
+	<li><a class="" href="/programmer (software developer).html"  >programmer (software developer)</a></li>
+	<li><a class="" href="/programming language.html"  >programming language</a></li>
+	<li><a class="" href="/programming paradigm.html"  >programming paradigm</a></li>
+	<li><a class="" href="/programming principles.html"  >programming principles</a></li>
+	<li><a class="" href="/pseudocode.html"  >pseudocode</a></li>
+	<li><a class="" href="/public-key cryptography.html"  >public-key cryptography</a></li>
+	<li><a class="" href="/puzzle english.html"  >puzzle english</a></li>
+	<li><a class="" href="/puzzle english learning by plan.html"  >puzzle english learning by plan</a></li>
+	<li><a class="" href="/pycharm.html"  >pycharm</a></li>
+	<li><a class="" href="/python.html"  >python</a></li>
+	<li><a class="" href="/qmk.html"  >qmk</a></li>
+	<li><a class="" href="/readability.html"  >readability</a></li>
+	<li><a class="" href="/retroarch.html"  >retroarch</a></li>
+	<li><a class="" href="/russian language.html"  >russian language</a></li>
+	<li><a class="" href="/rust (programming language).html"  >rust (programming language)</a></li>
+	<li><a class="" href="/sc-im.html"  >sc-im</a></li>
+	<li><a class="" href="/science.html"  >science</a></li>
+	<li><a class="" href="/self-hosting (web services).html"  >self-hosting (web services)</a></li>
+	<li><a class="" href="/set (abstract data type).html"  >set (abstract data type)</a></li>
+	<li><a class="" href="/shebang (unix).html"  >shebang (unix)</a></li>
+	<li><a class="" href="/side effect (computer science).html"  >side effect (computer science)</a></li>
+	<li><a class="" href="/sleep.html"  >sleep</a></li>
+	<li><a class="" href="/smartphone.html"  >smartphone</a></li>
+	<li><a class="" href="/sniprun.html"  >sniprun</a></li>
+	<li><a class="" href="/software testing.html"  >software testing</a></li>
+	<li><a class="" href="/spaced repetition.html"  >spaced repetition</a></li>
+	<li><a class="" href="/sq3r method.html"  >sq3r method</a></li>
+	<li><a class="" href="/stack overflow.html"  >stack overflow</a></li>
+	<li><a class="" href="/statement (computer science).html"  >statement (computer science)</a></li>
+	<li><a class="" href="/string literal.html"  >string literal</a></li>
+	<li><a class="" href="/structured programming.html"  >structured programming</a></li>
+	<li><a class="" href="/suckless.org.html"  >suckless.org</a></li>
+	<li><a class="" href="/surfingkeys.html"  >surfingkeys</a></li>
+	<li><a class="" href="/switch to neovim path.html"  >switch to neovim path</a></li>
+	<li><a class="" href="/syncthing.html"  >syncthing</a></li>
+	<li><a class="" href="/telekasten.nvim.html"  >telekasten.nvim</a></li>
+	<li><a class="" href="/telescope.nvim.html"  >telescope.nvim</a></li>
+	<li><a class="" href="/the python standard library.html"  >the python standard library</a></li>
+	<li><a class="" href="/time complexity.html"  >time complexity</a></li>
+	<li><a class="" href="/truncation.html"  >truncation</a></li>
+	<li><a class="" href="/turing complete.html"  >turing complete</a></li>
+	<li><a class="" href="/turing machine.html"  >turing machine</a></li>
+	<li><a class="" href="/twitch (service).html"  >twitch (service)</a></li>
+	<li><a class="" href="/type conversion.html"  >type conversion</a></li>
+	<li><a class="" href="/unicode.html"  >unicode</a></li>
+	<li><a class="" href="/unix.html"  >unix</a></li>
+	<li><a class="" href="/variable (computer science).html"  >variable (computer science)</a></li>
+	<li><a class="" href="/vector graphics.html"  >vector graphics</a></li>
+	<li><a class="" href="/video acceleration api.html"  >video acceleration api</a></li>
+	<li><a class="" href="/vim keycodes.html"  >vim keycodes</a></li>
+	<li><a class="" href="/virtual machine.html"  >virtual machine</a></li>
+	<li><a class="" href="/vr photography (virtual-reality photography).html"  >vr photography (virtual-reality photography)</a></li>
+	<li><a class="" href="/word (computer architecture).html"  >word (computer architecture)</a></li>
+	<li><a class="" href="/work (human activity).html"  >work (human activity)</a></li>
+	<li><a class="" href="/youtube.html"  >youtube</a></li>
+	<li><a class="" href="/z shell.html"  >z shell</a></li>
+	<li><a class="" href="/zathura.html"  >zathura</a></li>
+	<li><a class="" href="/zen of python.html"  >zen of python</a></li>
+	<li><a class="" href="/zero-based numbering.html"  >zero-based numbering</a></li>
+	<li><a class="" href="/zettelkasten.html"  >zettelkasten</a></li>
+	<li><a class="" href="/zotero.html"  >zotero</a></li>
+</ul>
+</div>
+    </div>
+</div>
+            <div class="container">
+                <embeddedtitle>@JayWengrowCommonsenseGuideData2020</embeddedtitle>
+<div class="content"><p>If you thought that data structures and algorithms were all just theory, you're <br />
+missing out on what they can do for your code. Learn to use Big O Notation to <br />
+make your code run faster by orders of magnitude. Choose from data structures <br />
+such as hash tables, trees, and graphs to increase your code's efficiency <br />
+exponentially. With simple language and clear diagrams, this book makes this <br />
+complex topic accessible, no matter your background. This new edition features <br />
+practice exercises in every chapter, and new chapters on topics such as dynamic <br />
+programming and heaps and tries. Get the hands-on info you need to master data <br />
+structures and algorithms for your day-to-day work. Algorithms and data <br />
+structures are much more than abstract concepts. Mastering them enables you to <br />
+write code that runs faster and more efficiently, which is particularly <br />
+important for today's web and mobile apps. Take a practical approach to data <br />
+structures and algorithms, with techniques and real-world scenarios that you can <br />
+use in your daily production code, with examples in JavaScript, Python, and <br />
+Ruby. This new and revised second edition features new chapters on recursion, <br />
+dynamic programming, and using Big O in your daily work. Use Big O notation to <br />
+measure and articulate the efficiency of your code, and modify your algorithm to <br />
+make it faster. Find out how your choice of arrays, linked lists, and hash <br />
+tables can dramatically affect the code you write. Use recursion to solve tricky <br />
+problems and create algorithms that run exponentially faster than the <br />
+alternatives. Dig into advanced data structures such as binary trees and graphs <br />
+to help scale specialized applications such as social networks and mapping <br />
+software. You'll even encounter a single keyword that can give your code a turbo <br />
+boost. Practice your new skills with exercises in every chapter, along with <br />
+detailed solutions. Use these techniques today to make your code faster and more <br />
+scalable.   </p>
+<h1 id="cover-1">Cover /1</h1>
+<p>Not superior, but looks good enough.   </p>
+<h1 id="table-of-contents-7">Table of Contents /7</h1>
+<p>In book it's actually Contents.   </p>
+<p>Data structures (which make me more happy, haha), intro to algorithms, big O <br />
+with logarithms!), speed-up and optimize, big O in everyday code, blazing fast <br />
+lookup, elegant stack/queues, recursion, dynamic programming, recursive <br />
+algorithms, node-based data structures, binary search trees, heaps, tries?, <br />
+graphs, space constraints, code optimizations.   </p>
+<p>WOW this looks great. Unfortunately, I have no idea what about half of these, <br />
+but I WILL UNDERSTAND it ☕.   </p>
+<h1 id="preface-14">Preface /14</h1>
+<h2 id="who-is-this-book-for-15">Who Is This Book For? /15</h2>
+<h2 id="whats-new-in-the-second-edition-15">What’s New in the Second Edition /15</h2>
+<h2 id="whats-in-this-book-16">What’s in This Book? /16</h2>
+<h2 id="how-to-read-this-book-17">How to Read This Book /17</h2>
+<h2 id="code-examples-19">Code Examples /19</h2>
+<h2 id="online-resources-19">Online Resources /19</h2>
+<h2 id="acknowledgments-20">Acknowledgments /20</h2>
+<h2 id="connecting-21">Connecting /21</h2>
+<ul>
+<li>write better software (reduce entropy)   </li>
+<li>
+<p>this book help to understand how to write better software and not use a lot of <br />
+  math jargon, use common-sense language + a lot of diagrams   </p>
+</li>
+<li>
+<p>with this knowledge you will to be able to write fast, efficient and elegant <br />
+  code   </p>
+</li>
+<li>
+<p>this book for me!   </p>
+</li>
+<li>this book is updated and revisited (2nd edition)   </li>
+<li>this book blends theory with practice   </li>
+<li>knowledge of data structures and algorithms can reduce entropy in your code   </li>
+<li>explain recursion and dynamic programming (?)   </li>
+<li>book contains exercises and solutions   </li>
+</ul>
+<p>This book give answers to questions like:   </p>
+<ul>
+<li>why data structures matter?   </li>
+<li>why algorithms matter?   </li>
+<li>Big O notation? ...   </li>
+</ul>
+<p>I need to read this book in order.   </p>
+<p>Some definitions are simplified, but they can be explained in more detail at the <br />
+end.   </p>
+<p>This book use mix of languages: JavaScript, Python, Ruby and pseudocode. Which <br />
+is good 😀.   </p>
+<h1 id="1-why-data-structures-matter-22">1. Why Data Structures Matter /22</h1>
+<p>Why?   </p>
+<p>Because efficiency, you can write efficient or inefficient code. sort of <br />
+productive or unproductive code... For me unproductive means increase entropy of <br />
+system. Which I hate. Because programs must run fast... Efficient code looks even <br />
+better, easily to maintain and use in every-day life.   </p>
+<p>First step in writing fast code is to understand what data structures are and <br />
+how different data structures can affect to speed of our code.   </p>
+<p>Data structures? Array? Data structure operations? Measuring speed? Reading <br />
+operation? Searching operation? Insertion operation? Deletion operation? Sets? <br />
+And why single rule can affect efficiency? Exercises.   </p>
+<h2 id="data-structures-23">Data Structures /23</h2>
+<p>Data structures refer to how data is organized. Data organization can be highly <br />
+impact on performance. Depending on data organization program can run faster or <br />
+slower by orders of <strong>magnitude</strong>.   </p>
+<p>So knowledge in data structures can write scalable, fast and efficient software.   </p>
+<h2 id="the-array-the-foundational-data-structure-24">The Array: The Foundational Data Structure /24</h2>
+<p>Most basic data structure? <br />
+? <br />
+Array, versatile   </p>
+<!--SR:!2023-04-16,4,270-->
+
+<p>Some information about arrays: <a href="/array%20%28computer%20science%29.html">array (computer science)</a>   </p>
+<h2 id="measuring-speed-25">Measuring Speed /25</h2>
+<p>When we measure how “fast” an operation takes, we do not refer to how fast the <br />
+operation takes in terms of pure time, but instead in <mark class="formatting_highlight">how many steps it <br />
+takes</mark>.   </p>
+<p>So if operation A take less steps than operation B, we can assume that operation <br />
+A will always be faster than operation B on all pieces of hardware.   </p>
+<p>Measuring the number of steps is key to analyzing the speed of an operation.   </p>
+<h2 id="reading-26">Reading /26</h2>
+<h2 id="searching-29">Searching /29</h2>
+<h2 id="insertion-32">Insertion /32</h2>
+<h2 id="deletion-34">Deletion /34</h2>
+<p>I placed notes here: <a href="/array%20%28computer%20science%29.html">array (computer science)</a>   </p>
+<h2 id="sets-how-a-single-rule-can-affect-efficiency-36">Sets: How a Single Rule Can Affect Efficiency /36</h2>
+<p>I placed notes here: <a href="/set%20%28abstract%20data%20type%29.html">set (abstract data type)</a>   </p>
+<h2 id="wrapping-up-39">Wrapping Up /39</h2>
+<p>Analyze data structure before use them. Choose most suitable.   </p>
+<h2 id="exercises-40">Exercises /40</h2>
+<ol>
+<li>
+<p>For an array containing 100 elements, provide the number of steps the <br />
+   following operations would take: <br />
+   a. Reading <br />
+   b. Searching for a value not contained within the array <br />
+   c. Insertion at the beginning of the array <br />
+   d. Insertion at the end of the array <br />
+   e. Deletion at the beginning of the array <br />
+   f. Deletion at the end of the array <br />
+   ? <br />
+   a. 1 step <br />
+   b. 100 steps <br />
+   c. 100 to shift right and 1 to insert = 101 <br />
+   d. 1 step, but memory allocation? <br />
+   e. 1 to delete, 99 to shift left <br />
+   f. 1 step   </p>
+</li>
+<li>
+<p>For an array-based set containing 100 elements, provide the number of steps <br />
+   the following operations would take: <br />
+   a. Reading <br />
+   b. Searching for a value not contained within the array <br />
+   c. Insertion of a new value at the beginning of the set <br />
+   d. Insertion of a new value at the end of the set <br />
+   e. Deletion at the beginning of the set <br />
+   f. Deletion at the end of the set <br />
+   ? <br />
+   a. 1 step <br />
+   b. 100 steps <br />
+   c. 100 to search, 100 to shift right and 1 to insert = 201 <br />
+   d. 100 to search, 1 step to insert <br />
+   e. 1 to delete, 99 to shift left <br />
+   f. 1 step   </p>
+</li>
+<li>
+<p>Normally the search operation in an array looks for the first instance of a <br />
+   given value. But sometimes we may want to look for every instance of a given <br />
+   value. For example, say we want to count how many times the value “apple” is <br />
+   found inside an array. How many steps would it take to find all the “apples”? <br />
+   Give your answer in terms of N. Don't overthink here. <br />
+   ? <br />
+   In classic search, we can do 1 step in best case it can take 1 step. But if <br />
+   you need search all occurrence, you need to do N steps. <br />
+   If the array contains N elements, searching for all instances of the <br />
+   string “apple” in an array will <strong>take N steps</strong>. When searching for just one <br />
+   instance, we can <strong>cut our search short</strong> as soon as we find it. But if we <br />
+   need to find all instances, we have no choice but inspect <strong>each element</strong> of <br />
+   the entire array.   </p>
+</li>
+</ol>
+<h1 id="2-why-algorithms-matter-41">2. Why Algorithms Matter /41</h1>
+<p>Placed some notes here <a href="/algorithm.html">algorithm</a>.   </p>
+<h2 id="ordered-arrays-42">Ordered Arrays /42</h2>
+<h2 id="searching-an-ordered-array-44">Searching an Ordered Array /44</h2>
+<h2 id="binary-search-46">Binary Search /46</h2>
+<h2 id="binary-search-vs-linear-search-51">Binary Search vs. Linear Search /51</h2>
+<h2 id="wrapping-up-54">Wrapping Up /54</h2>
+<h2 id="exercises-54">Exercises /54</h2>
+<h1 id="3-o-yes-big-o-notation-55">3. O Yes! Big O Notation /55</h1>
+<h2 id="big-o-how-many-steps-relative-to-n-elements-56">Big O: How Many Steps Relative to N Elements? /56</h2>
+<h2 id="the-soul-of-big-o-57">The Soul of Big O /57</h2>
+<h2 id="an-algorithm-of-the-third-kind-60">An Algorithm of the Third Kind /60</h2>
+<h2 id="logarithms-61">Logarithms /61</h2>
+<h2 id="o-log-n-explained-62">O(log N) Explained /62</h2>
+<h2 id="practical-examples-63">Practical Examples /63</h2>
+<h2 id="wrapping-up-65">Wrapping Up /65</h2>
+<h2 id="exercises-65">Exercises /65</h2>
+<h1 id="4-speeding-up-your-code-with-big-o-67">4. Speeding Up Your Code with Big O /67</h1>
+<h2 id="bubble-sort-67">Bubble Sort /67</h2>
+<h2 id="bubble-sort-in-action-68">Bubble Sort in Action /68</h2>
+<h2 id="the-efficiency-of-bubble-sort-73">The Efficiency of Bubble Sort /73</h2>
+<h2 id="a-quadratic-problem-76">A Quadratic Problem /76</h2>
+<h2 id="a-linear-solution-78">A Linear Solution /78</h2>
+<h2 id="wrapping-up-80">Wrapping Up /80</h2>
+<h2 id="exercises-80">Exercises /80</h2>
+<h1 id="5-optimizing-code-with-and-without-big-o-82">5. Optimizing Code with and Without Big O /82</h1>
+<h2 id="selection-sort-82">Selection Sort /82</h2>
+<h2 id="selection-sort-in-action-83">Selection Sort in Action /83</h2>
+<h2 id="the-efficiency-of-selection-sort-89">The Efficiency of Selection Sort /89</h2>
+<h2 id="ignoring-constants-90">Ignoring Constants /90</h2>
+<h2 id="big-o-categories-91">Big O Categories /91</h2>
+<h2 id="wrapping-up-95">Wrapping Up /95</h2>
+<h2 id="exercises-95">Exercises /95</h2>
+<h1 id="6-optimizing-for-optimistic-scenarios-97">6. Optimizing for Optimistic Scenarios /97</h1>
+<h2 id="insertion-sort-97">Insertion Sort /97</h2>
+<h2 id="insertion-sort-in-action-98">Insertion Sort in Action /98</h2>
+<h2 id="the-efficiency-of-insertion-sort-104">The Efficiency of Insertion Sort /104</h2>
+<h2 id="the-average-case-106">The Average Case /106</h2>
+<h2 id="a-practical-example-109">A Practical Example /109</h2>
+<h2 id="wrapping-up-111">Wrapping Up /111</h2>
+<h2 id="exercises-111">Exercises /111</h2>
+<h1 id="7-big-o-in-everyday-code-113">7. Big O in Everyday Code /113</h1>
+<h2 id="mean-average-of-even-numbers-113">Mean Average of Even Numbers /113</h2>
+<h2 id="word-builder-115">Word Builder /115</h2>
+<h2 id="array-sample-117">Array Sample /117</h2>
+<h2 id="average-celsius-reading-118">Average Celsius Reading /118</h2>
+<h2 id="clothing-labels-119">Clothing Labels /119</h2>
+<h2 id="count-the-ones-120">Count the Ones /120</h2>
+<h2 id="palindrome-checker-120">Palindrome Checker /120</h2>
+<h2 id="get-all-the-products-121">Get All the Products /121</h2>
+<h2 id="password-cracker-125">Password Cracker /125</h2>
+<h2 id="wrapping-up-127">Wrapping Up /127</h2>
+<h2 id="exercises-127">Exercises /127</h2>
+<h1 id="8-blazing-fast-lookup-with-hash-tables-131">8. Blazing Fast Lookup with Hash Tables /131</h1>
+<h2 id="hash-tables-131">Hash Tables /131</h2>
+<h2 id="hashing-with-hash-functions-132">Hashing with Hash Functions /132</h2>
+<h2 id="building-a-thesaurus-for-fun-and-profit-but-mainly-profit-133">Building a Thesaurus for Fun and Profit, but Mainly Profit /133</h2>
+<h2 id="hash-table-lookups-135">Hash Table Lookups /135</h2>
+<h2 id="dealing-with-collisions-137">Dealing with Collisions /137</h2>
+<h2 id="making-an-efficient-hash-table-140">Making an Efficient Hash Table /140</h2>
+<h2 id="hash-tables-for-organization-142">Hash Tables for Organization /142</h2>
+<h2 id="hash-tables-for-speed-143">Hash Tables for Speed /143</h2>
+<h2 id="wrapping-up-148">Wrapping Up /148</h2>
+<h2 id="exercises-149">Exercises /149</h2>
+<h1 id="9-crafting-elegant-code-with-stacks-and-queues-150">9. Crafting Elegant Code with Stacks and Queues /150</h1>
+<h2 id="stacks-150">Stacks /150</h2>
+<h2 id="abstract-data-types-153">Abstract Data Types /153</h2>
+<h2 id="stacks-in-action-154">Stacks in Action /154</h2>
+<h2 id="the-importance-of-constrained-data-structures-160">The Importance of Constrained Data Structures /160</h2>
+<h2 id="queues-161">Queues /161</h2>
+<h2 id="queues-in-action-163">Queues in Action /163</h2>
+<h2 id="wrapping-up-164">Wrapping Up /164</h2>
+<h2 id="exercises-165">Exercises /165</h2>
+<h1 id="10-recursively-recurse-with-recursion-166">10. Recursively Recurse with Recursion /166</h1>
+<h2 id="recurse-instead-of-loop-166">Recurse Instead of Loop /166</h2>
+<h2 id="the-base-case-168">The Base Case /168</h2>
+<h2 id="reading-recursive-code-168">Reading Recursive Code /168</h2>
+<h2 id="recursion-in-the-eyes-of-the-computer-171">Recursion in the Eyes of the Computer /171</h2>
+<h2 id="filesystem-traversal-173">Filesystem Traversal /173</h2>
+<h2 id="wrapping-up-176">Wrapping Up /176</h2>
+<h2 id="exercises-176">Exercises /176</h2>
+<h1 id="11-learning-to-write-in-recursive-178">11. Learning to Write in Recursive /178</h1>
+<h2 id="recursive-category-repeatedly-execute-178">Recursive Category: Repeatedly Execute /178</h2>
+<h2 id="recursive-category-calculations-183">Recursive Category: Calculations /183</h2>
+<h2 id="top-down-recursion-a-new-way-of-thinking-185">Top-Down Recursion: A New Way of Thinking /185</h2>
+<h2 id="the-staircase-problem-190">The Staircase Problem /190</h2>
+<h2 id="anagram-generation-194">Anagram Generation /194</h2>
+<h2 id="wrapping-up-198">Wrapping Up /198</h2>
+<h2 id="exercises-198">Exercises /198</h2>
+<h1 id="12-dynamic-programming-200">12. Dynamic Programming /200</h1>
+<h2 id="unnecessary-recursive-calls-200">Unnecessary Recursive Calls /200</h2>
+<h2 id="the-little-fix-for-big-o-204">The Little Fix for Big O /204</h2>
+<h2 id="the-efficiency-of-recursion-205">The Efficiency of Recursion /205</h2>
+<h2 id="overlapping-subproblems-206">Overlapping Subproblems /206</h2>
+<h2 id="dynamic-programming-through-memoization-208">Dynamic Programming through Memoization /208</h2>
+<h2 id="dynamic-programming-through-going-bottom-up-211">Dynamic Programming through Going Bottom-Up /211</h2>
+<h2 id="wrapping-up-213">Wrapping Up /213</h2>
+<h2 id="exercises-214">Exercises /214</h2>
+<h1 id="13-recursive-algorithms-for-speed-215">13. Recursive Algorithms for Speed /215</h1>
+<h2 id="partitioning-215">Partitioning /215</h2>
+<h2 id="quicksort-221">Quicksort /221</h2>
+<h2 id="the-efficiency-of-quicksort-227">The Efficiency of Quicksort /227</h2>
+<h2 id="quicksort-in-the-worst-case-scenario-232">Quicksort in the Worst-Case Scenario /232</h2>
+<h2 id="quickselect-234">Quickselect /234</h2>
+<h2 id="sorting-as-a-key-to-other-algorithms-238">Sorting as a Key to Other Algorithms /238</h2>
+<h2 id="wrapping-up-239">Wrapping Up /239</h2>
+<h2 id="exercises-240">Exercises /240</h2>
+<h1 id="14-node-based-data-structures-241">14. Node-Based Data Structures /241</h1>
+<h2 id="linked-lists-241">Linked Lists /241</h2>
+<h2 id="implementing-a-linked-list-243">Implementing a Linked List /243</h2>
+<h2 id="reading-245">Reading /245</h2>
+<h2 id="searching-247">Searching /247</h2>
+<h2 id="insertion-248">Insertion /248</h2>
+<h2 id="deletion-252">Deletion /252</h2>
+<h2 id="efficiency-of-linked-list-operations-254">Efficiency of Linked List Operations /254</h2>
+<h2 id="linked-lists-in-action-255">Linked Lists in Action /255</h2>
+<h2 id="doubly-linked-lists-256">Doubly Linked Lists /256</h2>
+<h2 id="queues-as-doubly-linked-lists-258">Queues as Doubly Linked Lists /258</h2>
+<h2 id="wrapping-up-260">Wrapping Up /260</h2>
+<h2 id="exercises-260">Exercises /260</h2>
+<h1 id="15-speeding-up-all-the-things-with-binary-search-trees-262">15. Speeding Up All the Things with Binary Search Trees /262</h1>
+<h2 id="trees-263">Trees /263</h2>
+<h2 id="binary-search-trees-265">Binary Search Trees /265</h2>
+<h2 id="searching-266">Searching /266</h2>
+<h2 id="insertion-271">Insertion /271</h2>
+<h2 id="deletion-275">Deletion /275</h2>
+<h2 id="binary-search-trees-in-action-286">Binary Search Trees in Action /286</h2>
+<h2 id="binary-search-tree-traversal-287">Binary Search Tree Traversal /287</h2>
+<h2 id="wrapping-up-291">Wrapping Up /291</h2>
+<h2 id="exercises-291">Exercises /291</h2>
+<h1 id="16-keeping-your-priorities-straight-with-heaps-293">16. Keeping Your Priorities Straight with Heaps /293</h1>
+<h2 id="priority-queues-293">Priority Queues /293</h2>
+<h2 id="heaps-295">Heaps /295</h2>
+<h2 id="heap-properties-298">Heap Properties /298</h2>
+<h2 id="heap-insertion-299">Heap Insertion /299</h2>
+<h2 id="looking-for-the-last-node-301">Looking for the Last Node /301</h2>
+<h2 id="heap-deletion-302">Heap Deletion /302</h2>
+<h2 id="heaps-vs-ordered-arrays-306">Heaps vs. Ordered Arrays /306</h2>
+<h2 id="the-problem-of-the-last-node-again-307">The Problem of the Last Node…Again /307</h2>
+<h2 id="arrays-as-heaps-309">Arrays as Heaps /309</h2>
+<h2 id="heaps-as-priority-queues-316">Heaps as Priority Queues /316</h2>
+<h2 id="wrapping-up-316">Wrapping Up /316</h2>
+<h2 id="exercises-317">Exercises /317</h2>
+<h1 id="17-it-doesn-t-hurt-to-trie-318">17. It Doesn't Hurt to Trie /318</h1>
+<h2 id="tries-319">Tries /319</h2>
+<h2 id="storing-words-320">Storing Words /320</h2>
+<h2 id="trie-search-324">Trie Search /324</h2>
+<h2 id="the-efficiency-of-trie-search-328">The Efficiency of Trie Search /328</h2>
+<h2 id="trie-insertion-329">Trie Insertion /329</h2>
+<h2 id="building-autocomplete-333">Building Autocomplete /333</h2>
+<h2 id="completing-autocomplete-339">Completing Autocomplete /339</h2>
+<h2 id="tries-with-values-a-better-autocomplete-340">Tries with Values: A Better Autocomplete /340</h2>
+<h2 id="wrapping-up-341">Wrapping Up /341</h2>
+<h2 id="exercises-342">Exercises /342</h2>
+<h1 id="18-connecting-everything-with-graphs-344">18. Connecting Everything with Graphs /344</h1>
+<h2 id="graphs-345">Graphs /345</h2>
+<h2 id="directed-graphs-347">Directed Graphs /347</h2>
+<h2 id="object-oriented-graph-implementation-347">Object-Oriented Graph Implementation /347</h2>
+<h2 id="graph-search-350">Graph Search /350</h2>
+<h2 id="depth-first-search-352">Depth-First Search /352</h2>
+<h2 id="breadth-first-search-361">Breadth-First Search /361</h2>
+<h2 id="the-efficiency-of-graph-search-374">The Efficiency of Graph Search /374</h2>
+<h2 id="weighted-graphs-377">Weighted Graphs /377</h2>
+<h2 id="dijkstras-algorithm-380">Dijkstra’s Algorithm /380</h2>
+<h2 id="wrapping-up-397">Wrapping Up /397</h2>
+<h2 id="exercises-397">Exercises /397</h2>
+<h1 id="19-dealing-with-space-constraints-400">19. Dealing with Space Constraints /400</h1>
+<h2 id="big-o-of-space-complexity-400">Big O of Space Complexity /400</h2>
+<h2 id="trade-offs-between-time-and-space-403">Trade-Offs Between Time and Space /403</h2>
+<h2 id="the-hidden-cost-of-recursion-406">The Hidden Cost of Recursion /406</h2>
+<h2 id="wrapping-up-408">Wrapping Up /408</h2>
+<h2 id="exercises-408">Exercises /408</h2>
+<h1 id="20-techniques-for-code-optimization-410">20. Techniques for Code Optimization /410</h1>
+<h2 id="prerequisite-determine-your-current-big-o-410">Prerequisite: Determine Your Current Big O /410</h2>
+<h2 id="start-here-the-best-imaginable-big-o-410">Start Here: The Best-Imaginable Big O /410</h2>
+<h2 id="magical-lookups-412">Magical Lookups /412</h2>
+<h2 id="recognizing-patterns-419">Recognizing Patterns /419</h2>
+<h2 id="greedy-algorithms-427">Greedy Algorithms /427</h2>
+<h2 id="change-the-data-structure-440">Change the Data Structure /440</h2>
+<h2 id="wrapping-up-446">Wrapping Up /446</h2>
+<h2 id="parting-thoughts-446">Parting Thoughts /446</h2>
+<h2 id="exercises-447">Exercises /447</h2>
+<h1 id="a1-exercise-solutions-451">A1. Exercise Solutions /451</h1>
+<h2 id="chapter-1-451">Chapter 1 /451</h2>
+<h2 id="chapter-2-452">Chapter 2 /452</h2>
+<h2 id="chapter-3-452">Chapter 3 /452</h2>
+<h2 id="chapter-4-453">Chapter 4 /453</h2>
+<h2 id="chapter-5-454">Chapter 5 /454</h2>
+<h2 id="chapter-6-454">Chapter 6 /454</h2>
+<h2 id="chapter-7-455">Chapter 7 /455</h2>
+<h2 id="chapter-8-456">Chapter 8 /456</h2>
+<h2 id="chapter-9-458">Chapter 9 /458</h2>
+<h2 id="chapter-10-459">Chapter 10 /459</h2>
+<h2 id="chapter-11-460">Chapter 11 /460</h2>
+<h2 id="chapter-12-462">Chapter 12 /462</h2>
+<h2 id="chapter-13-463">Chapter 13 /463</h2>
+<h2 id="chapter-14-465">Chapter 14 /465</h2>
+<h2 id="chapter-15-468">Chapter 15 /468</h2>
+<h2 id="chapter-16-470">Chapter 16 /470</h2>
+<h2 id="chapter-17-471">Chapter 17 /471</h2>
+<h2 id="chapter-18-473">Chapter 18 /473</h2>
+<h2 id="chapter-19-476">Chapter 19 /476</h2>
+<h2 id="chapter-20-477">Chapter 20 /477</h2>
+<h1 id="index-486">Index /486</h1>
+<h2 id="a-486">– A – /486</h2>
+<h2 id="b-486">– B – /486</h2>
+<h2 id="c-487">– C – /487</h2>
+<h2 id="d-487">– D – /487</h2>
+<h2 id="e-487">– E – /487</h2>
+<h2 id="f-488">– F – /488</h2>
+<h2 id="g-488">– G – /488</h2>
+<h2 id="h-488">– H – /488</h2>
+<h2 id="i-489">– I – /489</h2>
+<h2 id="j-489">– J – /489</h2>
+<h2 id="k-489">– K – /489</h2>
+<h2 id="l-489">– L – /489</h2>
+<h2 id="m-489">– M – /489</h2>
+<h2 id="n-489">– N – /489</h2>
+<h2 id="o-489">– O – /489</h2>
+<h2 id="p-490">– P – /490</h2>
+<h2 id="q-490">– Q – /490</h2>
+<h2 id="r-490">– R – /490</h2>
+<h2 id="s-491">– S – /491</h2>
+<h2 id="t-491">– T – /491</h2>
+<h2 id="u-492">– U – /492</h2>
+<h2 id="v-492">– V – /492</h2>
+<h2 id="w-492">– W – /492</h2></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="/index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="/obs.html/tags/research/index.html">research</a></li>
+	<li><a class="backlink" href="/obs.html/tags/CS/index.html">CS</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A96829491373440096330347273615301889253{level}" class="graph_div"></div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B96829491373440096330347273615301889253{level}" level="{level}" note_temp_id="96829491373440096330347273615301889253" onclick="window.ObsHtmlGraph.run(this, '96829491373440096330347273615301889253', '@jaywengrowcommonsenseguidedata2020');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C96829491373440096330347273615301889253{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('/obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                <!-- end content -->
+            </div>
+            <div class="container_filler"></div>
+            <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+        </div>
+    </div>
+
+    <script>
+        function handle_toggle_side_bar(e) {
+            let header;
+            let pane;
+            let target = e.target;
+
+            // switch out the navbar button click for a header click
+            if (target.id == "left_pane_toggle_nav") {
+                target = document.getElementById("left_pane_fold_header");
+            } else if (target.id == "right_pane_toggle_nav") {
+                target = document.getElementById("right_pane_fold_header");
+            }
+
+            // get header and pane
+            if (target.classList.contains("fold_header")) {
+                header = target;
+                pane = target.parentElement;
+            } else {
+                pane = target;
+                header = target.getElementsByClassName("fold_header")[0];
+            }
+            toggle_side_bar(pane, header, true);
+            e.stopPropagation();
+        }
+        function handle_toggle_side_bar_button(e) {
+            document.getElementById("menu_toggle_button").click();
+            handle_toggle_side_bar(e);
+        }
+
+        function toggle_side_bar(pane, header, save) {
+            let active = pane.classList.contains("active");
+            if (active) {
+                disable_side_bar(pane, header, save);
+            } else {
+                enable_side_bar(pane, header, save);
+            }
+        }
+        function enable_side_bar(pane, header, save) {
+            pane.classList.add("active");
+            pane.removeEventListener("click", handle_toggle_side_bar);
+            header.addEventListener("click", handle_toggle_side_bar);
+            set_correct_header_symbol(header);
+            if (save) {
+                save_panel_folding_state(header, true);
+            }
+        }
+        function disable_side_bar(pane, header, save) {
+            pane.classList.remove("active");
+            pane.addEventListener("click", handle_toggle_side_bar);
+            header.removeEventListener("click", handle_toggle_side_bar);
+            set_correct_header_symbol(header);
+            if (save) {
+                save_panel_folding_state(header, false);
+            }
+        }
+        function set_correct_header_symbol(header) {
+            let pane = header.parentElement;
+            let symbol = [
+                [">", "<"],
+                ["<", ">"],
+            ];
+            symbol =
+                symbol[Number(header.classList.contains("right_pane_fold_header"))][
+                Number(pane.classList.contains("active"))
+                ];
+            console.log(symbol);
+            header.innerHTML = symbol;
+            return header;
+        }
+        function panel_folding_get_panel_name(header) {
+            return ["left", "right"][
+                Number(header.classList.contains("right_pane_fold_header"))
+            ];
+        }
+        function save_panel_folding_state(header, active) {
+            ls_set(
+                "pane_folding_state_" + panel_folding_get_panel_name(header),
+                Number(active)
+            );
+        }
+        function load_panel_folding_state(panel_name) {
+            val = ls_get("pane_folding_state_" + panel_name);
+            if (!val) {
+                return {exists: false, value: null};
+            }
+            return {exists: true, value: Boolean(Number(val))};
+        }
+        function set_pane_folding_start(left_header, right_header) {
+            // small screen = closed
+            let right_pane_enabled = true;
+            let left_pane_enabled = true;
+            let w = window.visualViewport.width;
+            if (w < 1000) {
+                left_pane_enabled = false;
+            }
+            if (w < 800) {
+                right_pane_enabled = false;
+            }
+
+            // get saved values if present
+            let rval = load_panel_folding_state("right");
+            if (rval["exists"]) {
+                right_pane_enabled = rval["value"];
+            }
+            let lval = load_panel_folding_state("left");
+            if (lval["exists"]) {
+                left_pane_enabled = lval["value"];
+            }
+
+            // default = enabled, so we only need to disable
+            if (!left_pane_enabled) {
+                disable_side_bar(
+                    document.getElementById("left_pane"),
+                    document.getElementById("left_pane_fold_header")
+                );
+            }
+            if (!right_pane_enabled) {
+                disable_side_bar(
+                    document.getElementById("right_pane"),
+                    document.getElementById("right_pane_fold_header")
+                );
+            }
+        }
+
+        function init_pane_folding(header) {
+            set_correct_header_symbol(header);
+            header.addEventListener("click", handle_toggle_side_bar);
+        }
+
+        set_pane_folding_start();
+        init_pane_folding(document.getElementById("left_pane_fold_header"));
+        init_pane_folding(document.getElementById("right_pane_fold_header"));
+
+        document
+            .getElementById("left_pane_toggle_nav")
+            .addEventListener("click", handle_toggle_side_bar_button);
+        document
+            .getElementById("right_pane_toggle_nav")
+            .addEventListener("click", handle_toggle_side_bar_button);
+    </script>
+
+    <script src="/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+ 
+
+</body>
+</html>

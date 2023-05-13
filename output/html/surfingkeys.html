@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page information -->
+    <meta charset="UTF-8" />
+    <meta name="node_id" content="surfingkeys" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Set title -->
+    <title>Obsidian-Html/Notes</title>
+
+    <!-- Includes -->
+    
+<script src="/obs.html/static/obsidian_core.js"></script>
+<script src="/obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="/obs.html/static/master.css" />
+<script src="/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="/obs.html/static/flexsearch.bundle.js"></script>
+<script src="/obs.html/static/pako.js"></script>
+<script src="/obs.html/static/search.js"></script>
+<script src="/obs.html/static/dirtree.js"></script>
+
+
+    <!-- Onload tweaks -->
+    <script>
+        const CURRENT_NODE = "surfingkeys";
+        const HTML_URL_PREFIX = "";
+        const PAGE_DEPTH = 0;
+    </script>
+
+    <style>
+        .container{
+            font-size: 14pt;
+        }
+    </style>
+</head>
+
+<body class="theme-obs-light">
+    <div id="antiflash" style="display: none"></div>
+    <script>
+        document.getElementById("antiflash").style.display = "block";
+    </script>
+    <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+    <div id="page_holder" class="flex_col">
+        <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="/index.html" id="homelink" title="Clear screen and go to homepage">Obsidian-Html/Notes</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=surfingkeys" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="/obs.html/dir_index.html" title="View directory tree">
+                    <img src = "/obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="/obs.html/tags/index.html" title="Open tag view">
+            <img src = "/obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+        <div class="flex_row">
+            <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div class="dirtree"><button id="folder-1" class="dir-button" onclick="toggle_dir(this.id)">@BrianWKernighanProgrammingLanguage1988</button>
+<div id="folder-container-1" class="dir-container requires_js " path="/@BrianWKernighanProgrammingLanguage1988">
+	<button id="folder-2" class="dir-button" onclick="toggle_dir(this.id)">chapter_1</button>
+	<div id="folder-container-2" class="dir-container requires_js " path="/@BrianWKernighanProgrammingLanguage1988/chapter_1">
+		<ul class="dir-list">
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-10_show_escape_sequences.c"  class="external-link">1-10_show_escape_sequences</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-12_input_join_into_words.c"  class="external-link">1-12_input_join_into_words</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-13_input_histogram.c"  class="external-link">1-13_input_histogram</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-14_input_histogram_chars.c"  class="external-link">1-14_input_histogram_chars</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-15_temerature_conversion_using_func.c"  class="external-link">1-15_temerature_conversion_using_func</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-1_hello_world.c"  class="external-link">1-1_hello_world</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-2_printf_experiments.c"  class="external-link">1-2_printf_experiments</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-3_modify_temp_conversion.c"  class="external-link">1-3_modify_temp_conversion</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-4_celsius_to_fahrenheit.c"  class="external-link">1-4_celsius_to_fahrenheit</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-5_celsius_to_fahrenheit_reverse.c"  class="external-link">1-5_celsius_to_fahrenheit_reverse</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-8_wc_alternative.c"  class="external-link">1-8_wc_alternative</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-9_fix_blanks.c"  class="external-link">1-9_fix_blanks</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+	</ul>
+</div>
+<button id="folder-3" class="dir-button" onclick="toggle_dir(this.id)">img</button>
+<div id="folder-container-3" class="dir-container requires_js " path="/img">
+	<ul class="dir-list">
+		<li><a class="" href="/img/Universal_Turing_machine.svg"  class="external-link">Universal_Turing_machine</a></li>
+		<li><a class="" href="/img/Unix_timeline.svg"  class="external-link">Unix_timeline</a></li>
+		<li><a class="" href="/img/colemak_dh_ansi.png"  class="external-link">colemak_dh_ansi</a></li>
+		<li><a class="" href="/img/mongolian-gerbil.png"  class="external-link">mongolian-gerbil</a></li>
+		<li><a class="" href="/img/pasted_img_20230102033318.png"  class="external-link">pasted_img_20230102033318</a></li>
+		<li><a class="" href="/img/pasted_img_20230415175922.png"  class="external-link">pasted_img_20230415175922</a></li>
+		<li><a class="" href="/img/screenshoot-zotero.png"  class="external-link">screenshoot-zotero</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><a class="" href="/!AST.excalidraw.html"  >!AST.excalidraw</a></li>
+	<li><a class="" href="/30 day drawing challenge.html"  >30 day drawing challenge</a></li>
+	<li><a class="" href="/@AlgorithmsComputerScience2005.html"  >@AlgorithmsComputerScience2005</a></li>
+	<li><a class="" href="/@AndreiPetrovichKiselyovAlgebraChast2006.html"  >@AndreiPetrovichKiselyovAlgebraChast2006</a></li>
+	<li><a class="" href="/@AndrewHuntPragmaticProgrammerYour2019.html"  >@AndrewHuntPragmaticProgrammerYour2019</a></li>
+	<li><a class="" href="/@AndrewLoomisFunPencilHow2013.html"  >@AndrewLoomisFunPencilHow2013</a></li>
+	<li><a class="" href="/@AndreyViktorovichStolyarovProgrammirovanieVvedenieProfessiyu2021b.html"  >@AndreyViktorovichStolyarovProgrammirovanieVvedenieProfessiyu2021b</a></li>
+	<li><a class="" href="/@ArielManzurGodotEngineGame2018.html"  >@ArielManzurGodotEngineGame2018</a></li>
+	<li><a class="" href="/@BrettSlatkinEffectivePython902020.html"  >@BrettSlatkinEffectivePython902020</a></li>
+	<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988.html"  >@BrianWKernighanProgrammingLanguage1988</a></li>
+	<li><a class="" href="/@CaseyMuratoriHandmadeHero2014.html"  >@CaseyMuratoriHandmadeHero2014</a></li>
+	<li><a class="" href="/@CharlesPetzoldCodeHiddenLanguage2000.html"  >@CharlesPetzoldCodeHiddenLanguage2000</a></li>
+	<li><a class="" href="/@DavidFlanaganJavaScriptDefinitiveGuide2020.html"  >@DavidFlanaganJavaScriptDefinitiveGuide2020</a></li>
+	<li><a class="" href="/@DrewNeilModernVimCraft2018.html"  >@DrewNeilModernVimCraft2018</a></li>
+	<li><a class="" href="/@DrewNeilPracticalVimEdit2015.html"  >@DrewNeilPracticalVimEdit2015</a></li>
+	<li><a class="" href="/@EmelinAleksandrKratchayshiyKursShkolnoy.html"  >@EmelinAleksandrKratchayshiyKursShkolnoy</a></li>
+	<li><a class="" href="/@EricMatthesPythonCrashCourse2023.html"  >@EricMatthesPythonCrashCourse2023</a></li>
+	<li><a class="" href="/@GodotDocsBranch2023.html"  >@GodotDocsBranch2023</a></li>
+	<li><a class="" href="/@HarvardXCS50x2023.html"  >@HarvardXCS50x2023</a></li>
+	<li><a class="" href="/@IgorIriantoLearnVim2021.html"  >@IgorIriantoLearnVim2021</a></li>
+	<li><a class="" href="/@InterviewCakeCodingInterviewPractice.html"  >@InterviewCakeCodingInterviewPractice</a></li>
+	<li><a class="" href="/@JasonvanGumsterBlenderDummies4th2020.html"  >@JasonvanGumsterBlenderDummies4th2020</a></li>
+	<li><a class="" href="/@JayWengrowCommonsenseGuideData2020.html"  >@JayWengrowCommonsenseGuideData2020</a></li>
+	<li><a class="" href="/@KilpatrickDavidSvetOsveshchenie1988.html"  >@KilpatrickDavidSvetOsveshchenie1988</a></li>
+	<li><a class="" href="/@LucianoRamalhoFluentPython2021.html"  >@LucianoRamalhoFluentPython2021</a></li>
+	<li><a class="" href="/@PythonProgrammingFAQ2023.html"  >@PythonProgrammingFAQ2023</a></li>
+	<li><a class="" href="/@PythonStandardLibrary2023.html"  >@PythonStandardLibrary2023</a></li>
+	<li><a class="" href="/@PythonTutorial2023.html"  >@PythonTutorial2023</a></li>
+	<li><a class="" href="/@RobertSedgewickAlgorithms2014a.html"  >@RobertSedgewickAlgorithms2014a</a></li>
+	<li><a class="" href="/@RobertSedgewickAlgorithms2014b.html"  >@RobertSedgewickAlgorithms2014b</a></li>
+	<li><a class="" href="/@RusShulerHowDoesInternet2002.html"  >@RusShulerHowDoesInternet2002</a></li>
+	<li><a class="" href="/@ScottChaconProGit2022.html"  >@ScottChaconProGit2022</a></li>
+	<li><a class="" href="/@SteveMcConnellCodeComplete2004.html"  >@SteveMcConnellCodeComplete2004</a></li>
+	<li><a class="" href="/@ThomasHCormenAlgorithmsUnlocked2013.html"  >@ThomasHCormenAlgorithmsUnlocked2013</a></li>
+	<li><a class="" href="/@ThomasHCormenIntroductionAlgorithms2022.html"  >@ThomasHCormenIntroductionAlgorithms2022</a></li>
+	<li><a class="" href="/@TimothyBLeeInternetExplained2014.html"  >@TimothyBLeeInternetExplained2014</a></li>
+	<li><a class="" href="/ANSI C.html"  >ANSI C</a></li>
+	<li><a class="" href="/abstract syntax tree.html"  >abstract syntax tree</a></li>
+	<li><a class="" href="/algorithm.html"  >algorithm</a></li>
+	<li><a class="" href="/android (operating system).html"  >android (operating system)</a></li>
+	<li><a class="" href="/arch linux (and other distros).html"  >arch linux (and other distros)</a></li>
+	<li><a class="" href="/array (computer science).html"  >array (computer science)</a></li>
+	<li><a class="" href="/art.html"  >art</a></li>
+	<li><a class="" href="/ascii.html"  >ascii</a></li>
+	<li><a class="" href="/b-tree.html"  >b-tree</a></li>
+	<li><a class="" href="/backup.html"  >backup</a></li>
+	<li><a class="" href="/bibliography.html"  >bibliography</a></li>
+	<li><a class="" href="/bibtex.html"  >bibtex</a></li>
+	<li><a class="" href="/binary search algorithm.html"  >binary search algorithm</a></li>
+	<li><a class="" href="/binary search tree.html"  >binary search tree</a></li>
+	<li><a class="" href="/bitlbee.html"  >bitlbee</a></li>
+	<li><a class="" href="/blender.html"  >blender</a></li>
+	<li><a class="" href="/boolean data type.html"  >boolean data type</a></li>
+	<li><a class="" href="/boolean expression.html"  >boolean expression</a></li>
+	<li><a class="" href="/borg.html"  >borg</a></li>
+	<li><a class="" href="/brave (web browser).html"  >brave (web browser)</a></li>
+	<li><a class="" href="/btrfs.html"  >btrfs</a></li>
+	<li><a class="" href="/bytecode.html"  >bytecode</a></li>
+	<li><a class="" href="/c (programming language).html"  >c (programming language)</a></li>
+	<li><a class="" href="/c data types.html"  >c data types</a></li>
+	<li><a class="" href="/calendar.html"  >calendar</a></li>
+	<li><a class="" href="/camera.html"  >camera</a></li>
+	<li><a class="" href="/chemistry.html"  >chemistry</a></li>
+	<li><a class="" href="/chrome devtools.html"  >chrome devtools</a></li>
+	<li><a class="" href="/citation.html"  >citation</a></li>
+	<li><a class="" href="/code.html"  >code</a></li>
+	<li><a class="" href="/collection (abstract data type).html"  >collection (abstract data type)</a></li>
+	<li><a class="" href="/comics.html"  >comics</a></li>
+	<li><a class="" href="/command-line interface.html"  >command-line interface</a></li>
+	<li><a class="" href="/complex number.html"  >complex number</a></li>
+	<li><a class="" href="/computation.html"  >computation</a></li>
+	<li><a class="" href="/computational complexity.html"  >computational complexity</a></li>
+	<li><a class="" href="/computer.html"  >computer</a></li>
+	<li><a class="" href="/computer graphics.html"  >computer graphics</a></li>
+	<li><a class="" href="/computer memory.html"  >computer memory</a></li>
+	<li><a class="" href="/computer program.html"  >computer program</a></li>
+	<li><a class="" href="/computer programming.html"  >computer programming</a></li>
+	<li><a class="" href="/computer science.html"  >computer science</a></li>
+	<li><a class="" href="/computer science learning resources.html"  >computer science learning resources</a></li>
+	<li><a class="" href="/computer security.html"  >computer security</a></li>
+	<li><a class="" href="/computer software.html"  >computer software</a></li>
+	<li><a class="" href="/computing platform.html"  >computing platform</a></li>
+	<li><a class="" href="/conditional (computer programming).html"  >conditional (computer programming)</a></li>
+	<li><a class="" href="/control flow.html"  >control flow</a></li>
+	<li><a class="" href="/cooking.html"  >cooking</a></li>
+	<li><a class="" href="/copilot.html"  >copilot</a></li>
+	<li><a class="" href="/creamy mashed potatoes.html"  >creamy mashed potatoes</a></li>
+	<li><a class="" href="/cutlets.html"  >cutlets</a></li>
+	<li><a class="" href="/data structure.html"  >data structure</a></li>
+	<li><a class="" href="/data type.html"  >data type</a></li>
+	<li><a class="" href="/debugger.html"  >debugger</a></li>
+	<li><a class="" href="/development environment.html"  >development environment</a></li>
+	<li><a class="" href="/diff.html"  >diff</a></li>
+	<li><a class="" href="/digital electronics.html"  >digital electronics</a></li>
+	<li><a class="" href="/dm-crypt.html"  >dm-crypt</a></li>
+	<li><a class="" href="/dmenu.html"  >dmenu</a></li>
+	<li><a class="" href="/dmenu keybindings.html"  >dmenu keybindings</a></li>
+	<li><a class="" href="/do it yourself.html"  >do it yourself</a></li>
+	<li><a class="" href="/docker.html"  >docker</a></li>
+	<li><a class="" href="/duolingo.html"  >duolingo</a></li>
+	<li><a class="" href="/dwm.html"  >dwm</a></li>
+	<li><a class="" href="/dwm keyboard shortcuts.html"  >dwm keyboard shortcuts</a></li>
+	<li><a class="" href="/education.html"  >education</a></li>
+	<li><a class="" href="/elementary particle.html"  >elementary particle</a></li>
+	<li><a class="" href="/email.html"  >email</a></li>
+	<li><a class="" href="/english language.html"  >english language</a></li>
+	<li><a class="" href="/english language transcription.html"  >english language transcription</a></li>
+	<li><a class="" href="/escape sequence.html"  >escape sequence</a></li>
+	<li><a class="" href="/evaluation strategy.html"  >evaluation strategy</a></li>
+	<li><a class="" href="/exercise plan.html"  >exercise plan</a></li>
+	<li><a class="" href="/expression (computer science).html"  >expression (computer science)</a></li>
+	<li><a class="" href="/fibonacci sequence.html"  >fibonacci sequence</a></li>
+	<li><a class="" href="/file (command).html"  >file (command)</a></li>
+	<li><a class="" href="/finance.html"  >finance</a></li>
+	<li><a class="" href="/firefox.html"  >firefox</a></li>
+	<li><a class="" href="/floating-point arithmetic.html"  >floating-point arithmetic</a></li>
+	<li><a class="" href="/flowchart.html"  >flowchart</a></li>
+	<li><a class="" href="/function (computer programming).html"  >function (computer programming)</a></li>
+	<li><a class="" href="/functional programming.html"  >functional programming</a></li>
+	<li><a class="" href="/fzf.html"  >fzf</a></li>
+	<li><a class="" href="/game.html"  >game</a></li>
+	<li><a class="" href="/general-purpose programming language.html"  >general-purpose programming language</a></li>
+	<li><a class="" href="/getting things done (gtd).html"  >getting things done (gtd)</a></li>
+	<li><a class="" href="/git.html"  >git</a></li>
+	<li><a class="" href="/git tips.html"  >git tips</a></li>
+	<li><a class="" href="/github.html"  >github</a></li>
+	<li><a class="" href="/gitlab.html"  >gitlab</a></li>
+	<li><a class="" href="/gnu compiler collection.html"  >gnu compiler collection</a></li>
+	<li><a class="" href="/gnu privacy guard.html"  >gnu privacy guard</a></li>
+	<li><a class="" href="/gnu project debugger.html"  >gnu project debugger</a></li>
+	<li><a class="" href="/gnu readline.html"  >gnu readline</a></li>
+	<li><a class="" href="/gnu sed.html"  >gnu sed</a></li>
+	<li><a class="" href="/godot engine.html"  >godot engine</a></li>
+	<li><a class="" href="/government.html"  >government</a></li>
+	<li><a class="" href="/guido van rossum.html"  >guido van rossum</a></li>
+	<li><a class="" href="/hacker news.html"  >hacker news</a></li>
+	<li><a class="" href="/haskell.html"  >haskell</a></li>
+	<li><a class="" href="/heap (data structure).html"  >heap (data structure)</a></li>
+	<li><a class="" href="/hidden file and hidden directory (.dotfiles).html"  >hidden file and hidden directory (.dotfiles)</a></li>
+	<li><a class="" href="/high-level programming language.html"  >high-level programming language</a></li>
+	<li><a class="" href="/home construction.html"  >home construction</a></li>
+	<li><a class="" href="/how do i work with contacts.html"  >how do i work with contacts</a></li>
+	<li><a class="" href="/how do i work with email.html"  >how do i work with email</a></li>
+	<li><a class="" href="/how do i work with instant messages.html"  >how do i work with instant messages</a></li>
+	<li><a class="" href="/how do i work with the calendar.html"  >how do i work with the calendar</a></li>
+	<li><a class="" href="/how i learn computer programming.html"  >how i learn computer programming</a></li>
+	<li><a class="" href="/how i study computer science.html"  >how i study computer science</a></li>
+	<li><a class="" href="/how i study english language.html"  >how i study english language</a></li>
+	<li><a class="" href="/how i study mathematics.html"  >how i study mathematics</a></li>
+	<li><a class="" href="/how to solve it.html"  >how to solve it</a></li>
+	<li><a class="" href="/how to study.html"  >how to study</a></li>
+	<li><a class="" href="/htop.html"  >htop</a></li>
+	<li><a class="" href="/hugo.html"  >hugo</a></li>
+	<li><a class="" href="/immutable object.html"  >immutable object</a></li>
+	<li><a class="" href="/in real life (irl).html"  >in real life (irl)</a></li>
+	<li><a class="" href="/increment and decrement operators.html"  >increment and decrement operators</a></li>
+	<li><a class="" href="/index.html"  >index</a></li>
+	<li><a class="" href="/initialization (programming).html"  >initialization (programming)</a></li>
+	<li><a class="" href="/inkscape.html"  >inkscape</a></li>
+	<li><a class="" href="/instant messaging.html"  >instant messaging</a></li>
+	<li><a class="" href="/iterator.html"  >iterator</a></li>
+	<li><a class="" href="/java (programming language).html"  >java (programming language)</a></li>
+	<li><a class="" href="/keyboard shortcut.html"  >keyboard shortcut</a></li>
+	<li><a class="" href="/khan academy.html"  >khan academy</a></li>
+	<li><a class="" href="/kitty (terminal emulator).html"  >kitty (terminal emulator)</a></li>
+	<li><a class="" href="/krita.html"  >krita</a></li>
+	<li><a class="" href="/latex.html"  >latex</a></li>
+	<li><a class="" href="/ledger.html"  >ledger</a></li>
+	<li><a class="" href="/leetcode.html"  >leetcode</a></li>
+	<li><a class="" href="/light.html"  >light</a></li>
+	<li><a class="" href="/lineage 2 tools.html"  >lineage 2 tools</a></li>
+	<li><a class="" href="/linux.html"  >linux</a></li>
+	<li><a class="" href="/list (abstract data type).html"  >list (abstract data type)</a></li>
+	<li><a class="" href="/literature.html"  >literature</a></li>
+	<li><a class="" href="/logarithm (logs).html"  >logarithm (logs)</a></li>
+	<li><a class="" href="/logic.html"  >logic</a></li>
+	<li><a class="" href="/low-level programming language.html"  >low-level programming language</a></li>
+	<li><a class="" href="/magic sysrq key.html"  >magic sysrq key</a></li>
+	<li><a class="" href="/maintenance.html"  >maintenance</a></li>
+	<li><a class="" href="/markdown.html"  >markdown</a></li>
+	<li><a class="" href="/mathematics.html"  >mathematics</a></li>
+	<li><a class="" href="/mathjax.html"  >mathjax</a></li>
+	<li><a class="" href="/media (communication).html"  >media (communication)</a></li>
+	<li><a class="" href="/microsoft windows.html"  >microsoft windows</a></li>
+	<li><a class="" href="/miniflux.html"  >miniflux</a></li>
+	<li><a class="" href="/mouseless workflow.html"  >mouseless workflow</a></li>
+	<li><a class="" href="/mpv.html"  >mpv</a></li>
+	<li><a class="" href="/multi-factor authentication.html"  >multi-factor authentication</a></li>
+	<li><a class="" href="/multiplication table.html"  >multiplication table</a></li>
+	<li><a class="" href="/my arch linux enviroment.html"  >my arch linux enviroment</a></li>
+	<li><a class="" href="/my art.html"  >my art</a></li>
+	<li><a class="" href="/my articles list (publishing).html"  >my articles list (publishing)</a></li>
+	<li><a class="" href="/my awesome software list.html"  >my awesome software list</a></li>
+	<li><a class="" href="/my backend developer roadmap.html"  >my backend developer roadmap</a></li>
+	<li><a class="" href="/my backup plan.html"  >my backup plan</a></li>
+	<li><a class="" href="/my books.html"  >my books</a></li>
+	<li><a class="" href="/my buy list.html"  >my buy list</a></li>
+	<li><a class="" href="/my computer science roadmap.html"  >my computer science roadmap</a></li>
+	<li><a class="" href="/my everyday life (routine).html"  >my everyday life (routine)</a></li>
+	<li><a class="" href="/my games.html"  >my games</a></li>
+	<li><a class="" href="/my inventory.html"  >my inventory</a></li>
+	<li><a class="" href="/my music.html"  >my music</a></li>
+	<li><a class="" href="/my pet projects.html"  >my pet projects</a></li>
+	<li><a class="" href="/my pictures.html"  >my pictures</a></li>
+	<li><a class="" href="/my python developer roadmap.html"  >my python developer roadmap</a></li>
+	<li><a class="" href="/my shell scripts.html"  >my shell scripts</a></li>
+	<li><a class="" href="/my videos.html"  >my videos</a></li>
+	<li><a class="" href="/my watched movies.html"  >my watched movies</a></li>
+	<li><a class="" href="/mysql.html"  >mysql</a></li>
+	<li><a class="" href="/neomutt.html"  >neomutt</a></li>
+	<li><a class="" href="/neovim (text editor).html"  >neovim (text editor)</a></li>
+	<li><a class="" href="/news.html"  >news</a></li>
+	<li><a class="" href="/nnn file manager.html"  >nnn file manager</a></li>
+	<li><a class="" href="/nomad sculpt.html"  >nomad sculpt</a></li>
+	<li><a class="" href="/notes types.html"  >notes types</a></li>
+	<li><a class="" href="/null function.html"  >null function</a></li>
+	<li><a class="" href="/null pointer.html"  >null pointer</a></li>
+	<li><a class="" href="/object-oriented programming.html"  >object-oriented programming</a></li>
+	<li><a class="" href="/obsidian.html"  >obsidian</a></li>
+	<li><a class="" href="/online shopping.html"  >online shopping</a></li>
+	<li><a class="" href="/operand.html"  >operand</a></li>
+	<li><a class="" href="/operating system.html"  >operating system</a></li>
+	<li><a class="" href="/operator (computer programming).html"  >operator (computer programming)</a></li>
+	<li><a class="" href="/pacman (software).html"  >pacman (software)</a></li>
+	<li><a class="" href="/pandoc.html"  >pandoc</a></li>
+	<li><a class="" href="/pass (software).html"  >pass (software)</a></li>
+	<li><a class="" href="/patch (unix).html"  >patch (unix)</a></li>
+	<li><a class="" href="/pattern matching.html"  >pattern matching</a></li>
+	<li><a class="" href="/photography.html"  >photography</a></li>
+	<li><a class="" href="/physics.html"  >physics</a></li>
+	<li><a class="" href="/postgresql.html"  >postgresql</a></li>
+	<li><a class="" href="/printf format string.html"  >printf format string</a></li>
+	<li><a class="" href="/procedural programming.html"  >procedural programming</a></li>
+	<li><a class="" href="/programmer (software developer).html"  >programmer (software developer)</a></li>
+	<li><a class="" href="/programming language.html"  >programming language</a></li>
+	<li><a class="" href="/programming paradigm.html"  >programming paradigm</a></li>
+	<li><a class="" href="/programming principles.html"  >programming principles</a></li>
+	<li><a class="" href="/pseudocode.html"  >pseudocode</a></li>
+	<li><a class="" href="/public-key cryptography.html"  >public-key cryptography</a></li>
+	<li><a class="" href="/puzzle english.html"  >puzzle english</a></li>
+	<li><a class="" href="/puzzle english learning by plan.html"  >puzzle english learning by plan</a></li>
+	<li><a class="" href="/pycharm.html"  >pycharm</a></li>
+	<li><a class="" href="/python.html"  >python</a></li>
+	<li><a class="" href="/qmk.html"  >qmk</a></li>
+	<li><a class="" href="/readability.html"  >readability</a></li>
+	<li><a class="" href="/retroarch.html"  >retroarch</a></li>
+	<li><a class="" href="/russian language.html"  >russian language</a></li>
+	<li><a class="" href="/rust (programming language).html"  >rust (programming language)</a></li>
+	<li><a class="" href="/sc-im.html"  >sc-im</a></li>
+	<li><a class="" href="/science.html"  >science</a></li>
+	<li><a class="" href="/self-hosting (web services).html"  >self-hosting (web services)</a></li>
+	<li><a class="" href="/set (abstract data type).html"  >set (abstract data type)</a></li>
+	<li><a class="" href="/shebang (unix).html"  >shebang (unix)</a></li>
+	<li><a class="" href="/side effect (computer science).html"  >side effect (computer science)</a></li>
+	<li><a class="" href="/sleep.html"  >sleep</a></li>
+	<li><a class="" href="/smartphone.html"  >smartphone</a></li>
+	<li><a class="" href="/sniprun.html"  >sniprun</a></li>
+	<li><a class="" href="/software testing.html"  >software testing</a></li>
+	<li><a class="" href="/spaced repetition.html"  >spaced repetition</a></li>
+	<li><a class="" href="/sq3r method.html"  >sq3r method</a></li>
+	<li><a class="" href="/stack overflow.html"  >stack overflow</a></li>
+	<li><a class="" href="/statement (computer science).html"  >statement (computer science)</a></li>
+	<li><a class="" href="/string literal.html"  >string literal</a></li>
+	<li><a class="" href="/structured programming.html"  >structured programming</a></li>
+	<li><a class="" href="/suckless.org.html"  >suckless.org</a></li>
+	<li><a class="active" href="/surfingkeys.html"  >surfingkeys</a></li>
+	<li><a class="" href="/switch to neovim path.html"  >switch to neovim path</a></li>
+	<li><a class="" href="/syncthing.html"  >syncthing</a></li>
+	<li><a class="" href="/telekasten.nvim.html"  >telekasten.nvim</a></li>
+	<li><a class="" href="/telescope.nvim.html"  >telescope.nvim</a></li>
+	<li><a class="" href="/the python standard library.html"  >the python standard library</a></li>
+	<li><a class="" href="/time complexity.html"  >time complexity</a></li>
+	<li><a class="" href="/truncation.html"  >truncation</a></li>
+	<li><a class="" href="/turing complete.html"  >turing complete</a></li>
+	<li><a class="" href="/turing machine.html"  >turing machine</a></li>
+	<li><a class="" href="/twitch (service).html"  >twitch (service)</a></li>
+	<li><a class="" href="/type conversion.html"  >type conversion</a></li>
+	<li><a class="" href="/unicode.html"  >unicode</a></li>
+	<li><a class="" href="/unix.html"  >unix</a></li>
+	<li><a class="" href="/variable (computer science).html"  >variable (computer science)</a></li>
+	<li><a class="" href="/vector graphics.html"  >vector graphics</a></li>
+	<li><a class="" href="/video acceleration api.html"  >video acceleration api</a></li>
+	<li><a class="" href="/vim keycodes.html"  >vim keycodes</a></li>
+	<li><a class="" href="/virtual machine.html"  >virtual machine</a></li>
+	<li><a class="" href="/vr photography (virtual-reality photography).html"  >vr photography (virtual-reality photography)</a></li>
+	<li><a class="" href="/word (computer architecture).html"  >word (computer architecture)</a></li>
+	<li><a class="" href="/work (human activity).html"  >work (human activity)</a></li>
+	<li><a class="" href="/youtube.html"  >youtube</a></li>
+	<li><a class="" href="/z shell.html"  >z shell</a></li>
+	<li><a class="" href="/zathura.html"  >zathura</a></li>
+	<li><a class="" href="/zen of python.html"  >zen of python</a></li>
+	<li><a class="" href="/zero-based numbering.html"  >zero-based numbering</a></li>
+	<li><a class="" href="/zettelkasten.html"  >zettelkasten</a></li>
+	<li><a class="" href="/zotero.html"  >zotero</a></li>
+</ul>
+</div>
+    </div>
+</div>
+            <div class="container">
+                <embeddedtitle>surfingkeys</embeddedtitle>
+<div class="content"><blockquote>
+<p>Browser extension that provides keyboard-based navigation and control of the <br />
+web in the spirit of the VIM editor. But it's not for VIM users only, it's for <br />
+anyone who just needs some more shortcuts to his/her own functions.   </p>
+</blockquote>
+<p>Useful links:   </p>
+<ul>
+<li><a href="https://github.com/brookhong/Surfingkeys/wiki/FAQ" class="external-link">https://github.com/brookhong/Surfingkeys/wiki/FAQ</a>   </li>
+<li><a href="https://chrome.google.com/webstore/detail/surfingkeys/gfbliohnnapiefjpjlpjnehglfpaknnc" class="external-link">https://chrome.google.com/webstore/detail/surfingkeys/gfbliohnnapiefjpjlpjnehglfpaknnc</a>   </li>
+</ul>
+<h2 id="help">Help</h2>
+<p><kbd><Alt-s></kbd> <br />
+? <br />
+Toggle SurfingKeys on current site   </p>
+<p><kbd><Alt-i></kbd> <br />
+? <br />
+Enter PassThrough mode to temporarily suppress SurfingKeys   </p>
+<p><kbd>p</kbd> <br />
+? <br />
+Enter ephemeral PassThrough mode to temporarily suppress SurfingKeys   </p>
+<p><kbd>?</kbd> <br />
+? <br />
+Show usage   </p>
+<p><kbd>;ql</kbd> <br />
+? <br />
+Show last action   </p>
+<p><kbd>.</kbd> <br />
+? <br />
+Repeat last action   </p>
+<h2 id="mouse-click">Mouse Click</h2>
+<p><kbd>cf</kbd> <br />
+? <br />
+Open multiple links in a new tab   </p>
+<p><kbd>gi</kbd> <br />
+? <br />
+Go to the first edit box   </p>
+<p><kbd>gf</kbd> <br />
+? <br />
+Open a link in non-active new tab   </p>
+<p><kbd>[[</kbd> <br />
+? <br />
+Click on the previous link on current page   </p>
+<p><kbd>]]</kbd> <br />
+? <br />
+Click on the next link on current page   </p>
+<p><kbd>;m</kbd> <br />
+? <br />
+mouse out last element   </p>
+<p><kbd>;fs</kbd> <br />
+? <br />
+Display hints to focus scrollable elements   </p>
+<p><kbd>;di</kbd> <br />
+? <br />
+Download image   </p>
+<p><kbd>O</kbd> <br />
+? <br />
+Open detected links from text   </p>
+<p><kbd>f</kbd> <br />
+? <br />
+Open a link, press SHIFT to flip overlapped hints, hold SPACE to hide hints   </p>
+<p><kbd>af</kbd> <br />
+? <br />
+Open a link in active new tab   </p>
+<p><kbd>C</kbd> <br />
+? <br />
+Open a link in non-active new tab   </p>
+<p><kbd><Ctrl-h></kbd> <br />
+? <br />
+Mouse over elements.   </p>
+<p><kbd><Ctrl-j></kbd> <br />
+? <br />
+Mouse out elements.   </p>
+<p><kbd>i</kbd> <br />
+? <br />
+Go to edit box   </p>
+<p><kbd>I</kbd> <br />
+? <br />
+Go to edit box with vim editor   </p>
+<p><kbd><Ctrl-i></kbd> <br />
+? <br />
+Go to edit box with vim editor   </p>
+<p><kbd>q</kbd> <br />
+? <br />
+Click on an Image or a button   </p>
+<p><kbd><Ctrl-Alt-i></kbd> <br />
+? <br />
+Go to edit box with neo vim editor   </p>
+<h2 id="scroll-page-element">Scroll Page / Element</h2>
+<p><kbd>0</kbd> <br />
+? <br />
+Scroll all the way to the left   </p>
+<p><kbd>cS</kbd> <br />
+? <br />
+Reset scroll target   </p>
+<p><kbd>cs</kbd> <br />
+? <br />
+Change scroll target   </p>
+<p><kbd>e</kbd> <br />
+? <br />
+Scroll half page up   </p>
+<p><kbd>U</kbd> <br />
+? <br />
+Scroll full page up   </p>
+<p><kbd>d</kbd> <br />
+? <br />
+Scroll half page down   </p>
+<p><kbd>P</kbd> <br />
+? <br />
+Scroll full page down   </p>
+<p><kbd>gg</kbd> <br />
+? <br />
+Scroll to the top of the page   </p>
+<p><kbd>G</kbd> <br />
+? <br />
+Scroll to the bottom of the page   </p>
+<p><kbd>j</kbd> <br />
+? <br />
+Scroll down   </p>
+<p><kbd>k</kbd> <br />
+? <br />
+Scroll up   </p>
+<p><kbd>h</kbd> <br />
+? <br />
+Scroll left   </p>
+<p><kbd>l</kbd> <br />
+? <br />
+Scroll right   </p>
+<p><kbd>$</kbd> <br />
+? <br />
+Scroll all the way to the right   </p>
+<p><kbd>%</kbd> <br />
+? <br />
+Scroll to percentage of current page   </p>
+<p><kbd>;w</kbd> <br />
+? <br />
+Focus top window   </p>
+<p><kbd>w</kbd> <br />
+? <br />
+Switch frames   </p>
+<p><kbd>u</kbd> <br />
+? <br />
+Scroll half page up   </p>
+<!--SR:!2023-04-04,13,250-->
+
+<h2 id="tabs">Tabs</h2>
+<p><kbd>yt</kbd> <br />
+? <br />
+Duplicate current tab   </p>
+<p><kbd>yT</kbd> <br />
+? <br />
+Duplicate current tab in background   </p>
+<p><kbd>g0</kbd> <br />
+? <br />
+Go to the first tab   </p>
+<p><kbd>g$</kbd> <br />
+? <br />
+Go to the last tab   </p>
+<p><kbd>gx0</kbd> <br />
+? <br />
+Close all tabs on left   </p>
+<p><kbd>gxt</kbd> <br />
+? <br />
+Close tab on left   </p>
+<p><kbd>gxT</kbd> <br />
+? <br />
+Close tab on right   </p>
+<p><kbd>gx$</kbd> <br />
+? <br />
+Close all tabs on right   </p>
+<p><kbd>gxx</kbd> <br />
+? <br />
+Close all tabs except current one   </p>
+<p><kbd>gxp</kbd> <br />
+? <br />
+Close playing tab   </p>
+<p><kbd>E</kbd> <br />
+? <br />
+Go one tab left   </p>
+<p><kbd>R</kbd> <br />
+? <br />
+Go one tab right   </p>
+<p><kbd>T</kbd> <br />
+? <br />
+Choose a tab   </p>
+<p><kbd>;gt</kbd> <br />
+? <br />
+Gather filtered tabs into current window   </p>
+<p><kbd>;gw</kbd> <br />
+? <br />
+Gather all tabs into current window   </p>
+<p><kbd>zr</kbd> <br />
+? <br />
+zoom reset   </p>
+<p><kbd>zi</kbd> <br />
+? <br />
+zoom in   </p>
+<p><kbd>zo</kbd> <br />
+? <br />
+zoom out   </p>
+<p><kbd><Alt-p></kbd> <br />
+? <br />
+pin/unpin current tab   </p>
+<p><kbd><Alt-m></kbd> <br />
+? <br />
+mute/unmute current tab   </p>
+<p><kbd>x</kbd> <br />
+? <br />
+Close current tab   </p>
+<p><kbd>X</kbd> <br />
+? <br />
+Restore closed tab   </p>
+<p><kbd>W</kbd> <br />
+? <br />
+Move current tab to another window   </p>
+<p><kbd>&lt;&lt;</kbd> <br />
+? <br />
+Move current tab to left   </p>
+<p><kbd>&gt;&gt;</kbd> <br />
+? <br />
+Move current tab to right   </p>
+<h2 id="page-navigation">Page Navigation</h2>
+<p><kbd>gu</kbd> <br />
+? <br />
+Go up one path in the URL   </p>
+<p><kbd>gT</kbd> <br />
+? <br />
+Go to first activated tab   </p>
+<p><kbd>gt</kbd> <br />
+? <br />
+Go to last activated tab   </p>
+<p><kbd>gp</kbd> <br />
+? <br />
+Go to the playing tab   </p>
+<p><kbd>g?</kbd> <br />
+? <br />
+Reload current page without query string(all parts after question mark)   </p>
+<p><kbd>g#</kbd> <br />
+? <br />
+Reload current page without hash fragment   </p>
+<p><kbd>gU</kbd> <br />
+? <br />
+Go to root of current URL hierarchy   </p>
+<p><kbd>;u</kbd> <br />
+? <br />
+Edit current URL with vim editor, and open in new tab   </p>
+<p><kbd>;U</kbd> <br />
+? <br />
+Edit current URL with vim editor, and reload   </p>
+<p><kbd>B</kbd> <br />
+? <br />
+Go one tab history back   </p>
+<p><kbd>F</kbd> <br />
+? <br />
+Go one tab history forward   </p>
+<p><kbd><Ctrl-6></kbd> <br />
+? <br />
+Go to last used tab   </p>
+<p><kbd>S</kbd> <br />
+? <br />
+Go back in history   </p>
+<p><kbd>D</kbd> <br />
+? <br />
+Go forward in history   </p>
+<p><kbd>r</kbd> <br />
+? <br />
+Reload the page   </p>
+<p><kbd>H</kbd> <br />
+? <br />
+Go back in history   </p>
+<p><kbd>L</kbd> <br />
+? <br />
+Go forward in history   </p>
+<h2 id="sessions">Sessions</h2>
+<p><kbd>ZZ</kbd> <br />
+? <br />
+Save session and quit   </p>
+<p><kbd>ZR</kbd> <br />
+? <br />
+Restore last session   </p>
+<h2 id="search-selected-with">Search selected with</h2>
+<p><kbd>sg</kbd> <br />
+? <br />
+Search selected with google   </p>
+<p><kbd>sd</kbd> <br />
+? <br />
+Search selected with duckduckgo   </p>
+<p><kbd>sb</kbd> <br />
+? <br />
+Search selected with baidu   </p>
+<p><kbd>se</kbd> <br />
+? <br />
+Search selected with wikipedia   </p>
+<p><kbd>sw</kbd> <br />
+? <br />
+Search selected with bing   </p>
+<p><kbd>ss</kbd> <br />
+? <br />
+Search selected with stackoverflow   </p>
+<p><kbd>sh</kbd> <br />
+? <br />
+Search selected with github   </p>
+<p><kbd>sy</kbd> <br />
+? <br />
+Search selected with youtube   </p>
+<h2 id="clipboard">Clipboard</h2>
+<p><kbd>yG</kbd> <br />
+? <br />
+Capture current full page   </p>
+<p><kbd>yS</kbd> <br />
+? <br />
+Capture scrolling element   </p>
+<p><kbd>yv</kbd> <br />
+? <br />
+Yank text of an element   </p>
+<p><kbd>ymv</kbd> <br />
+? <br />
+Yank text of multiple elements   </p>
+<p><kbd>yma</kbd> <br />
+? <br />
+Copy multiple link URLs to the clipboard   </p>
+<p><kbd>ymc</kbd> <br />
+? <br />
+Copy multiple columns of a table   </p>
+<p><kbd>yg</kbd> <br />
+? <br />
+Capture current page   </p>
+<p><kbd>ya</kbd> <br />
+? <br />
+Copy a link URL to the clipboard   </p>
+<p><kbd>yc</kbd> <br />
+? <br />
+Copy a column of a table   </p>
+<p><kbd>yq</kbd> <br />
+? <br />
+Copy pre text   </p>
+<p><kbd>yi</kbd> <br />
+? <br />
+Yank text of an input   </p>
+<p><kbd>ys</kbd> <br />
+? <br />
+Copy current page's source   </p>
+<p><kbd>yj</kbd> <br />
+? <br />
+Copy current settings   </p>
+<p><kbd>yy</kbd> <br />
+? <br />
+Copy current page's URL   </p>
+<p><kbd>yY</kbd> <br />
+? <br />
+Copy all tabs's url   </p>
+<p><kbd>yh</kbd> <br />
+? <br />
+Copy current page's host   </p>
+<p><kbd>yl</kbd> <br />
+? <br />
+Copy current page's title   </p>
+<p><kbd>yQ</kbd> <br />
+? <br />
+Copy all query history of OmniQuery.   </p>
+<p><kbd>yf</kbd> <br />
+? <br />
+Copy form data in JSON on current page   </p>
+<p><kbd>yp</kbd> <br />
+? <br />
+Copy form data for POST on current page   </p>
+<p><kbd>yd</kbd> <br />
+? <br />
+Copy current downloading URL   </p>
+<p><kbd>cq</kbd> <br />
+? <br />
+Query word with Hints   </p>
+<p><kbd>cc</kbd> <br />
+? <br />
+Open selected link or link from clipboard   </p>
+<p><kbd>;pp</kbd> <br />
+? <br />
+Paste html on current page   </p>
+<p><kbd>;pj</kbd> <br />
+? <br />
+Restore settings data from clipboard   </p>
+<p><kbd>;pf</kbd> <br />
+? <br />
+Fill form with data from yf   </p>
+<h2 id="omnibar">Omnibar</h2>
+<p><kbd>go</kbd> <br />
+? <br />
+Open a URL in current tab   </p>
+<p><kbd>Q</kbd> <br />
+? <br />
+Open omnibar for word translation   </p>
+<p><kbd>ab</kbd> <br />
+? <br />
+Bookmark current page to selected folder   </p>
+<p><kbd>:</kbd> <br />
+? <br />
+Open commands   </p>
+<p><kbd>t</kbd> <br />
+? <br />
+Open a URL   </p>
+<p><kbd>b</kbd> <br />
+? <br />
+Open a bookmark   </p>
+<p><kbd>o</kbd> <br />
+? <br />
+Open a URL in current tab   </p>
+<p><kbd><Ctrl-d></kbd> <br />
+? <br />
+Delete focused item from bookmark or history   </p>
+<p><kbd><Ctrl-i></kbd> <br />
+? <br />
+Edit selected URL with vim editor, then open   </p>
+<p><kbd><Ctrl-j></kbd> <br />
+? <br />
+Toggle Omnibar's position   </p>
+<p><kbd><Ctrl-.></kbd> <br />
+? <br />
+Show results of next page   </p>
+<p><kbd><Ctrl-,></kbd> <br />
+? <br />
+Show results of previous page   </p>
+<p><kbd><Ctrl-c></kbd> <br />
+? <br />
+Copy selected item url or all listed item urls   </p>
+<p><kbd><Ctrl-D></kbd> <br />
+? <br />
+Delete all listed items from bookmark or history   </p>
+<p><kbd><Ctrl-r></kbd> <br />
+? <br />
+Re-sort history by visitCount or lastVisitTime   </p>
+<p><kbd><Esc></kbd> <br />
+? <br />
+Close Omnibar   </p>
+<p><kbd><Ctrl-m></kbd> <br />
+? <br />
+Create vim-like mark for selected item   </p>
+<p><kbd><Tab></kbd> <br />
+? <br />
+Forward cycle through the candidates.   </p>
+<p><kbd><Shift-Tab></kbd> <br />
+? <br />
+Backward cycle through the candidates.   </p>
+<p><kbd><Ctrl-\'></kbd> <br />
+? <br />
+Toggle quotes in an input element   </p>
+<p><kbd><ArrowDown></kbd> <br />
+? <br />
+Forward cycle through the candidates.   </p>
+<p><kbd><ArrowUp></kbd> <br />
+? <br />
+Backward cycle through the candidates.   </p>
+<p><kbd><Ctrl-n></kbd> <br />
+? <br />
+Forward cycle through the candidates.   </p>
+<p><kbd><Ctrl-p></kbd> <br />
+? <br />
+Backward cycle through the candidates.   </p>
+<h2 id="visual-mode">Visual Mode</h2>
+<p><kbd>/</kbd> <br />
+? <br />
+Find in current page   </p>
+<p><kbd>zv</kbd> <br />
+? <br />
+Enter visual mode, and select whole element   </p>
+<p><kbd>V</kbd> <br />
+? <br />
+Restore visual mode   </p>
+<p><kbd>*</kbd> <br />
+? <br />
+Find selected text in current page   </p>
+<p><kbd>v</kbd> <br />
+? <br />
+Toggle visual mode   </p>
+<p><kbd>n</kbd> <br />
+? <br />
+Next found text   </p>
+<p><kbd>N</kbd> <br />
+? <br />
+Previous found text   </p>
+<p><kbd>0</kbd> <br />
+? <br />
+backward lineboundary   </p>
+<p><kbd>l</kbd> <br />
+? <br />
+forward character   </p>
+<p><kbd>h</kbd> <br />
+? <br />
+backward character   </p>
+<p><kbd>j</kbd> <br />
+? <br />
+forward line   </p>
+<p><kbd>k</kbd> <br />
+? <br />
+backward line   </p>
+<p><kbd>w</kbd> <br />
+? <br />
+forward word   </p>
+<p><kbd>e</kbd> <br />
+? <br />
+forward word   </p>
+<p><kbd>b</kbd> <br />
+? <br />
+backward word   </p>
+<p><kbd>)</kbd> <br />
+? <br />
+forward sentence   </p>
+<p><kbd>(</kbd> <br />
+? <br />
+backward sentence   </p>
+<p><kbd>}</kbd> <br />
+? <br />
+forward paragraphboundary   </p>
+<p><kbd>{</kbd> <br />
+? <br />
+backward paragraphboundary   </p>
+<p><kbd>$</kbd> <br />
+? <br />
+forward lineboundary   </p>
+<p><kbd>G</kbd> <br />
+? <br />
+forward documentboundary   </p>
+<p><kbd>gg</kbd> <br />
+? <br />
+backward documentboundary   </p>
+<p><kbd>gr</kbd> <br />
+? <br />
+Read selected text   </p>
+<p><kbd>o</kbd> <br />
+? <br />
+Go to Other end of highlighted text   </p>
+<p><kbd>*</kbd> <br />
+? <br />
+Search word under the cursor   </p>
+<p><kbd><Enter></kbd> <br />
+? <br />
+Click on node under cursor.   </p>
+<p><kbd><Shift-Enter></kbd> <br />
+? <br />
+Click on node under cursor.   </p>
+<p><kbd>zt</kbd> <br />
+? <br />
+make cursor at start of window.   </p>
+<p><kbd>zz</kbd> <br />
+? <br />
+make cursor at center of window.   </p>
+<p><kbd>zb</kbd> <br />
+? <br />
+make cursor at bottom of window.   </p>
+<p><kbd>f</kbd> <br />
+? <br />
+Forward to next char.   </p>
+<p><kbd>F</kbd> <br />
+? <br />
+Backward to next char.   </p>
+<p><kbd>;</kbd> <br />
+? <br />
+Repeat latest f, F   </p>
+<p><kbd>,</kbd> <br />
+? <br />
+Repeat latest f, F in opposite direction   </p>
+<p><kbd>p</kbd> <br />
+? <br />
+Expand selection to parent element   </p>
+<p><kbd>V</kbd> <br />
+? <br />
+Select a word(w) or line(l) or sentence(s) or paragraph(p)   </p>
+<p><kbd><Ctrl-u></kbd> <br />
+? <br />
+Backward 20 lines   </p>
+<p><kbd><Ctrl-d></kbd> <br />
+? <br />
+Forward 20 lines   </p>
+<p><kbd>t</kbd> <br />
+? <br />
+Translate selected text with google   </p>
+<p><kbd>q</kbd> <br />
+? <br />
+Translate word under cursor   </p>
+<h2 id="vim-like-marks">vim-like marks</h2>
+<p><kbd>m</kbd> <br />
+? <br />
+Add current URL to vim-like marks   </p>
+<p><kbd>'</kbd> <br />
+? <br />
+Jump to vim-like mark   </p>
+<p><kbd><Ctrl-'></kbd> <br />
+? <br />
+Jump to vim-like mark in new tab.   </p>
+<h2 id="settings">Settings</h2>
+<p><kbd>;pm</kbd> <br />
+? <br />
+Preview markdown   </p>
+<p><kbd>;e</kbd> <br />
+? <br />
+Edit Settings   </p>
+<p><kbd>;v</kbd> <br />
+? <br />
+Open neovim   </p>
+<h2 id="chrome-urls">Chrome URLs</h2>
+<p><kbd>ga</kbd> <br />
+? <br />
+Open Chrome About   </p>
+<p><kbd>gb</kbd> <br />
+? <br />
+Open Chrome Bookmarks   </p>
+<p><kbd>gc</kbd> <br />
+? <br />
+Open Chrome Cache   </p>
+<p><kbd>gd</kbd> <br />
+? <br />
+Open Chrome Downloads   </p>
+<p><kbd>gh</kbd> <br />
+? <br />
+Open Chrome History   </p>
+<p><kbd>gk</kbd> <br />
+? <br />
+Open Chrome Cookies   </p>
+<p><kbd>ge</kbd> <br />
+? <br />
+Open Chrome Extensions   </p>
+<p><kbd>gn</kbd> <br />
+? <br />
+Open Chrome net-internals   </p>
+<p><kbd>gs</kbd> <br />
+? <br />
+View page source   </p>
+<p><kbd>;i</kbd> <br />
+? <br />
+Open Chrome Inspect   </p>
+<p><kbd>;j</kbd> <br />
+? <br />
+Close Downloads Shelf   </p>
+<h2 id="proxy">Proxy</h2>
+<p><kbd>cp</kbd> <br />
+? <br />
+Toggle proxy for current site   </p>
+<p><kbd>;pa</kbd> <br />
+? <br />
+set proxy mode <code>always</code>   </p>
+<p><kbd>;pb</kbd> <br />
+? <br />
+set proxy mode <code>byhost</code>   </p>
+<p><kbd>;pd</kbd> <br />
+? <br />
+set proxy mode <code>direct</code>   </p>
+<p><kbd>;ps</kbd> <br />
+? <br />
+set proxy mode <code>system</code>   </p>
+<p><kbd>;pc</kbd> <br />
+? <br />
+set proxy mode <code>clear</code>   </p>
+<p><kbd>;cp</kbd> <br />
+? <br />
+Copy proxy info   </p>
+<p><kbd>;ap</kbd> <br />
+? <br />
+Apply proxy info from clipboard   </p>
+<h2 id="misc">Misc</h2>
+<p><kbd>gr</kbd> <br />
+? <br />
+Read selected text or text from clipboard   </p>
+<p><kbd>;s</kbd> <br />
+? <br />
+Toggle PDF viewer from SurfingKeys   </p>
+<p><kbd>;ph</kbd> <br />
+? <br />
+Put histories from clipboard   </p>
+<p><kbd>;t</kbd> <br />
+? <br />
+Translate selected text with google   </p>
+<p><kbd>;dh</kbd> <br />
+? <br />
+Delete history older than 30 days   </p>
+<p><kbd>;db</kbd> <br />
+? <br />
+Remove bookmark for current page   </p>
+<p><kbd>;yh</kbd> <br />
+? <br />
+Yank histories   </p>
+<h2 id="insert-mode">Insert Mode</h2>
+<p><kbd><Ctrl-e></kbd> <br />
+? <br />
+Move the cursor to the end of the line   </p>
+<p><kbd><Ctrl-f></kbd> <br />
+? <br />
+Move the cursor to the beginning of the line   </p>
+<p><kbd><Ctrl-u></kbd> <br />
+? <br />
+Delete all entered characters before the cursor   </p>
+<p><kbd><Alt-b></kbd> <br />
+? <br />
+Move the cursor Backward 1 word   </p>
+<p><kbd><Alt-f></kbd> <br />
+? <br />
+Move the cursor Forward 1 word   </p>
+<p><kbd><Alt-w></kbd> <br />
+? <br />
+Delete a word backwards   </p>
+<p><kbd><Alt-d></kbd> <br />
+? <br />
+Delete a word forwards   </p>
+<p><kbd><Esc></kbd> <br />
+? <br />
+Exit insert mode   </p>
+<p><kbd><Ctrl-'></kbd> <br />
+? <br />
+Toggle quotes in an input element   </p>
+<p><kbd><Ctrl-i></kbd> <br />
+? <br />
+Open vim editor for current input   </p>
+<p><kbd><Ctrl-Alt-i></kbd> <br />
+? <br />
+Open neovim for current input</p></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="/my awesome software list.html">my awesome software list</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="/obs.html/tags/definition/index.html">definition</a></li>
+	<li><a class="backlink" href="/obs.html/tags/browser/index.html">browser</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A138592951589363543638308836773498294381{level}" class="graph_div"></div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B138592951589363543638308836773498294381{level}" level="{level}" note_temp_id="138592951589363543638308836773498294381" onclick="window.ObsHtmlGraph.run(this, '138592951589363543638308836773498294381', 'surfingkeys');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C138592951589363543638308836773498294381{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('/obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                <!-- end content -->
+            </div>
+            <div class="container_filler"></div>
+            <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+        </div>
+    </div>
+
+    <script>
+        function handle_toggle_side_bar(e) {
+            let header;
+            let pane;
+            let target = e.target;
+
+            // switch out the navbar button click for a header click
+            if (target.id == "left_pane_toggle_nav") {
+                target = document.getElementById("left_pane_fold_header");
+            } else if (target.id == "right_pane_toggle_nav") {
+                target = document.getElementById("right_pane_fold_header");
+            }
+
+            // get header and pane
+            if (target.classList.contains("fold_header")) {
+                header = target;
+                pane = target.parentElement;
+            } else {
+                pane = target;
+                header = target.getElementsByClassName("fold_header")[0];
+            }
+            toggle_side_bar(pane, header, true);
+            e.stopPropagation();
+        }
+        function handle_toggle_side_bar_button(e) {
+            document.getElementById("menu_toggle_button").click();
+            handle_toggle_side_bar(e);
+        }
+
+        function toggle_side_bar(pane, header, save) {
+            let active = pane.classList.contains("active");
+            if (active) {
+                disable_side_bar(pane, header, save);
+            } else {
+                enable_side_bar(pane, header, save);
+            }
+        }
+        function enable_side_bar(pane, header, save) {
+            pane.classList.add("active");
+            pane.removeEventListener("click", handle_toggle_side_bar);
+            header.addEventListener("click", handle_toggle_side_bar);
+            set_correct_header_symbol(header);
+            if (save) {
+                save_panel_folding_state(header, true);
+            }
+        }
+        function disable_side_bar(pane, header, save) {
+            pane.classList.remove("active");
+            pane.addEventListener("click", handle_toggle_side_bar);
+            header.removeEventListener("click", handle_toggle_side_bar);
+            set_correct_header_symbol(header);
+            if (save) {
+                save_panel_folding_state(header, false);
+            }
+        }
+        function set_correct_header_symbol(header) {
+            let pane = header.parentElement;
+            let symbol = [
+                [">", "<"],
+                ["<", ">"],
+            ];
+            symbol =
+                symbol[Number(header.classList.contains("right_pane_fold_header"))][
+                Number(pane.classList.contains("active"))
+                ];
+            console.log(symbol);
+            header.innerHTML = symbol;
+            return header;
+        }
+        function panel_folding_get_panel_name(header) {
+            return ["left", "right"][
+                Number(header.classList.contains("right_pane_fold_header"))
+            ];
+        }
+        function save_panel_folding_state(header, active) {
+            ls_set(
+                "pane_folding_state_" + panel_folding_get_panel_name(header),
+                Number(active)
+            );
+        }
+        function load_panel_folding_state(panel_name) {
+            val = ls_get("pane_folding_state_" + panel_name);
+            if (!val) {
+                return {exists: false, value: null};
+            }
+            return {exists: true, value: Boolean(Number(val))};
+        }
+        function set_pane_folding_start(left_header, right_header) {
+            // small screen = closed
+            let right_pane_enabled = true;
+            let left_pane_enabled = true;
+            let w = window.visualViewport.width;
+            if (w < 1000) {
+                left_pane_enabled = false;
+            }
+            if (w < 800) {
+                right_pane_enabled = false;
+            }
+
+            // get saved values if present
+            let rval = load_panel_folding_state("right");
+            if (rval["exists"]) {
+                right_pane_enabled = rval["value"];
+            }
+            let lval = load_panel_folding_state("left");
+            if (lval["exists"]) {
+                left_pane_enabled = lval["value"];
+            }
+
+            // default = enabled, so we only need to disable
+            if (!left_pane_enabled) {
+                disable_side_bar(
+                    document.getElementById("left_pane"),
+                    document.getElementById("left_pane_fold_header")
+                );
+            }
+            if (!right_pane_enabled) {
+                disable_side_bar(
+                    document.getElementById("right_pane"),
+                    document.getElementById("right_pane_fold_header")
+                );
+            }
+        }
+
+        function init_pane_folding(header) {
+            set_correct_header_symbol(header);
+            header.addEventListener("click", handle_toggle_side_bar);
+        }
+
+        set_pane_folding_start();
+        init_pane_folding(document.getElementById("left_pane_fold_header"));
+        init_pane_folding(document.getElementById("right_pane_fold_header"));
+
+        document
+            .getElementById("left_pane_toggle_nav")
+            .addEventListener("click", handle_toggle_side_bar_button);
+        document
+            .getElementById("right_pane_toggle_nav")
+            .addEventListener("click", handle_toggle_side_bar_button);
+    </script>
+
+    <script src="/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+ 
+
+</body>
+</html>
