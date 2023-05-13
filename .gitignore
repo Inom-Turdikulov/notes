@@ -1,0 +1,14 @@
+.DS_Store
+.idea
+*.log
+*.out
+.obsidian/
+.stversions
+.stfolders
+*.lock
+
+excalidraw/
+datasets/
+tmp/
+books/
+prv_*
