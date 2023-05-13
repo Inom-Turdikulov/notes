@@ -289,7 +289,7 @@ function graph_right_click(args){
 // LEAF ACTIONS
 // fn
 function graph_open_link(args){
-    if (! 0)
+    if (! 1)
     {
         return graph_open_link_tabs(args)
     }
