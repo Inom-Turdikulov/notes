@@ -10,8 +10,6 @@ tags:
 title: Magic SysRq key
 ---
 
-## Magic SysRq key
-
 The magic SysRq key is a key combination understood by the Linux kernel, which
 allows the user to perform various low-level commands regardless of the system's
 state. It is often used to recover from freezes, or to reboot a computer without

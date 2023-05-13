@@ -2,8 +2,9 @@
 date: 1678377600
 tags:
 - outline
-title: My dialy activities and goals
 ---
+
+# My daily activities and goals
 
 This page contains actual lists of things I'm doing [now](./now.md) (daily activities),
 long term goals and some other things. I need constantly check and update this
