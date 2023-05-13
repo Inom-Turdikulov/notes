@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page information -->
+    <meta charset="UTF-8" />
+    <meta name="node_id" content="lineage 2 tools" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Set title -->
+    <title>Obsidian-Html/Notes</title>
+
+    <!-- Includes -->
+    
+<script src="/obs.html/static/obsidian_core.js"></script>
+<script src="/obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="/obs.html/static/master.css" />
+<script src="/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="/obs.html/static/flexsearch.bundle.js"></script>
+<script src="/obs.html/static/pako.js"></script>
+<script src="/obs.html/static/search.js"></script>
+<script src="/obs.html/static/dirtree.js"></script>
+
+
+    <!-- Onload tweaks -->
+    <script>
+        const CURRENT_NODE = "lineage 2 tools";
+        const HTML_URL_PREFIX = "";
+        const PAGE_DEPTH = 0;
+    </script>
+
+    <style>
+        .container{
+            font-size: 14pt;
+        }
+    </style>
+</head>
+
+<body class="theme-obs-light">
+    <div id="antiflash" style="display: none"></div>
+    <script>
+        document.getElementById("antiflash").style.display = "block";
+    </script>
+    <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+    <div id="page_holder" class="flex_col">
+        <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="/index.html" id="homelink" title="Clear screen and go to homepage">Obsidian-Html/Notes</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=lineage 2 tools" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="/obs.html/dir_index.html" title="View directory tree">
+                    <img src = "/obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="/obs.html/tags/index.html" title="Open tag view">
+            <img src = "/obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+        <div class="flex_row">
+            <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div class="dirtree"><button id="folder-1" class="dir-button" onclick="toggle_dir(this.id)">@BrianWKernighanProgrammingLanguage1988</button>
+<div id="folder-container-1" class="dir-container requires_js " path="/@BrianWKernighanProgrammingLanguage1988">
+	<button id="folder-2" class="dir-button" onclick="toggle_dir(this.id)">chapter_1</button>
+	<div id="folder-container-2" class="dir-container requires_js " path="/@BrianWKernighanProgrammingLanguage1988/chapter_1">
+		<ul class="dir-list">
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-10_show_escape_sequences.c"  class="external-link">1-10_show_escape_sequences</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-12_input_join_into_words.c"  class="external-link">1-12_input_join_into_words</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-13_input_histogram.c"  class="external-link">1-13_input_histogram</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-14_input_histogram_chars.c"  class="external-link">1-14_input_histogram_chars</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-15_temerature_conversion_using_func.c"  class="external-link">1-15_temerature_conversion_using_func</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-1_hello_world.c"  class="external-link">1-1_hello_world</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-2_printf_experiments.c"  class="external-link">1-2_printf_experiments</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-3_modify_temp_conversion.c"  class="external-link">1-3_modify_temp_conversion</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-4_celsius_to_fahrenheit.c"  class="external-link">1-4_celsius_to_fahrenheit</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-5_celsius_to_fahrenheit_reverse.c"  class="external-link">1-5_celsius_to_fahrenheit_reverse</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-8_wc_alternative.c"  class="external-link">1-8_wc_alternative</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-9_fix_blanks.c"  class="external-link">1-9_fix_blanks</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+	</ul>
+</div>
+<button id="folder-3" class="dir-button" onclick="toggle_dir(this.id)">img</button>
+<div id="folder-container-3" class="dir-container requires_js " path="/img">
+	<ul class="dir-list">
+		<li><a class="" href="/img/Universal_Turing_machine.svg"  class="external-link">Universal_Turing_machine</a></li>
+		<li><a class="" href="/img/Unix_timeline.svg"  class="external-link">Unix_timeline</a></li>
+		<li><a class="" href="/img/colemak_dh_ansi.png"  class="external-link">colemak_dh_ansi</a></li>
+		<li><a class="" href="/img/mongolian-gerbil.png"  class="external-link">mongolian-gerbil</a></li>
+		<li><a class="" href="/img/pasted_img_20230102033318.png"  class="external-link">pasted_img_20230102033318</a></li>
+		<li><a class="" href="/img/pasted_img_20230415175922.png"  class="external-link">pasted_img_20230415175922</a></li>
+		<li><a class="" href="/img/screenshoot-zotero.png"  class="external-link">screenshoot-zotero</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><a class="" href="/!AST.excalidraw.html"  >!AST.excalidraw</a></li>
+	<li><a class="" href="/30 day drawing challenge.html"  >30 day drawing challenge</a></li>
+	<li><a class="" href="/@AlgorithmsComputerScience2005.html"  >@AlgorithmsComputerScience2005</a></li>
+	<li><a class="" href="/@AndreiPetrovichKiselyovAlgebraChast2006.html"  >@AndreiPetrovichKiselyovAlgebraChast2006</a></li>
+	<li><a class="" href="/@AndrewHuntPragmaticProgrammerYour2019.html"  >@AndrewHuntPragmaticProgrammerYour2019</a></li>
+	<li><a class="" href="/@AndrewLoomisFunPencilHow2013.html"  >@AndrewLoomisFunPencilHow2013</a></li>
+	<li><a class="" href="/@AndreyViktorovichStolyarovProgrammirovanieVvedenieProfessiyu2021b.html"  >@AndreyViktorovichStolyarovProgrammirovanieVvedenieProfessiyu2021b</a></li>
+	<li><a class="" href="/@ArielManzurGodotEngineGame2018.html"  >@ArielManzurGodotEngineGame2018</a></li>
+	<li><a class="" href="/@BrettSlatkinEffectivePython902020.html"  >@BrettSlatkinEffectivePython902020</a></li>
+	<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988.html"  >@BrianWKernighanProgrammingLanguage1988</a></li>
+	<li><a class="" href="/@CaseyMuratoriHandmadeHero2014.html"  >@CaseyMuratoriHandmadeHero2014</a></li>
+	<li><a class="" href="/@CharlesPetzoldCodeHiddenLanguage2000.html"  >@CharlesPetzoldCodeHiddenLanguage2000</a></li>
+	<li><a class="" href="/@DavidFlanaganJavaScriptDefinitiveGuide2020.html"  >@DavidFlanaganJavaScriptDefinitiveGuide2020</a></li>
+	<li><a class="" href="/@DrewNeilModernVimCraft2018.html"  >@DrewNeilModernVimCraft2018</a></li>
+	<li><a class="" href="/@DrewNeilPracticalVimEdit2015.html"  >@DrewNeilPracticalVimEdit2015</a></li>
+	<li><a class="" href="/@EmelinAleksandrKratchayshiyKursShkolnoy.html"  >@EmelinAleksandrKratchayshiyKursShkolnoy</a></li>
+	<li><a class="" href="/@EricMatthesPythonCrashCourse2023.html"  >@EricMatthesPythonCrashCourse2023</a></li>
+	<li><a class="" href="/@GodotDocsBranch2023.html"  >@GodotDocsBranch2023</a></li>
+	<li><a class="" href="/@HarvardXCS50x2023.html"  >@HarvardXCS50x2023</a></li>
+	<li><a class="" href="/@IgorIriantoLearnVim2021.html"  >@IgorIriantoLearnVim2021</a></li>
+	<li><a class="" href="/@InterviewCakeCodingInterviewPractice.html"  >@InterviewCakeCodingInterviewPractice</a></li>
+	<li><a class="" href="/@JasonvanGumsterBlenderDummies4th2020.html"  >@JasonvanGumsterBlenderDummies4th2020</a></li>
+	<li><a class="" href="/@JayWengrowCommonsenseGuideData2020.html"  >@JayWengrowCommonsenseGuideData2020</a></li>
+	<li><a class="" href="/@KilpatrickDavidSvetOsveshchenie1988.html"  >@KilpatrickDavidSvetOsveshchenie1988</a></li>
+	<li><a class="" href="/@LucianoRamalhoFluentPython2021.html"  >@LucianoRamalhoFluentPython2021</a></li>
+	<li><a class="" href="/@PythonProgrammingFAQ2023.html"  >@PythonProgrammingFAQ2023</a></li>
+	<li><a class="" href="/@PythonStandardLibrary2023.html"  >@PythonStandardLibrary2023</a></li>
+	<li><a class="" href="/@PythonTutorial2023.html"  >@PythonTutorial2023</a></li>
+	<li><a class="" href="/@RobertSedgewickAlgorithms2014a.html"  >@RobertSedgewickAlgorithms2014a</a></li>
+	<li><a class="" href="/@RobertSedgewickAlgorithms2014b.html"  >@RobertSedgewickAlgorithms2014b</a></li>
+	<li><a class="" href="/@RusShulerHowDoesInternet2002.html"  >@RusShulerHowDoesInternet2002</a></li>
+	<li><a class="" href="/@ScottChaconProGit2022.html"  >@ScottChaconProGit2022</a></li>
+	<li><a class="" href="/@SteveMcConnellCodeComplete2004.html"  >@SteveMcConnellCodeComplete2004</a></li>
+	<li><a class="" href="/@ThomasHCormenAlgorithmsUnlocked2013.html"  >@ThomasHCormenAlgorithmsUnlocked2013</a></li>
+	<li><a class="" href="/@ThomasHCormenIntroductionAlgorithms2022.html"  >@ThomasHCormenIntroductionAlgorithms2022</a></li>
+	<li><a class="" href="/@TimothyBLeeInternetExplained2014.html"  >@TimothyBLeeInternetExplained2014</a></li>
+	<li><a class="" href="/ANSI C.html"  >ANSI C</a></li>
+	<li><a class="" href="/abstract syntax tree.html"  >abstract syntax tree</a></li>
+	<li><a class="" href="/algorithm.html"  >algorithm</a></li>
+	<li><a class="" href="/android (operating system).html"  >android (operating system)</a></li>
+	<li><a class="" href="/arch linux (and other distros).html"  >arch linux (and other distros)</a></li>
+	<li><a class="" href="/array (computer science).html"  >array (computer science)</a></li>
+	<li><a class="" href="/art.html"  >art</a></li>
+	<li><a class="" href="/ascii.html"  >ascii</a></li>
+	<li><a class="" href="/b-tree.html"  >b-tree</a></li>
+	<li><a class="" href="/backup.html"  >backup</a></li>
+	<li><a class="" href="/bibliography.html"  >bibliography</a></li>
+	<li><a class="" href="/bibtex.html"  >bibtex</a></li>
+	<li><a class="" href="/binary search algorithm.html"  >binary search algorithm</a></li>
+	<li><a class="" href="/binary search tree.html"  >binary search tree</a></li>
+	<li><a class="" href="/bitlbee.html"  >bitlbee</a></li>
+	<li><a class="" href="/blender.html"  >blender</a></li>
+	<li><a class="" href="/boolean data type.html"  >boolean data type</a></li>
+	<li><a class="" href="/boolean expression.html"  >boolean expression</a></li>
+	<li><a class="" href="/borg.html"  >borg</a></li>
+	<li><a class="" href="/brave (web browser).html"  >brave (web browser)</a></li>
+	<li><a class="" href="/btrfs.html"  >btrfs</a></li>
+	<li><a class="" href="/bytecode.html"  >bytecode</a></li>
+	<li><a class="" href="/c (programming language).html"  >c (programming language)</a></li>
+	<li><a class="" href="/c data types.html"  >c data types</a></li>
+	<li><a class="" href="/calendar.html"  >calendar</a></li>
+	<li><a class="" href="/camera.html"  >camera</a></li>
+	<li><a class="" href="/chemistry.html"  >chemistry</a></li>
+	<li><a class="" href="/chrome devtools.html"  >chrome devtools</a></li>
+	<li><a class="" href="/citation.html"  >citation</a></li>
+	<li><a class="" href="/code.html"  >code</a></li>
+	<li><a class="" href="/collection (abstract data type).html"  >collection (abstract data type)</a></li>
+	<li><a class="" href="/comics.html"  >comics</a></li>
+	<li><a class="" href="/command-line interface.html"  >command-line interface</a></li>
+	<li><a class="" href="/complex number.html"  >complex number</a></li>
+	<li><a class="" href="/computation.html"  >computation</a></li>
+	<li><a class="" href="/computational complexity.html"  >computational complexity</a></li>
+	<li><a class="" href="/computer.html"  >computer</a></li>
+	<li><a class="" href="/computer graphics.html"  >computer graphics</a></li>
+	<li><a class="" href="/computer memory.html"  >computer memory</a></li>
+	<li><a class="" href="/computer program.html"  >computer program</a></li>
+	<li><a class="" href="/computer programming.html"  >computer programming</a></li>
+	<li><a class="" href="/computer science.html"  >computer science</a></li>
+	<li><a class="" href="/computer science learning resources.html"  >computer science learning resources</a></li>
+	<li><a class="" href="/computer security.html"  >computer security</a></li>
+	<li><a class="" href="/computer software.html"  >computer software</a></li>
+	<li><a class="" href="/computing platform.html"  >computing platform</a></li>
+	<li><a class="" href="/conditional (computer programming).html"  >conditional (computer programming)</a></li>
+	<li><a class="" href="/control flow.html"  >control flow</a></li>
+	<li><a class="" href="/cooking.html"  >cooking</a></li>
+	<li><a class="" href="/copilot.html"  >copilot</a></li>
+	<li><a class="" href="/creamy mashed potatoes.html"  >creamy mashed potatoes</a></li>
+	<li><a class="" href="/cutlets.html"  >cutlets</a></li>
+	<li><a class="" href="/data structure.html"  >data structure</a></li>
+	<li><a class="" href="/data type.html"  >data type</a></li>
+	<li><a class="" href="/debugger.html"  >debugger</a></li>
+	<li><a class="" href="/development environment.html"  >development environment</a></li>
+	<li><a class="" href="/diff.html"  >diff</a></li>
+	<li><a class="" href="/digital electronics.html"  >digital electronics</a></li>
+	<li><a class="" href="/dm-crypt.html"  >dm-crypt</a></li>
+	<li><a class="" href="/dmenu.html"  >dmenu</a></li>
+	<li><a class="" href="/dmenu keybindings.html"  >dmenu keybindings</a></li>
+	<li><a class="" href="/do it yourself.html"  >do it yourself</a></li>
+	<li><a class="" href="/docker.html"  >docker</a></li>
+	<li><a class="" href="/duolingo.html"  >duolingo</a></li>
+	<li><a class="" href="/dwm.html"  >dwm</a></li>
+	<li><a class="" href="/dwm keyboard shortcuts.html"  >dwm keyboard shortcuts</a></li>
+	<li><a class="" href="/education.html"  >education</a></li>
+	<li><a class="" href="/elementary particle.html"  >elementary particle</a></li>
+	<li><a class="" href="/email.html"  >email</a></li>
+	<li><a class="" href="/english language.html"  >english language</a></li>
+	<li><a class="" href="/english language transcription.html"  >english language transcription</a></li>
+	<li><a class="" href="/escape sequence.html"  >escape sequence</a></li>
+	<li><a class="" href="/evaluation strategy.html"  >evaluation strategy</a></li>
+	<li><a class="" href="/exercise plan.html"  >exercise plan</a></li>
+	<li><a class="" href="/expression (computer science).html"  >expression (computer science)</a></li>
+	<li><a class="" href="/fibonacci sequence.html"  >fibonacci sequence</a></li>
+	<li><a class="" href="/file (command).html"  >file (command)</a></li>
+	<li><a class="" href="/finance.html"  >finance</a></li>
+	<li><a class="" href="/firefox.html"  >firefox</a></li>
+	<li><a class="" href="/floating-point arithmetic.html"  >floating-point arithmetic</a></li>
+	<li><a class="" href="/flowchart.html"  >flowchart</a></li>
+	<li><a class="" href="/function (computer programming).html"  >function (computer programming)</a></li>
+	<li><a class="" href="/functional programming.html"  >functional programming</a></li>
+	<li><a class="" href="/fzf.html"  >fzf</a></li>
+	<li><a class="" href="/game.html"  >game</a></li>
+	<li><a class="" href="/general-purpose programming language.html"  >general-purpose programming language</a></li>
+	<li><a class="" href="/getting things done (gtd).html"  >getting things done (gtd)</a></li>
+	<li><a class="" href="/git.html"  >git</a></li>
+	<li><a class="" href="/git tips.html"  >git tips</a></li>
+	<li><a class="" href="/github.html"  >github</a></li>
+	<li><a class="" href="/gitlab.html"  >gitlab</a></li>
+	<li><a class="" href="/gnu compiler collection.html"  >gnu compiler collection</a></li>
+	<li><a class="" href="/gnu privacy guard.html"  >gnu privacy guard</a></li>
+	<li><a class="" href="/gnu project debugger.html"  >gnu project debugger</a></li>
+	<li><a class="" href="/gnu readline.html"  >gnu readline</a></li>
+	<li><a class="" href="/gnu sed.html"  >gnu sed</a></li>
+	<li><a class="" href="/godot engine.html"  >godot engine</a></li>
+	<li><a class="" href="/government.html"  >government</a></li>
+	<li><a class="" href="/guido van rossum.html"  >guido van rossum</a></li>
+	<li><a class="" href="/hacker news.html"  >hacker news</a></li>
+	<li><a class="" href="/haskell.html"  >haskell</a></li>
+	<li><a class="" href="/heap (data structure).html"  >heap (data structure)</a></li>
+	<li><a class="" href="/hidden file and hidden directory (.dotfiles).html"  >hidden file and hidden directory (.dotfiles)</a></li>
+	<li><a class="" href="/high-level programming language.html"  >high-level programming language</a></li>
+	<li><a class="" href="/home construction.html"  >home construction</a></li>
+	<li><a class="" href="/how do i work with contacts.html"  >how do i work with contacts</a></li>
+	<li><a class="" href="/how do i work with email.html"  >how do i work with email</a></li>
+	<li><a class="" href="/how do i work with instant messages.html"  >how do i work with instant messages</a></li>
+	<li><a class="" href="/how do i work with the calendar.html"  >how do i work with the calendar</a></li>
+	<li><a class="" href="/how i learn computer programming.html"  >how i learn computer programming</a></li>
+	<li><a class="" href="/how i study computer science.html"  >how i study computer science</a></li>
+	<li><a class="" href="/how i study english language.html"  >how i study english language</a></li>
+	<li><a class="" href="/how i study mathematics.html"  >how i study mathematics</a></li>
+	<li><a class="" href="/how to solve it.html"  >how to solve it</a></li>
+	<li><a class="" href="/how to study.html"  >how to study</a></li>
+	<li><a class="" href="/htop.html"  >htop</a></li>
+	<li><a class="" href="/hugo.html"  >hugo</a></li>
+	<li><a class="" href="/immutable object.html"  >immutable object</a></li>
+	<li><a class="" href="/in real life (irl).html"  >in real life (irl)</a></li>
+	<li><a class="" href="/increment and decrement operators.html"  >increment and decrement operators</a></li>
+	<li><a class="" href="/index.html"  >index</a></li>
+	<li><a class="" href="/initialization (programming).html"  >initialization (programming)</a></li>
+	<li><a class="" href="/inkscape.html"  >inkscape</a></li>
+	<li><a class="" href="/instant messaging.html"  >instant messaging</a></li>
+	<li><a class="" href="/iterator.html"  >iterator</a></li>
+	<li><a class="" href="/java (programming language).html"  >java (programming language)</a></li>
+	<li><a class="" href="/keyboard shortcut.html"  >keyboard shortcut</a></li>
+	<li><a class="" href="/khan academy.html"  >khan academy</a></li>
+	<li><a class="" href="/kitty (terminal emulator).html"  >kitty (terminal emulator)</a></li>
+	<li><a class="" href="/krita.html"  >krita</a></li>
+	<li><a class="" href="/latex.html"  >latex</a></li>
+	<li><a class="" href="/ledger.html"  >ledger</a></li>
+	<li><a class="" href="/leetcode.html"  >leetcode</a></li>
+	<li><a class="" href="/light.html"  >light</a></li>
+	<li><a class="active" href="/lineage 2 tools.html"  >lineage 2 tools</a></li>
+	<li><a class="" href="/linux.html"  >linux</a></li>
+	<li><a class="" href="/list (abstract data type).html"  >list (abstract data type)</a></li>
+	<li><a class="" href="/literature.html"  >literature</a></li>
+	<li><a class="" href="/logarithm (logs).html"  >logarithm (logs)</a></li>
+	<li><a class="" href="/logic.html"  >logic</a></li>
+	<li><a class="" href="/low-level programming language.html"  >low-level programming language</a></li>
+	<li><a class="" href="/magic sysrq key.html"  >magic sysrq key</a></li>
+	<li><a class="" href="/maintenance.html"  >maintenance</a></li>
+	<li><a class="" href="/markdown.html"  >markdown</a></li>
+	<li><a class="" href="/mathematics.html"  >mathematics</a></li>
+	<li><a class="" href="/mathjax.html"  >mathjax</a></li>
+	<li><a class="" href="/media (communication).html"  >media (communication)</a></li>
+	<li><a class="" href="/microsoft windows.html"  >microsoft windows</a></li>
+	<li><a class="" href="/miniflux.html"  >miniflux</a></li>
+	<li><a class="" href="/mouseless workflow.html"  >mouseless workflow</a></li>
+	<li><a class="" href="/mpv.html"  >mpv</a></li>
+	<li><a class="" href="/multi-factor authentication.html"  >multi-factor authentication</a></li>
+	<li><a class="" href="/multiplication table.html"  >multiplication table</a></li>
+	<li><a class="" href="/my arch linux enviroment.html"  >my arch linux enviroment</a></li>
+	<li><a class="" href="/my art.html"  >my art</a></li>
+	<li><a class="" href="/my articles list (publishing).html"  >my articles list (publishing)</a></li>
+	<li><a class="" href="/my awesome software list.html"  >my awesome software list</a></li>
+	<li><a class="" href="/my backend developer roadmap.html"  >my backend developer roadmap</a></li>
+	<li><a class="" href="/my backup plan.html"  >my backup plan</a></li>
+	<li><a class="" href="/my books.html"  >my books</a></li>
+	<li><a class="" href="/my buy list.html"  >my buy list</a></li>
+	<li><a class="" href="/my computer science roadmap.html"  >my computer science roadmap</a></li>
+	<li><a class="" href="/my everyday life (routine).html"  >my everyday life (routine)</a></li>
+	<li><a class="" href="/my games.html"  >my games</a></li>
+	<li><a class="" href="/my inventory.html"  >my inventory</a></li>
+	<li><a class="" href="/my music.html"  >my music</a></li>
+	<li><a class="" href="/my pet projects.html"  >my pet projects</a></li>
+	<li><a class="" href="/my pictures.html"  >my pictures</a></li>
+	<li><a class="" href="/my python developer roadmap.html"  >my python developer roadmap</a></li>
+	<li><a class="" href="/my shell scripts.html"  >my shell scripts</a></li>
+	<li><a class="" href="/my videos.html"  >my videos</a></li>
+	<li><a class="" href="/my watched movies.html"  >my watched movies</a></li>
+	<li><a class="" href="/mysql.html"  >mysql</a></li>
+	<li><a class="" href="/neomutt.html"  >neomutt</a></li>
+	<li><a class="" href="/neovim (text editor).html"  >neovim (text editor)</a></li>
+	<li><a class="" href="/news.html"  >news</a></li>
+	<li><a class="" href="/nnn file manager.html"  >nnn file manager</a></li>
+	<li><a class="" href="/nomad sculpt.html"  >nomad sculpt</a></li>
+	<li><a class="" href="/notes types.html"  >notes types</a></li>
+	<li><a class="" href="/null function.html"  >null function</a></li>
+	<li><a class="" href="/null pointer.html"  >null pointer</a></li>
+	<li><a class="" href="/object-oriented programming.html"  >object-oriented programming</a></li>
+	<li><a class="" href="/obsidian.html"  >obsidian</a></li>
+	<li><a class="" href="/online shopping.html"  >online shopping</a></li>
+	<li><a class="" href="/operand.html"  >operand</a></li>
+	<li><a class="" href="/operating system.html"  >operating system</a></li>
+	<li><a class="" href="/operator (computer programming).html"  >operator (computer programming)</a></li>
+	<li><a class="" href="/pacman (software).html"  >pacman (software)</a></li>
+	<li><a class="" href="/pandoc.html"  >pandoc</a></li>
+	<li><a class="" href="/pass (software).html"  >pass (software)</a></li>
+	<li><a class="" href="/patch (unix).html"  >patch (unix)</a></li>
+	<li><a class="" href="/pattern matching.html"  >pattern matching</a></li>
+	<li><a class="" href="/photography.html"  >photography</a></li>
+	<li><a class="" href="/physics.html"  >physics</a></li>
+	<li><a class="" href="/postgresql.html"  >postgresql</a></li>
+	<li><a class="" href="/printf format string.html"  >printf format string</a></li>
+	<li><a class="" href="/procedural programming.html"  >procedural programming</a></li>
+	<li><a class="" href="/programmer (software developer).html"  >programmer (software developer)</a></li>
+	<li><a class="" href="/programming language.html"  >programming language</a></li>
+	<li><a class="" href="/programming paradigm.html"  >programming paradigm</a></li>
+	<li><a class="" href="/programming principles.html"  >programming principles</a></li>
+	<li><a class="" href="/pseudocode.html"  >pseudocode</a></li>
+	<li><a class="" href="/public-key cryptography.html"  >public-key cryptography</a></li>
+	<li><a class="" href="/puzzle english.html"  >puzzle english</a></li>
+	<li><a class="" href="/puzzle english learning by plan.html"  >puzzle english learning by plan</a></li>
+	<li><a class="" href="/pycharm.html"  >pycharm</a></li>
+	<li><a class="" href="/python.html"  >python</a></li>
+	<li><a class="" href="/qmk.html"  >qmk</a></li>
+	<li><a class="" href="/readability.html"  >readability</a></li>
+	<li><a class="" href="/retroarch.html"  >retroarch</a></li>
+	<li><a class="" href="/russian language.html"  >russian language</a></li>
+	<li><a class="" href="/rust (programming language).html"  >rust (programming language)</a></li>
+	<li><a class="" href="/sc-im.html"  >sc-im</a></li>
+	<li><a class="" href="/science.html"  >science</a></li>
+	<li><a class="" href="/self-hosting (web services).html"  >self-hosting (web services)</a></li>
+	<li><a class="" href="/set (abstract data type).html"  >set (abstract data type)</a></li>
+	<li><a class="" href="/shebang (unix).html"  >shebang (unix)</a></li>
+	<li><a class="" href="/side effect (computer science).html"  >side effect (computer science)</a></li>
+	<li><a class="" href="/sleep.html"  >sleep</a></li>
+	<li><a class="" href="/smartphone.html"  >smartphone</a></li>
+	<li><a class="" href="/sniprun.html"  >sniprun</a></li>
+	<li><a class="" href="/software testing.html"  >software testing</a></li>
+	<li><a class="" href="/spaced repetition.html"  >spaced repetition</a></li>
+	<li><a class="" href="/sq3r method.html"  >sq3r method</a></li>
+	<li><a class="" href="/stack overflow.html"  >stack overflow</a></li>
+	<li><a class="" href="/statement (computer science).html"  >statement (computer science)</a></li>
+	<li><a class="" href="/string literal.html"  >string literal</a></li>
+	<li><a class="" href="/structured programming.html"  >structured programming</a></li>
+	<li><a class="" href="/suckless.org.html"  >suckless.org</a></li>
+	<li><a class="" href="/surfingkeys.html"  >surfingkeys</a></li>
+	<li><a class="" href="/switch to neovim path.html"  >switch to neovim path</a></li>
+	<li><a class="" href="/syncthing.html"  >syncthing</a></li>
+	<li><a class="" href="/telekasten.nvim.html"  >telekasten.nvim</a></li>
+	<li><a class="" href="/telescope.nvim.html"  >telescope.nvim</a></li>
+	<li><a class="" href="/the python standard library.html"  >the python standard library</a></li>
+	<li><a class="" href="/time complexity.html"  >time complexity</a></li>
+	<li><a class="" href="/truncation.html"  >truncation</a></li>
+	<li><a class="" href="/turing complete.html"  >turing complete</a></li>
+	<li><a class="" href="/turing machine.html"  >turing machine</a></li>
+	<li><a class="" href="/twitch (service).html"  >twitch (service)</a></li>
+	<li><a class="" href="/type conversion.html"  >type conversion</a></li>
+	<li><a class="" href="/unicode.html"  >unicode</a></li>
+	<li><a class="" href="/unix.html"  >unix</a></li>
+	<li><a class="" href="/variable (computer science).html"  >variable (computer science)</a></li>
+	<li><a class="" href="/vector graphics.html"  >vector graphics</a></li>
+	<li><a class="" href="/video acceleration api.html"  >video acceleration api</a></li>
+	<li><a class="" href="/vim keycodes.html"  >vim keycodes</a></li>
+	<li><a class="" href="/virtual machine.html"  >virtual machine</a></li>
+	<li><a class="" href="/vr photography (virtual-reality photography).html"  >vr photography (virtual-reality photography)</a></li>
+	<li><a class="" href="/word (computer architecture).html"  >word (computer architecture)</a></li>
+	<li><a class="" href="/work (human activity).html"  >work (human activity)</a></li>
+	<li><a class="" href="/youtube.html"  >youtube</a></li>
+	<li><a class="" href="/z shell.html"  >z shell</a></li>
+	<li><a class="" href="/zathura.html"  >zathura</a></li>
+	<li><a class="" href="/zen of python.html"  >zen of python</a></li>
+	<li><a class="" href="/zero-based numbering.html"  >zero-based numbering</a></li>
+	<li><a class="" href="/zettelkasten.html"  >zettelkasten</a></li>
+	<li><a class="" href="/zotero.html"  >zotero</a></li>
+</ul>
+</div>
+    </div>
+</div>
+            <div class="container">
+                <embeddedtitle>lineage 2 tools</embeddedtitle>
+<div class="content"><blockquote>
+<p>Lineage II is a massively multiplayer online role-playing game (MMORPG) for <br />
+Microsoft Windows and the second game in the Lineage series. It is a prequel <br />
+to Lineage and is set 150 years before the first game. It has become popular <br />
+since its October 1, 2003 launch in South Korea, reporting 1,000,918 unique <br />
+users during the month of March 2007. To date, the game has been played by <br />
+more than 14 million users, most of whom are based in Asia.   </p>
+<p>-- <a href="https://en.wikipedia.org/wiki/Lineage_II" class="external-link">Wikipedia</a>   </p>
+</blockquote>
+<p>Lineage II adopted a free-to-play model in Lineage II: Goddess of Destruction, <br />
+with all game content being free except for "purchasable in-game store items and <br />
+packs" in November 2011.   </p>
+<ul>
+<li>
+<p>L2PE - The little tool for edit existing object’s properties or import/export <br />
+  new one. <br />
+     Features: <br />
+    – Edit object properties such as emitters colors etc. <br />
+    – Import/Export a new object to/from Lineage 2 files. <br />
+    – Supports higher Lineage 2 Chronicles/Clients.   </p>
+</li>
+<li>
+<p>L2smr - Tool for adding/editing StaticMesh actors.   </p>
+</li>
+<li>
+<p>L2Tool - it’s universal UTX package viewer, converter to Unread Editor format <br />
+  and TGA/DDS image replacer.   </p>
+</li>
+<li>
+<p>XDAT Editor - An open source interface.xdat editor by acmi.   </p>
+</li>
+<li>
+<p>Protection ID - The little tool for analyzing protection type for separated <br />
+  files or CD/DVDs.   </p>
+</li>
+<li>
+<p>HD GeoEditor v.1.07b by DRiN   </p>
+</li>
+<li>
+<p>CFF Explorer - A freeware suite of tools including a PE editor called CFF <br />
+  Explorer and a process viewer   </p>
+</li>
+<li>
+<p>Unreal Tournament Package Tool - This Windows tool can examine an UT package <br />
+  file (and also from other Unreal Engine games) and extract its objects in <br />
+  several formats. It allows you to extract textures, sounds, music, scripts, <br />
+  meshes.   </p>
+</li>
+<li>
+<p>WOTgreal – File Viewer/Exporter for Lineage 2 .u files WOTgreal can examine <br />
+  and export the classes, meshes, images and sounds of a particular Unreal <br />
+  Tournament mod (.u file). Features: Open most unreal engine package files and <br />
+  view their content, extract some interesting objects in viewable format, <br />
+  decompile unrealscript code.   </p>
+</li>
+<li>
+<p>L2 File Edit ++ v.2   </p>
+</li>
+<li>UE Viewer – unreal engine packages viewer for Lineage 2 files   </li>
+<li>
+<p>Skeletal Mesh Editor - The Skeletal Mesh Editor Mode is where you can find the <br />
+  tools to manipulate and preview Skeletal Mesh assets   </p>
+</li>
+<li>
+<p>ActorX Importer for 3ds Max - ActorX Importer complements functionality of the <br />
+  Epic Games ActorX Exporter. Epic's plugin can export psk and psa files from <br />
+  3ds Max, Maya and XSI. Plugin from this page has opposite functionality: you <br />
+  can load psk and psa files back to the 3ds Max (there is no versions for Maya <br />
+  and XSI).   </p>
+</li>
+<li>
+<p>UTPT – File Viewer/Exporter for Lineage 2 files UTPT can examine a UT package <br />
+  file (and also from other Unreal Engine games) and extract its objects in <br />
+  several formats. It allows you to extract textures, sounds, music, scripts, <br />
+  meshes.   </p>
+</li>
+<li>
+<p>L2DK - программа позволяет войти в режим разработчика не имея сервера. С помощью данной программы вы сможете примерить любую одежду, оружие, аксессуар, посмотреть анимацию скиллов и любоваться разными НПЦ. Установка: Распакуйте архив в папку system, где расположена ваша игра и запустите Lineage 2 DK.exe , далее нажмите Develop mode. После этого Игра запустится в режиме разработчика. Нажмите Tab и вводите: <br />
+SV - (Skill Viewer) просмотр анимации скиллов <br />
+PV - (Pawn Viewer) просмотр одежды, оружия <br />
+NV - (NPC Viewer) просмотр нпс (всех нпс, можно погулять валакасом по крепе например)   </p>
+</li>
+</ul>
+<h2 id="client-side-stuff">Client Side stuff</h2>
+<p><a href="http://l2maxi.ru/java/faq/1697-manual-redaktirovanie-modeley-ukx-v-lineagenormalnyy.html" class="external-link">http://l2maxi.ru/java/faq/1697-manual-redaktirovanie-modeley-ukx-v-lineagenormalnyy.html</a> <br />
+<a href="https://maxcheaters.com/topic/240179-collection-l2-shares-updated-07042023google-drive/" class="external-link">https://maxcheaters.com/topic/240179-collection-l2-shares-updated-07042023google-drive/</a> <br />
+<a href="https://www.youtube.com/watch?v=IMMynGIoSR0" class="external-link">https://www.youtube.com/watch?v=IMMynGIoSR0</a> - effect <br />
+<img alt="" src="/img/pasted_img_20230415175922.png" />   </p>
+<h2 id="l2editor">L2Editor</h2>
+<p>Supported files: u, uax, ukx, unr, usx, utx <br />
+How to use Compiled: <br />
+1. Extract L2Editor-Compiled.zip to your Lineage II folder. <br />
+2. Open UnrealEd.exe <br />
+3. Enjoy! <br />
+Note: If you want to edit the L2Editor run options, edit UT2003.ini <br />
+Note: For Prelude client use Prelude-System.zip instead.   </p>
+<p>How to use Source: <br />
+1. Extract L2Editor-Source.zip. <br />
+2. Use Visual Studio 2013 Community Edition to build it. <br />
+3. Run System!GenerateLibs.bat to generate lib files for l2 dlls.   </p>
+<p>L2Editor based on L2 Prelude DLLs. (Build Maps using original files from NCSOFT as result can build correct Intensity Maps aka IntMap) <br />
+Checked on the chronicles Prelude, Interlude, HF, Helios-GameCost, Salvation-Kr.   </p>
+<p>Saves packages as Version 123 Licensee 0. <br />
+Opens native packages 111, 121. <br />
+Running on the original LineageEffect, LineageEffect_br, LineageWarrior from Salvation.   </p>
+<p>Problems and issues are still enough but I will continue to work on the availability of free time.   </p>
+<p>If you are interested in further development of the project, you can create issues: <br />
+<a href="https://bitbucket.org/lordofdest/l2editor/issues" class="external-link">https://bitbucket.org/lordofdest/l2editor/issues</a> <br />
+It is desirable with screenshots, video or any info that will help to quickly understand the problem.   </p>
+<p>If you are interested in the source code of this editor, you can contact with me. The options can be as follows: Exchange or simply handing over to people with a normal reputation on the forum.   </p>
+<p>All other questions are also in the PM or Skype lord0fdest.   </p>
+<p>Have a nice day!   </p>
+<p>Installation: <br />
+Replace original Prelude System folder in client to System from archive. <br />
+Features: <br />
+Build Intensity Maps. <br />
+And other stuff =p <br />
+Limitations: <br />
+Open/Save only Prelude Maps. <br />
+Known issues: <br />
+Crash on maps with AMover, AMovableStaticMesh. <br />
+Support: <br />
+At the moment I do not have free time to support this project. <br />
+Cookies: <br />
+UnrealEd-Prelude <br />
+UnEditor-Prelude-Complete-Package   </p>
+<p>P.S. <br />
+Maybe in future I try to share Interlude version of this Editor after fixing a lot of issues ;)   </p>
+<p>P.S.S <br />
+Have a nice day.   </p>
+<p>Edit 26/02/2020 <a href="https://drive.google.com/file/d/1qCVqTfuZe_NQug8a2DhVePdomnN5WqaH/view?usp=sharing" class="external-link">https://drive.google.com/file/d/1qCVqTfuZe_NQug8a2DhVePdomnN5WqaH/view?usp=sharing</a> <br />
+проект не полностью рабочей версии под версию движка 4.23.0.   </p>
+<h2 id="todo">TODO</h2>
+<ul>
+<li>
+<p>[ ] l2j server <br />
+Ueview guide   </p>
+</li>
+<li>
+<p>[ ] <a href="https://www.youtube.com/watch?v=OfoBiWhyrfE" class="external-link">Вытаскиваем из Lineage2 текстуры, анимацию и меши</a>   </p>
+</li>
+<li>[ ] <a href="https://www.youtube.com/watch?v=JcDQzCbMNqY" class="external-link">Компиляция  u - YouTube</a>   </li>
+<li>[ ] <a href="https://www.youtube.com/watch?v=XgQ3INqrXjc" class="external-link">Адаптирование Арморов - YouTube</a>   </li>
+<li>[ ] <a href="https://www.youtube.com/watch?v=lXOjLTmL9nA" class="external-link">https://www.youtube.com/watch?v=lXOjLTmL9nA</a>   </li>
+</ul>
+<p><a href="https://forum.zone-game.info/showthread.php?t=42513&amp;page=2" class="external-link">https://forum.zone-game.info/showthread.php?t=42513&amp;page=2</a>   </p>
+<p>Lighting <br />
+<a href="https://github.com/monocyte-games/ue-lightmap-debugger" class="external-link">https://github.com/monocyte-games/ue-lightmap-debugger</a> <br />
+<a href="https://forums.epicgames.com/udk/udk-development/level-design-and-creation/291247-i-hate-udk-lightmaps" class="external-link">https://forums.epicgames.com/udk/udk-development/level-design-and-creation/291247-i-hate-udk-lightmaps</a> <br />
+<a href="https://github.com/rdw-archive/RagnarokFileFormats/blob/master/GND.MD" class="external-link">https://github.com/rdw-archive/RagnarokFileFormats/blob/master/GND.MD</a> <br />
+<a href="https://maxcheaters.com/topic/217389-l2editor/" class="external-link" class="external-link">https://maxcheaters.com/topic/217389-l2editor/</a> <br />
+<a href="https://forum.zone-game.info/showthread.php?t=42513&amp;page=11" class="external-link">https://forum.zone-game.info/showthread.php?t=42513&amp;page=11</a> <br />
+<a href="https://michaeljcole.github.io/wiki.unrealengine.com/LightingTroubleshootingGuide/#invalid-lightmap-settings-when-converting-bsp-to-static-mesh" class="external-link">https://michaeljcole.github.io/wiki.unrealengine.com/LightingTroubleshootingGuide/#invalid-lightmap-settings-when-converting-bsp-to-static-mesh</a>   </p>
+<p><a href="https://www.gildor.org/smf/index.php/topic,7653.0.html" class="external-link">https://www.gildor.org/smf/index.php/topic,7653.0.html</a> wtf? <br />
+<a href="https://www.youtube.com/watch?v=YAZ9Wmg4tYo" class="external-link">https://www.youtube.com/watch?v=YAZ9Wmg4tYo</a> - unreal edit guide <br />
+<a href="https://www.gildor.org/smf/index.php/topic,151.0.html" class="external-link">https://www.gildor.org/smf/index.php/topic,151.0.html</a> - convert unreal to l2 <br />
+(static mesh/animations) <br />
+<a href="https://www.gildor.org/smf/index.php/topic,2988.30.html" class="external-link">https://www.gildor.org/smf/index.php/topic,2988.30.html</a> - ue4 port <br />
+<a href="https://www.youtube.com/watch?v=vLPvUV--yN0" class="external-link">https://www.youtube.com/watch?v=vLPvUV--yN0</a> - backface culling in blender <br />
+<a href="https://www.youtube.com/watch?v=AKqJ6_l9iik&amp;t=372s" class="external-link">https://www.youtube.com/watch?v=AKqJ6_l9iik&amp;t=372s</a> <br />
+<a href="https://www.youtube.com/watch?v=vBJ4t0ZYSJo" class="external-link">https://www.youtube.com/watch?v=vBJ4t0ZYSJo</a> <br />
+<a href="https://www.youtube.com/watch?v=IioWGDgtX1g" class="external-link">https://www.youtube.com/watch?v=IioWGDgtX1g</a>   </p>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>[ ] <a href="https://maxcheaters.com/topic/14091-how-to-make-your-own-model/" class="external-link">https://maxcheaters.com/topic/14091-how-to-make-your-own-model/</a>   </li>
+<li>[ ] <a href="https://www.youtube.com/watch?v=UCzqCskoOQI" class="external-link">https://www.youtube.com/watch?v=UCzqCskoOQI</a> (ueview guide)   </li>
+<li>[ ] <a href="https://docs.unrealengine.com/udk/Two/" class="external-link">https://docs.unrealengine.com/udk/Two/</a>   </li>
+<li>[ ] <a href="https://www.gildor.org/downloads" class="external-link">https://www.gildor.org/downloads</a>   </li>
+<li>[ ] <a href="http://rootware.ru/" class="external-link" class="external-link">http://rootware.ru/</a>   </li>
+<li>[ ] <a href="https://github.com/acmi" class="external-link">https://github.com/acmi</a>   </li>
+<li>[ ] <a href="https://www.acordero.org/projects/" class="external-link">https://www.acordero.org/projects/</a>   </li>
+<li>[ ] <a href="https://www.youtube.com/@KonstantinNosov/videos" class="external-link">https://www.youtube.com/@KonstantinNosov/videos</a>   </li>
+<li>[ ] <a href="https://l2crypt.com/l2-tools/" class="external-link">https://l2crypt.com/l2-tools/</a>   </li>
+<li>[ ] <a href="https://forummaxi.ru/tutorials/category/6-%25d1%2580%25d0%25b0%25d0%25b1%25d0%25be%25d1%2582%25d0%25b0-%25d1%2581-%25d0%25ba%25d0%25bb%25d0%25b8%25d0%25b5%25d0%25bd%25d1%2582%25d0%25be%25d0%25bc/" class="external-link">https://forummaxi.ru/tutorials/category/6-%25d1%2580%25d0%25b0%25d0%25b1%25d0%25be%25d1%2582%25d0%25b0-%25d1%2581-%25d0%25ba%25d0%25bb%25d0%25b8%25d0%25b5%25d0%25bd%25d1%2582%25d0%25be%25d0%25bc/</a>   </li>
+<li>[ ] <a href="https://cytologist11.rssing.com/chan-6721886/article5822-live.html" class="external-link" class="external-link">https://cytologist11.rssing.com/chan-6721886/article5822-live.html</a>   </li>
+<li>[ ] <a href="http://www.lineage2media.com/glowmodificationlineage2.html" class="external-link">http://www.lineage2media.com/glowmodificationlineage2.html</a>   </li>
+<li>[ ] <a href="https://forummaxi.ru/topic/79928-%D1%8D%D0%BA%D1%81%D0%BF%D0%BE%D1%80%D1%82-l2-3ds-max-%D1%8D%D1%84%D1%84%D0%B5%D0%BA%D1%82%D1%8B/" class="external-link">https://forummaxi.ru/topic/79928-%D1%8D%D0%BA%D1%81%D0%BF%D0%BE%D1%80%D1%82-l2-3ds-max-%D1%8D%D1%84%D1%84%D0%B5%D0%BA%D1%82%D1%8B/</a>   </li>
+<li>[ ] <a href="https://maxcheaters.com/topic/202062-l2-ultimate-collection/" class="external-link">https://maxcheaters.com/topic/202062-l2-ultimate-collection/</a>   </li>
+<li>[ ] <a href="http://rootware.ru/" class="external-link" class="external-link">http://rootware.ru/</a>wotgreal-package-exporter/   </li>
+<li>[ ] <a href="https://forum.zone-game.info/showthread.php?t=27688" class="external-link">https://forum.zone-game.info/showthread.php?t=27688</a>   </li>
+<li>[ ] <a href="https://www.cuzus.org/forums/showthread.php?tid=2382&amp;pid=24054#pid24054" class="external-link">https://www.cuzus.org/forums/showthread.php?tid=2382&amp;pid=24054#pid24054</a>   </li>
+<li>[ ] <a href="https://www.cuzus.org/forums/showthread.php?tid=3319" class="external-link">https://www.cuzus.org/forums/showthread.php?tid=3319</a>   </li>
+<li>[ ] <a href="https://cytologist11.rssing.com/chan-6721886/article5822-live.html" class="external-link" class="external-link">https://cytologist11.rssing.com/chan-6721886/article5822-live.html</a>   </li>
+</ul>
+<h2 id="extraction">Extraction</h2>
+<p><a href="https://github.com/Bigcheese/L2MapExtract/blob/master/unreal_package.bt" class="external-link">https://github.com/Bigcheese/L2MapExtract/blob/master/unreal_package.bt</a>   </p>
+<p>Unreal Lightmap... fix <br />
+<a href="https://www.youtube.com/watch?v=kRmyzF6A10U" class="external-link">https://www.youtube.com/watch?v=kRmyzF6A10U</a>   </p>
+<h2 id="notes">Notes</h2>
+<p>l2editor <br />
+<a href="https://maxcheaters.com/topic/217389-l2editor/" class="external-link" class="external-link">https://maxcheaters.com/topic/217389-l2editor/</a>   </p>
+<p>First version can open various maps, second save them with lighting   </p>
+<p>Simply epic.  I hope you are able to correct issue with lighting =)   </p>
+<p>L2Editor based on L2 Prelude DLLs. (Build Maps using original files from NCSOFT as result can build correct Intensity Maps aka IntMap)   </p>
+<p>Known issues: <br />
+Crash on maps with AMover, AMovableStaticMesh.   </p>
+<p>sorry for dig it up but who know the solution for solving black terrain? <br />
+set up ambient brightness in zone info. Then rebuild map. <br />
+<code>AmbiengtBrightness=255</code>   </p>
+<p>Has anyone managed to prevent the editor from crashing when trying to import armor animations (psa)? <br />
+use gildor's ut2004 editor for that.   </p>
+<p>I have the both the ut2003 and ut2004 version that is able to open .ukx packs created by the ut2down tool, but I can't open default C1 packs with it. I've been trying to port C6 textures into the C1 client. I found out how to manually add notifys, but I was unable to import sounds into the pack. I tried editing directly the C1 pack with the lordofdest-l2editor-25.10.2017 version, which seems to work, but it crashed when trying to add animations (skirts). <br />
+just resave them with l2editor   </p>
+<p>I have also tried the UnrealED from the latest patch of Unreal Tournament 2004, which can create .ukx files and is compatible with the ut2down encryption. <br />
+(I can open and edit .ukx files encrypted with the ut2down tool)   </p>
+<p>Intensity maps for terrain sectors: <br />
+1. Can be generated using FDynamicLight::SampleIntensity. <br />
+2. Extension for DevMode to call UTerrainSector::MakeIntensityMap() and ULevel::Serialize. <br />
+   For other objects Lineage2 using FMultiLightMap (before GoD which using Beast) <br />
+   Issues will be fixed after fail with loading UnreadEd on Prelude dlls or not fix if we have success. =)   </p>
+<p>Change in levelinfo in lighting ilumination to 255 ;)   </p>
+<hr />
+<p>Prelude -&gt; Prelude dll editor. Works good except terrain editor, but you can create it with different editors.   </p>
+<p>Interlude -&gt; Unfinished Interlude dll editor.   </p>
+<p>L2Editor -&gt; Universal client editor, supports all clients till fafurion. Some functions don't work. Breaks level light upon saving the map.   </p>
+<p>MAPS Unreal Engine -&gt; decompiled Unreal maps so u can modify and import actors from there. Even these which are not supported by your editor.   </p>
+<p>UedTexKit -&gt; allows to convert  unrealG16 .bmp heightmaps to G16 .tiff and backwards.   </p>
+<p>Geobuilder - creates geodata with client. U can setup startup map in l2.ini.   </p>
+<p>PandasBuildConv -&gt; converts client-builded geodata into _conv.dat   </p>
+<p>HDGE -&gt; geodata editor/converter</p></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="/my games.html">my games</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="/obs.html/tags/inbox/index.html">inbox</a></li>
+	<li><a class="backlink" href="/obs.html/tags/definition/index.html">definition</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A250276247340729183970455122305497051116{level}" class="graph_div"></div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B250276247340729183970455122305497051116{level}" level="{level}" note_temp_id="250276247340729183970455122305497051116" onclick="window.ObsHtmlGraph.run(this, '250276247340729183970455122305497051116', 'lineage 2 tools');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C250276247340729183970455122305497051116{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('/obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                <!-- end content -->
+            </div>
+            <div class="container_filler"></div>
+            <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+        </div>
+    </div>
+
+    <script>
+        function handle_toggle_side_bar(e) {
+            let header;
+            let pane;
+            let target = e.target;
+
+            // switch out the navbar button click for a header click
+            if (target.id == "left_pane_toggle_nav") {
+                target = document.getElementById("left_pane_fold_header");
+            } else if (target.id == "right_pane_toggle_nav") {
+                target = document.getElementById("right_pane_fold_header");
+            }
+
+            // get header and pane
+            if (target.classList.contains("fold_header")) {
+                header = target;
+                pane = target.parentElement;
+            } else {
+                pane = target;
+                header = target.getElementsByClassName("fold_header")[0];
+            }
+            toggle_side_bar(pane, header, true);
+            e.stopPropagation();
+        }
+        function handle_toggle_side_bar_button(e) {
+            document.getElementById("menu_toggle_button").click();
+            handle_toggle_side_bar(e);
+        }
+
+        function toggle_side_bar(pane, header, save) {
+            let active = pane.classList.contains("active");
+            if (active) {
+                disable_side_bar(pane, header, save);
+            } else {
+                enable_side_bar(pane, header, save);
+            }
+        }
+        function enable_side_bar(pane, header, save) {
+            pane.classList.add("active");
+            pane.removeEventListener("click", handle_toggle_side_bar);
+            header.addEventListener("click", handle_toggle_side_bar);
+            set_correct_header_symbol(header);
+            if (save) {
+                save_panel_folding_state(header, true);
+            }
+        }
+        function disable_side_bar(pane, header, save) {
+            pane.classList.remove("active");
+            pane.addEventListener("click", handle_toggle_side_bar);
+            header.removeEventListener("click", handle_toggle_side_bar);
+            set_correct_header_symbol(header);
+            if (save) {
+                save_panel_folding_state(header, false);
+            }
+        }
+        function set_correct_header_symbol(header) {
+            let pane = header.parentElement;
+            let symbol = [
+                [">", "<"],
+                ["<", ">"],
+            ];
+            symbol =
+                symbol[Number(header.classList.contains("right_pane_fold_header"))][
+                Number(pane.classList.contains("active"))
+                ];
+            console.log(symbol);
+            header.innerHTML = symbol;
+            return header;
+        }
+        function panel_folding_get_panel_name(header) {
+            return ["left", "right"][
+                Number(header.classList.contains("right_pane_fold_header"))
+            ];
+        }
+        function save_panel_folding_state(header, active) {
+            ls_set(
+                "pane_folding_state_" + panel_folding_get_panel_name(header),
+                Number(active)
+            );
+        }
+        function load_panel_folding_state(panel_name) {
+            val = ls_get("pane_folding_state_" + panel_name);
+            if (!val) {
+                return {exists: false, value: null};
+            }
+            return {exists: true, value: Boolean(Number(val))};
+        }
+        function set_pane_folding_start(left_header, right_header) {
+            // small screen = closed
+            let right_pane_enabled = true;
+            let left_pane_enabled = true;
+            let w = window.visualViewport.width;
+            if (w < 1000) {
+                left_pane_enabled = false;
+            }
+            if (w < 800) {
+                right_pane_enabled = false;
+            }
+
+            // get saved values if present
+            let rval = load_panel_folding_state("right");
+            if (rval["exists"]) {
+                right_pane_enabled = rval["value"];
+            }
+            let lval = load_panel_folding_state("left");
+            if (lval["exists"]) {
+                left_pane_enabled = lval["value"];
+            }
+
+            // default = enabled, so we only need to disable
+            if (!left_pane_enabled) {
+                disable_side_bar(
+                    document.getElementById("left_pane"),
+                    document.getElementById("left_pane_fold_header")
+                );
+            }
+            if (!right_pane_enabled) {
+                disable_side_bar(
+                    document.getElementById("right_pane"),
+                    document.getElementById("right_pane_fold_header")
+                );
+            }
+        }
+
+        function init_pane_folding(header) {
+            set_correct_header_symbol(header);
+            header.addEventListener("click", handle_toggle_side_bar);
+        }
+
+        set_pane_folding_start();
+        init_pane_folding(document.getElementById("left_pane_fold_header"));
+        init_pane_folding(document.getElementById("right_pane_fold_header"));
+
+        document
+            .getElementById("left_pane_toggle_nav")
+            .addEventListener("click", handle_toggle_side_bar_button);
+        document
+            .getElementById("right_pane_toggle_nav")
+            .addEventListener("click", handle_toggle_side_bar_button);
+    </script>
+
+    <script src="/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+ 
+
+</body>
+</html>

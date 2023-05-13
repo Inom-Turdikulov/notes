@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page information -->
+    <meta charset="UTF-8" />
+    <meta name="node_id" content="my awesome software list" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Set title -->
+    <title>Obsidian-Html/Notes</title>
+
+    <!-- Includes -->
+    
+<script src="/obs.html/static/obsidian_core.js"></script>
+<script src="/obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="/obs.html/static/master.css" />
+<script src="/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="/obs.html/static/flexsearch.bundle.js"></script>
+<script src="/obs.html/static/pako.js"></script>
+<script src="/obs.html/static/search.js"></script>
+<script src="/obs.html/static/dirtree.js"></script>
+
+
+    <!-- Onload tweaks -->
+    <script>
+        const CURRENT_NODE = "my awesome software list";
+        const HTML_URL_PREFIX = "";
+        const PAGE_DEPTH = 0;
+    </script>
+
+    <style>
+        .container{
+            font-size: 14pt;
+        }
+    </style>
+</head>
+
+<body class="theme-obs-light">
+    <div id="antiflash" style="display: none"></div>
+    <script>
+        document.getElementById("antiflash").style.display = "block";
+    </script>
+    <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+    <div id="page_holder" class="flex_col">
+        <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="/index.html" id="homelink" title="Clear screen and go to homepage">Obsidian-Html/Notes</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=my awesome software list" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="/obs.html/dir_index.html" title="View directory tree">
+                    <img src = "/obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="/obs.html/tags/index.html" title="Open tag view">
+            <img src = "/obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+        <div class="flex_row">
+            <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div class="dirtree"><button id="folder-1" class="dir-button" onclick="toggle_dir(this.id)">@BrianWKernighanProgrammingLanguage1988</button>
+<div id="folder-container-1" class="dir-container requires_js " path="/@BrianWKernighanProgrammingLanguage1988">
+	<button id="folder-2" class="dir-button" onclick="toggle_dir(this.id)">chapter_1</button>
+	<div id="folder-container-2" class="dir-container requires_js " path="/@BrianWKernighanProgrammingLanguage1988/chapter_1">
+		<ul class="dir-list">
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-10_show_escape_sequences.c"  class="external-link">1-10_show_escape_sequences</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-12_input_join_into_words.c"  class="external-link">1-12_input_join_into_words</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-13_input_histogram.c"  class="external-link">1-13_input_histogram</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-14_input_histogram_chars.c"  class="external-link">1-14_input_histogram_chars</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-15_temerature_conversion_using_func.c"  class="external-link">1-15_temerature_conversion_using_func</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-1_hello_world.c"  class="external-link">1-1_hello_world</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-2_printf_experiments.c"  class="external-link">1-2_printf_experiments</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-3_modify_temp_conversion.c"  class="external-link">1-3_modify_temp_conversion</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-4_celsius_to_fahrenheit.c"  class="external-link">1-4_celsius_to_fahrenheit</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-5_celsius_to_fahrenheit_reverse.c"  class="external-link">1-5_celsius_to_fahrenheit_reverse</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-8_wc_alternative.c"  class="external-link">1-8_wc_alternative</a></li>
+			<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988/chapter_1/1-9_fix_blanks.c"  class="external-link">1-9_fix_blanks</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+	</ul>
+</div>
+<button id="folder-3" class="dir-button" onclick="toggle_dir(this.id)">img</button>
+<div id="folder-container-3" class="dir-container requires_js " path="/img">
+	<ul class="dir-list">
+		<li><a class="" href="/img/Universal_Turing_machine.svg"  class="external-link">Universal_Turing_machine</a></li>
+		<li><a class="" href="/img/Unix_timeline.svg"  class="external-link">Unix_timeline</a></li>
+		<li><a class="" href="/img/colemak_dh_ansi.png"  class="external-link">colemak_dh_ansi</a></li>
+		<li><a class="" href="/img/mongolian-gerbil.png"  class="external-link">mongolian-gerbil</a></li>
+		<li><a class="" href="/img/pasted_img_20230102033318.png"  class="external-link">pasted_img_20230102033318</a></li>
+		<li><a class="" href="/img/pasted_img_20230415175922.png"  class="external-link">pasted_img_20230415175922</a></li>
+		<li><a class="" href="/img/screenshoot-zotero.png"  class="external-link">screenshoot-zotero</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><a class="" href="/!AST.excalidraw.html"  >!AST.excalidraw</a></li>
+	<li><a class="" href="/30 day drawing challenge.html"  >30 day drawing challenge</a></li>
+	<li><a class="" href="/@AlgorithmsComputerScience2005.html"  >@AlgorithmsComputerScience2005</a></li>
+	<li><a class="" href="/@AndreiPetrovichKiselyovAlgebraChast2006.html"  >@AndreiPetrovichKiselyovAlgebraChast2006</a></li>
+	<li><a class="" href="/@AndrewHuntPragmaticProgrammerYour2019.html"  >@AndrewHuntPragmaticProgrammerYour2019</a></li>
+	<li><a class="" href="/@AndrewLoomisFunPencilHow2013.html"  >@AndrewLoomisFunPencilHow2013</a></li>
+	<li><a class="" href="/@AndreyViktorovichStolyarovProgrammirovanieVvedenieProfessiyu2021b.html"  >@AndreyViktorovichStolyarovProgrammirovanieVvedenieProfessiyu2021b</a></li>
+	<li><a class="" href="/@ArielManzurGodotEngineGame2018.html"  >@ArielManzurGodotEngineGame2018</a></li>
+	<li><a class="" href="/@BrettSlatkinEffectivePython902020.html"  >@BrettSlatkinEffectivePython902020</a></li>
+	<li><a class="" href="/@BrianWKernighanProgrammingLanguage1988.html"  >@BrianWKernighanProgrammingLanguage1988</a></li>
+	<li><a class="" href="/@CaseyMuratoriHandmadeHero2014.html"  >@CaseyMuratoriHandmadeHero2014</a></li>
+	<li><a class="" href="/@CharlesPetzoldCodeHiddenLanguage2000.html"  >@CharlesPetzoldCodeHiddenLanguage2000</a></li>
+	<li><a class="" href="/@DavidFlanaganJavaScriptDefinitiveGuide2020.html"  >@DavidFlanaganJavaScriptDefinitiveGuide2020</a></li>
+	<li><a class="" href="/@DrewNeilModernVimCraft2018.html"  >@DrewNeilModernVimCraft2018</a></li>
+	<li><a class="" href="/@DrewNeilPracticalVimEdit2015.html"  >@DrewNeilPracticalVimEdit2015</a></li>
+	<li><a class="" href="/@EmelinAleksandrKratchayshiyKursShkolnoy.html"  >@EmelinAleksandrKratchayshiyKursShkolnoy</a></li>
+	<li><a class="" href="/@EricMatthesPythonCrashCourse2023.html"  >@EricMatthesPythonCrashCourse2023</a></li>
+	<li><a class="" href="/@GodotDocsBranch2023.html"  >@GodotDocsBranch2023</a></li>
+	<li><a class="" href="/@HarvardXCS50x2023.html"  >@HarvardXCS50x2023</a></li>
+	<li><a class="" href="/@IgorIriantoLearnVim2021.html"  >@IgorIriantoLearnVim2021</a></li>
+	<li><a class="" href="/@InterviewCakeCodingInterviewPractice.html"  >@InterviewCakeCodingInterviewPractice</a></li>
+	<li><a class="" href="/@JasonvanGumsterBlenderDummies4th2020.html"  >@JasonvanGumsterBlenderDummies4th2020</a></li>
+	<li><a class="" href="/@JayWengrowCommonsenseGuideData2020.html"  >@JayWengrowCommonsenseGuideData2020</a></li>
+	<li><a class="" href="/@KilpatrickDavidSvetOsveshchenie1988.html"  >@KilpatrickDavidSvetOsveshchenie1988</a></li>
+	<li><a class="" href="/@LucianoRamalhoFluentPython2021.html"  >@LucianoRamalhoFluentPython2021</a></li>
+	<li><a class="" href="/@PythonProgrammingFAQ2023.html"  >@PythonProgrammingFAQ2023</a></li>
+	<li><a class="" href="/@PythonStandardLibrary2023.html"  >@PythonStandardLibrary2023</a></li>
+	<li><a class="" href="/@PythonTutorial2023.html"  >@PythonTutorial2023</a></li>
+	<li><a class="" href="/@RobertSedgewickAlgorithms2014a.html"  >@RobertSedgewickAlgorithms2014a</a></li>
+	<li><a class="" href="/@RobertSedgewickAlgorithms2014b.html"  >@RobertSedgewickAlgorithms2014b</a></li>
+	<li><a class="" href="/@RusShulerHowDoesInternet2002.html"  >@RusShulerHowDoesInternet2002</a></li>
+	<li><a class="" href="/@ScottChaconProGit2022.html"  >@ScottChaconProGit2022</a></li>
+	<li><a class="" href="/@SteveMcConnellCodeComplete2004.html"  >@SteveMcConnellCodeComplete2004</a></li>
+	<li><a class="" href="/@ThomasHCormenAlgorithmsUnlocked2013.html"  >@ThomasHCormenAlgorithmsUnlocked2013</a></li>
+	<li><a class="" href="/@ThomasHCormenIntroductionAlgorithms2022.html"  >@ThomasHCormenIntroductionAlgorithms2022</a></li>
+	<li><a class="" href="/@TimothyBLeeInternetExplained2014.html"  >@TimothyBLeeInternetExplained2014</a></li>
+	<li><a class="" href="/ANSI C.html"  >ANSI C</a></li>
+	<li><a class="" href="/abstract syntax tree.html"  >abstract syntax tree</a></li>
+	<li><a class="" href="/algorithm.html"  >algorithm</a></li>
+	<li><a class="" href="/android (operating system).html"  >android (operating system)</a></li>
+	<li><a class="" href="/arch linux (and other distros).html"  >arch linux (and other distros)</a></li>
+	<li><a class="" href="/array (computer science).html"  >array (computer science)</a></li>
+	<li><a class="" href="/art.html"  >art</a></li>
+	<li><a class="" href="/ascii.html"  >ascii</a></li>
+	<li><a class="" href="/b-tree.html"  >b-tree</a></li>
+	<li><a class="" href="/backup.html"  >backup</a></li>
+	<li><a class="" href="/bibliography.html"  >bibliography</a></li>
+	<li><a class="" href="/bibtex.html"  >bibtex</a></li>
+	<li><a class="" href="/binary search algorithm.html"  >binary search algorithm</a></li>
+	<li><a class="" href="/binary search tree.html"  >binary search tree</a></li>
+	<li><a class="" href="/bitlbee.html"  >bitlbee</a></li>
+	<li><a class="" href="/blender.html"  >blender</a></li>
+	<li><a class="" href="/boolean data type.html"  >boolean data type</a></li>
+	<li><a class="" href="/boolean expression.html"  >boolean expression</a></li>
+	<li><a class="" href="/borg.html"  >borg</a></li>
+	<li><a class="" href="/brave (web browser).html"  >brave (web browser)</a></li>
+	<li><a class="" href="/btrfs.html"  >btrfs</a></li>
+	<li><a class="" href="/bytecode.html"  >bytecode</a></li>
+	<li><a class="" href="/c (programming language).html"  >c (programming language)</a></li>
+	<li><a class="" href="/c data types.html"  >c data types</a></li>
+	<li><a class="" href="/calendar.html"  >calendar</a></li>
+	<li><a class="" href="/camera.html"  >camera</a></li>
+	<li><a class="" href="/chemistry.html"  >chemistry</a></li>
+	<li><a class="" href="/chrome devtools.html"  >chrome devtools</a></li>
+	<li><a class="" href="/citation.html"  >citation</a></li>
+	<li><a class="" href="/code.html"  >code</a></li>
+	<li><a class="" href="/collection (abstract data type).html"  >collection (abstract data type)</a></li>
+	<li><a class="" href="/comics.html"  >comics</a></li>
+	<li><a class="" href="/command-line interface.html"  >command-line interface</a></li>
+	<li><a class="" href="/complex number.html"  >complex number</a></li>
+	<li><a class="" href="/computation.html"  >computation</a></li>
+	<li><a class="" href="/computational complexity.html"  >computational complexity</a></li>
+	<li><a class="" href="/computer.html"  >computer</a></li>
+	<li><a class="" href="/computer graphics.html"  >computer graphics</a></li>
+	<li><a class="" href="/computer memory.html"  >computer memory</a></li>
+	<li><a class="" href="/computer program.html"  >computer program</a></li>
+	<li><a class="" href="/computer programming.html"  >computer programming</a></li>
+	<li><a class="" href="/computer science.html"  >computer science</a></li>
+	<li><a class="" href="/computer science learning resources.html"  >computer science learning resources</a></li>
+	<li><a class="" href="/computer security.html"  >computer security</a></li>
+	<li><a class="" href="/computer software.html"  >computer software</a></li>
+	<li><a class="" href="/computing platform.html"  >computing platform</a></li>
+	<li><a class="" href="/conditional (computer programming).html"  >conditional (computer programming)</a></li>
+	<li><a class="" href="/control flow.html"  >control flow</a></li>
+	<li><a class="" href="/cooking.html"  >cooking</a></li>
+	<li><a class="" href="/copilot.html"  >copilot</a></li>
+	<li><a class="" href="/creamy mashed potatoes.html"  >creamy mashed potatoes</a></li>
+	<li><a class="" href="/cutlets.html"  >cutlets</a></li>
+	<li><a class="" href="/data structure.html"  >data structure</a></li>
+	<li><a class="" href="/data type.html"  >data type</a></li>
+	<li><a class="" href="/debugger.html"  >debugger</a></li>
+	<li><a class="" href="/development environment.html"  >development environment</a></li>
+	<li><a class="" href="/diff.html"  >diff</a></li>
+	<li><a class="" href="/digital electronics.html"  >digital electronics</a></li>
+	<li><a class="" href="/dm-crypt.html"  >dm-crypt</a></li>
+	<li><a class="" href="/dmenu.html"  >dmenu</a></li>
+	<li><a class="" href="/dmenu keybindings.html"  >dmenu keybindings</a></li>
+	<li><a class="" href="/do it yourself.html"  >do it yourself</a></li>
+	<li><a class="" href="/docker.html"  >docker</a></li>
+	<li><a class="" href="/duolingo.html"  >duolingo</a></li>
+	<li><a class="" href="/dwm.html"  >dwm</a></li>
+	<li><a class="" href="/dwm keyboard shortcuts.html"  >dwm keyboard shortcuts</a></li>
+	<li><a class="" href="/education.html"  >education</a></li>
+	<li><a class="" href="/elementary particle.html"  >elementary particle</a></li>
+	<li><a class="" href="/email.html"  >email</a></li>
+	<li><a class="" href="/english language.html"  >english language</a></li>
+	<li><a class="" href="/english language transcription.html"  >english language transcription</a></li>
+	<li><a class="" href="/escape sequence.html"  >escape sequence</a></li>
+	<li><a class="" href="/evaluation strategy.html"  >evaluation strategy</a></li>
+	<li><a class="" href="/exercise plan.html"  >exercise plan</a></li>
+	<li><a class="" href="/expression (computer science).html"  >expression (computer science)</a></li>
+	<li><a class="" href="/fibonacci sequence.html"  >fibonacci sequence</a></li>
+	<li><a class="" href="/file (command).html"  >file (command)</a></li>
+	<li><a class="" href="/finance.html"  >finance</a></li>
+	<li><a class="" href="/firefox.html"  >firefox</a></li>
+	<li><a class="" href="/floating-point arithmetic.html"  >floating-point arithmetic</a></li>
+	<li><a class="" href="/flowchart.html"  >flowchart</a></li>
+	<li><a class="" href="/function (computer programming).html"  >function (computer programming)</a></li>
+	<li><a class="" href="/functional programming.html"  >functional programming</a></li>
+	<li><a class="" href="/fzf.html"  >fzf</a></li>
+	<li><a class="" href="/game.html"  >game</a></li>
+	<li><a class="" href="/general-purpose programming language.html"  >general-purpose programming language</a></li>
+	<li><a class="" href="/getting things done (gtd).html"  >getting things done (gtd)</a></li>
+	<li><a class="" href="/git.html"  >git</a></li>
+	<li><a class="" href="/git tips.html"  >git tips</a></li>
+	<li><a class="" href="/github.html"  >github</a></li>
+	<li><a class="" href="/gitlab.html"  >gitlab</a></li>
+	<li><a class="" href="/gnu compiler collection.html"  >gnu compiler collection</a></li>
+	<li><a class="" href="/gnu privacy guard.html"  >gnu privacy guard</a></li>
+	<li><a class="" href="/gnu project debugger.html"  >gnu project debugger</a></li>
+	<li><a class="" href="/gnu readline.html"  >gnu readline</a></li>
+	<li><a class="" href="/gnu sed.html"  >gnu sed</a></li>
+	<li><a class="" href="/godot engine.html"  >godot engine</a></li>
+	<li><a class="" href="/government.html"  >government</a></li>
+	<li><a class="" href="/guido van rossum.html"  >guido van rossum</a></li>
+	<li><a class="" href="/hacker news.html"  >hacker news</a></li>
+	<li><a class="" href="/haskell.html"  >haskell</a></li>
+	<li><a class="" href="/heap (data structure).html"  >heap (data structure)</a></li>
+	<li><a class="" href="/hidden file and hidden directory (.dotfiles).html"  >hidden file and hidden directory (.dotfiles)</a></li>
+	<li><a class="" href="/high-level programming language.html"  >high-level programming language</a></li>
+	<li><a class="" href="/home construction.html"  >home construction</a></li>
+	<li><a class="" href="/how do i work with contacts.html"  >how do i work with contacts</a></li>
+	<li><a class="" href="/how do i work with email.html"  >how do i work with email</a></li>
+	<li><a class="" href="/how do i work with instant messages.html"  >how do i work with instant messages</a></li>
+	<li><a class="" href="/how do i work with the calendar.html"  >how do i work with the calendar</a></li>
+	<li><a class="" href="/how i learn computer programming.html"  >how i learn computer programming</a></li>
+	<li><a class="" href="/how i study computer science.html"  >how i study computer science</a></li>
+	<li><a class="" href="/how i study english language.html"  >how i study english language</a></li>
+	<li><a class="" href="/how i study mathematics.html"  >how i study mathematics</a></li>
+	<li><a class="" href="/how to solve it.html"  >how to solve it</a></li>
+	<li><a class="" href="/how to study.html"  >how to study</a></li>
+	<li><a class="" href="/htop.html"  >htop</a></li>
+	<li><a class="" href="/hugo.html"  >hugo</a></li>
+	<li><a class="" href="/immutable object.html"  >immutable object</a></li>
+	<li><a class="" href="/in real life (irl).html"  >in real life (irl)</a></li>
+	<li><a class="" href="/increment and decrement operators.html"  >increment and decrement operators</a></li>
+	<li><a class="" href="/index.html"  >index</a></li>
+	<li><a class="" href="/initialization (programming).html"  >initialization (programming)</a></li>
+	<li><a class="" href="/inkscape.html"  >inkscape</a></li>
+	<li><a class="" href="/instant messaging.html"  >instant messaging</a></li>
+	<li><a class="" href="/iterator.html"  >iterator</a></li>
+	<li><a class="" href="/java (programming language).html"  >java (programming language)</a></li>
+	<li><a class="" href="/keyboard shortcut.html"  >keyboard shortcut</a></li>
+	<li><a class="" href="/khan academy.html"  >khan academy</a></li>
+	<li><a class="" href="/kitty (terminal emulator).html"  >kitty (terminal emulator)</a></li>
+	<li><a class="" href="/krita.html"  >krita</a></li>
+	<li><a class="" href="/latex.html"  >latex</a></li>
+	<li><a class="" href="/ledger.html"  >ledger</a></li>
+	<li><a class="" href="/leetcode.html"  >leetcode</a></li>
+	<li><a class="" href="/light.html"  >light</a></li>
+	<li><a class="" href="/lineage 2 tools.html"  >lineage 2 tools</a></li>
+	<li><a class="" href="/linux.html"  >linux</a></li>
+	<li><a class="" href="/list (abstract data type).html"  >list (abstract data type)</a></li>
+	<li><a class="" href="/literature.html"  >literature</a></li>
+	<li><a class="" href="/logarithm (logs).html"  >logarithm (logs)</a></li>
+	<li><a class="" href="/logic.html"  >logic</a></li>
+	<li><a class="" href="/low-level programming language.html"  >low-level programming language</a></li>
+	<li><a class="" href="/magic sysrq key.html"  >magic sysrq key</a></li>
+	<li><a class="" href="/maintenance.html"  >maintenance</a></li>
+	<li><a class="" href="/markdown.html"  >markdown</a></li>
+	<li><a class="" href="/mathematics.html"  >mathematics</a></li>
+	<li><a class="" href="/mathjax.html"  >mathjax</a></li>
+	<li><a class="" href="/media (communication).html"  >media (communication)</a></li>
+	<li><a class="" href="/microsoft windows.html"  >microsoft windows</a></li>
+	<li><a class="" href="/miniflux.html"  >miniflux</a></li>
+	<li><a class="" href="/mouseless workflow.html"  >mouseless workflow</a></li>
+	<li><a class="" href="/mpv.html"  >mpv</a></li>
+	<li><a class="" href="/multi-factor authentication.html"  >multi-factor authentication</a></li>
+	<li><a class="" href="/multiplication table.html"  >multiplication table</a></li>
+	<li><a class="" href="/my arch linux enviroment.html"  >my arch linux enviroment</a></li>
+	<li><a class="" href="/my art.html"  >my art</a></li>
+	<li><a class="" href="/my articles list (publishing).html"  >my articles list (publishing)</a></li>
+	<li><a class="active" href="/my awesome software list.html"  >my awesome software list</a></li>
+	<li><a class="" href="/my backend developer roadmap.html"  >my backend developer roadmap</a></li>
+	<li><a class="" href="/my backup plan.html"  >my backup plan</a></li>
+	<li><a class="" href="/my books.html"  >my books</a></li>
+	<li><a class="" href="/my buy list.html"  >my buy list</a></li>
+	<li><a class="" href="/my computer science roadmap.html"  >my computer science roadmap</a></li>
+	<li><a class="" href="/my everyday life (routine).html"  >my everyday life (routine)</a></li>
+	<li><a class="" href="/my games.html"  >my games</a></li>
+	<li><a class="" href="/my inventory.html"  >my inventory</a></li>
+	<li><a class="" href="/my music.html"  >my music</a></li>
+	<li><a class="" href="/my pet projects.html"  >my pet projects</a></li>
+	<li><a class="" href="/my pictures.html"  >my pictures</a></li>
+	<li><a class="" href="/my python developer roadmap.html"  >my python developer roadmap</a></li>
+	<li><a class="" href="/my shell scripts.html"  >my shell scripts</a></li>
+	<li><a class="" href="/my videos.html"  >my videos</a></li>
+	<li><a class="" href="/my watched movies.html"  >my watched movies</a></li>
+	<li><a class="" href="/mysql.html"  >mysql</a></li>
+	<li><a class="" href="/neomutt.html"  >neomutt</a></li>
+	<li><a class="" href="/neovim (text editor).html"  >neovim (text editor)</a></li>
+	<li><a class="" href="/news.html"  >news</a></li>
+	<li><a class="" href="/nnn file manager.html"  >nnn file manager</a></li>
+	<li><a class="" href="/nomad sculpt.html"  >nomad sculpt</a></li>
+	<li><a class="" href="/notes types.html"  >notes types</a></li>
+	<li><a class="" href="/null function.html"  >null function</a></li>
+	<li><a class="" href="/null pointer.html"  >null pointer</a></li>
+	<li><a class="" href="/object-oriented programming.html"  >object-oriented programming</a></li>
+	<li><a class="" href="/obsidian.html"  >obsidian</a></li>
+	<li><a class="" href="/online shopping.html"  >online shopping</a></li>
+	<li><a class="" href="/operand.html"  >operand</a></li>
+	<li><a class="" href="/operating system.html"  >operating system</a></li>
+	<li><a class="" href="/operator (computer programming).html"  >operator (computer programming)</a></li>
+	<li><a class="" href="/pacman (software).html"  >pacman (software)</a></li>
+	<li><a class="" href="/pandoc.html"  >pandoc</a></li>
+	<li><a class="" href="/pass (software).html"  >pass (software)</a></li>
+	<li><a class="" href="/patch (unix).html"  >patch (unix)</a></li>
+	<li><a class="" href="/pattern matching.html"  >pattern matching</a></li>
+	<li><a class="" href="/photography.html"  >photography</a></li>
+	<li><a class="" href="/physics.html"  >physics</a></li>
+	<li><a class="" href="/postgresql.html"  >postgresql</a></li>
+	<li><a class="" href="/printf format string.html"  >printf format string</a></li>
+	<li><a class="" href="/procedural programming.html"  >procedural programming</a></li>
+	<li><a class="" href="/programmer (software developer).html"  >programmer (software developer)</a></li>
+	<li><a class="" href="/programming language.html"  >programming language</a></li>
+	<li><a class="" href="/programming paradigm.html"  >programming paradigm</a></li>
+	<li><a class="" href="/programming principles.html"  >programming principles</a></li>
+	<li><a class="" href="/pseudocode.html"  >pseudocode</a></li>
+	<li><a class="" href="/public-key cryptography.html"  >public-key cryptography</a></li>
+	<li><a class="" href="/puzzle english.html"  >puzzle english</a></li>
+	<li><a class="" href="/puzzle english learning by plan.html"  >puzzle english learning by plan</a></li>
+	<li><a class="" href="/pycharm.html"  >pycharm</a></li>
+	<li><a class="" href="/python.html"  >python</a></li>
+	<li><a class="" href="/qmk.html"  >qmk</a></li>
+	<li><a class="" href="/readability.html"  >readability</a></li>
+	<li><a class="" href="/retroarch.html"  >retroarch</a></li>
+	<li><a class="" href="/russian language.html"  >russian language</a></li>
+	<li><a class="" href="/rust (programming language).html"  >rust (programming language)</a></li>
+	<li><a class="" href="/sc-im.html"  >sc-im</a></li>
+	<li><a class="" href="/science.html"  >science</a></li>
+	<li><a class="" href="/self-hosting (web services).html"  >self-hosting (web services)</a></li>
+	<li><a class="" href="/set (abstract data type).html"  >set (abstract data type)</a></li>
+	<li><a class="" href="/shebang (unix).html"  >shebang (unix)</a></li>
+	<li><a class="" href="/side effect (computer science).html"  >side effect (computer science)</a></li>
+	<li><a class="" href="/sleep.html"  >sleep</a></li>
+	<li><a class="" href="/smartphone.html"  >smartphone</a></li>
+	<li><a class="" href="/sniprun.html"  >sniprun</a></li>
+	<li><a class="" href="/software testing.html"  >software testing</a></li>
+	<li><a class="" href="/spaced repetition.html"  >spaced repetition</a></li>
+	<li><a class="" href="/sq3r method.html"  >sq3r method</a></li>
+	<li><a class="" href="/stack overflow.html"  >stack overflow</a></li>
+	<li><a class="" href="/statement (computer science).html"  >statement (computer science)</a></li>
+	<li><a class="" href="/string literal.html"  >string literal</a></li>
+	<li><a class="" href="/structured programming.html"  >structured programming</a></li>
+	<li><a class="" href="/suckless.org.html"  >suckless.org</a></li>
+	<li><a class="" href="/surfingkeys.html"  >surfingkeys</a></li>
+	<li><a class="" href="/switch to neovim path.html"  >switch to neovim path</a></li>
+	<li><a class="" href="/syncthing.html"  >syncthing</a></li>
+	<li><a class="" href="/telekasten.nvim.html"  >telekasten.nvim</a></li>
+	<li><a class="" href="/telescope.nvim.html"  >telescope.nvim</a></li>
+	<li><a class="" href="/the python standard library.html"  >the python standard library</a></li>
+	<li><a class="" href="/time complexity.html"  >time complexity</a></li>
+	<li><a class="" href="/truncation.html"  >truncation</a></li>
+	<li><a class="" href="/turing complete.html"  >turing complete</a></li>
+	<li><a class="" href="/turing machine.html"  >turing machine</a></li>
+	<li><a class="" href="/twitch (service).html"  >twitch (service)</a></li>
+	<li><a class="" href="/type conversion.html"  >type conversion</a></li>
+	<li><a class="" href="/unicode.html"  >unicode</a></li>
+	<li><a class="" href="/unix.html"  >unix</a></li>
+	<li><a class="" href="/variable (computer science).html"  >variable (computer science)</a></li>
+	<li><a class="" href="/vector graphics.html"  >vector graphics</a></li>
+	<li><a class="" href="/video acceleration api.html"  >video acceleration api</a></li>
+	<li><a class="" href="/vim keycodes.html"  >vim keycodes</a></li>
+	<li><a class="" href="/virtual machine.html"  >virtual machine</a></li>
+	<li><a class="" href="/vr photography (virtual-reality photography).html"  >vr photography (virtual-reality photography)</a></li>
+	<li><a class="" href="/word (computer architecture).html"  >word (computer architecture)</a></li>
+	<li><a class="" href="/work (human activity).html"  >work (human activity)</a></li>
+	<li><a class="" href="/youtube.html"  >youtube</a></li>
+	<li><a class="" href="/z shell.html"  >z shell</a></li>
+	<li><a class="" href="/zathura.html"  >zathura</a></li>
+	<li><a class="" href="/zen of python.html"  >zen of python</a></li>
+	<li><a class="" href="/zero-based numbering.html"  >zero-based numbering</a></li>
+	<li><a class="" href="/zettelkasten.html"  >zettelkasten</a></li>
+	<li><a class="" href="/zotero.html"  >zotero</a></li>
+</ul>
+</div>
+    </div>
+</div>
+            <div class="container">
+                <embeddedtitle>my awesome software list</embeddedtitle>
+<div class="content"><p>This is a list my daily-used software. Some of them described in more details in <br />
+other notes.   </p>
+<p>Check also <a href="/my%20shell%20scripts.html">my shell scripts</a> and <br />
+<a href="/hidden%20file%20and%20hidden%20directory%20%28.dotfiles%29.html">dotfiles</a>.   </p>
+<h2 id="favorites">Favorites</h2>
+<h3 id="tier-1">Tier 1</h3>
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/C2x" class="external-link">C2x</a> - next version of the C programming <br />
+  language standard, <a href="/c%20%28programming%20language%29.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://www.python.org/" class="external-link">Python</a> - general-purpose programming language, <br />
+<a href="/python.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://www.rust-lang.org/" class="external-link">Rust</a> - systems programming language, <br />
+<a href="/rust%20%28programming%20language%29.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://neovim.io/" class="external-link">Neovim</a> - vim-fork focused on extensibility and agility, <br />
+<a href="/neovim%20%28text%20editor%29.html">more info</a>   </p>
+</li>
+</ul>
+<h3 id="tier-2">Tier 2</h3>
+<ul>
+<li>
+<p><a href="https://www.blender.org/" class="external-link">Blender</a>, open-source 3D computer graphics software <br />
+  tool set, <a href="/blender.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://krita.org/en/" class="external-link">Krita</a>, open source painting program, <br />
+<a href="/krita.html">more info</a>   </p>
+</li>
+</ul>
+<h3 id="tier-3">Tier 3</h3>
+<ul>
+<li>
+<p><a href="https://godotengine.org/" class="external-link">Godot Engine</a>, free and open source 2D and 3D game <br />
+  engine, <a href="/godot%20engine.html">godot engine</a>   </p>
+</li>
+<li>
+<p><a href="https://www.darktable.org/" class="external-link">darktable</a> - photography workflow application and <br />
+  raw developer   </p>
+</li>
+<li>
+<p><a href="https://natrongithub.github.io/" class="external-link">Natron</a>, open source compositing software   </p>
+</li>
+<li><a href="https://inkscape.org/" class="external-link">Inkscape</a>, open source vector graphics editor, <br />
+<a href="/inkscape.html">more info</a>   </li>
+</ul>
+<h2 id="programming">Programming</h2>
+<ul>
+<li>
+<p><a href="https://gcc.gnu.org/" class="external-link">GCC</a> - GNU Compiler Collection, <br />
+<a href="/gnu%20compiler%20collection.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://obsidian.md/" class="external-link">Obsidian</a> - a knowledge base that works on local <br />
+  Markdown files, <a href="/obsidian.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://www.jetbrains.com/pycharm/" class="external-link">Pycharm</a> - Python IDE for professional <br />
+  developers, <a href="/pycharm.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://www.gnu.org/software/gdb/" class="external-link">GDB</a> - GNU Project debugger, <br />
+<a href="/gnu%20project%20debugger.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://git-scm.com/" class="external-link">Git</a> - distributed version control system, <br />
+<a href="/git.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://www.docker.com/" class="external-link">Docker</a> - set of platform as service products that <br />
+  use OS-level virtualization to deliver software in packages called containers, <br />
+<a href="/docker.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://github.com/andmarti1424/sc-im" class="external-link">sc-im</a> - vim-like spreadsheet <br />
+  calculator/editor, <a href="/sc-im.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="http://visidata.org/" class="external-link">visidata</a> - interactive multi-tool for tabular data   </p>
+</li>
+<li>
+<p><a href="https://locust.io/" class="external-link">locust</a> - An open source load testing tool   </p>
+</li>
+<li>
+<p><a href="https://stedolan.github.io/jq/" class="external-link">jq</a> - jq is like sed for JSON data, <br />
+  &lt;<a href="https://stedolan.github.io/jq/tutorial/&gt;" class="external-link">https://stedolan.github.io/jq/tutorial/&gt;</a>   </p>
+</li>
+<li>
+<p><a href="https://github.com/BurntSushi/xsv" class="external-link">xsv</a> - indexing, slicing, analyzing, <br />
+  splitting and joining CSV files   </p>
+</li>
+<li>
+<p><a href="https://github.com/tmux/tmux/wiki" class="external-link">tmux</a> - tmux is a terminal multiplexer, <br />
+  switch between several programs in one terminal   </p>
+</li>
+<li>
+<p><a href="https://www.zsh.org/" class="external-link">ZSH</a> - Unix shell that can be used as an interactive <br />
+  login shell and as a command interpreter for shell scripting   </p>
+</li>
+<li>
+<p><a href="https://ipython.org/" class="external-link">ipython</a> - interactive python command shell   </p>
+</li>
+<li>
+<p><a href="https://github.com/junegunn/fzf" class="external-link">fzf</a> - general-purpose command-line fuzzy <br />
+  finder, <a href="/fzf.html">fzf</a>   </p>
+</li>
+<li>
+<p><a href="https://github.com/sharkdp/fd" class="external-link">fd</a> - A simple, fast and user-friendly <br />
+  alternative to \'find\'   </p>
+</li>
+<li>
+<p><a href="https://github.com/BurntSushi/ripgrep" class="external-link">ripgrep</a> - recursively searches the <br />
+  current directory for a regex pattern   </p>
+</li>
+<li>
+<p><a href="https://pdfgrep.org/" class="external-link">pdfgrep</a> - search text in PDF files   </p>
+</li>
+<li>
+<p><a href="https://github.com/cespare/reflex" class="external-link">reflex</a> - watch a directory and rerun a <br />
+  command when certain files change   </p>
+</li>
+<li>
+<p><a href="https://tesseract-ocr.github.io/" class="external-link">tesseract</a> - command-line OCR engine   </p>
+</li>
+<li>
+<p><a href="https://www.sqlite.org/" class="external-link">sqlite</a> - a small, fast, self-contained, <br />
+  high-reliability, full-featured, SQL database engine   </p>
+</li>
+<li>
+<p><a href="https://www.gnu.org/software/parallel/" class="external-link">parallel</a> - Build and execute shell <br />
+  command lines from standard input in parallel   </p>
+</li>
+<li>
+<p><a href="https://github.com/Xfennec/progress" class="external-link">progress</a> - Coreutils Progress Viewer   </p>
+</li>
+<li><a href="https://cli.github.com/" class="external-link">github-cli</a> - The GitHub CLI   </li>
+<li>
+<p><a href="https://gitlab.com/gitlab-org/cli/" class="external-link">glab</a> - The GitLab CLI   </p>
+</li>
+<li>
+<p><a href="https://scipy.org/" class="external-link">scipy</a> - Fundamental algorithms for scientific computing <br />
+  in Python   </p>
+</li>
+<li>
+<p><a href="https://jupyter.org/" class="external-link">jupyter</a> - interactive computing across all programming <br />
+  languages   </p>
+</li>
+<li>
+<p><a href="https://numpy.org/" class="external-link">numpy</a> - the fundamental package for scientific computing <br />
+  with Python   </p>
+</li>
+<li>
+<p><a href="https://www.gnu.org/software/indent/" class="external-link">indent</a> - GNU Indent, make code easier <br />
+  to read   </p>
+</li>
+<li>
+<p><a href="https://www.ansible.com/" class="external-link">ansible</a> - Ansible is a radically simple IT <br />
+  automation platform that makes your applications and systems easier to deploy   </p>
+</li>
+<li>
+<p><a href="https://github.com/jarun/nnn" class="external-link">NNN (n³)</a> - nnn (n³) is a full-featured <br />
+  terminal file manager, <a href="/nnn%20file%20manager.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://github.com/dragfire/leetup" class="external-link">leetup</a> - command line tool to solve <br />
+<a href="/leetcode.html">leetcode</a> problems   </p>
+</li>
+</ul>
+<h2 id="internet">Internet</h2>
+<ul>
+<li>
+<p><a href="https://brave.com/" class="external-link">Brave</a> - modern, fast and private browser, based on <br />
+  Chromium, <a href="/brave%20%28web%20browser%29.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://neomutt.org/" class="external-link">NeoMutt</a> - message user agent (MUA), <br />
+<a href="/neomutt.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://desktop.telegram.org/" class="external-link">Telegram Desktop</a> - Telegram Desktop   </p>
+</li>
+<li>
+<p><a href="https://www.bitlbee.org/" class="external-link">bitlbee</a> - IRC to other chat networks gateway, <br />
+<a href="/bitlbee.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://www.mozilla.org/en-US/firefox/new/" class="external-link">Firefox</a> - web browser, <br />
+<a href="/firefox.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="/surfingkeys.html">surfingkeys</a> - keyboard-based navigation in web browser   </p>
+</li>
+<li><a href="https://slack.com/" class="external-link">slack-desktop</a> - Slack Desktop for Linux   </li>
+<li><a href="https://discord.com/" class="external-link">discord</a> - Discord Instant Messenger   </li>
+<li><a href="https://lynx.invisible-island.net/" class="external-link">lynx</a> - text-based web browser   </li>
+</ul>
+<h2 id="graphics">Graphics</h2>
+<ul>
+<li><a href="https://www.audacityteam.org/" class="external-link">Audacity</a> - multi-track audio editor   </li>
+<li><a href="https://github.com/naelstrof/maim" class="external-link">maim</a> - take screenshots of your desktop   </li>
+<li>
+<p><a href="https://imagemagick.org/index.php" class="external-link">imagemagic</a> - create, edit, compose, or <br />
+  convert digital images   </p>
+</li>
+<li>
+<p><a href="https://solvespace.com/index.pl" class="external-link">SolveSpace</a> - 3D parametric/interactive CAD   </p>
+</li>
+<li><a href="https://nomadsculpt.com/" class="external-link">Nomad Sculpt</a>, 3D sculpting software, <br />
+<a href="/nomad%20sculpt.html">more info</a>   </li>
+</ul>
+<h2 id="utilities">Utilities</h2>
+<ul>
+<li>
+<p><a href="https://sw.kovidgoyal.net/kitty/" class="external-link">kitty</a> - The fast, feature-rich, GPU based <br />
+  terminal emulator   </p>
+</li>
+<li>
+<p><a href="https://sites.google.com/site/tstyblo/wmctrl" class="external-link">wmctrl</a> - command line tool to <br />
+  interact with an EWMH/NetWM compatible X Window Manager   </p>
+</li>
+<li>
+<p><a href="https://aria2.github.io/" class="external-link">aria2c</a> - download utility (optimized for files)   </p>
+</li>
+<li><a href="https://github.com/debauchee/barrier" class="external-link">barrier</a> - Open-source KVM software   </li>
+<li>
+<p><a href="https://wiki.gnome.org/Projects/GIO" class="external-link">gio</a> - GIO is a library providing core <br />
+  application building blocks for modern desktop and server applications   </p>
+</li>
+<li>
+<p><a href="https://lsyncd.github.io/lsyncd/" class="external-link">lsyncd</a> - synchronization tool for local <br />
+  (same machine) and remote (ssh) targets   </p>
+</li>
+<li>
+<p><a href="https://htop.dev/" class="external-link">htop</a> - cross-platform interactive process viewer, <br />
+<a href="/htop.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://www.gnu.org/software/wget/" class="external-link">wget</a> - download utility   </p>
+</li>
+<li><a href="https://github.com/raboof/nethogs" class="external-link">nethogs</a> - network monitoring   </li>
+<li>
+<p><a href="http://www.figlet.org/" class="external-link">figlet</a> - making large letters out of ordinary text <br />
+  (alternative is pyfiglet)   </p>
+</li>
+<li>
+<p><a href="https://github.com/Talinx/jp2a/" class="external-link">jp2a</a> - convert images to ASCII or retell   </p>
+</li>
+<li><a href="https://isync.sourceforge.io/" class="external-link">isync</a> - Synchronizes mailboxes   </li>
+<li><a href="https://marlam.de/msmtp/" class="external-link">msmtp</a> - SMTP client   </li>
+<li>
+<p><a href="https://github.com/actionless/pikaur" class="external-link">pikaur</a> - AUR helper with minimal <br />
+  dependencies   </p>
+</li>
+<li>
+<p><a href="https://www.samba.org/" class="external-link">samba</a> - Samba is the standard Windows <br />
+  interoperability suite of programs for Linux and Unix. Contains various <br />
+  utilities for file and print sharing, including the SMB/CIFS client and <br />
+  server.   </p>
+</li>
+<li>
+<p><a href="https://qmk.fm/" class="external-link">qmk</a> - Open source keyboard firmware for Atmel AVR and ARM <br />
+  controllers   </p>
+</li>
+<li>
+<p><a href="https://www.isc.org/downloads/bind/" class="external-link">bind</a> - enables you to publish your <br />
+  domain names on the Internet, provide dig, nslookup and other tools   </p>
+</li>
+<li>
+<p><a href="https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/" class="external-link">pdftk</a> - pdftk is a <br />
+  simple tool for doing everyday things with PDF documents   </p>
+</li>
+<li>
+<p><a href="https://net-tools.sourceforge.io/" class="external-link">net-tools</a> - the collection of base <br />
+  networking utilities for Linux   </p>
+</li>
+<li>
+<p><a href="https://remmina.org/" class="external-link">remmina</a> - remote access screen and file sharing   </p>
+</li>
+</ul>
+<h2 id="multimedia">Multimedia</h2>
+<ul>
+<li>
+<p><a href="https://pwmt.org/projects/zathura/" class="external-link">zathrua</a> - Document viewer, <br />
+<a href="/zathura.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://github.com/paoloap/zaread" class="external-link">zared</a> - E-Book and Office document reader   </p>
+</li>
+<li>
+<p><a href="https://ffmpeg.org/" class="external-link">ffmpeg</a> - a complete, cross-platform solution to record, <br />
+  convert and stream audio and video   </p>
+</li>
+<li>
+<p><a href="https://www.strawberrymusicplayer.org/" class="external-link">strawberry</a> - cross-platform music <br />
+  player and music collection organizer   </p>
+</li>
+<li>
+<p><a href="https://sr.ht/~exec64/imv/" class="external-link">imv</a> - command line image viewer intended for use <br />
+  with tiling window managers. Support SVG!   </p>
+</li>
+<li>
+<p><a href="https://mpv.io/" class="external-link">mpv</a> - a free, open source, and cross-platform media player   </p>
+</li>
+<li>
+<p><a href="https://github.com/krathalan/wtwitch" class="external-link">wtwitch</a> - a terminal program for <br />
+  Twitch, check also <a href="file://$HOME/.local/bin/wtwitch-check" class="external-link">wtwitch-check</a>   </p>
+</li>
+<li>
+<p><a href="https://github.com/yt-dlp/yt-dlp" class="external-link">yt-dlp</a>, download videos from YouTube or <br />
+  other video platforms   </p>
+</li>
+<li>
+<p><a href="https://github.com/pystardust/ytfzf" class="external-link">ytfzf</a> - POSIX script that helps you <br />
+  find and download YouTube videos   </p>
+</li>
+<li>
+<p><a href="https://www.retroarch.com/" class="external-link">RetroArch</a> - frontend for emulators, game engines <br />
+  and media players, <a href="/retroarch.html">more info</a>   </p>
+</li>
+</ul>
+<h2 id="services">Services</h2>
+<ul>
+<li>
+<p><a href="https://cht.sh/:help" class="external-link">cht.sh</a> community driven documentation repositories, <br />
+  integration <a href="file://$HOME/.local/bin/cht.sh" class="external-link">cht.sh</a>   </p>
+</li>
+<li>
+<p><a href="https://caniuse.com/" class="external-link">caniuse</a> support tables for HTML5, CSS3, etc.   </p>
+</li>
+<li>
+<p><a href="https://crontab.guru/" class="external-link">crontab guru</a> - the quick and simple editor for <br />
+  crontab schedule expressions   </p>
+</li>
+<li>
+<p><a href="https://healthchecks.io/" class="external-link">healthchecks</a> - cron job monitoring   </p>
+</li>
+</ul>
+<h2 id="security">Security</h2>
+<ul>
+<li>
+<p><a href="https://www.ledger-cli.org/" class="external-link">ledger</a> - Command-Line Accounting, <br />
+<a href="/ledger.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://www.passwordstore.org/" class="external-link">pass</a> - the standard Unix password manager, <br />
+<a href="/pass%20%28software%29.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://gnupg.org/" class="external-link">GPG</a> - encrypt and sign your data and communications, <br />
+<a href="/gnu%20privacy%20guard.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://firejail.wordpress.com" class="external-link">firejail</a> - SUID sandbox program that reduces <br />
+  the risk of security breaches   </p>
+</li>
+</ul>
+<h2 id="data-transferring">Data transferring</h2>
+<ul>
+<li>
+<p><a href="https://curl.se/" class="external-link">curl</a> - command line tool and library for transferring data <br />
+  with URLs   </p>
+</li>
+<li>
+<p><a href="https://www.qbittorrent.org/" class="external-link">qbittorent-nox</a> - command line BitTorrent <br />
+  client written in C++ / Qt   </p>
+</li>
+<li>
+<p><a href="https://rclone.org/" class="external-link">rclone</a> - command-line program to manage files on cloud <br />
+  storage   </p>
+</li>
+<li>
+<p><a href="https://rsync.samba.org/" class="external-link">rsync</a> - fast and extraordinarily versatile file <br />
+  copying tool   </p>
+</li>
+<li>
+<p><a href="https://syncthing.net/" class="external-link">syncthing</a> - is a continuous file synchronization <br />
+  program, <a href="/syncthing.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://www.wireguard.com/" class="external-link">wireguard</a> - simple yet fast and modern VPN   </p>
+</li>
+<li><a href="https://www.wireshark.org/" class="external-link">wireshark</a> - network protocol analyzer   </li>
+<li><a href="https://nmap.org/" class="external-link">nmap</a> - network scanner   </li>
+</ul>
+<h2 id="documents-books-and-documentation">Documents, books and documentation</h2>
+<ul>
+<li>
+<p><a href="https://github.com/gleitz/howdoi" class="external-link">howdoi</a> - Instant coding answers via the <br />
+  command line   </p>
+</li>
+<li>
+<p><a href="https://gitlab.com/surfraw/Surfraw/" class="external-link">surfraw</a> - Shell Users\' Revolutionary <br />
+  Front Rage Against the Web   </p>
+</li>
+<li>
+<p><a href="https://tug.org/texlive/" class="external-link">TeX Live packages</a> typesetting system <br />
+<a href="/latex.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://www.ghostscript.com/" class="external-link">ghostscript</a> - An interpreter for the <br />
+  PostScript language   </p>
+</li>
+<li>
+<p><a href="https://pandoc.org/" class="external-link">pandoc</a> - Swiss-army knife to convert markup format <br />
+  files, <a href="/pandoc.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://www.soimort.org/translate-shell/" class="external-link">translate-shell</a> - command line <br />
+  translator   </p>
+</li>
+<li>
+<p><a href="https://www.abisource.com/" class="external-link">abiword</a> - Fully-featured word processor   </p>
+</li>
+<li><a href="https://www.libreoffice.org/" class="external-link">libreoffice</a> - office productivity software <br />
+  suite   </li>
+</ul>
+<h2 id="core">Core</h2>
+<ul>
+<li>
+<p><a href="https://kernel.org/" class="external-link">linux</a> - monolithic, modular, multitasking, Unix-like <br />
+  operating system kernel, <a href="/linux.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://btrfs.wiki.kernel.org/index.php/Main_Page" class="external-link">btrfs</a> - modern copy on <br />
+  write (CoW) filesystem for Linux   </p>
+</li>
+<li>
+<p><a href="http://nfs.sourceforge.net/" class="external-link">nfs-utils</a> - Support programs for Network File <br />
+  Systems   </p>
+</li>
+</ul>
+<h2 id="emu">Emu</h2>
+<ul>
+<li><a href="https://www.qemu.org/" class="external-link">QEMU</a> - virtualization/emulation   </li>
+<li>
+<p><a href="https://github.com/quickemu-project/quickemu" class="external-link">quickemu</a> - Quickly create and <br />
+  run optimized virtual machines (use QEMU)   </p>
+</li>
+<li>
+<p><a href="https://www.winehq.org/" class="external-link">wine</a> - compatibility layer capable of running <br />
+  Windows applications   </p>
+</li>
+</ul>
+<h2 id="utilities_1">Utilities</h2>
+<ul>
+<li>
+<p><a href="https://freedesktop.org/software/pulseaudio/pavucontrol/" class="external-link">pavucontrol</a> - <br />
+  PulseAudio Volume Control   </p>
+</li>
+<li>
+<p><a href="https://github.com/andreafrancia/trash-cli" class="external-link">trash-cli</a> - Command Line <br />
+  Interface to FreeDesktop.org Trash   </p>
+</li>
+<li>
+<p><a href="https://borgbackup.github.io/" class="external-link">borgbackup</a> - deduplicating archiver with <br />
+  compression and encryption, <a href="/borg.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://github.com/adrianlopezroche/fdupes" class="external-link">fdupes</a> - identifying or deleting <br />
+  duplicate files   </p>
+</li>
+<li>
+<p><a href="https://www.ventoy.net/en/isolist.html" class="external-link">ventoy</a> - tool to create bootable USB <br />
+  drive   </p>
+</li>
+<li>
+<p><a href="https://github.com/astrand/xclip" class="external-link">xclip</a> - command line interface to the X11 <br />
+  clipboard   </p>
+</li>
+<li>
+<p><a href="https://www.semicomplete.com/projects/xdotool/" class="external-link">xdotool</a> - Command-line X11 <br />
+  automation tool   </p>
+</li>
+<li>
+<p><a href="https://dev.yorhel.nl/ncdu" class="external-link">ncdu</a> - disk usage analyzer with a ncurses <br />
+  interface   </p>
+</li>
+</ul>
+<h2 id="ui">UI</h2>
+<ul>
+<li><a href="https://tools.suckless.org/slock/" class="external-link">slock</a> - simple X display locker   </li>
+<li>
+<p><a href="https://dwm.suckless.org/" class="external-link">dwm</a> - A dynamic window manager for X, <br />
+<a href="/dwm.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://tools.suckless.org/dmenu/" class="external-link">dmenu</a> - Generic menu for X, <br />
+<a href="/dmenu.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://tools.suckless.org/tabbed/" class="external-link">tabbed</a> - Tabbed fronted to X embed-aware <br />
+  applications   </p>
+</li>
+<li>
+<p><a href="https://tools.suckless.org/quark/" class="external-link">quark</a> - tiny and simple HTTP <br />
+  GET/HEAD-only web server for static content   </p>
+</li>
+<li>
+<p><a href="https://tools.suckless.org/sent/" class="external-link">sent</a> - plaintext presentation   </p>
+</li>
+<li>
+<p><a href="https://dunst-project.org/" class="external-link">dunst</a> - configurable and lightweight <br />
+  notification daemon   </p>
+</li>
+<li>
+<p><a href="https://github.com/joestandring/dwm-bar" class="external-link">dwm-bar</a> - a modular statusbar for <br />
+  dwm   </p>
+</li>
+<li>
+<p><a href="https://tools.suckless.org/slstatus/" class="external-link">slstatus</a> - slstatus is a status <br />
+  monitor   </p>
+</li>
+<li>
+<p><a href="https://github.com/erebe/greenclip" class="external-link">greenclip</a> - Simple clipboard manager to <br />
+  be integrated with /dmenu (most stable which I found)   </p>
+</li>
+</ul>
+<h2 id="games">Games</h2>
+<ul>
+<li>
+<p><a href="https://store.steampowered.com/" class="external-link">steam</a> - Steam is a digital distribution <br />
+  platform (game store)   </p>
+</li>
+<li>
+<p><a href="https://lutris.net/" class="external-link">lutris</a> - game manager for Linux-based operating systems   </p>
+</li>
+<li><a href="https://store.epicgames.com/en-US/" class="external-link">epic games</a> - Epic Games Store is a <br />
+  digital video game storefront for PC and Mac (game store)   </li>
+</ul>
+<h2 id="archive">Archive</h2>
+<ul>
+<li>
+<p><a href="https://i3wm.org/" class="external-link">i3</a> tiling window manager, used a lot, but now I use <br />
+<a href="/dwm.html">dwm</a>   </p>
+</li>
+<li>
+<p><a href="https://www.gimp.org/" class="external-link">GIMP</a> - GNU Image Manipulation Program, fine but krita <br />
+  good enough for me   </p>
+</li>
+<li>
+<p><a href="https://apps.ankiweb.net/" class="external-link">anki</a> - <br />
+<a href="/spaced%20repetition.html">spaced repetition</a> flashcards   </p>
+</li>
+<li>
+<p><a href="https://www.gnu.org/software/emacs/" class="external-link">emacs</a> - lisp-based text editor   </p>
+</li>
+<li><a href="https://www.gnu.org/software/bash/" class="external-link">bash</a> - Unix shell and command language   </li>
+<li><a href="https://klavaro.sourceforge.io/en/index.html" class="external-link">klavaro</a> - Touch Typing Tutor   </li>
+<li><a href="https://alacritty.org/" class="external-link">alacritty</a> - A cross-platform, GPU-accelerated <br />
+  terminal emulator   </li>
+</ul>
+<h2 id="databases">Databases</h2>
+<ul>
+<li>
+<p><a href="https://www.mysql.com/" class="external-link">MySQL</a> - relational database management system, <br />
+<a href="/mysql.html">more info</a>   </p>
+</li>
+<li>
+<p><a href="https://www.postgresql.org/" class="external-link">PostgreSQL</a> - object-relational database <br />
+  management system, <a href="/postgresql.html">more info</a>   </p>
+</li>
+</ul>
+<h2 id="eda">EDA</h2>
+<ul>
+<li><a href="https://kicad.org/" class="external-link">KiCad</a> - Electronic Design Automation suite   </li>
+<li><a href="https://www.arduino.cc/" class="external-link">Arduino</a> - open-source electronics platform based on <br />
+  easy-to-use hardware and software   </li>
+</ul>
+<h2 id="cli">CLI</h2>
+<ul>
+<li><a href="/patch%20%28unix%29.html">patch (unix)</a>   </li>
+<li><a href="/file%20%28command%29.html">file (command)</a>   </li>
+<li><a href="https://github.com/Genymobile/scrcpy" class="external-link">scrcpy</a>   </li>
+</ul>
+<h2 id="android">Android</h2>
+<ul>
+<li>[[termux]</li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="/computer software.html">computer software</a></li>
+	<li><a class="backlink" href="/index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="/obs.html/tags/outline/index.html">outline</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A123191965706941867214041573873117902085{level}" class="graph_div"></div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B123191965706941867214041573873117902085{level}" level="{level}" note_temp_id="123191965706941867214041573873117902085" onclick="window.ObsHtmlGraph.run(this, '123191965706941867214041573873117902085', 'my awesome software list');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C123191965706941867214041573873117902085{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('/obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                <!-- end content -->
+            </div>
+            <div class="container_filler"></div>
+            <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+        </div>
+    </div>
+
+    <script>
+        function handle_toggle_side_bar(e) {
+            let header;
+            let pane;
+            let target = e.target;
+
+            // switch out the navbar button click for a header click
+            if (target.id == "left_pane_toggle_nav") {
+                target = document.getElementById("left_pane_fold_header");
+            } else if (target.id == "right_pane_toggle_nav") {
+                target = document.getElementById("right_pane_fold_header");
+            }
+
+            // get header and pane
+            if (target.classList.contains("fold_header")) {
+                header = target;
+                pane = target.parentElement;
+            } else {
+                pane = target;
+                header = target.getElementsByClassName("fold_header")[0];
+            }
+            toggle_side_bar(pane, header, true);
+            e.stopPropagation();
+        }
+        function handle_toggle_side_bar_button(e) {
+            document.getElementById("menu_toggle_button").click();
+            handle_toggle_side_bar(e);
+        }
+
+        function toggle_side_bar(pane, header, save) {
+            let active = pane.classList.contains("active");
+            if (active) {
+                disable_side_bar(pane, header, save);
+            } else {
+                enable_side_bar(pane, header, save);
+            }
+        }
+        function enable_side_bar(pane, header, save) {
+            pane.classList.add("active");
+            pane.removeEventListener("click", handle_toggle_side_bar);
+            header.addEventListener("click", handle_toggle_side_bar);
+            set_correct_header_symbol(header);
+            if (save) {
+                save_panel_folding_state(header, true);
+            }
+        }
+        function disable_side_bar(pane, header, save) {
+            pane.classList.remove("active");
+            pane.addEventListener("click", handle_toggle_side_bar);
+            header.removeEventListener("click", handle_toggle_side_bar);
+            set_correct_header_symbol(header);
+            if (save) {
+                save_panel_folding_state(header, false);
+            }
+        }
+        function set_correct_header_symbol(header) {
+            let pane = header.parentElement;
+            let symbol = [
+                [">", "<"],
+                ["<", ">"],
+            ];
+            symbol =
+                symbol[Number(header.classList.contains("right_pane_fold_header"))][
+                Number(pane.classList.contains("active"))
+                ];
+            console.log(symbol);
+            header.innerHTML = symbol;
+            return header;
+        }
+        function panel_folding_get_panel_name(header) {
+            return ["left", "right"][
+                Number(header.classList.contains("right_pane_fold_header"))
+            ];
+        }
+        function save_panel_folding_state(header, active) {
+            ls_set(
+                "pane_folding_state_" + panel_folding_get_panel_name(header),
+                Number(active)
+            );
+        }
+        function load_panel_folding_state(panel_name) {
+            val = ls_get("pane_folding_state_" + panel_name);
+            if (!val) {
+                return {exists: false, value: null};
+            }
+            return {exists: true, value: Boolean(Number(val))};
+        }
+        function set_pane_folding_start(left_header, right_header) {
+            // small screen = closed
+            let right_pane_enabled = true;
+            let left_pane_enabled = true;
+            let w = window.visualViewport.width;
+            if (w < 1000) {
+                left_pane_enabled = false;
+            }
+            if (w < 800) {
+                right_pane_enabled = false;
+            }
+
+            // get saved values if present
+            let rval = load_panel_folding_state("right");
+            if (rval["exists"]) {
+                right_pane_enabled = rval["value"];
+            }
+            let lval = load_panel_folding_state("left");
+            if (lval["exists"]) {
+                left_pane_enabled = lval["value"];
+            }
+
+            // default = enabled, so we only need to disable
+            if (!left_pane_enabled) {
+                disable_side_bar(
+                    document.getElementById("left_pane"),
+                    document.getElementById("left_pane_fold_header")
+                );
+            }
+            if (!right_pane_enabled) {
+                disable_side_bar(
+                    document.getElementById("right_pane"),
+                    document.getElementById("right_pane_fold_header")
+                );
+            }
+        }
+
+        function init_pane_folding(header) {
+            set_correct_header_symbol(header);
+            header.addEventListener("click", handle_toggle_side_bar);
+        }
+
+        set_pane_folding_start();
+        init_pane_folding(document.getElementById("left_pane_fold_header"));
+        init_pane_folding(document.getElementById("right_pane_fold_header"));
+
+        document
+            .getElementById("left_pane_toggle_nav")
+            .addEventListener("click", handle_toggle_side_bar_button);
+        document
+            .getElementById("right_pane_toggle_nav")
+            .addEventListener("click", handle_toggle_side_bar_button);
+    </script>
+
+    <script src="/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+ 
+
+</body>
+</html>
