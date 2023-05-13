@@ -7,8 +7,9 @@ sr-interval: 1
 tags:
 - inbox
 - definition
-title: Computer graphics
 ---
+
+# Computer graphics
 
 > Deals with generating images and art with the aid of computers. Today,
 > computer graphics is a core technology in digital

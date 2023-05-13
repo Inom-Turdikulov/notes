@@ -7,8 +7,9 @@ sr-interval: 1
 tags:
 - definition
 - inbox
-title: Computer security
 ---
+
+# Computer security
 
 ## Software
 

@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Physics
 ---
+
+# Physics
 
 > Natural [science](./science.md) of matter, involving the study of
 > matter, its fundamental constituents, its motion and behavior through space

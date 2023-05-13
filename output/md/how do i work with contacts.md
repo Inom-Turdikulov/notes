@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - outline
-title: How do I work with contacts
 ---
+
+# How do I work with contacts
 
 ::TODO: Info how I organize contact note type, need implement ::
 

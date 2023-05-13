@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Magic SysRq key
 ---
+
+# Magic SysRq key
 
 The magic SysRq key is a key combination understood by the Linux kernel, which
 allows the user to perform various low-level commands regardless of the system's

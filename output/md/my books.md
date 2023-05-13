@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - permanent
-title: My Books
 ---
+
+# My Books
 
 ## Computer Science
 

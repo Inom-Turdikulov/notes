@@ -8,8 +8,9 @@ tags:
 - inbox
 - definition
 - AOSR/6lqgq/s/5ufe
-title: fzf
 ---
+
+# fzf
 
 It's a general purpose fuzzy finder written in Golang that can be used with any
 list of things: files, processes, command history, git branches, etc.

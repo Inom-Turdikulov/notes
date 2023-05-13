@@ -2,8 +2,9 @@
 tags:
 - outline
 - mathtip
-title: Multiplication table
 ---
+
+# Multiplication table
 
 > In [mathematics](./mathematics.md), a multiplication table (sometimes, less
 > formally, a times table) is a mathematical table used to define a

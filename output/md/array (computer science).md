@@ -8,8 +8,9 @@ tags:
 - definition
 - inbox
 - CS
-title: Array (computer science)
 ---
+
+# Array (computer science)
 
 > Array is a [data structure](./data%20structure.md) consisting of a collection of
 > elements (values or variables), each identified by at least one array index or

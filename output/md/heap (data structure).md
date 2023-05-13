@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Heap (data structure)
 ---
+
+# Heap (data structure)
 
 Tree data structure, which convenient to specific heap property:
 

@@ -7,8 +7,9 @@ sr-interval: 1
 tags:
 - definition
 - inbox
-title: Computer Science
 ---
+
+# Computer Science
 
 > Study of [computation](./computation.md), automation, and
 > information. Computer [science](./science.md) spans theoretical

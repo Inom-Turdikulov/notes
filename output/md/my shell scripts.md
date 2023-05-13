@@ -4,8 +4,9 @@ draft: true
 tags:
 - inbox
 - definition
-title: My shell scripts
 ---
+
+# My shell scripts
 
 
 - [ ] dmenu record, from lukesmith

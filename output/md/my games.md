@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - outline
-title: My Games
 ---
+
+# My Games
 
 I play [games](./game.md) (but not too much) usually on my
 [computer ](./computer.md)or on my

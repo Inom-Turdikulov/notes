@@ -7,6 +7,6 @@ sr-interval: 51
 tags:
 - inbox
 - definition
-title: Structured programming
 ---
 
+# Structured programming

@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - outline
-title: Maintenance
 ---
+
+# Maintenance
 
 > Functional checks, servicing, repairing or replacing of necessary devices,
 > equipment, machinery, building infrastructure, and supporting utilities in

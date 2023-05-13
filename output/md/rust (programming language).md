@@ -7,6 +7,6 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Rust (programming language)
 ---
 
+# Rust (programming language)

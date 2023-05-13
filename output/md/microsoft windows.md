@@ -7,10 +7,10 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Microsoft Windows
 ---
 
-# [TODO]{.todo .TODO} review {#review}
+# Microsoft Windows
+
 
 Windows is a group of several proprietary graphical operating system families
 developed and marketed by Microsoft. Each family caters to a certain sector of

@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Boolean expression
 ---
+
+# Boolean expression
 
 Expression which produce a `Boolean` value when evaluated. Used in many
 [programming languages](./programming%20language.md) as built-in type.

@@ -4,8 +4,9 @@ draft: true
 tags:
 - inbox
 - definition
-title: Programmer (software developer, coder)
 ---
+
+# Programmer (software developer, coder)
 
 > Person who creates [computer program](./computer%20program.md)'s — often for larger
 > computer software. A programmer is someone who writes/creates computer

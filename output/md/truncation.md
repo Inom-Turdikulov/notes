@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Truncation
 ---
+
+# Truncation
 
 > Limiting the number of digits right of the decimal point by discarding the
 > least significant ones.

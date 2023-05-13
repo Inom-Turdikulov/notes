@@ -5,8 +5,9 @@ draft: true
 tags:
 - inbox
 - definition
-title: Khan Academy
 ---
+
+# Khan Academy
 
 > Learn for free about [math](./mathematics.md),
 > [art](./art.md),

@@ -7,6 +7,6 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Pacman (software)
 ---
 
+# Pacman (software)

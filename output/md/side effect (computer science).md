@@ -7,6 +7,6 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Side effect (computer science)
 ---
 
+# Side effect (computer science)

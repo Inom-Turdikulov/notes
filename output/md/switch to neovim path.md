@@ -5,8 +5,9 @@ tags:
 - inbox
 - definition
 - vimtip
-title: Switch to neovim path
 ---
+
+# Switch to neovim path
 
 In daily life I use [pycharm](./pycharm.md) right now, for python development.
 I'm planing to switch to [neovim (text editor)](./neovim%20%28text%20editor%29.md) and here list of steps to take it.

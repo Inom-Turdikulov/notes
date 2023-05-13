@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Data type
 ---
+
+# Data type
 
 In modern language like Python, JavaScript you can even not working with data
 types (modern days you can use some ways for use types).

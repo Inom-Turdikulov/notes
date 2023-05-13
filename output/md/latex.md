@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: LaTeX
 ---
+
+# LaTeX
 
 
 - [TeX Live packages](https://tug.org/texlive/) (typesetting system, TeX is a

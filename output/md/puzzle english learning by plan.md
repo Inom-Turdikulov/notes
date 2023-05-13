@@ -7,8 +7,9 @@ sr-interval: 2
 tags:
 - inbox
 - literature
-title: Puzzle English learning by plan
 ---
+
+# Puzzle English learning by plan
 
 This is my notes, taken from the [puzzle english](./puzzle%20english.md) website.
 

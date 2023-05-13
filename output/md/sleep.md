@@ -7,7 +7,8 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Sleep
 ---
+
+# Sleep
 
 <!-- TODO: grab info from [https://en.wikipedia.org/wiki/Sleep](https://en.wikipedia.org/wiki/Sleep) -->

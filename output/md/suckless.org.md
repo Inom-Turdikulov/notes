@@ -7,10 +7,10 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: suckless.org
 ---
 
-# Slock installation
+# suckless.org
+
 
 ```{.bash org-language="sh"}
 cd ~/Projects/suckless

@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Miniflux
 ---
+
+# Miniflux
 
 > Miniflux is a minimalist and opinionated feed reader.
 >

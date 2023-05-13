@@ -8,8 +8,9 @@ sr-interval: 2
 tags:
 - inbox
 - definition
-title: Blender
 ---
+
+# Blender
 
 Free and open source 3D creation suite. Free as in freedom.
 

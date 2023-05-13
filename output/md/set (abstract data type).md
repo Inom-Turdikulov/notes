@@ -4,8 +4,9 @@ draft: true
 tags:
 - inbox
 - definition
-title: Set (abstract data type)
 ---
+
+# Set (abstract data type)
 
 > Abstract data type that can store unique values, without any particular order.
 > It is a computer implementation of the mathematical concept of a finite set.

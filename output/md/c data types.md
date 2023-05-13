@@ -7,8 +7,9 @@ sr-interval: 2
 tags:
 - inbox
 - definition
-title: C data types
 ---
+
+# C data types
 
 ```{=org}
 #+filetags: C, data structures, programming

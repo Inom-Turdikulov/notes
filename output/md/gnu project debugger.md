@@ -4,6 +4,6 @@ draft: true
 tags:
 - inbox
 - definition
-title: GNU Project debugger
 ---
 
+# GNU Project debugger

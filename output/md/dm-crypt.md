@@ -7,10 +7,10 @@ sr-interval: 2
 tags:
 - inbox
 - definition
-title: dm-crypt
 ---
 
-# Create encrypted file container
+# dm-crypt
+
 
 ```{.bash org-language="sh"}
 # Redirect output of /dev/zero to initialize container file

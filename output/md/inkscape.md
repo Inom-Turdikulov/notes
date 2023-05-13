@@ -7,8 +7,9 @@ sr-interval: 14
 tags:
 - inbox
 - definition
-title: Inkscape
 ---
+
+# Inkscape
 
 > Inkscape is a Free and open source [vector graphics](./vector%20graphics.md) editor.
 >

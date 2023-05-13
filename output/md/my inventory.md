@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - permanent
-title: My Inventory
 ---
+
+# My Inventory
 
 
 - мексидол 2.0 мл с физраствором

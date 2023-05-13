@@ -13,8 +13,9 @@ tags:
 - stub
 - contact
 - log
-title: Notes types which I use with Zettelkasten
 ---
+
+# Notes types which I use with Zettelkasten
 
 This is initial table of notes types which I use with
 [zettelkasten](./zettelkasten.md). I will update it as I improve my workflow. To set

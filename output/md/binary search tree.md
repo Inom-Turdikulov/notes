@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Binary search tree
 ---
+
+# Binary search tree
 
 > In [computer science](./binary%20search%20tree.md), a binary search tree
 > (BST), also called an ordered or sorted binary tree, is a rooted binary tree

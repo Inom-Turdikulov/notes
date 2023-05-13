@@ -8,8 +8,9 @@ tags:
 - inbox
 - outline
 - active
-title: Computer Science Learning Resources
 ---
+
+# Computer Science Learning Resources
 
 ## Core
 

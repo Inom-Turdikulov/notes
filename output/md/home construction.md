@@ -7,8 +7,9 @@ sr-interval: 15
 tags:
 - inbox
 - definition
-title: Home construction (residential construction)
 ---
+
+# Home construction (residential construction)
 
 > Process of constructing a house, apartment building, or similar residential
 > building generally referred to as a 'home' when giving consideration to the

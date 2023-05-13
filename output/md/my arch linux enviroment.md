@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - permanent
-title: My Arch Linux enviroment
 ---
+
+# My Arch Linux enviroment
 
 [Improving performance - ArchWiki](https://wiki.archlinux.org/title/improving_performance)
 

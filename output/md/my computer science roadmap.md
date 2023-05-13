@@ -7,8 +7,9 @@ sr-interval: 1
 tags:
 - inbox
 - permanent
-title: My Computer Science Roadmap
 ---
+
+# My Computer Science Roadmap
 
 My personal roadmap to learn Computer Science. It's based on
 [https://teachyourselfcs.com/.](https://teachyourselfcs.com/.)

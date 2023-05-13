@@ -7,6 +7,6 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Zero-based numbering
 ---
 
+# Zero-based numbering

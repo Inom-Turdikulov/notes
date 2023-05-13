@@ -8,8 +8,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: GitLab
 ---
+
+# GitLab
 
 DevOps software package which can develop, secure, and operate software.
 Alternative to [github](./github.md).

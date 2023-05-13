@@ -12,8 +12,9 @@ tags:
 - linux
 - archlinux
 - emacs
-title: Bitlbee
 ---
+
+# Bitlbee
 
 If you understand all of this and still wish to use it, see HowtoPurple and add
 the account like this in &bitlbee:

@@ -7,8 +7,9 @@ sr-interval: 53
 tags:
 - inbox
 - definition
-title: General-purpose programming language (GPL)
 ---
+
+# General-purpose programming language (GPL)
 
 GPL - [programming language](./programming%20language.md) for building
 [computer software](./computer%20software.md) in a wide variety of application domains.

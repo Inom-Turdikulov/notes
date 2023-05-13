@@ -4,6 +4,6 @@ draft: true
 tags:
 - inbox
 - definition
-title: Virtual machine
 ---
 
+# Virtual machine

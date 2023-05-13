@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: QMK Firmware
 ---
+
+# QMK Firmware
 
 > The goal of the QMK software project is to develop a completely customizable,
 > powerful, and enjoyable firmware experience for any project - keyboard or

@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Email
 ---
+
+# Email
 
 
 - [how do i work with email](./how%20do%20i%20work%20with%20email.md)

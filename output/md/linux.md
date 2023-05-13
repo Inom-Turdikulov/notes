@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Linux
 ---
+
+# Linux
 
 > Linux or **GNU/Linux** is a [unix](./unix.md)-like
 > [operating system](./operating%20system.md) (or family of) for

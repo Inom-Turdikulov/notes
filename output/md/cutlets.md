@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - definiton
-title: Cutlets
 ---
+
+# Cutlets
 
 ## Cuisines of Russia, Ukraine and other countries of former Soviet Union
 

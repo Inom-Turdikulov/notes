@@ -8,8 +8,9 @@ sr-interval: 4
 tags:
 - definition
 - termtip
-title: Kitty (terminal emulator)
 ---
+
+# Kitty (terminal emulator)
 
 > `kitty` is designed for power **keyboard** users. To that end all its controls
 > work with the keyboard (although it fully supports mouse interactions as

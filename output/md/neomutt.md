@@ -4,8 +4,9 @@ draft: true
 tags:
 - inbox
 - definition
-title: Neomutt
 ---
+
+# Neomutt
 
 > NeoMutt is a text-based application which interacts with users through
 > different menus which are mostly line-/entry-based or page-based. A line-based

@@ -7,6 +7,6 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Conditional (computer programming)
 ---
 
+# Conditional (computer programming)

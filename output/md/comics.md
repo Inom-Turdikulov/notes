@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Comics
 ---
+
+# Comics
 
 [medium](./media%20%28communication%29.md) used to express ideas with images,
 often combined with text or other visual information. It typically takes the

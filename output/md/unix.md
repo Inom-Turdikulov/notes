@@ -7,8 +7,9 @@ sr-interval: 50
 tags:
 - definition
 - inbox
-title: Unix
 ---
+
+# Unix
 
 > UNIX is a computer operating system. It was first developed in 1969 at Bell
 > Labs. Ken Thompson, Dennis Ritchie, Douglas McIlroy, and others created it.

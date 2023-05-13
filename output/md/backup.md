@@ -7,8 +7,9 @@ sr-interval: 1
 tags:
 - defenition
 - inbox
-title: Backup
 ---
+
+# Backup
 
 Copy of some data. This copy precious if when the original data is lost or
 damaged (changed).

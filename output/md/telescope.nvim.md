@@ -5,8 +5,9 @@ draft: true
 tags:
 - inbox
 - definition
-title: telescope.nvim
 ---
+
+# telescope.nvim
 
 > Highly extendable fuzzy finder over lists. Telescope is centered around modularity, allowing for easy customization.
 

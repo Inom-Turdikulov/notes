@@ -8,8 +8,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Brave (web browser)
 ---
+
+# Brave (web browser)
 
 Free open source browser.
 

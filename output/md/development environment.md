@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - outline
-title: Development Environment
 ---
+
+# Development Environment
 
 NEXT: review this
 

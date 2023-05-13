@@ -7,8 +7,9 @@ sr-interval: 10
 tags:
 - inbox
 - outline
-title: Zettelkasten Method
 ---
+
+# Zettelkasten Method
 
 My notes should be organized to evolve, save my time and bring benefits to me
 and others.

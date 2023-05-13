@@ -7,6 +7,6 @@ sr-interval: 33
 tags:
 - inbox
 - definition
-title: Programming paradigm
 ---
 
+# Programming paradigm

@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: High-level programming language
 ---
+
+# High-level programming language
 
 From Wikipedia [@HighlevelProgrammingLanguage2023]:
 

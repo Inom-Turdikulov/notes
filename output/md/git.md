@@ -7,8 +7,9 @@ sr-interval: 1
 tags:
 - inbox
 - definition
-title: Git Version Control System
 ---
+
+# Git Version Control System
 
 Distributed revision control system, [computer program](./computer%20program.md), designed
 to help people create other computer program together.

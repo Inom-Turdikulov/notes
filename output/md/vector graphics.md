@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Vector graphics
 ---
+
+# Vector graphics
 
 ## Resources
 

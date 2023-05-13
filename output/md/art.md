@@ -7,8 +7,9 @@ sr-interval: 29
 tags:
 - definition
 - inbox
-title: Art
 ---
+
+# Art
 
 Art - various human activity and it's resulting product, that include
 imaginative, creative talent.

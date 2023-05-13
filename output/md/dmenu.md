@@ -7,8 +7,9 @@ sr-interval: 14
 tags:
 - inbox
 - definition
-title: dmenu (dynamic menu for X)
 ---
+
+# dmenu (dynamic menu for X)
 
 > dmenu is a dynamic menu for X, originally designed for dwm. It manages large
 > numbers of user-defined menu items efficiently.

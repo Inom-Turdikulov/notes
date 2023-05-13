@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: GNU Privacy Guard (GPG or GnuPG)
 ---
+
+# GNU Privacy Guard (GPG or GnuPG)
 
 > Free-software replacement for Symantec's PGP cryptographic software suite. The
 > software is compliant with RFC 4880, the IETF standards-track specification of

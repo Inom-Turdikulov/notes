@@ -7,7 +7,8 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Government
 ---
+
+# Government
 
 [gosuslugi.ru](https://www.gosuslugi.ru/)

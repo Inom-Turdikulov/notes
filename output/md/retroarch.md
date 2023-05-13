@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: RetroArch
 ---
+
+# RetroArch
 
 Install & configure RetroArch on arch-based system!
 

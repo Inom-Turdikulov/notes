@@ -4,8 +4,9 @@ draft: true
 tags:
 - inbox
 - definition
-title: Science
 ---
+
+# Science
 
 > **Systematic endeavor** that builds and organizes **knowledge** in the form of
 > testable explanations and predictions about the universe.

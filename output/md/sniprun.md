@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Sniprun
 ---
+
+# Sniprun
 
 SnipRun selection::<kbd>f</kbd> SnipRun initial mode::<kbd><leader>ze</kbd>
 SnipRun, useful to check specific line, if code already

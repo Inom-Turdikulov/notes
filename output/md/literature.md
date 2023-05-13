@@ -7,6 +7,6 @@ sr-interval: 3
 tags:
 - inbox
 - defenition
-title: Literature
 ---
 
+# Literature

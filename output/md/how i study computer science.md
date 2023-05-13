@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - outline
-title: How I study Computer Science?
 ---
+
+# How I study Computer Science?
 
 Not 100% related to Computer Science, but I started to learn it from this book:
 [@BrianWKernighanProgrammingLanguage1988](./%40BrianWKernighanProgrammingLanguage1988.md). I currently read it and do

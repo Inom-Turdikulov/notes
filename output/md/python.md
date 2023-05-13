@@ -7,8 +7,9 @@ sr-interval: 26
 tags:
 - inbox
 - definition
-title: Python
 ---
+
+# Python
 
 > Python is a [high-level](./high-level%20programming%20language.md),
 > general-purpose [programming language](./programming%20language.md).

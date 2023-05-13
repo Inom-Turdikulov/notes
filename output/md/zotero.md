@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - defenition
-title: Zotero Research Assistant
 ---
+
+# Zotero Research Assistant
 
 ![](img/screenshoot-zotero.png)
 *Zotero main window*

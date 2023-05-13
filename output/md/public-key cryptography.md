@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Public-key cryptography
 ---
+
+# Public-key cryptography
 
 > Public-key cryptography, or asymmetric cryptography, is the field of
 > cryptographic systems that use pairs of related keys. Each key pair consists

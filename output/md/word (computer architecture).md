@@ -7,6 +7,6 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Word (computer architecture)
 ---
 
+# Word (computer architecture)

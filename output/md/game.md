@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Game
 ---
+
+# Game
 
 ## Emulators
 

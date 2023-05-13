@@ -8,6 +8,6 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Hugo
 ---
 
+# Hugo

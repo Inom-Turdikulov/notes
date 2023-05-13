@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Patch (Unix)
 ---
+
+# Patch (Unix)
 
 Patch - apply a diff file to an original file.
 

@@ -7,8 +7,9 @@ sr-interval: 1
 tags:
 - inbox
 - definition
-title: Computer programming
 ---
+
+# Computer programming
 
 Computer programming is the process of performing a particular computation,
 usually by designing/building an executable computer program.

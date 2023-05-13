@@ -7,6 +7,6 @@ sr-interval: 3
 tags:
 - inbox
 - outline
-title: How do I work with the calendar
 ---
 
+# How do I work with the calendar

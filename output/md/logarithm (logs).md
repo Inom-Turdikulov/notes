@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Logarithm (logs)
 ---
+
+# Logarithm (logs)
 
 > Part of [mathematics](./mathematics.md). They are related to exponential
 > functions. A logarithm tells what exponent (or power) is needed to make a

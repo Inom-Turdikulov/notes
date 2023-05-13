@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Iterator
 ---
+
+# Iterator
 
 Iterator is an object that can be used to traverse a
 [collection (abstract data type)](./collection%20%28abstract%20data%20type%29.md), practically

@@ -4,8 +4,9 @@ draft: true
 tags:
 - inbox
 - definition
-title: Sc-im
 ---
+
+# Sc-im
 
 If you enter `:fsum`, sc-im auto-calculate the sum of the column.
 

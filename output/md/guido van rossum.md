@@ -7,6 +7,6 @@ sr-interval: 3
 tags:
 - inbox
 - contact
-title: Guido van Rossum
 ---
 
+# Guido van Rossum

@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Type conversion (type casting)
 ---
+
+# Type conversion (type casting)
 
 Word is self-explanatory.
 

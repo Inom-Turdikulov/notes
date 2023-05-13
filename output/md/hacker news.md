@@ -8,8 +8,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Hacker News
 ---
+
+# Hacker News
 
 > Social news website focusing on computer science and entrepreneurship. It is
 > run by the investment fund and startup incubator Y Combinator. In general,

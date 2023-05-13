@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Binary search algorithm (half-interval search, logarithmic search, binary chop)
 ---
+
+# Binary search algorithm (half-interval search, logarithmic search, binary chop)
 
 > Search [algorithm](./algorithm.md) that finds the position of a
 > target value within a sorted [array](./array%20%28computer%20science%29.md).

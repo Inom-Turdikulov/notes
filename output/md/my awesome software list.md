@@ -2,8 +2,9 @@
 date: 1678636800
 tags:
 - outline
-title: My awesome software list
 ---
+
+# My awesome software list
 
 This is a list my daily-used software. Some of them described in more details in
 other notes.

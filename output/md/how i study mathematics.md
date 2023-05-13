@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - outline
-title: How I study Mathematics?
 ---
+
+# How I study Mathematics?
 
 List of resources and tips to learn [mathematics](./mathematics.md)
 

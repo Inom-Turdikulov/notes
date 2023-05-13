@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Finance
 ---
+
+# Finance
 
 > Finance is a study which figures out how people, businesses and groups make
 > and use money. It can mean:

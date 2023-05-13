@@ -7,8 +7,9 @@ sr-interval: 1
 tags:
 - inbox
 - definition
-title: C (programming language)
 ---
+
+# C (programming language)
 
 C is multi-paradigm programming language (I started learn it later than needed
 😼). By design work efficiently with typical machine instructions.

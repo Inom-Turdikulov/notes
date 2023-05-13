@@ -8,8 +8,9 @@ tags:
 - inbox
 - definition
 - CS
-title: Function (computer programming)
 ---
+
+# Function (computer programming)
 
 > In [computer programming](./computer%20programming.md), a function or subroutine is a
 > sequence of program instructions that performs a specific task, packaged as a

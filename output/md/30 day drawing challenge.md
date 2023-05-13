@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - log
-title: My 30 Day Drawing Challenge
 ---
+
+# My 30 Day Drawing Challenge
 
 My first steps in [my art](./my%20art.md) creation.
 

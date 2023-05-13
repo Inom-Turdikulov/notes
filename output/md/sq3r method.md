@@ -7,8 +7,9 @@ sr-interval: 1
 tags:
 - inbox
 - definiton
-title: SQ3R
 ---
+
+# SQ3R
 
 This is sort of [@SQ3R2022] optimization of the reading process.
 

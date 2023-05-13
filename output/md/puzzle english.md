@@ -8,8 +8,9 @@ sr-interval: 1
 tags:
 - inbox
 - definition
-title: Puzzle English
 ---
+
+# Puzzle English
 
 Online platform for learning English. Contains various exercises, tests, words
 learning, etc. They use aggressive marketing techniques and I paid for the

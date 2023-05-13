@@ -7,6 +7,6 @@ sr-interval: 1
 tags:
 - inbox
 - definition
-title: Variable (computer science)
 ---
 
+# Variable (computer science)

@@ -2,8 +2,9 @@
 date: 2023-05-14
 tags:
 - outline
-title: Now
 ---
+
+# Now
 
 ## Now
 

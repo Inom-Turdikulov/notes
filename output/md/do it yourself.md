@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Do it yourself (DIY)
 ---
+
+# Do it yourself (DIY)
 
 [Instructables](https://www.instructables.com/)
 [http://www.craftsmanspace.com/free-patterns/band-patterns.html](http://www.craftsmanspace.com/free-patterns/band-patterns.html)

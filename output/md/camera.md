@@ -4,8 +4,9 @@ draft: true
 tags:
 - inbox
 - definition
-title: Camera
 ---
+
+# Camera
 
 > A camera is an optical instrument that captures [images](./my%20pictures.md). Most
 > cameras can capture 2D images, while some more advanced models can capture

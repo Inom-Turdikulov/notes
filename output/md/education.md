@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Education
 ---
+
+# Education
 
 
 - [MIT](http://ocw.mit.edu/courses/)

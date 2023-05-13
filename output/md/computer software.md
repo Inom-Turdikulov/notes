@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Computer software
 ---
+
+# Computer software
 
 > Set of instructions and documentation that tells a computer what to do or how
 > to perform a task. Software includes all different programs on a computer,

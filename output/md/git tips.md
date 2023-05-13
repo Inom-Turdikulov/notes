@@ -2,8 +2,9 @@
 date: 2023-03-31
 tags:
 - gittip
-title: Git tips
 ---
+
+# Git tips
 
 ## General
 Check the Git version:

@@ -7,8 +7,9 @@ sr-interval: 1
 tags:
 - definition
 - inbox
-title: Zathura
 ---
+
+# Zathura
 
 Open recent flles::`:open /`
 

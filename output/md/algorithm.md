@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Algorithm
 ---
+
+# Algorithm
 
 In general, it's, set of step-by-step instructions for solving some problem
 ([logical](./logic.md) or [mathematical](./mathematics.md), or

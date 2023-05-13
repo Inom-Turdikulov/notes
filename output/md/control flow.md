@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Control flow
 ---
+
+# Control flow
 
 Remember, you start loop from 0 and check condition by ==N== if you use `<`
 [boolean expression](./boolean%20expression.md). So it's canonical to write some like this:

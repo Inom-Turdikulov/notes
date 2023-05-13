@@ -7,8 +7,9 @@ sr-interval: 2
 tags:
 - inbox
 - definition
-title: Printf format in C
 ---
+
+# Printf format in C
 
 TODO: add link to python section?
 ```{=org}

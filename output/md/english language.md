@@ -7,8 +7,9 @@ sr-interval: 1
 tags:
 - definition
 - inbox
-title: English language
 ---
+
+# English language
 
 > English is a language that started in Anglo-Saxon England. It is originally
 > from Anglo-Frisian and Old Saxon dialects. English is now used as a global

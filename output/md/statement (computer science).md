@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Statement (computer science)
 ---
+
+# Statement (computer science)
 
 > In [computer programming](./computer%20programming.md), a statement is
 > a syntactic unit of an imperative programming language that expresses some

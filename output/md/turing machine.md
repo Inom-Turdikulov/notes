@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Turing machine
 ---
+
+# Turing machine
 
 System of rules, states and transitions rather than a real machine.
 

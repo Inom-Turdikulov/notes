@@ -7,8 +7,9 @@ sr-interval: 2
 tags:
 - inbox
 - definition
-title: Readability
 ---
+
+# Readability
 
 > Readability, or textual difficulty, means how easy or hard a text is to read.
 > Research has shown that two main factors affect the ease with which texts are

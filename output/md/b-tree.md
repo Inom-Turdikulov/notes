@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: B-tree
 ---
+
+# B-tree
 
 > B-tree is a self-balancing tree data structure that maintains sorted data and
 > allows searches, sequential access, insertions, and deletions in

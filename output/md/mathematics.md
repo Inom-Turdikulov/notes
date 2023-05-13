@@ -7,8 +7,9 @@ sr-interval: 2
 tags:
 - definition
 - inbox
-title: Mathematics
 ---
+
+# Mathematics
 
 > Mathematics is the study of numbers, shapes, and patterns. The word comes from
 > the Greek μάθημα (máthema), meaning "science, knowledge, or learning", and is

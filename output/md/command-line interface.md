@@ -7,6 +7,6 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Command-line interface
 ---
 
+# Command-line interface

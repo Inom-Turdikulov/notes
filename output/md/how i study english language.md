@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - outline
-title: How I study English language?
 ---
+
+# How I study English language?
 
 I usually just read some content in [english language](./english%20language.md).
 I also consume [media](./media%20%28communication%29.md) content in English.

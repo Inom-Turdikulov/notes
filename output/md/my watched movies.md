@@ -7,8 +7,9 @@ sr-interval: 28
 tags:
 - inbox
 - permanent
-title: My Watched Movies
 ---
+
+# My Watched Movies
 
 
 - [x] Lord of the Rings: The Fellowship of the Ring (2001) Medieval motifs,

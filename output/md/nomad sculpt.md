@@ -5,8 +5,9 @@ draft: true
 tags:
 - inbox
 - definition
-title: Nomad Sculpt
 ---
+
+# Nomad Sculpt
 
 A sculpting and painting mobile application.
 

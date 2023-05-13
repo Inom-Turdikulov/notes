@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - permanent
-title: My Music
 ---
+
+# My Music
 
 > Music is generally defined as the [art](./art.md) of arranging sound to
 > create some combination of form, harmony, melody, rhythm or otherwise

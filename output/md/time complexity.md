@@ -8,8 +8,9 @@ tags:
 - inbox
 - definition
 - CS
-title: Time complexity
 ---
+
+# Time complexity
 
 Measuring the speed of an operation (how many steps' operation will take) is also
 known as measuring its ==time complexity==.

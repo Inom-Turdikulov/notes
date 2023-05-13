@@ -7,6 +7,6 @@ sr-interval: 31
 tags:
 - inbox
 - definition
-title: Procedural programming
 ---
 
+# Procedural programming

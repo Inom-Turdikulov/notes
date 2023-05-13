@@ -4,6 +4,6 @@ draft: true
 tags:
 - inbox
 - definition
-title: GNU Compiler Collection
 ---
 
+# GNU Compiler Collection

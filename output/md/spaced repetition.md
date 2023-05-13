@@ -6,8 +6,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Spaced repetition
 ---
+
+# Spaced repetition
 
 > Learning technique usually using flashcards, where information that is newer,
 > and harder to remember are shown more frequently, while information that is

@@ -2,8 +2,9 @@
 date: 1672243200
 tags:
 - outline
-title: My Everyday life (routine)
 ---
+
+# My Everyday life (routine)
 
 ## Goal
 

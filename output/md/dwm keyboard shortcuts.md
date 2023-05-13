@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - DWM
-title: Dwm keyboard shortcuts
 ---
+
+# Dwm keyboard shortcuts
 
 I swapped meta key (ALT/META) to super key (WIN), which used in DWM by default
 as modifier key, to decrease key conflicts in various programs.

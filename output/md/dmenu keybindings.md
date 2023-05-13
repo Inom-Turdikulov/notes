@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - permanent
-title: Dmenu keybindings
 ---
+
+# Dmenu keybindings
 
 dmenu is completely controlled by the keyboard.
 

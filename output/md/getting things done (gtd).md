@@ -7,8 +7,9 @@ sr-interval: 1
 tags:
 - inbox
 - definition
-title: Getting Things Done (GTD)
 ---
+
+# Getting Things Done (GTD)
 
 > Getting Things Done (GTD) is a way of organizing all the things a person has
 > to do. The method was made by David Allen. He has written a book about this

@@ -7,6 +7,6 @@ sr-interval: 32
 tags:
 - inbox
 - definition
-title: Functional programming
 ---
 
+# Functional programming

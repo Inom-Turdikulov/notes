@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Creamy Mashed Potatoes
 ---
+
+# Creamy Mashed Potatoes
 
 
 - TODO: add more info about potatoes, how to cook them, etc.

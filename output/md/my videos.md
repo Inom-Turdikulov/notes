@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - permanent
-title: My Videos
 ---
+
+# My Videos
 
 
 - [mpv](./mpv.md)

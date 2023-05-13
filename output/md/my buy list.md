@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - permanent
-title: My Buy List
 ---
+
+# My Buy List
 
 Usually I buy things in bulk, so I don't need to buy them again for a long time.
 I'm trying to buy items [online](./online%20shopping.md) or offline

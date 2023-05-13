@@ -7,7 +7,8 @@ sr-interval: 2
 tags:
 - inbox
 - definition
-title: LeetCode
 ---
+
+# LeetCode
 
 Site - [LeetCode](https://leetcode.com/)

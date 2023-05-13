@@ -6,8 +6,9 @@ sr-interval: 1
 tags:
 - inbox
 - outline
-title: My pet projects
 ---
+
+# My pet projects
 
 
 - LinkedIn Account registrar

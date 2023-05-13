@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Markdown
 ---
+
+# Markdown
 
 ## Useful HTML tags
 

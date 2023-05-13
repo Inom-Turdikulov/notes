@@ -4,8 +4,9 @@ draft: true
 tags:
 - inbox
 - definition
-title: ANSI C
 ---
+
+# ANSI C
 
 > ANSI C, ISO C, and Standard C are successive standards for the
 > [c programming](./c%20%28programming%20language%29.md) language published by

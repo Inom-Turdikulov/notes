@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Programming language
 ---
+
+# Programming language
 
 > System of notation for writing [computer program](./computer%20program.md)'s. Most programming
 > languages are text-based formal languages, but they may also be graphical.

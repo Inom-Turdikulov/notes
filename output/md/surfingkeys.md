@@ -4,8 +4,9 @@ date: 2023-03-27
 tags:
 - definition
 - browser
-title: Surfingkeys
 ---
+
+# Surfingkeys
 
 > Browser extension that provides keyboard-based navigation and control of the
 > web in the spirit of the VIM editor. But it's not for VIM users only, it's for

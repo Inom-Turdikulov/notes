@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - outline
-title: How I learn computer programming
 ---
+
+# How I learn computer programming
 
 
 - [A collection of full-stack resources for programmers](https://github.com/charlax/professional-programming)

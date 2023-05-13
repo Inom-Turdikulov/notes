@@ -5,8 +5,9 @@ tags:
 - inbox
 - outline
 - englishtip
-title: Duolingo
 ---
+
+# Duolingo
 
 Отличная шпаргалка для структурированного изучения английского языка -
 [@SPaGPlacemat].

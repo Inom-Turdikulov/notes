@@ -7,8 +7,9 @@ sr-interval: 2
 tags:
 - inbox
 - definition
-title: Escape sequences
 ---
+
+# Escape sequences
 
 Combination of characters, which meaning something other than the literal
 characters contained therein.

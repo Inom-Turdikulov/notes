@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Cooking
 ---
+
+# Cooking
 
 
 - [https://based.cooking/](https://based.cooking/)

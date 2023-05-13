@@ -4,8 +4,9 @@ draft: true
 tags:
 - inbox
 - definition
-title: In real life (IRL)
 ---
+
+# In real life (IRL)
 
 For life support I need [buy some things](./my%20buy%20list.md),
 [cook](./cooking.md) food and

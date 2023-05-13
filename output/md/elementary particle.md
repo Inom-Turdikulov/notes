@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Elementary particles
 ---
+
+# Elementary particles
 
 > In particle [physics](./physics.md), an elementary particle or
 > fundamental particle is a subatomic particle that is not composed of other

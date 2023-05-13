@@ -7,7 +7,8 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Stack Overflow
 ---
+
+# Stack Overflow
 
 [Stack overflow quistons](https://stackoverflow.com/questions)

@@ -5,8 +5,9 @@ tags:
 - inbox
 - definition
 - CS
-title: Computer memory
 ---
+
+# Computer memory
 
 Memory can be viewed as a giant collection of cells.
 Each cell is a single byte of data and has own address, where one number greater

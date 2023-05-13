@@ -4,8 +4,9 @@ draft: true
 tags:
 - inbox
 - definition
-title: Software testing
 ---
+
+# Software testing
 
 > Act of examining the artifacts and the behavior of the software under test by
 > validation and verification. Software testing can also provide an objective,

@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: VR photography (virtual-reality photography)
 ---
+
+# VR photography (virtual-reality photography)
 
 > VR [photography](./photography.md) is the interactive viewing of
 > panoramic photographs, generally encompassing a 360-degree circle or a

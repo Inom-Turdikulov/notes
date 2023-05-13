@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - permanent
-title: My Pictures
 ---
+
+# My Pictures
 
 
 - Personal Photo

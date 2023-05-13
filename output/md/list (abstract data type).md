@@ -7,7 +7,8 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: List (abstract data type)
 ---
+
+# List (abstract data type)
 
 List are not [array](./array%20%28computer%20science%29.md).

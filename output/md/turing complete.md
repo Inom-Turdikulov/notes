@@ -7,7 +7,8 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Turing completeness
 ---
+
+# Turing completeness
 
 NEXT: I need to check this.

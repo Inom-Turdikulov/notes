@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Light (visible light)
 ---
+
+# Light (visible light)
 
 > Electromagnetic radiation that can be perceived by the human eye. Visible
 > light is usually defined as having wavelengths in the range of 400–700

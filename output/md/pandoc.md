@@ -6,8 +6,9 @@ sr-interval: 1
 tags:
 - inbox
 - definition
-title: Pandoc
 ---
+
+# Pandoc
 
 Pandoc [@JohnMacFarlanePandocUserGuide2023] is a [haskell](./haskell.md)
 library and command-line tool to convert markup files (Markdown, LaTeX, HTML),

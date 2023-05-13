@@ -7,6 +7,6 @@ sr-interval: 3
 tags:
 - inbox
 - outline
-title: How do I work with instant messages
 ---
 
+# How do I work with instant messages

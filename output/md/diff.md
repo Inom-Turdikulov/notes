@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: diff
 ---
+
+# diff
 
 Diff - tool to compare files line by line.
 

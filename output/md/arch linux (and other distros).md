@@ -7,8 +7,9 @@ sr-interval: 28
 tags:
 - definition
 - inbox
-title: Arch Linux (and other distros)
 ---
+
+# Arch Linux (and other distros)
 
 [my arch linux enviroment](./my%20arch%20linux%20enviroment.md)
 

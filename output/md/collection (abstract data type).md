@@ -7,6 +7,6 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Collection (abstract data type)
 ---
 
+# Collection (abstract data type)

@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Media (communication)
 ---
+
+# Media (communication)
 
 > In mass communication, media are the communication outlets or tools used to
 > store and deliver information or data. The term refers to components of

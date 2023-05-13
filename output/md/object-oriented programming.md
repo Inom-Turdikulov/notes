@@ -7,8 +7,9 @@ sr-interval: 52
 tags:
 - inbox
 - definition
-title: Object-oriented programming (OOP)
 ---
+
+# Object-oriented programming (OOP)
 
 > Way of writing computer programs using "objects" to stand for data and
 > methods. Often, computer programs that are not object-oriented are a list of

@@ -7,7 +7,8 @@ sr-interval: 29
 tags:
 - inbox
 - definition
-title: How to solve it
 ---
+
+# How to solve it
 
 [https://en.wikipedia.org/wiki/How_to_Solve_It](https://en.wikipedia.org/wiki/How_to_Solve_It)

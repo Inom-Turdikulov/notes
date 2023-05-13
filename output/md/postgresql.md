@@ -4,8 +4,9 @@ draft: true
 tags:
 - inbox
 - definition
-title: PostgreSQL
 ---
+
+# PostgreSQL
 
 [PostgreSQL: The world's most advanced open source database](https://www.postgresql.org/),
 contains documentation, downloads, support, development, and community

@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Mouseless workflow
 ---
+
+# Mouseless workflow
 
 
 - [keyboard shortcut](./keyboard%20shortcut.md)

@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Photography
 ---
+
+# Photography
 
 > Photography is the [art](./art.md), application, and practice of
 > creating durable images by recording light, either electronically by means of

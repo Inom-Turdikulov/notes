@@ -5,8 +5,9 @@ draft: true
 tags:
 - inbox
 - definition
-title: Termux
 ---
+
+# Termux
 
 > Android terminal emulator and Linux environment application that works
 > directly with no rooting or setup required. A minimal base system is installed

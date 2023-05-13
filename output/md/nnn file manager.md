@@ -5,8 +5,9 @@ tags:
 - inbox
 - definition
 - filestip
-title: Nnn file manager
 ---
+
+# Nnn file manager
 
 ## Configuration, using environment variables
 ```bash

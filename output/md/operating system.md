@@ -4,8 +4,9 @@ draft: true
 tags:
 - inbox
 - definition
-title: Operating system
 ---
+
+# Operating system
 
 > Group of computer programs, including device drivers, kernels, and other
 > software that lets people interact with a computer. It manages computer

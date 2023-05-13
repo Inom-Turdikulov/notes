@@ -7,6 +7,6 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Work (human activity)
 ---
 
+# Work (human activity)

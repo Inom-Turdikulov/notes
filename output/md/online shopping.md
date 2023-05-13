@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Online shopping
 ---
+
+# Online shopping
 
 
 - [eBay](https://www.ebay.com/)

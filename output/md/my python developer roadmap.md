@@ -7,8 +7,9 @@ sr-interval: 1
 tags:
 - inbox
 - outline
-title: My Python Developer Roadmap
 ---
+
+# My Python Developer Roadmap
 
 ## Learning
 

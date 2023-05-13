@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Data structures
 ---
+
+# Data structures
 
 Analyzing the number of steps an operation takes is the heart of understanding
 the performance of data structures.

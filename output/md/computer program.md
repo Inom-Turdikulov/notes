@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Computer program
 ---
+
+# Computer program
 
 > Sequence or set of instructions in a programming language for a computer to execute.
 > Computer programs are one component of software, which also includes documentation and other intangible components.

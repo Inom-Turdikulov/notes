@@ -4,8 +4,9 @@ draft: true
 tags:
 - mediatip
 - outline
-title: MPV
 ---
+
+# MPV
 
 MPV is a free (as in freedom) [media](./media%20%28communication%29.md)
 player for the command line (it has own pseudo-gui). It supports a wide variety

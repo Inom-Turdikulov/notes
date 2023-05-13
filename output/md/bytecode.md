@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Bytecode (portable code or p-code)
 ---
+
+# Bytecode (portable code or p-code)
 
 > Form of instruction set designed for efficient execution by a software
 > interpreter. Unlike human-readable source [code](./code.md), bytecodes are compact

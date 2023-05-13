@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: Multi-factor authentication
 ---
+
+# Multi-factor authentication
 
 You can configure pamu2f Example (onlykey working config)
 

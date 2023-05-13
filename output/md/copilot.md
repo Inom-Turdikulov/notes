@@ -8,8 +8,9 @@ sr-interval: 11
 tags:
 - inbox
 - definition
-title: Copilot
 ---
+
+# Copilot
 
 > GitHub Copilot uses the OpenAI Codex to suggest code and entire functions in
 > real-time, right from your editor.

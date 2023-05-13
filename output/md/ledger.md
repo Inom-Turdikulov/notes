@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: ledger
 ---
+
+# ledger
 
 > Ledger is a powerful, double-entry accounting system that is accessed from the
 > UNIX command-line.

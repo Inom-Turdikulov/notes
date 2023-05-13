@@ -10,8 +10,9 @@ tags:
 - N
 - k
 - j
-title: Neovim (text editor)
 ---
+
+# Neovim (text editor)
 
 [@Neovim] - Hyperextensible Vim-based text editor.
 

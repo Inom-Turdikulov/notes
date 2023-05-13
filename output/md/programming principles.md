@@ -7,8 +7,9 @@ sr-interval: 2
 tags:
 - inbox
 - definition
-title: Programming principles
 ---
+
+# Programming principles
 
 [https://en.wikipedia.org/wiki/Category:Programming_principles](https://en.wikipedia.org/wiki/Category:Programming_principles)
 

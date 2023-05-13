@@ -8,8 +8,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: GitHub
 ---
+
+# GitHub
 
 Internet hosting service for software development and version control using Git.
 

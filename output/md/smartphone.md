@@ -4,8 +4,9 @@ draft: true
 tags:
 - inbox
 - definition
-title: Smartphone
 ---
+
+# Smartphone
 
 > A smartphone is a portable [computer](./computer.md) device that
 > combines mobile telephone functions and computing functions into one unit.

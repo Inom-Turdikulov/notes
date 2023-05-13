@@ -7,8 +7,9 @@ sr-interval: 1
 tags:
 - inbox
 - permanent
-title: How to Study
 ---
+
+# How to Study
 
 > Education is a **purposeful activity** directed at **achieving certain aims**,
 > such as transmitting knowledge or fostering skills and character traits. These

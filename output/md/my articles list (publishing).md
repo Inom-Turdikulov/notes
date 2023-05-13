@@ -4,8 +4,9 @@ draft: true
 tags:
 - inbox
 - outline
-title: My Articles List (publishing)
 ---
+
+# My Articles List (publishing)
 
 > An article or piece is a written work published in a print or electronic
 > medium. It may be for the purpose of propagating news, research results,

@@ -8,10 +8,10 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: Self-hosting (web services)
 ---
 
-# kasmw
+# Self-hosting (web services)
+
 
 # Ansible
 

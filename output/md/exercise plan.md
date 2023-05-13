@@ -7,8 +7,9 @@ sr-interval: 2
 tags:
 - inbox
 - outline
-title: Exercise Plan
 ---
+
+# Exercise Plan
 
 If you're completely new to physical training and want to use only your own body
 weight, you can start with a basic full-body routine that targets all major

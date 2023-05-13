@@ -7,8 +7,9 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-title: File (command)
 ---
+
+# File (command)
 
 Determines the type of file. Additional information: `man file`
 

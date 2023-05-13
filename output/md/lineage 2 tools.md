@@ -4,8 +4,9 @@ draft: true
 tags:
 - inbox
 - definition
-title: Lineage 2 tools
 ---
+
+# Lineage 2 tools
 
 > Lineage II is a massively multiplayer online role-playing game (MMORPG) for
 > Microsoft Windows and the second game in the Lineage series. It is a prequel

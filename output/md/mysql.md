@@ -4,8 +4,9 @@ draft: true
 tags:
 - inbox
 - definition
-title: MySQL
 ---
+
+# MySQL
 
 
 - [ ] dev.mysql.com

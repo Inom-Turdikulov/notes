@@ -7,8 +7,9 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-title: GNU Readline
 ---
+
+# GNU Readline
 
 NEXT: I really need work on it. This also avaiable in Python interactive shell.
 
