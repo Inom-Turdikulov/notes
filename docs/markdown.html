@@ -277,15 +277,128 @@
         <div class="flex_row">
             
             <div class="container">
-                <div class="content"><h1 id="markdown">Markdown</h1>
-<h2 id="useful-html-tags">Useful HTML tags</h2>
+                <embeddedtitle>markdown</embeddedtitle>
+<div class="content"><blockquote>
+<p>Markdown is a text-to-HTML conversion tool for web writers. Markdown allows
+you to write using an easy-to-read, easy-to-write plain text format, then
+convert it to structurally valid XHTML (or HTML).</p>
+<p><a href="https://daringfireball.net/projects/markdown/" class="external-link">John Gruber</a></p>
+</blockquote>
+<p>You can also convert markdown to tons of other formats, including PDF, using
+<a href="/pandoc.html">pandoc</a>.</p>
+<p>I use Markdown as my primary format for all my <a href="/notes%20types.html">notes</a>.</p>
+<h2 id="basics-which-i-use">Basics (which I use)</h2>
+<p>A paragraph is simply one or more consecutive lines of text, separated by one or
+more blank lines. Normal paragraphs should not be indented with spaces or tabs.</p>
+<hr />
+<p>Atx-style headers (h1, h2, h3, h4, h5, h6) are created by prefixing the line
+with <code>#</code> characters from one to six.</p>
+<h1 id="h1-header-h1-header">H1 header - <code># H1 header</code></h1>
+<hr />
+<p>Blockquotes are indicated using email-style <code>&gt;</code> angle brackets.</p>
+<blockquote>
+<p>This is a blockquote. - <code>&gt; This is a blockquote.</code></p>
+</blockquote>
+<hr />
+<p>For phrase emphasis I use:</p>
 <ul>
-<li><sup>1 \&lt;sup&gt;</sup></li>
-<li><sub>2 \&lt;sub&gt;</sub></li>
-<li><var>variable</var></li>
-<li><mark>highlight</mark></li>
-<li><cite>Author</cite></li>
-<li><ins>inserted</ins></li>
+<li><em>italic</em> - <code>*italic*</code></li>
+<li><span class="formatting_strikethrough">stroke</span> - <code>~~stroke~~</code></li>
+<li><strong>bold</strong> - <code>**bold**</code></li>
+<li><mark class="formatting_highlight">highlight</mark> - <code>==highlight==</code></li>
+<li><u>underline</u> - <code>&lt;u&gt;underline&lt;/u&gt;</code></li>
+<li><sup>superscript</sup> - <code>&lt;sup&gt;superscript&lt;/sup&gt;</code></li>
+<li><sub>subscript</sub> - <code>&lt;sub&gt;subscript&lt;/sub&gt;</code></li>
+<li><var>variable</var> - <code>&lt;var&gt;variable&lt;/var&gt;</code></li>
+<li><mark>mark</mark> - <code>&lt;mark&gt;mark&lt;/mark&gt;</code></li>
+<li><cite>cite</cite> - <code>&lt;cite&gt;cite&lt;/cite&gt;</code></li>
+<li><ins>inserted</ins> - <code>&lt;ins&gt;inserted&lt;/ins&gt;</code></li>
+</ul>
+<hr />
+<p>For lists, I use <code>-</code> as lists marker for unordered lists and <code>1.</code> for ordered:</p>
+<ul>
+<li>First item - <code>- First item</code></li>
+<li>Second item - <code>- Second item</code></li>
+</ul>
+<p>This is paragraph between list items.</p>
+<ul>
+<li>Third item - <code>- Third item</code></li>
+<li>Indented item - <code>- Indented item</code></li>
+<li>
+<p>Indented item - <code>- Indented item</code></p>
+<ol>
+<li>Indented item - <code>1. Indented item</code></li>
+<li>Indented item - <code>2. Indented item</code></li>
+</ol>
+</li>
+<li>
+<p>Fourth item - <code>- Fourth item</code></p>
+</li>
+<li>
+<p>First item - <code>1. First item</code></p>
+</li>
+<li>Second item - <code>2. Second item</code></li>
+<li>Third item - <code>3. Third item</code></li>
+<li>Indented item - <code>1. Indented item</code></li>
+<li>Indented item - <code>2. Indented item</code></li>
+<li>Fourth item - <code>4. Fourth item</code></li>
+</ul>
+<p>Tables can be created using <code>|</code> and <code>---</code>:</p>
+<p>Formatting:</p>
+<table>
+<thead>
+<tr>
+<th>foo</th>
+<th>bar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>baz</td>
+<td>bim</td>
+</tr>
+</tbody>
+</table>
+<div class="lang-markdown">
+
+<div class="codehilite"><pre><span></span><code>| foo | bar |
+| --- | --- |
+| baz | bim |
+</code></pre></div>
+
+
+</div>
+
+<p>Minimal syntax:</p>
+<table>
+<thead>
+<tr>
+<th>foo</th>
+<th>bar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>baz</td>
+<td>bim</td>
+</tr>
+</tbody>
+</table>
+<div class="lang-markdown">
+
+<div class="codehilite"><pre><span></span><code>|foo|bar|
+|-|-|
+|baz|bim|
+</code></pre></div>
+
+
+</div>
+
+<h2 id="todo">TODO</h2>
+<ul>
+<li>[ ] <a href="https://daringfireball.net/projects/markdown/basics" class="external-link">https://daringfireball.net/projects/markdown/basics</a></li>
+<li>[ ] <a href="https://daringfireball.net/projects/markdown/syntax" class="external-link">https://daringfireball.net/projects/markdown/syntax</a></li>
+<li>[ ] <a href="https://github.github.com/gfm/" class="external-link">https://github.github.com/gfm/</a></li>
 </ul></div>
 <div class="note-footer">
 <div class="backlinks">
@@ -298,20 +411,20 @@
 <div class="tags">
 <h2>Tags</h2>
 <ul>
-	<li><a class="backlink" href="/obs.html/tags/inbox/index.html">inbox</a></li>
-	<li><a class="backlink" href="/obs.html/tags/definition/index.html">definition</a></li>
+	<li><a class="backlink" href="/obs.html/tags/outline/index.html">outline</a></li>
+	<li><a class="backlink" href="/obs.html/tags/markdowntip/index.html">markdowntip</a></li>
 </ul>
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A335135634503723978385732801611971719244{level}" class="graph_div"></div>
+    <div id="A303924387887462123817393837144841909862{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B335135634503723978385732801611971719244{level}" level="{level}" note_temp_id="335135634503723978385732801611971719244" onclick="window.ObsHtmlGraph.run(this, '335135634503723978385732801611971719244', 'markdown');">
+        <button class="graph_button graph_show_button" id="B303924387887462123817393837144841909862{level}" level="{level}" note_temp_id="303924387887462123817393837144841909862" onclick="window.ObsHtmlGraph.run(this, '303924387887462123817393837144841909862', 'markdown');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C335135634503723978385732801611971719244{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C303924387887462123817393837144841909862{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

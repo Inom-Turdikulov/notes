@@ -5,7 +5,7 @@
 <head>
     <!-- Page information -->
     <meta charset="UTF-8" />
-    <meta name="node_id" content="pandoc" />
+    <meta name="node_id" content="none" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -43,13 +43,13 @@
 <script src="/obs.html/static/pako.js"></script>
 <script src="/obs.html/static/search.js"></script>
 <script src="/obs.html/static/dirtree.js"></script>
-
+<link rel="stylesheet" href="/obs.html/static/taglist.css" />
 
     <!-- Onload tweaks -->
     <script>
-        const CURRENT_NODE = "pandoc";
+        const CURRENT_NODE = "none";
         const HTML_URL_PREFIX = "";
-        const PAGE_DEPTH = 0;
+        const PAGE_DEPTH = {page_depth};
     </script>
 
     <style>
@@ -242,7 +242,7 @@
             }
         </script>
                                     <div class="graph_header_div requires_js">
-            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=pandoc" title="Open fullpage Graph">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=none" title="Open fullpage Graph">
                     <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
             </a>
         </div>
@@ -277,146 +277,13 @@
         <div class="flex_row">
             
             <div class="container">
-                <div class="content"><h1 id="pandoc">Pandoc</h1>
-<p>Pandoc [@JohnMacFarlanePandocUserGuide2023] is a <a href="/haskell.html">haskell</a>
-library and command-line tool to convert markup files (Markdown, LaTeX, HTML),
-it's also can produce PDF output.</p>
-<p>It supports a dozen input/output formats, you can check this by running
-<code>pandoc --list-input-formats</code> and <code>pandoc --list-output-formats</code> commands, or
-use the <code>--from</code> and <code>--to</code> options to select formats interactively.</p>
-<p>Pandoc supports Markdown with various features like: syntax for tables,
-definition lists, metadata blocks, footnotes, citations, math, and much more.</p>
-<p>Program has modular design and use <a href="/abstract%20syntax%20tree.html">ast</a> to
-represent documents. Reader modules - parse text in a given format and produce a
-native representation of the document (AST). Writer modules convert this AST
-into a target format. Using this design adding an input or output format
-requires only adding a reader or writer. Users also can run custom pandoc
-filters to modify the intermediate AST.</p>
-<p>Pandoc limitations are happens because intermediate representation of a document
-is less expressive than many of the formats it converts between, and you can
-lose specific data. Pandoc give more attention to structural elements of a
-document, but not formatting details like margin size. One of the best
-conversion results can be received from pandoc Markdown to other formats, less
-expressive formats conversions can be lossy.</p>
-<h2 id="basic-pandoc-usage">Basic pandoc usage</h2>
+                <h1 id="notes">Notes</h1>
 <ul>
-<li>Convert file to PDF (the output format is determined by file extension):</li>
+<li><a href="/markdown.html">markdown</a></li>
 </ul>
-<div class="lang-bash">
-
-<div class="codehilite"><pre><span></span><code>pandoc<span class="w"> </span>input.md<span class="w"> </span>-o<span class="w"> </span>output.pdf
-</code></pre></div>
-
-
-</div>
-
-<ul>
-<li>Force conversion to use a specific format (format is GFM, but file format is
-  markdown):</li>
-</ul>
-<div class="lang-bash">
-
-<div class="codehilite"><pre><span></span><code>pandoc<span class="w"> </span>input.docx<span class="w"> </span>--to<span class="w"> </span>gfm<span class="w"> </span>-o<span class="w"> </span>output.md
-</code></pre></div>
-
-
-</div>
-
-<ul>
-<li>Convert to a standalone file with the appropriate headers/footers (valid HTML
-  file including <head> and <body>):</li>
-</ul>
-<div class="lang-bash">
-
-<div class="codehilite"><pre><span></span><code>pandoc<span class="w"> </span>input.md<span class="w"> </span>-s<span class="w"> </span>-o<span class="w"> </span>output.html
-</code></pre></div>
-
-
-</div>
-
-<h2 id="how-i-use-pandoc">How I use pandoc</h2>
-<p>Generally I use shell script (check <code>pandoc-convert-example.sh</code>) to convert my
-notes from <a href="/markdown.html">markdown</a> to Markdown, to support <a href="/bibtex.html">bibtex</a> <a href="/citation.html">citation</a>, like
-<code>@JohnMacFarlanePandocUserGuide2023</code>.</p>
-<p>In results pandoc using various flags (BibTeX file, citation style, etc.)
-generate markdown file with integrated citations, and
-<a href="/bibliography.html">bibliography</a>. Later I use this to generate my static site,
-using <a href="/hugo.html">hugo</a>.</p>
-<p>Here is the core part of the script:</p>
-<div class="lang-bash">
-
-<div class="codehilite"><pre><span></span><code>pandoc<span class="w"> </span>-C<span class="w"> </span><span class="se">\</span>
-<span class="w">       </span>-t<span class="w"> </span>gfm<span class="w">  </span><span class="se">\</span>
-<span class="w">       </span>-f<span class="w"> </span>markdown+raw_html<span class="w"> </span><span class="se">\</span>
-<span class="w">       </span>--bibliography<span class="o">=</span>books/library.bib<span class="w"> </span><span class="se">\</span>
-<span class="w">       </span>--wrap<span class="o">=</span>preserve<span class="w"> </span>--reference-links<span class="w"> </span><span class="se">\</span>
-<span class="w">       </span>--csl<span class="o">=</span>books/research-institute-for-nature-and-forest.csl<span class="w"> </span><span class="se">\</span>
-<span class="w">       </span>-M<span class="w"> </span>reference-section-title<span class="o">=</span>References<span class="w"> </span><span class="se">\</span>
-<span class="w">       </span>--mathjax<span class="w"> </span><span class="se">\</span>
-<span class="w">       </span>-o<span class="w"> </span><span class="nv">$out_file</span><span class="w"> </span><span class="se">\</span>
-<span class="w">       </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
-</code></pre></div>
-
-
-</div>
-
-<ul>
-<li>
-<p><code>-t</code> - input format <a href="/markdown.html#gfm">markdown#gfm</a> ::TODO: add this
-  heading/note ::</p>
-</li>
-<li>
-<p><code>-f</code> - output format (markdown+raw_html)</p>
-</li>
-<li><code>--wrap=preserve</code> - preserve line breaks</li>
-<li><code>--csl=books/research-institute-for-nature-and-forest.csl</code> - citation style</li>
-<li><code>--bibliography=books/library.bib</code> - BibTeX file (exported from Zotero)</li>
-<li><code>-M reference-section-title=References</code> - title of the bibliography section</li>
-<li><code>--mathjax</code> - use <a href="/mathjax.html">mathjax</a> to render math</li>
-</ul></div>
-<div class="note-footer">
-<div class="backlinks">
-<h2>Backlinks</h2>
-<ul>
-	<li><a class="backlink" href="/my awesome software list.html">my awesome software list</a></li>
-	<li><a class="backlink" href="/markdown.html">markdown</a></li>
-</ul>
-</div>
-
-<div class="tags">
-<h2>Tags</h2>
-<ul>
-	<li><a class="backlink" href="/obs.html/tags/inbox/index.html">inbox</a></li>
-	<li><a class="backlink" href="/obs.html/tags/definition/index.html">definition</a></li>
-</ul>
-</div>
-
-</div>
-<div class="graph requires_js ">
-    <div id="A240107040700268718006886484792488369199{level}" class="graph_div"></div>
-    
-    <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B240107040700268718006886484792488369199{level}" level="{level}" note_temp_id="240107040700268718006886484792488369199" onclick="window.ObsHtmlGraph.run(this, '240107040700268718006886484792488369199', 'pandoc');">
-            Show Graph
-        </button>
-        <button class="graph_button graph_type_button" id="C240107040700268718006886484792488369199{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
-            2D
-        </button>
-    </div>
-</div>
-
-<script type="module">
-    if (window.ObsHtmlGraph == undefined){
-        import('/obs.html/static/graph.js').then((Module) => {
-            window.ObsHtmlGraph = Module;
-            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
-        })
-    }
-</script>
-
-
-
-
+<blockquote>
+<p><a href="/obs.html/tags/index.html">View all tags</a></p>
+</blockquote>
                 <!-- end content -->
             </div>
         </div>

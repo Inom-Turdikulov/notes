@@ -49,7 +49,7 @@ I can also spend time with my family, friends and pets or consume some media,
 for example:
 
 
-- Watching [movies](./my%20watched%20movies.md), [twitch](./twitch%20%28service%29.md),
+- Watching [movies](./my%20movies.md), [twitch](./twitch%20%28service%29.md),
   [youtube](./youtube.md)
 
 - Playing [my games](./my%20games.md)
