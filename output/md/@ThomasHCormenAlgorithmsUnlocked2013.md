@@ -7,9 +7,9 @@ date: 2013
 dateAdded: 2022-12-18
 draft: true
 localLibrary: zotero://select/items/1_NI9Y5RR4
-sr-due: 2023-03-20
-sr-ease: 228
-sr-interval: 1
+sr-due: 2023-11-23
+sr-ease: 248
+sr-interval: 190
 tags:
 - research
 - inbox

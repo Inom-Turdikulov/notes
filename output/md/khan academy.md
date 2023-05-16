@@ -2,6 +2,9 @@
 canonicalUrl: https://www.khanacademy.org/
 date: '2023-04-16'
 draft: true
+sr-due: 2023-05-29
+sr-ease: 289
+sr-interval: 12
 tags:
 - inbox
 - definition

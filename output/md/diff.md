@@ -1,9 +1,9 @@
 ---
 date: 2023-01-27
 draft: false
-sr-due: 2023-03-17
-sr-ease: 270
-sr-interval: 4
+sr-due: 2024-01-13
+sr-ease: 290
+sr-interval: 241
 tags:
 - inbox
 - definition

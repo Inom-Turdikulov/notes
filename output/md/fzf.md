@@ -1,13 +1,12 @@
 ---
 date: 2023-03-03
 draft: true
-sr-due: 2023-03-17
-sr-ease: 270
-sr-interval: 4
+sr-due: 2024-01-22
+sr-ease: 290
+sr-interval: 250
 tags:
 - inbox
 - definition
-- AOSR/6lqgq/s/5ufe
 ---
 
 # fzf
@@ -25,7 +24,7 @@ list of things: files, processes, command history, git branches, etc.
 
 You can select multiple items with TAB key::vim \*\*<TAB>
 Select Files under parent directory::vim ../\*\*<TAB>
-Select Files under parent directory that match `fzf`::vim ../fzf\*\*<TAB> `{_obsidian_pattern_tag_AOSR/6lqgq/s/5ufe}`
+Select Files under parent directory that match `fzf`::vim ../fzf\*\*<TAB> `#AOSR/6lqgq/s/5ufe`
 Select Files under your home directory::vim \~/\*\*<TAB>
 Select Directories under current directory (single-selection)::cd \*\*<TAB>
 Select Directories under \~/github that match `fzf`::cd \~/github/fzf\*\*<TAB>

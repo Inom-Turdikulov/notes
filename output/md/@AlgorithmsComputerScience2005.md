@@ -6,9 +6,9 @@ date: 2005
 dateAdded: 2023-03-18
 draft: true
 localLibrary: zotero://select/items/1_T6V7M5DE
-sr-due: 2023-03-20
-sr-ease: 228
-sr-interval: 1
+sr-due: 2023-11-22
+sr-ease: 248
+sr-interval: 189
 tags:
 - research
 - inbox

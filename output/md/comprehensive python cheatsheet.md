@@ -2,6 +2,9 @@
 canonicalUrl: https://github.com/gto76/python-cheatsheet
 date: 2023-04-24
 draft: true
+sr-due: 2023-05-19
+sr-ease: 248
+sr-interval: 2
 tags:
 - inbox
 - outline

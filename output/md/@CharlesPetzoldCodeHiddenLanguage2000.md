@@ -6,9 +6,9 @@ date: 2000
 dateAdded: 2022-12-18
 draft: true
 localLibrary: zotero://select/items/1_DGBZQN79
-sr-due: 2023-03-22
-sr-ease: 210
-sr-interval: 1
+sr-due: 2023-11-05
+sr-ease: 230
+sr-interval: 172
 tags:
 - research
 - inbox

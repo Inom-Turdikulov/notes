@@ -1,9 +1,9 @@
 ---
 date: 2022-12-29
 draft: true
-sr-due: 2023-03-22
-sr-ease: 211
-sr-interval: 1
+sr-due: 2023-11-06
+sr-ease: 231
+sr-interval: 173
 tags:
 - inbox
 - outline

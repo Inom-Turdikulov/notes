@@ -7,9 +7,9 @@ date: 2002
 dateAdded: 2023-02-19
 draft: true
 localLibrary: zotero://select/items/1_7G5QQNSC
-sr-due: 2023-03-15
+sr-due: 2023-08-09
 sr-ease: 248
-sr-interval: 2
+sr-interval: 84
 tags:
 - research
 - inbox

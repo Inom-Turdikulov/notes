@@ -1,8 +1,8 @@
 ---
 date: 2023-03-09
-sr-due: 2023-03-14
-sr-ease: 230
-sr-interval: 1
+sr-due: 2023-12-14
+sr-ease: 250
+sr-interval: 211
 tags:
 - inbox
 - permanent

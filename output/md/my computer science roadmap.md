@@ -1,9 +1,9 @@
 ---
 date: 2023-03-08
 draft: true
-sr-due: 2023-03-22
-sr-ease: 208
-sr-interval: 1
+sr-due: 2023-10-30
+sr-ease: 228
+sr-interval: 166
 tags:
 - inbox
 - permanent

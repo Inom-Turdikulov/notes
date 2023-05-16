@@ -6,9 +6,9 @@ date: 2020
 dateAdded: 2022-12-18
 draft: true
 localLibrary: zotero://select/items/1_D42944HA
-sr-due: 2023-03-14
-sr-ease: 230
-sr-interval: 1
+sr-due: 2023-12-16
+sr-ease: 250
+sr-interval: 213
 tags:
 - research
 - inbox
