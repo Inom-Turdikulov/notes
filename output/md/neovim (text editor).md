@@ -1,15 +1,12 @@
 ---
 date: 2023-02-20
 draft: true
-sr-due: 2024-11-20
-sr-ease: 250
-sr-interval: 553
+sr-due: 2024-02-18
+sr-ease: 230
+sr-interval: 277
 tags:
 - inbox
 - definition
-- N
-- k
-- j
 ---
 
 # Neovim (text editor)
@@ -943,7 +940,7 @@ left.
  Restore last session `SPC TAB R`
  Switch to workspace 1 `M-1`
  Switch to workspace 2 and so forth. `M-2`
- go to `{_obsidian_pattern_tag_N}` tab `SPC Tab [num]`
+ go to N tab `SPC Tab [num]`
  Move Tab Forward/Backward `M-x workspace/swap-left[right]`
 
  ------------------------------------- ---------------------------------------------
@@ -1899,8 +1896,8 @@ TODO: [https://www.youtube.com/@teej_dv](https://www.youtube.com/@teej_dv)
 
 ## Tips
 
-`{_obsidian_pattern_tag_k}` - up to # line
-`{_obsidian_pattern_tag_j}` - down to # line
+`#k` - up to # line
+`#j` - down to # line
 
 switch to previous file, the best alternative to c-o
 c-^
@@ -2853,7 +2850,7 @@ left.
 
 ### Workspaces
 
-
+```
  ------------------------------------- ---------------------------------------------
  create a new workspace <kbd>C-t</kbd>
  Switch to workspace <kbd>SPC TAB .</kbd>
@@ -2867,10 +2864,11 @@ left.
  Restore last session <kbd>SPC TAB R</kbd>
  Switch to workspace 1 <kbd>M-1</kbd>
  Switch to workspace 2 and so forth. <kbd>M-2</kbd>
- go to `{_obsidian_pattern_tag_N}` tab <kbd>SPC Tab [num]</kbd>
+ go to N tab <kbd>SPC Tab [num]</kbd>
  Move Tab Forward/Backward <kbd>M-x workspace/swap-left[right]</kbd>
-
  ------------------------------------- ---------------------------------------------
+```
+
 
 ### Buffers
 
@@ -3158,7 +3156,7 @@ SPC i y Insert from clipboard
 > shift right in visual mode (v)
 < shift left in visual mode (v)
 
-zf`{_obsidian_pattern_tag_j}` creates a fold from the cursor down # lines.
+zf#j creates a fold from the cursor down # lines.
 zf/ string creates a fold from the cursor to string.
 zj moves the cursor to the next fold.
 zk moves the cursor to the previous fold.

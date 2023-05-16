@@ -1114,7 +1114,7 @@ left.</p>
  Restore last session <code>SPC TAB R</code>
  Switch to workspace 1 <code>M-1</code>
  Switch to workspace 2 and so forth. <code>M-2</code>
- go to <a class="inline-tag" href="/obs.html/tags/N/index.html">N</a> tab <code>SPC Tab [num]</code>
+ go to N tab <code>SPC Tab [num]</code>
  Move Tab Forward/Backward <code>M-x workspace/swap-left[right]</code></p>
 <hr />
 <h3 id="buffers_1">Buffers</h3>
@@ -2036,8 +2036,8 @@ TODO: <a href="https://www.youtube.com/@teej_dv" class="external-link" class="ex
 <h2 id="scripts_1">Scripts</h2>
 <p><code>url_to_markdown.sh</code> - convert URL to markdown snippet</p>
 <h2 id="tips">Tips</h2>
-<p><a class="inline-tag" href="/obs.html/tags/k/index.html">k</a> - up to # line
-<a class="inline-tag" href="/obs.html/tags/j/index.html">j</a> - down to # line</p>
+<p><code>#k</code> - up to # line
+<code>#j</code> - down to # line</p>
 <p>switch to previous file, the best alternative to c-o
 c-^</p>
 <p>Generate abbrev using lua:</p>
@@ -2871,22 +2871,29 @@ emacs -Q # Dont load site-wide startup file (global init file)</p>
 windows, resize windows for example SPC w H moves the window to the
 left.</p>
 <h3 id="workspaces_2">Workspaces</h3>
-<hr />
-<p>create a new workspace <kbd>C-t</kbd>
- Switch to workspace <kbd>SPC TAB .</kbd>
- new workspace <kbd>SPC TAB n</kbd>
- new named workspace <kbd>SPC TAB N</kbd>
- Previous workspace <kbd>SPC TAB [</kbd>
- Next workspace <kbd>SPC TAB ]</kbd>
- Previous workspace as alternative <kbd>[w</kbd>
- Next workspace as alternative <kbd>]w</kbd>
- Remove workspace <kbd>SPC TAB d</kbd>
- Restore last session <kbd>SPC TAB R</kbd>
- Switch to workspace 1 <kbd>M-1</kbd>
- Switch to workspace 2 and so forth. <kbd>M-2</kbd>
- go to <a class="inline-tag" href="/obs.html/tags/N/index.html">N</a> tab <kbd>SPC Tab [num]</kbd>
- Move Tab Forward/Backward <kbd>M-x workspace/swap-left[right]</kbd></p>
-<hr />
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">-------------------------------------</span><span class="w"> </span><span class="o">---------------------------------------------</span>
+<span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">workspace</span><span class="w"> </span><span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">C</span><span class="o">-</span><span class="n">t</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span>
+<span class="w"> </span><span class="n">Switch</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">workspace</span><span class="w"> </span><span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">SPC</span><span class="w"> </span><span class="n">TAB</span><span class="w"> </span><span class="p">.</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span>
+<span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">workspace</span><span class="w"> </span><span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">SPC</span><span class="w"> </span><span class="n">TAB</span><span class="w"> </span><span class="n">n</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span>
+<span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">named</span><span class="w"> </span><span class="n">workspace</span><span class="w"> </span><span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">SPC</span><span class="w"> </span><span class="n">TAB</span><span class="w"> </span><span class="n">N</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span>
+<span class="w"> </span><span class="n">Previous</span><span class="w"> </span><span class="n">workspace</span><span class="w"> </span><span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">SPC</span><span class="w"> </span><span class="n">TAB</span><span class="w"> </span><span class="o">[</span><span class="n">&lt;/kbd&gt;</span>
+<span class="n"> Next workspace &lt;kbd&gt;SPC TAB </span><span class="o">]&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span>
+<span class="w"> </span><span class="n">Previous</span><span class="w"> </span><span class="n">workspace</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">alternative</span><span class="w"> </span><span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;[</span><span class="n">w&lt;/kbd&gt;</span>
+<span class="n"> Next workspace as alternative &lt;kbd&gt;</span><span class="o">]</span><span class="n">w</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span>
+<span class="w"> </span><span class="n">Remove</span><span class="w"> </span><span class="n">workspace</span><span class="w"> </span><span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">SPC</span><span class="w"> </span><span class="n">TAB</span><span class="w"> </span><span class="n">d</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span>
+<span class="w"> </span><span class="k">Restore</span><span class="w"> </span><span class="k">last</span><span class="w"> </span><span class="k">session</span><span class="w"> </span><span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">SPC</span><span class="w"> </span><span class="n">TAB</span><span class="w"> </span><span class="n">R</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span>
+<span class="w"> </span><span class="n">Switch</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">workspace</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">M</span><span class="o">-</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span>
+<span class="w"> </span><span class="n">Switch</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">workspace</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="n">forth</span><span class="p">.</span><span class="w"> </span><span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">M</span><span class="o">-</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span>
+<span class="w"> </span><span class="k">go</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="n">tab</span><span class="w"> </span><span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">SPC</span><span class="w"> </span><span class="n">Tab</span><span class="w"> </span><span class="o">[</span><span class="n">num</span><span class="o">]&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span>
+<span class="w"> </span><span class="n">Move</span><span class="w"> </span><span class="n">Tab</span><span class="w"> </span><span class="n">Forward</span><span class="o">/</span><span class="n">Backward</span><span class="w"> </span><span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">M</span><span class="o">-</span><span class="n">x</span><span class="w"> </span><span class="n">workspace</span><span class="o">/</span><span class="n">swap</span><span class="o">-</span><span class="nf">left</span><span class="o">[</span><span class="n">right</span><span class="o">]&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span>
+<span class="w"> </span><span class="c1">------------------------------------- ---------------------------------------------</span>
+</code></pre></div>
+
+
+</div>
+
 <h3 id="buffers_2">Buffers</h3>
 <hr />
 <p>switch to another buffer (alternative is SPC b b) <kbd>SPC ,</kbd>
@@ -3106,7 +3113,7 @@ shift right in visual mode (v)
 &lt; shift left in visual mode (v)</p>
 </blockquote>
 </blockquote>
-<p>zf<a class="inline-tag" href="/obs.html/tags/j/index.html">j</a> creates a fold from the cursor down # lines.
+<p>zf#j creates a fold from the cursor down # lines.
 zf/ string creates a fold from the cursor to string.
 zj moves the cursor to the next fold.
 zk moves the cursor to the previous fold.
@@ -3622,21 +3629,18 @@ list of bookmarked files. It\'s amazingly useful</p></div>
 <ul>
 	<li><a class="backlink" href="/obs.html/tags/inbox/index.html">inbox</a></li>
 	<li><a class="backlink" href="/obs.html/tags/definition/index.html">definition</a></li>
-	<li><a class="backlink" href="/obs.html/tags/N/index.html">N</a></li>
-	<li><a class="backlink" href="/obs.html/tags/k/index.html">k</a></li>
-	<li><a class="backlink" href="/obs.html/tags/j/index.html">j</a></li>
 </ul>
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A220704723418266954856371373397623142568{level}" class="graph_div"></div>
+    <div id="A142050249420990670211135385061016621183{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B220704723418266954856371373397623142568{level}" level="{level}" note_temp_id="220704723418266954856371373397623142568" onclick="window.ObsHtmlGraph.run(this, '220704723418266954856371373397623142568', 'neovim (text editor)');">
+        <button class="graph_button graph_show_button" id="B142050249420990670211135385061016621183{level}" level="{level}" note_temp_id="142050249420990670211135385061016621183" onclick="window.ObsHtmlGraph.run(this, '142050249420990670211135385061016621183', 'neovim (text editor)');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C220704723418266954856371373397623142568{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C142050249420990670211135385061016621183{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
