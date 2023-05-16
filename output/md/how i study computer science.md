@@ -17,7 +17,7 @@ some methodical materials from teachers. I started to read after 9th grade (1
 year later) and this give me my initial knowledge about computer science, basic
 algorithms, Visual Basic and office programs. And I think here was sort
 observation of internet/web technologies. Currently, I think better to dive into
-computer science with [CharlesPetzoldCodeHiddenLanguage2000](/not_created.md) which give much
+computer science with [@CharlesPetzoldCodeHiddenLanguage2000](./%40CharlesPetzoldCodeHiddenLanguage2000.md) which give much
 more fundamental knowledge.
 
 My next book, which I found useful is "The C Programming Language"
@@ -38,7 +38,6 @@ tutorials/documentation to write better Python code.
   it's will be very useful to know syntax/core libraries.
 
 ## TODO
-
 
 - [ ] [@LucianoRamalhoFluentPython2021](./%40LucianoRamalhoFluentPython2021.md).
 - [ ] [@InterviewCakeCodingInterviewPractice](./%40InterviewCakeCodingInterviewPractice.md).
