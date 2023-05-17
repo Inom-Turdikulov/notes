@@ -31,6 +31,7 @@ I'm fan of fine art and CGI art.
 ## Learning resources
 
 
+- [@KilpatrickDavidSvetOsveshchenie1988](./%40KilpatrickDavidSvetOsveshchenie1988.md), Looks like a good book about light
 - [30 day drawing challenge](./30%20day%20drawing%20challenge.md)
 - [@AndrewLoomisFunPencilHow2013](./%40AndrewLoomisFunPencilHow2013.md)
 - [ArtStation - showcase platform](https://www.artstation.com/)

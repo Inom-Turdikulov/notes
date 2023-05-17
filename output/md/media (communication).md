@@ -25,7 +25,7 @@ tags:
 - [my videos](./my%20videos.md)
 - [my music](./my%20music.md)
 - [my games](./my%20games.md)
-- [my books](./my%20books.md)
+- [my read books](./my%20read%20books.md)
 - [my movies](./my%20movies.md)
 - [my pictures](./my%20pictures.md)
 - [comics](./comics.md)

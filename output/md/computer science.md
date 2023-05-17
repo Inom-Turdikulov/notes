@@ -32,4 +32,4 @@ In computer science central role plays [algorithms](./algorithm.md) and
 I think knowing computer science help to write effective [code](./code.md) (goal of good
 [[programmer (software developer)], which I want to be]).
 
-I haw own plan to [study computer science](./how%20i%20study%20computer%20science.md).
+My plan to learn CS is here: [how do I study computer science](./how%20do%20I%20study%20computer%20science.md).

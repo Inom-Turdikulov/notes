@@ -59,16 +59,18 @@ finishing studying.
 6. Active Recitation: The best way to learn is to teach somebody else. If
    there's no one, teach an empty chair, teach virtual public, record video, or
    write it out.
-7. How to use textbooks? Use "[sq3r method](./sq3r%20method.md)": Survey, Question,
+7. How to use textbooks? Use "[SQ3R method](./SQ3R%20method.md)": Survey, Question,
    Read, Recall, Repetition.
 8. Acronyms and interacting images can help you remember and memorize facts,
    terms, and idioms.
-9. Use [spaced repetition](./spaced%20repetition.md), research software like
-   [zotero](./zotero.md) and [zettelkasten](./zettelkasten.md) method.
+9. Use [spaced repetition](./spaced%20repetition.md), research software like [zotero](./zotero.md) and
+   [zettelkasten](./zettelkasten.md) method.
 
 ## My priorities to learn
 
 
-- [how i study computer science](./how%20i%20study%20computer%20science.md)
-- [how i study mathematics](./how%20i%20study%20mathematics.md)
-- [how i study english language](./how%20i%20study%20english%20language.md)
+- [how do I study computer science](./how%20do%20I%20study%20computer%20science.md)
+- [how do I study mathematics](./how%20do%20I%20study%20mathematics.md)
+- [how do I study English language](./how%20do%20I%20study%20English%20language.md)
+- [how do I study game development](./how%20do%20I%20study%20game%20development.md)
+- [how do I study physics and chemistry](./how%20do%20I%20study%20physics%20and%20chemistry.md)

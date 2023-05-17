@@ -53,7 +53,7 @@ for example:
   [youtube](./youtube.md)
 
 - Playing [my games](./my%20games.md)
-- Reading [my books](./my%20books.md) and [news](./news.md)
+- Reading [my read books](./my%20read%20books.md) and [news](./news.md)
 - Listening [my music](./my%20music.md)
 - Art [my art](./my%20art.md)
 
@@ -64,14 +64,14 @@ And of course healthy [sleep](./sleep.md).
 I'm trying to learn new things every day. Currently, I'm studying (this is
 plan):
 
-Here my "to learn" books list: [my books](./my%20books.md).
+Here my "to learn" books list: [my read books](./my%20read%20books.md).
 
 Here my "to learn" articles list: [my articles list (publishing)](./my%20articles%20list%20%28publishing%29.md).
 
 Since I'm use [zettelkasten](./zettelkasten.md), I can create new notes based on education
 materials and extend them with different sources, my experience, etc.
 
-To study effectively I use [sq3r method](./sq3r%20method.md), [study techniques](./how%20to%20study.md)
+To study effectively I use [SQ3R method](./SQ3R%20method.md), [study techniques](./how%20to%20study.md)
 and various methods [how to solve it](./how%20to%20solve%20it.md). More information here - [education](./education.md).
 
 It's not enough to study only, need continuously practice (use your knowledge)

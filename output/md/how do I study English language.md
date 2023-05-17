@@ -9,10 +9,13 @@ tags:
 - outline
 ---
 
-# How I study English language?
+# How do I study English language?
 
 I usually just read some content in [english language](./english%20language.md).
 I also consume [media](./media%20%28communication%29.md) content in English.
+
+Since I am a native speaker of [Russian language](./Russian%20language.md), I need to study English
+with Russian in same time (to understand grammar, etc.).
 
 ## Resources
 
