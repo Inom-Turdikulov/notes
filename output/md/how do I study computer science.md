@@ -50,11 +50,11 @@ want to know.
 **Level 3** - expert knowledge, which I want to know. This also includes some
 books not directly related to computer science.
 
-## [Computer Science Roadmap](./my%20computer%20science%20roadmap.md)
-
-## [Python developer roadmap](./my%20python%20developer%20roadmap.md)
+## [Computer Science Roadmap](./tech%20yourself%20computer%20science.md)
 
 ## [Backend Developer Roadmap](./my%20backend%20developer%20roadmap.md)
+
+## [Python developer roadmap](./my%20python%20developer%20roadmap.md)
 
 ## Level 1
 
