@@ -33,4 +33,4 @@ My favorite operating systems:
 Other operating systems:
 
 
-- [microsoft windows](./microsoft%20windows.md)
+- [Microsoft Windows](./Microsoft%20Windows.md)

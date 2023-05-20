@@ -31,7 +31,7 @@ NEXT: review this
   - [suckless.org](./suckless.org.md)
   - [self-hosting (web services)](./self-hosting%20%28web%20services%29.md)
   - [hugo](./hugo.md)
-  - [microsoft windows](./microsoft%20windows.md)
+  - [Microsoft Windows](./Microsoft%20Windows.md)
   - [zotero](./zotero.md)
   - [git](./git.md)
   - [fzf](./fzf.md)

@@ -368,7 +368,7 @@ Check also [my shell scripts](./my%20shell%20scripts.md) and
   duplicate files
 
 - [ventoy](https://www.ventoy.net/en/isolist.html) - tool to create bootable USB
-  drive
+  drive, [more info](./ventoy.md)
 
 - [xclip](https://github.com/astrand/xclip) - command line interface to the X11
   clipboard

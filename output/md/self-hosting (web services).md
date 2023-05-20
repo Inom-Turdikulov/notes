@@ -30,3 +30,5 @@ tags:
 - [Syncthing](http://127.0.0.1:8384/)
 - [cloud-torrent](https://github.com/jpillora/cloud-torrent)
 - PrivateBin
+
+## Resources

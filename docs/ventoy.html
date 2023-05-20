@@ -5,7 +5,7 @@
 <head>
     <!-- Page information -->
     <meta charset="UTF-8" />
-    <meta name="node_id" content="computer software" />
+    <meta name="node_id" content="ventoy" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -47,7 +47,7 @@
 
     <!-- Onload tweaks -->
     <script>
-        const CURRENT_NODE = "computer software";
+        const CURRENT_NODE = "ventoy";
         const HTML_URL_PREFIX = "";
         const PAGE_DEPTH = 0;
     </script>
@@ -242,7 +242,7 @@
             }
         </script>
                                     <div class="graph_header_div requires_js">
-            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=computer software" title="Open fullpage Graph">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=ventoy" title="Open fullpage Graph">
                     <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
             </a>
         </div>
@@ -277,31 +277,73 @@
         <div class="flex_row">
             
             <div class="container">
-                <div class="content"><h1 id="computer-software">Computer software</h1>
+                <div class="content"><h1 id="ventoy">Ventoy</h1>
 <blockquote>
-<p>Set of instructions and documentation that tells a computer what to do or how
-to perform a task. Software includes all different programs on a computer,
-such as applications and the operating system.</p>
-<p>Applications are <a href="/computer%20program.html">programs</a> that are designed
-to perform a specific operation, such as a
-<a href="/neovim%20%28text%20editor%29.html">text editor</a> game or a word processor. The
-operating system (e.g. <a href="/arch%20linux%20%28and%20other%20distros%29.html">arch linux (and other distros)</a>, Mac OS,
-<a href="/Microsoft%20Windows.html">Microsoft Windows</a>, Android and various Linux distributions)
-is a type of software that is used as a platform for running the applications,
-and controls all user interface tools including display and the keyboard.</p>
+<p>Ventoy is an open source tool to create bootable USB drive for
+ISO/WIM/IMG/VHD(x)/EFI files. With ventoy, you don't need to format the disk
+over and over, you just need to copy the ISO/WIM/IMG/VHD(x)/EFI files to the
+USB drive and boot them directly. You can copy many files at a time and ventoy
+will give you a boot menu to select them (screenshot). You can also browse
+ISO/WIM/IMG/VHD(x)/EFI files in local disks and boot them. x86 Legacy BIOS,
+IA32 UEFI, x86_64 UEFI, ARM64 UEFI and MIPS64EL UEFI are supported in the same
+way. Most types of OS supported
+(Windows/WinPE/Linux/ChromeOS/Unix/VMware/Xen...)</p>
+<p>-- <a href="https://www.ventoy.net/en/index.html" class="external-link">Ventoy</a></p>
 </blockquote>
-<ul>
-<li><a href="/my%20awesome%20software%20list.html">my awesome software list</a></li>
-</ul></div>
+<h2 id="getting-started"><a href="https://www.ventoy.net/en/doc_start.html" class="external-link">Getting started</a></h2>
+<ol>
+<li>Install ventoy,
+   <a href="https://aur.archlinux.org/packages/ventoy-bin" class="external-link">AUR (en) - ventoy-bin</a>,
+   <a href="https://www.ventoy.net/en/download.html" class="external-link">Download Ventoy</a></li>
+<li>Find the USB device</li>
+</ol>
+<div class="lang-bash">
+
+<div class="codehilite"><pre><span></span><code><span class="w">   </span>lsblk<span class="w"> </span>-o<span class="w"> </span>name,mountpoint,label,size,uuid
+</code></pre></div>
+
+
+</div>
+
+<ol>
+<li>Run the shell script as root (if used ventoy-bin package, binary is
+   <code>ventoy</code>)</li>
+</ol>
+<div class="lang-bash">
+
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="c1"># XXX is the USB device, for example /dev/sdb.</span>
+<span class="w">   </span>sh<span class="w"> </span>Ventoy2Disk.sh<span class="w"> </span><span class="o">{</span><span class="w"> </span>-i<span class="w"> </span><span class="p">|</span><span class="w"> </span>-u<span class="w"> </span><span class="o">}</span><span class="w"> </span>/dev/XXX
+</code></pre></div>
+
+
+</div>
+
+<div class="lang-bash">
+
+<div class="codehilite"><pre><span></span><code><span class="w">   </span>Usage:<span class="w">  </span>Ventoy2Disk.sh<span class="w"> </span>CMD<span class="w"> </span><span class="o">[</span><span class="w"> </span>OPTION<span class="w"> </span><span class="o">]</span><span class="w"> </span>/dev/sdX
+<span class="w">     </span>CMD:
+<span class="w">      </span>-i<span class="w">  </span>install<span class="w"> </span>Ventoy<span class="w"> </span>to<span class="w"> </span>sdX<span class="w"> </span><span class="o">(</span>fails<span class="w"> </span><span class="k">if</span><span class="w"> </span>disk<span class="w"> </span>already<span class="w"> </span>installed<span class="w"> </span>with<span class="w"> </span>Ventoy<span class="o">)</span>
+<span class="w">      </span>-u<span class="w">  </span>update<span class="w"> </span>Ventoy<span class="w"> </span><span class="k">in</span><span class="w"> </span>sdX
+
+<span class="w">      </span>-I<span class="w">  </span>force<span class="w"> </span>install<span class="w"> </span>Ventoy<span class="w"> </span>to<span class="w"> </span>sdX<span class="w"> </span><span class="o">(</span>no<span class="w"> </span>matter<span class="w"> </span><span class="k">if</span><span class="w"> </span>installed<span class="w"> </span>or<span class="w"> </span>not<span class="o">)</span>
+<span class="w">      </span>-l<span class="w">  </span>list<span class="w"> </span>Ventoy<span class="w"> </span>information<span class="w"> </span><span class="k">in</span><span class="w"> </span>sdX
+
+<span class="w">     </span>OPTION:<span class="w"> </span><span class="o">(</span>optional<span class="o">)</span>
+<span class="w">      </span>-r<span class="w"> </span>SIZE_MB<span class="w">  </span>preserve<span class="w"> </span>some<span class="w"> </span>space<span class="w"> </span>at<span class="w"> </span>the<span class="w"> </span>bottom<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>disk<span class="w"> </span><span class="o">(</span>only<span class="w"> </span><span class="k">for</span><span class="w"> </span>install<span class="o">)</span>
+<span class="w">      </span>-s/-S<span class="w">       </span>enable/disable<span class="w"> </span>secure<span class="w"> </span>boot<span class="w"> </span>support<span class="w"> </span><span class="o">(</span>default<span class="w"> </span>is<span class="w"> </span>enabled<span class="o">)</span>
+<span class="w">      </span>-g<span class="w">          </span>use<span class="w"> </span>GPT<span class="w"> </span>partition<span class="w"> </span>style,<span class="w"> </span>default<span class="w"> </span>is<span class="w"> </span>MBR<span class="w"> </span><span class="o">(</span>only<span class="w"> </span><span class="k">for</span><span class="w"> </span>install<span class="o">)</span>
+<span class="w">      </span>-L<span class="w">          </span>Label<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>1st<span class="w"> </span>exfat<span class="w"> </span>partition<span class="w"> </span><span class="o">(</span>default<span class="w"> </span>is<span class="w"> </span>Ventoy<span class="o">)</span>
+<span class="w">      </span>-n<span class="w">          </span>try<span class="w"> </span>non-destructive<span class="w"> </span>installation<span class="w"> </span><span class="o">(</span>only<span class="w"> </span><span class="k">for</span><span class="w"> </span>install<span class="o">)</span>
+</code></pre></div>
+
+
+</div></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
 <ul>
-	<li><a class="backlink" href="/computer science.html">computer science</a></li>
-	<li><a class="backlink" href="/general-purpose programming language.html">general-purpose programming language</a></li>
-	<li><a class="backlink" href="/linux.html">linux</a></li>
-	<li><a class="backlink" href="/@AndrewHuntPragmaticProgrammerYour2019.html">@andrewhuntpragmaticprogrammeryour2019</a></li>
-	<li><a class="backlink" href="/development environment.html">development environment</a></li>
+	<li><a class="backlink" href="/win_setup_script.html">win_setup_script</a></li>
+	<li><a class="backlink" href="/my awesome software list.html">my awesome software list</a></li>
 </ul>
 </div>
 
@@ -315,13 +357,13 @@ and controls all user interface tools including display and the keyboard.</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A112818049801564851732587271494636064442{level}" class="graph_div"></div>
+    <div id="A143135288926885512935429064715459129650{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B112818049801564851732587271494636064442{level}" level="{level}" note_temp_id="112818049801564851732587271494636064442" onclick="window.ObsHtmlGraph.run(this, '112818049801564851732587271494636064442', 'computer software');">
+        <button class="graph_button graph_show_button" id="B143135288926885512935429064715459129650{level}" level="{level}" note_temp_id="143135288926885512935429064715459129650" onclick="window.ObsHtmlGraph.run(this, '143135288926885512935429064715459129650', 'ventoy');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C112818049801564851732587271494636064442{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C143135288926885512935429064715459129650{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
