@@ -275,7 +275,7 @@
 </div>
 </div>
         <div class="flex_row">
-            
+            {left_pane}
             <div class="container">
                 <div class="content"><h1 id="ventoy">Ventoy</h1>
 <blockquote>
@@ -337,33 +337,90 @@ way. Most types of OS supported
 </code></pre></div>
 
 
-</div></div>
-<div class="note-footer">
-<div class="backlinks">
-<h2>Backlinks</h2>
-<ul>
-	<li><a class="backlink" href="/win_setup_script.html">win_setup_script</a></li>
-	<li><a class="backlink" href="/my awesome software list.html">my awesome software list</a></li>
-</ul>
 </div>
 
+<h2 id="how-to-copy-iso-file-to-ventoy-usb-drive-and-validate-it">How to copy ISO file to Ventoy USB drive and validate it</h2>
+<h3 id="windows">Windows</h3>
+<p>Checksums are verified, check this section <a href="/win_setup_script.html">win_setup_script</a></p>
+<div class="lang-sh">
+
+<div class="codehilite"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">VENTOY_PATH</span><span class="o">=</span><span class="s2">&quot;/media/Ventoy&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">WIN_ISO_CHECKSUM</span><span class="o">=</span><span class="s2">&quot;c90a6df8997bf49e56b9673982f3e80745058723a707aef8f22998ae6479597d&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">ISO_FILE</span><span class="o">=</span><span class="s2">&quot;en-us_windows_10_enterprise_ltsc_2021_x64_dvd_d289cf96.iso&quot;</span>
+
+<span class="c1"># Mount USB drive</span>
+udiskie-mount<span class="w"> </span>-a
+
+<span class="c1"># Check ventoy USB drive is mounted</span>
+<span class="o">[</span><span class="w"> </span>-d<span class="w"> </span><span class="nv">$VENTOY_PATH</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+
+<span class="c1"># Update ventoy path</span>
+<span class="nv">VENTOY_PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$VENTOY_PATH</span><span class="s2">/_win&quot;</span>
+
+<span class="c1"># Create _win directory</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VENTOY_PATH</span><span class="s2">&quot;</span>
+
+cp<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ISO_FILE</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VENTOY_PATH</span><span class="s2">&quot;</span>
+
+<span class="c1"># Create SHA-256 file and validate it</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$WIN_ISO_CHECKSUM</span><span class="s2">  </span><span class="nv">$ISO_FILE</span><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VENTOY_PATH</span><span class="s2">/</span><span class="nv">$ISO_FILE</span><span class="s2">.sha256.txt&quot;</span>
+sha256sum<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VENTOY_PATH</span><span class="s2">/</span><span class="nv">$ISO_FILE</span><span class="s2">.sha256.txt&quot;</span>
+</code></pre></div>
+
+
+</div>
+
+<h3 id="arch-linux">Arch Linux</h3>
+<p>To download, I use this URL: &lt;<a href="https://geo.mirror.pkgbuild.com/iso/latest/&gt;" class="external-link">https://geo.mirror.pkgbuild.com/iso/latest/&gt;</a></p>
+<div class="lang-sh">
+
+<div class="codehilite"><pre><span></span><code><span class="c1">## Step 1 prepare</span>
+
+<span class="nb">export</span><span class="w"> </span><span class="nv">ISO_FILE</span><span class="o">=</span><span class="s2">&quot;archlinux-x86_64.iso&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">SIGNER_FILE</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$ISO_FILE</span><span class="s2">.sig&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">ARCH_ISO_URL</span><span class="o">=</span><span class="s2">&quot;https://geo.mirror.pkgbuild.com/iso/latest/</span><span class="nv">$ISO_FILE</span><span class="s2">&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">ARCH_SIG_URL</span><span class="o">=</span><span class="s2">&quot;https://geo.mirror.pkgbuild.com/iso/latest/</span><span class="nv">$SIGNER_FILE</span><span class="s2">&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">VENTOY_PATH</span><span class="o">=</span><span class="s2">&quot;/media/Ventoy&quot;</span>
+
+<span class="c1">## Verify requiremets installed</span>
+sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>--needed<span class="w"> </span>aria2<span class="w"> </span>gnupg<span class="w"> </span>udiskie
+
+<span class="c1"># Mount USB drive</span>
+udiskie-mount<span class="w"> </span>-a
+
+<span class="c1"># Check ventoy USB drive is mounted</span>
+<span class="o">[</span><span class="w"> </span>-d<span class="w"> </span><span class="nv">$VENTOY_PATH</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+
+<span class="c1"># Update ventoy path</span>
+<span class="nv">VENTOY_PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$VENTOY_PATH</span><span class="s2">/_linux&quot;</span>
+
+<span class="c1"># Create _linux directory</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VENTOY_PATH</span><span class="s2">&quot;</span>
+
+<span class="c1">## Step 2 download and verify</span>
+<span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VENTOY_PATH</span><span class="s2">&quot;</span>
+aria2c<span class="w"> </span>--max-connection-per-server<span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ARCH_ISO_URL</span><span class="s2">&quot;</span>
+aria2c<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ARCH_SIG_URL</span><span class="s2">&quot;</span>
+gpg<span class="w"> </span>--keyserver-options<span class="w"> </span>auto-key-retrieve<span class="w"> </span>--verify<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SIGNER_FILE</span><span class="s2">&quot;</span>
+</code></pre></div>
+
+
+</div></div>
+<div class="note-footer">
+{_obsidian_html_backlinks_pattern_}
 <div class="tags">
-<h2>Tags</h2>
-<ul>
-	<li><a class="backlink" href="/obs.html/tags/inbox/index.html">inbox</a></li>
-	<li><a class="backlink" href="/obs.html/tags/definition/index.html">definition</a></li>
-</ul>
+{_obsidian_html_tags_footer_pattern_}
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A143135288926885512935429064715459129650{level}" class="graph_div"></div>
+    <div id="A326309559366921717606405416201832807156{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B143135288926885512935429064715459129650{level}" level="{level}" note_temp_id="143135288926885512935429064715459129650" onclick="window.ObsHtmlGraph.run(this, '143135288926885512935429064715459129650', 'ventoy');">
+        <button class="graph_button graph_show_button" id="B326309559366921717606405416201832807156{level}" level="{level}" note_temp_id="326309559366921717606405416201832807156" onclick="window.ObsHtmlGraph.run(this, '326309559366921717606405416201832807156', 'ventoy');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C143135288926885512935429064715459129650{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C326309559366921717606405416201832807156{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
@@ -379,7 +436,7 @@ way. Most types of OS supported
 </script>
 
 
-
+{_obsidian_html_node_id_pattern_:ventoy}
 
                 <!-- end content -->
             </div>

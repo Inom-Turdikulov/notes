@@ -5,7 +5,7 @@
 <head>
     <!-- Page information -->
     <meta charset="UTF-8" />
-    <meta name="node_id" content="miniflux" />
+    <meta name="node_id" content="my editing workflow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -47,7 +47,7 @@
 
     <!-- Onload tweaks -->
     <script>
-        const CURRENT_NODE = "miniflux";
+        const CURRENT_NODE = "my editing workflow";
         const HTML_URL_PREFIX = "";
         const PAGE_DEPTH = 0;
     </script>
@@ -242,7 +242,7 @@
             }
         </script>
                                     <div class="graph_header_div requires_js">
-            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=miniflux" title="Open fullpage Graph">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=my editing workflow" title="Open fullpage Graph">
                     <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
             </a>
         </div>
@@ -275,95 +275,459 @@
 </div>
 </div>
         <div class="flex_row">
-            
+            {left_pane}
             <div class="container">
-                <div class="content"><h1 id="miniflux">Miniflux</h1>
-<blockquote>
-<p>Miniflux is a minimalist and opinionated feed reader.</p>
-<p>-- <a href="https://miniflux.app/" class="external-link">Miniflux</a></p>
-</blockquote>
-<p>I tried various RSS readers. But I chose Miniflux for these reasons:</p>
+                <div class="content"><h1 id="my-editing-workflow">My editing workflow</h1>
+<h2 id="introduction">Introduction</h2>
+<p>In daily life I use <a href="/pycharm.html">pycharm</a> and <a href="/neovim%20%28text%20editor%29.html">neovim (text editor)</a>.
+Maybe in near future I will switch to use only neovim.</p>
+<h2 id="files-navigation">Files navigation</h2>
 <ul>
 <li>
-<p>Integrated with web browser, I can quickly open URL, even watch video, listen
-  to podcast, or read article.</p>
+<p>find file, with history and fuzzy search
+<kbd>^+P</kbd></p>
 </li>
 <li>
-<p>Simple and clean interface.</p>
+<p>find file, based on grep
+<leader>fs</p>
 </li>
-<li>Customizable.</li>
-<li>Full-featured for me (categories, feeds, etc.).</li>
-<li>Mobile friendly.</li>
+<li>
+<p>get file vcs history</p>
+</li>
+<li>
+<p>get file local history
+<leader>u</p>
+</li>
 </ul>
-<p>I'm still in process of using RSS habitually. I'm trying to use it for all inbox
-news, tweets, posts, videos, etc. Something like News Inbox.</p>
-<h2 id="navigation">Navigation</h2>
+<h2 id="code-navigation">Code navigation</h2>
 <ul>
-<li><code>g u</code>: Go to unread page</li>
-<li><code>g b</code>: Go to bookmark page</li>
-<li><code>g h</code>: Go to the history page</li>
-<li><code>g f</code>: Go to feed page</li>
-<li><code>g c</code>: Go to categorize page</li>
-<li><code>g s</code>: Go to settings page</li>
-<li><code>?</code>: Show keyboard shortcuts help</li>
+<li>go to definition</li>
+<li>go to declaration</li>
+<li>find symbol, based on grep</li>
+<li>find usages/references</li>
+<li>go to older/newer position</li>
+<li>go to previous/next hunk</li>
+<li>go to next/previous file</li>
 </ul>
-<h2 id="items-navigation">Items Navigation</h2>
+<h2 id="code-editing">Code editing</h2>
 <ul>
-<li><code>p</code> or <code>k</code> or <code>◄</code> Go to previous item</li>
-<li><code>n</code> or <code>j</code> or <code>►</code> Go to next item</li>
-<li><code>F</code>: Go to feed page</li>
+<li>
+<p>code folding
+zo/zc/zr</p>
+</li>
+<li>
+<p>comment line
+gcc</p>
+</li>
+<li>
+<p>comment block
+gc<motion></p>
+</li>
+<li>
+<p>code formatting</p>
+</li>
+<li>code objects actions</li>
+<li>macro</li>
+<li>other vim magic</li>
 </ul>
-<h2 id="pages-navigation">Pages Navigation</h2>
+<h2 id="code-refactoring">Code refactoring</h2>
 <ul>
-<li><code>h</code>: Go to previous page</li>
-<li><code>l</code>: Go to next page</li>
+<li>rename/move/extract/inline</li>
+<li>automatic refactorings</li>
+<li>sort/organize imports</li>
 </ul>
-<h2 id="actions">Actions</h2>
+<h2 id="code-autocompletion">Code autocompletion</h2>
 <ul>
-<li><code>o</code>: Open selected item</li>
-<li><code>v</code>: Open original link to a new tab</li>
-<li><code>V</code>: Open original link into current tab (entry view only)</li>
-<li><code>c</code>: Open comments link to a new tab</li>
-<li><code>C</code>: Open comments link into current tab</li>
-<li><code>m</code>: Toggle read/unread, focus next</li>
-<li><code>M</code>: Toggle read/unread, focus previous</li>
-<li><code>A</code>: Mark current page as read</li>
-<li><code>d</code>: Fetch original web page and apply scraper rules or readability</li>
-<li><code>f</code>: Star or Unstar the current entry</li>
-<li><code>s</code>: Save article to configured third-party services</li>
-<li><code>a</code>: Toggle open/close entry attachments</li>
-<li><code>z t</code>: Scroll item to top</li>
-<li><code>R</code>: Refresh all feeds in the background</li>
-<li><code>#</code>: Removes current feed</li>
-<li><code>/</code>: Set focus on search form</li>
-<li><code>Escape</code>: Close modal dialogs</li>
-</ul></div>
-<div class="note-footer">
-<div class="backlinks">
-<h2>Backlinks</h2>
-<ul>
-	<li><a class="backlink" href="/news.html">news</a></li>
-	<li><a class="backlink" href="/hacker news.html">hacker news</a></li>
+<li>lsp autocompletion</li>
+<li>snippets</li>
+<li>copilot</li>
 </ul>
+<h2 id="code-debugging">Code debugging</h2>
+<ul>
+<li>run debugger</li>
+<li>restart debugger</li>
+<li>stop debugger</li>
+<li>step over</li>
+<li>step into</li>
+<li>step out</li>
+<li>run to cursor</li>
+<li>evaluate expression</li>
+</ul>
+<h2 id="code-testing-and-running">Code testing and running</h2>
+<ul>
+<li>generate test</li>
+<li>run test</li>
+<li>coverage test</li>
+</ul>
+<h2 id="vcs">VCS</h2>
+<ul>
+<li>add/remove into stage</li>
+<li>commit/push</li>
+<li>pull/rebase/merge</li>
+<li>diff</li>
+</ul>
+<h2 id="-">-----</h2>
+<p><code>git push -o merge_request.create --set-upstream origin HEAD</code></p>
+<h2 id="harpoon">harpoon</h2>
+<ul>
+<li>
+<p>[x] add file into harpoon list
+      leader-a</p>
+</li>
+<li>
+<p>[x] show harpoon menu
+      c-e</p>
+</li>
+<li>
+<p>[x] close harpoon menu
+      q or esc</p>
+</li>
+<li>
+<p>[x] switch harpoon items
+c-t c-n c-m-t c-m-n</p>
+</li>
+<li>
+<p>[x] from the quickmenu, open a file in: a vertical split with control+v, a horizontal split with control+x, a new tab with control+t</p>
+</li>
+</ul>
+<h2 id="figutive">figutive</h2>
+<ul>
+<li>
+<p>[x] open diff/git for current file
+  <kbd>=</kbd></p>
+</li>
+<li>
+<p>[x] stage/unstage file
+  <kbd>-</kbd></p>
+</li>
+<li>
+<p>[x] commit chunk or selection of chunk
+  <kbd>s</kbd></p>
+</li>
+<li>
+<p>[x] commit staged changes
+  cc</p>
+</li>
+<li>
+<p>[x] revert all changes, stash the changes
+  czz Push stash. Pass a [count] of 1 to add
+  <code>--include-untracked</code> or 2 to add <code>--all</code>.</p>
+</li>
+<li>
+<p>[x] czA Apply topmost stash, or stash@{count}.</p>
+</li>
+<li>
+<p>[x] dv Perform a |:Gvdiffsplit| on the file under the cursor.</p>
+</li>
+<li>
+<p>[x] dd Perform a |:Gdiffsplit| on the file under the cursor.</p>
+</li>
+<li>
+<p>[x] ds Perform a |:Ghdiffsplit| on the file under the cursor.</p>
+</li>
+<li>
+<p>[x] gt - accept left side of diff</p>
+</li>
+<li>
+<p>[x] gn - accept right side of diff</p>
+</li>
+<li>
+<p>[x] telescope git...
+Telescope git_...</p>
+</li>
+</ul>
+<h2 id="custom">Custom</h2>
+<ul>
+<li>
+<p>[x] quick switch to terminal
+Ctrl-Z while editing in vim to send it to background, do your thing on the terminal and use fg at any time to bring up vim again.
+C-\ switch to terminal</p>
+</li>
+<li>
+<p>[x] nvim term autoinsert mode</p>
+</li>
+<li>
+<p>[x] telescope builtin's, super search
+  leader-f-F
+  :h telescope.builtin</p>
+</li>
+<li>
+<p>[x] find commands, aka action search
+  leader-f-a</p>
+</li>
+<li>
+<p>[x] search symbols [classes, variables, functions, etc.]
+leader-v-w-s[S]</p>
+</li>
+<li>
+<p>[x] search files in current project
+      <kbd>c</kbd>+<kbd>s</kbd>+<kbd>p</kbd></p>
+</li>
+<li>
+<p>[x] search files in git repo
+      <kbd>c</kbd>+<kbd>p</kbd></p>
+</li>
+<li>
+<p>[x] pick file in current file directory (telescope-file-browser)
+      <kbd>leader</kbd>+<kbd>p</kbd>+<kbd>V</kbd></p>
+</li>
+<li>
+<p>[x] pick file in current project (telescope-file-browser)
+      <kbd>leader</kbd>+<kbd>p</kbd>+<kbd>v</kbd></p>
+</li>
+<li>
+<p>[x] find action, in vim case it's shortcut
+      <kbd>leader</kbd>+<kbd>f</kbd>+<kbd>k</kbd></p>
+</li>
+<li>
+<p>[x] open git commit UI, git status
+      <kbd>leader</kbd>+<kbd>g</kbd>+<kbd>g</kbd></p>
+</li>
+<li>
+<p>[x] git history
+:G l or :G log</p>
+</li>
+<li>
+<p>[x] jump to source from git history
+O or o</p>
+</li>
+<li>
+<p>[x] next/prev hunk
+( )</p>
+</li>
+<li>
+<p>[x] stage hunk
+s</p>
+</li>
+<li>
+<p>[x] unstage hunk
+u</p>
+</li>
+<li>
+<p>[x] run debugger
+      <kbd>f5</kbd></p>
+</li>
+<li>
+<p>[x] restart debugger
+      <kbd>leader</kbd>+<kbd>d</kbd>+<kbd>r[R]</kbd></p>
+</li>
+<li>
+<p>[x] stop debugger
+      <kbd>leader</kbd>+<kbd>d</kbd>+<kbd>x[X]</kbd></p>
+</li>
+<li>
+<p>[x] diagnostics
+      <kbd>leader</kbd>+<kbd>v</kbd>+<kbd>d</kbd></p>
+</li>
+<li>
+<p>[x] code actions
+      leader-v-a-a</p>
+</li>
+<li>
+<p>[x] signature help
+  i mode, c-h</p>
+</li>
+<li>
+<p>[x] hover help
+  K</p>
+</li>
+<li>
+<p>[x] find usages/references
+  leader-v-r-r</p>
+</li>
+<li>
+<p>[x] declaration/definition ?? how it works
+  leader-v-g-d[D]</p>
+</li>
+<li>
+<p>[x] rename
+  leader-v-r-n</p>
+</li>
+<li>
+<p>[x] add/remove/list remove dynamic workspace folders
+leader w a, leader w r, leader w l</p>
+</li>
+<li>
+<p>[x] vim-dadbod-ui <a href="https://github.com/kristijanhusak/vim-dadbod-ui#mappings" class="external-link">https://github.com/kristijanhusak/vim-dadbod-ui#mappings</a>
+full-featured database client, possible set values, load values from files, query, work with multiple databases</p>
+</li>
+<li>
+<p>[x] permanent bookmarks, marks, using viminfo?</p>
+</li>
+<li>
+<p>[x] linter, built-in into lsp</p>
+</li>
+<li>
+<p>[x] formatter
+      leader-f</p>
+</li>
+<li>
+<p>[x] external documentation
+      leader-zw search word
+      gz <Plug>ZVOperator
+      leader&gt;z <Plug>ZVVisSelection
+      <leader><leader>z <Plug>ZVKeyDocset</p>
+</li>
+<li>
+<p>[x] search in git repo (telescope-git)</p>
+</li>
+<li>
+<p>[x] list active buffers, to switch
+c-a-p</p>
+</li>
+<li>
+<p><span class="formatting_strikethrough">Makefile integration</span></p>
+</li>
+<li>
+<p>[x] structure view
+:TSPlaygroundToggle</p>
+</li>
+<li>
+<p>close splits
+  c-w o</p>
+</li>
+<li>
+<p>equal splits
+  c-w =</p>
+</li>
+<li>
+<p>maximize buffer
+  c-w _</p>
+</li>
+<li>
+<p>maximize buffer width
+  c-w |</p>
+</li>
+<li>
+<p>switch to buffer
+  c-w hjkl</p>
+</li>
+<li>
+<p>Undotree of file
+  space-u</p>
+</li>
+<li>
+<p>Push changes
+  leader-p</p>
+</li>
+</ul>
+<h2 id="todo">Todo</h2>
+<ul>
+<li>
+<p>[x] telescope command_history</p>
+</li>
+<li>
+<p>[x] <a href="https://github.com/harrisoncramer/nvim/blob/main/lua/plugins/neotest.lua" class="external-link">https://github.com/harrisoncramer/nvim/blob/main/lua/plugins/neotest.lua</a> check/use keybindings</p>
+</li>
+<li>
+<p>[x] refactoring</p>
+</li>
+<li>pyton-rope arch package or rope</li>
+<li>pip install pynvim for neovim</li>
+<li>pip install ropevim</li>
+<li>install plugin</li>
+<li>
+<p>on issues maybe need remov .ropeproject</p>
+</li>
+<li>
+<p>[-] JS debugging (browser)
+Propably easly just use chrome built-in debugger/sourcemaps
+<a href="https://stackoverflow.com/questions/71810002/how-to-configure-the-dap-debugger-under-neovim-for-typescript" class="external-link">https://stackoverflow.com/questions/71810002/how-to-configure-the-dap-debugger-under-neovim-for-typescript</a></p>
+</li>
+<li>
+<p>[-] <span class="formatting_strikethrough">select in</span></p>
+</li>
+<li>
+<p>[x] new scratch file
+:enew</p>
+</li>
+<li>
+<p>[x] execute current file
+leader o or leader O (run using xdg-open)</p>
+</li>
+<li>
+<p>[x] add quotes/x pairs to words/sentence
+<a href="https://github.com/kylechui/nvim-surround" class="external-link">https://github.com/kylechui/nvim-surround</a>
+<a href="https://stackoverflow.com/questions/2147875/what-vim-commands-can-be-used-to-quote-unquote-words" class="external-link">https://stackoverflow.com/questions/2147875/what-vim-commands-can-be-used-to-quote-unquote-words</a></p>
+</li>
+</ul>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="w">    </span>Old<span class="w"> </span>text<span class="w">                    </span>Command<span class="w">         </span>New<span class="w"> </span>text
+--------------------------------------------------------------------------------
+<span class="w">    </span>surr*ound_words<span class="w">             </span>ysiw)<span class="w">           </span>(surround_words)
+<span class="w">    </span>*make<span class="w"> </span>strings<span class="w">               </span>ys$&quot;<span class="w">            </span>&quot;make<span class="w"> </span>strings&quot;
+<span class="w">    </span>[delete<span class="w"> </span>ar*ound<span class="w"> </span>me!]<span class="w">        </span>ds]<span class="w">             </span>delete<span class="w"> </span>around<span class="w"> </span>me!
+<span class="w">    </span>remove<span class="w"> </span><span class="nt">&lt;b&gt;</span>HTML<span class="w"> </span>t*ags<span class="nt">&lt;/b&gt;</span><span class="w">    </span>dst<span class="w">             </span>remove<span class="w"> </span>HTML<span class="w"> </span>tags
+<span class="w">    </span>&#39;change<span class="w"> </span>quot*es&#39;<span class="w">            </span>cs&#39;&quot;<span class="w">            </span>&quot;change<span class="w"> </span>quotes&quot;
+<span class="w">    </span><span class="nt">&lt;b&gt;</span>or<span class="w"> </span>tag*<span class="w"> </span>types<span class="nt">&lt;/b&gt;</span><span class="w">        </span>csth1<span class="nt">&lt;CR&gt;</span><span class="w">       </span><span class="nt">&lt;h1&gt;</span>or<span class="w"> </span>tag<span class="w"> </span>types<span class="nt">&lt;/h1&gt;</span>
+<span class="w">    </span>delete(functi*on<span class="w"> </span>calls)<span class="w">     </span>dsf<span class="w">             </span>function<span class="w"> </span>calls
+</code></pre></div>
+
+
 </div>
 
-<div class="tags">
-<h2>Tags</h2>
 <ul>
-	<li><a class="backlink" href="/obs.html/tags/inbox/index.html">inbox</a></li>
-	<li><a class="backlink" href="/obs.html/tags/definition/index.html">definition</a></li>
+<li>
+<p>[-] vim shell output actions...
+:h redir, !...|grep, r!... etc</p>
+</li>
+<li>
+<p>[x] run nearest test with debugger, show stderr output
+Venv configured, filename is not <code>test.py</code>, but <code>test_*.py</code></p>
+</li>
+<li>
+<p>[-] run group of tests with debugger, show stderr output
+CI/Reporting</p>
+</li>
+<li>
+<p>[-] run debugger with specific configuration
+run method?</p>
+</li>
+<li>
+<p>[-] <span class="formatting_strikethrough">gitsigns.nvim</span> - overkill? vim fugitive is enough?</p>
+</li>
+<li>[-] python lsp actions<ul>
+<li>[x] autoimport</li>
+<li>[x] remove unused imports</li>
 </ul>
+</li>
+<li>[x] python lsp symbols</li>
+<li>[x] optimize imports</li>
+<li>
+<p>[x] copilot tab issue (try indent, while suggestion active!), markdown alignment issues
+possible insert tab by S-Tab, but better to use S-Return</p>
+</li>
+<li>
+<p>[x] diff branches. Working tree diff.</p>
+</li>
+<li>
+<p>[x] compare working tree with branch
+git-diff or :Merginal</p>
+</li>
+<li>
+<p>[ ] cherry-picking/compare</p>
+</li>
+</ul>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="/kitty%20%28terminal%20emulator%29.html">kitty (terminal emulator)</a></li>
+</ul></div>
+<div class="note-footer">
+{_obsidian_html_backlinks_pattern_}
+<div class="tags">
+{_obsidian_html_tags_footer_pattern_}
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A19192084622804610853878900167386430743{level}" class="graph_div"></div>
+    <div id="A330596388431463002931812578296867638168{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B19192084622804610853878900167386430743{level}" level="{level}" note_temp_id="19192084622804610853878900167386430743" onclick="window.ObsHtmlGraph.run(this, '19192084622804610853878900167386430743', 'miniflux');">
+        <button class="graph_button graph_show_button" id="B330596388431463002931812578296867638168{level}" level="{level}" note_temp_id="330596388431463002931812578296867638168" onclick="window.ObsHtmlGraph.run(this, '330596388431463002931812578296867638168', 'my editing workflow');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C19192084622804610853878900167386430743{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C330596388431463002931812578296867638168{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
@@ -379,7 +743,7 @@ news, tweets, posts, videos, etc. Something like News Inbox.</p>
 </script>
 
 
-
+{_obsidian_html_node_id_pattern_:my editing workflow}
 
                 <!-- end content -->
             </div>

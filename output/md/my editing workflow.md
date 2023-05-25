@@ -10,11 +10,104 @@ tags:
 - vimtip
 ---
 
-# Switch to neovim path
+# My editing workflow
 
-In daily life I use [pycharm](./pycharm.md) right now, for python development.
-I'm planing to switch to [neovim (text editor)](./neovim%20%28text%20editor%29.md) and here list of steps to take it.
+## Introduction
 
+In daily life I use [pycharm](./pycharm.md) and [neovim (text editor)](./neovim%20%28text%20editor%29.md).
+Maybe in near future I will switch to use only neovim.
+
+## Files navigation
+
+
+- find file, with history and fuzzy search
+<kbd>^+P</kbd>
+
+
+- find file, based on grep
+<leader>fs
+
+
+- get file vcs history
+
+
+- get file local history
+<leader>u
+
+## Code navigation
+
+
+- go to definition
+- go to declaration
+- find symbol, based on grep
+- find usages/references
+- go to older/newer position
+- go to previous/next hunk
+- go to next/previous file
+
+## Code editing
+
+
+- code folding
+zo/zc/zr
+
+
+- comment line
+gcc
+
+
+- comment block
+gc<motion>
+
+
+- code formatting
+- code objects actions
+- macro
+- other vim magic
+
+## Code refactoring
+
+
+- rename/move/extract/inline
+- automatic refactorings
+- sort/organize imports
+
+## Code autocompletion
+
+
+- lsp autocompletion
+- snippets
+- copilot
+
+## Code debugging
+
+
+- run debugger
+- restart debugger
+- stop debugger
+- step over
+- step into
+- step out
+- run to cursor
+- evaluate expression
+
+## Code testing and running
+
+
+- generate test
+- run test
+- coverage test
+
+## VCS
+
+
+- add/remove into stage
+- commit/push
+- pull/rebase/merge
+- diff
+
+
+## -----
 `git push -o merge_request.create --set-upstream origin HEAD`
 
 ## harpoon

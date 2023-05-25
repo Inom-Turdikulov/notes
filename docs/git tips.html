@@ -275,7 +275,7 @@
 </div>
 </div>
         <div class="flex_row">
-            
+            {left_pane}
             <div class="container">
                 <div class="content"><h1 id="git-tips">Git tips</h1>
 <h2 id="general">General</h2>
@@ -291,6 +291,8 @@
 <p>Execute a Git subcommand:
 ?
 <code>git subcommand</code></p>
+<!--SR:!2023-05-29,4,272-->
+
 <p>Execute a Git subcommand on a custom repository root path:
 ?
 <code>git -C path/to/repo subcommand</code></p>
@@ -301,6 +303,8 @@
 <p>Create a new local repository, <em>project_name</em> is optional. If no project name specified you'll create git repository in current directory. You can also use non-existing <strong>nested</strong> directories, git automatically create needed structure.
 ?
 <code>git init [project_name]</code></p>
+<!--SR:!2023-05-29,4,272-->
+
 <p>Download from an existing repository. URL can be <code>http[s]...</code> or <code>git@...</code> (require specific private ssh key). If project path specified, git will clone into this directory.
 ?
 <code>git clone URL [project_path]</code></p>
@@ -437,6 +441,8 @@ git<span class="w"> </span>diff<span class="w"> </span>main...feature
 ?
 <code>git add .</code>
 <code>git add [--all|-A]</code></p>
+<!--SR:!2023-05-28,3,252-->
+
 <p>Stop tracking the file completely (leave it on disk)
 ?
 <code>git rm --cached [file]</code></p>
@@ -681,30 +687,20 @@ git<span class="w"> </span>add<span class="w"> </span>.
 
 </div></div>
 <div class="note-footer">
-<div class="backlinks">
-<h2>Backlinks</h2>
-<ul>
-	<li><a class="backlink" href="/git.html">git</a></li>
-	<li><a class="backlink" href="/how do I study computer science.html">how do i study computer science</a></li>
-</ul>
-</div>
-
+{_obsidian_html_backlinks_pattern_}
 <div class="tags">
-<h2>Tags</h2>
-<ul>
-	<li><a class="backlink" href="/obs.html/tags/gittip/index.html">gittip</a></li>
-</ul>
+{_obsidian_html_tags_footer_pattern_}
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A323988986197460124464762579456505958716{level}" class="graph_div"></div>
+    <div id="A109690438416306724478761895101785233787{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B323988986197460124464762579456505958716{level}" level="{level}" note_temp_id="323988986197460124464762579456505958716" onclick="window.ObsHtmlGraph.run(this, '323988986197460124464762579456505958716', 'git tips');">
+        <button class="graph_button graph_show_button" id="B109690438416306724478761895101785233787{level}" level="{level}" note_temp_id="109690438416306724478761895101785233787" onclick="window.ObsHtmlGraph.run(this, '109690438416306724478761895101785233787', 'git tips');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C323988986197460124464762579456505958716{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C109690438416306724478761895101785233787{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
@@ -720,7 +716,7 @@ git<span class="w"> </span>add<span class="w"> </span>.
 </script>
 
 
-
+{_obsidian_html_node_id_pattern_:git tips}
 
                 <!-- end content -->
             </div>

@@ -275,7 +275,7 @@
 </div>
 </div>
         <div class="flex_row">
-            
+            {left_pane}
             <div class="container">
                 <div class="content"><h1 id="windows-setup-script">Windows Setup Script</h1>
 <p>I have own quick-start script for <a href="/Microsoft%20Windows.html">Microsoft Windows</a>. I tried to make it very
@@ -285,7 +285,7 @@ simple and straightforward. To install Windows, I usually just use <a href="/ven
 command:</p>
 <div class="lang-sh">
 
-<div class="codehilite"><pre><span></span><code>iex<span class="w"> </span><span class="o">((</span>New-Object<span class="w"> </span>System.Net.WebClient<span class="o">)</span>.DownloadString<span class="o">(</span><span class="s1">&#39;&#39;</span><span class="o">))</span>
+<div class="codehilite"><pre><span></span><code>iex<span class="w"> </span><span class="o">((</span>New-Object<span class="w"> </span>System.Net.WebClient<span class="o">)</span>.DownloadString<span class="o">(</span><span class="s1">&#39;https://raw.githubusercontent.com/Inom-Turdikulov/notes/main/win/win-setup.ps1&#39;</span><span class="o">))</span>
 </code></pre></div>
 
 
@@ -297,53 +297,22 @@ command:</p>
 <li>SHA-256: <code>c90a6df8997bf49e56b9673982f3e80745058723a707aef8f22998ae6479597d</code></li>
 <li>SHA is from this URL
   <a href="https://msdn.rg-adguard.net/public.php?seach=us_windows_10_enterprise_ltsc_2021_x64_dvd_d289cf96" class="external-link">MSDN Files Info by WZT</a></li>
-</ul>
-<p>To validate SHA-256 from command line, need to use this command:</p>
-<div class="lang-sh">
-
-<div class="codehilite"><pre><span></span><code>sha256sum<span class="w"> </span>en-us_windows_10_enterprise_ltsc_2021_x64_dvd_d289cf96.iso<span class="w"> </span><span class="se">\</span>
-<span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>c90a6df8997bf49e56b9673982f3e80745058723a707aef8f22998ae6479597d
-</code></pre></div>
-
-
-</div>
-
-<p>If validated successfully, I copy it to my ventoy USB drive.</p>
-<div class="lang-sh">
-
-<div class="codehilite"><pre><span></span><code>udiskie-mount<span class="w"> </span>-a
-cp<span class="w"> </span>en-us_windows_10_enterprise_ltsc_2021_x64_dvd_d289cf96.iso<span class="w"> </span>/media/Ventoy
-sha256sum<span class="w"> </span>/media/Ventoy/en-us_windows_10_enterprise_ltsc_2021_x64_dvd_d289cf96.iso<span class="w"> </span><span class="se">\</span>
-<span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>c90a6df8997bf49e56b9673982f3e80745058723a707aef8f22998ae6479597d
-</code></pre></div>
-
-
-</div></div>
+</ul></div>
 <div class="note-footer">
-<div class="backlinks">
-<h2>Backlinks</h2>
-<ul>
-	<li><a class="backlink" href="/Microsoft Windows.html">microsoft windows</a></li>
-</ul>
-</div>
-
+{_obsidian_html_backlinks_pattern_}
 <div class="tags">
-<h2>Tags</h2>
-<ul>
-	<li><a class="backlink" href="/obs.html/tags/inbox/index.html">inbox</a></li>
-	<li><a class="backlink" href="/obs.html/tags/definition/index.html">definition</a></li>
-</ul>
+{_obsidian_html_tags_footer_pattern_}
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A88620425542052233042777990167632841313{level}" class="graph_div"></div>
+    <div id="A138499320752903818367003582874179915295{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B88620425542052233042777990167632841313{level}" level="{level}" note_temp_id="88620425542052233042777990167632841313" onclick="window.ObsHtmlGraph.run(this, '88620425542052233042777990167632841313', 'win_setup_script');">
+        <button class="graph_button graph_show_button" id="B138499320752903818367003582874179915295{level}" level="{level}" note_temp_id="138499320752903818367003582874179915295" onclick="window.ObsHtmlGraph.run(this, '138499320752903818367003582874179915295', 'win_setup_script');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C88620425542052233042777990167632841313{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C138499320752903818367003582874179915295{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
@@ -359,7 +328,7 @@ sha256sum<span class="w"> </span>/media/Ventoy/en-us_windows_10_enterprise_ltsc_
 </script>
 
 
-
+{_obsidian_html_node_id_pattern_:win_setup_script}
 
                 <!-- end content -->
             </div>

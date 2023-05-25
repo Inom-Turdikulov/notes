@@ -1848,7 +1848,7 @@ VIM TUTOR
 
 - [sniprun](./sniprun.md)
 
-Current mail goal: [switch to neovim path](./switch%20to%20neovim%20path.md)
+Current mail goal: [my editing workflow](./my%20editing%20workflow.md)
 
 - [ ] [https://stackoverflow.com/questions/509690/how-can-you-list-the-matches-of-vims-search](https://stackoverflow.com/questions/509690/how-can-you-list-the-matches-of-vims-search)
 

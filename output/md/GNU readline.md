@@ -11,13 +11,13 @@ tags:
 
 # GNU Readline
 
-NEXT: I really need work on it. This also avaiable in Python interactive shell.
+NEXT: I really need work on it. This also available in Python interactive shell.
 
 Here I place keybindings for GNU readline.
 
 This article is based on the
 [GNU Readline Manual](https://tiswww.case.edu/php/chet/readline/readline.html).
 
-Additionally I tested the keybindings in ZSH.
+Additionally, I tested the keybindings in ZSH.
 
 <!-- TODO: add materials -->

@@ -275,81 +275,110 @@
 </div>
 </div>
         <div class="flex_row">
-            
+            {left_pane}
             <div class="container">
-                <div class="content"><h1 id="zathura">Zathura</h1>
-<p>Open recent flles::<code>:open /</code></p>
-<h1 id="useful-shortcuts-from-most-useful-to-least">Useful shortcuts, from most useful to least</h1>
-<table>
-<thead>
-<tr>
-<th>Keybinding</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td s="s">{a},</td>
-<td>Adjust window in best-fit or width mode</td>
-</tr>
-<tr>
-<td k="k">{j},</td>
-<td>Go to the next or previous page</td>
-</tr>
-</tbody>
-</table>
-<div class="lang-general">
+                <div class="content"><h1 id="zathura-document-viewer">Zathura document viewer</h1>
+<p>Zathura is my favorite documents' viewer. It's support many formats, lightweight
+and fast.</p>
+<p>I use custom configuration to adjust colors/fonts and paddings.</p>
+<h2 id="general-keybindings">General keybindings</h2>
+<p>Go to next/previous page::J / K</p>
+<!--SR:!2023-05-27,1,230-->
 
-<div class="codehilite"><pre><span></span><code><span class="n">C</span><span class="o">-</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">Escape</span><span class="w"> </span><span class="n">Abort</span>
-
-<span class="n">J</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="w">       </span><span class="n">Go</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">previous</span><span class="w"> </span><span class="n">page</span>
-<span class="n">gg</span><span class="p">,</span><span class="w"> </span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">nG</span><span class="w">  </span><span class="n">Goto</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">nth</span><span class="w"> </span><span class="n">page</span>
-<span class="n">C</span><span class="o">-</span><span class="n">o</span><span class="p">,</span><span class="w"> </span><span class="o">^</span><span class="n">i</span><span class="w">     </span><span class="n">Move</span><span class="w"> </span><span class="n">backward</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">forward</span><span class="w"> </span><span class="n">through</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">jump</span><span class="w"> </span><span class="n">list</span>
-<span class="n">C</span><span class="o">-</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="o">^</span><span class="n">k</span><span class="w">     </span><span class="n">Bisect</span><span class="w"> </span><span class="n">forward</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">backward</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="n">two</span><span class="w"> </span><span class="n">jump</span><span class="w"> </span><span class="n">points</span>
-
-<span class="n">o</span><span class="p">,</span><span class="w"> </span><span class="n">O</span><span class="w">       </span><span class="n">Open</span><span class="w"> </span><span class="n">document</span>
-<span class="n">f</span><span class="w">          </span><span class="n">Follow</span><span class="w"> </span><span class="n">links</span>
-<span class="n">F</span><span class="w">          </span><span class="n">Display</span><span class="w"> </span><span class="n">link</span><span class="w"> </span><span class="n">target</span>
-<span class="n">c</span><span class="w">          </span><span class="n">Copy</span><span class="w"> </span><span class="n">link</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="n">into</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">clipboard</span>
-
-<span class="n">C</span><span class="o">-</span><span class="n">n</span><span class="w">         </span><span class="n">Toggle</span><span class="w"> </span><span class="n">statusbar</span>
-<span class="p">:</span><span class="w">          </span><span class="n">Enter</span><span class="w"> </span><span class="n">command</span>
-<span class="n">r</span><span class="w">          </span><span class="n">Rotate</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="mi">90</span><span class="w"> </span><span class="n">degrees</span>
-<span class="n">C</span><span class="o">-</span><span class="n">r</span><span class="w">         </span><span class="n">Recolor</span><span class="w"> </span><span class="p">(</span><span class="n">grayscale</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">invert</span><span class="w"> </span><span class="n">colors</span><span class="p">)</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="n">Reload</span><span class="w"> </span><span class="n">document</span><span class="w"> </span><span class="n">Tab</span><span class="w"> </span><span class="n">Show</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">switch</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Index</span><span class="w"> </span><span class="n">mode</span>
-<span class="n">d</span><span class="w">          </span><span class="n">Toggle</span><span class="w"> </span><span class="n">dual</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="n">view</span>
-<span class="n">F5</span><span class="w">         </span><span class="n">Switch</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">presentation</span><span class="w"> </span><span class="n">mode</span>
-<span class="n">F11</span><span class="w">        </span><span class="n">Switch</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">fullscreen</span><span class="w"> </span><span class="n">mode</span>
-<span class="o">+</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="p">,</span><span class="w"> </span><span class="o">=</span><span class="w">    </span><span class="n">Zoom</span><span class="w"> </span><span class="ow">in</span><span class="p">,</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="n">size</span>
-</code></pre></div>
-
-
-</div></div>
+<p>Scroll to the left, down, up or right direction::h / j / k / l</p>
+<p>Scroll to half page up or down::Ctrl + u / d</p>
+<p>Scroll to full page up or down::Ctrl + f / b or Space / Shift + Space</p>
+<p>Scroll to half page left or right (useful for wide documents)::Ctrl + t / y</p>
+<p>Scroll to full page left or right (useful for wide documents)::t / y</p>
+<p>Go to the first/last page::gg / G</p>
+<p>Go to nth page::nG</p>
+<p>Snaps to the current page (sort of centering current page)::P</p>
+<p>Go to bottom / top of current page::H / L</p>
+<p>Move backward and forward through the jump list::Ctrl + o / i</p>
+<p>Bisect forward and backward between the last two jump points (generate new
+jump point and go to it)::^j / ^k</p>
+<p>Abort (for example from command-line mode)::Esc / ^c</p>
+<p>Fit content in window to width / best-fit (full page)::s / a</p>
+<p>Search text forward / backward::<code>/</code> / <code>?</code></p>
+<p>Search for next / previous occurrence of search pattern::n / N</p>
+<p>Open document / open document in current directory::o / O</p>
+<p>Follow links (like in vimium)::f</p>
+<p>Display link target (page number)::F</p>
+<p>Copy link target to clipboard (page number)::c</p>
+<p>Enter command-line mode::<code>:</code></p>
+<p>Rotate by 90 degrees clockwise::<code>r</code></p>
+<p>Recolor (grayscale and invert colors, sort of night mode)::<code>^r</code></p>
+<p>Reload document::<code>R</code></p>
+<p>Toggle dual page view::<code>d</code></p>
+<p>Switch to presentation mode (full-screen without UI)::<code>F5</code></p>
+<p>Switch to full-screen mode (like presentation but with UI)::<code>F11</code></p>
+<p>Toggle statusbar/inputbar::^n / ^m</p>
+<p>Zoom in / reset, zoom out::<code>+</code> / <code>=</code>, <code>-</code> or zI / z0, zO/zz</p>
+<p>Zoom to size n::<code>n=</code></p>
+<p>Set a quickmark::<code>m&lt;letter&gt;</code></p>
+<p>Go to quickmark::<code>'&lt;letter&gt;</code></p>
+<p>Quit (like in vim)::<code>q</code></p>
+<h2 id="index-mode">Index mode</h2>
+<p>Show index (table of contents) and switch to <code>Index mode</code>::Tab</p>
+<p>Move up / down and expand / collapse current entry::h / j / k / l</p>
+<p>Expand/collapse all entries::L / H</p>
+<p>Select and open entry::space / Return</p>
+<h2 id="mouse-bindings">Mouse bindings</h2>
+<p>Wheel up / down::Scroll up / down</p>
+<div id="__ Wheel up / down::Zoom in / out"></div>
+<p>Pan the document::Hold button 2</p>
+<p>Follow link::Button 1</p>
+<h2 id="commands">Commands</h2>
+<p>List bookmarks (stored in <code>~/.local/share/zathura/bookmarks</code>)::<code>:blist</code></p>
+<p>Save a bookmark::<code>:bmark &lt;name&gt;</code></p>
+<p>Delete a bookmark::<code>:bdelete &lt;name&gt;</code></p>
+<p>Close document (but not Zathura)::<code>:close</code></p>
+<p>Open a document (support tab completion)::<code>:open</code></p>
+<p>Show document information::<code>info</code></p>
+<p>Execute an external command.
+$FILE expands to the current document path, and $PAGE to the current page number
+?
+<code>:exec &lt;command&gt;</code></p>
+<p>Print document::<code>:print</code></p>
+<p>Save document (and force overwriting) with optional path::<code>:write[!] [&lt;path&gt;]</code></p>
+<p>Write values, descriptions, etc. of all current settings to a file::<code>dump</code></p>
+<p>Export attachments
+?
+For "export", there are two possibilities:</p>
+<ul>
+<li><code>export attachment-{name} {file_name}</code></li>
+<li><code>export image-p{page_number}-{image_number} {file_name}</code></li>
+</ul>
+<p>Set page offset
+?
+<code>:offset &lt;offset&gt;</code>
+The command <code>:offset &lt;number&gt;</code> will make Zathura take into account an offset
+when jumping to a page number (by typing <number>G, the command :<number> will
+not mind the offset). For example, a given book begins counting its pages on
+the PDF's 17th page (so on page 17, the index is 1; on 18 it is 2, and so on).
+On setting :offset 16, 245G will jump to the 261st page of the PDF rather than
+the 245th.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://wiki.archlinux.org/title/zathura" class="external-link">Zathura - ArchWiki</a></li>
+<li><a href="https://pwmt.org/projects/zathura/" class="external-link">pwmt.org</a></li>
+<li><a href="https://manpages.ubuntu.com/manpages/kinetic/man1/zathura.1.html" class="external-link">Zathura man</a></li>
+</ul></div>
 <div class="note-footer">
-<div class="backlinks">
-<h2>Backlinks</h2>
-<ul>
-	<li><a class="backlink" href="/my awesome software list.html">my awesome software list</a></li>
-	<li><a class="backlink" href="/development environment.html">development environment</a></li>
-</ul>
-</div>
-
+{_obsidian_html_backlinks_pattern_}
 <div class="tags">
-<h2>Tags</h2>
-<ul>
-	<li><a class="backlink" href="/obs.html/tags/definition/index.html">definition</a></li>
-	<li><a class="backlink" href="/obs.html/tags/inbox/index.html">inbox</a></li>
-</ul>
+{_obsidian_html_tags_footer_pattern_}
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A273136102777346128761443427357968654088{level}" class="graph_div"></div>
+    <div id="A168332460843410190950798951083354474359{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B273136102777346128761443427357968654088{level}" level="{level}" note_temp_id="273136102777346128761443427357968654088" onclick="window.ObsHtmlGraph.run(this, '273136102777346128761443427357968654088', 'zathura');">
+        <button class="graph_button graph_show_button" id="B168332460843410190950798951083354474359{level}" level="{level}" note_temp_id="168332460843410190950798951083354474359" onclick="window.ObsHtmlGraph.run(this, '168332460843410190950798951083354474359', 'zathura');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C273136102777346128761443427357968654088{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C168332460843410190950798951083354474359{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
@@ -365,7 +394,7 @@
 </script>
 
 
-
+{_obsidian_html_node_id_pattern_:zathura}
 
                 <!-- end content -->
             </div>
