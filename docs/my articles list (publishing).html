@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!-- Page information -->
+    <meta charset="UTF-8" />
+    <meta name="node_id" content="my articles list (publishing)" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Set title -->
+    <title>Inom's working notes</title>
+
+    <!-- Includes -->
+    
+<script src="/obs.html/static/obsidian_core.js"></script>
+<script src="/obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="/obs.html/static/master.css" />
+<script src="/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="/obs.html/static/flexsearch.bundle.js"></script>
+<script src="/obs.html/static/pako.js"></script>
+<script src="/obs.html/static/search.js"></script>
+<script src="/obs.html/static/dirtree.js"></script>
+
+
+    <!-- Onload tweaks -->
+    <script>
+        const CURRENT_NODE = "my articles list (publishing)";
+        const HTML_URL_PREFIX = "";
+        const PAGE_DEPTH = 0;
+    </script>
+
+    <style>
+        /* Critical CSS */
+        html{
+            background: #000;
+        }
+
+        body,
+        .container,
+        code {
+            font-size: 18pt;
+            font-family: monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            max-width: calc(81ch + 64px);
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 81ch;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0.6rem;
+            height: 0.6rem;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border: 0px;
+            border-radius: 10px;
+        }
+
+        .theme-obs-light .left_pane, .theme-obs-light .right_pane,
+        .theme-obs-dark .left_pane, .theme-obs-dark .right_pane,
+        .theme-obs-dark .container, .theme-obs-light .container, .theme-obs-dark
+        .container_filler, .theme-obs-light .container_filler {
+            border-top: 0;
+        }
+
+        code {
+            line-height: 1.2;
+            font-family: monospace, "SourceCodePro-Regular";
+        }
+
+        h1 {
+            font-size: 24pt;
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 24pt;
+        }
+
+        h3 {
+            font-size: 18pt;
+        }
+
+        h4 {
+            font-size: 15pt;
+        }
+
+        .dir-list li,
+        h5 {
+            font-size: 12pt;
+        }
+
+        h6 {
+            font-size: 9pt;
+        }
+    </style>
+</head>
+
+<body class="theme-obs-light">
+    <div id="antiflash" style="display: none"></div>
+    <script>
+        document.getElementById("antiflash").style.display = "block";
+    </script>
+    <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+    <div id="page_holder" class="flex_col">
+        <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="/index.html" id="homelink" title="Clear screen and go to homepage">Inom's working notes</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=my articles list (publishing)" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="/obs.html/dir_index.html" title="View directory tree">
+                    <img src = "/obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="/obs.html/tags/index.html" title="Open tag view">
+            <img src = "/obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+        <div class="flex_row">
+            
+            <div class="container">
+                <div class="content"><h1 id="my-articles-list-publishing">My Articles List (publishing)</h1>
+<blockquote>
+<p>An article or piece is a written work published in a print or electronic
+medium. It may be for the purpose of propagating news, research results,
+academic analysis, or debate.</p>
+<p>-- <a href="https://en.wikipedia.org/wiki/Article" class="external-link">Wikipedia</a></p>
+</blockquote>
+<p>Here I store all unread/read articles, by category. Some will have own notes,
+some will be just a link.</p>
+<h2 id="todo">TODO</h2>
+<ul>
+<li>[ ] review <a href="http://38.102.84.213:9778/starred" class="external-link">http://38.102.84.213:9778/starred</a></li>
+<li>[ ] raytracing/render/etc... <a href="https://github.com/ssloy" class="external-link">https://github.com/ssloy</a></li>
+</ul>
+<h2 id="technical">Technical</h2>
+<h3 id="video">Video</h3>
+<ul>
+<li>[ ] Python dataclasses will save you HOURS, also featuring attrs <a href="https://youtu.be/vBH6GRJ1REM" class="external-link">https://youtu.be/vBH6GRJ1REM</a></li>
+</ul>
+<h3 id="reading">Reading</h3>
+<ul>
+<li>[ ] <a href="https://logosbynick.teachable.com/" class="external-link">https://logosbynick.teachable.com/</a></li>
+<li>[ ] check aliases <a href="https://github.com/8carlosf/dotfiles/blob/master/bash/.bashrc#L34" class="external-link">https://github.com/8carlosf/dotfiles/blob/master/bash/.bashrc#L34</a></li>
+<li>[ ] android backup setup <a href="https://github.com/NeoApplications/Neo-Backup" class="external-link">https://github.com/NeoApplications/Neo-Backup</a></li>
+<li>
+<p>[ ] review <a href="https://github.com/benphelps/homepage" class="external-link">https://github.com/benphelps/homepage</a></p>
+</li>
+<li>
+<p>[ ] "Iliad and the Odyssey" <a href="http://38.102.84.213:9778/category/4/entry/315#:~:text=love%20about%20the-,Iliad%20and%20the%20Odyssey,-is%20that%20I" class="external-link">http://38.102.84.213:9778/category/4/entry/315#:~:text=love%20about%20the-,Iliad%20and%20the%20Odyssey,-is%20that%20I</a></p>
+</li>
+<li>[ ] "Turing machine" <a href="https://simple.wikipedia.org/wiki/Turing_machine#:~:text=Search-,Turing%20machine,-abstract%20computation%20model" class="external-link">https://simple.wikipedia.org/wiki/Turing_machine#:~:text=Search-,Turing%20machine,-abstract%20computation%20model</a></li>
+<li>[ ] "Turing complete" <a href="https://simple.wikipedia.org/wiki/Turing_complete#:~:text=Search-,Turing%20complete,-ability%20of%20a" class="external-link">https://simple.wikipedia.org/wiki/Turing_complete#:~:text=Search-,Turing%20complete,-ability%20of%20a</a></li>
+<li>[x] ThePrimeGen vim tips <a href="https://www.youtube.com/watch?v=FrMRyXtiJkc" class="external-link">https://www.youtube.com/watch?v=FrMRyXtiJkc</a></li>
+<li>[ ] <a href="https://www.shortcutfoo.com/" class="external-link">ShortcutFoo</a></li>
+<li>
+<p>[ ] <a href="https://fs.blog/feynman-technique/" class="external-link">The Feynman Technique: The Best Way to Learn Anything</a></p>
+</li>
+<li>
+<p>[ ] <a href="https://zk.zettel.page/types-of-notes" class="external-link">Types of ZT Notes</a></p>
+</li>
+<li>[ ] <a href="https://notes.andymatuschak.org/Taxonomy_of_note_types." class="external-link">https://notes.andymatuschak.org/Taxonomy_of_note_types.</a></li>
+<li>
+<p>[ ] Then update <a href="/notes%20types.html">notes types</a></p>
+</li>
+<li>
+<p>[ ] <a href="https://inference-review.com/article/the-origins-of-python" class="external-link">The origins of Python</a></p>
+</li>
+<li>[ ] <a href="https://www.youtube.com/watch?v=g_koa00MBLg" class="external-link">How do hardware timers work? - YouTube</a></li>
+<li>[ ] <a href="https://github.com/gutenye/syncthing-kindle/blob/master/README.md" class="external-link">Syncthing Kindle guide (implemented, need document it)</a></li>
+<li>[ ] ChatGPT video - <a href="https://www.youtube.com/watch?v=QumfkMQr47M" class="external-link">https://www.youtube.com/watch?v=QumfkMQr47M</a></li>
+<li>[ ] <a href="https://github.com/f/awesome-chatgpt-prompts" class="external-link">https://github.com/f/awesome-chatgpt-prompts</a></li>
+<li>[ ] Hugo tutorials - <a href="https://mertbakir.gitlab.io/hugo/page/2/" class="external-link">https://mertbakir.gitlab.io/hugo/page/2/</a></li>
+<li>[ ] <a href="https://www.youtube.com/watch?v=7YpFGkG-u1w" class="external-link" class="external-link">Where Does Bad Code Come From? - YouTube</a></li>
+<li>[ ] Python stack improvements - <a href="https://habr.com/ru/company/otus/blog/713992/" class="external-link">https://habr.com/ru/company/otus/blog/713992/</a></li>
+<li>[ ] Hardware basics - <a href="https://lwn.net/Articles/250967/" class="external-link">https://lwn.net/Articles/250967/</a></li>
+<li>
+<p>[ ] Color theory -
+      <a href="https://www.uxmatters.com/mt/archives/2007/01/applying-color-theory-to-digital-displays.php" class="external-link">https://www.uxmatters.com/mt/archives/2007/01/applying-color-theory-to-digital-displays.php</a></p>
+</li>
+<li>
+<p>[ ] python basics - <a href="https://www.pythonbytesize.com/detailed-videos.html" class="external-link">https://www.pythonbytesize.com/detailed-videos.html</a></p>
+</li>
+<li>[ ] gamedev - jellycar <a href="https://www.youtube.com/watch?v=3OmkehAJoyo" class="external-link">https://www.youtube.com/watch?v=3OmkehAJoyo</a></li>
+<li>[ ] <a href="https://realtimevfx.com/" class="external-link">https://realtimevfx.com/</a></li>
+<li>[ ] Floating point math - <a href="https://0.30000000000000004.com/" class="external-link">https://0.30000000000000004.com/</a></li>
+<li>
+<p>[ ] vanilla js - <a href="https://github.com/bradtraversy/vanillawebprojects" class="external-link">https://github.com/bradtraversy/vanillawebprojects</a></p>
+</li>
+<li>
+<p>[ ] state machine - <a href="https://www.youtube.com/watch?v=VU1NKX6Qkxc" class="external-link">https://www.youtube.com/watch?v=VU1NKX6Qkxc</a></p>
+</li>
+<li>[ ] <a href="https://xstate-catalogue.com/" class="external-link">https://xstate-catalogue.com/</a></li>
+<li>[ ] binary fundamentals - <a href="https://terathon.com/binary_fund.pdf" class="external-link">https://terathon.com/binary_fund.pdf</a></li>
+<li>[ ] <a href="https://www.goodreads.com/book/show/39996759-a-philosophy-of-software-design" class="external-link">https://www.goodreads.com/book/show/39996759-a-philosophy-of-software-design</a></li>
+<li>
+<p>[ ] Casey and Uncle Bob -
+      <a href="https://github.com/cmuratori/misc/blob/main/cleancodeqa.md" class="external-link">https://github.com/cmuratori/misc/blob/main/cleancodeqa.md</a></p>
+</li>
+<li>
+<p>[ ] <a href="https://sklivvz.com/posts/i-dont-love-the-single-responsibility-principle" class="external-link">https://sklivvz.com/posts/i-dont-love-the-single-responsibility-principle</a></p>
+</li>
+<li>
+<p>[ ] python flask - <a href="https://github.com/mattupstate/overholt" class="external-link">https://github.com/mattupstate/overholt</a></p>
+</li>
+<li><a href="https://github.com/apache/airflow" class="external-link">https://github.com/apache/airflow</a></li>
+<li><a href="https://github.com/freedomofpress/securedrop" class="external-link">https://github.com/freedomofpress/securedrop</a></li>
+<li><a href="https://github.com/nylas/sync-engine" class="external-link">https://github.com/nylas/sync-engine</a></li>
+<li><a href="https://github.com/indico/indico" class="external-link">https://github.com/indico/indico</a></li>
+<li><a href="https://github.com/flaskbb/flaskbb" class="external-link">https://github.com/flaskbb/flaskbb</a></li>
+</ul>
+<h2 id="art">Art</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=7YpFGkG-u1w" class="external-link" class="external-link">Where Does Bad Code Come From? - YouTube</a></li>
+</ul>
+<h2 id="unix-and-vim">Unix and Vim</h2>
+<ul>
+<li>[ ] <a href="https://github.com/nvim-lua/kickstart.nvim" class="external-link">https://github.com/nvim-lua/kickstart.nvim</a></li>
+<li>[ ] <a href="https://github.com/flyguybravo/goodnotes" class="external-link">https://github.com/flyguybravo/goodnotes</a></li>
+<li>[ ] <a href="https://github.com/nvim-neotest/neotest," class="external-link">https://github.com/nvim-neotest/neotest,</a> added and configured + added shortcuts and Zettel</li>
+<li>[ ] Vim hlights <a href="https://gist.github.com/habamax/c55cc3d42c8bcdbeaf0036ac2f0d722d" class="external-link">https://gist.github.com/habamax/c55cc3d42c8bcdbeaf0036ac2f0d722d</a></li>
+<li>[ ]  <a href="https://www.youtube.com/watch?v=P1ww1IXRfTA" class="external-link">The complete FUN TO IMAGINE with Richard Feynman - YouTube</a></li>
+<li>[ ]  <a href="https://www.youtube.com/watch?v=zHiWqnTWsn4" class="external-link">Uncle Bob SOLID principles - YouTube</a></li>
+<li>[ ]  <a href="https://manual.cs50.io/" class="external-link">https://manual.cs50.io/</a></li>
+<li>[ ] <a href="https://github.com/ThePrimeagen/.dotfiles/tree/master/bin/.local/scripts" class="external-link">https://github.com/ThePrimeagen/.dotfiles/tree/master/bin/.local/scripts</a></li>
+<li>[ ] voidrice-scripts</li>
+<li>
+<p>[ ] Chrome debugger
+      <a href="https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#Javascript-chrome" class="external-link">https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#Javascript-chrome</a></p>
+</li>
+<li>
+<p>[ ] Nvima autocmd -
+      <a href="https://www.reddit.com/r/neovim/comments/xhtr1p/nvim_autocmd_filetype_option/" class="external-link">https://www.reddit.com/r/neovim/comments/xhtr1p/nvim_autocmd_filetype_option/</a></p>
+</li>
+<li>
+<p>[ ] <a href="https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/" class="external-link">https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/</a></p>
+</li>
+<li>
+<p>[ ] Pycharm -&gt; Vim -
+      <a href="https://www.reddit.com/r/vim/comments/qdgnid/how_to_switch_from_pycharm_to_vim/" class="external-link">https://www.reddit.com/r/vim/comments/qdgnid/how_to_switch_from_pycharm_to_vim/</a></p>
+</li>
+<li>
+<p>[ ] unix history - <a href="https://www.youtube.com/watch?v=ECCr_KFl41E" class="external-link">https://www.youtube.com/watch?v=ECCr_KFl41E</a></p>
+</li>
+<li>[ ] awesome vim collections - <a href="https://vimawesome.com/" class="external-link">https://vimawesome.com/</a></li>
+<li>
+<p>[ ] need review vim thing -
+      <a href="https://stackoverflow.com/questions/3997078/how-to-paste-yanked-text-into-the-vim-command-line" class="external-link">https://stackoverflow.com/questions/3997078/how-to-paste-yanked-text-into-the-vim-command-line</a></p>
+</li>
+<li>
+<p>[ ] better pandoc -
+      <a href="https://gist.github.com/maxogden/97190db73ac19fc6c1d9beee1a6e4fc8" class="external-link">https://gist.github.com/maxogden/97190db73ac19fc6c1d9beee1a6e4fc8</a></p>
+</li>
+<li>
+<p>[ ] <a href="https://github.com/nvim-treesitter/nvim-treesitter-textobjects" class="external-link">https://github.com/nvim-treesitter/nvim-treesitter-textobjects</a></p>
+</li>
+<li>[ ] vim objects - <a href="https://allsyed.com/posts/language-of-vim-neovim/" class="external-link">https://allsyed.com/posts/language-of-vim-neovim/</a></li>
+<li>
+<p>[ ] nvim dap:
+      <a href="https://zignar.net/2023/02/17/debugging-neovim-with-neovim-and-nvim-dap/" class="external-link">https://zignar.net/2023/02/17/debugging-neovim-with-neovim-and-nvim-dap/</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=ga3Cas7vNCk" class="external-link">https://www.youtube.com/watch?v=ga3Cas7vNCk</a></p>
+</li>
+<li><a href="https://www.youtube.com/watch?v=0moS8UHupGc" class="external-link">https://www.youtube.com/watch?v=0moS8UHupGc</a></li>
+<li><a href="https://miguelcrespo.co/how-to-debug-like-a-pro-using-neovim" class="external-link">https://miguelcrespo.co/how-to-debug-like-a-pro-using-neovim</a></li>
+<li>[ ] nvim linter - <a href="https://github.com/mfussenegger/nvim-lint" class="external-link">https://github.com/mfussenegger/nvim-lint</a></li>
+<li>[ ] <a href="https://www.vimgolf.com/" class="external-link">https://www.vimgolf.com/</a></li>
+<li>[ ] <a href="https://www.youtube.com/watch?v=zNnsNtBF80g" class="external-link">Vim 01 - Основы - YouTube</a></li>
+<li>[ ] <a href="https://vim.fandom.com/wiki/Vim_Tips_Wiki" class="external-link">https://vim.fandom.com/wiki/Vim_Tips_Wiki</a></li>
+<li>[ ] <a href="https://wiki.bash-hackers.org/doku.php" class="external-link">The Bash Hackers Wiki</a></li>
+<li>[ ] <a href="https://github.com/YodaEmbedding/frece/tree/master/examples" class="external-link">Frece (dmenu stuff) examples</a></li>
+<li>[ ] Pass generation - <a href="https://github.com/Inom-Turdikulov/diceware" class="external-link">https://github.com/Inom-Turdikulov/diceware</a></li>
+<li>
+<p>[ ] <a href="https://www.unrealsp.org/forums/viewtopic.php?f=3&amp;t=4601" class="external-link">lightmap in
+  unr</a></p>
+</li>
+<li>
+<p>[ ] <a href="https://unreal.shop/models/unreal-engine-5.-free-two-scenes.-lumen-vs-baked-light" class="external-link">https://unreal.shop/models/unreal-engine-5.-free-two-scenes.-lumen-vs-baked-light</a></p>
+</li>
+<li>[ ] <a href="https://github.com/gvanrossum/500lines" class="external-link">https://github.com/gvanrossum/500lines</a></li>
+<li>[ ] <a href="https://ioannaladopoulou.design/tutorial-pencil-in-nomad-sculpt/" class="external-link">https://ioannaladopoulou.design/tutorial-pencil-in-nomad-sculpt/</a></li>
+<li>[ ] <a href="https://blog.jerrycodes.com/ruff-the-python-linter/" class="external-link">https://blog.jerrycodes.com/ruff-the-python-linter/</a></li>
+<li>[ ] <a href="https://www.tweag.io/blog/2023-04-04-python-monorepo-1/" class="external-link">https://www.tweag.io/blog/2023-04-04-python-monorepo-1/</a></li>
+<li>[ ] <a href="https://docs.piped.video/docs/self-hosting/" class="external-link">https://docs.piped.video/docs/self-hosting/</a></li>
+<li>[ ] Writing The Matrix in Python: easy guide <a href="https://habr.com/en/articles/720452/" class="external-link">https://habr.com/en/articles/720452/</a></li>
+<li>[ ] <a href="https://www.youtube.com/watch?v=T7sR-4DFhpQ" class="external-link">Nerd Dictation for Linux - YouTube</a></li>
+<li>[ ] <a href="https://www.youtube.com/watch?v=B76gFi43HvM" class="external-link">1000x FASTER JavaScript? - YouTube</a></li>
+<li>
+<p>[ ] <a href="https://www.computerenhance.com/p/response-to-a-reporter-regarding?publication_id=865289&amp;post_id=113333520&amp;isFreemail=true%E2%86%B5" class="external-link">Response to a Reporter Regarding "Clean Code, Horrible Performance"
+</a></p>
+</li>
+<li>
+<p>[ ] <a href="https://github.com/christoomey/vim-tmux-navigator" class="external-link">https://github.com/christoomey/vim-tmux-navigator</a></p>
+</li>
+</ul>
+<h2 id="workflows">Workflows</h2>
+<ul>
+<li>[ ] Chrome in browser - <a href="https://github.com/fathyb/carbonyl" class="external-link">https://github.com/fathyb/carbonyl</a></li>
+<li>[ ] <a href="https://github.com/reuseman/flashcards-obsidian/wiki" class="external-link">https://github.com/reuseman/flashcards-obsidian/wiki</a></li>
+<li>[ ] Borgmatic - <a href="https://torsion.org/borgmatic/" class="external-link">https://torsion.org/borgmatic/</a></li>
+</ul>
+<h2 id="non-technical-science">Non-technical/Science</h2>
+<ul>
+<li>[ ] <a href="https://vimeo.com/user543333" class="external-link">Eric Cornwell</a>, trigonometry?</li>
+<li>[ ] <a href="https://pimbook.org/" class="external-link">https://pimbook.org/</a></li>
+<li>[ ] Зачем нужны синусы и косинусы? <a href="https://youtu.be/hwpWTkdh-BA" class="external-link">https://youtu.be/hwpWTkdh-BA</a></li>
+<li>[ ] What If Everyone JUMPED At Once? <a href="https://youtu.be/jHbyQ_AQP8c" class="external-link">https://youtu.be/jHbyQ_AQP8c</a></li>
+<li>[ ] <a href="https://www.youtube.com/watch?v=VNiwYfuUAC4" class="external-link">Bowser FULL SCULPT in Nomad Sculpt</a></li>
+<li>[ ] Квадратные уравнения - <a href="https://habr.com/ru/post/714660/" class="external-link">https://habr.com/ru/post/714660/</a></li>
+<li>
+<p>[ ] Микробиология -
+      <a href="https://www.litres.ru/carl-zimmer/mikrokosm-e-coli-i-novaya-nauka-o-zhizni/" class="external-link">https://www.litres.ru/carl-zimmer/mikrokosm-e-coli-i-novaya-nauka-o-zhizni/</a></p>
+</li>
+<li>
+<p>[ ] Puzzle-english dict <a href="https://puzzle-english.com/change-my-dictionary/import" class="external-link">https://puzzle-english.com/change-my-dictionary/import</a></p>
+</li>
+<li>[ ] english phrases - <a href="https://www.youtube.com/watch?v=PqBT7xpmZlE" class="external-link">https://www.youtube.com/watch?v=PqBT7xpmZlE</a></li>
+<li>[ ] <a href="https://boosty.to/englishplaylists" class="external-link">https://boosty.to/englishplaylists</a></li>
+<li>[ ] goldendict dictionaries - <a href="https://downloads.freemdict.com/Recommend/" class="external-link">https://downloads.freemdict.com/Recommend/</a>
+      <a href="https://dic.1963.ru/" class="external-link">https://dic.1963.ru/</a></li>
+</ul>
+<h2 id="podcasts">Podcasts</h2>
+<ul>
+<li>[ ] Podcast - <a href="https://cdn.changelog.com/uploads/podcast/3/the-changelog-3.mp3" class="external-link">https://cdn.changelog.com/uploads/podcast/3/the-changelog-3.mp3</a></li>
+</ul>
+<h2 id="services">Services</h2>
+<ul>
+<li>[ ] <a href="https://developers.nopecha.com/recognition/funcaptcha/" class="external-link">https://developers.nopecha.com/recognition/funcaptcha/</a></li>
+<li>[ ] <a href="https://free-proxy-list.net/" class="external-link">https://free-proxy-list.net/</a> - I have a script!</li>
+</ul>
+<h2 id="3d">3D</h2>
+<ul>
+<li>[ ] <a href="https://github.com/ichlubna/blenderScripts" class="external-link">https://github.com/ichlubna/blenderScripts</a></li>
+<li>[ ] <a href="https://www.youtube.com/watch?v=k-zMkzmduqI" class="external-link">Unreal Engine 5 Beginner Tutorial</a></li>
+<li>
+<h2 id="build-a-mindblowing-3d-portfolio-website">[ ] <a href="https://youtu.be/Q7AOvWpIVHU" class="external-link">Build a Mindblowing 3D Portfolio Website</a></h2>
+</li>
+</ul>
+<h2 id="unknown">Unknown</h2>
+<ul>
+<li>[ ] <a href="https://idie.ru/posts/vim-modern-cpp/" class="external-link">https://idie.ru/posts/vim-modern-cpp/</a></li>
+<li>[ ] Гигиена полости рта <a href="https://danieldefo.ru/threads/enlightenment-healer-v1-0.14516/#post-781108" class="external-link">https://danieldefo.ru/threads/enlightenment-healer-v1-0.14516/#post-781108</a></li>
+<li>[ ] <a href="https://realpython.com/python-refactoring/" class="external-link">https://realpython.com/python-refactoring/</a></li>
+<li>[ ] <a href="https://github.com/tjdevries/config_manager/blob/d5d6b1dc87e124179be95354c83f108a300edd08/xdg_config/pyenv/default-packages" class="external-link">https://github.com/tjdevries/config_manager/blob/d5d6b1dc87e124179be95354c83f108a300edd08/xdg_config/pyenv/default-packages</a></li>
+<li>[ ] <a href="https://github.com/tjdevries/config_manager/blob/d5d6b1dc87e124179be95354c83f108a300edd08/xdg_config/zsh/.zshrc" class="external-link">https://github.com/tjdevries/config_manager/blob/d5d6b1dc87e124179be95354c83f108a300edd08/xdg_config/zsh/.zshrc</a></li>
+<li>[ ] <a href="https://frontendmasters.com/courses/algorithms/" class="external-link">https://frontendmasters.com/courses/algorithms/</a></li>
+<li>[ ] <a href="https://www.youtube.com/watch?v=vpwJ7fqD1CE" class="external-link">https://www.youtube.com/watch?v=vpwJ7fqD1CE</a></li>
+<li>[ ] <a href="https://www.youtube.com/watch?v=hb5RVnOda2o" class="external-link">https://www.youtube.com/watch?v=hb5RVnOda2o</a></li>
+<li>[ ] <a href="https://jarvislabs.ai/pricing/" class="external-link">https://jarvislabs.ai/pricing/</a></li>
+<li>[ ] <a href="https://docs.python-guide.org/writing/tests/" class="external-link" class="external-link">https://docs.python-guide.org/writing/tests/</a></li>
+<li>[ ] <a href="https://youtu.be/0moS8UHupGc" class="external-link">https://youtu.be/0moS8UHupGc</a></li>
+<li>[ ] <a href="https://github.com/jsirex/git-tutorial/tree/master" class="external-link">https://github.com/jsirex/git-tutorial/tree/master</a></li>
+<li>[ ] <a href="https://github.com/hari-rangarajan/CCTree" class="external-link">https://github.com/hari-rangarajan/CCTree</a></li>
+<li>[ ] <a href="https://github.com/chipsenkbeil/distant.nvim" class="external-link">https://github.com/chipsenkbeil/distant.nvim</a></li>
+<li>[ ] <a href="https://docs.python-guide.org/writing/tests/" class="external-link" class="external-link">https://docs.python-guide.org/writing/tests/</a></li>
+<li>[ ] <a href="https://github.com/raysan5/raylib" class="external-link">https://github.com/raysan5/raylib</a></li>
+<li>[ ] <a href="https://github.com/LukeSmithxyz/dwmblocks" class="external-link">https://github.com/LukeSmithxyz/dwmblocks</a></li>
+<li>[ ] <a href="https://github.com/drduh/YubiKey-Guide" class="external-link">https://github.com/drduh/YubiKey-Guide</a></li>
+<li>[ ] <a href="https://github.com/keon/algorithms" class="external-link">https://github.com/keon/algorithms</a></li>
+<li>[ ] <a href="https://github.com/LukeSmithxyz/emailwiz" class="external-link">https://github.com/LukeSmithxyz/emailwiz</a></li>
+<li>[ ] <a href="https://github.com/LukeSmithxyz/mutt-wizard" class="external-link">https://github.com/LukeSmithxyz/mutt-wizard</a></li>
+<li>[ ] <a href="https://github.com/mikeym88/key-value-database-python-interface" class="external-link">https://github.com/mikeym88/key-value-database-python-interface</a></li>
+<li>[ ] <a href="https://github.com/mikepan/GameEngineBook" class="external-link">https://github.com/mikepan/GameEngineBook</a></li>
+<li>
+<p>[ ] <a href="https://github.com/guancio/org-fit" class="external-link">https://github.com/guancio/org-fit</a></p>
+</li>
+<li>
+<p>[ ] <a href="https://github.com/Weissle/persistent-breakpoints.nvim" class="external-link">https://github.com/Weissle/persistent-breakpoints.nvim</a></p>
+</li>
+<li>[ ] <a href="https://github.com/NavyTitanium/Fake-Sandbox-Artifacts" class="external-link">https://github.com/NavyTitanium/Fake-Sandbox-Artifacts</a></li>
+<li>[ ] <a href="http://visual6502.org/" class="external-link">http://visual6502.org/</a></li>
+<li>[ ] <a href="https://www.youtube.com/watch?v=bGe-d09Nc_M" class="external-link">https://www.youtube.com/watch?v=bGe-d09Nc_M</a></li>
+<li>[ ] <a href="https://www.reddit.com/r/vim/comments/1yfzg2/does_anyone_actually_use_easymotion/" class="external-link">https://www.reddit.com/r/vim/comments/1yfzg2/does_anyone_actually_use_easymotion/</a></li>
+<li>
+<p>[ ] autolock on remove u2f device
+      <a href="https://blog.fireglow.de/automatically-lock-workstation-when-usb-security-key-is-removed-linux-systemd" class="external-link">https://blog.fireglow.de/automatically-lock-workstation-when-usb-security-key-is-removed-linux-systemd</a></p>
+</li>
+<li>
+<p>[ ] khal &amp; khard, khal guide
+      <a href="https://hund.tty1.se/2020/08/12/how-to-sync-and-manage-your-caldav-and-carddav-via-the-terminal.html" class="external-link">https://hund.tty1.se/2020/08/12/how-to-sync-and-manage-your-caldav-and-carddav-via-the-terminal.html</a></p>
+</li>
+<li>
+<p>[ ] Prepare the first draft of the proposal -
+      <a href="https://jgu-dev.s3.ap-south-1.amazonaws.com/Initial+Draft+of+Proposal.pdf" class="external-link">https://jgu-dev.s3.ap-south-1.amazonaws.com/Initial+Draft+of+Proposal.pdf</a></p>
+</li>
+<li>
+<p>[ ] <a href="https://stackoverflow.com/questions/1474966/how-do-i-yank-all-matching-lines-into-one-buffer" class="external-link">https://stackoverflow.com/questions/1474966/how-do-i-yank-all-matching-lines-into-one-buffer</a></p>
+</li>
+<li>
+<p>[ ] <a href="https://www.shadertoy.com/" class="external-link">https://www.shadertoy.com/</a></p>
+</li>
+<li>
+<p>[ ] <a href="https://github.com/kosayoda/nvim-lightbulb" class="external-link">https://github.com/kosayoda/nvim-lightbulb</a></p>
+</li>
+<li>
+<p>[ ] <a href="https://www.dylanpaulus.com/posts/postgres-is-a-graph-database/" class="external-link">https://www.dylanpaulus.com/posts/postgres-is-a-graph-database/</a></p>
+</li>
+<li>[ ] <a href="https://www.youtube.com/watch?v=Kk2MH9O4pXY&amp;ab_channel=AlanZucconi" class="external-link">https://www.youtube.com/watch?v=Kk2MH9O4pXY&amp;ab_channel=AlanZucconi</a></li>
+<li>[ ] <a href="https://youtu.be/Qnos8aApa9g" class="external-link">https://youtu.be/Qnos8aApa9g</a></li>
+<li>
+<p>[ ] <a href="https://youtu.be/XA2WjJbmmoM" class="external-link">https://youtu.be/XA2WjJbmmoM</a></p>
+</li>
+<li>
+<p>[ ] <a href="https://www.youtube.com/watch?v=DsAclZbP_Us" class="external-link">Abstraction Bad? | Clean Code : Horrible Performance : (Clip) Interview - YouTube</a></p>
+</li>
+<li>[ ] <a href="https://github.com/ThePrimeagen/refactoring.nvim" class="external-link">https://github.com/ThePrimeagen/refactoring.nvim</a></li>
+<li>[ ] <a href="https://github.com/lsyncd/lsyncd" class="external-link">https://github.com/lsyncd/lsyncd</a></li>
+<li>[ ] <a href="https://youtu.be/v3o9YaHBM4Q" class="external-link">https://youtu.be/v3o9YaHBM4Q</a></li>
+<li>[ ] <a href="https://www.youtube.com/watch?v=mXnp_KIo8q8" class="external-link">https://www.youtube.com/watch?v=mXnp_KIo8q8</a></li>
+<li>[ ] <a href="https://github.com/charliermarsh/ruff-lsp" class="external-link">https://github.com/charliermarsh/ruff-lsp</a></li>
+<li>[ ] <a href="https://www.youtube.com/watch?v=h0gbw-Ur_do" class="external-link">Polya explains the problem solving technique - YouTube</a></li>
+<li>[ ] [https://en.wikipedia.org/wiki/Composition_over_inheritance#:~:text=Composition%20over%20inheritance%20(or%20composite,than%20inheritance%20from%20a%20base](https://en.wikipedia.org/wiki/Composition_over_inheritance#:~:text=Composition%20over%20inheritance%20(or%20composite,than%20inheritance%20from%20a%20base)</li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="/index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="/obs.html/tags/inbox/index.html">inbox</a></li>
+	<li><a class="backlink" href="/obs.html/tags/outline/index.html">outline</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A42453641538205362136685227639417645879{level}" class="graph_div"></div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B42453641538205362136685227639417645879{level}" level="{level}" note_temp_id="42453641538205362136685227639417645879" onclick="window.ObsHtmlGraph.run(this, '42453641538205362136685227639417645879', 'my articles list (publishing)');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C42453641538205362136685227639417645879{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('/obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                <!-- end content -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handle_toggle_side_bar(e) {
+            let header;
+            let pane;
+            let target = e.target;
+
+            // switch out the navbar button click for a header click
+            if (target.id == "left_pane_toggle_nav") {
+                target = document.getElementById("left_pane_fold_header");
+            } else if (target.id == "right_pane_toggle_nav") {
+                target = document.getElementById("right_pane_fold_header");
+            }
+
+            // get header and pane
+            if (target.classList.contains("fold_header")) {
+                header = target;
+                pane = target.parentElement;
+            } else {
+                pane = target;
+                header = target.getElementsByClassName("fold_header")[0];
+            }
+            toggle_side_bar(pane, header, true);
+            e.stopPropagation();
+        }
+        function handle_toggle_side_bar_button(e) {
+            document.getElementById("menu_toggle_button").click();
+            handle_toggle_side_bar(e);
+        }
+
+        function toggle_side_bar(pane, header, save) {
+            let active = pane.classList.contains("active");
+            if (active) {
+                disable_side_bar(pane, header, save);
+            } else {
+                enable_side_bar(pane, header, save);
+            }
+        }
+        function enable_side_bar(pane, header, save) {
+            pane.classList.add("active");
+            pane.removeEventListener("click", handle_toggle_side_bar);
+            header.addEventListener("click", handle_toggle_side_bar);
+            set_correct_header_symbol(header);
+            if (save) {
+                save_panel_folding_state(header, true);
+            }
+        }
+        function disable_side_bar(pane, header, save) {
+            pane.classList.remove("active");
+            pane.addEventListener("click", handle_toggle_side_bar);
+            header.removeEventListener("click", handle_toggle_side_bar);
+            set_correct_header_symbol(header);
+            if (save) {
+                save_panel_folding_state(header, false);
+            }
+        }
+        function set_correct_header_symbol(header) {
+            let pane = header.parentElement;
+            let symbol = [
+                [">", "<"],
+                ["<", ">"],
+            ];
+            symbol =
+                symbol[Number(header.classList.contains("right_pane_fold_header"))][
+                Number(pane.classList.contains("active"))
+                ];
+            console.log(symbol);
+            header.innerHTML = symbol;
+            return header;
+        }
+        function panel_folding_get_panel_name(header) {
+            return ["left", "right"][
+                Number(header.classList.contains("right_pane_fold_header"))
+            ];
+        }
+        function save_panel_folding_state(header, active) {
+            ls_set(
+                "pane_folding_state_" + panel_folding_get_panel_name(header),
+                Number(active)
+            );
+        }
+        function load_panel_folding_state(panel_name) {
+            val = ls_get("pane_folding_state_" + panel_name);
+            if (!val) {
+                return {exists: false, value: null};
+            }
+            return {exists: true, value: Boolean(Number(val))};
+        }
+        function set_pane_folding_start(left_header, right_header) {
+            // small screen = closed
+            let right_pane_enabled = true;
+            let left_pane_enabled = true;
+            let w = window.visualViewport.width;
+            if (w < 1000) {
+                left_pane_enabled = false;
+            }
+            if (w < 800) {
+                right_pane_enabled = false;
+            }
+
+            // get saved values if present
+            let rval = load_panel_folding_state("right");
+            if (rval["exists"]) {
+                right_pane_enabled = rval["value"];
+            }
+            let lval = load_panel_folding_state("left");
+            if (lval["exists"]) {
+                left_pane_enabled = lval["value"];
+            }
+
+            // default = enabled, so we only need to disable
+            if (!left_pane_enabled) {
+                disable_side_bar(
+                    document.getElementById("left_pane"),
+                    document.getElementById("left_pane_fold_header")
+                );
+            }
+            if (!right_pane_enabled) {
+                disable_side_bar(
+                    document.getElementById("right_pane"),
+                    document.getElementById("right_pane_fold_header")
+                );
+            }
+        }
+
+        function init_pane_folding(header) {
+            set_correct_header_symbol(header);
+            header.addEventListener("click", handle_toggle_side_bar);
+        }
+
+        set_pane_folding_start();
+        init_pane_folding(document.getElementById("left_pane_fold_header"));
+        init_pane_folding(document.getElementById("right_pane_fold_header"));
+
+        document
+            .getElementById("left_pane_toggle_nav")
+            .addEventListener("click", handle_toggle_side_bar_button);
+        document
+            .getElementById("right_pane_toggle_nav")
+            .addEventListener("click", handle_toggle_side_bar_button);
+    </script>
+
+    <script src="/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+ 
+
+</body>
+
+</html>

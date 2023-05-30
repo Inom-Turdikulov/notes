@@ -10,8 +10,8 @@ tags:
 - termtip
 ---
 
+```
 bindkey -L
-
 ---
 bindkey "^@" set-mark-command # C-@ - set the mark
 bindkey "^A" beginning-of-line
@@ -132,6 +132,8 @@ bindkey "^[^?" backward-kill-word
 bindkey -R " "-"~" self-insert
 bindkey "^?" backward-delete-char
 bindkey -R "\M-^@"-"\M-^?" self-insert
+```
+
 
 # Z shell (zsh)
 

@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!-- Page information -->
+    <meta charset="UTF-8" />
+    <meta name="node_id" content="z shell" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Set title -->
+    <title>Inom's working notes</title>
+
+    <!-- Includes -->
+    
+<script src="/obs.html/static/obsidian_core.js"></script>
+<script src="/obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="/obs.html/static/master.css" />
+<script src="/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="/obs.html/static/flexsearch.bundle.js"></script>
+<script src="/obs.html/static/pako.js"></script>
+<script src="/obs.html/static/search.js"></script>
+<script src="/obs.html/static/dirtree.js"></script>
+
+
+    <!-- Onload tweaks -->
+    <script>
+        const CURRENT_NODE = "z shell";
+        const HTML_URL_PREFIX = "";
+        const PAGE_DEPTH = 0;
+    </script>
+
+    <style>
+        /* Critical CSS */
+        html{
+            background: #000;
+        }
+
+        body,
+        .container,
+        code {
+            font-size: 18pt;
+            font-family: monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            max-width: calc(81ch + 64px);
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 81ch;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0.6rem;
+            height: 0.6rem;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border: 0px;
+            border-radius: 10px;
+        }
+
+        .theme-obs-light .left_pane, .theme-obs-light .right_pane,
+        .theme-obs-dark .left_pane, .theme-obs-dark .right_pane,
+        .theme-obs-dark .container, .theme-obs-light .container, .theme-obs-dark
+        .container_filler, .theme-obs-light .container_filler {
+            border-top: 0;
+        }
+
+        code {
+            line-height: 1.2;
+            font-family: monospace, "SourceCodePro-Regular";
+        }
+
+        h1 {
+            font-size: 24pt;
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 24pt;
+        }
+
+        h3 {
+            font-size: 18pt;
+        }
+
+        h4 {
+            font-size: 15pt;
+        }
+
+        .dir-list li,
+        h5 {
+            font-size: 12pt;
+        }
+
+        h6 {
+            font-size: 9pt;
+        }
+    </style>
+</head>
+
+<body class="theme-obs-light">
+    <div id="antiflash" style="display: none"></div>
+    <script>
+        document.getElementById("antiflash").style.display = "block";
+    </script>
+    <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+    <div id="page_holder" class="flex_col">
+        <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="/index.html" id="homelink" title="Clear screen and go to homepage">Inom's working notes</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=z shell" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="/obs.html/dir_index.html" title="View directory tree">
+                    <img src = "/obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="/obs.html/tags/index.html" title="Open tag view">
+            <img src = "/obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+        <div class="flex_row">
+            
+            <div class="container">
+                <embeddedtitle>z shell</embeddedtitle>
+<div class="content"><div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="n">bindkey</span><span class="w"> </span><span class="o">-</span><span class="n">L</span>
+<span class="o">---</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^@&quot;</span><span class="w"> </span><span class="n">set</span><span class="o">-</span><span class="n">mark</span><span class="o">-</span><span class="n">command</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">C</span><span class="o">-</span><span class="p">@</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">mark</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^A&quot;</span><span class="w"> </span><span class="n">beginning</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">line</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^B&quot;</span><span class="w"> </span><span class="n">backward</span><span class="o">-</span><span class="kt">char</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^D&quot;</span><span class="w"> </span><span class="n">delete</span><span class="o">-</span><span class="kt">char</span><span class="o">-</span><span class="n">or</span><span class="o">-</span><span class="n">list</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^E&quot;</span><span class="w"> </span><span class="n">end</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">line</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^F&quot;</span><span class="w"> </span><span class="n">forward</span><span class="o">-</span><span class="kt">char</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^G&quot;</span><span class="w"> </span><span class="n">send</span><span class="o">-</span><span class="k">break</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^H&quot;</span><span class="w"> </span><span class="n">backward</span><span class="o">-</span><span class="n">delete</span><span class="o">-</span><span class="kt">char</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^I&quot;</span><span class="w"> </span><span class="n">fzf</span><span class="o">-</span><span class="n">completion</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^J&quot;</span><span class="w"> </span><span class="n">accept</span><span class="o">-</span><span class="n">line</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^K&quot;</span><span class="w"> </span><span class="n">kill</span><span class="o">-</span><span class="n">line</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^L&quot;</span><span class="w"> </span><span class="n">clear</span><span class="o">-</span><span class="n">screen</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^M&quot;</span><span class="w"> </span><span class="n">accept</span><span class="o">-</span><span class="n">line</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^N&quot;</span><span class="w"> </span><span class="n">down</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="n">or</span><span class="o">-</span><span class="n">history</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^O&quot;</span><span class="w"> </span><span class="n">accept</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="n">and</span><span class="o">-</span><span class="n">down</span><span class="o">-</span><span class="n">history</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^P&quot;</span><span class="w"> </span><span class="n">up</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="n">or</span><span class="o">-</span><span class="n">history</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^Q&quot;</span><span class="w"> </span><span class="n">push</span><span class="o">-</span><span class="n">line</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^R&quot;</span><span class="w"> </span><span class="n">fzf</span><span class="o">-</span><span class="n">history</span><span class="o">-</span><span class="n">widget</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^S&quot;</span><span class="w"> </span><span class="n">history</span><span class="o">-</span><span class="n">incremental</span><span class="o">-</span><span class="n">search</span><span class="o">-</span><span class="n">forward</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^T&quot;</span><span class="w"> </span><span class="n">fzf</span><span class="o">-</span><span class="n">file</span><span class="o">-</span><span class="n">widget</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^U&quot;</span><span class="w"> </span><span class="n">kill</span><span class="o">-</span><span class="n">whole</span><span class="o">-</span><span class="n">line</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^V&quot;</span><span class="w"> </span><span class="n">quoted</span><span class="o">-</span><span class="n">insert</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^W&quot;</span><span class="w"> </span><span class="n">backward</span><span class="o">-</span><span class="n">kill</span><span class="o">-</span><span class="n">word</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^X^B&quot;</span><span class="w"> </span><span class="n">vi</span><span class="o">-</span><span class="n">match</span><span class="o">-</span><span class="n">bracket</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^X^F&quot;</span><span class="w"> </span><span class="n">vi</span><span class="o">-</span><span class="n">find</span><span class="o">-</span><span class="n">next</span><span class="o">-</span><span class="kt">char</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^X^J&quot;</span><span class="w"> </span><span class="n">vi</span><span class="o">-</span><span class="n">join</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^X^K&quot;</span><span class="w"> </span><span class="n">kill</span><span class="o">-</span><span class="n">buffer</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^X^N&quot;</span><span class="w"> </span><span class="n">infer</span><span class="o">-</span><span class="n">next</span><span class="o">-</span><span class="n">history</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^X^O&quot;</span><span class="w"> </span><span class="n">overwrite</span><span class="o">-</span><span class="n">mode</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^X^V&quot;</span><span class="w"> </span><span class="n">vi</span><span class="o">-</span><span class="n">cmd</span><span class="o">-</span><span class="n">mode</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^X^X&quot;</span><span class="w"> </span><span class="n">exchange</span><span class="o">-</span><span class="n">point</span><span class="o">-</span><span class="n">and</span><span class="o">-</span><span class="n">mark</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^X*&quot;</span><span class="w"> </span><span class="n">expand</span><span class="o">-</span><span class="n">word</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^X=&quot;</span><span class="w"> </span><span class="n">what</span><span class="o">-</span><span class="n">cursor</span><span class="o">-</span><span class="n">position</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^XG&quot;</span><span class="w"> </span><span class="n">list</span><span class="o">-</span><span class="n">expand</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^Xg&quot;</span><span class="w"> </span><span class="n">list</span><span class="o">-</span><span class="n">expand</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^Xr&quot;</span><span class="w"> </span><span class="n">history</span><span class="o">-</span><span class="n">incremental</span><span class="o">-</span><span class="n">search</span><span class="o">-</span><span class="n">backward</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^Xs&quot;</span><span class="w"> </span><span class="n">history</span><span class="o">-</span><span class="n">incremental</span><span class="o">-</span><span class="n">search</span><span class="o">-</span><span class="n">forward</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^X^U&quot;</span><span class="w"> </span><span class="n">undo</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^_&quot;</span><span class="w"> </span><span class="n">undo</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^Xu&quot;</span><span class="w"> </span><span class="n">undo</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^Y&quot;</span><span class="w"> </span><span class="n">autosuggest</span><span class="o">-</span><span class="n">accept</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[^D&quot;</span><span class="w"> </span><span class="n">list</span><span class="o">-</span><span class="n">choices</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[^G&quot;</span><span class="w"> </span><span class="n">send</span><span class="o">-</span><span class="k">break</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[^H&quot;</span><span class="w"> </span><span class="n">backward</span><span class="o">-</span><span class="n">kill</span><span class="o">-</span><span class="n">word</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[^I&quot;</span><span class="w"> </span><span class="nb">self</span><span class="o">-</span><span class="n">insert</span><span class="o">-</span><span class="n">unmeta</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[^J&quot;</span><span class="w"> </span><span class="nb">self</span><span class="o">-</span><span class="n">insert</span><span class="o">-</span><span class="n">unmeta</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[^L&quot;</span><span class="w"> </span><span class="n">clear</span><span class="o">-</span><span class="n">screen</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[^M&quot;</span><span class="w"> </span><span class="nb">self</span><span class="o">-</span><span class="n">insert</span><span class="o">-</span><span class="n">unmeta</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[^_&quot;</span><span class="w"> </span><span class="k">copy</span><span class="o">-</span><span class="n">prev</span><span class="o">-</span><span class="n">word</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[ &quot;</span><span class="w"> </span><span class="n">expand</span><span class="o">-</span><span class="n">history</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[!&quot;</span><span class="w"> </span><span class="n">expand</span><span class="o">-</span><span class="n">history</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="n">quote</span><span class="o">-</span><span class="n">region</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[\$&quot;</span><span class="w"> </span><span class="n">spell</span><span class="o">-</span><span class="n">word</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[&#39;&quot;</span><span class="w"> </span><span class="n">quote</span><span class="o">-</span><span class="n">line</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[-&quot;</span><span class="w"> </span><span class="n">neg</span><span class="o">-</span><span class="n">argument</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[.&quot;</span><span class="w"> </span><span class="n">insert</span><span class="o">-</span><span class="n">last</span><span class="o">-</span><span class="n">word</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[0&quot;</span><span class="w"> </span><span class="n">digit</span><span class="o">-</span><span class="n">argument</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[1&quot;</span><span class="w"> </span><span class="n">digit</span><span class="o">-</span><span class="n">argument</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[2&quot;</span><span class="w"> </span><span class="n">digit</span><span class="o">-</span><span class="n">argument</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[3&quot;</span><span class="w"> </span><span class="n">digit</span><span class="o">-</span><span class="n">argument</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[4&quot;</span><span class="w"> </span><span class="n">digit</span><span class="o">-</span><span class="n">argument</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[5&quot;</span><span class="w"> </span><span class="n">digit</span><span class="o">-</span><span class="n">argument</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[6&quot;</span><span class="w"> </span><span class="n">digit</span><span class="o">-</span><span class="n">argument</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[7&quot;</span><span class="w"> </span><span class="n">digit</span><span class="o">-</span><span class="n">argument</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[8&quot;</span><span class="w"> </span><span class="n">digit</span><span class="o">-</span><span class="n">argument</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[9&quot;</span><span class="w"> </span><span class="n">digit</span><span class="o">-</span><span class="n">argument</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[&lt;&quot;</span><span class="w"> </span><span class="n">beginning</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">buffer</span><span class="o">-</span><span class="n">or</span><span class="o">-</span><span class="n">history</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[&gt;&quot;</span><span class="w"> </span><span class="n">end</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">buffer</span><span class="o">-</span><span class="n">or</span><span class="o">-</span><span class="n">history</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[?&quot;</span><span class="w"> </span><span class="n">which</span><span class="o">-</span><span class="n">command</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[A&quot;</span><span class="w"> </span><span class="n">accept</span><span class="o">-</span><span class="n">and</span><span class="o">-</span><span class="n">hold</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[B&quot;</span><span class="w"> </span><span class="n">backward</span><span class="o">-</span><span class="n">word</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[C&quot;</span><span class="w"> </span><span class="n">toggle</span><span class="o">-</span><span class="n">command</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[D&quot;</span><span class="w"> </span><span class="n">kill</span><span class="o">-</span><span class="n">word</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[F&quot;</span><span class="w"> </span><span class="n">forward</span><span class="o">-</span><span class="n">word</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[G&quot;</span><span class="w"> </span><span class="n">get</span><span class="o">-</span><span class="n">line</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[H&quot;</span><span class="w"> </span><span class="n">run</span><span class="o">-</span><span class="n">help</span>
+<span class="n">bindkey</span><span class="w"> </span><span class="s">&quot;^[L&quot;</span><span class="w"> </span><span class="n">down</span><span class="o">-</span><span class="k">case</span><span class="o">-</span><span class="no">word</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[N&quot;</span><span class="w"> </span><span class="no">history</span><span class="o">-</span><span class="no">search</span><span class="o">-</span><span class="no">forward</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[OA&quot;</span><span class="w"> </span><span class="no">up</span><span class="o">-</span><span class="no">line</span><span class="o">-</span><span class="no">or</span><span class="o">-</span><span class="no">history</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[OB&quot;</span><span class="w"> </span><span class="no">down</span><span class="o">-</span><span class="no">line</span><span class="o">-</span><span class="no">or</span><span class="o">-</span><span class="no">history</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[OC&quot;</span><span class="w"> </span><span class="no">forward</span><span class="o">-</span><span class="no">char</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[OD&quot;</span><span class="w"> </span><span class="no">backward</span><span class="o">-</span><span class="no">char</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[P&quot;</span><span class="w"> </span><span class="no">history</span><span class="o">-</span><span class="no">search</span><span class="o">-</span><span class="no">backward</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[Q&quot;</span><span class="w"> </span><span class="no">push</span><span class="o">-</span><span class="no">line</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[S&quot;</span><span class="w"> </span><span class="no">spell</span><span class="o">-</span><span class="no">word</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[T&quot;</span><span class="w"> </span><span class="no">transpose</span><span class="o">-</span><span class="no">words</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[U&quot;</span><span class="w"> </span><span class="no">up</span><span class="o">-</span><span class="no">case</span><span class="o">-</span><span class="no">word</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[W&quot;</span><span class="w"> </span><span class="no">copy</span><span class="o">-</span><span class="no">region</span><span class="o">-</span><span class="no">as</span><span class="o">-</span><span class="no">kill</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[[1;3C&quot;</span><span class="w"> </span><span class="no">forward</span><span class="o">-</span><span class="no">word</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[[1;3D&quot;</span><span class="w"> </span><span class="no">backward</span><span class="o">-</span><span class="no">word</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[[200~&quot;</span><span class="w"> </span><span class="no">bracketed</span><span class="o">-</span><span class="no">paste</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[[A&quot;</span><span class="w"> </span><span class="no">up</span><span class="o">-</span><span class="no">line</span><span class="o">-</span><span class="no">or</span><span class="o">-</span><span class="no">history</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[[B&quot;</span><span class="w"> </span><span class="no">down</span><span class="o">-</span><span class="no">line</span><span class="o">-</span><span class="no">or</span><span class="o">-</span><span class="no">history</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[[C&quot;</span><span class="w"> </span><span class="no">forward</span><span class="o">-</span><span class="no">char</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[[D&quot;</span><span class="w"> </span><span class="no">backward</span><span class="o">-</span><span class="no">char</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[_&quot;</span><span class="w"> </span><span class="no">insert</span><span class="o">-</span><span class="no">last</span><span class="o">-</span><span class="no">word</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[a&quot;</span><span class="w"> </span><span class="no">accept</span><span class="o">-</span><span class="no">and</span><span class="o">-</span><span class="no">hold</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[b&quot;</span><span class="w"> </span><span class="no">backward</span><span class="o">-</span><span class="no">word</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[c&quot;</span><span class="w"> </span><span class="no">fzf</span><span class="o">-</span><span class="no">cd</span><span class="o">-</span><span class="no">widget</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[d&quot;</span><span class="w"> </span><span class="no">kill</span><span class="o">-</span><span class="no">word</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[f&quot;</span><span class="w"> </span><span class="no">forward</span><span class="o">-</span><span class="no">word</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[g&quot;</span><span class="w"> </span><span class="no">toggle</span><span class="o">-</span><span class="no">noglob</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[h&quot;</span><span class="w"> </span><span class="no">run</span><span class="o">-</span><span class="no">help</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[l&quot;</span><span class="w"> </span><span class="no">down</span><span class="o">-</span><span class="no">case</span><span class="o">-</span><span class="no">word</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[n&quot;</span><span class="w"> </span><span class="no">history</span><span class="o">-</span><span class="no">search</span><span class="o">-</span><span class="no">forward</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[p&quot;</span><span class="w"> </span><span class="no">history</span><span class="o">-</span><span class="no">search</span><span class="o">-</span><span class="no">backward</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[q&quot;</span><span class="w"> </span><span class="no">push</span><span class="o">-</span><span class="no">line</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[s&quot;</span><span class="w"> </span><span class="no">toggle</span><span class="o">-</span><span class="no">sudo</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[t&quot;</span><span class="w"> </span><span class="no">transpose</span><span class="o">-</span><span class="no">words</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[u&quot;</span><span class="w"> </span><span class="no">up</span><span class="o">-</span><span class="no">case</span><span class="o">-</span><span class="no">word</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[w&quot;</span><span class="w"> </span><span class="no">copy</span><span class="o">-</span><span class="no">region</span><span class="o">-</span><span class="no">as</span><span class="o">-</span><span class="no">kill</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[x&quot;</span><span class="w"> </span><span class="no">execute</span><span class="o">-</span><span class="no">named</span><span class="o">-</span><span class="no">cmd</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[y&quot;</span><span class="w"> </span><span class="no">yank</span><span class="o">-</span><span class="no">pop</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[z&quot;</span><span class="w"> </span><span class="no">execute</span><span class="o">-</span><span class="no">last</span><span class="o">-</span><span class="no">named</span><span class="o">-</span><span class="no">cmd</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[|&quot;</span><span class="w"> </span><span class="no">vi</span><span class="o">-</span><span class="no">goto</span><span class="o">-</span><span class="no">column</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^[^?&quot;</span><span class="w"> </span><span class="no">backward</span><span class="o">-</span><span class="no">kill</span><span class="o">-</span><span class="no">word</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="o">-</span><span class="no">R</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="o">-</span><span class="s">&quot;~&quot;</span><span class="w"> </span><span class="no">self</span><span class="o">-</span><span class="no">insert</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="s">&quot;^?&quot;</span><span class="w"> </span><span class="no">backward</span><span class="o">-</span><span class="no">delete</span><span class="o">-</span><span class="no">char</span>
+<span class="no">bindkey</span><span class="w"> </span><span class="o">-</span><span class="no">R</span><span class="w"> </span><span class="s">&quot;\M-^@&quot;</span><span class="o">-</span><span class="s">&quot;\M-^?&quot;</span><span class="w"> </span><span class="no">self</span><span class="o">-</span><span class="no">insert</span>
+</code></pre></div>
+
+
+</div>
+
+<h1 id="z-shell-zsh">Z shell (zsh)</h1>
+<ul>
+<li>[ ] <a href="https://copperlight.github.io/shell/zsh-keyboard-shortcuts/" class="external-link">https://copperlight.github.io/shell/zsh-keyboard-shortcuts/</a></li>
+</ul>
+<h2 id="keybindings">Keybindings</h2>
+<p>I think it's very similar to <a href="/GNU%20readline.html">GNU readline</a>.</p>
+<h2 id="moving">Moving</h2>
+<p><code>ctrl + a</code>::Goto BEGINNING of command line
+<code>ctrl + e</code>::Goto END of command line</p>
+<p><code>ctrl + b</code>::move back one character
+<code>ctrl + f</code>::move forward one character</p>
+<p><code>alt + f</code>::move cursor FORWARD one word
+<code>alt + b</code>::move cursor BACK one word</p>
+<p><code>ctrl + xx</code>::Toggle between the start of line and current cursor
+position</p>
+<p>???
+<code>ctrl + ] + x</code>::Moves the cursor forward to the next occurance of x (like vim's f)
+<code>alt + ctrl + ] + x</code>::Where x is any character, moves the cursor backwards to the previous occurance of x</p>
+<h2 id="edit-other">Edit / Other</h2>
+<p><code>ctrl + d</code>::Delete the character under the cursor (del)
+<code>alt + d</code>::delete the word FROM the cursor
+<code>ctrl + w</code>::delete the word BEFORE the cursor
+<code>alt + [Backspace]</code>::delete PREVIOUS word</p>
+<p><code>ctrl + h</code>::Delete the previous character before cursor (backspace)</p>
+<p><code>ctrl + u</code>::Clear all / cut BEFORE cursor
+<code>ctrl + k</code>::Clear all / cut AFTER cursor</p>
+<p>???
+<code>ctrl + y</code>::paste (if you used a previous command to delete)</p>
+<p><code>ctrl + i</code>::command completion like Tab</p>
+<p><code>ctrl + l</code>::Clear the screen (same as clear command)
+<code>ctrl + c</code>::kill whatever is running
+<code>ctrl + d</code>::Exit shell (same as exit command when cursor line is empty)
+<code>ctrl + z</code>::Place current process in background</p>
+<p><code>ctrl + x ctrl + u</code>::Undo the last changes. <code>ctrl+ _</code> does the same</p>
+<p>??? <code>ctrl + t</code>::Swap the last two characters before the cursor
+??? <code>esc + t</code>::Swap last two words before the cursor</p>
+<p><code>alt + t</code>::swap current word with previous
+??? esc + .
+??? esc + _
+<code>alt + &lt;</code>::Move to the first line in the history
+<code>alt + &gt;</code>::Move to the end of the input history, i.e., the line currently being entered
+<code>alt + ?</code>::display the file/folder names in the current path as help
+<code>alt + *</code>::print all the file/folder names in the current path as parameter
+<code>alt + .</code>::print the LAST ARGUMENT (ie "vim file1.txt file2.txt" will yield "file2.txt")
+<code>alt + c</code>::capitalize the first character to end of word starting at cursor (whole word if cursor is at the beginning of word)
+<code>alt + u</code>::make uppercase from cursor to end of word
+<code>alt + l</code>::make lowercase from cursor to end of word
+alt + n
+<code>alt + p</code>::Non-incremental reverse search of history.
+<code>alt + r</code>::Undo all changes to the line
+<code>alt + ctl + e</code>::Expand command line.
+<code>~[TAB][TAB]</code>::List all users
+<code>$[TAB][TAB]</code>::List all system variables
+<code>@[TAB][TAB]</code>::List all entries in your /etc/hosts file
+<code>[TAB]</code>::Auto complete
+<code>cd -</code>::change to PREVIOUS working directory
+History
+<code>command</code>::description
+<code>ctrl + r</code>::Search backward starting at the current line and moving 'up' through the history as necessary
+<code>crtl + s</code>::Search forward starting at the current line and moving 'down' through the history as necessary
+<code>ctrl + p</code>::Fetch the previous command from the history list, moving back in the list (same as up arrow)
+<code>ctrl + n</code>::Fetch the next command from the history list, moving forward in the list (same as down arrow)
+<code>ctrl + o</code>::Execute the command found via Ctrl+r or Ctrl+s
+<code>ctrl + g</code>::Escape from history searching mode
+<code>!!</code>::Run PREVIOUS command (ie sudo !!)
+<code>!vi</code>::Run PREVIOUS command that BEGINS with vi
+<code>!vi:p</code>::Print previously run command that BEGINS with vi
+<code>!n</code>::Execute nth command in history
+<code>!$</code>::Last argument of last command
+<code>!^</code>::First argument of last command
+<code>^abc^xyz</code>::Replace first occurance of abc with xyz in last command and execute it
+Kill a job
+n = job number, to list jobs, run jobs</p>
+<p>kill %n
+Example:</p>
+<p>kill %1</p>
+<h2 id="references">References</h2>
+<p><a href="http://cnswww.cns.cwru.edu/php/chet/readline/readline.html" class="external-link">http://cnswww.cns.cwru.edu/php/chet/readline/readline.html</a>
+<a href="https://github.com/fliptheweb/bash-shortcuts-cheat-sheet/blob/master/README.md" class="external-link">https://github.com/fliptheweb/bash-shortcuts-cheat-sheet/blob/master/README.md</a></p>
+<p>Use <code>ESC</code> or <code>CTRL-[</code> to enter <code>Normal mode</code>.</p>
+<p>Check also <a href="/GNU%20readline.html">gnu readline</a> additional keybinding.</p>
+<h1 id="zsh-vi-mode">ZSH vi mode</h1>
+<h2 id="history">History</h2>
+<ul>
+<li><code>ctrl-p</code> : Previous command in history</li>
+<li><code>ctrl-n</code> : Next command in history</li>
+<li><code>/</code>      : Search backward in history</li>
+<li><code>n</code>      : Repeat the last <code>/</code></li>
+</ul>
+<h2 id="mode-indicators">Mode indicators</h2>
+<p><code>Normal mode</code> is indicated with block style cursor, and <code>Insert mode</code> with
+beam style cursor by default.</p>
+<h2 id="vim-edition">Vim edition</h2>
+<p>In <code>Normal mode</code> you can use <code>vv</code> to edit current command line in an editor
+(e.g. <code>vi</code>/<code>vim</code>/<code>nvim</code>...), because it is bound to the <code>Visual mode</code>.</p>
+<p>You can change the editor by <code>ZVM_VI_EDITOR</code> option, by default it is
+<code>$EDITOR</code>.</p>
+<h2 id="movement">Movement</h2>
+<ul>
+<li><code>$</code>   : To the end of the line</li>
+<li><code>^</code>   : To the first non-blank character of the line</li>
+<li><code>0</code>   : To the first character of the line</li>
+<li><code>w</code>   : [count] words forward</li>
+<li><code>W</code>   : [count] WORDS forward</li>
+<li><code>e</code>   : Forward to the end of word [count] inclusive</li>
+<li><code>E</code>   : Forward to the end of WORD [count] inclusive</li>
+<li><code>b</code>   : [count] words backward</li>
+<li><code>B</code>   : [count] WORDS backward</li>
+<li><code>t{char}</code>   : Till before [count]'th occurrence of {char} to the right</li>
+<li><code>T{char}</code>   : Till before [count]'th occurrence of {char} to the left</li>
+<li><code>f{char}</code>   : To [count]'th occurrence of {char} to the right</li>
+<li><code>F{char}</code>   : To [count]'th occurrence of {char} to the left</li>
+<li><code>;</code>   : Repeat latest f, t, F or T [count] times</li>
+<li><code>,</code>   : Repeat latest f, t, F or T in opposite direction</li>
+</ul>
+<h2 id="insertion">Insertion</h2>
+<ul>
+<li><code>i</code>   : Insert text before the cursor</li>
+<li><code>I</code>   : Insert text before the first character in the line</li>
+<li><code>a</code>   : Append text after the cursor</li>
+<li><code>A</code>   : Append text at the end of the line</li>
+<li><code>o</code>   : Insert new command line below the current one</li>
+<li><code>O</code>   : Insert new command line above the current one</li>
+</ul>
+<h2 id="surround">Surround</h2>
+<p>There are 2 kinds of keybinding mode for surround operating, default is
+<code>classic</code> mode, you can choose the mode by setting <code>ZVM_VI_SURROUND_BINDKEY</code>
+option.</p>
+<ol>
+<li>
+<p><code>classic</code> mode (verb-&gt;s-&gt;surround)</p>
+</li>
+<li>
+<p><code>S"</code>    : Add <code>"</code> for visual selection</p>
+</li>
+<li><code>ys"</code>   : Add <code>"</code> for visual selection</li>
+<li><code>cs"'</code>  : Change <code>"</code> to <code>'</code></li>
+<li>
+<p><code>ds"</code>   : Delete <code>"</code></p>
+</li>
+<li>
+<p><code>s-prefix</code> mode (s-&gt;verb-&gt;surround)</p>
+</li>
+<li>
+<p><code>sa"</code>   : Add <code>"</code> for visual selection</p>
+</li>
+<li><code>sd"</code>   : Delete <code>"</code></li>
+<li><code>sr"'</code>  : Change <code>"</code> to <code>'</code></li>
+</ol>
+<p>Note that key sequences must be pressed in fairly quick succession to avoid a timeout. You may extend this timeout with the <a href="#readkey-engine" class="anchor-link"><code>ZVM_KEYTIMEOUT</code> option</a>.</p>
+<h3 id="how-to-select-surround-text-object">How to select surround text object?</h3>
+<ul>
+<li><code>vi"</code>   : Select the text object inside the quotes</li>
+<li><code>va(</code>   : Select the text object including the brackets</li>
+</ul>
+<p>Then you can do any operation for the selection:</p>
+<ol>
+<li>
+<p>Add surrounds for text object</p>
+</li>
+<li>
+<p><code>vi"</code> -&gt; <code>S[</code> or <code>sa[</code> =&gt; <code>"object"</code> -&gt; <code>"[object]"</code></p>
+</li>
+<li>
+<p><code>va"</code> -&gt; <code>S[</code> or <code>sa[</code> =&gt; <code>"object"</code> -&gt; <code>["object"]</code></p>
+</li>
+<li>
+<p>Delete/Yank/Change text object</p>
+</li>
+<li>
+<p><code>di(</code> or <code>vi(</code> -&gt; <code>d</code></p>
+</li>
+<li><code>ca(</code> or <code>va(</code> -&gt; <code>c</code></li>
+<li><code>yi(</code> or <code>vi(</code> -&gt; <code>y</code></li>
+</ol>
+<h2 id="increment-and-decrement">Increment and Decrement</h2>
+<p>In normal mode, typing <code>ctrl-a</code> will increase to the next keyword, and typing
+<code>ctrl-x</code> will decrease to the next keyword. The keyword can be at the cursor,
+or to the right of the cursor (on the same line). The keyword could be as
+below:</p>
+<ul>
+<li>Number (Decimal, Hexadecimal, Binary...)</li>
+<li>Boolean (True or False, Yes or No, On or Off...)</li>
+<li>Weekday (Sunday, Monday, Tuesday, Wednesday...)</li>
+<li>Month (January, February, March, April, May...)</li>
+<li>Operator (&amp;&amp;, ||, ++, --, <mark class="formatting_highlight">, !</mark>, and, or...)</li>
+<li>...</li>
+</ul>
+<p>For example:</p>
+<ol>
+<li>
+<p>Increment</p>
+</li>
+<li>
+<p><code>9</code> =&gt; <code>10</code></p>
+</li>
+<li><code>aa99bb</code> =&gt; <code>aa100bb</code></li>
+<li><code>aa100bc</code> =&gt; <code>aa101bc</code></li>
+<li><code>0xDe</code> =&gt; <code>0xdf</code></li>
+<li><code>0Xdf</code> =&gt; <code>0Xe0</code></li>
+<li><code>0b101</code> =&gt; <code>0b110</code></li>
+<li><code>0B11</code> =&gt; <code>0B101</code></li>
+<li><code>true</code> =&gt; <code>false</code></li>
+<li><code>yes</code> =&gt; <code>no</code></li>
+<li><code>on</code> =&gt; <code>off</code></li>
+<li><code>T</code> =&gt; <code>F</code></li>
+<li><code>Fri</code> =&gt; <code>Sat</code></li>
+<li><code>Oct</code> =&gt; <code>Nov</code></li>
+<li><code>Monday</code> =&gt; <code>Tuesday</code></li>
+<li><code>January</code> =&gt; <code>February</code></li>
+<li><code>+</code> =&gt; <code>-</code></li>
+<li><code>++</code> =&gt; <code>--</code></li>
+<li><code>==</code> =&gt; <code>!=</code></li>
+<li><code>!==</code> =&gt; <code>===</code></li>
+<li><code>&amp;&amp;</code> =&gt; <code>||</code></li>
+<li><code>and</code> =&gt; <code>or</code></li>
+<li>
+<p>...</p>
+</li>
+<li>
+<p>Decrement:</p>
+</li>
+<li>
+<p><code>100</code> =&gt; <code>99</code></p>
+</li>
+<li><code>aa100bb</code> =&gt; <code>aa99bb</code></li>
+<li><code>0</code> =&gt; <code>-1</code></li>
+<li><code>0xdE0</code> =&gt; <code>0xDDF</code></li>
+<li><code>0xffFf0</code> =&gt; <code>0xfffef</code></li>
+<li><code>0xfffF0</code> =&gt; <code>0xFFFEF</code></li>
+<li><code>0x0</code> =&gt; <code>0xffffffffffffffff</code></li>
+<li><code>0Xf</code> =&gt; <code>0Xe</code></li>
+<li><code>0b100</code> =&gt; <code>0b010</code></li>
+<li><code>0B100</code> =&gt; <code>0B011</code></li>
+<li><code>True</code> =&gt; <code>False</code></li>
+<li><code>On</code> =&gt; <code>Off</code></li>
+<li><code>Sun</code> =&gt; <code>Sat</code></li>
+<li><code>Jan</code> =&gt; <code>Dec</code></li>
+<li><code>Monday</code> =&gt; <code>Sunday</code></li>
+<li><code>August</code> =&gt; <code>July</code></li>
+<li><code>/</code> =&gt; <code>*</code></li>
+<li><code>++</code> =&gt; <code>--</code></li>
+<li><code>==</code> =&gt; <code>!=</code></li>
+<li><code>!==</code> =&gt; <code>===</code></li>
+<li><code>||</code> =&gt; <code>&amp;&amp;</code></li>
+<li><code>or</code> =&gt; <code>and</code></li>
+<li>...</li>
+</ol>
+<h2 id="resourecs">Resourecs</h2>
+<ul>
+<li><a href="https://github.com/alexanderepstein/Bash-Snippets" class="external-link" class="external-link">https://github.com/alexanderepstein/Bash-Snippets</a></li>
+</ul>
+<h2 id="kill-process-by-pattern">Kill process by pattern</h2>
+<p>Use pkill -f, which matches the pattern for any part of the command line</p>
+<p><code>pkill -f my_pattern</code></p>
+<p>Just in case it doesn\'t work, try to use this one as well:</p>
+<p><code>pkill -9 -f my_pattern</code></p>
+<p>&lt;<a href="https://stackoverflow.com/questions/8987037/how-to-kill-all-processes-with-a-given-partial-name&gt;" class="external-link">https://stackoverflow.com/questions/8987037/how-to-kill-all-processes-with-a-given-partial-name&gt;</a></p>
+<ul>
+<li>
+<p>TODO
+  <a href="https://github.com/alexanderepstein/Bash-Snippets" class="external-link" class="external-link">https://github.com/alexanderepstein/Bash-Snippets</a></p>
+</li>
+<li>
+<p>Kill process by pattern</p>
+</li>
+</ul>
+<p>Use pkill -f, which matches the pattern for any part of the command line</p>
+<p>~pkill -f my_pattern~</p>
+<p>Just in case it doesn't work, try to use this one as well:</p>
+<p>~pkill -9 -f my_pattern~</p>
+<p><a href="https://stackoverflow.com/questions/8987037/how-to-kill-all-processes-with-a-given-partial-name" class="external-link">https://stackoverflow.com/questions/8987037/how-to-kill-all-processes-with-a-given-partial-name</a></p></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="/development environment.html">development environment</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="/obs.html/tags/inbox/index.html">inbox</a></li>
+	<li><a class="backlink" href="/obs.html/tags/definition/index.html">definition</a></li>
+	<li><a class="backlink" href="/obs.html/tags/termtip/index.html">termtip</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A168896469908957404063109224677888311598{level}" class="graph_div"></div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B168896469908957404063109224677888311598{level}" level="{level}" note_temp_id="168896469908957404063109224677888311598" onclick="window.ObsHtmlGraph.run(this, '168896469908957404063109224677888311598', 'z shell');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C168896469908957404063109224677888311598{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('/obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                <!-- end content -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handle_toggle_side_bar(e) {
+            let header;
+            let pane;
+            let target = e.target;
+
+            // switch out the navbar button click for a header click
+            if (target.id == "left_pane_toggle_nav") {
+                target = document.getElementById("left_pane_fold_header");
+            } else if (target.id == "right_pane_toggle_nav") {
+                target = document.getElementById("right_pane_fold_header");
+            }
+
+            // get header and pane
+            if (target.classList.contains("fold_header")) {
+                header = target;
+                pane = target.parentElement;
+            } else {
+                pane = target;
+                header = target.getElementsByClassName("fold_header")[0];
+            }
+            toggle_side_bar(pane, header, true);
+            e.stopPropagation();
+        }
+        function handle_toggle_side_bar_button(e) {
+            document.getElementById("menu_toggle_button").click();
+            handle_toggle_side_bar(e);
+        }
+
+        function toggle_side_bar(pane, header, save) {
+            let active = pane.classList.contains("active");
+            if (active) {
+                disable_side_bar(pane, header, save);
+            } else {
+                enable_side_bar(pane, header, save);
+            }
+        }
+        function enable_side_bar(pane, header, save) {
+            pane.classList.add("active");
+            pane.removeEventListener("click", handle_toggle_side_bar);
+            header.addEventListener("click", handle_toggle_side_bar);
+            set_correct_header_symbol(header);
+            if (save) {
+                save_panel_folding_state(header, true);
+            }
+        }
+        function disable_side_bar(pane, header, save) {
+            pane.classList.remove("active");
+            pane.addEventListener("click", handle_toggle_side_bar);
+            header.removeEventListener("click", handle_toggle_side_bar);
+            set_correct_header_symbol(header);
+            if (save) {
+                save_panel_folding_state(header, false);
+            }
+        }
+        function set_correct_header_symbol(header) {
+            let pane = header.parentElement;
+            let symbol = [
+                [">", "<"],
+                ["<", ">"],
+            ];
+            symbol =
+                symbol[Number(header.classList.contains("right_pane_fold_header"))][
+                Number(pane.classList.contains("active"))
+                ];
+            console.log(symbol);
+            header.innerHTML = symbol;
+            return header;
+        }
+        function panel_folding_get_panel_name(header) {
+            return ["left", "right"][
+                Number(header.classList.contains("right_pane_fold_header"))
+            ];
+        }
+        function save_panel_folding_state(header, active) {
+            ls_set(
+                "pane_folding_state_" + panel_folding_get_panel_name(header),
+                Number(active)
+            );
+        }
+        function load_panel_folding_state(panel_name) {
+            val = ls_get("pane_folding_state_" + panel_name);
+            if (!val) {
+                return {exists: false, value: null};
+            }
+            return {exists: true, value: Boolean(Number(val))};
+        }
+        function set_pane_folding_start(left_header, right_header) {
+            // small screen = closed
+            let right_pane_enabled = true;
+            let left_pane_enabled = true;
+            let w = window.visualViewport.width;
+            if (w < 1000) {
+                left_pane_enabled = false;
+            }
+            if (w < 800) {
+                right_pane_enabled = false;
+            }
+
+            // get saved values if present
+            let rval = load_panel_folding_state("right");
+            if (rval["exists"]) {
+                right_pane_enabled = rval["value"];
+            }
+            let lval = load_panel_folding_state("left");
+            if (lval["exists"]) {
+                left_pane_enabled = lval["value"];
+            }
+
+            // default = enabled, so we only need to disable
+            if (!left_pane_enabled) {
+                disable_side_bar(
+                    document.getElementById("left_pane"),
+                    document.getElementById("left_pane_fold_header")
+                );
+            }
+            if (!right_pane_enabled) {
+                disable_side_bar(
+                    document.getElementById("right_pane"),
+                    document.getElementById("right_pane_fold_header")
+                );
+            }
+        }
+
+        function init_pane_folding(header) {
+            set_correct_header_symbol(header);
+            header.addEventListener("click", handle_toggle_side_bar);
+        }
+
+        set_pane_folding_start();
+        init_pane_folding(document.getElementById("left_pane_fold_header"));
+        init_pane_folding(document.getElementById("right_pane_fold_header"));
+
+        document
+            .getElementById("left_pane_toggle_nav")
+            .addEventListener("click", handle_toggle_side_bar_button);
+        document
+            .getElementById("right_pane_toggle_nav")
+            .addEventListener("click", handle_toggle_side_bar_button);
+    </script>
+
+    <script src="/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+ 
+
+</body>
+
+</html>
