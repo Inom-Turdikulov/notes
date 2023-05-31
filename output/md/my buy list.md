@@ -22,20 +22,21 @@ My purchased items stored here: [my inventory](./my%20inventory.md).
 
  - [ ] 🧴 Mineral water x3
  - [ ] 🧀 Cheese 500g
- - [x] 🥔 Potato
- - [x] 🥕 Carrots
+ - [ ] 🥔 Potato
+ - [ ] 🥕 Carrots
  - [ ] 🥛 Milk 3.2% x3
  - [ ] 🍗 Chicken - 1x, fillet - x2
  - [x] 🥚 Eggs
  - [ ] 🌯 Shawarma - 2x
  - [ ] 🍎 Apples - 1kg
- - [ ] 🥪 Sandwiches
+ - [x] 🥪 Sandwiches
  - [ ] 🍫 Chocolate bars - x2
  - [ ] 🍌 Bananas
  - [ ] 🍊 Oranges
  - [ ] 🟤 Dates (финики)
  - [ ] 🍓 Strawberry
  - [ ] 🍊 Mandarins
+ - [ ] 🍒 Cherry / Bird-cherry
 
 
  - [x] 🧼 Soap
@@ -54,7 +55,6 @@ My purchased items stored here: [my inventory](./my%20inventory.md).
  - [-] 🧀 Curd
  - [x] 🧄 Garlic
  - [ ] 🟠 Persimmon (хурма)
- - [ ] 🍒 Cherry / Bird-cherry
  - [ ] 🍐 Pears (груши)
  - [ ] 🥭 Mango
  - [x] 🧻 Paper towels
@@ -67,7 +67,7 @@ My purchased items stored here: [my inventory](./my%20inventory.md).
 ## Inventory
 
 
-- [ ] беруши Moldex
-- [ ] Drawing tablet, wacom bt
-- [ ] Stilus
+- [x] беруши Moldex
+- [x] Drawing tablet, wacom bt
+- [x] Stilus
 - [ ] Jeans and jacket
