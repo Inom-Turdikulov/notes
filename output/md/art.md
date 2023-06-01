@@ -31,9 +31,9 @@ I'm fan of fine art and CGI art.
 ## Learning resources
 
 
-- [@KilpatrickDavidSvetOsveshchenie1988](./%40KilpatrickDavidSvetOsveshchenie1988.md), Looks like a good book about light
+- [papis/af1e94df98f63aa42a732c48bb7d5176-david-kilpatrick/notes](./papis/af1e94df98f63aa42a732c48bb7d5176-david-kilpatrick/notes.md), Looks like a good book about light
 - [30 day drawing challenge](./30%20day%20drawing%20challenge.md)
-- [@AndrewLoomisFunPencilHow2013](./%40AndrewLoomisFunPencilHow2013.md)
+- [papis/882dd7e427ed785b79bc28335be19693-loomis-andrew/notes](./papis/882dd7e427ed785b79bc28335be19693-loomis-andrew/notes.md)
 - [ArtStation - showcase platform](https://www.artstation.com/)
 - [DeviantArt - Art Gallery and Community](https://www.deviantart.com/)
 - [Arthive - Social network for artists and art connoisseurs](https://arthive.com/)

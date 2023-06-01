@@ -55,5 +55,5 @@ complete the challenge!
 ## Next
 
 
-- [ ] [@AndrewLoomisFunPencilHow2013](./%40AndrewLoomisFunPencilHow2013.md)
+- [ ] [papis/882dd7e427ed785b79bc28335be19693-loomis-andrew/notes](./papis/882dd7e427ed785b79bc28335be19693-loomis-andrew/notes.md)
 - [ ] artist PDF files...

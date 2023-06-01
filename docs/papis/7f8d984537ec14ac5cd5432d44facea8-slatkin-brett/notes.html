@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!-- Page information -->
+    <meta charset="UTF-8" />
+    <meta name="node_id" content="7f8d984537ec14ac5cd5432d44facea8-slatkin-brett/notes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Set title -->
+    <title>Inom's working notes</title>
+
+    <!-- Includes -->
+    
+<script src="/obs.html/static/obsidian_core.js"></script>
+<script src="/obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="/obs.html/static/master.css" />
+<script src="/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="/obs.html/static/flexsearch.bundle.js"></script>
+<script src="/obs.html/static/pako.js"></script>
+<script src="/obs.html/static/search.js"></script>
+<script src="/obs.html/static/dirtree.js"></script>
+
+
+    <!-- Onload tweaks -->
+    <script>
+        const CURRENT_NODE = "7f8d984537ec14ac5cd5432d44facea8-slatkin-brett/notes";
+        const HTML_URL_PREFIX = "";
+        const PAGE_DEPTH = 2;
+    </script>
+
+    <style>
+        /* Critical CSS */
+        html{
+            background: #000;
+        }
+
+        body,
+        .container,
+        code {
+            font-size: 18pt;
+            font-family: monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            max-width: calc(81ch + 64px);
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 81ch;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0.6rem;
+            height: 0.6rem;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border: 0px;
+            border-radius: 10px;
+        }
+
+        .theme-obs-light .left_pane, .theme-obs-light .right_pane,
+        .theme-obs-dark .left_pane, .theme-obs-dark .right_pane,
+        .theme-obs-dark .container, .theme-obs-light .container, .theme-obs-dark
+        .container_filler, .theme-obs-light .container_filler {
+            border-top: 0;
+        }
+
+        code {
+            line-height: 1.2;
+            font-family: monospace, "SourceCodePro-Regular";
+        }
+
+        h1 {
+            font-size: 24pt;
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 24pt;
+        }
+
+        h3 {
+            font-size: 18pt;
+        }
+
+        h4 {
+            font-size: 15pt;
+        }
+
+        .dir-list li,
+        h5 {
+            font-size: 12pt;
+        }
+
+        h6 {
+            font-size: 9pt;
+        }
+    </style>
+</head>
+
+<body class="theme-obs-light">
+    <div id="antiflash" style="display: none"></div>
+    <script>
+        document.getElementById("antiflash").style.display = "block";
+    </script>
+    <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+    <div id="page_holder" class="flex_col">
+        <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="/index.html" id="homelink" title="Clear screen and go to homepage">Inom's working notes</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=7f8d984537ec14ac5cd5432d44facea8-slatkin-brett/notes" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="/obs.html/dir_index.html" title="View directory tree">
+                    <img src = "/obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="/obs.html/tags/index.html" title="Open tag view">
+            <img src = "/obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+        <div class="flex_row">
+            
+            <div class="container">
+                <embeddedtitle>notes</embeddedtitle>
+<div class="content"><h3 id="item-1-know-which-version-of-python-you-re-using">Item 1: Know which version of python you're using</h3>
+<h4 id="idioms-of-programming-language-are-defined-by-its-users">Idioms of programming language are defined by its users</h4>
+<p>This means popular practices, formating rules, conventions, etc are defined by their users!</p>
+<h4 id="python-version">Python version</h4>
+<p>You can easily detect which python version you use right now.</p>
+<h3 id="item-2-follow-the-pep8-style-guide">Item 2: Follow the PEP8 Style Guide</h3>
+<h4 id="pep-is">PEP is</h4>
+<p>Python Enhancement Proposal or PEP 8
+It's Python formatting style guide.</p>
+<h4 id="why-pep">Why PEP?</h4>
+<p>Using consistent style, make your code much more approachable and readable.</p>
+<h4 id="whitespace">Whitespace</h4>
+<p>Since whitespaces are significant in Python, it's recommend to follow this rules:</p>
+<ul>
+<li>Use 4 spaces insted tabs for indentation.</li>
+<li>Indent a long lines by additional spaces if they splitted.</li>
+<li>Functions and classes separated by 2 blank lines.</li>
+<li>Class methods separated by 1 blank line.</li>
+<li>...</li>
+</ul>
+<h4 id="naming">Naming</h4>
+<ul>
+<li>Functions, variables, and attributes in <code>lowercas_underscore</code> format.</li>
+<li>Protected instance attributes should be in <code>_leading_underscore</code> format.</li>
+<li>Classes (including exceptions) should be in <code>CapitalizedWord</code> format.</li>
+<li>Module-level constants should be in <code>ALL_CAPS</code> format.</li>
+<li>Instance methods in classes should use <code>self</code> (ref to object), as the name of the first parameter.</li>
+<li>Class methods should use <code>cls</code>, which refers to the class, as the name of the first parameter.</li>
+</ul>
+<h4 id="expressions-and-statements">Expressions and statements</h4>
+<ul>
+<li>Use inline negation <code>if a is not b</code> instead negation of positive expression <code>if not a is b</code>, some like <code>if not CONDTION</code>. It's really hard to understand.</li>
+<li>Don't check for empty/non-empty by comparing length to zero ([], ''), just use <code>if/if not</code> something and you need assume that empty value will be evaluated to False, non-empty to True.</li>
+<li>Avoid single-line if, for and while loops, except compound statements, spread them over multiple lines for clarity/readability (it's actual for complex items).</li>
+<li>Split long lines with parentheses if they are too long.</li>
+<li>Prefer splitting with parentheses over using \ line conttinuation character.</li>
+</ul>
+<h4 id="imports">Imports</h4>
+<ul>
+<li>Place imports at top.</li>
+<li>Use absolute names when you import modules.</li>
+<li>When you need do relative import, use explicit method <code>from . import foo</code></li>
+<li>Follow ordering of module import: stdlib, thrid-party, own.</li>
+<li>Use linters linke pylint, black, etc...</li>
+</ul>
+<h4 id="things-to-remember">Things to remember</h4>
+<ul>
+<li>Follow the PEP style guide.</li>
+<li>Following common style facilitates collaboration with others.</li>
+<li>Consistent code style make it easier to modify later (include automation?).</li>
+</ul>
+<h3 id="item-3-know-the-differences-between-bytes-and-str">Item 3: Know the Differences Between bytes and str</h3>
+<h4 id="sequence-data">Sequence data</h4>
+<p>In python there are 2 types that represent sequences of characters
+bytes and str</p>
+<ul>
+<li>byte - RAW unsigned 8 bit value <code>b'h\x65llo'</code></li>
+</ul>
+<!--listend-->
+
+<div class="lang-python">
+
+<div class="codehilite"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;h</span><span class="se">\x65</span><span class="s1">llo</span><span class="se">\x55</span><span class="s1">&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div>
+
+
+</div>
+
+<ul>
+<li>str instances -  <a href="/unicode.html">unicode</a> code points, that represent textual characters from human language
+    str instances don't have binary encoding</li>
+</ul>
+<!--listend-->
+
+<div class="lang-python">
+
+<div class="codehilite"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;a</span><span class="se">\u0300</span><span class="s1"> propos&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;windows-1251&#39;</span><span class="p">,</span> <span class="s1">&#39;ignore&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
+</code></pre></div>
+
+
+</div>
+
+<p>The core of your program should use str type containg Unicode data, but can accept different encoding - latin1, big5 from interafaces.</p>
+<p>Use helper function to ensure th e inputs you operate are the type of character sequence that you expect.</p>
+<p>Bytes and str instances can be used together with operatos &gt;, =, -, +, %</p>
+<p>If you want read or write bin data, open it in 'rb' 'rw' modes.</p>
+<p>If you want to read or write unicode data be careful about system encoding. Explictiy pass the encoding paramter to open if you want to avoid surprices.</p>
+<p>prefer f-strings</p>
+<p>format of f strinig: f'{key!r:&lt;10} = {value:.2f}
+    {key!r} - raw
+    {key:&lt;10} - left order (min width) - 10 characters
+    {value:.2f} - precision formatting
+    f'my number is {number:.{places}}?</p>
+<p>F-strings are sucinot yet powerful, because they allow for arbitray Pytho expression to be directly embedded within format specifiers.</p>
+<p>Write helperes functions instead of complex expressions</p>
+<p>Python's syntax makes it easy to write single line epxressions that are overly complicated and difficult to read.</p>
+<p>Move complex expressions into helpere functions expeciialy if you need to use the same logic repeately</p>
+<h1 id="cover-1">Cover /1</h1>
+<h1 id="half-title-4">Half Title /4</h1>
+<h1 id="title-page-6">Title Page /6</h1>
+<h1 id="copyright-page-7">Copyright Page /7</h1>
+<h1 id="dedication-8">Dedication /8</h1>
+<h1 id="contents-12">Contents /12</h1>
+<h1 id="preface-18">Preface /18</h1>
+<h1 id="acknowledgments-22">Acknowledgments /22</h1>
+<h1 id="about-the-author-24">About the Author /24</h1>
+<h1 id="chapter-1-pythonic-thinking-26">Chapter 1 Pythonic Thinking /26</h1>
+<h2 id="item-1-know-which-version-of-python-youre-using-26">Item 1: Know Which Version of Python You’re Using /26</h2>
+<h2 id="item-2-follow-the-pep-8-style-guide-27">Item 2: Follow the PEP 8 Style Guide /27</h2>
+<h2 id="item-3-know-the-differences-between-bytes-and-str-30">Item 3: Know the Differences Between bytes and str /30</h2>
+<h2 id="item-4-prefer-interpolated-f-strings-over-c-style-format-strings-and-str-format-36">Item 4: Prefer Interpolated F-Strings Over C-style Format Strings and str.format /36</h2>
+<h2 id="item-5-write-helper-functions-instead-of-complex-expressions-46">Item 5: Write Helper Functions Instead of Complex Expressions /46</h2>
+<h2 id="item-6-prefer-multiple-assignment-unpacking-over-indexing-49">Item 6: Prefer Multiple Assignment Unpacking Over Indexing /49</h2>
+<h2 id="item-7-prefer-enumerate-over-range-53">Item 7: Prefer enumerate Over range /53</h2>
+<h2 id="item-8-use-zip-to-process-iterators-in-parallel-55">Item 8: Use zip to Process Iterators in Parallel /55</h2>
+<h2 id="item-9-avoid-else-blocks-after-for-and-while-loops-57">Item 9: Avoid else Blocks After for and while Loops /57</h2>
+<h2 id="item-10-prevent-repetition-with-assignment-expressions-60">Item 10: Prevent Repetition with Assignment Expressions /60</h2>
+<h1 id="chapter-2-lists-and-dictionaries-68">Chapter 2 Lists and Dictionaries /68</h1>
+<h2 id="item-11-know-how-to-slice-sequences-68">Item 11: Know How to Slice Sequences /68</h2>
+<h2 id="item-12-avoid-striding-and-slicing-in-a-single-expression-71">Item 12: Avoid Striding and Slicing in a Single Expression /71</h2>
+<h2 id="item-13-prefer-catch-all-unpacking-over-slicing-73">Item 13: Prefer Catch-All Unpacking Over Slicing /73</h2>
+<h2 id="item-14-sort-by-complex-criteria-using-the-key-parameter-77">Item 14: Sort by Complex Criteria Using the key Parameter /77</h2>
+<h2 id="item-15-be-cautious-when-relying-on-dict-insertion-ordering-83">Item 15: Be Cautious When Relying on dict Insertion Ordering /83</h2>
+<h2 id="item-16-prefer-get-over-in-and-keyerror-to-handle-missing-dictionary-keys-90">Item 16: Prefer get Over in and KeyError to Handle Missing Dictionary Keys /90</h2>
+<h2 id="item-17-prefer-defaultdict-over-setdefault-to-handle-missing-items-in-internal-state-95">Item 17: Prefer defaultdict Over setdefault to Handle Missing Items in Internal State /95</h2>
+<h2 id="item-18-know-how-to-construct-key-dependent-default-values-with-missing-98">Item 18: Know How to Construct Key-Dependent Default Values with <strong>missing</strong> /98</h2>
+<h1 id="chapter-3-functions-102">Chapter 3 Functions /102</h1>
+<h2 id="item-19-never-unpack-more-than-three-variables-when-functions-return-multiple-values-102">Item 19: Never Unpack More Than Three Variables When Functions Return Multiple Values /102</h2>
+<h2 id="item-20-prefer-raising-exceptions-to-returning-none-105">Item 20: Prefer Raising Exceptions to Returning None /105</h2>
+<h2 id="item-21-know-how-closures-interact-with-variable-scope-108">Item 21: Know How Closures Interact with Variable Scope /108</h2>
+<h2 id="item-22-reduce-visual-noise-with-variable-positional-arguments-112">Item 22: Reduce Visual Noise with Variable Positional Arguments /112</h2>
+<h2 id="item-23-provide-optional-behavior-with-keyword-arguments-115">Item 23: Provide Optional Behavior with Keyword Arguments /115</h2>
+<h2 id="item-24-use-none-and-docstrings-to-specify-dynamic-default-arguments-119">Item 24: Use None and Docstrings to Specify Dynamic Default Arguments /119</h2>
+<h2 id="item-25-enforce-clarity-with-keyword-only-and-positional-only-arguments-122">Item 25: Enforce Clarity with Keyword-Only and Positional-Only Arguments /122</h2>
+<h2 id="item-26-define-function-decorators-with-functools-wraps-127">Item 26: Define Function Decorators with functools.wraps /127</h2>
+<h1 id="chapter-4-comprehensions-and-generators-132">Chapter 4 Comprehensions and Generators /132</h1>
+<h2 id="item-27-use-comprehensions-instead-of-map-and-filter-132">Item 27: Use Comprehensions Instead of map and filter /132</h2>
+<h2 id="item-28-avoid-more-than-two-control-subexpressions-in-comprehensions-134">Item 28: Avoid More Than Two Control Subexpressions in Comprehensions /134</h2>
+<h2 id="item-29-avoid-repeated-work-in-comprehensions-by-using-assignment-expressions-136">Item 29: Avoid Repeated Work in Comprehensions by Using Assignment Expressions /136</h2>
+<h2 id="item-30-consider-generators-instead-of-returning-lists-139">Item 30: Consider Generators Instead of Returning Lists /139</h2>
+<h2 id="item-31-be-defensive-when-iterating-over-arguments-142">Item 31: Be Defensive When Iterating Over Arguments /142</h2>
+<h2 id="item-32-consider-generator-expressions-for-large-list-comprehensions-147">Item 32: Consider Generator Expressions for Large List Comprehensions /147</h2>
+<h2 id="item-33-compose-multiple-generators-with-yield-from-149">Item 33: Compose Multiple Generators with yield from /149</h2>
+<h2 id="item-34-avoid-injecting-data-into-generators-with-send-152">Item 34: Avoid Injecting Data into Generators with send /152</h2>
+<h2 id="item-35-avoid-causing-state-transitions-in-generators-with-throw-158">Item 35: Avoid Causing State Transitions in Generators with throw /158</h2>
+<h2 id="item-36-consider-itertools-for-working-with-iterators-and-generators-163">Item 36: Consider itertools for Working with Iterators and Generators /163</h2>
+<h1 id="chapter-5-classes-and-interfaces-170">Chapter 5 Classes and Interfaces /170</h1>
+<h2 id="item-37-compose-classes-instead-of-nesting-many-levels-of-built-in-types-170">Item 37: Compose Classes Instead of Nesting Many Levels of Built-in Types /170</h2>
+<h2 id="item-38-accept-functions-instead-of-classes-for-simple-interfaces-177">Item 38: Accept Functions Instead of Classes for Simple Interfaces /177</h2>
+<h2 id="item-39-use-classmethod-polymorphism-to-construct-objects-generically-180">Item 39: Use @classmethod Polymorphism to Construct Objects Generically /180</h2>
+<h2 id="item-40-initialize-parent-classes-with-super-185">Item 40: Initialize Parent Classes with super /185</h2>
+<h2 id="item-41-consider-composing-functionality-with-mix-in-classes-190">Item 41: Consider Composing Functionality with Mix-in Classes /190</h2>
+<h2 id="item-42-prefer-public-attributes-over-private-ones-195">Item 42: Prefer Public Attributes Over Private Ones /195</h2>
+<h2 id="item-43-inherit-from-collections-abc-for-custom-container-types-200">Item 43: Inherit from collections.abc for Custom Container Types /200</h2>
+<h1 id="chapter-6-metaclasses-and-attributes-206">Chapter 6 Metaclasses and Attributes /206</h1>
+<h2 id="item-44-use-plain-attributes-instead-of-setter-and-getter-methods-206">Item 44: Use Plain Attributes Instead of Setter and Getter Methods /206</h2>
+<h2 id="item-45-consider-property-instead-of-refactoring-attributes-211">Item 45: Consider @property Instead of Refactoring Attributes /211</h2>
+<h2 id="item-46-use-descriptors-for-reusable-property-methods-215">Item 46: Use Descriptors for Reusable @property Methods /215</h2>
+<h2 id="item-47-use__getattr__-getattribute-and-setattr-for-lazy-attributes-220">Item 47: Use__getattr__, <strong>getattribute</strong>, and <strong>setattr</strong> for Lazy Attributes /220</h2>
+<h2 id="item-48-validate-subclasses-with-init_subclass-226">Item 48: Validate Subclasses with <strong>init_subclass</strong> /226</h2>
+<h2 id="item-49-register-class-existence-with-init_subclass-233">Item 49: Register Class Existence with <strong>init_subclass</strong> /233</h2>
+<h2 id="item-50-annotate-class-attributes-with-set_name-239">Item 50: Annotate Class Attributes with <strong>set_name</strong> /239</h2>
+<h2 id="item-51-prefer-class-decorators-over-metaclasses-for-composable-class-extensions-243">Item 51: Prefer Class Decorators Over Metaclasses for Composable Class Extensions /243</h2>
+<h1 id="chapter-7-concurrency-and-parallelism-250">Chapter 7 Concurrency and Parallelism /250</h1>
+<h2 id="item-52-use-subprocess-to-manage-child-processes-251">Item 52: Use subprocess to Manage Child Processes /251</h2>
+<h2 id="item-53-use-threads-for-blocking-i-o-avoid-for-parallelism-255">Item 53: Use Threads for Blocking I/O, Avoid for Parallelism /255</h2>
+<h2 id="item-54-use-lock-to-prevent-data-races-in-threads-260">Item 54: Use Lock to Prevent Data Races in Threads /260</h2>
+<h2 id="item-55-use-queue-to-coordinate-work-between-threads-263">Item 55: Use Queue to Coordinate Work Between Threads /263</h2>
+<h2 id="item-56-know-how-to-recognize-when-concurrency-is-necessary-273">Item 56: Know How to Recognize When Concurrency Is Necessary /273</h2>
+<h2 id="item-57-avoid-creating-new-thread-instances-for-on-demand-fan-out-277">Item 57: Avoid Creating New Thread Instances for On-demand Fan-out /277</h2>
+<h2 id="item-58-understand-how-using-queue-for-concurrency-requires-refactoring-282">Item 58: Understand How Using Queue for Concurrency Requires Refactoring /282</h2>
+<h2 id="item-59-consider-threadpoolexecutor-when-threads-are-necessary-for-concurrency-289">Item 59: Consider ThreadPoolExecutor When Threads Are Necessary for Concurrency /289</h2>
+<h2 id="item-60-achieve-highly-concurrent-i-o-with-coroutines-291">Item 60: Achieve Highly Concurrent I/O with Coroutines /291</h2>
+<h2 id="item-61-know-how-to-port-threaded-i-o-to-asyncio-296">Item 61: Know How to Port Threaded I/O to asyncio /296</h2>
+<h2 id="item-62-mix-threads-and-coroutines-to-ease-the-transition-to-asyncio-307">Item 62: Mix Threads and Coroutines to Ease the Transition to asyncio /307</h2>
+<h2 id="item-63-avoid-blocking-the-asyncio-event-loop-to-maximize-responsiveness-314">Item 63: Avoid Blocking the asyncio Event Loop to Maximize Responsiveness /314</h2>
+<h2 id="item-64-consider-concurrent-futures-for-true-parallelism-317">Item 64: Consider concurrent.futures for True Parallelism /317</h2>
+<h1 id="chapter-8-robustness-and-performance-324">Chapter 8 Robustness and Performance /324</h1>
+<h2 id="item-65-take-advantage-of-each-block-in-try-except-else-finally-324">Item 65: Take Advantage of Each Block in try/except /else/finally /324</h2>
+<h2 id="item-66-consider-contextlib-and-with-statements-for-reusable-try-finally-behavior-329">Item 66: Consider contextlib and with Statements for Reusable try/finally Behavior /329</h2>
+<h2 id="item-67-use-datetime-instead-of-time-for-local-clocks-333">Item 67: Use datetime Instead of time for Local Clocks /333</h2>
+<h2 id="item-68-make-pickle-reliable-with-copyreg-337">Item 68: Make pickle Reliable with copyreg /337</h2>
+<h2 id="item-69-use-decimal-when-precision-is-paramount-344">Item 69: Use decimal When Precision Is Paramount /344</h2>
+<h2 id="item-70-profile-before-optimizing-347">Item 70: Profile Before Optimizing /347</h2>
+<h2 id="item-71-prefer-deque-for-producerconsumer-queues-351">Item 71: Prefer deque for Producer–Consumer Queues /351</h2>
+<h2 id="item-72-consider-searching-sorted-sequences-with-bisect-359">Item 72: Consider Searching Sorted Sequences with bisect /359</h2>
+<h2 id="item-73-know-how-to-use-heapq-for-priority-queues-361">Item 73: Know How to Use heapq for Priority Queues /361</h2>
+<h2 id="item-74-consider-memoryview-and-bytearray-for-zero-copy-interactions-with-bytes-371">Item 74: Consider memoryview and bytearray for Zero-Copy Interactions with bytes /371</h2>
+<h1 id="chapter-9-testing-and-debugging-378">Chapter 9 Testing and Debugging /378</h1>
+<h2 id="item-75-use-repr-strings-for-debugging-output-379">Item 75: Use repr Strings for Debugging Output /379</h2>
+<h2 id="item-76-verify-related-behaviors-in-testcase-subclasses-382">Item 76: Verify Related Behaviors in TestCase Subclasses /382</h2>
+<h2 id="item-77-isolate-tests-from-each-other-with-setup-teardown-setupmodule-and-teardownmodule-390">Item 77: Isolate Tests from Each Other with setUp, tearDown, setUpModule, and tearDownModule /390</h2>
+<h2 id="item-78-use-mocks-to-test-code-with-complex-dependencies-392">Item 78: Use Mocks to Test Code with Complex Dependencies /392</h2>
+<h2 id="item-79-encapsulate-dependencies-to-facilitate-mocking-and-testing-400">Item 79: Encapsulate Dependencies to Facilitate Mocking and Testing /400</h2>
+<h2 id="item-80-consider-interactive-debugging-with-pdb-404">Item 80: Consider Interactive Debugging with pdb /404</h2>
+<h2 id="item-81-use-tracemalloc-to-understand-memory-usage-and-leaks-409">Item 81: Use tracemalloc to Understand Memory Usage and Leaks /409</h2>
+<h1 id="chapter-10-collaboration-414">Chapter 10 Collaboration /414</h1>
+<h2 id="item-82-know-where-to-find-community-built-modules-414">Item 82: Know Where to Find Community-Built Modules /414</h2>
+<h2 id="item-83-use-virtual-environments-for-isolated-and-reproducible-dependencies-415">Item 83: Use Virtual Environments for Isolated and Reproducible Dependencies /415</h2>
+<h2 id="item-84-write-docstrings-for-every-function-class-and-module-421">Item 84: Write Docstrings for Every Function, Class, and Module /421</h2>
+<h2 id="item-85-use-packages-to-organize-modules-and-provide-stable-apis-426">Item 85: Use Packages to Organize Modules and Provide Stable APIs /426</h2>
+<h2 id="item-86-consider-module-scoped-code-to-configure-deployment-environments-431">Item 86: Consider Module-Scoped Code to Configure Deployment Environments /431</h2>
+<h2 id="item-87-define-a-root-exception-to-insulate-callers-from-apis-433">Item 87: Define a Root Exception to Insulate Callers from APIs /433</h2>
+<h2 id="item-88-know-how-to-break-circular-dependencies-438">Item 88: Know How to Break Circular Dependencies /438</h2>
+<h2 id="item-89-consider-warnings-to-refactor-and-migrate-usage-443">Item 89: Consider warnings to Refactor and Migrate Usage /443</h2>
+<h2 id="item-90-consider-static-analysis-via-typing-to-obviate-bugs-450">Item 90: Consider Static Analysis via typing to Obviate Bugs /450</h2>
+<h1 id="index-460">Index /460</h1>
+<h2 id="a-460">A /460</h2>
+<h2 id="b-461">B /461</h2>
+<h2 id="c-461">C /461</h2>
+<h2 id="d-462">D /462</h2>
+<h2 id="e-463">E /463</h2>
+<h2 id="f-463">F /463</h2>
+<h2 id="g-464">G /464</h2>
+<h2 id="h-464">H /464</h2>
+<h2 id="i-464">I /464</h2>
+<h2 id="j-465">J /465</h2>
+<h2 id="k-465">K /465</h2>
+<h2 id="l-465">L /465</h2>
+<h2 id="m-465">M /465</h2>
+<h2 id="n-466">N /466</h2>
+<h2 id="o-466">O /466</h2>
+<h2 id="p-466">P /466</h2>
+<h2 id="q-467">Q /467</h2>
+<h2 id="r-467">R /467</h2>
+<h2 id="s-467">S /467</h2>
+<h2 id="t-468">T /468</h2>
+<h2 id="u-469">U /469</h2>
+<h2 id="v-469">V /469</h2>
+<h2 id="w-469">W /469</h2>
+<h2 id="y-469">Y /469</h2>
+<h2 id="z-469">Z /469</h2></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="/my python developer roadmap.html">my python developer roadmap</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="/obs.html/tags/research/index.html">research</a></li>
+	<li><a class="backlink" href="/obs.html/tags/inbox/index.html">inbox</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A44473898139464649074417774478536914272{level}" class="graph_div"></div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B44473898139464649074417774478536914272{level}" level="{level}" note_temp_id="44473898139464649074417774478536914272" onclick="window.ObsHtmlGraph.run(this, '44473898139464649074417774478536914272', '7f8d984537ec14ac5cd5432d44facea8-slatkin-brett/notes');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C44473898139464649074417774478536914272{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('/obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                <!-- end content -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handle_toggle_side_bar(e) {
+            let header;
+            let pane;
+            let target = e.target;
+
+            // switch out the navbar button click for a header click
+            if (target.id == "left_pane_toggle_nav") {
+                target = document.getElementById("left_pane_fold_header");
+            } else if (target.id == "right_pane_toggle_nav") {
+                target = document.getElementById("right_pane_fold_header");
+            }
+
+            // get header and pane
+            if (target.classList.contains("fold_header")) {
+                header = target;
+                pane = target.parentElement;
+            } else {
+                pane = target;
+                header = target.getElementsByClassName("fold_header")[0];
+            }
+            toggle_side_bar(pane, header, true);
+            e.stopPropagation();
+        }
+        function handle_toggle_side_bar_button(e) {
+            document.getElementById("menu_toggle_button").click();
+            handle_toggle_side_bar(e);
+        }
+
+        function toggle_side_bar(pane, header, save) {
+            let active = pane.classList.contains("active");
+            if (active) {
+                disable_side_bar(pane, header, save);
+            } else {
+                enable_side_bar(pane, header, save);
+            }
+        }
+        function enable_side_bar(pane, header, save) {
+            pane.classList.add("active");
+            pane.removeEventListener("click", handle_toggle_side_bar);
+            header.addEventListener("click", handle_toggle_side_bar);
+            set_correct_header_symbol(header);
+            if (save) {
+                save_panel_folding_state(header, true);
+            }
+        }
+        function disable_side_bar(pane, header, save) {
+            pane.classList.remove("active");
+            pane.addEventListener("click", handle_toggle_side_bar);
+            header.removeEventListener("click", handle_toggle_side_bar);
+            set_correct_header_symbol(header);
+            if (save) {
+                save_panel_folding_state(header, false);
+            }
+        }
+        function set_correct_header_symbol(header) {
+            let pane = header.parentElement;
+            let symbol = [
+                [">", "<"],
+                ["<", ">"],
+            ];
+            symbol =
+                symbol[Number(header.classList.contains("right_pane_fold_header"))][
+                Number(pane.classList.contains("active"))
+                ];
+            console.log(symbol);
+            header.innerHTML = symbol;
+            return header;
+        }
+        function panel_folding_get_panel_name(header) {
+            return ["left", "right"][
+                Number(header.classList.contains("right_pane_fold_header"))
+            ];
+        }
+        function save_panel_folding_state(header, active) {
+            ls_set(
+                "pane_folding_state_" + panel_folding_get_panel_name(header),
+                Number(active)
+            );
+        }
+        function load_panel_folding_state(panel_name) {
+            val = ls_get("pane_folding_state_" + panel_name);
+            if (!val) {
+                return {exists: false, value: null};
+            }
+            return {exists: true, value: Boolean(Number(val))};
+        }
+        function set_pane_folding_start(left_header, right_header) {
+            // small screen = closed
+            let right_pane_enabled = true;
+            let left_pane_enabled = true;
+            let w = window.visualViewport.width;
+            if (w < 1000) {
+                left_pane_enabled = false;
+            }
+            if (w < 800) {
+                right_pane_enabled = false;
+            }
+
+            // get saved values if present
+            let rval = load_panel_folding_state("right");
+            if (rval["exists"]) {
+                right_pane_enabled = rval["value"];
+            }
+            let lval = load_panel_folding_state("left");
+            if (lval["exists"]) {
+                left_pane_enabled = lval["value"];
+            }
+
+            // default = enabled, so we only need to disable
+            if (!left_pane_enabled) {
+                disable_side_bar(
+                    document.getElementById("left_pane"),
+                    document.getElementById("left_pane_fold_header")
+                );
+            }
+            if (!right_pane_enabled) {
+                disable_side_bar(
+                    document.getElementById("right_pane"),
+                    document.getElementById("right_pane_fold_header")
+                );
+            }
+        }
+
+        function init_pane_folding(header) {
+            set_correct_header_symbol(header);
+            header.addEventListener("click", handle_toggle_side_bar);
+        }
+
+        set_pane_folding_start();
+        init_pane_folding(document.getElementById("left_pane_fold_header"));
+        init_pane_folding(document.getElementById("right_pane_fold_header"));
+
+        document
+            .getElementById("left_pane_toggle_nav")
+            .addEventListener("click", handle_toggle_side_bar_button);
+        document
+            .getElementById("right_pane_toggle_nav")
+            .addEventListener("click", handle_toggle_side_bar_button);
+    </script>
+
+    <script src="/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+ 
+
+</body>
+
+</html>

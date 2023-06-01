@@ -55,8 +55,8 @@ Instead, touch and edit the file, you can just use
 
 ## Resources
 
-- [Practical Vim: Edit text at the speed of thought](./%40DrewNeilPracticalVimEdit2015.md)
-- [Modern Vim: Craft your development environment with Vim 8 and Neovim](./%40DrewNeilModernVimCraft2018.md)
+- [Practical Vim: Edit text at the speed of thought](./papis/1ae149d1c843b867b0b254a20df34b4f-neil-drew/notes.md)
+- [Modern Vim: Craft your development environment with Vim 8 and Neovim](./papis/82951c75090ce154272484448309812b-neil-drew/notes.md)
 - [Interactive Vim tutorial](http://www.openvim.com/)
 - [Vim Tips Wiki | Fandom](https://vim.fandom.com/wiki/Vim_Tips_Wiki)
 - [Vim 01 - Основы - YouTube](https://www.youtube.com/watch?v=zNnsNtBF80g)
@@ -622,8 +622,8 @@ Paste image and link::`<leader>zi`
 # Resources
 
 
-- [@DrewNeilPracticalVimEdit2015](./%40DrewNeilPracticalVimEdit2015.md)
-- [@DrewNeilModernVimCraft2018](./%40DrewNeilModernVimCraft2018.md)
+- [papis/1ae149d1c843b867b0b254a20df34b4f-neil-drew/notes](./papis/1ae149d1c843b867b0b254a20df34b4f-neil-drew/notes.md)
+- [papis/82951c75090ce154272484448309812b-neil-drew/notes](./papis/82951c75090ce154272484448309812b-neil-drew/notes.md)
 
 
 # VIM SUPER BASE DRAFT
@@ -1872,8 +1872,8 @@ Current mail goal: [my editing workflow](./my%20editing%20workflow.md)
 
 ## Resources
 
-- [Practical Vim: Edit text at the speed of thought](./%40DrewNeilPracticalVimEdit2015.md)
-- [Modern Vim: Craft your development environment with Vim 8 and Neovim](./%40DrewNeilModernVimCraft2018.md)
+- [Practical Vim: Edit text at the speed of thought](./papis/1ae149d1c843b867b0b254a20df34b4f-neil-drew/notes.md)
+- [Modern Vim: Craft your development environment with Vim 8 and Neovim](./papis/82951c75090ce154272484448309812b-neil-drew/notes.md)
 - [Interactive Vim tutorial](http://www.openvim.com/)
 - [Vim Tips Wiki | Fandom](https://vim.fandom.com/wiki/Vim_Tips_Wiki)
 - [Vim 01 - Основы - YouTube](https://www.youtube.com/watch?v=zNnsNtBF80g)
@@ -2556,8 +2556,8 @@ Paste image and link::<kbd><leader>zi</kbd>
 # Resources
 
 
-- [@DrewNeilPracticalVimEdit2015](./%40DrewNeilPracticalVimEdit2015.md)
-- [@DrewNeilModernVimCraft2018](./%40DrewNeilModernVimCraft2018.md)
+- [papis/1ae149d1c843b867b0b254a20df34b4f-neil-drew/notes](./papis/1ae149d1c843b867b0b254a20df34b4f-neil-drew/notes.md)
+- [papis/82951c75090ce154272484448309812b-neil-drew/notes](./papis/82951c75090ce154272484448309812b-neil-drew/notes.md)
 
 
 # VIM SUPER BASE DRAFT

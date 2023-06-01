@@ -25,8 +25,8 @@ tags:
 ## Shelve
 
 
-- [Effective Python](./%40BrettSlatkinEffectivePython902020.md)
-- [Fluent Python](./%40LucianoRamalhoFluentPython2021.md)
+- [Effective Python](./papis/7f8d984537ec14ac5cd5432d44facea8-slatkin-brett/notes.md)
+- [Fluent Python](./papis/bdcf7cd50c6dc8a18320d0c05b44affe-ramalho-luciano/notes.md)
 - [Ultimate Python study guide for newcomers and professionals alike.](https://github.com/huangsam/ultimate-python)
 - [Blog - Full Stack Python](https://www.fullstackpython.com/blog.html)
 - [Python Cheatsheet - Python Cheatsheet](https://www.pythoncheatsheet.org/)

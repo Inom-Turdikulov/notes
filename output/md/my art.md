@@ -12,6 +12,6 @@ tags:
 # 202303121811-My Art
 
 I have some art but need to organize it. And I really want to start drawing with
-this book: [@AndrewLoomisFunPencilHow2013](./%40AndrewLoomisFunPencilHow2013.md).
+this book: [papis/882dd7e427ed785b79bc28335be19693-loomis-andrew/notes](./papis/882dd7e427ed785b79bc28335be19693-loomis-andrew/notes.md).
 
 TODO: organize art
