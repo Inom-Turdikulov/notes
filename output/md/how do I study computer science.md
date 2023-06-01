@@ -78,7 +78,7 @@ books not directly related to computer science.
   structures. I think worth to do it after
   [papis/2ef118ce3473c9fe93acfc371e3f736e-wengrow-jay/notes](./papis/2ef118ce3473c9fe93acfc371e3f736e-wengrow-jay/notes.md)
 
-- NEXT: [@AndreyViktorovichStolyarovProgrammirovanieVvedenieProfessiyu2021b](./%40AndreyViktorovichStolyarovProgrammirovanieVvedenieProfessiyu2021b.md)
+- NEXT: [papis/2aaba9c8a111b0a808fc70c0f23bc787-stoliarov-andrei-vik/notes](./papis/2aaba9c8a111b0a808fc70c0f23bc787-stoliarov-andrei-vik/notes.md)
 - NEXT: [Тренировки по алгоритмам - YouTube](https://www.youtube.com/playlist?list=PL6Wui14DvQPySdPv5NUqV3i8sDbHkCKC5)
 
 

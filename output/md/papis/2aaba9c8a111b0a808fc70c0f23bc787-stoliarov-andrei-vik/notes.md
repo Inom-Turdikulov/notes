@@ -13,23 +13,7 @@ sr-interval: 183
 tags:
 - research
 - inbox
-title: Программирование - Введение в профессию_Азы программирования - том 1.
----
-
-
----
-
-title: Программирование - Введение в профессию_Азы программирования - том 1.
-author: Андрей Викторович Столяров date: 2021 dateAdded: 2022-12-18
-canonicalUrl: citekey:
-AndreyViktorovichStolyarovProgrammirovanieVvedenieProfessiyu2021b tags:
-
-
-- programming
-- general-programming localLibrary: zotero://select/items/1_4XC9U67X
-  cloudLibrary: [http://zotero.org/users/9108355/items/4XC9U67X](http://zotero.org/users/9108355/items/4XC9U67X) draft: true
-
-
+title: Программирование - Введение в профессию
 ---
 
 ### Введение {#введение}

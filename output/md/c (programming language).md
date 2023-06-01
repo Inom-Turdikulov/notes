@@ -25,4 +25,4 @@ databases, game development, utilities, etc.
 
 
 - [papis/9c8a1a90d37c313ce0809814e3c99f82-kernighan-brian-w./notes](./papis/9c8a1a90d37c313ce0809814e3c99f82-kernighan-brian-w./notes.md)
-- [@CaseyMuratoriHandmadeHero2014](./%40CaseyMuratoriHandmadeHero2014.md)
+- [papis/6f54b541f411cd3867159abbed2f6373-muratori-casey/notes](./papis/6f54b541f411cd3867159abbed2f6373-muratori-casey/notes.md)

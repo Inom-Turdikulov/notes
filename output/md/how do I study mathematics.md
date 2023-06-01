@@ -15,7 +15,7 @@ List of resources and tips to learn [mathematics](./mathematics.md)
 
 
 - [papis/99798ea3067ec2618000d574b97bf955-aleksandr-emelin/notes](./papis/99798ea3067ec2618000d574b97bf955-aleksandr-emelin/notes.md)
-- [@AndreiPetrovichKiselyovAlgebraChast2006](./%40AndreiPetrovichKiselyovAlgebraChast2006.md)
+- [papis/e614d794116031133f68747001d0e912-kiselyov-andrei-pet/notes](./papis/e614d794116031133f68747001d0e912-kiselyov-andrei-pet/notes.md)
 - Discrete Mathematics for Computer Scientists [math]
 
 
@@ -24,7 +24,7 @@ List of resources and tips to learn [mathematics](./mathematics.md)
 
 - [ ] concrete mathematic
 - [multiplication table](./multiplication%20table.md)
-- [Алгебра, часть 1](./%40AndreiPetrovichKiselyovAlgebraChast2006.md)
+- [Алгебра, часть 1](./papis/e614d794116031133f68747001d0e912-kiselyov-andrei-pet/notes.md)
 - [Кратчайший курс школьной математики](./papis/99798ea3067ec2618000d574b97bf955-aleksandr-emelin/notes.md)
 - Лекториум basic mathematic -
   <[https://stepik.org/lesson/28728/step/1?unit=9786>](https://stepik.org/lesson/28728/step/1?unit=9786>)
