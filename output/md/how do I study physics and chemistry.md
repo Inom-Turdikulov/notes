@@ -9,6 +9,3 @@ tags:
 ---
 
 # How do I study physics and chemistry?
-
-
-- [@RichardPhillipsFeynmanFeynmanovskieLekciiPo1967h](./%40RichardPhillipsFeynmanFeynmanovskieLekciiPo1967h.md)

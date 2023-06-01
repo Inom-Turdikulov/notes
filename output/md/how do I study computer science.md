@@ -63,7 +63,7 @@ books not directly related to computer science.
 - NOW: [papis/9c8a1a90d37c313ce0809814e3c99f82-kernighan-brian-w./notes](./papis/9c8a1a90d37c313ce0809814e3c99f82-kernighan-brian-w./notes.md) exercises, but I do it rarely
   right now, to save time for other things.
 
-- NOW: [@PythonTutorial2023](./%40PythonTutorial2023.md), to refresh knowledge
+- NOW: [papis/14f60db29650af4d6edb2aef6d5539da/notes](./papis/14f60db29650af4d6edb2aef6d5539da/notes.md), to refresh knowledge
 - NOW: [comprehensive python cheatsheet](./comprehensive%20python%20cheatsheet.md), I'm writing flashcards from it, I
   think it's will be very useful to know syntax/core libraries.
 

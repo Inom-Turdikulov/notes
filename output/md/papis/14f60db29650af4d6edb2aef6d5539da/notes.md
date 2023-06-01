@@ -35,7 +35,7 @@ C++, Java, etc.
 
 - Start interactive interpreter mode: `python3`.
 - Exit <kbd>C-d</kbd>, <kbd>C-z</kbd> or `quit()`.
-- Interpreter support [GNU readline](./GNU%20readline.md) library.
+- Interpreter support [GNU readline](../../GNU%20readline.md) library.
 - `python -c` - execute Python code.
 - `python -m [arg]` - execute Python module.
 - `python -i` - start interactive interpreter mode, can be combined with `-c`
@@ -47,12 +47,12 @@ standard input) or module name (`python -m -i lzma`).
 
 In `sys.argv` also stored `-c` (not sure) and `-m` arguments.
 
-By default, Python source files are treated as encoded in [UTF-8](./unicode.md), but
-standard library only use [ascii](./ascii.md) characters for identifiers, this convention
+By default, Python source files are treated as encoded in [UTF-8](../../unicode.md), but
+standard library only use [ascii](../../ascii.md) characters for identifiers, this convention
 that any portable code should follow.
 
 If you need to set not UTF-8 encoding, use `# -*- coding: encoding -*-` comment
-as first line or after [shebang (unix)](./shebang%20%28unix%29.md):
+as first line or after [shebang (unix)](../../shebang%20%28unix%29.md):
 
 ```python
 #!/usr/bin/env python3
@@ -88,7 +88,7 @@ print(2 ** 7)  # 2 to the power of 7
 ```
 
 
-[Operators](./operator%20%28computer%20programming%29.md) with mixed type [operand](./operand.md)'s
+[Operators](../../operator%20%28computer%20programming%29.md) with mixed type [operand](../../operand.md)'s
 convert the integer operand to floating point
 
 ```python
@@ -124,8 +124,8 @@ round(_, 2)       # 113.06
 ```
 
 
-Python support various [data type](./data%20type.md)'s such as: Int, Float, Decimal and
-Fraction, [complex number](./complex%20number.md)'s (using `j` or `J` suffix - `3+5j`).
+Python support various [data type](../../data%20type.md)'s such as: Int, Float, Decimal and
+Fraction, [complex number](../../complex%20number.md)'s (using `j` or `J` suffix - `3+5j`).
 
 In Python all these types are objects, so they have methods and attributes.
 
@@ -141,7 +141,7 @@ print('"Isn\'t", they said.')
 ```
 
 
-In interactive mode [escape sequence](./escape%20sequence.md) not recognized, so use `print()`
+In interactive mode [escape sequence](../../escape%20sequence.md) not recognized, so use `print()`
 function.
 
 You can disable escaping by using raw strings:
@@ -171,7 +171,7 @@ Usage: thingy [OPTIONS]
 > between the two is that within single quotes you don’t need to escape " (but
 > you have to escape \') and vice versa.
 
-[string literal](./string%20literal.md) can be multiple lines by `"""` triple double or single `'''`
+[string literal](../../string%20literal.md) can be multiple lines by `"""` triple double or single `'''`
 quotes. You can use `\` character to prevent automatically inserting new line in
 output (useful for formatting).
 
@@ -255,7 +255,7 @@ characters. How do you think this table is constructed (row 1, 2, 3)?
 ```
 
 
-Python strings are ==[immutable object](./immutable%20object.md)'s==.
+Python strings are ==[immutable object](../../immutable%20object.md)'s==.
 
 So you can't assign new value to character in string.
 
@@ -288,7 +288,7 @@ print(len(s))  # 4
 ```
 
 
-Most versatile [data type](./data%20type.md) is [list (abstract data type)](./list%20%28abstract%20data%20type%29.md). In Python list
+Most versatile [data type](../../data%20type.md) is [list (abstract data type)](../../list%20%28abstract%20data%20type%29.md). In Python list
 can contain elements of different types, but usually used one type.
 
 ```python
@@ -297,7 +297,7 @@ print(squares)  # [1, 4, 9, 16, 25]
 ```
 
 
-Lists like [string literal](./string%20literal.md) and [iterator](./iterator.md) can be indexed and sliced.
+Lists like [string literal](../../string%20literal.md) and [iterator](../../iterator.md) can be indexed and sliced.
 
 ```python
 squares = [1, 4, 9, 16, 25]
@@ -373,7 +373,7 @@ print(x) # [['a', 'b', 'c'], [1, 2, 3]]
 ```
 
 
-[fibonacci sequence](./fibonacci%20sequence.md):
+[fibonacci sequence](../../fibonacci%20sequence.md):
 
 ```python
 a, b = 0, 1  # multiple assignment, initialize variables
@@ -393,13 +393,13 @@ while a < 10:
 Order of Evaluation in Python expression ? In Python, the left operand is always
 evaluated before the right operand.
 
-Non-zero and (zero or [None](./null%20pointer.md)) values in Python (and C) considered
-as ([boolean data type](./boolean%20data%20type.md))? Non-zero and zero length values considered as? ?
+Non-zero and (zero or [None](../../null%20pointer.md)) values in Python (and C) considered
+as ([boolean data type](../../boolean%20data%20type.md))? Non-zero and zero length values considered as? ?
 True and False. Length also True and False.
 
 ## [4. More Control Flow Tools](https://docs.python.org/3/tutorial/controlflow.html)
 
-[control flow](./control%20flow.md) - more info.
+[control flow](../../control%20flow.md) - more info.
 
 ```python
 if x < 0:
@@ -467,7 +467,7 @@ What you will see in interactive python session if you enter this:
 ```
 
 
-And you can also specify [increment](./increment%20and%20decrement%20operators.md) for
+And you can also specify [increment](../../increment%20and%20decrement%20operators.md) for
 step size. Which can be positive or negative.
 
 ```python
@@ -514,7 +514,7 @@ print(range(10))  # range(0, 10)
 
 ::TODO: add `{_obsidian_pattern_tag_loop}` into control flow ::
 
-In python [control flow`{_obsidian_pattern_tag_loop}`](./control%20flow.md`{_obsidian_pattern_tag_loop}`) statements may have a `else` clause.
+In python [control flow`{_obsidian_pattern_tag_loop}`](../../control%20flow.md`{_obsidian_pattern_tag_loop}`) statements may have a `else` clause.
 
 It is executed if loop wasn't `break`ed (we iterated over all items in `for` or
 `while` condition become `False`).
@@ -553,7 +553,7 @@ for num in range(2, 10):
 ```
 
 
-`pass` is a [null operation](./null%20function.md) (statement, while `None` is an
+`pass` is a [null operation](../../null%20function.md) (statement, while `None` is an
 object). When it is executed, nothing happens. It is useful as a placeholder
 when a statement is required syntactically, but no code needs to be executed
 
@@ -575,7 +575,7 @@ except ImportError:
 ::TODO: watch this - [https://www.youtube.com/watch?v=-79HGfWmH_w](https://www.youtube.com/watch?v=-79HGfWmH_w) ::
 
 A match statement compare expression with successive patterns until one or more
-matches. So this is [pattern matching](./pattern%20matching.md).
+matches. So this is [pattern matching](../../pattern%20matching.md).
 
 > Only the first pattern that matches gets executed and it can also extract
 > components (sequence elements or object attributes) from the value into

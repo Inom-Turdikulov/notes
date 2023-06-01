@@ -23,7 +23,7 @@ recommended.
 
 6. [software utilization](./my%20awesome%20software%20list.md).
 
-7. [@PythonTutorial2023](./%40PythonTutorial2023.md).
+7. [papis/14f60db29650af4d6edb2aef6d5539da/notes](./papis/14f60db29650af4d6edb2aef6d5539da/notes.md).
 
 8. [papis/bdcf7cd50c6dc8a18320d0c05b44affe-ramalho-luciano/notes](./papis/bdcf7cd50c6dc8a18320d0c05b44affe-ramalho-luciano/notes.md).
 
