@@ -572,8 +572,6 @@ except ImportError:
 ```
 
 
-::TODO: watch this - [https://www.youtube.com/watch?v=-79HGfWmH_w](https://www.youtube.com/watch?v=-79HGfWmH_w) ::
-
 A match statement compare expression with successive patterns until one or more
 matches. So this is [pattern matching](../../pattern%20matching.md).
 

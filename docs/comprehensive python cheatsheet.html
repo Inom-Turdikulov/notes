@@ -292,19 +292,26 @@
 
 </div>
 
-<!--SR:!2023-05-08,11,270-->
+<!--SR:!2023-08-04,63,270-->
 
 <h3 id="list">List</h3>
-<p>Access list items
-?</p>
+<p>Access list items</p>
+<ul>
+<li><code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code></li>
+<li><code>[0, 2, 4, 6, 8]</code></li>
+<li><code>[9, 8, 7, 6, 5, 4, 3, 2, 1]</code></li>
+<li><code>[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]</code></li>
+<li><code>[5, 6, 7, 8, 9]</code>
+?</li>
+</ul>
 <div class="lang-python">
 
 <div class="codehilite"><pre><span></span><code><span class="n">list_example</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">list_example</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>    <span class="c1"># [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">list_example</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>  <span class="c1"># [0, 2, 4, 6, 8]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">list_example</span><span class="p">[</span><span class="mi">10</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># [9, 8, 7, 6, 5, 4, 3, 2, 1]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">list_example</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>    <span class="c1"># [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">list_example</span><span class="p">[</span><span class="mi">5</span><span class="p">:])</span>      <span class="c1"># [5, 6, 7, 8, 9]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_example</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_example</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_example</span><span class="p">[</span><span class="mi">10</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_example</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_example</span><span class="p">[</span><span class="mi">5</span><span class="p">:])</span>
 </code></pre></div>
 
 
@@ -441,7 +448,8 @@ items_b = [4, 5, 6]
 ?</p>
 <div class="lang-python">
 
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">itertools</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># use itertools.chain.from_iterable()</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
 <span class="n">items</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ABC&#39;</span><span class="p">,</span> <span class="s1">&#39;DEF&#39;</span><span class="p">]</span>
 <span class="n">flatter_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span><span class="n">items</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">flatter_list</span><span class="p">)</span>  <span class="c1"># [&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;, &#39;E&#39;, &#39;F&#39;]</span>
@@ -450,7 +458,7 @@ items_b = [4, 5, 6]
 
 </div>
 
-<!--SR:!2023-04-30,1,210-->
+<!--SR:!2023-09-12,102,230-->
 
 <p>Generate product of list items, <code>functools.reduce</code><br>
 <code>[1, 2, 3] -&gt; 6 = (1 * 2) * 3</code> or <code>[1, 2, 3, 4] -&gt; 24 = ((1 * 2) * 3) * 4</code>
@@ -842,7 +850,7 @@ No, first is set of chars, second is set of string.</p>
 
 </div>
 
-<!--SR:!2023-04-30,3,250-->
+<!--SR:!2023-06-08,6,230-->
 
 <p>How add items to <code>set()</code> (2 ways)?
 ?</p>
@@ -980,11 +988,31 @@ Return a new set with elements in either the set or other but not both.
 
 <h3 id="frozen-set">Frozen Set</h3>
 <p>Frozen set is an immutable and hashable set.
-That means it can be used as a key in a dictionary or as an element in a set.</p>
+That means it can be used as a key in a dictionary or as an element in a set.
+How to use them as a key in a dictionary or as an element in a set?
+?</p>
 <div class="lang-python">
 
 <div class="codehilite"><pre><span></span><code><span class="c1"># &lt;frozenset&gt; = frozenset(&lt;collection&gt;)</span>
-<span class="c1"># TODO: add examples</span>
+<span class="c1"># Create a list of numbers</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="c1"># Create a frozenset from the list</span>
+<span class="n">frozen_numbers</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+
+<span class="c1"># Print the frozenset</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">frozen_numbers</span><span class="p">)</span>
+
+<span class="n">set_example</span> <span class="o">=</span> <span class="p">{</span><span class="n">frozen_numbers</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">set_example</span><span class="p">)</span>
+
+<span class="n">dict_example</span> <span class="o">=</span> <span class="p">{</span><span class="n">frozen_numbers</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dict_example</span><span class="p">[</span><span class="n">frozen_numbers</span><span class="p">])</span>
+
+
+<span class="c1"># Try to change an element in the frozenset</span>
+<span class="c1"># This will raise an error</span>
+<span class="c1"># frozen_numbers.add(6)</span>
 </code></pre></div>
 
 
@@ -992,11 +1020,13 @@ That means it can be used as a key in a dictionary or as an element in a set.</p
 
 <h2 id="tuple">Tuple</h2>
 <p>Tuple is an immutable and hashable <mark class="formatting_highlight">list</mark>.</p>
+<p>How to create empty tuple or tuple with elements?
+?</p>
 <div class="lang-python">
 
 <div class="codehilite"><pre><span></span><code><span class="n">tuple_example</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">empty_tuple</span> <span class="o">=</span> <span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">tuple_example</span><span class="p">)</span>  <span class="c1"># (1, 2, 3)</span>
+<span class="n">empty_tuple</span> <span class="o">=</span> <span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">empty_tuple</span><span class="p">)</span>    <span class="c1"># ()</span>
 </code></pre></div>
 
@@ -1004,27 +1034,26 @@ That means it can be used as a key in a dictionary or as an element in a set.</p
 </div>
 
 <h3 id="named-tuple">Named Tuple</h3>
-<p>Named tuple is tuple's subclass with <mark class="formatting_highlight">named elements</mark>.</p>
+<p>Named tuple is tuple's subclass with?
+?
+named elements</p>
 <div class="lang-python">
 
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
-<span class="n">Point</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Point&#39;</span><span class="p">,</span> <span class="s1">&#39;x y&#39;</span><span class="p">)</span>
+<span class="n">Point</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Point&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">])</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">Point</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="mf">1.</span>
-<span class="n">p</span><span class="o">.</span><span class="n">x</span>
-<span class="mf">2.</span>
-<span class="nb">getattr</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">)</span>
-<span class="mf">3.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">_fields</span><span class="p">)</span>
 </code></pre></div>
 
 
 </div>
 
-<p>Range</p>
-<hr />
-<p><strong>Immutable and hashable sequence of integers.</strong></p>
+<h2 id="range">Range</h2>
+<p>Immutable and hashable sequence of integers.</p>
 <div class="lang-python">
 
 <div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="nb">range</span><span class="o">&gt;</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">stop</span><span class="p">)</span>                       <span class="c1"># range(to_exclusive)</span>
@@ -1035,28 +1064,53 @@ That means it can be used as a key in a dictionary or as an element in a set.</p
 
 </div>
 
+<p>Output of this block of code?</p>
 <div class="lang-python">
 
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span>
-<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)])</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)])</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)))</span>
 </code></pre></div>
 
 
 </div>
 
-<p>Enumerate</p>
-<hr />
-<div class="lang-python">
+<p>?</p>
+<div class="lang-general">
 
-<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">el</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="o">&lt;</span><span class="n">collection</span><span class="o">&gt;</span> <span class="p">[,</span> <span class="n">i_start</span><span class="p">]):</span>
-    <span class="o">...</span>
+<div class="codehilite"><pre><span></span><code><span class="k">[0, 1, 2]</span>
+<span class="na">[0, 2] # because 0 then 0+2</span><span class="o">=</span><span class="s">2 then 2+2=4, but it&#39;s not in range</span>
+<span class="na">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] # end of range is -1</span>
 </code></pre></div>
 
 
 </div>
 
-<p>Iterator</p>
-<hr />
+<h2 id="enumerate">Enumerate</h2>
+<p>Output of this block of code?</p>
+<div class="lang-python">
+
+<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">el</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">]):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">el</span><span class="p">)</span>
+</code></pre></div>
+
+
+</div>
+
+<p>?</p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="mf">0</span><span class="w"> </span><span class="kr">on</span><span class="n">e</span>
+<span class="mf">1</span><span class="w"> </span><span class="n">two</span>
+<span class="mf">2</span><span class="w"> </span><span class="n">three</span>
+</code></pre></div>
+
+
+</div>
+
+<h2 id="iterator">Iterator</h2>
+<p>How to create iterator from collection or function?
+?</p>
 <div class="lang-python">
 
 <div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="nb">iter</span><span class="o">&gt;</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="o">&lt;</span><span class="n">collection</span><span class="o">&gt;</span><span class="p">)</span>                 <span class="c1"># `iter(&lt;iter&gt;)` returns unmodified iterator.</span>
@@ -2453,7 +2507,7 @@ That means it can be used as a key in a dictionary or as an element in a set.</p
 
 </div>
 
-<h3 id="iterator">Iterator</h3>
+<h3 id="iterator_1">Iterator</h3>
 <ul>
 <li><strong>Any object that has methods next() and iter() is an iterator.</strong></li>
 <li><strong>Next() should return next item or raise StopIteration.</strong></li>
@@ -5837,13 +5891,13 @@ $<span class="w"> </span>pyinstaller<span class="w"> </span>script.py<span class
 
 </div>
 <div class="graph requires_js ">
-    <div id="A241387811296941210865917825512424519838{level}" class="graph_div"></div>
+    <div id="A66801368832323062641080052435643146904{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B241387811296941210865917825512424519838{level}" level="{level}" note_temp_id="241387811296941210865917825512424519838" onclick="window.ObsHtmlGraph.run(this, '241387811296941210865917825512424519838', 'comprehensive python cheatsheet');">
+        <button class="graph_button graph_show_button" id="B66801368832323062641080052435643146904{level}" level="{level}" note_temp_id="66801368832323062641080052435643146904" onclick="window.ObsHtmlGraph.run(this, '66801368832323062641080052435643146904', 'comprehensive python cheatsheet');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C241387811296941210865917825512424519838{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C66801368832323062641080052435643146904{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
