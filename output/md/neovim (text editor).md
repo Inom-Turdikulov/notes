@@ -830,12 +830,12 @@ this.
 ## Sources
 
 
+- [Vim 01 - Основы - YouTube](https://www.youtube.com/watch?v=zNnsNtBF80g)
 - [ ] [http://jrmiii.com/attachments/Vim.pdf](http://jrmiii.com/attachments/Vim.pdf)
 - [ ] describe [packer](~/.config/nvim/lua/inomoz/packer.lua)
 - [ ] Current mail goal: [my editing workflow](./my%20editing%20workflow.md)
 - [ ] [https://stackoverflow.com/questions/509690/how-can-you-list-the-matches-of-vims-search](https://stackoverflow.com/questions/509690/how-can-you-list-the-matches-of-vims-search)
 - [ ] [https://github.com/tpope/vim-surround](https://github.com/tpope/vim-surround)
-- [Vim 01 - Основы - YouTube](https://www.youtube.com/watch?v=zNnsNtBF80g)
 - [Practical Vim: Edit text at the speed of thought](./papis/1ae149d1c843b867b0b254a20df34b4f-neil-drew/notes.md)
 - [Modern Vim: Craft your development environment with Vim 8 and Neovim](./papis/82951c75090ce154272484448309812b-neil-drew/notes.md)
 - [Interactive Vim tutorial](http://www.openvim.com/)
