@@ -1,6 +1,6 @@
 ---
 tags:
-- ctip
+- code-tip
 - research
 title: The C Programming Language
 ---

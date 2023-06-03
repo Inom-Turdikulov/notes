@@ -7,7 +7,7 @@ sr-interval: 176
 tags:
 - definition
 - inbox
-- CS
+- CS-tip
 ---
 
 # Array (computer science)

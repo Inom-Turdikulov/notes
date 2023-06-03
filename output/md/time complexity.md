@@ -7,7 +7,7 @@ sr-interval: 229
 tags:
 - inbox
 - definition
-- CS
+- CS-tip
 ---
 
 # Time complexity

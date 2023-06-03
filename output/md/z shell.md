@@ -7,7 +7,7 @@ sr-interval: 234
 tags:
 - inbox
 - definition
-- termtip
+- dev-tip
 ---
 
 ```

@@ -7,7 +7,7 @@ sr-interval: 233
 tags:
 - inbox
 - definition
-- CS
+- CS-tip
 ---
 
 # Function (computer programming)

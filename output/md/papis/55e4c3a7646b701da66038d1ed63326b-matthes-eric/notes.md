@@ -8,7 +8,7 @@ draft: true
 localLibrary: zotero://select/items/1_GBPKLF48
 tags:
 - research
-- pythontip
+- code-tip
 title: Python Crash Course
 ---
 

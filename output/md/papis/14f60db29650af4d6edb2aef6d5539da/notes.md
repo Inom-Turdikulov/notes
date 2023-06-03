@@ -12,6 +12,7 @@ sr-interval: 1
 tags:
 - research
 - inbox
+- code-tip
 - loop
 title: The Python Tutorial
 ---

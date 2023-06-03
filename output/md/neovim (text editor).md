@@ -7,7 +7,7 @@ sr-interval: 277
 tags:
 - inbox
 - definition
-- vimtip
+- vim-tip
 ---
 
 # Neovim (text editor)

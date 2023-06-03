@@ -6,8 +6,8 @@ sr-ease: 269
 sr-interval: 3
 tags:
 - inbox
-- definition
-- filestip
+- outline
+- dev-tip
 ---
 
 # Nnn file manager

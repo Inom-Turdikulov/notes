@@ -8,7 +8,7 @@ sr-interval: 2
 tags:
 - inbox
 - outline
-- pythontip
+- code-tip
 ---
 
 # Comprehensive Python Cheatsheet

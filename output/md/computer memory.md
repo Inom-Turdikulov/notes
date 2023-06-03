@@ -7,7 +7,7 @@ sr-interval: 3
 tags:
 - inbox
 - definition
-- CS
+- CS-tip
 ---
 
 # Computer memory

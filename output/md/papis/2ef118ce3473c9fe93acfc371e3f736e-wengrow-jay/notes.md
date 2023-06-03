@@ -9,7 +9,7 @@ draft: true
 localLibrary: zotero://select/items/1_R6AGTWDZ
 tags:
 - research
-- CS
+- CS-tip
 title: 'A Common-sense Guide to Data Structures and Algorithms: Level Up Your Core
   Programming Skills'
 ---
