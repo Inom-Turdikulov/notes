@@ -6,7 +6,7 @@ sr-ease: 270
 sr-interval: 235
 tags:
 - inbox
-- defenition
+- definition
 ---
 
 # Borg

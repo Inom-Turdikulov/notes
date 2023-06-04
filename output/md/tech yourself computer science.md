@@ -6,7 +6,7 @@ sr-ease: 228
 sr-interval: 166
 tags:
 - inbox
-- permanent
+- research
 ---
 
 # Teach Yourself Computer Science

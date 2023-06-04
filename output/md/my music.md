@@ -6,7 +6,7 @@ sr-ease: 230
 sr-interval: 7
 tags:
 - inbox
-- permanent
+- outline
 ---
 
 # My Music

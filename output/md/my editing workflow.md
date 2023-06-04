@@ -7,7 +7,7 @@ sr-interval: 4
 tags:
 - inbox
 - definition
-- vimtip
+- vim-tip
 ---
 
 # My editing workflow

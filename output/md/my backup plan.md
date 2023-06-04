@@ -6,7 +6,7 @@ sr-ease: 270
 sr-interval: 227
 tags:
 - inbox
-- defenition
+- definition
 ---
 
 # My backup plan

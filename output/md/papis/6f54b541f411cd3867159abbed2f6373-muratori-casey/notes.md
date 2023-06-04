@@ -13,6 +13,7 @@ sr-interval: 2
 tags:
 - inbox
 - research
+- code-tip
 title: Handmade Hero
 ---
 

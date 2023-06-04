@@ -6,7 +6,7 @@ sr-ease: 285
 sr-interval: 241
 tags:
 - inbox
-- defenition
+- definition
 ---
 
 # Zotero Research Assistant

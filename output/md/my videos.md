@@ -6,7 +6,7 @@ sr-ease: 274
 sr-interval: 240
 tags:
 - inbox
-- permanent
+- outline
 ---
 
 # My Videos

@@ -6,7 +6,7 @@ sr-ease: 270
 sr-interval: 218
 tags:
 - inbox
-- defenition
+- definition
 ---
 
 # Btrfs

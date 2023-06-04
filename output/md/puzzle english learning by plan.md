@@ -6,7 +6,7 @@ sr-ease: 250
 sr-interval: 205
 tags:
 - inbox
-- literature
+- languages-tip
 ---
 
 # Puzzle English learning by plan

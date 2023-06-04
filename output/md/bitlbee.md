@@ -5,7 +5,7 @@ sr-due: 2023-12-03
 sr-ease: 270
 sr-interval: 200
 tags:
-- defenition
+- definition
 - inbox
 - python
 - c

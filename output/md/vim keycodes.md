@@ -6,7 +6,7 @@ sr-ease: 270
 sr-interval: 217
 tags:
 - inbox
-- defenition
+- definition
 ---
 
 # Vim keycodes
