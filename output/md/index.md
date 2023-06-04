@@ -85,5 +85,5 @@ Check this note [in real life (irl)](./in%20real%20life%20%28irl%29.md).
 
 ## Mentoring and helping
 
-I don't think I'm great at this, but I'm trying to help people on [github](./github.md),
+I don't think I'm great at this, but I'm trying to help people on [GitHub](./GitHub.md),
 and in future on [stack overflow](./stack%20overflow.md). Sometimes on different platforms or IRL.

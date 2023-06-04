@@ -13,7 +13,7 @@ tags:
 # GitLab
 
 DevOps software package which can develop, secure, and operate software.
-Alternative to [github](./github.md).
+Alternative to [GitHub](./GitHub.md).
 
 Includes:
 
