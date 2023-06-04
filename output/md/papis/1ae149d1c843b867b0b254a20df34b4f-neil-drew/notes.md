@@ -12,6 +12,7 @@ sr-interval: 225
 tags:
 - research
 - inbox
+- vim-tip
 title: 'Practical Vim: Edit text at the speed of thought'
 ---
 

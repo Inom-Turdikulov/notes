@@ -7,6 +7,7 @@ sr-interval: 231
 tags:
 - inbox
 - definition
+- CG-tip
 ---
 
 # Krita

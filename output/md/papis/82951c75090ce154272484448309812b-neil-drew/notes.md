@@ -12,6 +12,7 @@ sr-interval: 2
 tags:
 - research
 - inbox
+- vim-tip
 title: 'Modern Vim: Craft your development environment with Vim 8 and Neovim'
 ---
 
