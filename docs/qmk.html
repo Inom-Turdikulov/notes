@@ -289,9 +289,9 @@ for people with any software development experience.</p>
 <li>My fork of QMK: <a href="https://github.com/inomoz/qmk_firmware" class="external-link">https://github.com/inomoz/qmk_firmware</a></li>
 </ul>
 <p>I use QMK on my keyboard (KBD75 rev2). I'have done some basic customizations to
-keymap. I use Colemak-DH layout, but on system level (because I use also russian
+keymap. I use Colemak-DH layout, but on system level (because I use also Russian
 ЙЦУКЕН layout, so it's depends on qwerty layout).</p>
-<p>Keycodes: <a href="https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md" class="external-link">https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md</a></p>
+<p>Key codes: <a href="https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md" class="external-link">https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md</a></p>
 <p>Flash firmware steps:</p>
 <ol>
 <li>
@@ -317,7 +317,7 @@ sudo pacman -S qmk  # optionally you can install qmk from PIP
    <code>qmk setup</code></p>
 </li>
 <li>
-<p>Test Your Build Environment (frimware can be compiled), kbdfans/kbd75/rev2 is
+<p>Test Your Build Environment (firmware can be compiled), kbdfans/kbd75/rev2 is
    my keyboard. <code>qmk compile -kb kbdfans/kbd75/rev2 -km default</code></p>
 </li>
 <li>
@@ -341,21 +341,20 @@ qmk config user.keymap=inomoz
 <ol>
 <li>Compile and flash Firmware <code>qmk compile -kb kbdfans/kbd75/rev2 -km inomoz</code></li>
 </ol>
-<p>it's equivavent to <code>qmk compile</code> if keyboard and keymap are set in config.</p>
+<p>it's equivalent to <code>qmk compile</code> if keyboard and keymap are set in config.</p>
 <ol>
 <li>Flash Firmware <code>qmk flash -kb kbdfans/kbd75/rev2 -km inomoz</code></li>
 </ol>
-<p>it's equivavent to <code>qmk flash</code> if keyboard and keymap are set in config.</p>
-<p>Put Your Keyboard into DFU (Bootloader) Mode, after entering command above. In
+<p>it's equivalent to <code>qmk flash</code> if keyboard and keymap are set in config.</p>
+<p>Put Your Keyboard into <code>DFU</code> (Bootloader) Mode, after entering command above. In
 my case I need to hold <code>ESC</code> and plug USB cable.</p>
 <p><a href="https://docs.qmk.fm/#/newbs_flashing?id=put-your-keyboard-into-dfu-bootloader-mode" class="external-link">https://docs.qmk.fm/#/newbs_flashing?id=put-your-keyboard-into-dfu-bootloader-mode</a></p>
 <h2 id="keys">Keys</h2>
-<p>qmk {#FN-l}, {#FN+h}::from <code>l</code> to right, from <code>h</code> to left qmk {#FN-j},
-{#FN-h}::from <code>j</code> to down, from <code>k</code> to up</p>
+<p>TODO: describe keys</p>
 <h2 id="my-keymap-variant">My keymap variant</h2>
 <figure>
-  <img src="/img/colemak_dh_ansi.png" width="" alt="Colemak-DH ansi" title="Colemak-DH ansi" />
-  <figcaption>Colemak-DH ansi</figcaption>
+  <img src="/img/colemak_dh_ansi.png" width="" alt="Colemak-DH ANSI" title="Colemak-DH ANSI" />
+  <figcaption>Colemak-DH ANSI</figcaption>
 </figure>
 
 <h2 id="inspiration">Inspiration</h2>
@@ -387,13 +386,13 @@ my case I need to hold <code>ESC</code> and plug USB cable.</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A200691994003818511341981728673847642633{level}" class="graph_div"></div>
+    <div id="A189696672805094880503572626702916821138{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B200691994003818511341981728673847642633{level}" level="{level}" note_temp_id="200691994003818511341981728673847642633" onclick="window.ObsHtmlGraph.run(this, '200691994003818511341981728673847642633', 'qmk');">
+        <button class="graph_button graph_show_button" id="B189696672805094880503572626702916821138{level}" level="{level}" note_temp_id="189696672805094880503572626702916821138" onclick="window.ObsHtmlGraph.run(this, '189696672805094880503572626702916821138', 'qmk');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C200691994003818511341981728673847642633{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C189696672805094880503572626702916821138{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

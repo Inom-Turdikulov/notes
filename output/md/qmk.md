@@ -21,10 +21,10 @@ tags:
 - My fork of QMK: [https://github.com/inomoz/qmk_firmware](https://github.com/inomoz/qmk_firmware)
 
 I use QMK on my keyboard (KBD75 rev2). I'have done some basic customizations to
-keymap. I use Colemak-DH layout, but on system level (because I use also russian
+keymap. I use Colemak-DH layout, but on system level (because I use also Russian
 ЙЦУКЕН layout, so it's depends on qwerty layout).
 
-Keycodes: [https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md](https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md)
+Key codes: [https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md](https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md)
 
 Flash firmware steps:
 
@@ -42,7 +42,7 @@ sudo pacman -S qmk  # optionally you can install qmk from PIP
 3. Run qmk setup, in most situations you will answer `y` to all questions
    `qmk setup`
 
-4. Test Your Build Environment (frimware can be compiled), kbdfans/kbd75/rev2 is
+4. Test Your Build Environment (firmware can be compiled), kbdfans/kbd75/rev2 is
    my keyboard. `qmk compile -kb kbdfans/kbd75/rev2 -km default`
 
 5. Configure keyboard `qmk config user.keyboard=kbdfans/kbd75/rev2`
@@ -60,27 +60,26 @@ Now you have own keymap, you can edit it in
 
 7. Compile and flash Firmware `qmk compile -kb kbdfans/kbd75/rev2 -km inomoz`
 
-it's equivavent to `qmk compile` if keyboard and keymap are set in config.
+it's equivalent to `qmk compile` if keyboard and keymap are set in config.
 
 9. Flash Firmware `qmk flash -kb kbdfans/kbd75/rev2 -km inomoz`
 
-it's equivavent to `qmk flash` if keyboard and keymap are set in config.
+it's equivalent to `qmk flash` if keyboard and keymap are set in config.
 
-Put Your Keyboard into DFU (Bootloader) Mode, after entering command above. In
+Put Your Keyboard into `DFU` (Bootloader) Mode, after entering command above. In
 my case I need to hold `ESC` and plug USB cable.
 
 [https://docs.qmk.fm/#/newbs_flashing?id=put-your-keyboard-into-dfu-bootloader-mode](https://docs.qmk.fm/#/newbs_flashing?id=put-your-keyboard-into-dfu-bootloader-mode)
 
 ## Keys
 
-qmk {#FN-l}, {#FN+h}::from `l` to right, from `h` to left qmk {#FN-j},
-{#FN-h}::from `j` to down, from `k` to up
+TODO: describe keys
 
 ## My keymap variant
 
 <figure>
-  <img src="img/colemak_dh_ansi.png" width="" alt="Colemak-DH ansi" title="Colemak-DH ansi" />
-  <figcaption>Colemak-DH ansi</figcaption>
+  <img src="img/colemak_dh_ansi.png" width="" alt="Colemak-DH ANSI" title="Colemak-DH ANSI" />
+  <figcaption>Colemak-DH ANSI</figcaption>
 </figure>
 
 
