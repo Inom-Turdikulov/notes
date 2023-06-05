@@ -388,7 +388,7 @@ spaces'.</p>
 
 <p>Jump <strong>b</strong>ackward by words (no punctuation)::<code>B</code></p>
 <p>Jump backwar<strong>d</strong> to end of words::<code>ge</code></p>
-<!--SR:!2023-06-05,1,190-->
+<!--SR:!2023-06-06,1,170-->
 
 <p><strong>J</strong>ump to zero symbol (start of line)::<code>0</code></p>
 <!--SR:!2023-06-05,2,233-->
@@ -402,7 +402,7 @@ spaces'.</p>
 
 <p>Move line downwards, on the first not blank character::<code>+</code></p>
 <p>Move the cursor forward to the next sentence (or table cell)::<code>)</code></p>
-<!--SR:!2023-06-05,1,208-->
+<!--SR:!2023-06-07,2,208-->
 
 <p>Move backward by a sentence (or table cell)::<code>(</code></p>
 <p>Move the cursor a paragraph backwards::<code>{</code></p>
@@ -425,7 +425,7 @@ spaces'.</p>
 <p>Jump to more recent position you were a::<code>C-i</code></p>
 <h3 id="clipboard">Clipboard</h3>
 <p><code>ysiw[char]</code>:::change the surrounding of inner word</p>
-<!--SR:!2023-06-05,1,211-->
+<!--SR:!2023-06-06,1,191-->
 
 <p><code>ysWf ysWF</code>:::wrap text/word with function example</p>
 <p><code>yw</code>::yank word</p>
@@ -506,7 +506,7 @@ spaces'.</p>
 <!--SR:!2023-06-06,2,228-->
 
 <p><code>==</code>::auto-indent current line</p>
-<!--SR:!2023-06-05,1,208-->
+<!--SR:!2023-06-07,2,208-->
 
 <p><code>=</code>::indent text, works with visual selection</p>
 <p><code>&gt;</code>::shift right in visual mode (v)</p>
@@ -519,14 +519,14 @@ spaces'.</p>
 <p><code>o</code>:::move to other end of marked area</p>
 <p><code>O</code>:::move to other corner of block</p>
 <p><code>U</code>:::upper case of marked area</p>
-<!--SR:!2023-06-05,1,208-->
+<!--SR:!2023-06-08,3,228-->
 
 <p><code>C-v</code>:::start visual block mode</p>
 <p><code>aw</code>:::mark a word</p>
 <p><code>ab</code>:::mark a () block (with braces)</p>
 <p><code>ib</code>:::mark inner () block</p>
 <p><code>ggVG</code>:::Select All</p>
-<!--SR:!2023-06-05,1,208-->
+<!--SR:!2023-06-08,3,228-->
 
 <p><code>vc</code>:::change (replace) marked text</p>
 <p><code>y</code>:::yank (copy) marked text</p>
@@ -542,7 +542,7 @@ spaces'.</p>
 <p><code>vi'</code>:::selects text between single quotes</p>
 <p><code>viW|vis|vip|viB</code>:::select word, sentence, paragraph, innermost brackets</p>
 <p><code>vt|vT|vf|VF</code>:::select and search</p>
-<!--SR:!2023-06-05,1,209-->
+<!--SR:!2023-06-07,2,209-->
 
 <h3 id="fold">Fold</h3>
 <p>TODO: need test</p>
@@ -696,6 +696,13 @@ For more about the command history window, see <code>:h cmdwin</code>.</p>
 <p>How quickly close command history window?
 ?
 <code>&lt;C-c&gt;&lt;C-c&gt;</code></p>
+<h3 id="buffers">Buffers</h3>
+<p>List buffers
+?
+<code>:buffers</code> - built-in command, <code>:Telescope buffers</code> - telescope command</p>
+<p>Switch to buffer
+?
+<code>:b &lt;buffer name&gt;</code> or <code>:b &lt;buffer number&gt;</code></p>
 <h3 id="windows">Windows</h3>
 <p>You can use vim motion keys to navigate between open windows, for example to navigate to left window?
 ?
@@ -726,7 +733,9 @@ For more about the command history window, see <code>:h cmdwin</code>.</p>
 <p>Swap windows::<code>C-w x</code></p>
 <!--SR:!2023-06-06,2,213-->
 
+<p>Open current window in new tab::<code>C-w T</code></p>
 <p>jumps to the last window you used *::<code>C-w C-p</code></p>
+<p>Create a new window and start editing an empty file in it::<code>:new</code> or <code>C-w n</code></p>
 <h3 id="sessions">Sessions</h3>
 <p><code>:h shada</code>::opens shada help, viminfo analog, store various settings</p>
 <p>Save current session
@@ -877,13 +886,13 @@ this.</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A82407783521806196950241725894421111718{level}" class="graph_div"></div>
+    <div id="A234770638600852550141631868639174960093{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B82407783521806196950241725894421111718{level}" level="{level}" note_temp_id="82407783521806196950241725894421111718" onclick="window.ObsHtmlGraph.run(this, '82407783521806196950241725894421111718', 'neovim (text editor)');">
+        <button class="graph_button graph_show_button" id="B234770638600852550141631868639174960093{level}" level="{level}" note_temp_id="234770638600852550141631868639174960093" onclick="window.ObsHtmlGraph.run(this, '234770638600852550141631868639174960093', 'neovim (text editor)');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C82407783521806196950241725894421111718{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C234770638600852550141631868639174960093{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
