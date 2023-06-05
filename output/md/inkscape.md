@@ -28,7 +28,7 @@ tags:
 
 
 - Interesting article how to integrate Inkscape with latex:
-[How I draw figures for my mathematical lecture notes using Inkscape](https://castel.dev/post/lecture-notes-2/).
+  [How I draw figures for my mathematical lecture notes using Inkscape](https://castel.dev/post/lecture-notes-2/).
 
 TODO:
 

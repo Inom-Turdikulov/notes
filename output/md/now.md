@@ -8,19 +8,21 @@ tags:
 
 My current focus is on:
 
+0. Working Project
+
 1. [Spaced Repetition](./spaced%20repetition.md)
 
-2. [Duolingo](./duolingo.md).
+2. [Duolingo](./duolingo.md). Including daily practice and theory.
 
 3. [Khan Academy](./khan%20academy.md).
 
-4. [Exercise Plan](./exercise%20plan.md).
+4. [Exercise Plan](./exercise%20plan.md). Level-up my body.
 
-5. [The C programming language](./papis/9c8a1a90d37c313ce0809814e3c99f82-kernighan-brian-w./notes.md).
+5. [The C programming language](./papis/9c8a1a90d37c313ce0809814e3c99f82-kernighan-brian-w./notes.md). Including exercises.
 
-6. [Software Utilization](./my%20awesome%20software%20list.md).
+6. [Software Utilization](./my%20awesome%20software%20list.md). Focus on [neovim (text editor)](./neovim%20%28text%20editor%29.md).
 
-7. [The Python Tutorial](./papis/14f60db29650af4d6edb2aef6d5539da/notes.md).
+7. [The Python Tutorial](./papis/14f60db29650af4d6edb2aef6d5539da/notes.md). And [Python Cheat sheet](./comprehensive%20python%20cheatsheet.md).
 
 8. [Fluent Python](./papis/bdcf7cd50c6dc8a18320d0c05b44affe-ramalho-luciano/notes.md).
 
@@ -35,3 +37,7 @@ My current focus is on:
 13. [Свет и освещение](./papis/af1e94df98f63aa42a732c48bb7d5176-david-kilpatrick/notes.md).
 
 14. [Drawbox](./Drawbox.md)
+
+15. [Math is Fun](https://www.mathsisfun.com/)
+
+# Archive
