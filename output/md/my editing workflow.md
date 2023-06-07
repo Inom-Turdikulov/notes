@@ -12,105 +12,182 @@ tags:
 
 # My editing workflow
 
-## Introduction
+p* - pycharm only
+n* - neovim only
 
-In daily life I use [pycharm](./pycharm.md) and [neovim (text editor)](./neovim%20%28text%20editor%29.md).
+I n daily life I use [pycharm](./pycharm.md) and [neovim (text editor)](./neovim%20%28text%20editor%29.md) inside
+[kitty (terminal emulator)](./kitty%20%28terminal%20emulator%29.md).
+
 Maybe in near future I will switch to use only neovim.
+
+
+- [ ] files navigation
 
 ## Files navigation
 
 
-- find file, with history and fuzzy search
-<kbd>^+P</kbd>
+- focus editor::`<c-'>`
 
 
-- find file, based on grep
-<leader>fs
+- grep content in current project and open find toolbar::`<leader>fs`
 
 
-- get file vcs history
+- locate file in file manager::`<leader>pv`
 
 
-- get file local history
-<leader>u
+- go to file::`<m-p>`
+
+
+- [ ] recent files, Telescope oldfiles + cwd
+
+
+- [ ] recent locations, [https://github.com/cbochs/portal.nvim](https://github.com/cbochs/portal.nvim)
+
+
+- find file, with history and fuzzy search::`M-p`
+
+
+- log git history of current file::`<leader>gl`
+
+
+- get file local history::`<leader>u`
 
 ## Code navigation
 
 
-- go to definition
-- go to declaration
-- find symbol, based on grep
-- find usages/references
-- go to older/newer position
-- go to previous/next hunk
-- go to next/previous file
+- go to definition::`gd`
+
+
+- go to declaration::`gD`
+
+
+- find symbol, based on grep:`<leader>vws[S]`*
+
+
+- find usages/references::`<leader>vrr`
+
+
+- go to older/newer position::`<c-o>/<c-i>`
+
+
+- hover help::`K`
+
+
+- go to previous/current file::`c-^`
+
+
+- go to previous/next function hunk::`[[`/`]]`
 
 ## Code editing
 
 
-- code folding
-zo/zc/zr
+- code folding::`zo/zc/zr` *
 
 
-- comment line
-gcc
+- comment line::`gcc`
 
 
-- comment block
-gc<motion>
+- comment block`gc<motion>`
 
 
-- code formatting
-- code objects actions
-- macro
-- other vim magic
+- code formatting::`<leader>F`*
+
+
+- code actions::`<leader>vaa`
+
+
+- macro record/replay::`q<letter>/@<letter>`
 
 ## Code refactoring
 
 
 - rename/move/extract/inline
-- automatic refactorings
+
+
+- automatic refactorings (<!-- black integration -->)
+
+
 - sort/organize imports
 
 ## Code autocompletion
 
 
-- lsp autocompletion
+- confirm autocomplete::`<c-y>`
+
+
+- confirm copilot::`<tab>`
+
+
 - snippets
-- copilot
 
-## Code debugging
+## Code debugging/testing
 
 
-- run debugger
+- run debugger::`<f5>`
+
+
 - restart debugger
+
+
 - stop debugger
+
+
 - step over
+
+
 - step into
+
+
 - step out
+
+
 - run to cursor
+
+
 - evaluate expression
 
-## Code testing and running
+
+- run/debug the nearest test::`<leader>pt`
 
 
 - generate test
+
+
 - run test
+
+
 - coverage test
+
+## Errors and warnings navigation
+
+
+- go to next/previous error::`[d` `]d`
+
+
+- go to file with error::?? traceback actions
 
 ## VCS
 
 
 - add/remove into stage
+
+
 - commit/push
+
+
 - pull/rebase/merge
+
+
 - diff
 
 
-## -----
+- push and create merge request
+?
 `git push -o merge_request.create --set-upstream origin HEAD`
+key:
 
-## harpoon
+
+## harpoon n*
 
 
 - [x] add file into harpoon list
@@ -128,7 +205,7 @@ c-t c-n c-m-t c-m-n
 
 - [x] from the quickmenu, open a file in: a vertical split with control+v, a horizontal split with control+x, a new tab with control+t
 
-## figutive
+## Figutive
 
 
 - [x] open diff/git for current file
@@ -255,22 +332,6 @@ u
       <kbd>leader</kbd>+<kbd>v</kbd>+<kbd>d</kbd>
 
 
-- [x] code actions
-      leader-v-a-a
-
-
-- [x] signature help
-  i mode, c-h
-
-
-- [x] hover help
-  K
-
-
-- [x] find usages/references
-  leader-v-r-r
-
-
 - [x] declaration/definition ?? how it works
   leader-v-g-d[D]
 
@@ -340,7 +401,6 @@ c-a-p
 
 - Push changes
   leader-p
-
 ## Todo
 
 - [x] telescope command_history
@@ -415,8 +475,4 @@ possible insert tab by S-Tab, but better to use S-Return
 git-diff or :Merginal
 
 - [ ] cherry-picking/compare
-
 ## Resources
-
-
-- [kitty (terminal emulator)](./kitty%20%28terminal%20emulator%29.md)

@@ -278,97 +278,186 @@
             
             <div class="container">
                 <div class="content"><h1 id="my-editing-workflow">My editing workflow</h1>
-<h2 id="introduction">Introduction</h2>
-<p>In daily life I use <a href="/pycharm.html">pycharm</a> and <a href="/neovim%20%28text%20editor%29.html">neovim (text editor)</a>.
-Maybe in near future I will switch to use only neovim.</p>
+<p>p<em> - pycharm only
+n</em> - neovim only</p>
+<p>I n daily life I use <a href="/pycharm.html">pycharm</a> and <a href="/neovim%20%28text%20editor%29.html">neovim (text editor)</a> inside
+<a href="/kitty%20%28terminal%20emulator%29.html">kitty (terminal emulator)</a>.</p>
+<p>Maybe in near future I will switch to use only neovim.</p>
+<ul>
+<li>[ ] files navigation</li>
+</ul>
 <h2 id="files-navigation">Files navigation</h2>
 <ul>
 <li>
-<p>find file, with history and fuzzy search
-<kbd>^+P</kbd></p>
+<p>focus editor::<code>&lt;c-'&gt;</code></p>
 </li>
 <li>
-<p>find file, based on grep
-<leader>fs</p>
+<p>grep content in current project and open find toolbar::<code>&lt;leader&gt;fs</code></p>
 </li>
 <li>
-<p>get file vcs history</p>
+<p>locate file in file manager::<code>&lt;leader&gt;pv</code></p>
 </li>
 <li>
-<p>get file local history
-<leader>u</p>
+<p>go to file::<code>&lt;m-p&gt;</code></p>
+</li>
+<li>
+<p>[ ] recent files, Telescope oldfiles + cwd</p>
+</li>
+<li>
+<p>[ ] recent locations, <a href="https://github.com/cbochs/portal.nvim" class="external-link">https://github.com/cbochs/portal.nvim</a></p>
+</li>
+<li>
+<p>find file, with history and fuzzy search::<code>M-p</code></p>
+</li>
+<li>
+<p>log git history of current file::<code>&lt;leader&gt;gl</code></p>
+</li>
+<li>
+<p>get file local history::<code>&lt;leader&gt;u</code></p>
 </li>
 </ul>
 <h2 id="code-navigation">Code navigation</h2>
 <ul>
-<li>go to definition</li>
-<li>go to declaration</li>
-<li>find symbol, based on grep</li>
-<li>find usages/references</li>
-<li>go to older/newer position</li>
-<li>go to previous/next hunk</li>
-<li>go to next/previous file</li>
+<li>
+<p>go to definition::<code>gd</code></p>
+</li>
+<li>
+<p>go to declaration::<code>gD</code></p>
+</li>
+<li>
+<p>find symbol, based on grep:<code>&lt;leader&gt;vws[S]</code>*</p>
+</li>
+<li>
+<p>find usages/references::<code>&lt;leader&gt;vrr</code></p>
+</li>
+<li>
+<p>go to older/newer position::<code>&lt;c-o&gt;/&lt;c-i&gt;</code></p>
+</li>
+<li>
+<p>hover help::<code>K</code></p>
+</li>
+<li>
+<p>go to previous/current file::<code>c-^</code></p>
+</li>
+<li>
+<p>go to previous/next function hunk::<code>[[</code>/<code>]]</code></p>
+</li>
 </ul>
 <h2 id="code-editing">Code editing</h2>
 <ul>
 <li>
-<p>code folding
-zo/zc/zr</p>
+<p>code folding::<code>zo/zc/zr</code> *</p>
 </li>
 <li>
-<p>comment line
-gcc</p>
+<p>comment line::<code>gcc</code></p>
 </li>
 <li>
-<p>comment block
-gc<motion></p>
+<p>comment block<code>gc&lt;motion&gt;</code></p>
 </li>
 <li>
-<p>code formatting</p>
+<p>code formatting::<code>&lt;leader&gt;F</code>*</p>
 </li>
-<li>code objects actions</li>
-<li>macro</li>
-<li>other vim magic</li>
+<li>
+<p>code actions::<code>&lt;leader&gt;vaa</code></p>
+</li>
+<li>
+<p>macro record/replay::<code>q&lt;letter&gt;/@&lt;letter&gt;</code></p>
+</li>
 </ul>
 <h2 id="code-refactoring">Code refactoring</h2>
 <ul>
-<li>rename/move/extract/inline</li>
-<li>automatic refactorings</li>
-<li>sort/organize imports</li>
+<li>
+<p>rename/move/extract/inline</p>
+</li>
+<li>
+<p>automatic refactorings (<!-- black integration -->)</p>
+</li>
+<li>
+<p>sort/organize imports</p>
+</li>
 </ul>
 <h2 id="code-autocompletion">Code autocompletion</h2>
 <ul>
-<li>lsp autocompletion</li>
-<li>snippets</li>
-<li>copilot</li>
+<li>
+<p>confirm autocomplete::<code>&lt;c-y&gt;</code></p>
+</li>
+<li>
+<p>confirm copilot::<code>&lt;tab&gt;</code></p>
+</li>
+<li>
+<p>snippets</p>
+</li>
 </ul>
-<h2 id="code-debugging">Code debugging</h2>
+<h2 id="code-debugging-testing">Code debugging/testing</h2>
 <ul>
-<li>run debugger</li>
-<li>restart debugger</li>
-<li>stop debugger</li>
-<li>step over</li>
-<li>step into</li>
-<li>step out</li>
-<li>run to cursor</li>
-<li>evaluate expression</li>
+<li>
+<p>run debugger::<code>&lt;f5&gt;</code></p>
+</li>
+<li>
+<p>restart debugger</p>
+</li>
+<li>
+<p>stop debugger</p>
+</li>
+<li>
+<p>step over</p>
+</li>
+<li>
+<p>step into</p>
+</li>
+<li>
+<p>step out</p>
+</li>
+<li>
+<p>run to cursor</p>
+</li>
+<li>
+<p>evaluate expression</p>
+</li>
+<li>
+<p>run/debug the nearest test::<code>&lt;leader&gt;pt</code></p>
+</li>
+<li>
+<p>generate test</p>
+</li>
+<li>
+<p>run test</p>
+</li>
+<li>
+<p>coverage test</p>
+</li>
 </ul>
-<h2 id="code-testing-and-running">Code testing and running</h2>
+<h2 id="errors-and-warnings-navigation">Errors and warnings navigation</h2>
 <ul>
-<li>generate test</li>
-<li>run test</li>
-<li>coverage test</li>
+<li>
+<p>go to next/previous error::<code>[d</code> <code>]d</code></p>
+</li>
+<li>
+<p>go to file with error::?? traceback actions</p>
+</li>
 </ul>
 <h2 id="vcs">VCS</h2>
 <ul>
-<li>add/remove into stage</li>
-<li>commit/push</li>
-<li>pull/rebase/merge</li>
-<li>diff</li>
+<li>
+<p>add/remove into stage</p>
+</li>
+<li>
+<p>commit/push</p>
+</li>
+<li>
+<p>pull/rebase/merge</p>
+</li>
+<li>
+<p>diff</p>
+</li>
+<li>
+<p>push and create merge request
+?
+<code>git push -o merge_request.create --set-upstream origin HEAD</code>
+key:</p>
+</li>
 </ul>
-<h2 id="-">-----</h2>
-<p><code>git push -o merge_request.create --set-upstream origin HEAD</code></p>
-<h2 id="harpoon">harpoon</h2>
+<h2 id="harpoon-n">harpoon n*</h2>
 <ul>
 <li>
 <p>[x] add file into harpoon list
@@ -390,7 +479,7 @@ c-t c-n c-m-t c-m-n</p>
 <p>[x] from the quickmenu, open a file in: a vertical split with control+v, a horizontal split with control+x, a new tab with control+t</p>
 </li>
 </ul>
-<h2 id="figutive">figutive</h2>
+<h2 id="figutive">Figutive</h2>
 <ul>
 <li>
 <p>[x] open diff/git for current file
@@ -518,22 +607,6 @@ u</p>
 <li>
 <p>[x] diagnostics
       <kbd>leader</kbd>+<kbd>v</kbd>+<kbd>d</kbd></p>
-</li>
-<li>
-<p>[x] code actions
-      leader-v-a-a</p>
-</li>
-<li>
-<p>[x] signature help
-  i mode, c-h</p>
-</li>
-<li>
-<p>[x] hover help
-  K</p>
-</li>
-<li>
-<p>[x] find usages/references
-  leader-v-r-r</p>
 </li>
 <li>
 <p>[x] declaration/definition ?? how it works
@@ -709,10 +782,7 @@ git-diff or :Merginal</p>
 <p>[ ] cherry-picking/compare</p>
 </li>
 </ul>
-<h2 id="resources">Resources</h2>
-<ul>
-<li><a href="/kitty%20%28terminal%20emulator%29.html">kitty (terminal emulator)</a></li>
-</ul></div>
+<h2 id="resources">Resources</h2></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
@@ -732,13 +802,13 @@ git-diff or :Merginal</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A330596388431463002931812578296867638168{level}" class="graph_div"></div>
+    <div id="A31608874887766947610266946739501676577{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B330596388431463002931812578296867638168{level}" level="{level}" note_temp_id="330596388431463002931812578296867638168" onclick="window.ObsHtmlGraph.run(this, '330596388431463002931812578296867638168', 'my editing workflow');">
+        <button class="graph_button graph_show_button" id="B31608874887766947610266946739501676577{level}" level="{level}" note_temp_id="31608874887766947610266946739501676577" onclick="window.ObsHtmlGraph.run(this, '31608874887766947610266946739501676577', 'my editing workflow');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C330596388431463002931812578296867638168{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C31608874887766947610266946739501676577{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
