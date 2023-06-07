@@ -289,6 +289,9 @@ n</em> - neovim only</p>
 <h2 id="files-navigation">Files navigation</h2>
 <ul>
 <li>
+<p>[ ] <a href="https://github.com/astral-sh/ruff-lsp" class="external-link">https://github.com/astral-sh/ruff-lsp</a></p>
+</li>
+<li>
 <p>focus editor::<code>&lt;c-'&gt;</code></p>
 </li>
 <li>
@@ -301,10 +304,29 @@ n</em> - neovim only</p>
 <p>go to file::<code>&lt;m-p&gt;</code></p>
 </li>
 <li>
-<p>[ ] recent files, Telescope oldfiles + cwd</p>
+<p>recent files, Telescope old files + cwd::<code>&lt;m-e&gt;</code></p>
 </li>
 <li>
 <p>[ ] recent locations, <a href="https://github.com/cbochs/portal.nvim" class="external-link">https://github.com/cbochs/portal.nvim</a></p>
+</li>
+<li>
+<p>[x] add file into harpoon list
+      leader-a</p>
+</li>
+<li>
+<p>[x] show harpoon menu
+      c-e</p>
+</li>
+<li>
+<p>[x] close harpoon menu
+      q or esc</p>
+</li>
+<li>
+<p>[x] switch harpoon items
+c-t c-n c-m-t c-m-n</p>
+</li>
+<li>
+<p>[x] from the quickmenu, open a file in: a vertical split with control+v, a horizontal split with control+x, a new tab with control+t</p>
 </li>
 <li>
 <p>find file, with history and fuzzy search::<code>M-p</code></p>
@@ -367,6 +389,9 @@ n</em> - neovim only</p>
 <h2 id="code-refactoring">Code refactoring</h2>
 <ul>
 <li>
+<p>rope-vim</p>
+</li>
+<li>
 <p>rename/move/extract/inline</p>
 </li>
 <li>
@@ -391,40 +416,81 @@ n</em> - neovim only</p>
 <h2 id="code-debugging-testing">Code debugging/testing</h2>
 <ul>
 <li>
-<p>run debugger::<code>&lt;f5&gt;</code></p>
+<p>[ ] <a href="https://github.com/tjdevries/config_manager/blob/78608334a7803a0de1a08a9a4bd1b03ad2a5eb11/xdg_config/nvim/after/plugin/dap.lua" class="external-link">https://github.com/tjdevries/config_manager/blob/78608334a7803a0de1a08a9a4bd1b03ad2a5eb11/xdg_config/nvim/after/plugin/dap.lua</a></p>
 </li>
 <li>
-<p>restart debugger</p>
+<p>run debugger configuration/continue::<code>&lt;F5&gt;</code></p>
 </li>
 <li>
-<p>stop debugger</p>
+<p>restart debugger::<code>&lt;leader&gt;dR</code></p>
 </li>
 <li>
-<p>step over</p>
+<p>toggle breakpoint::<code>&lt;leader&gt;db[B]</code></p>
 </li>
 <li>
-<p>step into</p>
+<p>stop debugger::<code>&lt;leader&gt;dx</code></p>
 </li>
 <li>
-<p>step out</p>
+<p>jump to cursor::<code>&lt;S-F1&gt;</code> *</p>
 </li>
 <li>
-<p>run to cursor</p>
+<p>step back::<code>&lt;F1&gt;</code> n*</p>
+</li>
+<li>
+<p>step over::<code>&lt;F3&gt;</code></p>
+</li>
+<li>
+<p>step into::<code>&lt;F2&gt;</code></p>
+</li>
+<li>
+<p>step out::<code>&lt;F4&gt;</code></p>
+</li>
+<li>
+<p>run to cursor::<code>&lt;leader&gt;dC</code></p>
 </li>
 <li>
 <p>evaluate expression</p>
 </li>
 <li>
-<p>run/debug the nearest test::<code>&lt;leader&gt;pt</code></p>
+<p>view breakpoints</p>
+</li>
+<li>
+<p>run the nearest test::<code>&lt;leader&gt;dnn</code></p>
+</li>
+<li>
+<p>rerun the last test</p>
+</li>
+<li>
+<p>run current test file::<code>&lt;leader&gt;dnf</code> *</p>
+</li>
+<li>
+<p>debug the nearest test::<code>&lt;leader&gt;ddc</code></p>
+</li>
+<li>
+<p>open test results::<code>&lt;leader&gt;dno</code></p>
+</li>
+<li>
+<p>show summary::<code>&lt;leader&gt;dns</code></p>
+</li>
+<li>
+<p>toggle output panel::<code>&lt;leader&gt;dnt</code></p>
 </li>
 <li>
 <p>generate test</p>
 </li>
 <li>
-<p>run test</p>
+<p>coverage test</p>
 </li>
 <li>
-<p>coverage test</p>
+<p>[x] <a href="https://github.com/harrisoncramer/nvim/blob/main/lua/plugins/neotest.lua" class="external-link">https://github.com/harrisoncramer/nvim/blob/main/lua/plugins/neotest.lua</a> check/use keybindings</p>
+</li>
+<li>
+<p>[x] run nearest test with debugger, show stderr output
+Venv configured, filename is not <code>test.py</code>, but <code>test_*.py</code></p>
+</li>
+<li>
+<p>[-] run group of tests with debugger, show stderr output
+CI/Reporting</p>
 </li>
 </ul>
 <h2 id="errors-and-warnings-navigation">Errors and warnings navigation</h2>
@@ -455,28 +521,6 @@ n</em> - neovim only</p>
 ?
 <code>git push -o merge_request.create --set-upstream origin HEAD</code>
 key:</p>
-</li>
-</ul>
-<h2 id="harpoon-n">harpoon n*</h2>
-<ul>
-<li>
-<p>[x] add file into harpoon list
-      leader-a</p>
-</li>
-<li>
-<p>[x] show harpoon menu
-      c-e</p>
-</li>
-<li>
-<p>[x] close harpoon menu
-      q or esc</p>
-</li>
-<li>
-<p>[x] switch harpoon items
-c-t c-n c-m-t c-m-n</p>
-</li>
-<li>
-<p>[x] from the quickmenu, open a file in: a vertical split with control+v, a horizontal split with control+x, a new tab with control+t</p>
 </li>
 </ul>
 <h2 id="figutive">Figutive</h2>
@@ -656,6 +700,10 @@ c-a-p</p>
 :TSPlaygroundToggle</p>
 </li>
 <li>
+<p>close tab
+  c-w q</p>
+</li>
+<li>
 <p>close splits
   c-w o</p>
 </li>
@@ -688,9 +736,6 @@ c-a-p</p>
 <ul>
 <li>
 <p>[x] telescope command_history</p>
-</li>
-<li>
-<p>[x] <a href="https://github.com/harrisoncramer/nvim/blob/main/lua/plugins/neotest.lua" class="external-link">https://github.com/harrisoncramer/nvim/blob/main/lua/plugins/neotest.lua</a> check/use keybindings</p>
 </li>
 <li>
 <p>[x] refactoring</p>
@@ -746,14 +791,6 @@ leader o or leader O (run using xdg-open)</p>
 :h redir, !...|grep, r!... etc</p>
 </li>
 <li>
-<p>[x] run nearest test with debugger, show stderr output
-Venv configured, filename is not <code>test.py</code>, but <code>test_*.py</code></p>
-</li>
-<li>
-<p>[-] run group of tests with debugger, show stderr output
-CI/Reporting</p>
-</li>
-<li>
 <p>[-] run debugger with specific configuration
 run method?</p>
 </li>
@@ -802,13 +839,13 @@ git-diff or :Merginal</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A31608874887766947610266946739501676577{level}" class="graph_div"></div>
+    <div id="A228356633504554383441753348574053375711{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B31608874887766947610266946739501676577{level}" level="{level}" note_temp_id="31608874887766947610266946739501676577" onclick="window.ObsHtmlGraph.run(this, '31608874887766947610266946739501676577', 'my editing workflow');">
+        <button class="graph_button graph_show_button" id="B228356633504554383441753348574053375711{level}" level="{level}" note_temp_id="228356633504554383441753348574053375711" onclick="window.ObsHtmlGraph.run(this, '228356633504554383441753348574053375711', 'my editing workflow');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C31608874887766947610266946739501676577{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C228356633504554383441753348574053375711{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
