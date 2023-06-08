@@ -87,6 +87,9 @@ How to split line (a/i/r)
 external filter, used in command mode to execute something (`r!` redirect
 output)
 
+`C-t` in insert mode::indent
+`C-d` in insert mode::unindent
+
 ### Search & replace
 
 `/`::search mode
@@ -889,7 +892,7 @@ this.
 - [x] [@DebuggingInNe] Debugging In Neovim (ft BashBunni and TJ DeVries) - YouTube
 - [Vim 01 - Основы - YouTube](https://www.youtube.com/watch?v=zNnsNtBF80g)
 - [ ] [http://jrmiii.com/attachments/Vim.pdf](http://jrmiii.com/attachments/Vim.pdf)
-- [ ] describe [packer](~/.config/nvim/lua/inomoz/packer.lua)
+- [ ] describe [packer](./~/.config/nvim/lua/inomoz/packer.lua.md)
 - [ ] Current mail goal: [my editing workflow](./my%20editing%20workflow.md)
 - [ ] [https://stackoverflow.com/questions/509690/how-can-you-list-the-matches-of-vims-search](https://stackoverflow.com/questions/509690/how-can-you-list-the-matches-of-vims-search)
 - [ ] [https://github.com/tpope/vim-surround](https://github.com/tpope/vim-surround)

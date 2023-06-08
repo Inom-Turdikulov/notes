@@ -81,7 +81,7 @@ implement my [pet projects](./my%20pet%20projects.md) and
 
 ## IRL, government and other things
 
-Check this note [in real life (irl)](./in%20real%20life%20%28irl%29.md).
+Check this note [in real life (irl)](./in%20real%20life%20%28IRL%29.md).
 
 ## Mentoring and helping
 

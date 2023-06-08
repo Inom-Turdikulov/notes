@@ -142,7 +142,7 @@ Check also [my shell scripts](./my%20shell%20scripts.md) and
   terminal file manager, [more info](./nnn%20file%20manager.md)
 
 - [leetup](https://github.com/dragfire/leetup) - command line tool to solve
-  [leetcode](./leetcode.md) problems
+  [LeetCode](./LeetCode.md) problems
 
 ## Internet
 
