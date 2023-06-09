@@ -20,6 +20,10 @@ I n daily life I use [pycharm](./pycharm.md) and [neovim (text editor)](./neovim
 
 Maybe in near future I will switch to use only neovim.
 
+## Built-in maps
+
+Insert new line above/below::`[<space>`, `]<space>`
+
 ## Files navigation
 
 
@@ -29,57 +33,55 @@ Maybe in near future I will switch to use only neovim.
 - [x] focus editor::`<c-'>`
 
 
-- grep content in current project and open find toolbar::`<leader>fs`
+- [x] grep content in current project and open find toolbar::`<leader>fs`
 
 
-- locate file in file manager::`<leader>pv`
+- [x] locate file in file manager::`<leader>pv`
 
 
-- go to file::`<m-p>`
+- [x] go to file::`<m-p>`
 
 
-- recent files, Telescope old files + CWD::`<m-e>`
+- [x] recent files, Telescope old files + CWD::`<m-e>`
 
 
 - [x] recent locations::`<leader>o`, `<leader>i` n\*
 
 
-- [x] from the quickmenu, open a file in: a vertical split with control+v, a horizontal split with control+x, a new tab with control+t
-
-
-- find file, with history and fuzzy search::`M-p`
-
-
-- log git history of current file::`<leader>gl`
-
-
-- get file local history/undotree::`<leader>u`
+- [x] find file, with history and fuzzy search::`M-p`
 
 ## Code navigation
 
 
-- go to definition::`gd`
+- [x] go to definition::`gd`
 
 
-- go to declaration::`gD`
+- [x] go to declaration::`gD`
 
 
-- find symbol, based on grep:`<leader>vws[S]`\*
+- [x] find symbol, based on grep:`<leader>vws[S]`\*
 
 
-- find usages/references::`<leader>vrr`
+- [x] find usages/references::`<leader>vrr`
 
 
-- go to older/newer position::`<c-o>/<c-i>`
+- [x] go to older/newer position::`<c-o>/<c-i>`
 
 
-- hover help::`K`
+- [x] hover help::`K`
 
 
-- go to previous/current file::`c-^`
+- [ ] external documentation integration
+      leader-zw search word
+      gz <Plug>ZVOperator
+      leader>z <Plug>ZVVisSelection
+      <leader><leader>z <Plug>ZVKeyDocset
 
 
-- go to previous/next function hunk::`[[`/`]]`
+- [x] go to previous/current file::`c-^`
+
+
+- [x] go to previous/next function hunk::`[[`/`]]`
 
 ### Harpoon n\*
 
@@ -98,42 +100,82 @@ Maybe in near future I will switch to use only neovim.
 ## Code editing
 
 
-- code folding::`zo/zc/zr` \*
+- [ ] code folding::`zo/zc/zr` \*
 
 
-- comment line::`gcc`
+- [x] comment line::`gcc`
 
 
-- comment block`gc<motion>`
+- [x] comment block`gc<motion>`
 
 
-- code formatting::`<leader>F`
+- [x] code formatting::`<leader>F`
 
 
-- code actions::`<leader>vaa`
+- [x] code actions::`<leader>vaa`
 
 
-- macro record/replay::`q<letter>/@<letter>`
+- [x] macro record/replay::`q<letter>/@<letter>`
 
 ## Code refactoring
 
 
-- [ ] list document trouble::`<leader>xq`
+- [x] list document trouble::`<leader>xq`
 
 
-- [ ] list workspace trouble::`<leader>xQ`
+- [x] list workspace trouble::`<leader>xQ`
 
+
+- [x] from the quick-menu, open a file in splits
+?
+a vertical split with `C-v`, a horizontal split with `C-x`, a new tab with `C-t`
+
+
+- [ ] black integration on_save, pre_commit
+
+### Rope
 
 - [ ] [https://github.com/python-rope/ropevim#keybinding](https://github.com/python-rope/ropevim#keybinding)
 
+| Key               | Command                                                  |
+|-------------------|----------------------------------------------------------|
+| C-x p o           | RopeOpenProject | Synchronize                            |
+| C-x p k           | RopeCloseProject | CloseProject
+| C-x p f           | NOT USING RopeFindFile                                              |
+| C-x p 4 f         | NOT USING RopeFindFileOtherWindow                                  |
+| C-x p u           | RopeUndo | NOT used, works with builtin undo                                                |
+| C-x p r           | RopeRedo | NOT used, works with builtin redo                                                 |
+| C-x p c           | RopeProjectConfig | NOT USED                                       |
+| C-x p n \[mpfd\]  | RopeCreate(Module|Package|File|Directory) | Same            |
+|                   | RopeWriteProject                                         |
+|                   |                                                          |
+| C-c r r           | RopeRename | Rename                                      |
+| C-c r l           | RopeExtractVariable | IntroduceVariable                                      |
+| C-c r m           | RopeExtractMethod | ExtractMethod                                       |
+| C-c r i           | RopeInline | Inline                                              |
+| C-c r v           | RopeMove  | Move                                               |
+| C-c r x           | RopeRestructure                                          |
+| C-c r u           | RopeUseFunction                                          |
+| C-c r f           | RopeIntroduceFactory                                     |
+| C-c r s           | RopeChangeSignature                                      |
+| C-c r 1 r         | RopeRenameCurrentModule                                  |
+| C-c r 1 v         | RopeMoveCurrentModule                                    |
+| C-c r 1 p         | RopeModuleToPackage                                      |
+|                   |                                                          |
+| C-c r o           | RopeOrganizeImports|OrganizeImports                                      |
+| C-c r n \[vfcmp\] | RopeGenerate(Variable|Function|Class|Module|Package) |
+|                   |                                                          |
+| C-c r a /         | RopeCodeAssist                                           |
+| C-c r a g         | RopeGotoDefinition                                       |
+| C-c r a d         | RopeShowDoc                                              |
+| C-c r a f         | RopeFindOccurrences                                      |
+| C-c r a ?         | RopeLuckyAssist                                          |
+| C-c r a j         | RopeJumpToGlobal                                         |
+| C-c r a c         | RopeShowCalltip                                          |
+|                   | RopeAnalyzeModule                                        |
+|                   | RopeAutoImport                                           |
+|                   | RopeGenerateAutoimportCache                              |
 
-- [ ] rename/move/extract/inline
-
-
-- [ ] automatic refactorings (<!-- black integration -->)
-
-
-- [ ] sort/organize imports, manually?
 
 ## Code autocompletion
 
@@ -144,78 +186,86 @@ Maybe in near future I will switch to use only neovim.
 - [x] confirm copilot::`<tab>`
 
 
-- [ ] snippets in autocomplete
+- [x] snippets in autocomplete
 
-## Code debugging/testing
+
+- [ ] sync templates
+
+## Code run/debugging/testing
+
+
+- [x] auto-import:
+    neovim: autocomplete or insert mode and press `<c-space>`
+    pycharm: type and press `<c-space><c-space>`
 
 
 - [ ] [https://github.com/tjdevries/config_manager/blob/78608334a7803a0de1a08a9a4bd1b03ad2a5eb11/xdg_config/nvim/after/plugin/dap.lua](https://github.com/tjdevries/config_manager/blob/78608334a7803a0de1a08a9a4bd1b03ad2a5eb11/xdg_config/nvim/after/plugin/dap.lua)
 
 
-- run debugger configuration::`<F5>`
+- [x] run debugger configuration::`<F5>`
 
 
-- continue debugger::`<F6>`, not required in neovim
+- [x] continue debugger::`<F6>`, not required in neovim
 
 
-- restart debugger::`<leader>dR`
+- [x] restart debugger::`<leader>dR`
 
 
-- toggle breakpoint::`<leader>db[B]`
+- [x] toggle breakpoint::`<leader>db[B]`
 
 
-- stop debugger::`<leader>dx`
+- [x] stop debugger::`<leader>dx`
 
 
-- jump to cursor::`<S-F1>` \*
+- [ ] jump to cursor::`<S-F1>` \*
 
 
-- step back::`<F1>` n\*
+- [x] step back::`<F1>` n\*
 
 
-- step over::`<F3>`
+- [x] step over::`<F3>`
 
 
-- step into::`<F2>`
+- [x] step into::`<F2>`
 
 
-- step out::`<F4>`
+- [x] step out::`<F4>`
 
 
-- run to cursor::`<leader>dC`
+- [ ] run to cursor::`<leader>dC`
 
 
-- evaluate expression
+- [ ] evaluate expression
 
 
-- view breakpoints
+- [ ] view breakpoints
 
 
-- run the nearest test::`<leader>dnn`
+- [x] run the nearest test::`<leader>dnn`
 
 
-- rerun the last test
+- [x] rerun the last test
 
 
-- run current test file::`<leader>dnf` \*
+- [ ] run current test file::`<leader>dnf` \*
 
 
-- debug the nearest test::`<leader>ddc`
+- [x] debug the nearest test::`<leader>ddc`
 
 
-- open test results::`<leader>dno`
+- [x] open test results::`<leader>dno`
 
 
-- show summary::`<leader>dns`
+- [x] show summary::`<leader>dns`
 
 
-- toggle output panel::`<leader>dnt`
+- [x] toggle output panel::`<leader>dnt`
 
 
-- coverage test
+- [ ] coverage test
 
 
-- generate test
+- [ ] generate test
 
 
 - [ ] run group of tests, pytest cwd?
@@ -229,33 +279,117 @@ Maybe in near future I will switch to use only neovim.
 ## Errors and warnings navigation
 
 
-- go to next/previous error::`[d` `]d`
+- [x] go to next/previous error::`[d` `]d`
 
 
-- go to file with error::?? Traceback actions.
+- [x] go to file with error (under cursor)::`gf` or `gF` n*
 
-## VCS
+## VCS n\*
 
-
-- [ ] 3-way diff/merge
-
-
-- [ ] cherry-picking/compare
-
-
-- [ ] open diff/git for current file::`=`
+NOTE: I just won't deeply integrate VCS keybindings into pycharm (and it's maybe
+even not easy to implement same workflow like in neovim/vim-fugitive). So I
+decided use only neovim/vim-fugitive for VCS work. Also, this will help me to
+switch into Neovim/Vim easily.
 
 
-- [ ] stage/unstage file `-`
+### Fugitive
 
 
-- [ ] commit chunk or selection of chunk `s`
+- [ ] Fugitive.lua keybindings
+- [ ] Control size of git status window
+
+`:Gwrite`::Stage current file
+
+`:Gread`::Checkout current file
+
+`:Gremove`::Remove current file
+
+`:Gmove <relative_path>`::Move current file
+
+Open autocomplete in commit buffer::`C-n`
+
+`:G blame::`Open split window with blame buffer
+
+`:G commit`::Open split window with commit buffer
+
+`:Gedit [<path>]`::Open index file
+
+`:Gdiffsplit`::vimdiff against the index version of the file
 
 
-- [ ] commit staged changes cc
+- [ ] Perform a `:Gdiffsplit` on the file under the cursor.::`dd`
 
 
-- [ ] revert all changes, stash the changes czz Push stash. Pass a [count] of 1 to add `--include-untracked` or 2 to add `--all`.
+- [ ] 1/5 [http://vimcasts.org/blog/2011/05/the-fugitive-series/](http://vimcasts.org/blog/2011/05/the-fugitive-series/)
+
+
+- [ ] [https://github.com/lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+
+
+- [ ] [https://www.reddit.com/r/vim/comments/8h044y/comment/dym4eax/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button](https://www.reddit.com/r/vim/comments/8h044y/comment/dym4eax/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
+
+
+- [ ] list branches
+
+
+- [ ] diff branches. Working tree diff.
+
+
+- [ ] compare working tree with branch
+      git-diff or :Merginal
+
+
+- [x] log git history of current file::`<leader>gl`
+
+
+- [x] `dv`::Perform a `:Gvdiffsplit` on the file under the cursor
+
+
+- [x] `ds`::Perform a `:Ghdiffsplit` on the file under the cursor
+
+
+- [ ] `gt` - accept left side of diff
+
+
+- [ ] `gn` - accept right side of diff
+
+
+- [ ] accept left/right hunk in 3-way diff/merge conflict
+
+
+- [x] get file local history/undotree::`<leader>u`
+
+
+- [x] open diff/git for current file::`=`
+
+
+- [x] stage/unstage (add/reset) file, works in visual mode too (multiple files)
+?
+`-`
+
+
+- [x] open file in the window below (git status)::`<cr>`
+
+
+- [x] commit chunk or selection of chunk::`s`
+
+
+- [x] run `git add –patch` for current file::`P`
+
+
+- [x] commit staged changes::`cc`
+
+
+- [x] next/previous hunk::`(`, `)`
+
+
+- [x] stage hunk::`s`
+
+
+- [x] unstage hunk::`u`
+
+
+- [ ] revert all changes, stash the changes `czz` Push stash. Pass a [count] of 1 to add `--include-untracked` or 2 to add `--all`.
 
 
 - [ ] stash changes
@@ -264,43 +398,31 @@ Maybe in near future I will switch to use only neovim.
 - [ ] czA Apply topmost stash, or stash@{count}.
 
 
-- [ ] dv Perform a |:Gvdiffsplit| on the file under the cursor.
-
-
-- [ ] dd Perform a |:Gdiffsplit| on the file under the cursor.
-
-
-- [ ] ds Perform a |:Ghdiffsplit| on the file under the cursor.
-
-
-- [ ] gt - accept left side of diff
-
-
-- [ ] gn - accept right side of diff
-
-
 - [ ] telescope git... Telescope git\_...
 
 
-- add/remove into stage
+- [x] Push changes::`<leader>p`
 
 
-- commit/push
+- [ ] pull & merge
 
 
-- pull/rebase/merge
+- [ ] pull & rebase
 
 
-- diff
+- [ ] push and create merge request `git push -o merge_request.create --set-upstream origin HEAD`
 
 
-- push and create merge request `git push -o merge_request.create --set-upstream origin HEAD`
+- [ ] cherry-picking commit
+[https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button](https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
 
 
-- [-] ~~gitsigns.nvim~~ - overkill? vim fugitive is enough?
+- [ ] [https://vi.stackexchange.com/questions/tagged/plugin-fugitive](https://vi.stackexchange.com/questions/tagged/plugin-fugitive)
+
+
+- [ ] gitsigns.nvim - overkill? vim fugitive is enough?
 
 ## Custom
-
 
 
 - [ ] quick switch to terminal
@@ -311,39 +433,22 @@ Maybe in near future I will switch to use only neovim.
 - [ ] nvim term help/video tutor
 
 
-- [ ] find commands, aka action search
-      leader-f-a
+- [x] telescope command_history::`<leader>fc` n\*
 
 
-- [ ] telescope builtin's, super search, `:h telescope.builtin` n\*::`<leader>fF`
+- [x] telescope builtin's, super search, `:h telescope.builtin` ::`<leader>fF` n\*
 
 
-- [ ] find hotkey/action::`<leader>fk` in vim to find action use `<leader>fK`
+- [x] find hotkey/action::`<leader>fk` in vim to find action use `<leader>fK`
 
 
-- [ ] open git commit UI, git status::`<Leader>gg`
-
-
-- [ ] git history :G l or :G log
+- [x] open git commit UI, git status::`<Leader>gg`
 
 
 - [ ] jump to source from git history O or o
 
 
-- [ ] next/prev hunk ( )
-
-
-- [ ] stage hunk s
-
-
-- [ ] unstage hunk u
-
-
-- [ ] diagnostics `<Leader>vd`
-
-
-- [ ] declaration/definition ?? how it works
-      leader-v-g-d[D]
+- [x] diagnostics `<Leader>vd`
 
 
 - [ ] rename leader-v-r-n
@@ -355,13 +460,6 @@ Maybe in near future I will switch to use only neovim.
 - [ ] permanent bookmarks, marks, using viminfo?
 
 
-- [ ] external documentation
-      leader-zw search word
-      gz <Plug>ZVOperator
-      leader>z <Plug>ZVVisSelection
-      <leader><leader>z <Plug>ZVKeyDocset
-
-
 - [ ] search in git repo (telescope-git)
 
 
@@ -371,64 +469,7 @@ Maybe in near future I will switch to use only neovim.
 - [ ] structure view :TSPlaygroundToggle
 
 
-- Push changes leader-p
-
-## Todo
-
-
-- [ ] telescope command_history
-
-
-- [-] JS debugging (browser)
-  Propably easly just use chrome built-in debugger/sourcemaps
-  [https://stackoverflow.com/questions/71810002/how-to-configure-the-dap-debugger-under-neovim-for-typescript](https://stackoverflow.com/questions/71810002/how-to-configure-the-dap-debugger-under-neovim-for-typescript)
-
-
-- [-] ~~select in~~
-
-
-- [ ] new scratch file :enew
-
-
-- [ ] execute scratch file
-
-
-- [ ] execute current file (open externally) leader o or leader O (run using xdg-open)
-
-
-- [ ] add quotes/x pairs to words/sentence
-      [https://github.com/kylechui/nvim-surround](https://github.com/kylechui/nvim-surround)
-      [https://stackoverflow.com/questions/2147875/what-vim-commands-can-be-used-to-quote-unquote-words](https://stackoverflow.com/questions/2147875/what-vim-commands-can-be-used-to-quote-unquote-words)
-
-
-- [-] vim shell output actions...
-  :h redir, !...|grep, r!... etc
-
-
-- [ ]  run method?
-
-
-## LSP
-
-
-- [ ] [https://github.com/astral-sh/ruff-lsp](https://github.com/astral-sh/ruff-lsp)
-
-
-- [ ] linter, built-in into lsp
-
-
-- [-] python lsp actions
-  - [ ] autoimport
-  - [ ] remove unused imports
-- [ ] python lsp symbols
-- [ ] optimize imports
-- [ ] copilot tab issue (try indent, while suggestion active!), markdown alignment issues
-      possible insert tab by S-Tab, but better to use S-Return
-
-
-- [ ] diff branches. Working tree diff.
-- [ ] compare working tree with branch
-      git-diff or :Merginal
+- [ ] linter integration, [https://github.com/astral-sh/ruff-lsp](https://github.com/astral-sh/ruff-lsp)
 
 ## SQL
 
@@ -445,14 +486,36 @@ Maybe in near future I will switch to use only neovim.
 
 ## Vim surround
 
-```
-    Old text                    Command         New text
---------------------------------------------------------------------------------
-    surr*ound_words             ysiw)           (surround_words)
-    *make strings               ys$"            "make strings"
-    [delete ar*ound me!]        ds]             delete around me!
-    remove <b>HTML t*ags</b>    dst             remove HTML tags
-    'change quot*es'            cs'"            "change quotes"
-    n* <b>or tag* types</b>        csth1<CR>       <h1>or tag types</h1>
-    n* delete(functi*on calls)     dsf             function calls
-```
+
+- [x] surr*ound_words             ysiw)           (surround_words)
+- [x] *make strings               ys$"            "make strings"
+- [x] [delete ar*ound me!]        ds]             delete around me!
+- [x] remove <b>HTML t*ags</b>    dst             remove HTML tags
+- [x] 'change quot*es'            cs'"            "change quotes"
+- [x] <b>or tag* types</b>        csth1<CR>       <h1>or tag types</h1> n\*
+- [x] delete(functi*on calls)     dsf             function calls       n\*
+
+## JS debugging (browser)
+
+
+- [ ] Probably easily just use chrome built-in debugger/sourcemaps
+- [ ] [https://stackoverflow.com/questions/71810002/how-to-configure-the-dap-debugger-under-neovim-for-typescript](https://stackoverflow.com/questions/71810002/how-to-configure-the-dap-debugger-under-neovim-for-typescript)
+
+## Code style
+
+
+- [ ] [https://peps.python.org/pep-0008/](https://peps.python.org/pep-0008/)
+
+## Commit style
+
+
+- [ ] [https://github.com/conventional-commits/conventionalcommits.org](https://github.com/conventional-commits/conventionalcommits.org)
+
+## Automation
+
+
+- [ ] vim shell output actions... :h redir, !...|grep, r!... etc
+- [ ] [https://github.com/tpope/vim-unimpaired](https://github.com/tpope/vim-unimpaired)
+- [ ] new scratch file `:enew`
+- [ ] execute scratch file
+- [ ] execute current file (open externally) leader o or leader O (run using xdg-open)

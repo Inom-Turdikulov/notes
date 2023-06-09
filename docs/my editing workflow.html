@@ -283,6 +283,8 @@ n</em> - neovim only</p>
 <p>I n daily life I use <a href="/pycharm.html">pycharm</a> and <a href="/neovim%20%28text%20editor%29.html">neovim (text editor)</a> inside
 <a href="/kitty%20%28terminal%20emulator%29.html">kitty (terminal emulator)</a>.</p>
 <p>Maybe in near future I will switch to use only neovim.</p>
+<h2 id="built-in-maps">Built-in maps</h2>
+<p>Insert new line above/below::<code>[&lt;space&gt;</code>, <code>]&lt;space&gt;</code></p>
 <h2 id="files-navigation">Files navigation</h2>
 <ul>
 <li>
@@ -292,58 +294,56 @@ n</em> - neovim only</p>
 <p>[x] focus editor::<code>&lt;c-'&gt;</code></p>
 </li>
 <li>
-<p>grep content in current project and open find toolbar::<code>&lt;leader&gt;fs</code></p>
+<p>[x] grep content in current project and open find toolbar::<code>&lt;leader&gt;fs</code></p>
 </li>
 <li>
-<p>locate file in file manager::<code>&lt;leader&gt;pv</code></p>
+<p>[x] locate file in file manager::<code>&lt;leader&gt;pv</code></p>
 </li>
 <li>
-<p>go to file::<code>&lt;m-p&gt;</code></p>
+<p>[x] go to file::<code>&lt;m-p&gt;</code></p>
 </li>
 <li>
-<p>recent files, Telescope old files + CWD::<code>&lt;m-e&gt;</code></p>
+<p>[x] recent files, Telescope old files + CWD::<code>&lt;m-e&gt;</code></p>
 </li>
 <li>
 <p>[x] recent locations::<code>&lt;leader&gt;o</code>, <code>&lt;leader&gt;i</code> n*</p>
 </li>
 <li>
-<p>[x] from the quickmenu, open a file in: a vertical split with control+v, a horizontal split with control+x, a new tab with control+t</p>
-</li>
-<li>
-<p>find file, with history and fuzzy search::<code>M-p</code></p>
-</li>
-<li>
-<p>log git history of current file::<code>&lt;leader&gt;gl</code></p>
-</li>
-<li>
-<p>get file local history/undotree::<code>&lt;leader&gt;u</code></p>
+<p>[x] find file, with history and fuzzy search::<code>M-p</code></p>
 </li>
 </ul>
 <h2 id="code-navigation">Code navigation</h2>
 <ul>
 <li>
-<p>go to definition::<code>gd</code></p>
+<p>[x] go to definition::<code>gd</code></p>
 </li>
 <li>
-<p>go to declaration::<code>gD</code></p>
+<p>[x] go to declaration::<code>gD</code></p>
 </li>
 <li>
-<p>find symbol, based on grep:<code>&lt;leader&gt;vws[S]</code>*</p>
+<p>[x] find symbol, based on grep:<code>&lt;leader&gt;vws[S]</code>*</p>
 </li>
 <li>
-<p>find usages/references::<code>&lt;leader&gt;vrr</code></p>
+<p>[x] find usages/references::<code>&lt;leader&gt;vrr</code></p>
 </li>
 <li>
-<p>go to older/newer position::<code>&lt;c-o&gt;/&lt;c-i&gt;</code></p>
+<p>[x] go to older/newer position::<code>&lt;c-o&gt;/&lt;c-i&gt;</code></p>
 </li>
 <li>
-<p>hover help::<code>K</code></p>
+<p>[x] hover help::<code>K</code></p>
 </li>
 <li>
-<p>go to previous/current file::<code>c-^</code></p>
+<p>[ ] external documentation integration
+      leader-zw search word
+      gz <Plug>ZVOperator
+      leader&gt;z <Plug>ZVVisSelection
+      <leader><leader>z <Plug>ZVKeyDocset</p>
 </li>
 <li>
-<p>go to previous/next function hunk::<code>[[</code>/<code>]]</code></p>
+<p>[x] go to previous/current file::<code>c-^</code></p>
+</li>
+<li>
+<p>[x] go to previous/next function hunk::<code>[[</code>/<code>]]</code></p>
 </li>
 </ul>
 <h3 id="harpoon-n">Harpoon n*</h3>
@@ -364,45 +364,199 @@ n</em> - neovim only</p>
 <h2 id="code-editing">Code editing</h2>
 <ul>
 <li>
-<p>code folding::<code>zo/zc/zr</code> *</p>
+<p>[ ] code folding::<code>zo/zc/zr</code> *</p>
 </li>
 <li>
-<p>comment line::<code>gcc</code></p>
+<p>[x] comment line::<code>gcc</code></p>
 </li>
 <li>
-<p>comment block<code>gc&lt;motion&gt;</code></p>
+<p>[x] comment block<code>gc&lt;motion&gt;</code></p>
 </li>
 <li>
-<p>code formatting::<code>&lt;leader&gt;F</code></p>
+<p>[x] code formatting::<code>&lt;leader&gt;F</code></p>
 </li>
 <li>
-<p>code actions::<code>&lt;leader&gt;vaa</code></p>
+<p>[x] code actions::<code>&lt;leader&gt;vaa</code></p>
 </li>
 <li>
-<p>macro record/replay::<code>q&lt;letter&gt;/@&lt;letter&gt;</code></p>
+<p>[x] macro record/replay::<code>q&lt;letter&gt;/@&lt;letter&gt;</code></p>
 </li>
 </ul>
 <h2 id="code-refactoring">Code refactoring</h2>
 <ul>
 <li>
-<p>[ ] list document trouble::<code>&lt;leader&gt;xq</code></p>
+<p>[x] list document trouble::<code>&lt;leader&gt;xq</code></p>
 </li>
 <li>
-<p>[ ] list workspace trouble::<code>&lt;leader&gt;xQ</code></p>
+<p>[x] list workspace trouble::<code>&lt;leader&gt;xQ</code></p>
 </li>
 <li>
-<p>[ ] <a href="https://github.com/python-rope/ropevim#keybinding" class="external-link">https://github.com/python-rope/ropevim#keybinding</a></p>
+<p>[x] from the quick-menu, open a file in splits
+?
+a vertical split with <code>C-v</code>, a horizontal split with <code>C-x</code>, a new tab with <code>C-t</code></p>
 </li>
 <li>
-<p>[ ] rename/move/extract/inline</p>
-</li>
-<li>
-<p>[ ] automatic refactorings (<!-- black integration -->)</p>
-</li>
-<li>
-<p>[ ] sort/organize imports, manually?</p>
+<p>[ ] black integration on_save, pre_commit</p>
 </li>
 </ul>
+<h3 id="rope">Rope</h3>
+<ul>
+<li>[ ] <a href="https://github.com/python-rope/ropevim#keybinding" class="external-link">https://github.com/python-rope/ropevim#keybinding</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C-x p o</td>
+<td>RopeOpenProject</td>
+</tr>
+<tr>
+<td>C-x p k</td>
+<td>RopeCloseProject</td>
+</tr>
+<tr>
+<td>C-x p f</td>
+<td>NOT USING RopeFindFile</td>
+</tr>
+<tr>
+<td>C-x p 4 f</td>
+<td>NOT USING RopeFindFileOtherWindow</td>
+</tr>
+<tr>
+<td>C-x p u</td>
+<td>RopeUndo</td>
+</tr>
+<tr>
+<td>C-x p r</td>
+<td>RopeRedo</td>
+</tr>
+<tr>
+<td>C-x p c</td>
+<td>RopeProjectConfig</td>
+</tr>
+<tr>
+<td>C-x p n [mpfd]</td>
+<td>RopeCreate(Module</td>
+</tr>
+<tr>
+<td> </td>
+<td>RopeWriteProject</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>C-c r r</td>
+<td>RopeRename</td>
+</tr>
+<tr>
+<td>C-c r l</td>
+<td>RopeExtractVariable</td>
+</tr>
+<tr>
+<td>C-c r m</td>
+<td>RopeExtractMethod</td>
+</tr>
+<tr>
+<td>C-c r i</td>
+<td>RopeInline</td>
+</tr>
+<tr>
+<td>C-c r v</td>
+<td>RopeMove</td>
+</tr>
+<tr>
+<td>C-c r x</td>
+<td>RopeRestructure</td>
+</tr>
+<tr>
+<td>C-c r u</td>
+<td>RopeUseFunction</td>
+</tr>
+<tr>
+<td>C-c r f</td>
+<td>RopeIntroduceFactory</td>
+</tr>
+<tr>
+<td>C-c r s</td>
+<td>RopeChangeSignature</td>
+</tr>
+<tr>
+<td>C-c r 1 r</td>
+<td>RopeRenameCurrentModule</td>
+</tr>
+<tr>
+<td>C-c r 1 v</td>
+<td>RopeMoveCurrentModule</td>
+</tr>
+<tr>
+<td>C-c r 1 p</td>
+<td>RopeModuleToPackage</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>C-c r o</td>
+<td>RopeOrganizeImports</td>
+</tr>
+<tr>
+<td>C-c r n [vfcmp]</td>
+<td>RopeGenerate(Variable</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>C-c r a /</td>
+<td>RopeCodeAssist</td>
+</tr>
+<tr>
+<td>C-c r a g</td>
+<td>RopeGotoDefinition</td>
+</tr>
+<tr>
+<td>C-c r a d</td>
+<td>RopeShowDoc</td>
+</tr>
+<tr>
+<td>C-c r a f</td>
+<td>RopeFindOccurrences</td>
+</tr>
+<tr>
+<td>C-c r a ?</td>
+<td>RopeLuckyAssist</td>
+</tr>
+<tr>
+<td>C-c r a j</td>
+<td>RopeJumpToGlobal</td>
+</tr>
+<tr>
+<td>C-c r a c</td>
+<td>RopeShowCalltip</td>
+</tr>
+<tr>
+<td> </td>
+<td>RopeAnalyzeModule</td>
+</tr>
+<tr>
+<td> </td>
+<td>RopeAutoImport</td>
+</tr>
+<tr>
+<td> </td>
+<td>RopeGenerateAutoimportCache</td>
+</tr>
+</tbody>
+</table>
 <h2 id="code-autocompletion">Code autocompletion</h2>
 <ul>
 <li>
@@ -412,79 +566,87 @@ n</em> - neovim only</p>
 <p>[x] confirm copilot::<code>&lt;tab&gt;</code></p>
 </li>
 <li>
-<p>[ ] snippets in autocomplete</p>
+<p>[x] snippets in autocomplete</p>
+</li>
+<li>
+<p>[ ] sync templates</p>
 </li>
 </ul>
-<h2 id="code-debugging-testing">Code debugging/testing</h2>
+<h2 id="code-run-debugging-testing">Code run/debugging/testing</h2>
 <ul>
+<li>
+<p>[x] auto-import:
+    neovim: autocomplete or insert mode and press <code>&lt;c-space&gt;</code>
+    pycharm: type and press <code>&lt;c-space&gt;&lt;c-space&gt;</code></p>
+</li>
 <li>
 <p>[ ] <a href="https://github.com/tjdevries/config_manager/blob/78608334a7803a0de1a08a9a4bd1b03ad2a5eb11/xdg_config/nvim/after/plugin/dap.lua" class="external-link">https://github.com/tjdevries/config_manager/blob/78608334a7803a0de1a08a9a4bd1b03ad2a5eb11/xdg_config/nvim/after/plugin/dap.lua</a></p>
 </li>
 <li>
-<p>run debugger configuration::<code>&lt;F5&gt;</code></p>
+<p>[x] run debugger configuration::<code>&lt;F5&gt;</code></p>
 </li>
 <li>
-<p>continue debugger::<code>&lt;F6&gt;</code>, not required in neovim</p>
+<p>[x] continue debugger::<code>&lt;F6&gt;</code>, not required in neovim</p>
 </li>
 <li>
-<p>restart debugger::<code>&lt;leader&gt;dR</code></p>
+<p>[x] restart debugger::<code>&lt;leader&gt;dR</code></p>
 </li>
 <li>
-<p>toggle breakpoint::<code>&lt;leader&gt;db[B]</code></p>
+<p>[x] toggle breakpoint::<code>&lt;leader&gt;db[B]</code></p>
 </li>
 <li>
-<p>stop debugger::<code>&lt;leader&gt;dx</code></p>
+<p>[x] stop debugger::<code>&lt;leader&gt;dx</code></p>
 </li>
 <li>
-<p>jump to cursor::<code>&lt;S-F1&gt;</code> *</p>
+<p>[ ] jump to cursor::<code>&lt;S-F1&gt;</code> *</p>
 </li>
 <li>
-<p>step back::<code>&lt;F1&gt;</code> n*</p>
+<p>[x] step back::<code>&lt;F1&gt;</code> n*</p>
 </li>
 <li>
-<p>step over::<code>&lt;F3&gt;</code></p>
+<p>[x] step over::<code>&lt;F3&gt;</code></p>
 </li>
 <li>
-<p>step into::<code>&lt;F2&gt;</code></p>
+<p>[x] step into::<code>&lt;F2&gt;</code></p>
 </li>
 <li>
-<p>step out::<code>&lt;F4&gt;</code></p>
+<p>[x] step out::<code>&lt;F4&gt;</code></p>
 </li>
 <li>
-<p>run to cursor::<code>&lt;leader&gt;dC</code></p>
+<p>[ ] run to cursor::<code>&lt;leader&gt;dC</code></p>
 </li>
 <li>
-<p>evaluate expression</p>
+<p>[ ] evaluate expression</p>
 </li>
 <li>
-<p>view breakpoints</p>
+<p>[ ] view breakpoints</p>
 </li>
 <li>
-<p>run the nearest test::<code>&lt;leader&gt;dnn</code></p>
+<p>[x] run the nearest test::<code>&lt;leader&gt;dnn</code></p>
 </li>
 <li>
-<p>rerun the last test</p>
+<p>[x] rerun the last test</p>
 </li>
 <li>
-<p>run current test file::<code>&lt;leader&gt;dnf</code> *</p>
+<p>[ ] run current test file::<code>&lt;leader&gt;dnf</code> *</p>
 </li>
 <li>
-<p>debug the nearest test::<code>&lt;leader&gt;ddc</code></p>
+<p>[x] debug the nearest test::<code>&lt;leader&gt;ddc</code></p>
 </li>
 <li>
-<p>open test results::<code>&lt;leader&gt;dno</code></p>
+<p>[x] open test results::<code>&lt;leader&gt;dno</code></p>
 </li>
 <li>
-<p>show summary::<code>&lt;leader&gt;dns</code></p>
+<p>[x] show summary::<code>&lt;leader&gt;dns</code></p>
 </li>
 <li>
-<p>toggle output panel::<code>&lt;leader&gt;dnt</code></p>
+<p>[x] toggle output panel::<code>&lt;leader&gt;dnt</code></p>
 </li>
 <li>
-<p>coverage test</p>
+<p>[ ] coverage test</p>
 </li>
 <li>
-<p>generate test</p>
+<p>[ ] generate test</p>
 </li>
 <li>
 <p>[ ] run group of tests, pytest cwd?</p>
@@ -499,34 +661,106 @@ n</em> - neovim only</p>
 <h2 id="errors-and-warnings-navigation">Errors and warnings navigation</h2>
 <ul>
 <li>
-<p>go to next/previous error::<code>[d</code> <code>]d</code></p>
+<p>[x] go to next/previous error::<code>[d</code> <code>]d</code></p>
 </li>
 <li>
-<p>go to file with error::?? Traceback actions.</p>
+<p>[x] go to file with error (under cursor)::<code>gf</code> or <code>gF</code> n*</p>
 </li>
 </ul>
-<h2 id="vcs">VCS</h2>
+<h2 id="vcs-n">VCS n*</h2>
+<p>NOTE: I just won't deeply integrate VCS keybindings into pycharm (and it's maybe
+even not easy to implement same workflow like in neovim/vim-fugitive). So I
+decided use only neovim/vim-fugitive for VCS work. Also, this will help me to
+switch into Neovim/Vim easily.</p>
+<h3 id="fugitive">Fugitive</h3>
+<ul>
+<li>[ ] Fugitive.lua keybindings</li>
+<li>[ ] Control size of git status window</li>
+</ul>
+<p><code>:Gwrite</code>::Stage current file</p>
+<p><code>:Gread</code>::Checkout current file</p>
+<p><code>:Gremove</code>::Remove current file</p>
+<p><code>:Gmove &lt;relative_path&gt;</code>::Move current file</p>
+<p>Open autocomplete in commit buffer::<code>C-n</code></p>
+<p><code>:G blame::</code>Open split window with blame buffer</p>
+<p><code>:G commit</code>::Open split window with commit buffer</p>
+<p><code>:Gedit [&lt;path&gt;]</code>::Open index file</p>
+<p><code>:Gdiffsplit</code>::vimdiff against the index version of the file</p>
 <ul>
 <li>
-<p>[ ] 3-way diff/merge</p>
+<p>[ ] Perform a <code>:Gdiffsplit</code> on the file under the cursor.::<code>dd</code></p>
 </li>
 <li>
-<p>[ ] cherry-picking/compare</p>
+<p>[ ] 1/5 <a href="http://vimcasts.org/blog/2011/05/the-fugitive-series/" class="external-link">http://vimcasts.org/blog/2011/05/the-fugitive-series/</a></p>
 </li>
 <li>
-<p>[ ] open diff/git for current file::<code>=</code></p>
+<p>[ ] <a href="https://github.com/lewis6991/gitsigns.nvim" class="external-link">https://github.com/lewis6991/gitsigns.nvim</a></p>
 </li>
 <li>
-<p>[ ] stage/unstage file <code>-</code></p>
+<p>[ ] <a href="https://www.reddit.com/r/vim/comments/8h044y/comment/dym4eax/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button" class="external-link">https://www.reddit.com/r/vim/comments/8h044y/comment/dym4eax/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button</a></p>
 </li>
 <li>
-<p>[ ] commit chunk or selection of chunk <code>s</code></p>
+<p>[ ] list branches</p>
 </li>
 <li>
-<p>[ ] commit staged changes cc</p>
+<p>[ ] diff branches. Working tree diff.</p>
 </li>
 <li>
-<p>[ ] revert all changes, stash the changes czz Push stash. Pass a [count] of 1 to add <code>--include-untracked</code> or 2 to add <code>--all</code>.</p>
+<p>[ ] compare working tree with branch
+      git-diff or :Merginal</p>
+</li>
+<li>
+<p>[x] log git history of current file::<code>&lt;leader&gt;gl</code></p>
+</li>
+<li>
+<p>[x] <code>dv</code>::Perform a <code>:Gvdiffsplit</code> on the file under the cursor</p>
+</li>
+<li>
+<p>[x] <code>ds</code>::Perform a <code>:Ghdiffsplit</code> on the file under the cursor</p>
+</li>
+<li>
+<p>[ ] <code>gt</code> - accept left side of diff</p>
+</li>
+<li>
+<p>[ ] <code>gn</code> - accept right side of diff</p>
+</li>
+<li>
+<p>[ ] accept left/right hunk in 3-way diff/merge conflict</p>
+</li>
+<li>
+<p>[x] get file local history/undotree::<code>&lt;leader&gt;u</code></p>
+</li>
+<li>
+<p>[x] open diff/git for current file::<code>=</code></p>
+</li>
+<li>
+<p>[x] stage/unstage (add/reset) file, works in visual mode too (multiple files)
+?
+<code>-</code></p>
+</li>
+<li>
+<p>[x] open file in the window below (git status)::<code>&lt;cr&gt;</code></p>
+</li>
+<li>
+<p>[x] commit chunk or selection of chunk::<code>s</code></p>
+</li>
+<li>
+<p>[x] run <code>git add –patch</code> for current file::<code>P</code></p>
+</li>
+<li>
+<p>[x] commit staged changes::<code>cc</code></p>
+</li>
+<li>
+<p>[x] next/previous hunk::<code>(</code>, <code>)</code></p>
+</li>
+<li>
+<p>[x] stage hunk::<code>s</code></p>
+</li>
+<li>
+<p>[x] unstage hunk::<code>u</code></p>
+</li>
+<li>
+<p>[ ] revert all changes, stash the changes <code>czz</code> Push stash. Pass a [count] of 1 to add <code>--include-untracked</code> or 2 to add <code>--all</code>.</p>
 </li>
 <li>
 <p>[ ] stash changes</p>
@@ -535,40 +769,29 @@ n</em> - neovim only</p>
 <p>[ ] czA Apply topmost stash, or stash@{count}.</p>
 </li>
 <li>
-<p>[ ] dv Perform a |:Gvdiffsplit| on the file under the cursor.</p>
-</li>
-<li>
-<p>[ ] dd Perform a |:Gdiffsplit| on the file under the cursor.</p>
-</li>
-<li>
-<p>[ ] ds Perform a |:Ghdiffsplit| on the file under the cursor.</p>
-</li>
-<li>
-<p>[ ] gt - accept left side of diff</p>
-</li>
-<li>
-<p>[ ] gn - accept right side of diff</p>
-</li>
-<li>
 <p>[ ] telescope git... Telescope git_...</p>
 </li>
 <li>
-<p>add/remove into stage</p>
+<p>[x] Push changes::<code>&lt;leader&gt;p</code></p>
 </li>
 <li>
-<p>commit/push</p>
+<p>[ ] pull &amp; merge</p>
 </li>
 <li>
-<p>pull/rebase/merge</p>
+<p>[ ] pull &amp; rebase</p>
 </li>
 <li>
-<p>diff</p>
+<p>[ ] push and create merge request <code>git push -o merge_request.create --set-upstream origin HEAD</code></p>
 </li>
 <li>
-<p>push and create merge request <code>git push -o merge_request.create --set-upstream origin HEAD</code></p>
+<p>[ ] cherry-picking commit
+<a href="https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button" class="external-link">https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button</a></p>
 </li>
 <li>
-<p>[-] <span class="formatting_strikethrough">gitsigns.nvim</span> - overkill? vim fugitive is enough?</p>
+<p>[ ] <a href="https://vi.stackexchange.com/questions/tagged/plugin-fugitive" class="external-link">https://vi.stackexchange.com/questions/tagged/plugin-fugitive</a></p>
+</li>
+<li>
+<p>[ ] gitsigns.nvim - overkill? vim fugitive is enough?</p>
 </li>
 </ul>
 <h2 id="custom">Custom</h2>
@@ -582,39 +805,22 @@ n</em> - neovim only</p>
 <p>[ ] nvim term help/video tutor</p>
 </li>
 <li>
-<p>[ ] find commands, aka action search
-      leader-f-a</p>
+<p>[x] telescope command_history::<code>&lt;leader&gt;fc</code> n*</p>
 </li>
 <li>
-<p>[ ] telescope builtin's, super search, <code>:h telescope.builtin</code> n*::<code>&lt;leader&gt;fF</code></p>
+<p>[x] telescope builtin's, super search, <code>:h telescope.builtin</code> ::<code>&lt;leader&gt;fF</code> n*</p>
 </li>
 <li>
-<p>[ ] find hotkey/action::<code>&lt;leader&gt;fk</code> in vim to find action use <code>&lt;leader&gt;fK</code></p>
+<p>[x] find hotkey/action::<code>&lt;leader&gt;fk</code> in vim to find action use <code>&lt;leader&gt;fK</code></p>
 </li>
 <li>
-<p>[ ] open git commit UI, git status::<code>&lt;Leader&gt;gg</code></p>
-</li>
-<li>
-<p>[ ] git history :G l or :G log</p>
+<p>[x] open git commit UI, git status::<code>&lt;Leader&gt;gg</code></p>
 </li>
 <li>
 <p>[ ] jump to source from git history O or o</p>
 </li>
 <li>
-<p>[ ] next/prev hunk ( )</p>
-</li>
-<li>
-<p>[ ] stage hunk s</p>
-</li>
-<li>
-<p>[ ] unstage hunk u</p>
-</li>
-<li>
-<p>[ ] diagnostics <code>&lt;Leader&gt;vd</code></p>
-</li>
-<li>
-<p>[ ] declaration/definition ?? how it works
-      leader-v-g-d[D]</p>
+<p>[x] diagnostics <code>&lt;Leader&gt;vd</code></p>
 </li>
 <li>
 <p>[ ] rename leader-v-r-n</p>
@@ -626,13 +832,6 @@ n</em> - neovim only</p>
 <p>[ ] permanent bookmarks, marks, using viminfo?</p>
 </li>
 <li>
-<p>[ ] external documentation
-      leader-zw search word
-      gz <Plug>ZVOperator
-      leader&gt;z <Plug>ZVVisSelection
-      <leader><leader>z <Plug>ZVKeyDocset</p>
-</li>
-<li>
 <p>[ ] search in git repo (telescope-git)</p>
 </li>
 <li>
@@ -642,68 +841,8 @@ n</em> - neovim only</p>
 <p>[ ] structure view :TSPlaygroundToggle</p>
 </li>
 <li>
-<p>Push changes leader-p</p>
+<p>[ ] linter integration, <a href="https://github.com/astral-sh/ruff-lsp" class="external-link">https://github.com/astral-sh/ruff-lsp</a></p>
 </li>
-</ul>
-<h2 id="todo">Todo</h2>
-<ul>
-<li>
-<p>[ ] telescope command_history</p>
-</li>
-<li>
-<p>[-] JS debugging (browser)
-  Propably easly just use chrome built-in debugger/sourcemaps
-  <a href="https://stackoverflow.com/questions/71810002/how-to-configure-the-dap-debugger-under-neovim-for-typescript" class="external-link">https://stackoverflow.com/questions/71810002/how-to-configure-the-dap-debugger-under-neovim-for-typescript</a></p>
-</li>
-<li>
-<p>[-] <span class="formatting_strikethrough">select in</span></p>
-</li>
-<li>
-<p>[ ] new scratch file :enew</p>
-</li>
-<li>
-<p>[ ] execute scratch file</p>
-</li>
-<li>
-<p>[ ] execute current file (open externally) leader o or leader O (run using xdg-open)</p>
-</li>
-<li>
-<p>[ ] add quotes/x pairs to words/sentence
-      <a href="https://github.com/kylechui/nvim-surround" class="external-link">https://github.com/kylechui/nvim-surround</a>
-      <a href="https://stackoverflow.com/questions/2147875/what-vim-commands-can-be-used-to-quote-unquote-words" class="external-link">https://stackoverflow.com/questions/2147875/what-vim-commands-can-be-used-to-quote-unquote-words</a></p>
-</li>
-<li>
-<p>[-] vim shell output actions...
-  :h redir, !...|grep, r!... etc</p>
-</li>
-<li>
-<p>[ ]  run method?</p>
-</li>
-</ul>
-<h2 id="lsp">LSP</h2>
-<ul>
-<li>
-<p>[ ] <a href="https://github.com/astral-sh/ruff-lsp" class="external-link">https://github.com/astral-sh/ruff-lsp</a></p>
-</li>
-<li>
-<p>[ ] linter, built-in into lsp</p>
-</li>
-<li>
-<p>[-] python lsp actions</p>
-</li>
-<li>[ ] autoimport</li>
-<li>[ ] remove unused imports</li>
-<li>[ ] python lsp symbols</li>
-<li>[ ] optimize imports</li>
-<li>
-<p>[ ] copilot tab issue (try indent, while suggestion active!), markdown alignment issues
-      possible insert tab by S-Tab, but better to use S-Return</p>
-</li>
-<li>
-<p>[ ] diff branches. Working tree diff.</p>
-</li>
-<li>[ ] compare working tree with branch
-      git-diff or :Merginal</li>
 </ul>
 <h2 id="sql">SQL</h2>
 <ul>
@@ -720,21 +859,36 @@ n</em> - neovim only</p>
       full-featured database client, possible set values, load values from files, query, work with multiple databases</li>
 </ul>
 <h2 id="vim-surround">Vim surround</h2>
-<div class="lang-general">
-
-<div class="codehilite"><pre><span></span><code><span class="w">    </span>Old<span class="w"> </span>text<span class="w">                    </span>Command<span class="w">         </span>New<span class="w"> </span>text
---------------------------------------------------------------------------------
-<span class="w">    </span>surr*ound_words<span class="w">             </span>ysiw)<span class="w">           </span>(surround_words)
-<span class="w">    </span>*make<span class="w"> </span>strings<span class="w">               </span>ys$&quot;<span class="w">            </span>&quot;make<span class="w"> </span>strings&quot;
-<span class="w">    </span>[delete<span class="w"> </span>ar*ound<span class="w"> </span>me!]<span class="w">        </span>ds]<span class="w">             </span>delete<span class="w"> </span>around<span class="w"> </span>me!
-<span class="w">    </span>remove<span class="w"> </span><span class="nt">&lt;b&gt;</span>HTML<span class="w"> </span>t*ags<span class="nt">&lt;/b&gt;</span><span class="w">    </span>dst<span class="w">             </span>remove<span class="w"> </span>HTML<span class="w"> </span>tags
-<span class="w">    </span>&#39;change<span class="w"> </span>quot*es&#39;<span class="w">            </span>cs&#39;&quot;<span class="w">            </span>&quot;change<span class="w"> </span>quotes&quot;
-<span class="w">    </span>n*<span class="w"> </span><span class="nt">&lt;b&gt;</span>or<span class="w"> </span>tag*<span class="w"> </span>types<span class="nt">&lt;/b&gt;</span><span class="w">        </span>csth1<span class="nt">&lt;CR&gt;</span><span class="w">       </span><span class="nt">&lt;h1&gt;</span>or<span class="w"> </span>tag<span class="w"> </span>types<span class="nt">&lt;/h1&gt;</span>
-<span class="w">    </span>n*<span class="w"> </span>delete(functi*on<span class="w"> </span>calls)<span class="w">     </span>dsf<span class="w">             </span>function<span class="w"> </span>calls
-</code></pre></div>
-
-
-</div></div>
+<ul>
+<li>[x] surr*ound_words             ysiw)           (surround_words)</li>
+<li>[x] *make strings               ys$"            "make strings"</li>
+<li>[x] [delete ar*ound me!]        ds]             delete around me!</li>
+<li>[x] remove <b>HTML t*ags</b>    dst             remove HTML tags</li>
+<li>[x] 'change quot*es'            cs'"            "change quotes"</li>
+<li>[x] <b>or tag* types</b>        csth1<CR>       <h1>or tag types</h1> n*</li>
+<li>[x] delete(functi*on calls)     dsf             function calls       n*</li>
+</ul>
+<h2 id="js-debugging-browser">JS debugging (browser)</h2>
+<ul>
+<li>[ ] Probably easily just use chrome built-in debugger/sourcemaps</li>
+<li>[ ] <a href="https://stackoverflow.com/questions/71810002/how-to-configure-the-dap-debugger-under-neovim-for-typescript" class="external-link">https://stackoverflow.com/questions/71810002/how-to-configure-the-dap-debugger-under-neovim-for-typescript</a></li>
+</ul>
+<h2 id="code-style">Code style</h2>
+<ul>
+<li>[ ] <a href="https://peps.python.org/pep-0008/" class="external-link">https://peps.python.org/pep-0008/</a></li>
+</ul>
+<h2 id="commit-style">Commit style</h2>
+<ul>
+<li>[ ] <a href="https://github.com/conventional-commits/conventionalcommits.org" class="external-link">https://github.com/conventional-commits/conventionalcommits.org</a></li>
+</ul>
+<h2 id="automation">Automation</h2>
+<ul>
+<li>[ ] vim shell output actions... :h redir, !...|grep, r!... etc</li>
+<li>[ ] <a href="https://github.com/tpope/vim-unimpaired" class="external-link">https://github.com/tpope/vim-unimpaired</a></li>
+<li>[ ] new scratch file <code>:enew</code></li>
+<li>[ ] execute scratch file</li>
+<li>[ ] execute current file (open externally) leader o or leader O (run using xdg-open)</li>
+</ul></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
@@ -754,13 +908,13 @@ n</em> - neovim only</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A228905644062443269056391967788965141512{level}" class="graph_div"></div>
+    <div id="A109562931661011484375776531746178840279{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B228905644062443269056391967788965141512{level}" level="{level}" note_temp_id="228905644062443269056391967788965141512" onclick="window.ObsHtmlGraph.run(this, '228905644062443269056391967788965141512', 'my editing workflow');">
+        <button class="graph_button graph_show_button" id="B109562931661011484375776531746178840279{level}" level="{level}" note_temp_id="109562931661011484375776531746178840279" onclick="window.ObsHtmlGraph.run(this, '109562931661011484375776531746178840279', 'my editing workflow');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C228905644062443269056391967788965141512{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C109562931661011484375776531746178840279{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
