@@ -283,6 +283,14 @@ n</em> - neovim only</p>
 <p>I n daily life I use <a href="/pycharm.html">pycharm</a> and <a href="/neovim%20%28text%20editor%29.html">neovim (text editor)</a> inside
 <a href="/kitty%20%28terminal%20emulator%29.html">kitty (terminal emulator)</a>.</p>
 <p>Maybe in near future I will switch to use only neovim.</p>
+<ul>
+<li>[ ] complete VSC</li>
+<li>[ ] complete refactoring</li>
+<li>[ ] complete debugging</li>
+<li>[ ] complete testing</li>
+<li>[ ] complete git</li>
+<li>[ ] complete snippets</li>
+</ul>
 <h2 id="built-in-maps">Built-in maps</h2>
 <p>Insert new line above/below::<code>[&lt;space&gt;</code>, <code>]&lt;space&gt;</code></p>
 <h2 id="files-navigation">Files navigation</h2>
@@ -300,9 +308,6 @@ n</em> - neovim only</p>
 <p>[x] locate file in file manager::<code>&lt;leader&gt;pv</code></p>
 </li>
 <li>
-<p>[x] go to file::<code>&lt;m-p&gt;</code></p>
-</li>
-<li>
 <p>[x] recent files, Telescope old files + CWD::<code>&lt;m-e&gt;</code></p>
 </li>
 <li>
@@ -310,6 +315,9 @@ n</em> - neovim only</p>
 </li>
 <li>
 <p>[x] find file, with history and fuzzy search::<code>M-p</code></p>
+</li>
+<li>
+<p>[x] telescope resume::<code>&lt;m-P&gt;</code> n*</p>
 </li>
 </ul>
 <h2 id="code-navigation">Code navigation</h2>
@@ -333,11 +341,14 @@ n</em> - neovim only</p>
 <p>[x] hover help::<code>K</code></p>
 </li>
 <li>
-<p>[ ] external documentation integration
-      leader-zw search word
-      gz <Plug>ZVOperator
-      leader&gt;z <Plug>ZVVisSelection
-      <leader><leader>z <Plug>ZVKeyDocset</p>
+<p>[x] zeavim word under cursor or selection::<code>&lt;leader&gt;zh</code> In pycharm works only
+  selection.</p>
+</li>
+<li>
+<p>[x] zeavim search motion::<code>gz[motion]</code> n*</p>
+</li>
+<li>
+<p>[x] zeavim select doc-set and query::<code>&lt;leader&gt;&lt;leader&gt;z</code> n*</p>
 </li>
 <li>
 <p>[x] go to previous/current file::<code>c-^</code></p>
@@ -345,6 +356,17 @@ n</em> - neovim only</p>
 <li>
 <p>[x] go to previous/next function hunk::<code>[[</code>/<code>]]</code></p>
 </li>
+<li>[x] go to link::<code>gx</code></li>
+<li>[x] selection bold::<code>&lt;C-b&gt;</code></li>
+<li>[x] selection italic::<code>&lt;C-i&gt;</code></li>
+<li>[x] selection code::<code>&lt;C-e&gt;</code></li>
+<li>[x] selection link::<code>&lt;C-k&gt;</code></li>
+<li>[x] renumber list items::<code>gN</code>, using <code>bullets.vim</code> n*</li>
+<li>[x] toggle checkbox::<code>&lt;leader&gt;zt</code> n*</li>
+<li>[x] bullet demote::<code>&lt;C-t&gt;</code> or <code>&gt;&gt;</code> or <code>&gt;</code> in visual mode</li>
+<li>[x] bullet promote::<code>&lt;C-d&gt;</code> or <code>&lt;&lt;</code> or <code>&lt;</code> in visual mode</li>
+<li>[x] URL to markdown &gt; clipboard &gt; paste::<code>&lt;leader&gt;pl</code> n*</li>
+<li>[x] HTML to markdown &gt; clipboard &gt; paste::<code>&lt;leader&gt;ph</code> n*</li>
 </ul>
 <h3 id="harpoon-n">Harpoon n*</h3>
 <ul>
@@ -364,7 +386,7 @@ n</em> - neovim only</p>
 <h2 id="code-editing">Code editing</h2>
 <ul>
 <li>
-<p>[ ] code folding::<code>zo/zc/zr</code> *</p>
+<p>[x] code folding::<code>zo/zc/zr</code></p>
 </li>
 <li>
 <p>[x] comment line::<code>gcc</code></p>
@@ -392,171 +414,56 @@ n</em> - neovim only</p>
 </li>
 <li>
 <p>[x] from the quick-menu, open a file in splits
-?
-a vertical split with <code>C-v</code>, a horizontal split with <code>C-x</code>, a new tab with <code>C-t</code></p>
+      ?
+      a vertical split with <code>C-v</code>, a horizontal split with <code>C-x</code>, a new tab with <code>C-t</code></p>
 </li>
 <li>
 <p>[ ] black integration on_save, pre_commit</p>
 </li>
+<li>[ ] linter integration, <a href="https://github.com/astral-sh/ruff-lsp" class="external-link">https://github.com/astral-sh/ruff-lsp</a></li>
 </ul>
 <h3 id="rope">Rope</h3>
 <ul>
 <li>[ ] <a href="https://github.com/python-rope/ropevim#keybinding" class="external-link">https://github.com/python-rope/ropevim#keybinding</a></li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>C-x p o</td>
-<td>RopeOpenProject</td>
-</tr>
-<tr>
-<td>C-x p k</td>
-<td>RopeCloseProject</td>
-</tr>
-<tr>
-<td>C-x p f</td>
-<td>NOT USING RopeFindFile</td>
-</tr>
-<tr>
-<td>C-x p 4 f</td>
-<td>NOT USING RopeFindFileOtherWindow</td>
-</tr>
-<tr>
-<td>C-x p u</td>
-<td>RopeUndo</td>
-</tr>
-<tr>
-<td>C-x p r</td>
-<td>RopeRedo</td>
-</tr>
-<tr>
-<td>C-x p c</td>
-<td>RopeProjectConfig</td>
-</tr>
-<tr>
-<td>C-x p n [mpfd]</td>
-<td>RopeCreate(Module</td>
-</tr>
-<tr>
-<td> </td>
-<td>RopeWriteProject</td>
-</tr>
-<tr>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>C-c r r</td>
-<td>RopeRename</td>
-</tr>
-<tr>
-<td>C-c r l</td>
-<td>RopeExtractVariable</td>
-</tr>
-<tr>
-<td>C-c r m</td>
-<td>RopeExtractMethod</td>
-</tr>
-<tr>
-<td>C-c r i</td>
-<td>RopeInline</td>
-</tr>
-<tr>
-<td>C-c r v</td>
-<td>RopeMove</td>
-</tr>
-<tr>
-<td>C-c r x</td>
-<td>RopeRestructure</td>
-</tr>
-<tr>
-<td>C-c r u</td>
-<td>RopeUseFunction</td>
-</tr>
-<tr>
-<td>C-c r f</td>
-<td>RopeIntroduceFactory</td>
-</tr>
-<tr>
-<td>C-c r s</td>
-<td>RopeChangeSignature</td>
-</tr>
-<tr>
-<td>C-c r 1 r</td>
-<td>RopeRenameCurrentModule</td>
-</tr>
-<tr>
-<td>C-c r 1 v</td>
-<td>RopeMoveCurrentModule</td>
-</tr>
-<tr>
-<td>C-c r 1 p</td>
-<td>RopeModuleToPackage</td>
-</tr>
-<tr>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>C-c r o</td>
-<td>RopeOrganizeImports</td>
-</tr>
-<tr>
-<td>C-c r n [vfcmp]</td>
-<td>RopeGenerate(Variable</td>
-</tr>
-<tr>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>C-c r a /</td>
-<td>RopeCodeAssist</td>
-</tr>
-<tr>
-<td>C-c r a g</td>
-<td>RopeGotoDefinition</td>
-</tr>
-<tr>
-<td>C-c r a d</td>
-<td>RopeShowDoc</td>
-</tr>
-<tr>
-<td>C-c r a f</td>
-<td>RopeFindOccurrences</td>
-</tr>
-<tr>
-<td>C-c r a ?</td>
-<td>RopeLuckyAssist</td>
-</tr>
-<tr>
-<td>C-c r a j</td>
-<td>RopeJumpToGlobal</td>
-</tr>
-<tr>
-<td>C-c r a c</td>
-<td>RopeShowCalltip</td>
-</tr>
-<tr>
-<td> </td>
-<td>RopeAnalyzeModule</td>
-</tr>
-<tr>
-<td> </td>
-<td>RopeAutoImport</td>
-</tr>
-<tr>
-<td> </td>
-<td>RopeGenerateAutoimportCache</td>
-</tr>
-</tbody>
-</table>
+<p>| Key               | Command                                                  |
+| ----------------- | -------------------------------------------------------- | --------------------------------- |
+| C-x p o           | RopeOpenProject                                          | Synchronize                       |
+| C-x p k           | RopeCloseProject                                         | CloseProject                      |
+| C-x p f           | NOT USING RopeFindFile                                   |
+| C-x p 4 f         | NOT USING RopeFindFileOtherWindow                        |
+| C-x p u           | RopeUndo                                                 | NOT used, works with builtin undo |
+| C-x p r           | RopeRedo                                                 | NOT used, works with builtin redo |
+| C-x p c           | RopeProjectConfig                                        | NOT USED                          |
+| C-x p n [mpfd]  | RopeCreate(Module|Package|File|Directory)             | Same                              |
+|                   | RopeWriteProject                                         |
+|                   |                                                          |
+| C-c r r           | RopeRename                                               | Rename                            |
+| C-c r l           | RopeExtractVariable                                      | IntroduceVariable                 |
+| C-c r m           | RopeExtractMethod                                        | ExtractMethod                     |
+| C-c r i           | RopeInline                                               | Inline                            |
+| C-c r v           | RopeMove                                                 | Move                              |
+| C-c r x           | RopeRestructure                                          |
+| C-c r u           | RopeUseFunction                                          |
+| C-c r f           | RopeIntroduceFactory                                     |
+| C-c r s           | RopeChangeSignature                                      |
+| C-c r 1 r         | RopeRenameCurrentModule                                  |
+| C-c r 1 v         | RopeMoveCurrentModule                                    |
+| C-c r 1 p         | RopeModuleToPackage                                      |
+|                   |                                                          |
+| C-c r o           | RopeOrganizeImports                                      | OrganizeImports                   |
+| C-c r n [vfcmp] | RopeGenerate(Variable|Function|Class|Module|Package) |
+|                   |                                                          |
+| C-c r a /         | RopeCodeAssist                                           |
+| C-c r a g         | RopeGotoDefinition                                       |
+| C-c r a d         | RopeShowDoc                                              |
+| C-c r a f         | RopeFindOccurrences                                      |
+| C-c r a ?         | RopeLuckyAssist                                          |
+| C-c r a j         | RopeJumpToGlobal                                         |
+| C-c r a c         | RopeShowCalltip                                          |
+|                   | RopeAnalyzeModule                                        |
+|                   | RopeAutoImport                                           |
+|                   | RopeGenerateAutoimportCache                              |</p>
 <h2 id="code-autocompletion">Code autocompletion</h2>
 <ul>
 <li>
@@ -576,8 +483,8 @@ a vertical split with <code>C-v</code>, a horizontal split with <code>C-x</code>
 <ul>
 <li>
 <p>[x] auto-import:
-    neovim: autocomplete or insert mode and press <code>&lt;c-space&gt;</code>
-    pycharm: type and press <code>&lt;c-space&gt;&lt;c-space&gt;</code></p>
+      neovim: autocomplete or insert mode and press <code>&lt;c-space&gt;</code>
+      pycharm: type and press <code>&lt;c-space&gt;&lt;c-space&gt;</code></p>
 </li>
 <li>
 <p>[ ] <a href="https://github.com/tjdevries/config_manager/blob/78608334a7803a0de1a08a9a4bd1b03ad2a5eb11/xdg_config/nvim/after/plugin/dap.lua" class="external-link">https://github.com/tjdevries/config_manager/blob/78608334a7803a0de1a08a9a4bd1b03ad2a5eb11/xdg_config/nvim/after/plugin/dap.lua</a></p>
@@ -646,7 +553,7 @@ a vertical split with <code>C-v</code>, a horizontal split with <code>C-x</code>
 <p>[ ] coverage test</p>
 </li>
 <li>
-<p>[ ] generate test</p>
+<p>[ ] generate test, AI-test generate?</p>
 </li>
 <li>
 <p>[ ] run group of tests, pytest cwd?</p>
@@ -674,8 +581,12 @@ decided use only neovim/vim-fugitive for VCS work. Also, this will help me to
 switch into Neovim/Vim easily.</p>
 <h3 id="fugitive">Fugitive</h3>
 <ul>
-<li>[ ] Fugitive.lua keybindings</li>
-<li>[ ] Control size of git status window</li>
+<li>
+<p>[ ] Fugitive.lua keybindings</p>
+</li>
+<li>
+<p>[ ] Control size of git status window</p>
+</li>
 </ul>
 <p><code>:Gwrite</code>::Stage current file</p>
 <p><code>:Gread</code>::Checkout current file</p>
@@ -735,8 +646,8 @@ switch into Neovim/Vim easily.</p>
 </li>
 <li>
 <p>[x] stage/unstage (add/reset) file, works in visual mode too (multiple files)
-?
-<code>-</code></p>
+      ?
+      <code>-</code></p>
 </li>
 <li>
 <p>[x] open file in the window below (git status)::<code>&lt;cr&gt;</code></p>
@@ -769,7 +680,7 @@ switch into Neovim/Vim easily.</p>
 <p>[ ] czA Apply topmost stash, or stash@{count}.</p>
 </li>
 <li>
-<p>[ ] telescope git... Telescope git_...</p>
+<p>[ ] grep in VCS repo history</p>
 </li>
 <li>
 <p>[x] Push changes::<code>&lt;leader&gt;p</code></p>
@@ -785,14 +696,15 @@ switch into Neovim/Vim easily.</p>
 </li>
 <li>
 <p>[ ] cherry-picking commit
-<a href="https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button" class="external-link">https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button</a></p>
+      <a href="https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button" class="external-link">https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button</a></p>
 </li>
 <li>
 <p>[ ] <a href="https://vi.stackexchange.com/questions/tagged/plugin-fugitive" class="external-link">https://vi.stackexchange.com/questions/tagged/plugin-fugitive</a></p>
 </li>
-<li>
-<p>[ ] gitsigns.nvim - overkill? vim fugitive is enough?</p>
-</li>
+</ul>
+<h3 id="git-signs">Git Signs</h3>
+<ul>
+<li>[ ] <code>:h gitsigns.txt</code></li>
 </ul>
 <h2 id="custom">Custom</h2>
 <ul>
@@ -800,9 +712,6 @@ switch into Neovim/Vim easily.</p>
 <p>[ ] quick switch to terminal
       Ctrl-Z while editing in vim to send it to background, do your thing on the terminal and use fg at any time to bring up vim again.
       C-\ switch to terminal</p>
-</li>
-<li>
-<p>[ ] nvim term help/video tutor</p>
 </li>
 <li>
 <p>[x] telescope command_history::<code>&lt;leader&gt;fc</code> n*</p>
@@ -817,22 +726,19 @@ switch into Neovim/Vim easily.</p>
 <p>[x] open git commit UI, git status::<code>&lt;Leader&gt;gg</code></p>
 </li>
 <li>
-<p>[ ] jump to source from git history O or o</p>
+<p>[x] show diff from git history::<code>Return</code>, in <code>Pycharm</code> it's <code>Ctrl+D</code> *</p>
+</li>
+<li>
+<p>[x] open fugitive object in new split::<code>o</code> or <code>O</code> n*</p>
 </li>
 <li>
 <p>[x] diagnostics <code>&lt;Leader&gt;vd</code></p>
 </li>
 <li>
-<p>[ ] rename leader-v-r-n</p>
+<p>[x] rename object (using LSP):<code>&lt;Leader&gt;vrn</code></p>
 </li>
 <li>
 <p>[ ] add/remove/list remove dynamic workspace folders leader w a, leader w r, leader w l</p>
-</li>
-<li>
-<p>[ ] permanent bookmarks, marks, using viminfo?</p>
-</li>
-<li>
-<p>[ ] search in git repo (telescope-git)</p>
 </li>
 <li>
 <p>[ ] list active buffers, to switch c-a-p</p>
@@ -840,10 +746,8 @@ switch into Neovim/Vim easily.</p>
 <li>
 <p>[ ] structure view :TSPlaygroundToggle</p>
 </li>
-<li>
-<p>[ ] linter integration, <a href="https://github.com/astral-sh/ruff-lsp" class="external-link">https://github.com/astral-sh/ruff-lsp</a></p>
-</li>
 </ul>
+<h2 id="netrw">netrw</h2>
 <h2 id="sql">SQL</h2>
 <ul>
 <li>[ ] connect and open database console</li>
@@ -860,18 +764,26 @@ switch into Neovim/Vim easily.</p>
 </ul>
 <h2 id="vim-surround">Vim surround</h2>
 <ul>
-<li>[x] surr*ound_words             ysiw)           (surround_words)</li>
-<li>[x] *make strings               ys$"            "make strings"</li>
-<li>[x] [delete ar*ound me!]        ds]             delete around me!</li>
-<li>[x] remove <b>HTML t*ags</b>    dst             remove HTML tags</li>
-<li>[x] 'change quot*es'            cs'"            "change quotes"</li>
-<li>[x] <b>or tag* types</b>        csth1<CR>       <h1>or tag types</h1> n*</li>
-<li>[x] delete(functi*on calls)     dsf             function calls       n*</li>
+<li>[x] surr*ound_words ysiw) (surround_words)</li>
+<li>[x] *make strings ys$" "make strings"</li>
+<li>[x] [delete ar*ound me!] ds] delete around me!</li>
+<li>[x] remove <b>HTML t*ags</b> dst remove HTML tags</li>
+<li>[x] 'change quot*es' cs'" "change quotes"</li>
+<li>[x] <b>or tag* types</b> csth1<CR> <h1>or tag types</h1> n*</li>
+<li>[x] delete(functi*on calls) dsf function calls n*</li>
 </ul>
 <h2 id="js-debugging-browser">JS debugging (browser)</h2>
 <ul>
 <li>[ ] Probably easily just use chrome built-in debugger/sourcemaps</li>
 <li>[ ] <a href="https://stackoverflow.com/questions/71810002/how-to-configure-the-dap-debugger-under-neovim-for-typescript" class="external-link">https://stackoverflow.com/questions/71810002/how-to-configure-the-dap-debugger-under-neovim-for-typescript</a></li>
+<li>[ ] <a href="https://github.com/mxsdev/nvim-dap-vscode-js/issues/14" class="external-link">https://github.com/mxsdev/nvim-dap-vscode-js/issues/14</a></li>
+</ul>
+<h2 id="learn">Learn</h2>
+<ul>
+<li>[ ] <code>:h fugitive.txt</code></li>
+<li>[ ] <code>:h lua-guide</code></li>
+<li>[ ] <code>:h terminal</code></li>
+<li>[ ] <code>:h</code></li>
 </ul>
 <h2 id="code-style">Code style</h2>
 <ul>
@@ -888,6 +800,8 @@ switch into Neovim/Vim easily.</p>
 <li>[ ] new scratch file <code>:enew</code></li>
 <li>[ ] execute scratch file</li>
 <li>[ ] execute current file (open externally) leader o or leader O (run using xdg-open)</li>
+<li>[ ] <a href="https://github.com/stevearc/aerial.nvim" class="external-link">https://github.com/stevearc/aerial.nvim</a></li>
+<li>[ ] <a href="https://learnvim.irian.to/basics/fold" class="external-link">https://learnvim.irian.to/basics/fold</a></li>
 </ul></div>
 <div class="note-footer">
 <div class="backlinks">
@@ -908,13 +822,13 @@ switch into Neovim/Vim easily.</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A109562931661011484375776531746178840279{level}" class="graph_div"></div>
+    <div id="A313052276557381253773957681865928142063{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B109562931661011484375776531746178840279{level}" level="{level}" note_temp_id="109562931661011484375776531746178840279" onclick="window.ObsHtmlGraph.run(this, '109562931661011484375776531746178840279', 'my editing workflow');">
+        <button class="graph_button graph_show_button" id="B313052276557381253773957681865928142063{level}" level="{level}" note_temp_id="313052276557381253773957681865928142063" onclick="window.ObsHtmlGraph.run(this, '313052276557381253773957681865928142063', 'my editing workflow');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C109562931661011484375776531746178840279{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C313052276557381253773957681865928142063{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

@@ -20,6 +20,14 @@ I n daily life I use [pycharm](./pycharm.md) and [neovim (text editor)](./neovim
 
 Maybe in near future I will switch to use only neovim.
 
+
+- [ ] complete VSC
+- [ ] complete refactoring
+- [ ] complete debugging
+- [ ] complete testing
+- [ ] complete git
+- [ ] complete snippets
+
 ## Built-in maps
 
 Insert new line above/below::`[<space>`, `]<space>`
@@ -39,9 +47,6 @@ Insert new line above/below::`[<space>`, `]<space>`
 - [x] locate file in file manager::`<leader>pv`
 
 
-- [x] go to file::`<m-p>`
-
-
 - [x] recent files, Telescope old files + CWD::`<m-e>`
 
 
@@ -49,6 +54,9 @@ Insert new line above/below::`[<space>`, `]<space>`
 
 
 - [x] find file, with history and fuzzy search::`M-p`
+
+
+- [x] telescope resume::`<m-P>` n*
 
 ## Code navigation
 
@@ -71,17 +79,32 @@ Insert new line above/below::`[<space>`, `]<space>`
 - [x] hover help::`K`
 
 
-- [ ] external documentation integration
-      leader-zw search word
-      gz <Plug>ZVOperator
-      leader>z <Plug>ZVVisSelection
-      <leader><leader>z <Plug>ZVKeyDocset
+- [x] zeavim word under cursor or selection::`<leader>zh` In pycharm works only
+  selection.
+
+
+- [x] zeavim search motion::`gz[motion]` n\*
+
+
+- [x] zeavim select doc-set and query::`<leader><leader>z` n\*
 
 
 - [x] go to previous/current file::`c-^`
 
 
 - [x] go to previous/next function hunk::`[[`/`]]`
+- [x] go to link::`gx`
+- [x] selection bold::`<C-b>`
+- [x] selection italic::`<C-i>`
+- [x] selection code::`<C-e>`
+- [x] selection link::`<C-k>`
+- [x] renumber list items::`gN`, using `bullets.vim` n\*
+- [x] toggle checkbox::`<leader>zt` n*
+- [x] bullet demote::`<C-t>` or `>>` or `>` in visual mode
+- [x] bullet promote::`<C-d>` or `<<` or `<` in visual mode
+- [x] URL to markdown > clipboard > paste::`<leader>pl` n\*
+- [x] HTML to markdown > clipboard > paste::`<leader>ph` n\*
+
 
 ### Harpoon n\*
 
@@ -100,7 +123,7 @@ Insert new line above/below::`[<space>`, `]<space>`
 ## Code editing
 
 
-- [ ] code folding::`zo/zc/zr` \*
+- [x] code folding::`zo/zc/zr`
 
 
 - [x] comment line::`gcc`
@@ -127,33 +150,35 @@ Insert new line above/below::`[<space>`, `]<space>`
 
 
 - [x] from the quick-menu, open a file in splits
-?
-a vertical split with `C-v`, a horizontal split with `C-x`, a new tab with `C-t`
+      ?
+      a vertical split with `C-v`, a horizontal split with `C-x`, a new tab with `C-t`
 
 
 - [ ] black integration on_save, pre_commit
+- [ ] linter integration, [https://github.com/astral-sh/ruff-lsp](https://github.com/astral-sh/ruff-lsp)
 
 ### Rope
+
 
 - [ ] [https://github.com/python-rope/ropevim#keybinding](https://github.com/python-rope/ropevim#keybinding)
 
 | Key               | Command                                                  |
-|-------------------|----------------------------------------------------------|
-| C-x p o           | RopeOpenProject | Synchronize                            |
-| C-x p k           | RopeCloseProject | CloseProject
-| C-x p f           | NOT USING RopeFindFile                                              |
-| C-x p 4 f         | NOT USING RopeFindFileOtherWindow                                  |
-| C-x p u           | RopeUndo | NOT used, works with builtin undo                                                |
-| C-x p r           | RopeRedo | NOT used, works with builtin redo                                                 |
-| C-x p c           | RopeProjectConfig | NOT USED                                       |
-| C-x p n \[mpfd\]  | RopeCreate(Module|Package|File|Directory) | Same            |
+| ----------------- | -------------------------------------------------------- | --------------------------------- |
+| C-x p o           | RopeOpenProject                                          | Synchronize                       |
+| C-x p k           | RopeCloseProject                                         | CloseProject                      |
+| C-x p f           | NOT USING RopeFindFile                                   |
+| C-x p 4 f         | NOT USING RopeFindFileOtherWindow                        |
+| C-x p u           | RopeUndo                                                 | NOT used, works with builtin undo |
+| C-x p r           | RopeRedo                                                 | NOT used, works with builtin redo |
+| C-x p c           | RopeProjectConfig                                        | NOT USED                          |
+| C-x p n \[mpfd\]  | RopeCreate(Module|Package|File|Directory)             | Same                              |
 |                   | RopeWriteProject                                         |
 |                   |                                                          |
-| C-c r r           | RopeRename | Rename                                      |
-| C-c r l           | RopeExtractVariable | IntroduceVariable                                      |
-| C-c r m           | RopeExtractMethod | ExtractMethod                                       |
-| C-c r i           | RopeInline | Inline                                              |
-| C-c r v           | RopeMove  | Move                                               |
+| C-c r r           | RopeRename                                               | Rename                            |
+| C-c r l           | RopeExtractVariable                                      | IntroduceVariable                 |
+| C-c r m           | RopeExtractMethod                                        | ExtractMethod                     |
+| C-c r i           | RopeInline                                               | Inline                            |
+| C-c r v           | RopeMove                                                 | Move                              |
 | C-c r x           | RopeRestructure                                          |
 | C-c r u           | RopeUseFunction                                          |
 | C-c r f           | RopeIntroduceFactory                                     |
@@ -162,7 +187,7 @@ a vertical split with `C-v`, a horizontal split with `C-x`, a new tab with `C-t`
 | C-c r 1 v         | RopeMoveCurrentModule                                    |
 | C-c r 1 p         | RopeModuleToPackage                                      |
 |                   |                                                          |
-| C-c r o           | RopeOrganizeImports|OrganizeImports                                      |
+| C-c r o           | RopeOrganizeImports                                      | OrganizeImports                   |
 | C-c r n \[vfcmp\] | RopeGenerate(Variable|Function|Class|Module|Package) |
 |                   |                                                          |
 | C-c r a /         | RopeCodeAssist                                           |
@@ -175,7 +200,6 @@ a vertical split with `C-v`, a horizontal split with `C-x`, a new tab with `C-t`
 |                   | RopeAnalyzeModule                                        |
 |                   | RopeAutoImport                                           |
 |                   | RopeGenerateAutoimportCache                              |
-
 
 ## Code autocompletion
 
@@ -195,8 +219,8 @@ a vertical split with `C-v`, a horizontal split with `C-x`, a new tab with `C-t`
 
 
 - [x] auto-import:
-    neovim: autocomplete or insert mode and press `<c-space>`
-    pycharm: type and press `<c-space><c-space>`
+      neovim: autocomplete or insert mode and press `<c-space>`
+      pycharm: type and press `<c-space><c-space>`
 
 
 - [ ] [https://github.com/tjdevries/config_manager/blob/78608334a7803a0de1a08a9a4bd1b03ad2a5eb11/xdg_config/nvim/after/plugin/dap.lua](https://github.com/tjdevries/config_manager/blob/78608334a7803a0de1a08a9a4bd1b03ad2a5eb11/xdg_config/nvim/after/plugin/dap.lua)
@@ -265,7 +289,7 @@ a vertical split with `C-v`, a horizontal split with `C-x`, a new tab with `C-t`
 - [ ] coverage test
 
 
-- [ ] generate test
+- [ ] generate test, AI-test generate?
 
 
 - [ ] run group of tests, pytest cwd?
@@ -282,7 +306,7 @@ a vertical split with `C-v`, a horizontal split with `C-x`, a new tab with `C-t`
 - [x] go to next/previous error::`[d` `]d`
 
 
-- [x] go to file with error (under cursor)::`gf` or `gF` n*
+- [x] go to file with error (under cursor)::`gf` or `gF` n\*
 
 ## VCS n\*
 
@@ -291,11 +315,12 @@ even not easy to implement same workflow like in neovim/vim-fugitive). So I
 decided use only neovim/vim-fugitive for VCS work. Also, this will help me to
 switch into Neovim/Vim easily.
 
-
 ### Fugitive
 
 
 - [ ] Fugitive.lua keybindings
+
+
 - [ ] Control size of git status window
 
 `:Gwrite`::Stage current file
@@ -364,8 +389,8 @@ Open autocomplete in commit buffer::`C-n`
 
 
 - [x] stage/unstage (add/reset) file, works in visual mode too (multiple files)
-?
-`-`
+      ?
+      `-`
 
 
 - [x] open file in the window below (git status)::`<cr>`
@@ -398,7 +423,7 @@ Open autocomplete in commit buffer::`C-n`
 - [ ] czA Apply topmost stash, or stash@{count}.
 
 
-- [ ] telescope git... Telescope git\_...
+- [ ] grep in VCS repo history
 
 
 - [x] Push changes::`<leader>p`
@@ -414,13 +439,15 @@ Open autocomplete in commit buffer::`C-n`
 
 
 - [ ] cherry-picking commit
-[https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button](https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
+      [https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button](https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
 
 
 - [ ] [https://vi.stackexchange.com/questions/tagged/plugin-fugitive](https://vi.stackexchange.com/questions/tagged/plugin-fugitive)
 
+### Git Signs
 
-- [ ] gitsigns.nvim - overkill? vim fugitive is enough?
+
+- [ ] `:h gitsigns.txt`
 
 ## Custom
 
@@ -428,9 +455,6 @@ Open autocomplete in commit buffer::`C-n`
 - [ ] quick switch to terminal
       Ctrl-Z while editing in vim to send it to background, do your thing on the terminal and use fg at any time to bring up vim again.
       C-\ switch to terminal
-
-
-- [ ] nvim term help/video tutor
 
 
 - [x] telescope command_history::`<leader>fc` n\*
@@ -445,22 +469,19 @@ Open autocomplete in commit buffer::`C-n`
 - [x] open git commit UI, git status::`<Leader>gg`
 
 
-- [ ] jump to source from git history O or o
+- [x] show diff from git history::`Return`, in `Pycharm` it's `Ctrl+D` *
+
+
+- [x] open fugitive object in new split::`o` or `O` n\*
 
 
 - [x] diagnostics `<Leader>vd`
 
 
-- [ ] rename leader-v-r-n
+- [x] rename object (using LSP):`<Leader>vrn`
 
 
 - [ ] add/remove/list remove dynamic workspace folders leader w a, leader w r, leader w l
-
-
-- [ ] permanent bookmarks, marks, using viminfo?
-
-
-- [ ] search in git repo (telescope-git)
 
 
 - [ ] list active buffers, to switch c-a-p
@@ -469,7 +490,7 @@ Open autocomplete in commit buffer::`C-n`
 - [ ] structure view :TSPlaygroundToggle
 
 
-- [ ] linter integration, [https://github.com/astral-sh/ruff-lsp](https://github.com/astral-sh/ruff-lsp)
+## netrw
 
 ## SQL
 
@@ -487,19 +508,28 @@ Open autocomplete in commit buffer::`C-n`
 ## Vim surround
 
 
-- [x] surr*ound_words             ysiw)           (surround_words)
-- [x] *make strings               ys$"            "make strings"
-- [x] [delete ar*ound me!]        ds]             delete around me!
-- [x] remove <b>HTML t*ags</b>    dst             remove HTML tags
-- [x] 'change quot*es'            cs'"            "change quotes"
-- [x] <b>or tag* types</b>        csth1<CR>       <h1>or tag types</h1> n\*
-- [x] delete(functi*on calls)     dsf             function calls       n\*
+- [x] surr\*ound_words ysiw) (surround_words)
+- [x] \*make strings ys$" "make strings"
+- [x] [delete ar\*ound me!] ds] delete around me!
+- [x] remove <b>HTML t\*ags</b> dst remove HTML tags
+- [x] 'change quot\*es' cs'" "change quotes"
+- [x] <b>or tag\* types</b> csth1<CR> <h1>or tag types</h1> n\*
+- [x] delete(functi\*on calls) dsf function calls n\*
 
 ## JS debugging (browser)
 
 
 - [ ] Probably easily just use chrome built-in debugger/sourcemaps
 - [ ] [https://stackoverflow.com/questions/71810002/how-to-configure-the-dap-debugger-under-neovim-for-typescript](https://stackoverflow.com/questions/71810002/how-to-configure-the-dap-debugger-under-neovim-for-typescript)
+- [ ] [https://github.com/mxsdev/nvim-dap-vscode-js/issues/14](https://github.com/mxsdev/nvim-dap-vscode-js/issues/14)
+
+## Learn
+
+
+- [ ] `:h fugitive.txt`
+- [ ] `:h lua-guide`
+- [ ] `:h terminal`
+- [ ] `:h`
 
 ## Code style
 
@@ -519,3 +549,5 @@ Open autocomplete in commit buffer::`C-n`
 - [ ] new scratch file `:enew`
 - [ ] execute scratch file
 - [ ] execute current file (open externally) leader o or leader O (run using xdg-open)
+- [ ] [https://github.com/stevearc/aerial.nvim](https://github.com/stevearc/aerial.nvim)
+- [ ] [https://learnvim.irian.to/basics/fold](https://learnvim.irian.to/basics/fold)
