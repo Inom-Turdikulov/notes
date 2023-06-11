@@ -594,16 +594,9 @@ even not easy to implement same workflow like in neovim/vim-fugitive). So I
 decided use only neovim/vim-fugitive for VCS work. Also, this will help me to
 switch into Neovim/Vim easily.</p>
 <h3 id="fugitive">Fugitive</h3>
-<div class="codehilite"><pre><span></span><code><span class="n">vim</span><span class="p">.</span><span class="n">keymap</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="ss">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;&lt;space&gt;gb&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;:Git branch&lt;Space&gt;&quot;</span><span class="p">)</span>
-
-<span class="n">vim</span><span class="p">.</span><span class="n">keymap</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="ss">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;&lt;space&gt;gp&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;:Ggrep&lt;Space&gt;&quot;</span><span class="p">)</span>
-<span class="n">vim</span><span class="p">.</span><span class="n">keymap</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="ss">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;&lt;space&gt;gm&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;:Gmove&lt;Space&gt;&quot;</span><span class="p">)</span>
-<span class="n">vim</span><span class="p">.</span><span class="n">keymap</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="ss">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;&lt;space&gt;go&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;:Git checkout&lt;Space&gt;&quot;</span><span class="p">)</span>
-</code></pre></div>
-
 <ul>
 <li>
-<p>[ ] fugitive.lua keybindings</p>
+<p>[x] import fugitive.lua keybindings</p>
 </li>
 <li>
 <p>[x] Control size of git status window and allow toggle it n*</p>
@@ -616,6 +609,9 @@ switch into Neovim/Vim easily.</p>
 </li>
 </ul>
 <p>Index file represent <mark class="formatting_highlight">last committed</mark> version of file.</p>
+<p>Checkout branch::<code>&lt;leader&gt;go</code></p>
+<p>Grep in branch, <code>:Git grep</code>, but I prefer telescope <code>&lt;leader&gt;fs</code>::<code>&lt;leader&gt;gp</code></p>
+<p>Move current file to another location <code>:Git move</code>::<code>&lt;leader&gt;gm</code></p>
 <ul>
 <li>
 <p>[x] <code>:Gwrite</code> or <code>&lt;leader&gt;gw</code>
@@ -674,7 +670,7 @@ lines</p>
 <p>[ ] <a href="https://www.reddit.com/r/vim/comments/8h044y/comment/dym4eax/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button" class="external-link">https://www.reddit.com/r/vim/comments/8h044y/comment/dym4eax/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button</a></p>
 </li>
 <li>
-<p>[ ] list branches</p>
+<p>[x] list branches <code>&lt;leader&gt;gb</code> and then press =<code>&lt;tab&gt;</code>=.</p>
 </li>
 <li>
 <p>[ ] diff branches. Working tree diff.</p>
@@ -893,13 +889,13 @@ structure. n*</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A205230182057571339760503625801171285897{level}" class="graph_div"></div>
+    <div id="A263124893849856479349364805197481157766{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B205230182057571339760503625801171285897{level}" level="{level}" note_temp_id="205230182057571339760503625801171285897" onclick="window.ObsHtmlGraph.run(this, '205230182057571339760503625801171285897', 'my editing workflow');">
+        <button class="graph_button graph_show_button" id="B263124893849856479349364805197481157766{level}" level="{level}" note_temp_id="263124893849856479349364805197481157766" onclick="window.ObsHtmlGraph.run(this, '263124893849856479349364805197481157766', 'my editing workflow');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C205230182057571339760503625801171285897{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C263124893849856479349364805197481157766{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
