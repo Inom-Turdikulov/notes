@@ -390,7 +390,7 @@ n</em> - neovim only</p>
 <h2 id="code-editing">Code editing</h2>
 <ul>
 <li>
-<p>[ ] mark modified files
+<p>[x] mark modified files
 ?
 In neovim it's <code>[+]</code> in the status line, in pycharm it's mark in tab (requires
 enabling <code>Mark modified</code>).</p>
@@ -428,9 +428,13 @@ enabling <code>Mark modified</code>).</p>
       a vertical split with <code>C-v</code>, a horizontal split with <code>C-x</code>, a new tab with <code>C-t</code></p>
 </li>
 <li>
-<p>[ ] black integration on_save, pre_commit</p>
+<p>[x] black integration, for neovim using <code>efm</code> and <code>vim.lsp.buf.format()</code>. For
+      pycharm using plugin.</p>
 </li>
-<li>[ ] linter integration, <a href="https://github.com/astral-sh/ruff-lsp" class="external-link">https://github.com/astral-sh/ruff-lsp</a></li>
+<li>
+<p>[x] linter integration, <a href="https://github.com/astral-sh/ruff-lsp." class="external-link">https://github.com/astral-sh/ruff-lsp.</a> Added but with
+  zero configuration. n*</p>
+</li>
 </ul>
 <h3 id="rope">Rope</h3>
 <ul>
@@ -591,12 +595,6 @@ decided use only neovim/vim-fugitive for VCS work. Also, this will help me to
 switch into Neovim/Vim easily.</p>
 <h3 id="fugitive">Fugitive</h3>
 <div class="codehilite"><pre><span></span><code><span class="n">vim</span><span class="p">.</span><span class="n">keymap</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="ss">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;&lt;space&gt;gb&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;:Git branch&lt;Space&gt;&quot;</span><span class="p">)</span>
-<span class="n">vim</span><span class="p">.</span><span class="n">keymap</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="ss">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;&lt;space&gt;gc&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;:Git commit -v -q&lt;CR&gt;&quot;</span><span class="p">)</span>
-<span class="n">vim</span><span class="p">.</span><span class="n">keymap</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="ss">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;&lt;space&gt;gC&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;:Git commit -v -q --amend&lt;CR&gt;&quot;</span><span class="p">)</span>
-
-<span class="n">vim</span><span class="p">.</span><span class="n">keymap</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="ss">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;&lt;space&gt;gD&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;:Git diff&lt;CR&gt;&quot;</span><span class="p">)</span>
-
-<span class="n">vim</span><span class="p">.</span><span class="n">keymap</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="ss">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;&lt;space&gt;ga&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;:Git add -p&lt;CR&gt;&quot;</span><span class="p">)</span><span class="w">  </span><span class="o">--</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">patch</span>
 
 <span class="n">vim</span><span class="p">.</span><span class="n">keymap</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="ss">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;&lt;space&gt;gp&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;:Ggrep&lt;Space&gt;&quot;</span><span class="p">)</span>
 <span class="n">vim</span><span class="p">.</span><span class="n">keymap</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="ss">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;&lt;space&gt;gm&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;:Gmove&lt;Space&gt;&quot;</span><span class="p">)</span>
@@ -655,6 +653,9 @@ Checkout current file if it's working copy, or stage if it's index file</p>
 <p><code>:G commit</code>::Open split window with commit buffer</p>
 <p><code>:Gedit :&lt;path&gt;</code> or <code>Gedit :0</code> or <code>&lt;leader&gt;ge</code>::Open index file</p>
 <p><code>:Gdiffsplit</code> or <code>&lt;leader&gt;gd</code>::vimdiff against the index version of the file</p>
+<p><code>:Git diff</code> or <code>&lt;leader&gt;gD</code>::git diff against the last committed version of the file.</p>
+<p><code>:Git commit --ammend</code> or <code>&lt;leader&gt;ga</code>::amend last commit</p>
+<p><code>:Git add -p</code> or <code>&lt;leader&gt;gA</code>::run git add with patch</p>
 <ul>
 <li>
 <p>[x] to use <code>:diffget</code> on deleted lines, place cursor position <mark class="formatting_highlight">after</mark> that
@@ -892,13 +893,13 @@ structure. n*</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A269110223637234858038417427080250185182{level}" class="graph_div"></div>
+    <div id="A205230182057571339760503625801171285897{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B269110223637234858038417427080250185182{level}" level="{level}" note_temp_id="269110223637234858038417427080250185182" onclick="window.ObsHtmlGraph.run(this, '269110223637234858038417427080250185182', 'my editing workflow');">
+        <button class="graph_button graph_show_button" id="B205230182057571339760503625801171285897{level}" level="{level}" note_temp_id="205230182057571339760503625801171285897" onclick="window.ObsHtmlGraph.run(this, '205230182057571339760503625801171285897', 'my editing workflow');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C269110223637234858038417427080250185182{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C205230182057571339760503625801171285897{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
