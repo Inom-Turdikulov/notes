@@ -21,12 +21,13 @@ I n daily life I use [pycharm](./pycharm.md) and [neovim (text editor)](./neovim
 Maybe in near future I will switch to use only neovim.
 
 
-- [ ] complete VSC
-- [ ] complete refactoring
 - [ ] complete debugging
+- [ ] complete netrw
 - [ ] complete testing
-- [ ] complete git
-- [ ] complete snippets
+- [ ] complete refactoring
+- [ ] complete VSC
+- [ ] complete learn
+- [ ] complete other
 
 ## Built-in maps
 
@@ -45,6 +46,7 @@ Insert new line above/below::`[<space>`, `]<space>`
 
 
 - [x] locate file in file manager::`<leader>pv`
+- [x] locate file in telescope file manager::`<leader>pV`
 
 
 - [x] recent files, Telescope old files + CWD::`<m-e>`
@@ -56,7 +58,7 @@ Insert new line above/below::`[<space>`, `]<space>`
 - [x] find file, with history and fuzzy search::`M-p`
 
 
-- [x] telescope resume::`<m-P>` n*
+- [x] telescope resume::`<m-P>` n\*
 
 ## Code navigation
 
@@ -80,7 +82,7 @@ Insert new line above/below::`[<space>`, `]<space>`
 
 
 - [x] zeavim word under cursor or selection::`<leader>zh` In pycharm works only
-  selection.
+      selection.
 
 
 - [x] zeavim search motion::`gz[motion]` n\*
@@ -99,12 +101,11 @@ Insert new line above/below::`[<space>`, `]<space>`
 - [x] selection code::`<C-e>`
 - [x] selection link::`<C-k>`
 - [x] renumber list items::`gN`, using `bullets.vim` n\*
-- [x] toggle checkbox::`<leader>zt` n*
+- [x] toggle checkbox::`<leader>zt` n\*
 - [x] bullet demote::`<C-t>` or `>>` or `>` in visual mode
 - [x] bullet promote::`<C-d>` or `<<` or `<` in visual mode
 - [x] URL to markdown > clipboard > paste::`<leader>pl` n\*
 - [x] HTML to markdown > clipboard > paste::`<leader>ph` n\*
-
 
 ### Harpoon n\*
 
@@ -121,6 +122,12 @@ Insert new line above/below::`[<space>`, `]<space>`
 - [x] switch harpoon items::`c-t c-n c-m-t c-m-n`\*
 
 ## Code editing
+
+
+- [ ] mark modified files
+?
+In neovim it's `[+]` in the status line, in pycharm it's mark in tab (requires
+enabling `Mark modified`).
 
 
 - [x] code folding::`zo/zc/zr`
@@ -212,9 +219,6 @@ Insert new line above/below::`[<space>`, `]<space>`
 
 - [x] snippets in autocomplete
 
-
-- [ ] sync templates
-
 ## Code run/debugging/testing
 
 
@@ -223,7 +227,11 @@ Insert new line above/below::`[<space>`, `]<space>`
       pycharm: type and press `<c-space><c-space>`
 
 
-- [ ] [https://github.com/tjdevries/config_manager/blob/78608334a7803a0de1a08a9a4bd1b03ad2a5eb11/xdg_config/nvim/after/plugin/dap.lua](https://github.com/tjdevries/config_manager/blob/78608334a7803a0de1a08a9a4bd1b03ad2a5eb11/xdg_config/nvim/after/plugin/dap.lua)
+- [x] Review and pick something from [tjdervis-dap config](https://github.com/tjdevries/config_manager/blob/master/xdg_config/nvim/after/plugin/dap.lua)
+
+
+- [x] telescope-dap.nvim prefix::`<leader>dl`
+- [x] view breakpoints::`<leader>dlb`
 
 
 - [x] run debugger configuration::`<F5>`
@@ -260,9 +268,6 @@ Insert new line above/below::`[<space>`, `]<space>`
 
 
 - [ ] evaluate expression
-
-
-- [ ] view breakpoints
 
 
 - [x] run the nearest test::`<leader>dnn`
@@ -317,15 +322,58 @@ switch into Neovim/Vim easily.
 
 ### Fugitive
 
+    vim.keymap.set("n", "<space>gb", ":Git branch<Space>")
+    vim.keymap.set("n", "<space>gc", ":Git commit -v -q<CR>")
+    vim.keymap.set("n", "<space>gC", ":Git commit -v -q --amend<CR>")
 
-- [ ] Fugitive.lua keybindings
+    vim.keymap.set("n", "<space>gD", ":Git diff<CR>")
+
+    vim.keymap.set("n", "<space>ga", ":Git add -p<CR>")  -- add with patch
+
+    vim.keymap.set("n", "<space>gp", ":Ggrep<Space>")
+    vim.keymap.set("n", "<space>gm", ":Gmove<Space>")
+    vim.keymap.set("n", "<space>go", ":Git checkout<Space>")
 
 
-- [ ] Control size of git status window
+- [ ] fugitive.lua keybindings
 
-`:Gwrite`::Stage current file
 
-`:Gread`::Checkout current file
+- [x] Control size of git status window and allow toggle it n\*
+
+
+- [x] `:diffoff[!]`::Close diff window, can be used in combination with `:q[!]` to close
+
+
+- [x] `:diffupdate`::update diff window, can help with highlighting issues
+
+Index file represent ==last committed== version of file.
+
+
+- [x] `:Gwrite` or `<leader>gw`
+?
+Stage current file if it's working copy, or checkout if it's index file
+
+
+- [x] `:Gwrite` on working copy will ==stage file==.
+- [x] `:Gwrite` on index file will ==checkout file==.
+- [x] `:diffput` its like ==`:Gwrite`== but for diff window and works with hunks.
+- [x] `:diffput` on working copy will ==stage hunk==.
+- [x] `:diffput` on index file will ==checkout hunk==.
+- [x] `dp` is hotkey for ==`:diffput`==. `p` is stays for "put".
+
+
+- [x] `:Gread` or `<leader>gR`
+?
+Checkout current file if it's working copy, or stage if it's index file
+
+
+- [x] `:Gread` on working copy will ==checkout file==.
+- [x] `:Gread` on index file will ==stage file==.
+- [x] `:diffget` its like ==`:Gread`== but for diff window and works with hunks.
+- [x] `:diffget` on working copy will ==checkout hunk==.
+- [x] `:diffget` on index file will ==stage hunk==.
+- [x] `do` is hotkey for ==`:diffget`==. `o` is stays for "obtain".
+
 
 `:Gremove`::Remove current file
 
@@ -337,9 +385,13 @@ Open autocomplete in commit buffer::`C-n`
 
 `:G commit`::Open split window with commit buffer
 
-`:Gedit [<path>]`::Open index file
+`:Gedit :<path>` or `Gedit :0` or `<leader>ge`::Open index file
 
-`:Gdiffsplit`::vimdiff against the index version of the file
+`:Gdiffsplit` or `<leader>gd`::vimdiff against the index version of the file
+
+
+- [x] to use `:diffget` on deleted lines, place cursor position ==after== that
+lines
 
 
 - [ ] Perform a `:Gdiffsplit` on the file under the cursor.::`dd`
@@ -417,7 +469,7 @@ Open autocomplete in commit buffer::`C-n`
 - [ ] revert all changes, stash the changes `czz` Push stash. Pass a [count] of 1 to add `--include-untracked` or 2 to add `--all`.
 
 
-- [ ] stash changes
+- [ ] stash current changes
 
 
 - [ ] czA Apply topmost stash, or stash@{count}.
@@ -426,13 +478,10 @@ Open autocomplete in commit buffer::`C-n`
 - [ ] grep in VCS repo history
 
 
-- [x] Push changes::`<leader>p`
+- [x] Push changes::`<leader>p` (in fugitive mode for nvim) n\*
 
 
-- [ ] pull & merge
-
-
-- [ ] pull & rebase
+- [x] pull & rebase::`<leader>P` (in fugitive mode for nvim) n\*
 
 
 - [ ] push and create merge request `git push -o merge_request.create --set-upstream origin HEAD`
@@ -469,7 +518,7 @@ Open autocomplete in commit buffer::`C-n`
 - [x] open git commit UI, git status::`<Leader>gg`
 
 
-- [x] show diff from git history::`Return`, in `Pycharm` it's `Ctrl+D` *
+- [x] show diff from git history::`Return`, in `Pycharm` it's `Ctrl+D` \*
 
 
 - [x] open fugitive object in new split::`o` or `O` n\*
@@ -481,27 +530,31 @@ Open autocomplete in commit buffer::`C-n`
 - [x] rename object (using LSP):`<Leader>vrn`
 
 
-- [ ] add/remove/list remove dynamic workspace folders leader w a, leader w r, leader w l
+- [x] add/remove/list workspace folders
+?
+`<Leader>wa`, `<Leader>wr`, `<Leader>wl`. Pycharm alternative is project
+structure. n\*
 
 
-- [ ] list active buffers, to switch c-a-p
+- [x] telescope list active buffers::`<M-b>`
 
 
-- [ ] structure view :TSPlaygroundToggle
-
+- [x] parsed syntax-tree view::`:TSPlaygroundToggle` n\*
 
 ## netrw
 
 ## SQL
 
 
-- [ ] connect and open database console
-- [ ] execute query and show results
-- [ ] copy all results/row/column
-- [ ] toggle results view
+- [x] toggle DB UI::`<leader>qt`
+- [x] toggle last query info::`<leader>qi` n\*
+- [x] execute query::`<leader>S`
+- [x] [https://github.com/kristijanhusak/vim-dadbod-completion](https://github.com/kristijanhusak/vim-dadbod-completion)
+- [x] connect and open database console
+- [x] copy all results/row/column::`y[motion]`, `yic` n\*
 
 
-- [ ] [https://github.com/kristijanhusak/vim-dadbod-ui/blob/master/doc/dadbod-ui.txt](https://github.com/kristijanhusak/vim-dadbod-ui/blob/master/doc/dadbod-ui.txt)
+- [x] [https://github.com/kristijanhusak/vim-dadbod-ui/blob/master/doc/dadbod-ui.txt](https://github.com/kristijanhusak/vim-dadbod-ui/blob/master/doc/dadbod-ui.txt)
 - [ ] vim-dadbod-ui [https://github.com/kristijanhusak/vim-dadbod-ui#mappings](https://github.com/kristijanhusak/vim-dadbod-ui#mappings)
       full-featured database client, possible set values, load values from files, query, work with multiple databases
 
@@ -541,6 +594,10 @@ Open autocomplete in commit buffer::`C-n`
 
 - [ ] [https://github.com/conventional-commits/conventionalcommits.org](https://github.com/conventional-commits/conventionalcommits.org)
 
+## CLI tools
+
+- [ ] httpie
+
 ## Automation
 
 
@@ -551,3 +608,4 @@ Open autocomplete in commit buffer::`C-n`
 - [ ] execute current file (open externally) leader o or leader O (run using xdg-open)
 - [ ] [https://github.com/stevearc/aerial.nvim](https://github.com/stevearc/aerial.nvim)
 - [ ] [https://learnvim.irian.to/basics/fold](https://learnvim.irian.to/basics/fold)
+- [ ]

@@ -284,12 +284,13 @@ n</em> - neovim only</p>
 <a href="/kitty%20%28terminal%20emulator%29.html">kitty (terminal emulator)</a>.</p>
 <p>Maybe in near future I will switch to use only neovim.</p>
 <ul>
-<li>[ ] complete VSC</li>
-<li>[ ] complete refactoring</li>
 <li>[ ] complete debugging</li>
+<li>[ ] complete netrw</li>
 <li>[ ] complete testing</li>
-<li>[ ] complete git</li>
-<li>[ ] complete snippets</li>
+<li>[ ] complete refactoring</li>
+<li>[ ] complete VSC</li>
+<li>[ ] complete learn</li>
+<li>[ ] complete other</li>
 </ul>
 <h2 id="built-in-maps">Built-in maps</h2>
 <p>Insert new line above/below::<code>[&lt;space&gt;</code>, <code>]&lt;space&gt;</code></p>
@@ -306,6 +307,9 @@ n</em> - neovim only</p>
 </li>
 <li>
 <p>[x] locate file in file manager::<code>&lt;leader&gt;pv</code></p>
+</li>
+<li>
+<p>[x] locate file in telescope file manager::<code>&lt;leader&gt;pV</code></p>
 </li>
 <li>
 <p>[x] recent files, Telescope old files + CWD::<code>&lt;m-e&gt;</code></p>
@@ -342,7 +346,7 @@ n</em> - neovim only</p>
 </li>
 <li>
 <p>[x] zeavim word under cursor or selection::<code>&lt;leader&gt;zh</code> In pycharm works only
-  selection.</p>
+      selection.</p>
 </li>
 <li>
 <p>[x] zeavim search motion::<code>gz[motion]</code> n*</p>
@@ -385,6 +389,12 @@ n</em> - neovim only</p>
 </ul>
 <h2 id="code-editing">Code editing</h2>
 <ul>
+<li>
+<p>[ ] mark modified files
+?
+In neovim it's <code>[+]</code> in the status line, in pycharm it's mark in tab (requires
+enabling <code>Mark modified</code>).</p>
+</li>
 <li>
 <p>[x] code folding::<code>zo/zc/zr</code></p>
 </li>
@@ -475,9 +485,6 @@ n</em> - neovim only</p>
 <li>
 <p>[x] snippets in autocomplete</p>
 </li>
-<li>
-<p>[ ] sync templates</p>
-</li>
 </ul>
 <h2 id="code-run-debugging-testing">Code run/debugging/testing</h2>
 <ul>
@@ -487,7 +494,13 @@ n</em> - neovim only</p>
       pycharm: type and press <code>&lt;c-space&gt;&lt;c-space&gt;</code></p>
 </li>
 <li>
-<p>[ ] <a href="https://github.com/tjdevries/config_manager/blob/78608334a7803a0de1a08a9a4bd1b03ad2a5eb11/xdg_config/nvim/after/plugin/dap.lua" class="external-link">https://github.com/tjdevries/config_manager/blob/78608334a7803a0de1a08a9a4bd1b03ad2a5eb11/xdg_config/nvim/after/plugin/dap.lua</a></p>
+<p>[x] Review and pick something from <a href="https://github.com/tjdevries/config_manager/blob/master/xdg_config/nvim/after/plugin/dap.lua" class="external-link">tjdervis-dap config</a></p>
+</li>
+<li>
+<p>[x] telescope-dap.nvim prefix::<code>&lt;leader&gt;dl</code></p>
+</li>
+<li>
+<p>[x] view breakpoints::<code>&lt;leader&gt;dlb</code></p>
 </li>
 <li>
 <p>[x] run debugger configuration::<code>&lt;F5&gt;</code></p>
@@ -524,9 +537,6 @@ n</em> - neovim only</p>
 </li>
 <li>
 <p>[ ] evaluate expression</p>
-</li>
-<li>
-<p>[ ] view breakpoints</p>
 </li>
 <li>
 <p>[x] run the nearest test::<code>&lt;leader&gt;dnn</code></p>
@@ -580,24 +590,76 @@ even not easy to implement same workflow like in neovim/vim-fugitive). So I
 decided use only neovim/vim-fugitive for VCS work. Also, this will help me to
 switch into Neovim/Vim easily.</p>
 <h3 id="fugitive">Fugitive</h3>
+<div class="codehilite"><pre><span></span><code><span class="n">vim</span><span class="p">.</span><span class="n">keymap</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="ss">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;&lt;space&gt;gb&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;:Git branch&lt;Space&gt;&quot;</span><span class="p">)</span>
+<span class="n">vim</span><span class="p">.</span><span class="n">keymap</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="ss">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;&lt;space&gt;gc&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;:Git commit -v -q&lt;CR&gt;&quot;</span><span class="p">)</span>
+<span class="n">vim</span><span class="p">.</span><span class="n">keymap</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="ss">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;&lt;space&gt;gC&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;:Git commit -v -q --amend&lt;CR&gt;&quot;</span><span class="p">)</span>
+
+<span class="n">vim</span><span class="p">.</span><span class="n">keymap</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="ss">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;&lt;space&gt;gD&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;:Git diff&lt;CR&gt;&quot;</span><span class="p">)</span>
+
+<span class="n">vim</span><span class="p">.</span><span class="n">keymap</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="ss">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;&lt;space&gt;ga&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;:Git add -p&lt;CR&gt;&quot;</span><span class="p">)</span><span class="w">  </span><span class="o">--</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">patch</span>
+
+<span class="n">vim</span><span class="p">.</span><span class="n">keymap</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="ss">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;&lt;space&gt;gp&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;:Ggrep&lt;Space&gt;&quot;</span><span class="p">)</span>
+<span class="n">vim</span><span class="p">.</span><span class="n">keymap</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="ss">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;&lt;space&gt;gm&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;:Gmove&lt;Space&gt;&quot;</span><span class="p">)</span>
+<span class="n">vim</span><span class="p">.</span><span class="n">keymap</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="ss">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;&lt;space&gt;go&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;:Git checkout&lt;Space&gt;&quot;</span><span class="p">)</span>
+</code></pre></div>
+
 <ul>
 <li>
-<p>[ ] Fugitive.lua keybindings</p>
+<p>[ ] fugitive.lua keybindings</p>
 </li>
 <li>
-<p>[ ] Control size of git status window</p>
+<p>[x] Control size of git status window and allow toggle it n*</p>
+</li>
+<li>
+<p>[x] <code>:diffoff[!]</code>::Close diff window, can be used in combination with <code>:q[!]</code> to close</p>
+</li>
+<li>
+<p>[x] <code>:diffupdate</code>::update diff window, can help with highlighting issues</p>
 </li>
 </ul>
-<p><code>:Gwrite</code>::Stage current file</p>
-<p><code>:Gread</code>::Checkout current file</p>
+<p>Index file represent <mark class="formatting_highlight">last committed</mark> version of file.</p>
+<ul>
+<li>
+<p>[x] <code>:Gwrite</code> or <code>&lt;leader&gt;gw</code>
+?
+Stage current file if it's working copy, or checkout if it's index file</p>
+</li>
+<li>
+<p>[x] <code>:Gwrite</code> on working copy will <mark class="formatting_highlight">stage file</mark>.</p>
+</li>
+<li>[x] <code>:Gwrite</code> on index file will <mark class="formatting_highlight">checkout file</mark>.</li>
+<li>[x] <code>:diffput</code> its like <mark class="formatting_highlight"><code>:Gwrite</code></mark> but for diff window and works with hunks.</li>
+<li>[x] <code>:diffput</code> on working copy will <mark class="formatting_highlight">stage hunk</mark>.</li>
+<li>[x] <code>:diffput</code> on index file will <mark class="formatting_highlight">checkout hunk</mark>.</li>
+<li>
+<p>[x] <code>dp</code> is hotkey for <mark class="formatting_highlight"><code>:diffput</code></mark>. <code>p</code> is stays for "put".</p>
+</li>
+<li>
+<p>[x] <code>:Gread</code> or <code>&lt;leader&gt;gR</code>
+?
+Checkout current file if it's working copy, or stage if it's index file</p>
+</li>
+<li>
+<p>[x] <code>:Gread</code> on working copy will <mark class="formatting_highlight">checkout file</mark>.</p>
+</li>
+<li>[x] <code>:Gread</code> on index file will <mark class="formatting_highlight">stage file</mark>.</li>
+<li>[x] <code>:diffget</code> its like <mark class="formatting_highlight"><code>:Gread</code></mark> but for diff window and works with hunks.</li>
+<li>[x] <code>:diffget</code> on working copy will <mark class="formatting_highlight">checkout hunk</mark>.</li>
+<li>[x] <code>:diffget</code> on index file will <mark class="formatting_highlight">stage hunk</mark>.</li>
+<li>[x] <code>do</code> is hotkey for <mark class="formatting_highlight"><code>:diffget</code></mark>. <code>o</code> is stays for "obtain".</li>
+</ul>
 <p><code>:Gremove</code>::Remove current file</p>
 <p><code>:Gmove &lt;relative_path&gt;</code>::Move current file</p>
 <p>Open autocomplete in commit buffer::<code>C-n</code></p>
 <p><code>:G blame::</code>Open split window with blame buffer</p>
 <p><code>:G commit</code>::Open split window with commit buffer</p>
-<p><code>:Gedit [&lt;path&gt;]</code>::Open index file</p>
-<p><code>:Gdiffsplit</code>::vimdiff against the index version of the file</p>
+<p><code>:Gedit :&lt;path&gt;</code> or <code>Gedit :0</code> or <code>&lt;leader&gt;ge</code>::Open index file</p>
+<p><code>:Gdiffsplit</code> or <code>&lt;leader&gt;gd</code>::vimdiff against the index version of the file</p>
 <ul>
+<li>
+<p>[x] to use <code>:diffget</code> on deleted lines, place cursor position <mark class="formatting_highlight">after</mark> that
+lines</p>
+</li>
 <li>
 <p>[ ] Perform a <code>:Gdiffsplit</code> on the file under the cursor.::<code>dd</code></p>
 </li>
@@ -674,7 +736,7 @@ switch into Neovim/Vim easily.</p>
 <p>[ ] revert all changes, stash the changes <code>czz</code> Push stash. Pass a [count] of 1 to add <code>--include-untracked</code> or 2 to add <code>--all</code>.</p>
 </li>
 <li>
-<p>[ ] stash changes</p>
+<p>[ ] stash current changes</p>
 </li>
 <li>
 <p>[ ] czA Apply topmost stash, or stash@{count}.</p>
@@ -683,13 +745,10 @@ switch into Neovim/Vim easily.</p>
 <p>[ ] grep in VCS repo history</p>
 </li>
 <li>
-<p>[x] Push changes::<code>&lt;leader&gt;p</code></p>
+<p>[x] Push changes::<code>&lt;leader&gt;p</code> (in fugitive mode for nvim) n*</p>
 </li>
 <li>
-<p>[ ] pull &amp; merge</p>
-</li>
-<li>
-<p>[ ] pull &amp; rebase</p>
+<p>[x] pull &amp; rebase::<code>&lt;leader&gt;P</code> (in fugitive mode for nvim) n*</p>
 </li>
 <li>
 <p>[ ] push and create merge request <code>git push -o merge_request.create --set-upstream origin HEAD</code></p>
@@ -738,26 +797,31 @@ switch into Neovim/Vim easily.</p>
 <p>[x] rename object (using LSP):<code>&lt;Leader&gt;vrn</code></p>
 </li>
 <li>
-<p>[ ] add/remove/list remove dynamic workspace folders leader w a, leader w r, leader w l</p>
+<p>[x] add/remove/list workspace folders
+?
+<code>&lt;Leader&gt;wa</code>, <code>&lt;Leader&gt;wr</code>, <code>&lt;Leader&gt;wl</code>. Pycharm alternative is project
+structure. n*</p>
 </li>
 <li>
-<p>[ ] list active buffers, to switch c-a-p</p>
+<p>[x] telescope list active buffers::<code>&lt;M-b&gt;</code></p>
 </li>
 <li>
-<p>[ ] structure view :TSPlaygroundToggle</p>
+<p>[x] parsed syntax-tree view::<code>:TSPlaygroundToggle</code> n*</p>
 </li>
 </ul>
 <h2 id="netrw">netrw</h2>
 <h2 id="sql">SQL</h2>
 <ul>
-<li>[ ] connect and open database console</li>
-<li>[ ] execute query and show results</li>
-<li>[ ] copy all results/row/column</li>
+<li>[x] toggle DB UI::<code>&lt;leader&gt;qt</code></li>
+<li>[x] toggle last query info::<code>&lt;leader&gt;qi</code> n*</li>
+<li>[x] execute query::<code>&lt;leader&gt;S</code></li>
+<li>[x] <a href="https://github.com/kristijanhusak/vim-dadbod-completion" class="external-link">https://github.com/kristijanhusak/vim-dadbod-completion</a></li>
+<li>[x] connect and open database console</li>
 <li>
-<p>[ ] toggle results view</p>
+<p>[x] copy all results/row/column::<code>y[motion]</code>, <code>yic</code> n*</p>
 </li>
 <li>
-<p>[ ] <a href="https://github.com/kristijanhusak/vim-dadbod-ui/blob/master/doc/dadbod-ui.txt" class="external-link">https://github.com/kristijanhusak/vim-dadbod-ui/blob/master/doc/dadbod-ui.txt</a></p>
+<p>[x] <a href="https://github.com/kristijanhusak/vim-dadbod-ui/blob/master/doc/dadbod-ui.txt" class="external-link">https://github.com/kristijanhusak/vim-dadbod-ui/blob/master/doc/dadbod-ui.txt</a></p>
 </li>
 <li>[ ] vim-dadbod-ui <a href="https://github.com/kristijanhusak/vim-dadbod-ui#mappings" class="external-link">https://github.com/kristijanhusak/vim-dadbod-ui#mappings</a>
       full-featured database client, possible set values, load values from files, query, work with multiple databases</li>
@@ -793,6 +857,10 @@ switch into Neovim/Vim easily.</p>
 <ul>
 <li>[ ] <a href="https://github.com/conventional-commits/conventionalcommits.org" class="external-link">https://github.com/conventional-commits/conventionalcommits.org</a></li>
 </ul>
+<h2 id="cli-tools">CLI tools</h2>
+<ul>
+<li>[ ] httpie</li>
+</ul>
 <h2 id="automation">Automation</h2>
 <ul>
 <li>[ ] vim shell output actions... :h redir, !...|grep, r!... etc</li>
@@ -802,6 +870,7 @@ switch into Neovim/Vim easily.</p>
 <li>[ ] execute current file (open externally) leader o or leader O (run using xdg-open)</li>
 <li>[ ] <a href="https://github.com/stevearc/aerial.nvim" class="external-link">https://github.com/stevearc/aerial.nvim</a></li>
 <li>[ ] <a href="https://learnvim.irian.to/basics/fold" class="external-link">https://learnvim.irian.to/basics/fold</a></li>
+<li>[ ]</li>
 </ul></div>
 <div class="note-footer">
 <div class="backlinks">
@@ -822,13 +891,13 @@ switch into Neovim/Vim easily.</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A313052276557381253773957681865928142063{level}" class="graph_div"></div>
+    <div id="A22036720187618864129981931590911325993{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B313052276557381253773957681865928142063{level}" level="{level}" note_temp_id="313052276557381253773957681865928142063" onclick="window.ObsHtmlGraph.run(this, '313052276557381253773957681865928142063', 'my editing workflow');">
+        <button class="graph_button graph_show_button" id="B22036720187618864129981931590911325993{level}" level="{level}" note_temp_id="22036720187618864129981931590911325993" onclick="window.ObsHtmlGraph.run(this, '22036720187618864129981931590911325993', 'my editing workflow');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C313052276557381253773957681865928142063{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C22036720187618864129981931590911325993{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
