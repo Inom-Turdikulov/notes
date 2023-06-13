@@ -29,6 +29,8 @@ tags:
 
 # API
 
+To start with different config use `NVIM_APPNAME` env variable.
+
 # Programming language support
 
 # UI

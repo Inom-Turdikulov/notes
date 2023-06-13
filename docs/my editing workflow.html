@@ -283,13 +283,14 @@ n</em> - neovim only</p>
 <p>I n daily life I use <a href="/pycharm.html">pycharm</a> and <a href="/neovim%20%28text%20editor%29.html">neovim (text editor)</a> inside
 <a href="/kitty%20%28terminal%20emulator%29.html">kitty (terminal emulator)</a>.</p>
 <p>Maybe in near future I will switch to use only neovim.</p>
+<p>Some of the bindings can be changed, so this guide is not 100% actual.
+Better to check live bindings using telescope/config/etc.</p>
 <ul>
+<li>[ ] initialize netrw</li>
+<li>[ ] initialize VCS</li>
+<li>[ ] initialize testing</li>
 <li>[ ] initialize refactoring</li>
 <li>[ ] initialize debugging</li>
-<li>[ ] initialize VCS</li>
-<li>[ ] initialize netrw</li>
-<li>[ ] initialize testing</li>
-<li>[ ] initialize VSC</li>
 <li>[ ] initialize learn</li>
 <li>[ ] initialize other</li>
 </ul>
@@ -298,6 +299,11 @@ n</em> - neovim only</p>
 <h2 id="files-navigation">Files navigation</h2>
 <ul>
 <li>
+<p>[x] close all buffers except current and stay on original cursor position
+?
+<code>&lt;leader&gt;bD</code>, Use this: <code>:%bd\|e#\|bd#&lt;cr&gt;\|'"</code></p>
+</li>
+<li>
 <p>[x] <code>cd</code> to current file path::<code>&lt;leader&gt;z%</code> n*</p>
 </li>
 <li>
@@ -305,9 +311,6 @@ n</em> - neovim only</p>
 </li>
 <li>
 <p>[x] grep content in current project and open find toolbar::<code>&lt;leader&gt;fs</code></p>
-</li>
-<li>
-<p>[x] locate file in file manager::<code>&lt;leader&gt;pv</code></p>
 </li>
 <li>
 <p>[x] locate file in telescope file manager::<code>&lt;leader&gt;pV</code></p>
@@ -358,9 +361,10 @@ n</em> - neovim only</p>
 <li>
 <p>[x] go to previous/current file::<code>c-^</code></p>
 </li>
-<li>
-<p>[x] go to previous/next function hunk::<code>[[</code>/<code>]]</code></p>
-</li>
+</ul>
+<h3 id="markdown">Markdown</h3>
+<ul>
+<li>[x] go to previous/next function hunk::<code>[[</code>/<code>]]</code></li>
 <li>[x] go to link::<code>gx</code></li>
 <li>[x] selection bold::<code>&lt;C-b&gt;</code></li>
 <li>[x] selection italic::<code>&lt;C-i&gt;</code></li>
@@ -375,6 +379,11 @@ n</em> - neovim only</p>
 </ul>
 <h3 id="harpoon-n">Harpoon n*</h3>
 <ul>
+<li>
+<p>[ ] quick switch to terminal
+      Ctrl-Z while editing in vim to send it to background, do your thing on the terminal and use fg at any time to bring up vim again.
+      C-\ switch to terminal</p>
+</li>
 <li>
 <p>[x] add file into harpoon list::<code>leader-a</code></p>
 </li>
@@ -544,25 +553,7 @@ enabling <code>Mark modified</code>).</p>
 <p>[ ] evaluate expression</p>
 </li>
 <li>
-<p>[x] run the nearest test::<code>&lt;leader&gt;dnn</code></p>
-</li>
-<li>
-<p>[x] rerun the last test</p>
-</li>
-<li>
 <p>[ ] run current test file::<code>&lt;leader&gt;dnf</code> *</p>
-</li>
-<li>
-<p>[x] debug the nearest test::<code>&lt;leader&gt;ddc</code></p>
-</li>
-<li>
-<p>[x] open test results::<code>&lt;leader&gt;dno</code></p>
-</li>
-<li>
-<p>[x] show summary::<code>&lt;leader&gt;dns</code></p>
-</li>
-<li>
-<p>[x] toggle output panel::<code>&lt;leader&gt;dnt</code></p>
 </li>
 <li>
 <p>[ ] coverage test</p>
@@ -575,6 +566,24 @@ enabling <code>Mark modified</code>).</p>
 </li>
 <li>
 <p>[ ] CI/Reporting workflow</p>
+</li>
+<li>
+<p>[x] run the nearest test::<code>&lt;leader&gt;dnn</code></p>
+</li>
+<li>
+<p>[x] rerun the last test</p>
+</li>
+<li>
+<p>[x] debug the nearest test::<code>&lt;leader&gt;ddc</code></p>
+</li>
+<li>
+<p>[x] open test results::<code>&lt;leader&gt;dno</code></p>
+</li>
+<li>
+<p>[x] show summary::<code>&lt;leader&gt;dns</code></p>
+</li>
+<li>
+<p>[x] toggle output panel::<code>&lt;leader&gt;dnt</code></p>
 </li>
 <li>
 <p>[x] <a href="https://github.com/harrisoncramer/nvim/blob/main/lua/plugins/neotest.lua" class="external-link">neotest</a></p>
@@ -659,26 +668,7 @@ Checkout current file if it's working copy, or stage if it's index file</p>
 lines</p>
 </li>
 <li>
-<p>[ ] Perform a <code>:Gdiffsplit</code> on the file under the cursor.::<code>dd</code></p>
-</li>
-<li>
-<p>[ ] 1/5 <a href="http://vimcasts.org/blog/2011/05/the-fugitive-series/" class="external-link">http://vimcasts.org/blog/2011/05/the-fugitive-series/</a></p>
-</li>
-<li>
-<p>[ ] <a href="https://github.com/lewis6991/gitsigns.nvim" class="external-link">https://github.com/lewis6991/gitsigns.nvim</a></p>
-</li>
-<li>
-<p>[ ] <a href="https://www.reddit.com/r/vim/comments/8h044y/comment/dym4eax/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button" class="external-link">https://www.reddit.com/r/vim/comments/8h044y/comment/dym4eax/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button</a></p>
-</li>
-<li>
 <p>[x] list branches <code>&lt;leader&gt;gb</code> and then press =<code>&lt;tab&gt;</code>=.</p>
-</li>
-<li>
-<p>[ ] diff branches. Working tree diff.</p>
-</li>
-<li>
-<p>[ ] compare working tree with branch
-      git-diff or :Merginal</p>
 </li>
 <li>
 <p>[x] log git history of current file::<code>&lt;leader&gt;gl</code></p>
@@ -690,6 +680,25 @@ lines</p>
 <p>[x] <code>ds</code>::Perform a <code>:Ghdiffsplit</code> on the file under the cursor</p>
 </li>
 <li>
+<p>[ ] Perform a <code>:Gdiffsplit</code> on the file under the cursor.::<code>dd</code></p>
+</li>
+<li>
+<p>[ ] 2/5 <a href="http://vimcasts.org/blog/2011/05/the-fugitive-series/" class="external-link">http://vimcasts.org/blog/2011/05/the-fugitive-series/</a></p>
+</li>
+<li>
+<p>[ ] <a href="https://github.com/lewis6991/gitsigns.nvim" class="external-link">https://github.com/lewis6991/gitsigns.nvim</a></p>
+</li>
+<li>
+<p>[ ] <a href="https://www.reddit.com/r/vim/comments/8h044y/comment/dym4eax/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button" class="external-link">https://www.reddit.com/r/vim/comments/8h044y/comment/dym4eax/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button</a></p>
+</li>
+<li>
+<p>[ ] diff branches. Working tree diff.</p>
+</li>
+<li>
+<p>[ ] compare working tree with branch
+      git-diff or :Merginal</p>
+</li>
+<li>
 <p>[ ] <code>gt</code> - accept left side of diff</p>
 </li>
 <li>
@@ -697,6 +706,25 @@ lines</p>
 </li>
 <li>
 <p>[ ] accept left/right hunk in 3-way diff/merge conflict</p>
+</li>
+<li>
+<p>[ ] grep in VCS repo history</p>
+</li>
+<li>
+<p>[ ] cherry-picking commit
+      <a href="https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button" class="external-link">https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button</a></p>
+</li>
+<li>
+<p>[ ] <a href="https://vi.stackexchange.com/questions/tagged/plugin-fugitive" class="external-link">https://vi.stackexchange.com/questions/tagged/plugin-fugitive</a></p>
+</li>
+<li>
+<p>[x] stash the changes::<code>czz</code>, require staging changes before</p>
+</li>
+<li>
+<p>[x] Apply topmost stash::<code>cza</code></p>
+</li>
+<li>
+<p>[ ] push and create merge request::<code>&lt;leader&gt;T</code> in vim-fugitive buffer</p>
 </li>
 <li>
 <p>[x] get file local history/undotree::<code>&lt;leader&gt;u</code></p>
@@ -731,32 +759,10 @@ lines</p>
 <p>[x] unstage hunk::<code>u</code></p>
 </li>
 <li>
-<p>[ ] revert all changes, stash the changes <code>czz</code> Push stash. Pass a [count] of 1 to add <code>--include-untracked</code> or 2 to add <code>--all</code>.</p>
-</li>
-<li>
-<p>[ ] stash current changes</p>
-</li>
-<li>
-<p>[ ] czA Apply topmost stash, or stash@{count}.</p>
-</li>
-<li>
-<p>[ ] grep in VCS repo history</p>
-</li>
-<li>
 <p>[x] Push changes::<code>&lt;leader&gt;p</code> (in fugitive mode for nvim) n*</p>
 </li>
 <li>
 <p>[x] pull &amp; rebase::<code>&lt;leader&gt;P</code> (in fugitive mode for nvim) n*</p>
-</li>
-<li>
-<p>[ ] push and create merge request <code>git push -o merge_request.create --set-upstream origin HEAD</code></p>
-</li>
-<li>
-<p>[ ] cherry-picking commit
-      <a href="https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button" class="external-link">https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button</a></p>
-</li>
-<li>
-<p>[ ] <a href="https://vi.stackexchange.com/questions/tagged/plugin-fugitive" class="external-link">https://vi.stackexchange.com/questions/tagged/plugin-fugitive</a></p>
 </li>
 </ul>
 <h3 id="git-signs">Git Signs</h3>
@@ -765,11 +771,6 @@ lines</p>
 </ul>
 <h2 id="custom">Custom</h2>
 <ul>
-<li>
-<p>[ ] quick switch to terminal
-      Ctrl-Z while editing in vim to send it to background, do your thing on the terminal and use fg at any time to bring up vim again.
-      C-\ switch to terminal</p>
-</li>
 <li>
 <p>[x] telescope command_history::<code>&lt;leader&gt;fc</code> n*</p>
 </li>
@@ -808,6 +809,40 @@ structure. n*</p>
 </li>
 </ul>
 <h2 id="netrw">netrw</h2>
+<ul>
+<li>
+<p>[x] <a href="https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/" class="external-link">Using Netrw, vim's builtin file explorer</a></p>
+</li>
+<li>
+<p>[x] locate file in file manager::<code>&lt;leader&gt;pv</code> or <code>:Explore</code> or <code>:Ex</code></p>
+</li>
+<li>
+<p>[x] Explore variants:<code>:Vexplore</code>, <code>:Hexplore</code>, <code>:Texplore</code>, <code>:Sexplore</code></p>
+</li>
+<li>
+<p>[x] Open/parent directory/previous directory/add bookmark/most recent bookmark
+?
+<code>&lt;cr&gt;</code>, <code>-</code>, <code>u</code>, <code>mb</code>, <code>gb</code></p>
+</li>
+<li>
+<p>[ ] remove the most recent bookmark::<code>mB</code></p>
+</li>
+<li>[x] preview window/close preview window::<code>p</code>, <code>&lt;C-w&gt;z</code></li>
+<li>[x] toggle hidden files::<code>gh</code></li>
+<li>[x] create file::<code>%</code></li>
+<li>[x] rename (move) file::<code>R</code></li>
+<li>[x] Marks a file or directory::<code>mf</code></li>
+<li>[x] Clear marks in current buffer::<code>mF</code></li>
+<li>[x] Clear all marks::<code>mu</code></li>
+<li>[x] Assign the "target directory" used by the move and copy commands.::<code>mt</code></li>
+<li>[x] Assign target directory and copy in one command::<code>mtmc</code></li>
+<li>[x] Copy/move the marked files in the target directory.::<code>mc</code>, <code>mm</code></li>
+<li>[x] Runs an external command on the marked files.::<code>mx</code></li>
+<li>[x] Delete a file or an empty directory::<code>D</code></li>
+<li>[x] Delete a file or directory recursively::<code>mx</code> then <code>trash</code></li>
+<li>[x] Toggle banner::<code>I</code></li>
+<li>[x] List key mappings::<code>F1</code></li>
+</ul>
 <h2 id="sql">SQL</h2>
 <ul>
 <li>[x] toggle DB UI::<code>&lt;leader&gt;qt</code></li>
@@ -826,13 +861,13 @@ structure. n*</p>
 </ul>
 <h2 id="vim-surround">Vim surround</h2>
 <ul>
-<li>[x] surr*ound_words ysiw) (surround_words)</li>
-<li>[x] *make strings ys$" "make strings"</li>
-<li>[x] [delete ar*ound me!] ds] delete around me!</li>
-<li>[x] remove <b>HTML t*ags</b> dst remove HTML tags</li>
-<li>[x] 'change quot*es' cs'" "change quotes"</li>
-<li>[x] <b>or tag* types</b> csth1<CR> <h1>or tag types</h1> n*</li>
-<li>[x] delete(functi*on calls) dsf function calls n*</li>
+<li>[x] <code>surr*ound_words ysiw)</code> (surround_words)</li>
+<li>[x] <code>*make strings ys$"</code> "make strings"</li>
+<li>[x] <code>[delete ar*ound me!] ds]</code> delete around me!</li>
+<li>[x] remove <code>&lt;b&gt;HTML t*ags&lt;/b&gt; dst</code> remove HTML tags</li>
+<li>[x] change <code>quot*es' cs'"</code> "change quotes"</li>
+<li>[x] <code>&lt;b&gt;or tag* types&lt;/b&gt; csth1&lt;CR&gt;</code> <code>&lt;h1&gt;or tag types&lt;/h1&gt;</code> n*</li>
+<li>[x] <code>delete(functi*on calls) dsf</code> function calls n*</li>
 </ul>
 <h2 id="js-debugging-browser">JS debugging (browser)</h2>
 <ul>
@@ -843,9 +878,9 @@ structure. n*</p>
 <h2 id="learn">Learn</h2>
 <ul>
 <li>[x] <a href="https://jonathanmh.com/how-to-create-a-git-merge-conflict/" class="external-link">How to: Create a git Merge Conflict</a></li>
+<li>[ ] <code>:h terminal</code></li>
 <li>[ ] <code>:h fugitive.txt</code></li>
 <li>[ ] <code>:h lua-guide</code></li>
-<li>[ ] <code>:h terminal</code></li>
 <li>[ ] <code>:h</code></li>
 </ul>
 <h2 id="code-style">Code style</h2>
@@ -859,7 +894,7 @@ structure. n*</p>
 <h2 id="cli-tools">CLI tools</h2>
 <h2 id="automation">Automation</h2>
 <ul>
-<li>[ ] vim shell output actions... :h redir, !...|grep, r!... etc</li>
+<li>[ ] vim-shell output actions... <code>:h redir</code>, <code>!...|grep</code>, <code>r!...</code>, etc.</li>
 <li>[ ] <a href="https://github.com/tpope/vim-unimpaired" class="external-link">https://github.com/tpope/vim-unimpaired</a></li>
 <li>[ ] new scratch file <code>:enew</code></li>
 <li>[ ] execute scratch file</li>
@@ -886,13 +921,13 @@ structure. n*</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A306588028408875862788093145105806097509{level}" class="graph_div"></div>
+    <div id="A15944028627763761317665048090171885701{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B306588028408875862788093145105806097509{level}" level="{level}" note_temp_id="306588028408875862788093145105806097509" onclick="window.ObsHtmlGraph.run(this, '306588028408875862788093145105806097509', 'my editing workflow');">
+        <button class="graph_button graph_show_button" id="B15944028627763761317665048090171885701{level}" level="{level}" note_temp_id="15944028627763761317665048090171885701" onclick="window.ObsHtmlGraph.run(this, '15944028627763761317665048090171885701', 'my editing workflow');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C306588028408875862788093145105806097509{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C15944028627763761317665048090171885701{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

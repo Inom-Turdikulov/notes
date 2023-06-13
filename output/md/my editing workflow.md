@@ -20,13 +20,15 @@ I n daily life I use [pycharm](./pycharm.md) and [neovim (text editor)](./neovim
 
 Maybe in near future I will switch to use only neovim.
 
+Some of the bindings can be changed, so this guide is not 100% actual.
+Better to check live bindings using telescope/config/etc.
 
+
+- [ ] initialize netrw
+- [ ] initialize VCS
+- [ ] initialize testing
 - [ ] initialize refactoring
 - [ ] initialize debugging
-- [ ] initialize VCS
-- [ ] initialize netrw
-- [ ] initialize testing
-- [ ] initialize VSC
 - [ ] initialize learn
 - [ ] initialize other
 
@@ -35,6 +37,12 @@ Maybe in near future I will switch to use only neovim.
 Insert new line above/below::`[<space>`, `]<space>`
 
 ## Files navigation
+
+
+
+- [x] close all buffers except current and stay on original cursor position
+?
+`<leader>bD`, Use this: `:%bd\|e#\|bd#<cr>\|'"`
 
 
 - [x] `cd` to current file path::`<leader>z%` n\*
@@ -46,7 +54,6 @@ Insert new line above/below::`[<space>`, `]<space>`
 - [x] grep content in current project and open find toolbar::`<leader>fs`
 
 
-- [x] locate file in file manager::`<leader>pv`
 - [x] locate file in telescope file manager::`<leader>pV`
 
 
@@ -94,6 +101,8 @@ Insert new line above/below::`[<space>`, `]<space>`
 
 - [x] go to previous/current file::`c-^`
 
+### Markdown
+
 
 - [x] go to previous/next function hunk::`[[`/`]]`
 - [x] go to link::`gx`
@@ -109,6 +118,11 @@ Insert new line above/below::`[<space>`, `]<space>`
 - [x] HTML to markdown > clipboard > paste::`<leader>ph` n\*
 
 ### Harpoon n\*
+
+
+- [ ] quick switch to terminal
+      Ctrl-Z while editing in vim to send it to background, do your thing on the terminal and use fg at any time to bring up vim again.
+      C-\ switch to terminal
 
 
 - [x] add file into harpoon list::`leader-a`
@@ -275,25 +289,7 @@ enabling `Mark modified`).
 - [ ] evaluate expression
 
 
-- [x] run the nearest test::`<leader>dnn`
-
-
-- [x] rerun the last test
-
-
 - [ ] run current test file::`<leader>dnf` \*
-
-
-- [x] debug the nearest test::`<leader>ddc`
-
-
-- [x] open test results::`<leader>dno`
-
-
-- [x] show summary::`<leader>dns`
-
-
-- [x] toggle output panel::`<leader>dnt`
 
 
 - [ ] coverage test
@@ -306,6 +302,24 @@ enabling `Mark modified`).
 
 
 - [ ] CI/Reporting workflow
+
+
+- [x] run the nearest test::`<leader>dnn`
+
+
+- [x] rerun the last test
+
+
+- [x] debug the nearest test::`<leader>ddc`
+
+
+- [x] open test results::`<leader>dno`
+
+
+- [x] show summary::`<leader>dns`
+
+
+- [x] toggle output panel::`<leader>dnt`
 
 
 - [x] [neotest](https://github.com/harrisoncramer/nvim/blob/main/lua/plugins/neotest.lua)
@@ -399,26 +413,7 @@ Open autocomplete in commit buffer::`C-n`
 lines
 
 
-- [ ] Perform a `:Gdiffsplit` on the file under the cursor.::`dd`
-
-
-- [ ] 1/5 [http://vimcasts.org/blog/2011/05/the-fugitive-series/](http://vimcasts.org/blog/2011/05/the-fugitive-series/)
-
-
-- [ ] [https://github.com/lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
-
-
-- [ ] [https://www.reddit.com/r/vim/comments/8h044y/comment/dym4eax/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button](https://www.reddit.com/r/vim/comments/8h044y/comment/dym4eax/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
-
-
 - [x] list branches `<leader>gb` and then press =`<tab>`=.
-
-
-- [ ] diff branches. Working tree diff.
-
-
-- [ ] compare working tree with branch
-      git-diff or :Merginal
 
 
 - [x] log git history of current file::`<leader>gl`
@@ -430,6 +425,25 @@ lines
 - [x] `ds`::Perform a `:Ghdiffsplit` on the file under the cursor
 
 
+- [ ] Perform a `:Gdiffsplit` on the file under the cursor.::`dd`
+
+
+- [ ] 2/5 [http://vimcasts.org/blog/2011/05/the-fugitive-series/](http://vimcasts.org/blog/2011/05/the-fugitive-series/)
+
+
+- [ ] [https://github.com/lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+
+
+- [ ] [https://www.reddit.com/r/vim/comments/8h044y/comment/dym4eax/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button](https://www.reddit.com/r/vim/comments/8h044y/comment/dym4eax/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
+
+
+- [ ] diff branches. Working tree diff.
+
+
+- [ ] compare working tree with branch
+      git-diff or :Merginal
+
+
 - [ ] `gt` - accept left side of diff
 
 
@@ -437,6 +451,25 @@ lines
 
 
 - [ ] accept left/right hunk in 3-way diff/merge conflict
+
+
+- [ ] grep in VCS repo history
+
+
+- [ ] cherry-picking commit
+      [https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button](https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
+
+
+- [ ] [https://vi.stackexchange.com/questions/tagged/plugin-fugitive](https://vi.stackexchange.com/questions/tagged/plugin-fugitive)
+
+
+- [x] stash the changes::`czz`, require staging changes before
+
+
+- [x] Apply topmost stash::`cza`
+
+
+- [ ] push and create merge request::`<leader>T` in vim-fugitive buffer
 
 
 - [x] get file local history/undotree::`<leader>u`
@@ -471,32 +504,10 @@ lines
 - [x] unstage hunk::`u`
 
 
-- [ ] revert all changes, stash the changes `czz` Push stash. Pass a [count] of 1 to add `--include-untracked` or 2 to add `--all`.
-
-
-- [ ] stash current changes
-
-
-- [ ] czA Apply topmost stash, or stash@{count}.
-
-
-- [ ] grep in VCS repo history
-
-
 - [x] Push changes::`<leader>p` (in fugitive mode for nvim) n\*
 
 
 - [x] pull & rebase::`<leader>P` (in fugitive mode for nvim) n\*
-
-
-- [ ] push and create merge request `git push -o merge_request.create --set-upstream origin HEAD`
-
-
-- [ ] cherry-picking commit
-      [https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button](https://www.reddit.com/r/neovim/comments/tuhs7u/comment/i35571l/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
-
-
-- [ ] [https://vi.stackexchange.com/questions/tagged/plugin-fugitive](https://vi.stackexchange.com/questions/tagged/plugin-fugitive)
 
 ### Git Signs
 
@@ -504,11 +515,6 @@ lines
 - [ ] `:h gitsigns.txt`
 
 ## Custom
-
-
-- [ ] quick switch to terminal
-      Ctrl-Z while editing in vim to send it to background, do your thing on the terminal and use fg at any time to bring up vim again.
-      C-\ switch to terminal
 
 
 - [x] telescope command_history::`<leader>fc` n\*
@@ -548,6 +554,35 @@ structure. n\*
 
 ## netrw
 
+
+- [x] [Using Netrw, vim's builtin file explorer](https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/)
+
+
+- [x] locate file in file manager::`<leader>pv` or `:Explore` or `:Ex`
+
+
+- [x] Explore variants:`:Vexplore`, `:Hexplore`, `:Texplore`, `:Sexplore`
+- [x] Open/parent directory/previous directory/add bookmark/most recent bookmark
+?
+`<cr>`, `-`, `u`, `mb`, `gb`
+
+- [ ] remove the most recent bookmark::`mB`
+- [x] preview window/close preview window::`p`, `<C-w>z`
+- [x] toggle hidden files::`gh`
+- [x] create file::`%`
+- [x] rename (move) file::`R`
+- [x] Marks a file or directory::`mf`
+- [x] Clear marks in current buffer::`mF`
+- [x] Clear all marks::`mu`
+- [x] Assign the "target directory" used by the move and copy commands.::`mt`
+- [x] Assign target directory and copy in one command::`mtmc`
+- [x] Copy/move the marked files in the target directory.::`mc`, `mm`
+- [x] Runs an external command on the marked files.::`mx`
+- [x] Delete a file or an empty directory::`D`
+- [x] Delete a file or directory recursively::`mx` then `trash`
+- [x] Toggle banner::`I`
+- [x] List key mappings::`F1`
+
 ## SQL
 
 
@@ -566,13 +601,13 @@ structure. n\*
 ## Vim surround
 
 
-- [x] surr\*ound_words ysiw) (surround_words)
-- [x] \*make strings ys$" "make strings"
-- [x] [delete ar\*ound me!] ds] delete around me!
-- [x] remove <b>HTML t\*ags</b> dst remove HTML tags
-- [x] 'change quot\*es' cs'" "change quotes"
-- [x] <b>or tag\* types</b> csth1<CR> <h1>or tag types</h1> n\*
-- [x] delete(functi\*on calls) dsf function calls n\*
+- [x] `surr*ound_words ysiw)` (surround_words)
+- [x] `*make strings ys$"` "make strings"
+- [x] `[delete ar*ound me!] ds]` delete around me!
+- [x] remove `<b>HTML t*ags</b> dst` remove HTML tags
+- [x] change `quot*es' cs'"` "change quotes"
+- [x] `<b>or tag* types</b> csth1<CR>` `<h1>or tag types</h1>` n\*
+- [x] `delete(functi*on calls) dsf` function calls n\*
 
 ## JS debugging (browser)
 
@@ -585,9 +620,9 @@ structure. n\*
 
 
 - [x] [How to: Create a git Merge Conflict](https://jonathanmh.com/how-to-create-a-git-merge-conflict/)
+- [ ] `:h terminal`
 - [ ] `:h fugitive.txt`
 - [ ] `:h lua-guide`
-- [ ] `:h terminal`
 - [ ] `:h`
 
 ## Code style
@@ -605,7 +640,7 @@ structure. n\*
 ## Automation
 
 
-- [ ] vim shell output actions... :h redir, !...|grep, r!... etc
+- [ ] vim-shell output actions... `:h redir`, `!...|grep`, `r!...`, etc.
 - [ ] [https://github.com/tpope/vim-unimpaired](https://github.com/tpope/vim-unimpaired)
 - [ ] new scratch file `:enew`
 - [ ] execute scratch file
