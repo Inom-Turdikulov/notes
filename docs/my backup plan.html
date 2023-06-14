@@ -282,7 +282,32 @@
 <li>[x] Raid 1 for all data</li>
 <li>[ ] Borg + SSH, rclone sync, logs <a href="https://torsion.org/borgmatic/" class="external-link">https://torsion.org/borgmatic/</a> DB strategy?
        Ignore cache?</li>
-</ol></div>
+</ol>
+<h2 id="my-files-structure">My files structure</h2>
+<p>Each directory must be backed up.</p>
+<p>TODO: <code>/etc</code> Host-specific system-wide configuration files. Add into backup.
+Clean up.</p>
+<p>TODO: <code>$HOME</code>. Add into backup.</p>
+<p>TODO: <code>/media</code> Mount external drive to <code>/media/backup</code></p>
+<p>TODO: <code>/mnt</code> Temporarily mounted filesystems. Use with rclone?</p>
+<p>TODO: move binraries from ~/.local/bin to /opt/bin/inom or find/create package</p>
+<p>/usr
+Secondary hierarchy for read-only user data; contains the majority of (multi-)user utilities and applications. Should be shareable and read-only.[9][10]</p>
+<p>/usr/include
+Standard include files.</p>
+<p>/usr/local
+Tertiary hierarchy for local data, specific to this host. Typically has further subdirectories (e.g., bin, lib, share).[NB 1]</p>
+<p>/usr/share
+Architecture-independent (shared) data.</p>
+<p>/usr/src
+Source code (e.g., the kernel source code with its header files).</p>
+<p>Lock files. Files keeping track of resources currently in use.
+/var/log</p>
+<p>Log files. Various logs.
+/var/mail
+Mailbox files. In some distributions, these files may be located in the deprecated /var/spool/mail.</p>
+<p>/var/opt
+Variable data from add-on packages that are stored in /opt.</p></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
@@ -301,13 +326,13 @@
 
 </div>
 <div class="graph requires_js ">
-    <div id="A194614476822618001858896076984111180109{level}" class="graph_div"></div>
+    <div id="A223620396441710216309410612250650905893{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B194614476822618001858896076984111180109{level}" level="{level}" note_temp_id="194614476822618001858896076984111180109" onclick="window.ObsHtmlGraph.run(this, '194614476822618001858896076984111180109', 'my backup plan');">
+        <button class="graph_button graph_show_button" id="B223620396441710216309410612250650905893{level}" level="{level}" note_temp_id="223620396441710216309410612250650905893" onclick="window.ObsHtmlGraph.run(this, '223620396441710216309410612250650905893', 'my backup plan');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C194614476822618001858896076984111180109{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C223620396441710216309410612250650905893{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
