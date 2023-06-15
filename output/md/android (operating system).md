@@ -22,7 +22,7 @@ tags:
 > .APK.
 
 > --
-> [Wikipedia in simple English](<[https://simple.wikipedia.org/wiki/Android_(operating_system)>)](https://simple.wikipedia.org/wiki/Android_(operating_system)>))
+> [Simple English Wikipedia](<[https://simple.wikipedia.org/wiki/Android_(operating_system)>)](https://simple.wikipedia.org/wiki/Android_(operating_system)>))
 
 I use android daily on my smartphone and tablet.
 

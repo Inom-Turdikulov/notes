@@ -334,9 +334,30 @@ output)</p>
 <h3 id="search-replace">Search &amp; replace</h3>
 <p><code>/</code>::search mode</p>
 <p><code>?</code>::backward search mode</p>
+<p><code>//</code>::repeat last search</p>
+<p><code>/search\c</code>::case insensitive search</p>
+<p><code>/search\C</code>::case sensitive search</p>
+<p><code>set ignorecase</code>
+?
+case insensitive search</p>
+<p><code>set smartcase</code>
+?
+case insensitive search, unless there is a capital letter in the search, but <code>ignorecase</code> needs to be on</p>
+<p><code>vim[grep][!] /{pattern}/[g][j][f] {file} ...</code>
+?
+Search pattern across files pattern.</p>
+<p><code>grep {pattern} {file} ...</code>::Search pattern across files pattern.</p>
+<p><code>:copen</code>::Open quickfix window</p>
+<p><code>C-k</code>::<code>:cnext</code></p>
+<p><code>C-j</code>::<code>:cprev</code></p>
+<p><code>@:</code>::repeat last command</p>
+<p><code>@@</code>::repeat last <code>@&lt;whatever&gt;</code></p>
 <p>Find each occurrence of 'foo' (in all lines), and replace it with 'bar'
 ?
 <code>:%s/foo/bar/g[c]</code>
+<code>%</code> - all lines.
+<code>s</code> - substitute.
+<code>g</code> - global (all occurrences in the line not only the first one).
 <code>[c]</code> - confirmations.</p>
 <p>The replacement will check each line in the buffer, but will only match within the last visual selection
 ?
@@ -345,6 +366,8 @@ output)</p>
 <p><code>:'&lt;,'&gt;s/old/new/g</code>::replace all old with new throughout visual selection</p>
 <p><code>&amp;</code>::repeat last substitute, equal to <code>:s//~/</code></p>
 <p><code>:s/\[foo\]//g</code>::Escape the square brackets with a backslash, to replace <code>[foo]</code></p>
+<p><code>:s/pat\/tern/replace/g</code>::Escape the <code>/</code> to match "pat/tern"</p>
+<p><code>:s#pat/tern#replace#g</code>::Use another character as separator to match "pat/tern".</p>
 <p><code>:%s/\(^ *\)\@&lt;! \/ /g</code>
 ?
 Replace multiple spaces with one, This says find 2 or more spaces (<code>\</code>)
@@ -356,7 +379,30 @@ spaces'.</p>
 <p>You can also just press f/t/F/T <mark class="formatting_highlight">again</mark> to continue search</p>
 <p><code>/ ESC</code>::clear search highlights or <code>:noh</code></p>
 <p><code>n|N</code>::repeat search in same direction, in opposite direction</p>
-<p><code>*|#</code>::search forward word under cursor, search backward word under cursor</p>
+<p><code>*|#</code> or <code>g*|g#</code>::search forward word under cursor, search backward word under cursor</p>
+<p>How to do granular find and replace in the whole file
+?
+1. Search something with <code>/</code>
+2. Type <code>cgn</code> and <code>word</code> to replace, or run some command, where <code>gn</code> is a
+   motion that selects the next match of the last used search pattern. Of course
+   you can use <code>cgN</code> and <code>dgn</code> to delete, etc.
+3. Find next <code>n/N</code> and repeat <code>.</code></p>
+<p>Find and Replace in Multiple Files using <code>argslist</code>
+?
+1. Initialize the argslist with <code>:args *.ext</code> from CWD.
+2. Optionaly add more files with <code>:argadd *.ext</code>. You can also use <code>**/*.ext</code>
+   to search recursively.
+3. Optionally remove some files with <code>:argdelete *.ext</code>, to delet all use <code>*</code>
+4. Do search and replace: <code>:argdo %s/foo/bar/[g][e][c] | update</code>. <code>e</code> here prevents
+   error messages when there is no match, <code>c</code> is for confirmation.
+You can also use <code>:bufdo</code> to do the same thing in all open buffers.
+To use argslist in vimgrep use <code>:vimgrep // ##</code>. <code>//</code> is last search pattern.
+Use <code>:cdo</code> to do something with the quickfix list.</p>
+<p>Search with telescope and quickfix
+?
+1. <code>&lt;leader&gt;fs</code> to grep results
+2. <code>&lt;C-q&gt;</code> to add all results to the quickfix list
+3. <code>:cdo s/StringOne/StringTwo/g | update</code> to make the change and save all the files.</p>
 <h3 id="navigation">Navigation</h3>
 <p>Scrolling up, cursor staying on the same line <code>C-e</code></p>
 <p>Up to # line, works with relative line numbers::<code>#k</code></p>
@@ -895,13 +941,13 @@ this.</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A1136251100667947932149282476898974582{level}" class="graph_div"></div>
+    <div id="A220664545437270292107012589505601296148{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B1136251100667947932149282476898974582{level}" level="{level}" note_temp_id="1136251100667947932149282476898974582" onclick="window.ObsHtmlGraph.run(this, '1136251100667947932149282476898974582', 'neovim (text editor)');">
+        <button class="graph_button graph_show_button" id="B220664545437270292107012589505601296148{level}" level="{level}" note_temp_id="220664545437270292107012589505601296148" onclick="window.ObsHtmlGraph.run(this, '220664545437270292107012589505601296148', 'neovim (text editor)');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C1136251100667947932149282476898974582{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C220664545437270292107012589505601296148{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

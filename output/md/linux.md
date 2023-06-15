@@ -22,7 +22,7 @@ tags:
 > itself—a lot of the software for Linux is free software. This is one reason
 > why many people like to use Linux.
 >
-> -- [Wikipedia in simple English](https://simple.wikipedia.org/wiki/Linux)
+> -- [Simple English Wikipedia](https://simple.wikipedia.org/wiki/Linux)
 
 Personally I use [arch linux (and other distros)](./arch%20linux%20%28and%20other%20distros%29.md) distribution (~~I use arch btw~~ -
 I hate this meme 😀).

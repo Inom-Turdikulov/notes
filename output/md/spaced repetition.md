@@ -18,7 +18,7 @@ tags:
 > and quicker way to learn and keep information.
 >
 > --
-> [Wikipedia in simple English](https://simple.wikipedia.org/wiki/Spaced_repetition)
+> [Simple English Wikipedia](https://simple.wikipedia.org/wiki/Spaced_repetition)
 
 Right now I'm using [obsidian](./obsidian.md) plugin [spaced repetition](https://www.stephenmwangi.com/obsidian-spaced-repetition/)
 and various note types to generate flashcards. I also use it to select current
