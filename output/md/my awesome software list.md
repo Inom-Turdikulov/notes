@@ -235,7 +235,7 @@ Check also [my shell scripts](./my%20shell%20scripts.md) and
 
 - [zared](https://github.com/paoloap/zaread) - E-Book and Office document reader
 - [ffmpeg](https://ffmpeg.org/) - a complete, cross-platform solution to record,
-  convert and stream audio and video
+  convert and stream audio and video, [more info](./ffmpeg.md)
 
 - [strawberry](https://www.strawberrymusicplayer.org/) - cross-platform music
   player and music collection organizer
