@@ -5,7 +5,7 @@
 <head>
     <!-- Page information -->
     <meta charset="UTF-8" />
-    <meta name="node_id" content="how do i work with contacts" />
+    <meta name="node_id" content="ripgrep" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -47,7 +47,7 @@
 
     <!-- Onload tweaks -->
     <script>
-        const CURRENT_NODE = "how do i work with contacts";
+        const CURRENT_NODE = "ripgrep";
         const HTML_URL_PREFIX = "";
         const PAGE_DEPTH = 0;
     </script>
@@ -242,7 +242,7 @@
             }
         </script>
                                     <div class="graph_header_div requires_js">
-            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=how do i work with contacts" title="Open fullpage Graph">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=ripgrep" title="Open fullpage Graph">
                     <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
             </a>
         </div>
@@ -277,47 +277,58 @@
         <div class="flex_row">
             
             <div class="container">
-                <div class="content"><h1 id="how-do-i-work-with-contacts">How do I work with contacts</h1>
-<p>TODO: Info how I organize contact note type, need implement ::</p>
-<p>I use caldav server to store contacts and sync them across devices using
-TODO: add notes vdirsyncer on desktop computer and Davx5 on android phone.</p>
-<h2 id="edit-and-view-contacts">Edit and view contacts</h2>
-<ul>
-<li>khard interactive cli</li>
-</ul>
-<p>khard + khardel
-Radicale card/caldav server? or just google
-DAVx5
-org-caldav</p>
-<p>Also each contact may have description like in Wikipedia format:
-name
-brief
-born
-education
-known for
-spouse
-children</p>
-<ul>
-<li>
-<p>TODO Sync - adb &lt;&gt; org-mode
-Also each contact may have description like in Wikipedia format:
-name
-brief
-born
-education
-known for
-spouse
-children</p>
-</li>
-<li>
-<p>Contacts/Persons list:</p>
-</li>
-</ul></div>
+                <div class="content"><h1 id="ripgrep">ripgrep</h1>
+<blockquote>
+<p>ripgrep is a line-oriented search tool that <strong>recursively</strong> searches the
+current directory for a regex pattern. By default, ripgrep will respect
+<code>.gitignore</code> rules and automatically skip hidden files/directories and binary
+files. (To disable all automatic filtering by default, use rg -uuu.) ripgrep
+has first class support on Windows, macOS and <strong>Linux</strong>, with binary downloads
+available for every release. ripgrep is similar to other popular search tools
+like The Silver Searcher, ack and grep.
+-- <a href="https://github.com/BurntSushi/ripgrep" class="external-link">ripgrep</a></p>
+</blockquote>
+<p>TODO: <a href="https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md" class="external-link">https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md</a></p>
+<h2 id="commands">Commands</h2>
+<div class="lang-sh">
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># Recursively search the current directory for a regular expression:</span>
+rg<span class="w"> </span>regular_expression
+
+<span class="c1"># Search for regular expressions recursively in the current directory, including hidden files and files listed in `.gitignore`:</span>
+rg<span class="w"> </span>--no-ignore<span class="w"> </span>--hidden<span class="w"> </span>regular_expression
+rg<span class="w"> </span>-uuu<span class="w"> </span>-.<span class="w"> </span>regular_expression
+
+<span class="c1"># Search for a regular expression only in a subset of directories:</span>
+rg<span class="w"> </span>regular_expression<span class="w"> </span>set_of_subdirs
+
+<span class="c1"># Search for a regular expression in files matching a glob (e.g. `README.*`):</span>
+rg<span class="w"> </span>regular_expression<span class="w"> </span>--glob<span class="w"> </span>glob
+rg<span class="w"> </span>regular_expression<span class="w"> </span>-g<span class="w"> </span>glob
+
+<span class="c1"># Search for a regular expression from the given file</span>
+rg<span class="w"> </span>regular_expression<span class="w"> </span>-f<span class="w"> </span>pattern_file
+
+<span class="c1"># Search for filenames that match a regular expression:</span>
+rg<span class="w"> </span>--files<span class="w"> </span><span class="p">|</span><span class="w"> </span>rg<span class="w"> </span>regular_expression
+
+<span class="c1"># Only list matched files (useful when piping to other commands):</span>
+rg<span class="w"> </span>--files-with-matches<span class="w"> </span>regular_expression
+
+<span class="c1"># Show lines that do not match the given regular expression:</span>
+rg<span class="w"> </span>--invert-match<span class="w"> </span>regular_expression
+
+<span class="c1"># Search a literal string pattern:</span>
+rg<span class="w"> </span>--fixed-strings<span class="w"> </span>--<span class="w"> </span>string
+</code></pre></div>
+
+
+</div></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
 <ul>
-	<li><a class="backlink" href="/index.html">index</a></li>
+	<li><a class="backlink" href="/my awesome software list.html">my awesome software list</a></li>
 </ul>
 </div>
 
@@ -325,19 +336,19 @@ children</p>
 <h2>Tags</h2>
 <ul>
 	<li><a class="backlink" href="/obs.html/tags/inbox/index.html">inbox</a></li>
-	<li><a class="backlink" href="/obs.html/tags/outline/index.html">outline</a></li>
+	<li><a class="backlink" href="/obs.html/tags/definition/index.html">definition</a></li>
 </ul>
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A130124653029402291240746751049319341229{level}" class="graph_div"></div>
+    <div id="A134015640957601462508402621913084263103{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B130124653029402291240746751049319341229{level}" level="{level}" note_temp_id="130124653029402291240746751049319341229" onclick="window.ObsHtmlGraph.run(this, '130124653029402291240746751049319341229', 'how do i work with contacts');">
+        <button class="graph_button graph_show_button" id="B134015640957601462508402621913084263103{level}" level="{level}" note_temp_id="134015640957601462508402621913084263103" onclick="window.ObsHtmlGraph.run(this, '134015640957601462508402621913084263103', 'ripgrep');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C130124653029402291240746751049319341229{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C134015640957601462508402621913084263103{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

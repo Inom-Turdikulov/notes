@@ -99,10 +99,10 @@ Check also [my shell scripts](./my%20shell%20scripts.md) and
 
 
 - [fd](https://github.com/sharkdp/fd) - A simple, fast and user-friendly
-  alternative to \'find\'
+  alternative to \'find\', [more info](./fd.md)
 
 - [ripgrep](https://github.com/BurntSushi/ripgrep) - recursively searches the
-  current directory for a regex pattern
+  current directory for a regex pattern, [more info](./ripgrep.md)
 
 - [pdfgrep](https://pdfgrep.org/) - search text in PDF files
 

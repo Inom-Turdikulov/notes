@@ -13,6 +13,7 @@ tags:
 
 
 - [keyboard shortcut](./keyboard%20shortcut.md)
+- TODO: mouseless-workflow make more relevant (check book)
 
 # Mouse emulation (qmk)
 

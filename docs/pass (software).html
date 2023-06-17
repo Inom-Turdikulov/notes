@@ -286,6 +286,40 @@ These encrypted files may be organized into meaningful folder hierarchies,
 copied from computer to computer, and, in general, manipulated using standard
 command line file management utilities.</p>
 </blockquote>
+<h2 id="commands">Commands</h2>
+<div class="lang-sh">
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># List passwords or entry</span>
+pass<span class="w"> </span><span class="o">[</span>path/to/password<span class="o">]</span>
+
+<span class="c1"># Generate new password, with optional length</span>
+pass<span class="w"> </span>generate<span class="w"> </span><span class="o">[</span>entry<span class="w"> </span>or<span class="w"> </span>path<span class="o">]</span><span class="w"> </span><span class="o">[</span>n<span class="o">]</span>
+
+<span class="c1"># Create or overwrite password data, -m is for multiline</span>
+pass<span class="w"> </span>insert<span class="w"> </span><span class="o">[</span>-m<span class="o">]</span><span class="w"> </span><span class="o">[</span>entry<span class="w"> </span>or<span class="w"> </span>path<span class="o">]</span>
+
+<span class="c1"># Edit password</span>
+pass<span class="w"> </span>edit<span class="w"> </span>site.tld/username
+
+<span class="c1"># Delete password, -r is for recursive, -f is for force</span>
+pass<span class="w"> </span>rm<span class="w"> </span><span class="o">[</span>-r<span class="o">]</span><span class="w"> </span><span class="o">[</span>-f<span class="o">]</span><span class="w"> </span>site.tld/username
+
+<span class="c1"># Move password, -f is for force</span>
+pass<span class="w"> </span>mv<span class="w"> </span><span class="o">[</span>-f<span class="o">]</span><span class="w"> </span>old/path<span class="w"> </span>new/path
+
+<span class="c1"># Search for passowrd files containing string when decrypted</span>
+pass<span class="w"> </span>grep<span class="w"> </span><span class="o">[</span>GREP_OPTIONS<span class="o">]</span><span class="w"> </span>search-string
+</code></pre></div>
+
+
+</div>
+
+<p>TODO: check if this workflow working on mobile.</p>
+<p>If I have only one login for site, I use site.tld as entry name. If I have more
+I use site.tld/username.</p>
+<p>Application passwords just haven't tld, like
+<code>pass insert application[/username]</code>.</p>
+<p>I also use passwords groups, like business, email, social, etc.</p>
 <h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://wiki.archlinux.org/title/Pass" class="external-link">pass - ArchWiki</a></li>
@@ -309,13 +343,13 @@ command line file management utilities.</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A13976995133500663227549944122604501999{level}" class="graph_div"></div>
+    <div id="A168779515028006082852011043435563561347{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B13976995133500663227549944122604501999{level}" level="{level}" note_temp_id="13976995133500663227549944122604501999" onclick="window.ObsHtmlGraph.run(this, '13976995133500663227549944122604501999', 'pass (software)');">
+        <button class="graph_button graph_show_button" id="B168779515028006082852011043435563561347{level}" level="{level}" note_temp_id="168779515028006082852011043435563561347" onclick="window.ObsHtmlGraph.run(this, '168779515028006082852011043435563561347', 'pass (software)');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C13976995133500663227549944122604501999{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C168779515028006082852011043435563561347{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

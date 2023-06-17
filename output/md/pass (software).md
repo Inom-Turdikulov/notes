@@ -18,6 +18,42 @@ tags:
 > copied from computer to computer, and, in general, manipulated using standard
 > command line file management utilities.
 
+## Commands
+
+```sh
+# List passwords or entry
+pass [path/to/password]
+
+# Generate new password, with optional length
+pass generate [entry or path] [n]
+
+# Create or overwrite password data, -m is for multiline
+pass insert [-m] [entry or path]
+
+# Edit password
+pass edit site.tld/username
+
+# Delete password, -r is for recursive, -f is for force
+pass rm [-r] [-f] site.tld/username
+
+# Move password, -f is for force
+pass mv [-f] old/path new/path
+
+# Search for passowrd files containing string when decrypted
+pass grep [GREP_OPTIONS] search-string
+```
+
+
+TODO: check if this workflow working on mobile.
+
+If I have only one login for site, I use site.tld as entry name. If I have more
+I use site.tld/username.
+
+Application passwords just haven't tld, like
+`pass insert application[/username]`.
+
+I also use passwords groups, like business, email, social, etc.
+
 ## Resources
 
 

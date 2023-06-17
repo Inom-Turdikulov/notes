@@ -5,7 +5,7 @@
 <head>
     <!-- Page information -->
     <meta charset="UTF-8" />
-    <meta name="node_id" content="dmenu keybindings" />
+    <meta name="node_id" content="fd" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -47,7 +47,7 @@
 
     <!-- Onload tweaks -->
     <script>
-        const CURRENT_NODE = "dmenu keybindings";
+        const CURRENT_NODE = "fd";
         const HTML_URL_PREFIX = "";
         const PAGE_DEPTH = 0;
     </script>
@@ -242,7 +242,7 @@
             }
         </script>
                                     <div class="graph_header_div requires_js">
-            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=dmenu keybindings" title="Open fullpage Graph">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=fd" title="Open fullpage Graph">
                     <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
             </a>
         </div>
@@ -277,41 +277,45 @@
         <div class="flex_row">
             
             <div class="container">
-                <div class="content"><h1 id="dmenu-keybindings">dmenu keybindings</h1>
-<p>dmenu is completely controlled by the keyboard.</p>
-<p>{#TAB}::{#C-i}, Copy to the input field (to run with arguments)</p>
-<p>{#RET}::Confirm selection and exit (execute)</p>
-<p>{#C-RET}::Confirm selection and continue (multi-run)</p>
-<p>{#S-RET}::Confirm input (multi-run)</p>
-<p>{#ESC}, {#C-c}, {#C-g}::Exit without selecting an item</p>
-<p>{#C-a}, {#M-g}::Home in input and menu</p>
-<p>{#C-e}, {#M-G}::End in input and menu</p>
-<p>{#left}, {#C-b}::Left in input and menu</p>
-<p>{#right}, {#C-f}::Right in input and menu</p>
-<p>{#M-b}::Move to start word in input</p>
-<p>{#M-f}::Move to the end word in input</p>
-<p>{#C-n}, {#M-h}::Down (or left) in menu</p>
-<p>{#C-p}, {#M-l}::Up (or right) in menu</p>
-<p>{#M-j}::Page down</p>
-<p>{#M-k}::Page up</p>
-<p>{#BS}, {#C-h}::Backspace in input</p>
-<p>{#DEL}, {#C-d}::Delete in input</p>
-<p>{#C-w}::Delete word left</p>
-<p>{#C-u}::Delete line left</p>
-<p>{#C-k}::Delete line right</p>
-<p>{#C-y}::Paste from primary X selection</p>
-<p>{#C-Y}::Paste from X clipboard</p>
-<h2 id="useful-resources">Useful resources</h2>
-<ul>
-<li>dmenu manpages - <code>man dmenu</code></li>
-<li><a href="https://wiki.archlinux.org/title/dmenu" class="external-link">ArchWiki page</a></li>
-<li><a href="http://www.troubleshooters.com/linux/dmenu/bestpractices.htm" class="external-link">Dmenu Best Practices</a></li>
-</ul></div>
+                <div class="content"><h1 id="fd">fd</h1>
+<blockquote>
+<p>fd is a program to <strong>find</strong> entries in your <strong>filesystem</strong>. It is a simple,
+fast and user-friendly alternative to find. While it does not aim to support
+all of find's powerful functionality, it provides sensible (opinionated)
+defaults for a majority of use cases.
+-- <a href="https://github.com/sharkdp/fd" class="external-link">fd</a></p>
+</blockquote>
+<h2 id="commands">Commands</h2>
+<div class="lang-sh">
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># Simple search:</span>
+fd<span class="w"> </span>&lt;search<span class="w"> </span>query&gt;
+
+<span class="c1"># Specifying the root directory for the search:</span>
+fd<span class="w"> </span>&lt;search<span class="w"> </span>query&gt;<span class="w"> </span>&lt;directory&gt;
+
+<span class="c1"># Searching for a particular file extension:</span>
+fd<span class="w"> </span>-e<span class="w"> </span>&lt;file<span class="w"> </span>extension&gt;<span class="w"> </span>&lt;search<span class="w"> </span>query&gt;
+
+<span class="c1"># Searching for a particular file name:</span>
+fd<span class="w"> </span>-g<span class="w"> </span>&lt;file<span class="w"> </span>name&gt;.&lt;file<span class="w"> </span>extension&gt;
+
+<span class="c1"># Search for hidden and ignored files:</span>
+fd<span class="w"> </span>-H<span class="w"> </span>&lt;search<span class="w"> </span>query&gt;
+
+<span class="c1"># Excluding specific files or directories:</span>
+fd<span class="w"> </span>-E<span class="w"> </span>&lt;file<span class="w"> </span>or<span class="w"> </span>directories<span class="w"> </span>which<span class="w"> </span>should<span class="w"> </span>be<span class="w"> </span>excluded&gt;<span class="w"> </span>&lt;search<span class="w"> </span>query&gt;
+</code></pre></div>
+
+
+</div>
+
+<p>TODO: <a href="https://github.com/sharkdp/fd#how-to-use" class="external-link">https://github.com/sharkdp/fd#how-to-use</a></p></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
 <ul>
-	<li><a class="backlink" href="/dmenu.html">dmenu</a></li>
+	<li><a class="backlink" href="/my awesome software list.html">my awesome software list</a></li>
 </ul>
 </div>
 
@@ -319,19 +323,19 @@
 <h2>Tags</h2>
 <ul>
 	<li><a class="backlink" href="/obs.html/tags/inbox/index.html">inbox</a></li>
-	<li><a class="backlink" href="/obs.html/tags/dev-tip/index.html">dev-tip</a></li>
+	<li><a class="backlink" href="/obs.html/tags/definition/index.html">definition</a></li>
 </ul>
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A197329801824021003498087037493616387155{level}" class="graph_div"></div>
+    <div id="A24489397078491726443368362741487092681{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B197329801824021003498087037493616387155{level}" level="{level}" note_temp_id="197329801824021003498087037493616387155" onclick="window.ObsHtmlGraph.run(this, '197329801824021003498087037493616387155', 'dmenu keybindings');">
+        <button class="graph_button graph_show_button" id="B24489397078491726443368362741487092681{level}" level="{level}" note_temp_id="24489397078491726443368362741487092681" onclick="window.ObsHtmlGraph.run(this, '24489397078491726443368362741487092681', 'fd');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C197329801824021003498087037493616387155{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C24489397078491726443368362741487092681{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
