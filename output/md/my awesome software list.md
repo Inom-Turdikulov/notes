@@ -462,4 +462,5 @@ Check also [my shell scripts](./my%20shell%20scripts.md) and
 ## Android
 
 
-- [[termux]
+- [[Termux]
+- [Tachiyomi](./Tachiyomi.md)
