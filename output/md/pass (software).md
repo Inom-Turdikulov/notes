@@ -44,8 +44,6 @@ pass grep [GREP_OPTIONS] search-string
 ```
 
 
-TODO: check if this workflow working on mobile.
-
 If I have only one login for site, I use site.tld as entry name. If I have more
 I use site.tld/username.
 
@@ -53,6 +51,8 @@ Application passwords just haven't tld, like
 `pass insert application[/username]`.
 
 I also use passwords groups, like business, email, social, etc.
+
+TODO: organize passwords into groups, which can be found here: [https://duckduckgo.com/bangs](https://duckduckgo.com/bangs)
 
 ## Resources
 

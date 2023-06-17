@@ -40,7 +40,7 @@ I'm connecting with them by voice calls, sometimes text messages. Here is
 
 ## Exercise and health
 
-Right now I'm trying to follow my personal [exercise plan](./exercise%20plan.md) and
+Right now I'm trying to follow my personal [Exercise Plan](./Exercise%20Plan.md) and
 [my everyday life (routine)](./my%20everyday%20life%20%28routine%29.md) routine.
 
 ## Relax and fun

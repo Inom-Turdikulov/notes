@@ -284,6 +284,7 @@
 (especially editor and Vimscript features) is maintained where possible.</p>
 <p>-- Neovim's help (:help neovim)</p>
 </blockquote>
+<p>Enable logs - <code>nvim -V10nvim.log</code></p>
 <h2 id="features">Features</h2>
 <h1 id="general">General</h1>
 <h1 id="basic-editing">Basic editing</h1>
@@ -329,6 +330,10 @@
 ?
 external filter, used in command mode to execute something (<code>r!</code> redirect
 output)</p>
+<p>You could also use <mark class="formatting_highlight"><code>w !python</code></mark> to run your python program (no need to save,
+it will pass the content as stdin, that's what w ! is for). That way you don't
+to support multiple languages in your plugin. Just instruct the users to use
+this Vim feature.</p>
 <p><code>C-t</code> in insert mode::indent
 <code>C-d</code> in insert mode::unindent</p>
 <h3 id="search-replace">Search &amp; replace</h3>
@@ -738,6 +743,9 @@ Source: <a href="https://stackoverflow.com/questions/3997078/how-to-paste-yanked
 <p>How to paste system clipboard into the Vim command line?
 ?
 I use <code>C-S-v</code>, it's working in my terminal. Or use <code>&lt;C-r&gt;"</code>.</p>
+<p>How to open terminal in vertical split?
+?
+<code>:vsplit term://some command</code></p>
 <p>How do you search through Vim's command history?
 ?
 Use <code>q:</code> or <code>q/</code> in normal mode and then press <code>/</code>.
@@ -919,13 +927,13 @@ this.</p>
 <div class="backlinks">
 <h2>Backlinks</h2>
 <ul>
-	<li><a class="backlink" href="/now.html">now</a></li>
 	<li><a class="backlink" href="/computer software.html">computer software</a></li>
+	<li><a class="backlink" href="/my editing workflow.html">my editing workflow</a></li>
+	<li><a class="backlink" href="/papis/82951c75090ce154272484448309812b-neil-drew/notes.html">82951c75090ce154272484448309812b-neil-drew/notes</a></li>
 	<li><a class="backlink" href="/my awesome software list.html">my awesome software list</a></li>
 	<li><a class="backlink" href="/how do I study computer science.html">how do i study computer science</a></li>
 	<li><a class="backlink" href="/zotero.html">zotero</a></li>
-	<li><a class="backlink" href="/my editing workflow.html">my editing workflow</a></li>
-	<li><a class="backlink" href="/papis/82951c75090ce154272484448309812b-neil-drew/notes.html">82951c75090ce154272484448309812b-neil-drew/notes</a></li>
+	<li><a class="backlink" href="/now.html">now</a></li>
 	<li><a class="backlink" href="/development environment.html">development environment</a></li>
 </ul>
 </div>
@@ -941,13 +949,13 @@ this.</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A220664545437270292107012589505601296148{level}" class="graph_div"></div>
+    <div id="A149154116634477909271202872221301578787{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B220664545437270292107012589505601296148{level}" level="{level}" note_temp_id="220664545437270292107012589505601296148" onclick="window.ObsHtmlGraph.run(this, '220664545437270292107012589505601296148', 'neovim (text editor)');">
+        <button class="graph_button graph_show_button" id="B149154116634477909271202872221301578787{level}" level="{level}" note_temp_id="149154116634477909271202872221301578787" onclick="window.ObsHtmlGraph.run(this, '149154116634477909271202872221301578787', 'neovim (text editor)');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C220664545437270292107012589505601296148{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C149154116634477909271202872221301578787{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

@@ -19,6 +19,8 @@ tags:
 >
 > -- Neovim's help (:help neovim)
 
+Enable logs - `nvim -V10nvim.log`
+
 ## Features
 
 # General
@@ -90,6 +92,11 @@ How to split line (a/i/r)
 ?
 external filter, used in command mode to execute something (`r!` redirect
 output)
+
+You could also use ==`w !python`== to run your python program (no need to save,
+it will pass the content as stdin, that's what w ! is for). That way you don't
+to support multiple languages in your plugin. Just instruct the users to use
+this Vim feature.
 
 `C-t` in insert mode::indent
 `C-d` in insert mode::unindent
@@ -720,6 +727,10 @@ Source: [https://stackoverflow.com/questions/3997078/how-to-paste-yanked-text-in
 How to paste system clipboard into the Vim command line?
 ?
 I use `C-S-v`, it's working in my terminal. Or use `<C-r>"`.
+
+How to open terminal in vertical split?
+?
+`:vsplit term://some command`
 
 How do you search through Vim's command history?
 ?
