@@ -19,7 +19,7 @@ tags:
 
 > The code in kitty is designed to be simple, modular and hackable. It is
 > written in a mix of [c](./c%20%28programming%20language%29.md) (for
-> performance sensitive parts) and [python](./python.md) (for easy hackability
+> performance sensitive parts) and [Python](./Python.md) (for easy hackability
 > of the UI). It does not depend on any large and complex UI toolkit, using only
 > OpenGL for rendering everything (NOTE: not perfect with specific fonts).
 

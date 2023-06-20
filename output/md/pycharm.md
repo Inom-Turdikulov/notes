@@ -15,7 +15,7 @@ tags:
 Integrated development environment (IDE) used for programming in Python. It
 provides code analysis, a graphical debugger, an integrated unit tester,
 integration with version control systems, and supports web development with
-Django (and other [python](./python.md) packages). PyCharm is developed by the Czech
+Django (and other [Python](./Python.md) packages). PyCharm is developed by the Czech
 company JetBrains (but with Russian roots).
 
 It is cross-platform, working on Microsoft Windows, macOS and Linux. PyCharm has

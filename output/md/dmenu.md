@@ -10,7 +10,7 @@ tags:
 - dev-tip
 ---
 
-# dmenu (dynamic menu for X)
+dmenu (dynamic menu for X)
 
 > dmenu is a dynamic menu for X, originally designed for dwm. It manages large
 > numbers of user-defined menu items efficiently.
@@ -26,53 +26,58 @@ popular alternative is `rofi`, but for me, it's too complex.
 
 dmenu is keyboard oriented program, and need to use it's
 
-## dmenu keybindings
+ dmenu keybindings
 
 dmenu is completely controlled by the keyboard.
 
-{#TAB}::{#C-i}, Copy to the input field (to run with arguments)
 
-{#RET}::Confirm selection and exit (execute)
+- NEXT: shift+enter and dmenu term wait?
 
-{#C-RET}::Confirm selection and continue (multi-run)
+`TAB`, `C-i`::Copy selection to the input field (to run with arguments)
 
-{#S-RET}::Confirm input (multi-run)
+`<cr>`::Confirm selection and exit (execute)
 
-{#ESC}, {#C-c}, {#C-g}::Exit without selecting an item
+`C-<cr>`
+?
+Confirm selection and continue (multi-run). Useful for running multiple instances of the same program.
 
-{#C-a}, {#M-g}::Home in input and menu
+`S-<cr>`::Confirm input and run (run exactly what is typed in the input field)
 
-{#C-e}, {#M-G}::End in input and menu
+`ESC`, `C-c`, `C-g`::Exit without selecting an item
 
-{#left}, {#C-b}::Left in input and menu
+`C-a`, `M-g`::Home in input and menu
 
-{#right}, {#C-f}::Right in input and menu
+`C-e`, `M-G`::End in input and menu
 
-{#M-b}::Move to start word in input
+`left`, `C-b`::Left in input and menu
 
-{#M-f}::Move to the end word in input
+`right`, `C-f`::Right in input and menu
 
-{#C-n}, {#M-h}::Down (or left) in menu
+`M-b`::Move to start word in input
 
-{#C-p}, {#M-l}::Up (or right) in menu
+`M-f`::Move to the end word in input
 
-{#M-j}::Page down
+`C-n`, `M-h`::Down (or left) in menu
 
-{#M-k}::Page up
+`C-p`, `M-l`::Up (or right) in menu
 
-{#BS}, {#C-h}::Backspace in input
+`M-j`::Page down
 
-{#DEL}, {#C-d}::Delete in input
+`M-k`::Page up
 
-{#C-w}::Delete word left
+`BS`, `C-h`::Backspace in input
 
-{#C-u}::Delete line left
+`DEL`, `C-d`::Delete in input
 
-{#C-k}::Delete line right
+`C-w`::Delete word left
 
-{#C-y}::Paste from primary X selection
+`C-u`::Delete line left
 
-{#C-Y}::Paste from X clipboard
+`C-k`::Delete line right
+
+`C-y`::Paste from primary X selection
+
+`C-Y`::Paste from X clipboard
 
 ## Resources
 

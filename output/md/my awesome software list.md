@@ -21,7 +21,7 @@ Check also [my shell scripts](./my%20shell%20scripts.md) and
   language standard, [more info](./c%20%28programming%20language%29.md)
 
 - [Python](https://www.python.org/) - general-purpose programming language,
-  [more info](./python.md)
+  [more info](./Python.md)
 
 - [Rust](https://www.rust-lang.org/) - systems programming language,
   [more info](./rust%20%28programming%20language%29.md)
@@ -226,6 +226,8 @@ Check also [my shell scripts](./my%20shell%20scripts.md) and
   networking utilities for Linux
 
 - [remmina](https://remmina.org/) - remote access screen and file sharing
+- `ldd` - print shared library dependencies, useful for debugging and find
+required libraries
 
 ## Multimedia
 
@@ -267,6 +269,8 @@ Check also [my shell scripts](./my%20shell%20scripts.md) and
   crontab schedule expressions
 
 - [healthchecks](https://healthchecks.io/) - cron job monitoring
+- [AdGuardHome](https://github.com/AdguardTeam/AdGuardHome) - network-wide
+  software for blocking ads & tracking, [more info](./AdGuardHome.md)
 
 ## Security
 

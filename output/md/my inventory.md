@@ -54,10 +54,12 @@ tags:
 - full backup
 - бритва и пена для бритья?
 
+## Kindle paperwhite
+TODO: model
+
 ## [electronics](./digital%20electronics.md) Devices
 
 
-- TODO: kindle paperwhite model
 - TODO: mobile phone 1 model
 - TODO: mobile phone 2 model
 - TODO: Mouse model

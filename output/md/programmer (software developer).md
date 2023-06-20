@@ -19,4 +19,4 @@ tags:
 >
 > -- [Wikipedia](https://en.wikipedia.org/wiki/Programmer)
 
-I usually program in [python](./python.md) and [c (programming language)](./c%20%28programming%20language%29.md)
+I usually program in [Python](./Python.md) and [c (programming language)](./c%20%28programming%20language%29.md)

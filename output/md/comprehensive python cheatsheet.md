@@ -13,7 +13,7 @@ tags:
 
 # Comprehensive Python Cheatsheet
 
-Learn [python](./python.md) by examples.
+Learn [Python](./Python.md) by examples.
 
 ## Core
 
