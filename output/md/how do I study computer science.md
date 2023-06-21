@@ -63,7 +63,7 @@ books not directly related to computer science.
 - NOW: [papis/9c8a1a90d37c313ce0809814e3c99f82-kernighan-brian-w./notes](./papis/9c8a1a90d37c313ce0809814e3c99f82-kernighan-brian-w./notes.md) exercises, but I do it rarely
   right now, to save time for other things.
 
-- NOW: [papis/14f60db29650af4d6edb2aef6d5539da/notes](./papis/14f60db29650af4d6edb2aef6d5539da/notes.md), to refresh knowledge
+- NOW: [papis/14f60db29650af4d6edb2aef6d5539da/notes](/not_created.md), to refresh knowledge
 - NOW: [comprehensive python cheatsheet](./comprehensive%20python%20cheatsheet.md), I'm writing flashcards from it, I
   think it's will be very useful to know syntax/core libraries.
 
@@ -73,10 +73,10 @@ books not directly related to computer science.
 
 - NEXT: [papis/2f5f35f6a9f0bf0c8b514e6c119de480-petzold-charles/notes](./papis/2f5f35f6a9f0bf0c8b514e6c119de480-petzold-charles/notes.md).
 - NEXT: [papis/bdcf7cd50c6dc8a18320d0c05b44affe-ramalho-luciano/notes](./papis/bdcf7cd50c6dc8a18320d0c05b44affe-ramalho-luciano/notes.md), python complete reading
-- NEXT: [papis/2ef118ce3473c9fe93acfc371e3f736e-wengrow-jay/notes](./papis/2ef118ce3473c9fe93acfc371e3f736e-wengrow-jay/notes.md).
+- NEXT: [papis/2ef118ce3473c9fe93acfc371e3f736e-wengrow-jay/notes](/not_created.md).
 - NEXT: [papis/aabfa212b360ace00b30ea98b5b2aba1-interviewcake/notes](./papis/aabfa212b360ace00b30ea98b5b2aba1-interviewcake/notes.md), to learn algorithms and data
   structures. I think worth to do it after
-  [papis/2ef118ce3473c9fe93acfc371e3f736e-wengrow-jay/notes](./papis/2ef118ce3473c9fe93acfc371e3f736e-wengrow-jay/notes.md)
+  [papis/2ef118ce3473c9fe93acfc371e3f736e-wengrow-jay/notes](/not_created.md)
 
 - NEXT: [papis/2aaba9c8a111b0a808fc70c0f23bc787-stoliarov-andrei-vik/notes](./papis/2aaba9c8a111b0a808fc70c0f23bc787-stoliarov-andrei-vik/notes.md)
 - NEXT: [Тренировки по алгоритмам - YouTube](https://www.youtube.com/playlist?list=PL6Wui14DvQPySdPv5NUqV3i8sDbHkCKC5)
@@ -85,7 +85,7 @@ books not directly related to computer science.
 - TODO: [python](./Python.md)
 - TODO: [Introduction to Algorithms](./papis/9f35f927bf07ed1740edd928505fefcf-cormen-thomas-h.-an/notes.md)
 - TODO: [papis/8e080a939e8f3929a129f88699ab6646-sedgewick-robert-an/notes](./papis/8e080a939e8f3929a129f88699ab6646-sedgewick-robert-an/notes.md)
-- TODO: [papis/5a531e96f3b3b978f489ce0cf6e84b26-cormen-thomas-h./notes](./papis/5a531e96f3b3b978f489ce0cf6e84b26-cormen-thomas-h./notes.md)
+- TODO: [papis/5a531e96f3b3b978f489ce0cf6e84b26-cormen-thomas-h./notes](/not_created.md)
 - TODO: [papis/1ac2e1a756753ace397543a1a7dc255f/notes](./papis/1ac2e1a756753ace397543a1a7dc255f/notes.md)
 
 ### To review
@@ -120,7 +120,7 @@ Publication Year   Author                                  Title
 
 
 - TODO: [Introduction to Computer Science and Programming](https://ocw.mit.edu/courses/6-00-introduction-to-computer-science-and-programming-fall-2008/)
-- TODO: [JavaScript: The Definitive Guide](./papis/0a96b011624a27630b92896fb6c7b31b-flanagan-david/notes.md)
+- TODO: [JavaScript: The Definitive Guide](/not_created.md)
 - TODO: [Code Complete](./papis/5936b08f8c4d30c8b99e13f43ebb60a8-mcconnell-steve/notes.md)
 - TODO: [The Pragmatic Programmer: From Journeyman to Master](./papis/d6ecfc65bb43da6336f0d6593071cbd8-hunt-andrew-and-tho/notes.md)
 - TODO: [Learn Vim. The Smart Way.](./papis/3846141cf23705c27b9c891a33e73435-irianto-igor/notes.md)

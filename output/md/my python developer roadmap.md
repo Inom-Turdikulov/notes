@@ -14,7 +14,7 @@ tags:
 ## Learning
 
 
-- [Python Tutorial](./papis/14f60db29650af4d6edb2aef6d5539da/notes.md)
+- [Python Tutorial](/not_created.md)
 - [Python Developer’s Guide](https://devguide.python.org/)
 - [Python Standard Library](./papis/74b5d9ce4b6ffcf86eaf9484220a6ab5/notes.md)
 - [papis/c771f17042efd4785d59b86771535801/notes](./papis/c771f17042efd4785d59b86771535801/notes.md)
