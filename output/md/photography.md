@@ -11,10 +11,9 @@ tags:
 
 # Photography
 
-> Photography is the [art](./art.md), application, and practice of
-> creating durable images by recording light, either electronically by means of
-> an image sensor, or chemically by means of a light-sensitive material such as
-> photographic film. It is employed in many fields of science, manufacturing
-> (e.g., photolithography), and business, as well as its more direct uses for
-> art, film and video production, recreational purposes, hobby, and mass
-> communication.
+> Photography is the [art](./art.md), application, and practice of creating durable
+> images by recording light, either electronically by means of an image sensor,
+> or chemically by means of a light-sensitive material such as photographic
+> film. It is employed in many fields of science, manufacturing (e.g.,
+> photolithography), and business, as well as its more direct uses for art, film
+> and video production, recreational purposes, hobby, and mass communication.

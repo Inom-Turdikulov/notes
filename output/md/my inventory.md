@@ -55,6 +55,7 @@ tags:
 - бритва и пена для бритья?
 
 ## Kindle paperwhite
+
 TODO: model
 
 ## [electronics](./digital%20electronics.md) Devices

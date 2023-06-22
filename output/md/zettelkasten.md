@@ -30,8 +30,7 @@ TODO: Need describe these principles
 
 Notes can have various [types](./notes%20types.md).
 
-I use [telekasten.nvim](./telekasten.nvim.md) plugin to manage my notes with
-Zettelkasten method.
+I use [telekasten.nvim](./telekasten.nvim.md) plugin to manage my notes with Zettelkasten method.
 
 ## Resources
 

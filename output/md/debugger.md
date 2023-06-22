@@ -11,9 +11,9 @@ tags:
 
 # Debugger
 
-[computer program](./computer%20program.md) that is used to test and "debug" other
-programs, mainly to solve programming bugs. Debug process can be deep integrated
-with development process.
+[computer program](./computer%20program.md) that is used to test and "debug" other programs, mainly to
+solve programming bugs. Debug process can be deep integrated with development
+process.
 
 Need check this:
 

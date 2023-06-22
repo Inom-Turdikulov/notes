@@ -19,6 +19,7 @@ information.
 
 1. Install postgresql package
 2. Create DB and user with
+
 ```sh
 sudo -iu postgres
 psql

@@ -98,9 +98,9 @@ Formatting:
 
 Minimal syntax:
 
-|foo|bar|
-|-|-|
-|baz|bim|
+| foo | bar |
+| --- | --- |
+| baz | bim |
 
 ```markdown
 |foo|bar|

@@ -11,9 +11,9 @@ tags:
 
 # Number
 
-> Concept from [mathematics](./mathematics.md), used to count or
-> measure. Depending on the field of mathematics, where numbers are used, there
-> are different definitions:
+> Concept from [mathematics](./mathematics.md), used to count or measure. Depending
+> on the field of mathematics, where numbers are used, there are different
+> definitions:
 >
 > People use symbols to represent numbers; they call them numerals.
 >

@@ -5125,4 +5125,5 @@ Array representation ^hiB2r0AC
 
 %%
 
-*Example of a binary max-heap with node keys being integers between 1 and 100*
+
+_Example of a binary max-heap with node keys being integers between 1 and 100_

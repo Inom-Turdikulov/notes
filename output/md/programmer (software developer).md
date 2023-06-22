@@ -11,11 +11,11 @@ tags:
 
 # Programmer (software developer, coder)
 
-> Person who creates [computer program](./computer%20program.md)'s — often for larger
-> computer software. A programmer is someone who writes/creates computer
-> software or applications by providing a specific programming language to the
-> computer. Most programmers have extensive computing and coding experience in
-> many varieties of programming languages and platforms
+> Person who creates [computer program](./computer%20program.md)'s — often for larger computer
+> software. A programmer is someone who writes/creates computer software or
+> applications by providing a specific programming language to the computer.
+> Most programmers have extensive computing and coding experience in many
+> varieties of programming languages and platforms
 >
 > -- [Wikipedia](https://en.wikipedia.org/wiki/Programmer)
 

@@ -12,11 +12,9 @@ tags:
 
 # Khan Academy
 
-> Learn for free about [math](./mathematics.md),
-> [art](./art.md),
-> [computer programming](./computer%20programming.md), economics,
-> [physics](./physics.md), [chemistry](./chemistry.md),
-> biology, medicine, [finance](./finance.md), history, and more.
+> Learn for free about [math](./mathematics.md), [art](./art.md),
+> [computer programming](./computer%20programming.md), economics, [physics](./physics.md),
+> [chemistry](./chemistry.md), biology, medicine, [finance](./finance.md), history, and more.
 >
 > -- [Khan Academy](https://www.khanacademy.org/)
 

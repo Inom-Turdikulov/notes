@@ -26,7 +26,7 @@ popular alternative is `rofi`, but for me, it's too complex.
 
 dmenu is keyboard oriented program, and need to use it's
 
- dmenu keybindings
+dmenu keybindings
 
 dmenu is completely controlled by the keyboard.
 

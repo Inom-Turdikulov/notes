@@ -22,6 +22,7 @@ some will be just a link.
 
 ## TODO
 
+
 - [ ] review [http://38.102.84.213:9778/starred](http://38.102.84.213:9778/starred)
 - [ ] raytracing/render/etc... [https://github.com/ssloy](https://github.com/ssloy)
 
@@ -30,20 +31,29 @@ some will be just a link.
 ### Video
 
 
-- [ ] Python dataclasses will save you HOURS, also featuring attrs [https://youtu.be/vBH6GRJ1REM](https://youtu.be/vBH6GRJ1REM)
+- [ ] Python dataclasses will save you HOURS, also featuring attrs
+      [https://youtu.be/vBH6GRJ1REM](https://youtu.be/vBH6GRJ1REM)
 
 ### Reading
 
 
 - [ ] [https://logosbynick.teachable.com/](https://logosbynick.teachable.com/)
-- [ ] check aliases [https://github.com/8carlosf/dotfiles/blob/master/bash/.bashrc#L34](https://github.com/8carlosf/dotfiles/blob/master/bash/.bashrc#L34)
+- [ ] check aliases
+      [https://github.com/8carlosf/dotfiles/blob/master/bash/.bashrc#L34](https://github.com/8carlosf/dotfiles/blob/master/bash/.bashrc#L34)
+
 - [ ] android backup setup [https://github.com/NeoApplications/Neo-Backup](https://github.com/NeoApplications/Neo-Backup)
 - [ ] review [https://github.com/benphelps/homepage](https://github.com/benphelps/homepage)
 
 
-- [ ] "Iliad and the Odyssey" [http://38.102.84.213:9778/category/4/entry/315#:~:text=love%20about%20the-,Iliad%20and%20the%20Odyssey,-is%20that%20I](http://38.102.84.213:9778/category/4/entry/315#:~:text=love%20about%20the-,Iliad%20and%20the%20Odyssey,-is%20that%20I)
-- [ ] "Turing machine" [https://simple.wikipedia.org/wiki/Turing_machine#:~:text=Search-,Turing%20machine,-abstract%20computation%20model](https://simple.wikipedia.org/wiki/Turing_machine#:~:text=Search-,Turing%20machine,-abstract%20computation%20model)
-- [ ] "Turing complete" [https://simple.wikipedia.org/wiki/Turing_complete#:~:text=Search-,Turing%20complete,-ability%20of%20a](https://simple.wikipedia.org/wiki/Turing_complete#:~:text=Search-,Turing%20complete,-ability%20of%20a)
+- [ ] "Iliad and the Odyssey"
+      [http://38.102.84.213:9778/category/4/entry/315#:~:text=love%20about%20the-,Iliad%20and%20the%20Odyssey,-is%20that%20I](http://38.102.84.213:9778/category/4/entry/315#:~:text=love%20about%20the-,Iliad%20and%20the%20Odyssey,-is%20that%20I)
+
+- [ ] "Turing machine"
+      [https://simple.wikipedia.org/wiki/Turing_machine#:~:text=Search-,Turing%20machine,-abstract%20computation%20model](https://simple.wikipedia.org/wiki/Turing_machine#:~:text=Search-,Turing%20machine,-abstract%20computation%20model)
+
+- [ ] "Turing complete"
+      [https://simple.wikipedia.org/wiki/Turing_complete#:~:text=Search-,Turing%20complete,-ability%20of%20a](https://simple.wikipedia.org/wiki/Turing_complete#:~:text=Search-,Turing%20complete,-ability%20of%20a)
+
 - [x] ThePrimeGen vim tips [https://www.youtube.com/watch?v=FrMRyXtiJkc](https://www.youtube.com/watch?v=FrMRyXtiJkc)
 - [ ] [ShortcutFoo](https://www.shortcutfoo.com/)
 - [ ] [The Feynman Technique: The Best Way to Learn Anything](https://fs.blog/feynman-technique/)
@@ -100,11 +110,15 @@ some will be just a link.
 
 - [ ] [https://github.com/nvim-lua/kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
 - [ ] [https://github.com/flyguybravo/goodnotes](https://github.com/flyguybravo/goodnotes)
-- [ ] [https://github.com/nvim-neotest/neotest,](https://github.com/nvim-neotest/neotest,) added and configured + added shortcuts and Zettel
-- [ ] Vim hlights [https://gist.github.com/habamax/c55cc3d42c8bcdbeaf0036ac2f0d722d](https://gist.github.com/habamax/c55cc3d42c8bcdbeaf0036ac2f0d722d)
-- [ ]  [The complete FUN TO IMAGINE with Richard Feynman - YouTube](https://www.youtube.com/watch?v=P1ww1IXRfTA)
-- [ ]  [Uncle Bob SOLID principles - YouTube](https://www.youtube.com/watch?v=zHiWqnTWsn4)
-- [ ]  [https://manual.cs50.io/](https://manual.cs50.io/)
+- [ ] [https://github.com/nvim-neotest/neotest,](https://github.com/nvim-neotest/neotest,) added and configured + added
+      shortcuts and Zettel
+
+- [ ] Vim hlights
+      [https://gist.github.com/habamax/c55cc3d42c8bcdbeaf0036ac2f0d722d](https://gist.github.com/habamax/c55cc3d42c8bcdbeaf0036ac2f0d722d)
+
+- [ ] [The complete FUN TO IMAGINE with Richard Feynman - YouTube](https://www.youtube.com/watch?v=P1ww1IXRfTA)
+- [ ] [Uncle Bob SOLID principles - YouTube](https://www.youtube.com/watch?v=zHiWqnTWsn4)
+- [ ] [https://manual.cs50.io/](https://manual.cs50.io/)
 - [ ] [https://github.com/ThePrimeagen/.dotfiles/tree/master/bin/.local/scripts](https://github.com/ThePrimeagen/.dotfiles/tree/master/bin/.local/scripts)
 - [ ] voidrice-scripts
 - [ ] Chrome debugger
@@ -140,21 +154,19 @@ some will be just a link.
 - [ ] [The Bash Hackers Wiki](https://wiki.bash-hackers.org/doku.php)
 - [ ] [Frece (dmenu stuff) examples](https://github.com/YodaEmbedding/frece/tree/master/examples)
 - [ ] Pass generation - [https://github.com/Inom-Turdikulov/diceware](https://github.com/Inom-Turdikulov/diceware)
-- [ ] [lightmap in
-  unr](https://www.unrealsp.org/forums/viewtopic.php?f=3&t=4601)
-
+- [ ] [lightmap in unr](https://www.unrealsp.org/forums/viewtopic.php?f=3&t=4601)
 - [ ] [https://unreal.shop/models/unreal-engine-5.-free-two-scenes.-lumen-vs-baked-light](https://unreal.shop/models/unreal-engine-5.-free-two-scenes.-lumen-vs-baked-light)
 - [ ] [https://github.com/gvanrossum/500lines](https://github.com/gvanrossum/500lines)
 - [ ] [https://ioannaladopoulou.design/tutorial-pencil-in-nomad-sculpt/](https://ioannaladopoulou.design/tutorial-pencil-in-nomad-sculpt/)
 - [ ] [https://blog.jerrycodes.com/ruff-the-python-linter/](https://blog.jerrycodes.com/ruff-the-python-linter/)
 - [ ] [https://www.tweag.io/blog/2023-04-04-python-monorepo-1/](https://www.tweag.io/blog/2023-04-04-python-monorepo-1/)
 - [ ] [https://docs.piped.video/docs/self-hosting/](https://docs.piped.video/docs/self-hosting/)
-- [ ] Writing The Matrix in Python: easy guide [https://habr.com/en/articles/720452/](https://habr.com/en/articles/720452/)
+- [ ] Writing The Matrix in Python: easy guide
+      [https://habr.com/en/articles/720452/](https://habr.com/en/articles/720452/)
+
 - [ ] [Nerd Dictation for Linux - YouTube](https://www.youtube.com/watch?v=T7sR-4DFhpQ)
 - [ ] [1000x FASTER JavaScript? - YouTube](https://www.youtube.com/watch?v=B76gFi43HvM)
-- [ ] [Response to a Reporter Regarding "Clean Code, Horrible Performance"
-](https://www.computerenhance.com/p/response-to-a-reporter-regarding?publication_id=865289&post_id=113333520&isFreemail=true%E2%86%B5)
-
+- [ ] [Response to a Reporter Regarding "Clean Code, Horrible Performance" ](https://www.computerenhance.com/p/response-to-a-reporter-regarding?publication_id=865289&post_id=113333520&isFreemail=true%E2%86%B5)
 - [ ] [https://github.com/christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
 
 ## Workflows
@@ -195,6 +207,7 @@ some will be just a link.
 
 ## 3D
 
+
 - [ ] [https://github.com/ichlubna/blenderScripts](https://github.com/ichlubna/blenderScripts)
 - [ ] [Unreal Engine 5 Beginner Tutorial](https://www.youtube.com/watch?v=k-zMkzmduqI)
 - [ ] [Build a Mindblowing 3D Portfolio Website](https://youtu.be/Q7AOvWpIVHU)
@@ -204,7 +217,9 @@ some will be just a link.
 
 
 - [ ] [https://idie.ru/posts/vim-modern-cpp/](https://idie.ru/posts/vim-modern-cpp/)
-- [ ] Гигиена полости рта [https://danieldefo.ru/threads/enlightenment-healer-v1-0.14516/#post-781108](https://danieldefo.ru/threads/enlightenment-healer-v1-0.14516/#post-781108)
+- [ ] Гигиена полости рта
+      [https://danieldefo.ru/threads/enlightenment-healer-v1-0.14516/#post-781108](https://danieldefo.ru/threads/enlightenment-healer-v1-0.14516/#post-781108)
+
 - [ ] [https://realpython.com/python-refactoring/](https://realpython.com/python-refactoring/)
 - [ ] [https://github.com/tjdevries/config_manager/blob/d5d6b1dc87e124179be95354c83f108a300edd08/xdg_config/pyenv/default-packages](https://github.com/tjdevries/config_manager/blob/d5d6b1dc87e124179be95354c83f108a300edd08/xdg_config/pyenv/default-packages)
 - [ ] [https://github.com/tjdevries/config_manager/blob/d5d6b1dc87e124179be95354c83f108a300edd08/xdg_config/zsh/.zshrc](https://github.com/tjdevries/config_manager/blob/d5d6b1dc87e124179be95354c83f108a300edd08/xdg_config/zsh/.zshrc)

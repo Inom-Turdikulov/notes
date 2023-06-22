@@ -278,7 +278,7 @@
             
             <div class="container">
                 <div class="content"><h1 id="dm-crypt">dm-crypt</h1>
-<div class="lang-{.bash org-language="sh"}">
+<div class="lang-sh">
 
 <div class="codehilite"><pre><span></span><code><span class="c1"># Redirect output of /dev/zero to initialize container file</span>
 dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/zero<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>1M<span class="w"> </span><span class="nv">count</span><span class="o">=</span><span class="m">100</span><span class="w"> </span><span class="nv">of</span><span class="o">=</span>encrypted_change_name.img
@@ -297,7 +297,7 @@ sudo<span class="w"> </span>mkfs.ext4
 </div>
 
 <h1 id="mount-and-unmount-file-container">Mount and unmount file container</h1>
-<div class="lang-{.bash org-language="sh"}">
+<div class="lang-sh">
 
 <div class="codehilite"><pre><span></span><code><span class="c1"># Open luks partition</span>
 sudo<span class="w"> </span>cryptsetup<span class="w"> </span>luksOpen<span class="w"> </span>encrypted_change_name.img
@@ -327,13 +327,13 @@ sudo<span class="w"> </span>cryptsetup<span class="w"> </span>luksClose
 
 </div>
 <div class="graph requires_js ">
-    <div id="A120082417639852915280895740617600005837{level}" class="graph_div"></div>
+    <div id="A107875046723731611086977248686889477437{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B120082417639852915280895740617600005837{level}" level="{level}" note_temp_id="120082417639852915280895740617600005837" onclick="window.ObsHtmlGraph.run(this, '120082417639852915280895740617600005837', 'dm-crypt');">
+        <button class="graph_button graph_show_button" id="B107875046723731611086977248686889477437{level}" level="{level}" note_temp_id="107875046723731611086977248686889477437" onclick="window.ObsHtmlGraph.run(this, '107875046723731611086977248686889477437', 'dm-crypt');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C120082417639852915280895740617600005837{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C107875046723731611086977248686889477437{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

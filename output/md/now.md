@@ -6,8 +6,8 @@ tags:
 
 # Now
 
-My current focus is on following things, order is not important.
-All with help of [Spaced Repetition](./spaced%20repetition.md), [SQ3R method](./SQ3R%20method.md) and [education](./education.md).
+My current focus is on following things, order is not important. All with help
+of [Spaced Repetition](./spaced%20repetition.md), [SQ3R method](./SQ3R%20method.md) and [education](./education.md).
 
 ## Education
 
@@ -29,10 +29,11 @@ All with help of [Spaced Repetition](./spaced%20repetition.md), [SQ3R method](./
 ## Professional
 
 1. Working project
-2. [@ThePythonTuto], [comprehensive python cheatsheet](./comprehensive%20python%20cheatsheet.md) and [@FluentPythonRamalh2021]
+2. [@ThePythonTuto], [comprehensive python cheatsheet](./comprehensive%20python%20cheatsheet.md) and
+   [@FluentPythonRamalh2021]
 3. [LeetCode](./LeetCode.md) problems with help of [Leetgo](./Leetgo.md), alias is `leet`
-4. [Software Utilization](./my%20awesome%20software%20list.md).
-    Focus on [neovim (text editor)](./neovim%20%28text%20editor%29.md) and [my editing workflow](./my%20editing%20workflow.md).
+4. [Software Utilization](./my%20awesome%20software%20list.md). Focus on
+   [neovim (text editor)](./neovim%20%28text%20editor%29.md) and [my editing workflow](./my%20editing%20workflow.md).
 
 ## IRL
 

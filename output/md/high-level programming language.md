@@ -30,12 +30,12 @@ So the first significantly widespread high-level programming language was
 Fortran, created in 1950s.
 
 > In the 1960s, a high-level programming language using a compiler was commonly
-> called an autocode. Examples of autocodes are COBOL and Fortran. --
-> [@HighlevelProgrammingLanguage2023]
+> called an autocode. Examples of autocodes are COBOL and Fortran.
+>
+> -- [@HighlevelProgrammingLanguage2023]
 
 Instead, dealing with registers, memory addresses and call stacks
-([low-level programming language](./low-level%20programming%20language.md)), high-level languages deals
-with:
+([low-level programming language](./low-level%20programming%20language.md)), high-level languages deals with:
 
 
 - variables

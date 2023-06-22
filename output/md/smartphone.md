@@ -11,14 +11,13 @@ tags:
 
 # Smartphone
 
-> A smartphone is a portable [computer](./computer.md) device that
-> combines mobile telephone functions and computing functions into one unit.
-> They are distinguished from older-design feature phones by their stronger
-> hardware capabilities and extensive mobile operating systems, which facilitate
-> wider software, access to the internet (including web browsing over mobile
-> broadband), and multimedia functionality (including
-> [music](./my%20music.md), [video](./my%20videos.md),
-> [cameras](./camera.md), and [gaming#smartphone](./my%20games.md)),
+> A smartphone is a portable [computer](./computer.md) device that combines mobile
+> telephone functions and computing functions into one unit. They are
+> distinguished from older-design feature phones by their stronger hardware
+> capabilities and extensive mobile operating systems, which facilitate wider
+> software, access to the internet (including web browsing over mobile
+> broadband), and multimedia functionality (including [music](./my%20music.md),
+> [video](./my%20videos.md), [cameras](./camera.md), and [gaming#smartphone](./my%20games.md)),
 > alongside core phone functions such as voice calls and text messaging.
 >
 > Smartphones typically contain a number of metal–oxide–semiconductor (MOS)

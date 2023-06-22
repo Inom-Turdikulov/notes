@@ -18,5 +18,5 @@ tags:
 > intellectual curiosity." --
 > [Hacker News - Wikipedia](https://en.wikipedia.org/wiki/Hacker_News)
 
-RSS of the best news: [https://hnrss.org/best.](https://hnrss.org/best.) I also added it in my
-[miniflux](./miniflux.md) RSS reader.
+RSS of the best news: [https://hnrss.org/best.](https://hnrss.org/best.) I also added it in my [miniflux](./miniflux.md)
+RSS reader.

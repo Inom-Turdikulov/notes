@@ -11,10 +11,10 @@ tags:
 
 # My Music
 
-> Music is generally defined as the [art](./art.md) of arranging sound to
-> create some combination of form, harmony, melody, rhythm or otherwise
-> expressive content. Definitions of music vary depending on culture, though it
-> is an aspect of all human societies, a cultural universal.
+> Music is generally defined as the [art](./art.md) of arranging sound to create some
+> combination of form, harmony, melody, rhythm or otherwise expressive content.
+> Definitions of music vary depending on culture, though it is an aspect of all
+> human societies, a cultural universal.
 >
 > -- [Wikipedia](https://en.wikipedia.org/wiki/Music)
 

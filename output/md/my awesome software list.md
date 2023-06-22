@@ -227,7 +227,7 @@ Check also [my shell scripts](./my%20shell%20scripts.md) and
 
 - [remmina](https://remmina.org/) - remote access screen and file sharing
 - `ldd` - print shared library dependencies, useful for debugging and find
-required libraries
+  required libraries
 
 ## Multimedia
 
@@ -431,8 +431,8 @@ required libraries
 - [GIMP](https://www.gimp.org/) - GNU Image Manipulation Program, fine but krita
   good enough for me
 
-- [anki](https://apps.ankiweb.net/) -
-  [spaced repetition](./spaced%20repetition.md) flashcards
+- [anki](https://apps.ankiweb.net/) - [spaced repetition](./spaced%20repetition.md)
+  flashcards
 
 - [emacs](https://www.gnu.org/software/emacs/) - lisp-based text editor
 - [bash](https://www.gnu.org/software/bash/) - Unix shell and command language

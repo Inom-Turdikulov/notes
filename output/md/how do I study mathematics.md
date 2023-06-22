@@ -20,7 +20,7 @@ List of resources and tips to learn [mathematics](./mathematics.md)
 
 
 - [ ] [https://www.mathsisfun.com/](Math is Fun), I think it's good initial
-  point
+      point
 
 - [ ] concrete mathematic
 - [multiplication table](./multiplication%20table.md)

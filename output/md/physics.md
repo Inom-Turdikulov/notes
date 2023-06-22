@@ -11,8 +11,8 @@ tags:
 
 # Physics
 
-> Natural [science](./science.md) of matter, involving the study of
-> matter, its fundamental constituents, its motion and behavior through space
-> and time, and the related entities of energy and force.
+> Natural [science](./science.md) of matter, involving the study of matter, its
+> fundamental constituents, its motion and behavior through space and time, and
+> the related entities of energy and force.
 >
 > -- [Wikipedia](https://en.wikipedia.org/wiki/Physics)

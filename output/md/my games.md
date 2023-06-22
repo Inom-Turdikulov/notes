@@ -11,9 +11,8 @@ tags:
 
 # My Games
 
-I play [games](./game.md) (but not too much) usually on my
-[computer ](./computer.md)or on my
-[smartphone](./smartphone.md).
+I play [games](./game.md) (but not too much) usually on my [computer](./computer.md)or
+on my [smartphone](./smartphone.md).
 
 ## Active games
 

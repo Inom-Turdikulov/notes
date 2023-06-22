@@ -33,4 +33,5 @@ Abstract syntax trees are also used in program analysis and program
 transformation systems.
 
 ![](%21AST.excalidraw.svg)
-*An abstract syntax tree for the Euclidean algorithm*
+
+_An abstract syntax tree for the Euclidean algorithm_

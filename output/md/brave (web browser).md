@@ -17,8 +17,8 @@ Free open source browser.
 Key features for me:
 
 
-- Rich ad blocking (Shield), and it's available for all
-  [computing platform](./computing%20platform.md) which I use.
+- Rich ad blocking (Shield), and it's available for all [computing platform](./computing%20platform.md)
+  which I use.
 
 - Support for extensions.
 - [video acceleration api](./video%20acceleration%20api.md) support on [linux](./linux.md)
@@ -41,5 +41,4 @@ Key features for me:
 
 ## Troubleshooting
 
-Stuck video playback in Android.
-Try to disable Android SurfaceControl.
+Stuck video playback in Android. Try to disable Android SurfaceControl.
