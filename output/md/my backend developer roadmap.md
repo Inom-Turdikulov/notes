@@ -17,9 +17,9 @@ Source [RoadMap](https://roadmap.sh/backend)
 # Internet
 
 - [ ] Internet
-    - [ ] [How Does the Internet Work?](./papis/4ed80dd50cfd3a58160cbb6707254d12/notes.md)
+    - [ ] [How Does the Internet Work?](/not_created.md)
     - [ ] The Internet
-    - [ ] [The internet, explained](./papis/c7b2c222bbf975affcc2f507fe2b6d61-kun-jeremy/%40TheInternet.md)
+    - [ ] [The internet, explained](/not_created.md)
 - [ ] What is HTTP?
     - [ ] [What is HTTP?](https://www.cloudflare.com/en-gb/learning/ddos/glossary/hypertext-transfer-protocol-http/)
     - [ ] [An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)

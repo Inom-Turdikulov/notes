@@ -17,7 +17,7 @@ some methodical materials from teachers. I started to read after 9th grade (1
 year later) and this give me my initial knowledge about computer science, basic
 algorithms, Visual Basic and office programs. And I think here was sort
 observation of internet/web technologies. Currently, I think better to dive into
-computer science with [papis/2f5f35f6a9f0bf0c8b514e6c119de480-petzold-charles/notes](./papis/2f5f35f6a9f0bf0c8b514e6c119de480-petzold-charles/notes.md) which give much
+computer science with [papis/2f5f35f6a9f0bf0c8b514e6c119de480-petzold-charles/notes](/not_created.md) which give much
 more fundamental knowledge.
 
 My next book, which I found useful is "The C Programming Language"
@@ -59,34 +59,34 @@ books not directly related to computer science.
 ## Level 1
 
 
-- NOW: [papis/9c8a1a90d37c313ce0809814e3c99f82-kernighan-brian-w./notes](./papis/9c8a1a90d37c313ce0809814e3c99f82-kernighan-brian-w./notes.md) basic reading
-- NOW: [papis/9c8a1a90d37c313ce0809814e3c99f82-kernighan-brian-w./notes](./papis/9c8a1a90d37c313ce0809814e3c99f82-kernighan-brian-w./notes.md) exercises, but I do it rarely
+- NOW: [papis/9c8a1a90d37c313ce0809814e3c99f82-kernighan-brian-w./notes](/not_created.md) basic reading
+- NOW: [papis/9c8a1a90d37c313ce0809814e3c99f82-kernighan-brian-w./notes](/not_created.md) exercises, but I do it rarely
   right now, to save time for other things.
 
 - NOW: [papis/14f60db29650af4d6edb2aef6d5539da/notes](/not_created.md), to refresh knowledge
 - NOW: [comprehensive python cheatsheet](./comprehensive%20python%20cheatsheet.md), I'm writing flashcards from it, I
   think it's will be very useful to know syntax/core libraries.
 
-- NOW: [papis/55e4c3a7646b701da66038d1ed63326b-matthes-eric/notes](./papis/55e4c3a7646b701da66038d1ed63326b-matthes-eric/notes.md), really quick reading, to refresh
+- NOW: [papis/55e4c3a7646b701da66038d1ed63326b-matthes-eric/notes](/not_created.md), really quick reading, to refresh
   knowledge, maybe I find something new.
 
 
-- NEXT: [papis/2f5f35f6a9f0bf0c8b514e6c119de480-petzold-charles/notes](./papis/2f5f35f6a9f0bf0c8b514e6c119de480-petzold-charles/notes.md).
-- NEXT: [papis/bdcf7cd50c6dc8a18320d0c05b44affe-ramalho-luciano/notes](./papis/bdcf7cd50c6dc8a18320d0c05b44affe-ramalho-luciano/notes.md), python complete reading
+- NEXT: [papis/2f5f35f6a9f0bf0c8b514e6c119de480-petzold-charles/notes](/not_created.md).
+- NEXT: [papis/bdcf7cd50c6dc8a18320d0c05b44affe-ramalho-luciano/notes](/not_created.md), python complete reading
 - NEXT: [papis/2ef118ce3473c9fe93acfc371e3f736e-wengrow-jay/notes](/not_created.md).
-- NEXT: [papis/aabfa212b360ace00b30ea98b5b2aba1-interviewcake/notes](./papis/aabfa212b360ace00b30ea98b5b2aba1-interviewcake/notes.md), to learn algorithms and data
+- NEXT: [papis/aabfa212b360ace00b30ea98b5b2aba1-interviewcake/notes](/not_created.md), to learn algorithms and data
   structures. I think worth to do it after
   [papis/2ef118ce3473c9fe93acfc371e3f736e-wengrow-jay/notes](/not_created.md)
 
-- NEXT: [papis/2aaba9c8a111b0a808fc70c0f23bc787-stoliarov-andrei-vik/notes](./papis/2aaba9c8a111b0a808fc70c0f23bc787-stoliarov-andrei-vik/notes.md)
+- NEXT: [papis/2aaba9c8a111b0a808fc70c0f23bc787-stoliarov-andrei-vik/notes](/not_created.md)
 - NEXT: [Тренировки по алгоритмам - YouTube](https://www.youtube.com/playlist?list=PL6Wui14DvQPySdPv5NUqV3i8sDbHkCKC5)
 
 
 - TODO: [python](./Python.md)
-- TODO: [Introduction to Algorithms](./papis/9f35f927bf07ed1740edd928505fefcf-cormen-thomas-h.-an/notes.md)
-- TODO: [papis/8e080a939e8f3929a129f88699ab6646-sedgewick-robert-an/notes](./papis/8e080a939e8f3929a129f88699ab6646-sedgewick-robert-an/notes.md)
+- TODO: [Introduction to Algorithms](/not_created.md)
+- TODO: [papis/8e080a939e8f3929a129f88699ab6646-sedgewick-robert-an/notes](/not_created.md)
 - TODO: [papis/5a531e96f3b3b978f489ce0cf6e84b26-cormen-thomas-h./notes](/not_created.md)
-- TODO: [papis/1ac2e1a756753ace397543a1a7dc255f/notes](./papis/1ac2e1a756753ace397543a1a7dc255f/notes.md)
+- TODO: [papis/1ac2e1a756753ace397543a1a7dc255f/notes](/not_created.md)
 
 ### To review
 
@@ -121,10 +121,10 @@ Publication Year   Author                                  Title
 
 - TODO: [Introduction to Computer Science and Programming](https://ocw.mit.edu/courses/6-00-introduction-to-computer-science-and-programming-fall-2008/)
 - TODO: [JavaScript: The Definitive Guide](/not_created.md)
-- TODO: [Code Complete](./papis/5936b08f8c4d30c8b99e13f43ebb60a8-mcconnell-steve/notes.md)
-- TODO: [The Pragmatic Programmer: From Journeyman to Master](./papis/d6ecfc65bb43da6336f0d6593071cbd8-hunt-andrew-and-tho/notes.md)
-- TODO: [Learn Vim. The Smart Way.](./papis/3846141cf23705c27b9c891a33e73435-irianto-igor/notes.md)
-- TODO: [papis/1ae149d1c843b867b0b254a20df34b4f-neil-drew/notes](./papis/1ae149d1c843b867b0b254a20df34b4f-neil-drew/notes.md)
+- TODO: [Code Complete](/not_created.md)
+- TODO: [The Pragmatic Programmer: From Journeyman to Master](/not_created.md)
+- TODO: [Learn Vim. The Smart Way.](/not_created.md)
+- TODO: [papis/1ae149d1c843b867b0b254a20df34b4f-neil-drew/notes](/not_created.md)
 
 
 - TODO: [RUST half-hour](https://fasterthanli.me/articles/a-half-hour-to-learn-rust)
@@ -133,7 +133,7 @@ Publication Year   Author                                  Title
 - TODO: [neovim (text editor)](./neovim%20%28text%20editor%29.md)
 
 
-- TODO: [Pro Git](./papis/315c92066071c34465a13ed21a22f8e4-chacon-scott-and-st/notes.md)
+- TODO: [Pro Git](/not_created.md)
 - TODO: [Алгоритмы и структуры данных в ядре Linux, Chromium и не только / Хабр](https://habr.com/ru/company/wunderfund/blog/277143/)
 - TODO: [Project Euler](https://projecteuler.net/), [solutions](https://www.nayuki.io/page/project-euler-solutions)
 - TODO: [Interactive, and test-driven coding challenges](https://github.com/donnemartin/interactive-coding-challenges), focused on algorithms and data structures.

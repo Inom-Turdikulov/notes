@@ -16,8 +16,8 @@ tags:
 
 - [Python Tutorial](/not_created.md)
 - [Python Developer’s Guide](https://devguide.python.org/)
-- [Python Standard Library](./papis/74b5d9ce4b6ffcf86eaf9484220a6ab5/notes.md)
-- [papis/c771f17042efd4785d59b86771535801/notes](./papis/c771f17042efd4785d59b86771535801/notes.md)
+- [Python Standard Library](/not_created.md)
+- [papis/c771f17042efd4785d59b86771535801/notes](/not_created.md)
 - [codingforentrepreneurs\/30-Days-of-Python.](https://www.youtube.com/playlist?list=PLEsfXFp6DpzQjDBvhNy5YbaBx9j-ZsUe6)
 
 ## Practice
@@ -25,8 +25,8 @@ tags:
 ## Shelve
 
 
-- [Effective Python](./papis/7f8d984537ec14ac5cd5432d44facea8-slatkin-brett/notes.md)
-- [Fluent Python](./papis/bdcf7cd50c6dc8a18320d0c05b44affe-ramalho-luciano/notes.md)
+- [Effective Python](/not_created.md)
+- [Fluent Python](/not_created.md)
 - [Ultimate Python study guide for newcomers and professionals alike.](https://github.com/huangsam/ultimate-python)
 - [Blog - Full Stack Python](https://www.fullstackpython.com/blog.html)
 - [Python Cheatsheet - Python Cheatsheet](https://www.pythoncheatsheet.org/)

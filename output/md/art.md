@@ -35,7 +35,7 @@ I'm fan of fine art and CGI art.
   a good book about light
 
 - [30 day drawing challenge](./30%20day%20drawing%20challenge.md)
-- [papis/882dd7e427ed785b79bc28335be19693-loomis-andrew/notes](./papis/882dd7e427ed785b79bc28335be19693-loomis-andrew/notes.md)
+- [papis/882dd7e427ed785b79bc28335be19693-loomis-andrew/notes](/not_created.md)
 - [ArtStation - showcase platform](https://www.artstation.com/)
 - [DeviantArt - Art Gallery and Community](https://www.deviantart.com/)
 - [Arthive - Social network for artists and art connoisseurs](https://arthive.com/)
