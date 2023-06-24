@@ -7,6 +7,7 @@ sr-interval: 250
 tags:
 - inbox
 - definition
+- dev-tip
 ---
 
 # fzf
@@ -14,23 +15,37 @@ tags:
 It's a general purpose fuzzy finder written in Golang that can be used with any
 list of things: files, processes, command history, git branches, etc.
 
-## For zsh, it provides the following key bindings
+For [z shell](./z%20shell.md), it provides the following key bindings
 
-{#C-T} - Paste the selected file path(s) into the command line {#C-R} - Paste
-the selected command from history into the command line {#M-C} - cd into the
-selected directory
+
+- `C-t`::Paste the selected file path(s) into the command line
+- `C-r`::Paste the selected command from history into the command line
+- `M-C`::`cd` into the selected directory
 
 ## Fuzzy completion mode
 
-You can select multiple items with TAB key::vim \*\*<TAB> Select Files under
-parent directory::vim ../\*\*<TAB> Select Files under parent directory that
-match `fzf`::vim ../fzf\*\*<TAB> `#AOSR/6lqgq/s/5ufe` Select Files under your
-home directory::vim \~/\*\*<TAB> Select Directories under current directory
-(single-selection)::cd \*\*<TAB> Select Directories under \~/github that match
-`fzf`::cd \~/github/fzf\*\*<TAB> Select Process IDs. Can select multiple
-processes with TAB or Shift-TAB::kill -9 <TAB>
 
-Select Host names::ssh \*\*<TAB> Select Telent::telnet \*\*<TAB>
+- Select multiple items with TAB key::`e **` and press `<TAB>`
+- Select Files under parent directory::`e ../**<TAB>`
+- Select Files under parent directory that match `fzf`::`e ../fzf**<TAB>`
+- Select Files under your home directory::`e ~/**<TAB>`
+- Select Directories under current directory (single-selection)::`cd **<TAB>`
+- Select Host names::`ssh **<TAB>`
+- Select Telent::`telnet **<TAB>`
 
-Select Environment variables / aliases ? unset \*\*<TAB> export \*\*<TAB>
-unalias \*\*<TAB> ``
+
+- Select Directories under `~/.config` that match `nvim`
+?
+`cd ~/.config/nvim**<TAB>`
+
+
+- Select Process IDs. Can select multiple processes with `TAB` or `S-TAB`
+?
+`kill -9 **<TAB>`
+
+Select Environment variables / aliases
+?
+
+- `unset **<TAB>`
+- `export **<TAB>`
+- `unalias **<TAB>`

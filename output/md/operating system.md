@@ -27,7 +27,7 @@ tags:
 My favorite operating systems:
 
 
-- [linux](./linux.md) kernel based operating systems
+- [Linux](./Linux.md) kernel based operating systems
 - [android (operating system)](./android%20%28operating%20system%29.md)
 
 Other operating systems:

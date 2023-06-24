@@ -281,22 +281,20 @@
 <blockquote>
 <p>dwm is a dynamic window manager for X. It manages windows in tiled, monocle
 and floating layouts. All of the layouts can be applied dynamically,
-optimizing the environment for the application in use and the task performed.</p>
-<p>&mdash; <cite><a href="https://dwm.suckless.org/&lt;/cite&gt;" class="external-link">https://dwm.suckless.org/</cite></a></p>
+optimizing the environment for the application in use and the task performed\
+—&thinsp;<cite><a href="https://dwm.suckless.org/" class="external-link">dwm</a></cite></p>
 </blockquote>
-<figure>
-  <img src="/img/pasted_img_20230102033318.png" width="" alt="My configured DWM with 2 windows in foreground" title="My configured DWM with 2 windows in foreground" />
-  <figcaption>My configured DWM with 2 windows in foreground</figcaption>
-</figure>
-
-<p><em>My configured DWM with 2 windows in foreground</em></p>
-<p>I used long time <code>i3wm</code>, <code>KWin</code>, <code>GNOME</code>, <span class="formatting_strikethrough"><code>windows GUI</code></span>, various status bars
-(like <code>polybar</code>), etc. But after that I discovered DWM, I just switched to it
-and use it with maximum pleasure. It has some "disadvantages", maybe not clear
-logic if you use it first time, but It's all manageable and solvable.</p>
+<p><img alt="My configured DWM with 2 windows in
+foreground" src="/img/pasted_img_20230102033318.png" />
+<em>My configured DWM with 2 windows in foreground</em></p>
+<p>I used long time <code>i3wm</code>, <code>KWin</code>, <code>GNOME</code>, <code>Desktop Window Manager</code>, various
+status bars (like <code>polybar</code>), etc. But after that I discovered DWM, I just
+switched to it and use it with maximum pleasure. It has some "disadvantages",
+maybe not clear logic if you use it first time, but It's all manageable and
+solvable. Especially if you use something like <code>DWM flexipatch</code>.</p>
 <p>Right now I use various patches, with this DWM fork:
-<kbd>&lt;<a href="https://github.com/bakkeby/dwm-flexipatch&gt;&lt;/kbd&gt;" class="external-link">https://github.com/bakkeby/dwm-flexipatch&gt;</kbd></a></p>
-<p>To use dwm effectively, you need to use <a href="/dwm%20keyboard%20shortcuts.html">dwm keyboard shortcuts</a>.</p>
+<a href="https://github.com/bakkeby/dwm-flexipatch" class="external-link">bakkeby/dwm-flexipatch</a>.</p>
+<p>To use dwm effectively, I use my own <a href="/dwm%20keyboard%20shortcuts.html">dwm keyboard shortcuts</a>.</p>
 <h2 id="launching">Launching</h2>
 <p>Here my <code>~/.xinitrc</code>:</p>
 <div class="lang-bash">
@@ -339,8 +337,32 @@ picom<span class="w"> </span>--experimental-backend<span class="w">  </span>--ba
 <p><em>Tiled layout</em></p>
 <p>By default, dwm in <mark class="formatting_highlight">tiled</mark> layout. But you can switch between <mark class="formatting_highlight">tiled</mark>,
 <mark class="formatting_highlight">monocle</mark>, <mark class="formatting_highlight">floating</mark> layouts.</p>
-<p>Also, dwm support <mark class="formatting_highlight">floating</mark> windows.</p>
-<p>For additional information, see <a href="/dwm%20keyboard%20shortcuts.html">dwm keyboard shortcuts</a>.</p></div>
+<p>For additional information, see <a href="/dwm%20keyboard%20shortcuts.html">dwm keyboard shortcuts</a>.</p>
+<h2 id="additional-functional">Additional functional</h2>
+<h3 id="status-bar">Status bar</h3>
+<p>I use customized <code>dwmblocks</code>.</p>
+<p>Enabled modules are: <code>datetime</code>, volume status and keyboard layout.
+That items are not interactive.</p>
+<p>I also created custom modules, <code>dnd</code>.</p>
+<ul>
+<li><a href="https://github.com/inomoz/dotfiles/blob/main/.local/bin/dnd" class="external-link">dnd</a>
+(Do Not Disturb), key <kbd>s-C-n</kbd>.
+It's toggling notifications pause mode, in status bar displayed ⛔ icon.</li>
+</ul>
+<h2 id="keyboard-shortcuts">Keyboard shortcuts</h2>
+<p>Keyboard shortcuts are described in <a href="/dwm%20keyboard%20shortcuts.html">dwm keyboard shortcuts</a> note.</p>
+<h2 id="useful-links">Useful links</h2>
+<ul>
+<li>&lt;<a href="https://dwm.suckless.org/tutorial/&gt;" class="external-link">https://dwm.suckless.org/tutorial/&gt;</a></li>
+<li>&lt;<a href="https://ratfactor.com/dwm&gt;" class="external-link">https://ratfactor.com/dwm&gt;</a></li>
+<li>&lt;<a href="https://wiki.gentoo.org/wiki/Dwm&gt;" class="external-link">https://wiki.gentoo.org/wiki/Dwm&gt;</a></li>
+<li>&lt;<a href="https://dwm.suckless.org/customisation/windows_key/&gt;" class="external-link">https://dwm.suckless.org/customisation/windows_key/&gt;</a></li>
+</ul>
+<h2 id="to-do">To-Do</h2>
+<ul>
+<li>TODO: create repo with my patches</li>
+<li>TODO: describe dwmblocks</li>
+</ul></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
@@ -356,18 +378,19 @@ picom<span class="w"> </span>--experimental-backend<span class="w">  </span>--ba
 <ul>
 	<li><a class="backlink" href="/obs.html/tags/inbox/index.html">inbox</a></li>
 	<li><a class="backlink" href="/obs.html/tags/definition/index.html">definition</a></li>
+	<li><a class="backlink" href="/obs.html/tags/dev-tip/index.html">dev-tip</a></li>
 </ul>
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A175753358272245961792746130633904356359{level}" class="graph_div"></div>
+    <div id="A83892344878880054814785922178367792568{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B175753358272245961792746130633904356359{level}" level="{level}" note_temp_id="175753358272245961792746130633904356359" onclick="window.ObsHtmlGraph.run(this, '175753358272245961792746130633904356359', 'dwm');">
+        <button class="graph_button graph_show_button" id="B83892344878880054814785922178367792568{level}" level="{level}" note_temp_id="83892344878880054814785922178367792568" onclick="window.ObsHtmlGraph.run(this, '83892344878880054814785922178367792568', 'dwm');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C175753358272245961792746130633904356359{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C83892344878880054814785922178367792568{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

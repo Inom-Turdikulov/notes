@@ -21,7 +21,7 @@ Key features for me:
   which I use.
 
 - Support for extensions.
-- [video acceleration api](./video%20acceleration%20api.md) support on [linux](./linux.md)
+- [video acceleration api](./video%20acceleration%20api.md) support on [Linux](./Linux.md)
 - [chrome devtools](./chrome%20devtools.md) support.
 - Built-in browser sync, and it's available for all platforms which I use.
 

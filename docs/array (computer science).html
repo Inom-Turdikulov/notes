@@ -280,26 +280,17 @@
                 <div class="content"><h1 id="array-computer-science">Array (computer science)</h1>
 <h2 id="array-data-structure">Array (data structure)</h2>
 <blockquote>
-<p>Array is a <a href="/data%20structure.html">data structure</a> consisting of a collection of
-elements (values or variables), each identified by at least one array index or
-key.</p>
-<p>-- <a href="https://en.wikipedia.org/wiki/Array_\(data_structure\)" class="external-link">Wikipedia</a></p>
-<p>An assemblage of items that are randomly accessible by integers, the index. --
-<a href="https://xlinux.nist.gov/dads/HTML/array.html" class="external-link">https://xlinux.nist.gov/dads/HTML/array.html</a></p>
+<p>Array is a <a href="/data%20structure.html">data structure</a> consisting of a collection of elements (values
+or variables), each identified by at least one array index or key.</p>
+<p>-- <a href="[https://en.wikipedia.org/wiki/Array_(data_structure)" class="external-link">Wikipedia</a>](https://en.wikipedia.org/wiki/Array_(data_structure)&gt;))</p>
+<p>An assemblage of items that are randomly accessible by integers, the index.</p>
+<p>-- &lt;<a href="https://xlinux.nist.gov/dads/HTML/array.html&gt;" class="external-link">https://xlinux.nist.gov/dads/HTML/array.html&gt;</a></p>
 </blockquote>
-<h2 id="array-data-type">Array (data type)</h2>
-<blockquote>
-<p>In <a href="/computer%20science.html">computer science</a>, <strong>array</strong> is a <a href="/data%20type.html">data type</a> that represents a
-collection of <em>elements</em> <a href="/value%20%28computer%20science%29.html">values</a>
-or <a href="/variable%20%28computer%20science%29.html">variables</a>, each selected by one or more indices
-(identifying keys) that can be computed at <a href="/runtime%20%28program%20lifecycle%20phase%29.html">runtime</a> during program execution.
-Such a collection is usually called
-an <strong>array variable</strong> or <strong>array value</strong>. By analogy with the mathematical
-concepts <a href="/vector.html">vector</a> and <a href="/matrix%20%28mathematics%29.html">matrix</a>, array types with one
-and two indices are often called <strong>vector type</strong> and <strong>matrix type</strong>,
-respectively. More generally, a multidimensional array type can be called a
-<strong>tensor type</strong>, by analogy with the physical concept, <a href="/tensor.html">tensor</a>.</p>
-</blockquote>
+<p>Array in memory is a <strong>contiguous</strong> block of memory locations. Array usually at
+least has an <strong>address</strong> in memory and <strong>size</strong> (number of items in array). Each
+element of array has an index (location of elements or address), and first index
+is <code>0</code>.</p>
+<p>size_of_array = last_index + 1</p>
 <table>
 <thead>
 <tr>
@@ -315,24 +306,16 @@ respectively. More generally, a multidimensional array type can be called a
 <tr>
 <td></td>
 <td></td>
-<td>9</td>
+<td><code>9</code></td>
 <td></td>
 <td></td>
-<td>1</td>
+<td><code>1</code></td>
 </tr>
 <tr>
 <td></td>
-<td>5</td>
+<td><code>5</code></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td>10</td>
 <td></td>
 <td></td>
 </tr>
@@ -340,39 +323,62 @@ respectively. More generally, a multidimensional array type can be called a
 <td></td>
 <td></td>
 <td></td>
+<td><code>10</code></td>
 <td></td>
-<td>6</td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td>7</td>
 <td></td>
 <td></td>
-<td>11</td>
+<td></td>
+<td><code>6</code></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>7</code></td>
+<td></td>
+<td></td>
+<td><code>11</code></td>
+<td></td>
+</tr>
+<tr>
+<td><em>Graphical representation of array in memory</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<p>So in general array is a 1 way storing several items (such as integers). Usually
+<h2 id="array-data-type">Array (data type)</h2>
+<blockquote>
+<p>In <a href="/computer%20science.html">computer science</a>, <strong>array</strong> is a <a href="/data%20type.html">data type</a> that represents a
+collection of <em>elements</em> <a href="/value%20%28computer%20science%29.html">values</a> or
+<a href="/variable%20%28computer%20science%29.html">variables</a>, each selected by one or more
+indices (identifying keys) that can be computed at
+<a href="/runtime%20%28program%20lifecycle%20phase%29.html">runtime</a> during program execution. Such a
+collection is usually called an <strong>array variable</strong> or <strong>array value</strong>. By
+analogy with the mathematical concepts <a href="/vector.html">vector</a> and
+<a href="/matrix%20%28mathematics%29.html">matrix</a>, array types with one and two indices are
+often called <strong>vector type</strong> and <strong>matrix type</strong>, respectively. More
+generally, a multidimensional array type can be called a <strong>tensor type</strong>, by
+analogy with the physical concept, <a href="/tensor.html">tensor</a>.
+So in general array is a 1 way storing several items (such as integers). Usually
 array store the same type of items (this depending on language). Every item in
 array indexed (by integer number starting from 0) and you can access array item
-by index (key in array). As rule index starting from
-<a href="/zero-based%20numbering.html">0</a> to <code>n-1</code> where <code>n</code> is a number of items
-in array.</p>
-<p>In general array is <mark class="formatting_highlight">list of data elements</mark>.</p>
-<!--SR:!2023-04-15,2,210-->
-
-<p>Size of an array is <mark class="formatting_highlight">how many data elements the array holds</mark>.</p>
-<!--SR:!2023-04-15,2,228-->
-
+by index (key in array). As rule index starting from <a href="/zero-based%20numbering.html">0</a>
+to <code>n-1</code> where <code>n</code> is a number of items in array.</p>
+</blockquote>
+<p>In general array is <mark class="formatting_highlight">list of data elements</mark>.
+Size of an array is <mark class="formatting_highlight">how many data elements the array holds</mark>.</p>
 <p>The index of an array is the number that identifies <mark class="formatting_highlight">where a piece of data
 lives</mark> inside the array.</p>
 <p>In most programming languages, arrays are <mark class="formatting_highlight">zero-indexed</mark>, meaning that the
 first element of the array is at index 0, the second element is at index 1, and
 so on.</p>
-<!--SR:!2023-04-15,2,228-->
-
 <div class="mermaid">
 graph LR
 A[Array] --- |Index 0| B(1)
@@ -381,17 +387,12 @@ A --- |Index 2| D(3)
 A --- |Index 3| E(4)
 </div>
 
-<p>When you create array (<a href="/initialization%20%28programming%29.html">initialization (programming)</a>) you must
-set array size (number of items stored in the array). Size of array is fixed.
-Also, computer <mark class="formatting_highlight">allocate some <a href="/computer%20memory.html">memory</a></mark> for
-array during its initialization.</p>
-<!--SR:!2023-04-17,3,241-->
-
-<p>When allocating an array the computer always keeps track:
-?
-Beginning address and array size</p>
-<!--SR:!2023-06-12,7,201-->
-
+<p>When you create array (<a href="/initialization%20%28programming%29.html">initialization (programming)</a>) you must set array size
+(number of items stored in the array). Size of array is fixed. Also, computer
+<mark class="formatting_highlight">allocate some <a href="/computer%20memory.html">memory</a></mark> for array during its
+initialization.</p>
+<p>When allocating an array the computer always keeps track: ? Beginning address
+and array size</p>
 <p>An array is stored such that the <strong>position of each element</strong> can be computed
 from its <strong>index tuple</strong> by a mathematical formula. So a computer can find the
 value at any index by performing simple addition.</p>
@@ -447,85 +448,25 @@ value at any index by performing simple addition.</p>
 <li>So, memory address for index 3 is 13</li>
 <li>Read value from memory address 13 = D</li>
 </ol>
-<h2 id="arrays-in-c-programming-language">Arrays in <a href="/c%20%28programming%20language%29.html">c (programming language)</a>:</h2>
-<div class="lang-c">
-
-<div class="codehilite"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">array</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span><span class="w">  </span><span class="c1">// Initialize array with 4 items</span>
-<span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="n">array</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
-<span class="n">array</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
-<span class="n">array</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">33</span><span class="p">;</span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-<span class="p">}</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.14</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w">  </span><span class="c1">// Error: index out of range</span>
-</code></pre></div>
-
-
-</div>
-
-<h2 id="arrays-in-java-programming-language">Arrays in <a href="/java%20%28programming%20language%29.html">java (programming language)</a>:</h2>
-<div class="lang-java">
-
-<div class="codehilite"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
-<span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="n">array</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
-<span class="n">array</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
-<span class="n">array</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">33</span><span class="p">;</span>
-<span class="n">array</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
-</code></pre></div>
-
-
-</div>
-
-<h2 id="arrays-in-rust-programming-language">Arrays in <a href="/rust%20%28programming%20language%29.html">rust (programming language)</a>:</h2>
-<div class="lang-rust">
-
-<div class="codehilite"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">array</span>: <span class="p">[</span><span class="kt">i32</span><span class="p">;</span><span class="w"> </span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="mi">3</span><span class="p">];</span>
-
-<span class="n">array</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="n">array</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-
-<span class="fm">assert_eq!</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="o">&amp;</span><span class="n">array</span><span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="p">]);</span>
-
-<span class="c1">// This loop prints: 0 1 2</span>
-<span class="k">for</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="fm">print!</span><span class="p">(</span><span class="s">&quot;{x} &quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-
-
-</div>
-
-<p>In Python used <a href="/list%20%28abstract%20data%20type%29.html">list (abstract data type)</a> not arrays, and here
-no restrictions on the type of items stored in the array, and its size is not
-fixed.</p>
+<p>Examples, how to use <a href="/array%20in%20programming%20languages.html">array in programming languages</a>.</p>
 <h2 id="array-operations">Array operations</h2>
-<h3 id="array-read-operation">Array read operation</h3>
-<p>?
-Looking up (access/retrieve) a value at a particular index in an array.</p>
-<!--SR:!2023-04-16,2,206-->
-
-<p>It's efficient and fastens operation, since require only one step.</p>
+<p>Array reading is
+?
+Looking up (access/retrieve) a value at a particular index in an array.
+It's efficient and fastens operation, since require only one step.</p>
+<p>Array reading require <mark class="formatting_highlight">only one</mark> step, because we can retrieve value by some
+computation (array address + index).</p>
 <h3 id="array-search-operation">Array search operation</h3>
-<p>?
-Looking to see if a particular value exists within the array, and if so, at
+<p>? Looking to see if a particular value exists within the array, and if so, at
 which index.</p>
-<!--SR:!2023-06-10,5,166-->
-
-<p>Basic search operation is "<mark class="formatting_highlight">linear search</mark>". We check each cell one at time
-until we find the value we are looking for (or until we read all cells).
-Steps = <code>N</code> cells in array. Search is much slower than read (less efficient).</p>
-<!--SR:!2023-08-03,59,220-->
-
+<p>Basic search operation is "<mark class="formatting_highlight">linear</mark>" search. We check each cell one at time
+until we find the value we are looking for (or until we read all cells). Steps =
+<code>N</code> cells in array. Search is much slower than read (less efficient).</p>
 <p>In other words it's search for an index of a value in the array, sort of inverse
-of reading. We provide a value to the computer and asking it to return the
-index of that value's location.</p>
+of reading. We provide a value to the computer and asking it to return the index
+of that value's location.</p>
 <h3 id="array-insert-operation">Array insert operation</h3>
-<p>?
-Adding a new value to an additional slot within the array.</p>
-<!--SR:!2023-06-13,8,166-->
-
+<p>? Adding a new value to an additional slot within the array.</p>
 <p>Efficiency depends on where we insert the value.</p>
 <ul>
 <li>
@@ -534,29 +475,19 @@ Adding a new value to an additional slot within the array.</p>
   for array while inserting.</p>
 </li>
 <li>
-<p>Beginning or in the middle, this operation require shifting data.
-  In the worst case (begging of array) it's <span class="arithmatex">\(N+1\)</span> steps, where <span class="arithmatex">\(N\)</span> is a number
-  of items in array.</p>
+<p>Beginning or in the middle, this operation require shifting data. In the worst
+  case (begging of array) it's <span class="arithmatex">\(N+1\)</span> steps, where <span class="arithmatex">\(N\)</span> is a number of items in
+  array.</p>
 </li>
 </ul>
-<p>How many steps will take insertion in the worst case?
-?
-<span class="arithmatex">\(N+1\)</span> steps, where <span class="arithmatex">\(N\)</span> is a number of items in array.</p>
-<!--SR:!2023-04-16,2,221-->
-
+<p>How many steps will take insertion in the worst case? ? <span class="arithmatex">\(N+1\)</span> steps, where <span class="arithmatex">\(N\)</span>
+is a number of items in array.</p>
 <h2 id="array-delete-operation">Array delete operation</h2>
-<p>?
-Removing a value from the array. In other words process of eliminating the value
-at a particular index.</p>
-<!--SR:!2023-04-15,2,226-->
-
-<p>In worst case deletion operation will take
-?
-<span class="arithmatex">\(N\)</span> steps, where <span class="arithmatex">\(N\)</span> is a number of items in array.
-One step to delete value, and <span class="arithmatex">\(N-1\)</span> (we don't need to shift deleted value) steps
-to shift data.</p>
-<!--SR:!2023-06-10,6,200-->
-
+<p>? Removing a value from the array. In other words process of eliminating the
+value at a particular index.</p>
+<p>In worst case deletion operation will take ? <span class="arithmatex">\(N\)</span> steps, where <span class="arithmatex">\(N\)</span> is a number of
+items in array. One step to delete value, and <span class="arithmatex">\(N-1\)</span> (we don't need to shift
+deleted value) steps to shift data.</p>
 <script>
                     function initializeMermaid() {
                         mermaid.initialize({startOnLoad:true})
@@ -572,9 +503,10 @@ to shift data.</p>
 <div class="backlinks">
 <h2>Backlinks</h2>
 <ul>
-	<li><a class="backlink" href="/papis/aabfa212b360ace00b30ea98b5b2aba1-interviewcake/notes.html">aabfa212b360ace00b30ea98b5b2aba1-interviewcake/notes</a></li>
+	<li><a class="backlink" href="/data structure.html">data structure</a></li>
 	<li><a class="backlink" href="/matrix (mathematics).html">matrix (mathematics)</a></li>
 	<li><a class="backlink" href="/list (abstract data type).html">list (abstract data type)</a></li>
+	<li><a class="backlink" href="/papis/aabfa212b360ace00b30ea98b5b2aba1-interviewcake/notes.html">aabfa212b360ace00b30ea98b5b2aba1-interviewcake/notes</a></li>
 </ul>
 </div>
 
@@ -589,13 +521,13 @@ to shift data.</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A291371387853077875483281777856793932090{level}" class="graph_div"></div>
+    <div id="A115855318498059162044746082879296834840{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B291371387853077875483281777856793932090{level}" level="{level}" note_temp_id="291371387853077875483281777856793932090" onclick="window.ObsHtmlGraph.run(this, '291371387853077875483281777856793932090', 'array (computer science)');">
+        <button class="graph_button graph_show_button" id="B115855318498059162044746082879296834840{level}" level="{level}" note_temp_id="115855318498059162044746082879296834840" onclick="window.ObsHtmlGraph.run(this, '115855318498059162044746082879296834840', 'array (computer science)');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C291371387853077875483281777856793932090{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C115855318498059162044746082879296834840{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

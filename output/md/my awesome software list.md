@@ -338,7 +338,7 @@ Check also [my shell scripts](./my%20shell%20scripts.md) and
 
 
 - [linux](https://kernel.org/) - monolithic, modular, multitasking, Unix-like
-  operating system kernel, [more info](./linux.md)
+  operating system kernel, [more info](./Linux.md)
 
 - [btrfs](https://btrfs.wiki.kernel.org/index.php/Main_Page) - modern copy on
   write (CoW) filesystem for Linux
@@ -465,6 +465,7 @@ Check also [my shell scripts](./my%20shell%20scripts.md) and
 
 ## Android
 
+TODO: actualize this list
 
 - [[Termux]
 - [Tachiyomi](./Tachiyomi.md)

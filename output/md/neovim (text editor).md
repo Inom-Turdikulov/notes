@@ -21,6 +21,8 @@ tags:
 
 Enable logs - `nvim -V10nvim.log`
 
+Get variable value - `:verbose set conceallevel`
+
 ## Features
 
 # General

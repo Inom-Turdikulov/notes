@@ -282,52 +282,54 @@
 and fast.</p>
 <p>I use custom configuration to adjust colors/fonts and paddings.</p>
 <h2 id="general-keybindings">General keybindings</h2>
-<p>Go to next/previous page::J / K</p>
-<!--SR:!2023-05-27,1,230-->
-
-<p>Scroll to the left, down, up or right direction::h / j / k / l</p>
-<p>Scroll to half page up or down::Ctrl + u / d</p>
-<p>Scroll to full page up or down::Ctrl + f / b or Space / Shift + Space</p>
-<p>Scroll to half page left or right (useful for wide documents)::Ctrl + t / y</p>
-<p>Scroll to full page left or right (useful for wide documents)::t / y</p>
-<p>Go to the first/last page::gg / G</p>
-<p>Go to nth page::nG</p>
-<p>Snaps to the current page (sort of centering current page)::P</p>
-<p>Go to bottom / top of current page::H / L</p>
-<p>Move backward and forward through the jump list::Ctrl + o / i</p>
-<p>Bisect forward and backward between the last two jump points (generate new
-jump point and go to it)::^j / ^k</p>
-<p>Abort (for example from command-line mode)::Esc / ^c</p>
-<p>Fit content in window to width / best-fit (full page)::s / a</p>
+<p>Navigation, zooming, control UI, open links, etc.</p>
+<p>Go to next/previous page::<code>J</code> / <code>K</code></p>
+<p>Scroll to the left, down, up or right direction::<code>h</code> / <code>j</code> / <code>k</code> / <code>l</code></p>
+<p>Scroll to half page up or down::<code>C-u</code> / <code>C-d</code></p>
+<p>Scroll to full page up or down::<code>C-f</code> / <code>C-b</code> or <code>Space</code> / <code>S-space</code></p>
+<p>Scroll to half page left or right (useful for wide documents)::<code>C-t</code> / <code>C-y</code></p>
+<p>Scroll to full page left or right (useful for wide documents)::<code>t</code> / <code>y</code></p>
+<p>Go to the first/last page::<code>gg</code> / <code>G</code></p>
+<p>Go to nth page::<code>nG</code></p>
+<p>Snaps to the current page (sort of centering current page)::<code>P</code></p>
+<p>Go to bottom / top of current page::<code>H</code> / <code>L</code></p>
+<p>Move backward and forward through the jump list::<code>C-o</code> / <code>i</code></p>
+<p>Bisect forward and backward between the last two jump points. Generate new
+jump point and go to it.
+?
+<code>C-j</code> / <code>^k</code></p>
+<p>Abort (for example from command-line mode)::<code>Esc</code> / <code>C-c</code></p>
+<p>Fit content in window to width / best-fit (full page)::<code>s</code> / <code>a</code></p>
 <p>Search text forward / backward::<code>/</code> / <code>?</code></p>
-<p>Search for next / previous occurrence of search pattern::n / N</p>
-<p>Open document / open document in current directory::o / O</p>
-<p>Follow links (like in vimium)::f</p>
-<p>Display link target (page number)::F</p>
-<p>Copy link target to clipboard (page number)::c</p>
+<p>Search for next / previous occurrence of search pattern::<code>n</code> / <code>N</code></p>
+<p>Open document / open document in current directory::<code>o</code> / <code>O</code></p>
+<p>Follow links (like in vimium)::<code>f</code></p>
+<p>Display link target (page number)::<code>F</code></p>
+<p>Copy link target to clipboard (page number)::<code>c</code></p>
 <p>Enter command-line mode::<code>:</code></p>
 <p>Rotate by 90 degrees clockwise::<code>r</code></p>
-<p>Recolor (grayscale and invert colors, sort of night mode)::<code>^r</code></p>
+<p>Recolor (grayscale and invert colors, sort of night mode)::<code>C-r</code></p>
 <p>Reload document::<code>R</code></p>
 <p>Toggle dual page view::<code>d</code></p>
 <p>Switch to presentation mode (full-screen without UI)::<code>F5</code></p>
 <p>Switch to full-screen mode (like presentation but with UI)::<code>F11</code></p>
-<p>Toggle statusbar/inputbar::^n / ^m</p>
-<p>Zoom in / reset, zoom out::<code>+</code> / <code>=</code>, <code>-</code> or zI / z0, zO/zz</p>
+<p>Toggle statusbar/inputbar::<code>C-n</code> / <code>^m</code></p>
+<p>Zoom in / reset, zoom out::<code>+</code> / <code>=</code>, <code>-</code> or <code>zI</code> / <code>z0</code> or <code>zO</code> / <code>zz</code></p>
 <p>Zoom to size n::<code>n=</code></p>
 <p>Set a quickmark::<code>m&lt;letter&gt;</code></p>
 <p>Go to quickmark::<code>'&lt;letter&gt;</code></p>
 <p>Quit (like in vim)::<code>q</code></p>
 <h2 id="index-mode">Index mode</h2>
-<p>Show index (table of contents) and switch to <code>Index mode</code>::Tab</p>
-<p>Move up / down and expand / collapse current entry::h / j / k / l</p>
-<p>Expand/collapse all entries::L / H</p>
-<p>Select and open entry::space / Return</p>
+<p>Special mode for navigating the document's index (table of contents).</p>
+<p>Show index (table of contents) and switch to <code>Index mode</code>::<code>Tab</code></p>
+<p>Move up / down and expand / collapse current entry::<code>h</code> / <code>j</code> / <code>k</code> / <code>l</code></p>
+<p>Expand/collapse all entries::<code>L</code> / <code>H</code></p>
+<p>Select and open entry::<code>space</code> / <code>Return</code></p>
 <h2 id="mouse-bindings">Mouse bindings</h2>
-<p>Wheel up / down::Scroll up / down</p>
-<div id="__ Wheel up / down::Zoom in / out"></div>
-<p>Pan the document::Hold button 2</p>
-<p>Follow link::Button 1</p>
+<p>Wheel up / Wheel down::<code>ScrollWheelUp</code> / <code>ScrollWheelDown</code></p>
+<p>Zoom in / out::<code>C-ScrollWheelUp</code> / <code>C-ScrollWheelDown</code></p>
+<p>Pan the document::Hold <code>RightMouse</code></p>
+<p>Follow link::<code>LeftMouse</code></p>
 <h2 id="commands">Commands</h2>
 <p>List bookmarks (stored in <code>~/.local/share/zathura/bookmarks</code>)::<code>:blist</code></p>
 <p>Save a bookmark::<code>:bmark &lt;name&gt;</code></p>
@@ -336,33 +338,26 @@ jump point and go to it)::^j / ^k</p>
 <p>Open a document (support tab completion)::<code>:open</code></p>
 <p>Show document information::<code>info</code></p>
 <p>Execute an external command.
-$FILE expands to the current document path, and $PAGE to the current page number
-?
-<code>:exec &lt;command&gt;</code></p>
+$FILE expands to the current document path, and
+$PAGE to the current page number
+? <code>:exec &lt;command&gt;</code></p>
 <p>Print document::<code>:print</code></p>
 <p>Save document (and force overwriting) with optional path::<code>:write[!] [&lt;path&gt;]</code></p>
 <p>Write values, descriptions, etc. of all current settings to a file::<code>dump</code></p>
-<p>Export attachments
-?
-For "export", there are two possibilities:</p>
-<ul>
-<li><code>export attachment-{name} {file_name}</code></li>
-<li><code>export image-p{page_number}-{image_number} {file_name}</code></li>
-</ul>
-<p>Set page offset
-?
-<code>:offset &lt;offset&gt;</code>
-The command <code>:offset &lt;number&gt;</code> will make Zathura take into account an offset
-when jumping to a page number (by typing <number>G, the command :<number> will
-not mind the offset). For example, a given book begins counting its pages on
-the PDF's 17th page (so on page 17, the index is 1; on 18 it is 2, and so on).
-On setting :offset 16, 245G will jump to the 261st page of the PDF rather than
-the 245th.</p>
+<p>Export attachments ? For "export", there are two possibilities:</p>
+<p><code>export attachment-{name} {file_name}</code></p>
+<p><code>export image-p{page_number}-{image_number} {file_name}</code></p>
+<p>Set page offset ? <code>:offset &lt;offset&gt;</code> The command <code>:offset &lt;number&gt;</code> will make
+Zathura take into account an offset when jumping to a page number (by typing
+<number>G, the command :<number> will not mind the offset). For example, a given
+book begins counting its pages on the PDF's 17th page (so on page 17, the index
+is 1; on 18 it is 2, and so on). On setting :offset 16, 245G will jump to the
+261st page of the PDF rather than the 245th.</p>
 <h2 id="resources">Resources</h2>
 <ul>
+<li><code>man zathura</code></li>
 <li><a href="https://wiki.archlinux.org/title/zathura" class="external-link">Zathura - ArchWiki</a></li>
 <li><a href="https://pwmt.org/projects/zathura/" class="external-link">pwmt.org</a></li>
-<li><a href="https://manpages.ubuntu.com/manpages/kinetic/man1/zathura.1.html" class="external-link">Zathura man</a></li>
 </ul></div>
 <div class="note-footer">
 <div class="backlinks">
@@ -383,13 +378,13 @@ the 245th.</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A168332460843410190950798951083354474359{level}" class="graph_div"></div>
+    <div id="A150526268321732350929772987560301029534{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B168332460843410190950798951083354474359{level}" level="{level}" note_temp_id="168332460843410190950798951083354474359" onclick="window.ObsHtmlGraph.run(this, '168332460843410190950798951083354474359', 'zathura');">
+        <button class="graph_button graph_show_button" id="B150526268321732350929772987560301029534{level}" level="{level}" note_temp_id="150526268321732350929772987560301029534" onclick="window.ObsHtmlGraph.run(this, '150526268321732350929772987560301029534', 'zathura');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C168332460843410190950798951083354474359{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C150526268321732350929772987560301029534{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

@@ -5,7 +5,7 @@
 <head>
     <!-- Page information -->
     <meta charset="UTF-8" />
-    <meta name="node_id" content="none" />
+    <meta name="node_id" content="array in programming languages" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -43,13 +43,13 @@
 <script src="/obs.html/static/pako.js"></script>
 <script src="/obs.html/static/search.js"></script>
 <script src="/obs.html/static/dirtree.js"></script>
-<link rel="stylesheet" href="/obs.html/static/taglist.css" />
+
 
     <!-- Onload tweaks -->
     <script>
-        const CURRENT_NODE = "none";
+        const CURRENT_NODE = "array in programming languages";
         const HTML_URL_PREFIX = "";
-        const PAGE_DEPTH = {page_depth};
+        const PAGE_DEPTH = 0;
     </script>
 
     <style>
@@ -242,7 +242,7 @@
             }
         </script>
                                     <div class="graph_header_div requires_js">
-            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=none" title="Open fullpage Graph">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=array in programming languages" title="Open fullpage Graph">
                     <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
             </a>
         </div>
@@ -277,23 +277,103 @@
         <div class="flex_row">
             
             <div class="container">
-                <h1 id="notes">Notes</h1>
+                <div class="content"><h1 id="array-in-programming-languages">Array in programming languages</h1>
+<h2 id="arrays-in-c-programming-language">Arrays in <a href="/c%20%28programming%20language%29.html">c (programming language)</a>:</h2>
+<div class="lang-c">
+
+<div class="codehilite"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">array</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span><span class="w">  </span><span class="c1">// Initialize array with 4 items</span>
+<span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">array</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+<span class="n">array</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="n">array</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">33</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="p">}</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.14</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w">  </span><span class="c1">// Error: index out of range</span>
+</code></pre></div>
+
+
+</div>
+
+<h2 id="arrays-in-java-programming-language">Arrays in <a href="/java%20%28programming%20language%29.html">java (programming language)</a>:</h2>
+<div class="lang-java">
+
+<div class="codehilite"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+<span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">array</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+<span class="n">array</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="n">array</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">33</span><span class="p">;</span>
+<span class="n">array</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
+</code></pre></div>
+
+
+</div>
+
+<h2 id="arrays-in-rust-programming-language">Arrays in <a href="/rust%20%28programming%20language%29.html">rust (programming language)</a>:</h2>
+<div class="lang-rust">
+
+<div class="codehilite"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">array</span>: <span class="p">[</span><span class="kt">i32</span><span class="p">;</span><span class="w"> </span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="mi">3</span><span class="p">];</span>
+
+<span class="n">array</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">array</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+
+<span class="fm">assert_eq!</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="o">&amp;</span><span class="n">array</span><span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="p">]);</span>
+
+<span class="c1">// This loop prints: 0 1 2</span>
+<span class="k">for</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="fm">print!</span><span class="p">(</span><span class="s">&quot;{x} &quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+</div>
+
+<p>In Python used <mark class="formatting_highlight"><a href="/list%20%28abstract%20data%20type%29.html">list (abstract data type)</a></mark> not arrays, and here no
+restrictions on the type of items stored in the array, and its size is not
+fixed.</p></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
 <ul>
-<li><a href="/obsidian.html">obsidian</a></li>
-<li><a href="/kitty (terminal emulator).html">kitty (terminal emulator)</a></li>
-<li><a href="/git tips.html">git tips</a></li>
-<li><a href="/fzf.html">fzf</a></li>
-<li><a href="/z shell.html">z shell</a></li>
-<li><a href="/nnn file manager.html">nnn file manager</a></li>
-<li><a href="/zathura.html">zathura</a></li>
-<li><a href="/dwm.html">dwm</a></li>
-<li><a href="/dwm keyboard shortcuts.html">dwm keyboard shortcuts</a></li>
-<li><a href="/dmenu.html">dmenu</a></li>
-<li><a href="/mpv.html">mpv</a></li>
+	<li><a class="backlink" href="/array (computer science).html">array (computer science)</a></li>
 </ul>
-<blockquote>
-<p><a href="/obs.html/tags/index.html">View all tags</a></p>
-</blockquote>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="/obs.html/tags/inbox/index.html">inbox</a></li>
+	<li><a class="backlink" href="/obs.html/tags/definition/index.html">definition</a></li>
+	<li><a class="backlink" href="/obs.html/tags/CS-tip/index.html">CS-tip</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A132071623110668010340871556059487634595{level}" class="graph_div"></div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B132071623110668010340871556059487634595{level}" level="{level}" note_temp_id="132071623110668010340871556059487634595" onclick="window.ObsHtmlGraph.run(this, '132071623110668010340871556059487634595', 'array in programming languages');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C132071623110668010340871556059487634595{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('/obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
                 <!-- end content -->
             </div>
         </div>

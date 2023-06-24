@@ -9,7 +9,7 @@ tags:
 - log
 ---
 
-# My 30 Day Drawing Challenge
+# My 30-Day Drawing Challenge
 
 My first steps in [my art](./my%20art.md) creation.
 
@@ -52,8 +52,9 @@ challenge:
 Remember to have fun and experiment with different styles and techniques as you
 complete the challenge!
 
-## Next
+## To-do
 
 
-- [ ] [papis/882dd7e427ed785b79bc28335be19693-loomis-andrew/notes](./papis/882dd7e427ed785b79bc28335be19693-loomis-andrew/notes.md)
-- [ ] artist PDF files...
+- TODO: [Drawabox](https://drawabox.com/)
+- TODO: @FunWithAPencLoomis2013
+- TODO: artist PDF files...

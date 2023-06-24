@@ -280,21 +280,41 @@
                 <div class="content"><h1 id="fzf">fzf</h1>
 <p>It's a general purpose fuzzy finder written in Golang that can be used with any
 list of things: files, processes, command history, git branches, etc.</p>
-<h2 id="for-zsh-it-provides-the-following-key-bindings">For zsh, it provides the following key bindings</h2>
-<p>{#C-T} - Paste the selected file path(s) into the command line {#C-R} - Paste
-the selected command from history into the command line {#M-C} - cd into the
-selected directory</p>
+<p>For <a href="/z%20shell.html">z shell</a>, it provides the following key bindings</p>
+<ul>
+<li><code>C-t</code>::Paste the selected file path(s) into the command line</li>
+<li><code>C-r</code>::Paste the selected command from history into the command line</li>
+<li><code>M-C</code>::<code>cd</code> into the selected directory</li>
+</ul>
 <h2 id="fuzzy-completion-mode">Fuzzy completion mode</h2>
-<p>You can select multiple items with TAB key::vim **<TAB> Select Files under
-parent directory::vim ../**<TAB> Select Files under parent directory that
-match <code>fzf</code>::vim ../fzf**<TAB> <code>#AOSR/6lqgq/s/5ufe</code> Select Files under your
-home directory::vim \~/**<TAB> Select Directories under current directory
-(single-selection)::cd **<TAB> Select Directories under \~/github that match
-<code>fzf</code>::cd \~/github/fzf**<TAB> Select Process IDs. Can select multiple
-processes with TAB or Shift-TAB::kill -9 <TAB></p>
-<p>Select Host names::ssh **<TAB> Select Telent::telnet **<TAB></p>
-<p>Select Environment variables / aliases ? unset **<TAB> export **<TAB>
-unalias **<TAB> ``</p></div>
+<ul>
+<li>Select multiple items with TAB key::<code>e **</code> and press <code>&lt;TAB&gt;</code></li>
+<li>Select Files under parent directory::<code>e ../**&lt;TAB&gt;</code></li>
+<li>Select Files under parent directory that match <code>fzf</code>::<code>e ../fzf**&lt;TAB&gt;</code></li>
+<li>Select Files under your home directory::<code>e ~/**&lt;TAB&gt;</code></li>
+<li>Select Directories under current directory (single-selection)::<code>cd **&lt;TAB&gt;</code></li>
+<li>Select Host names::<code>ssh **&lt;TAB&gt;</code></li>
+<li>
+<p>Select Telent::<code>telnet **&lt;TAB&gt;</code></p>
+</li>
+<li>
+<p>Select Directories under <code>~/.config</code> that match <code>nvim</code>
+?
+<code>cd ~/.config/nvim**&lt;TAB&gt;</code></p>
+</li>
+<li>
+<p>Select Process IDs. Can select multiple processes with <code>TAB</code> or <code>S-TAB</code>
+?
+<code>kill -9 **&lt;TAB&gt;</code></p>
+</li>
+</ul>
+<p>Select Environment variables / aliases
+?</p>
+<ul>
+<li><code>unset **&lt;TAB&gt;</code></li>
+<li><code>export **&lt;TAB&gt;</code></li>
+<li><code>unalias **&lt;TAB&gt;</code></li>
+</ul></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
@@ -309,18 +329,19 @@ unalias **<TAB> ``</p></div>
 <ul>
 	<li><a class="backlink" href="/obs.html/tags/inbox/index.html">inbox</a></li>
 	<li><a class="backlink" href="/obs.html/tags/definition/index.html">definition</a></li>
+	<li><a class="backlink" href="/obs.html/tags/dev-tip/index.html">dev-tip</a></li>
 </ul>
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A206055121078307552791634725569005900947{level}" class="graph_div"></div>
+    <div id="A170362679600047151037676965181786359172{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B206055121078307552791634725569005900947{level}" level="{level}" note_temp_id="206055121078307552791634725569005900947" onclick="window.ObsHtmlGraph.run(this, '206055121078307552791634725569005900947', 'fzf');">
+        <button class="graph_button graph_show_button" id="B170362679600047151037676965181786359172{level}" level="{level}" note_temp_id="170362679600047151037676965181786359172" onclick="window.ObsHtmlGraph.run(this, '170362679600047151037676965181786359172', 'fzf');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C206055121078307552791634725569005900947{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C170362679600047151037676965181786359172{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
