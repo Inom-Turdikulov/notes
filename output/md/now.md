@@ -7,7 +7,7 @@ tags:
 # Now
 
 My current focus is on following things, order is not important. All with help
-    of [Spaced Repetition](./spaced%20repetition.md), [SQ3R method](./SQ3R%20method.md) and [education](./education.md).
+of [Spaced Repetition](./spaced%20repetition.md), [SQ3R method](./SQ3R%20method.md) and [education](./education.md).
 
 ## Education
 

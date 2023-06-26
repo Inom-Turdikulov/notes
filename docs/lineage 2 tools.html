@@ -362,6 +362,30 @@ NV - (NPC Viewer) просмотр нпс (всех нпс, можно погу�
 </li>
 </ul>
 <h2 id="client-side-stuff">Client Side stuff</h2>
+<p>winetricks requirements:</p>
+<blockquote>
+<p>export WINEARCH=win32
+winetricks vcrun2005 vcrun2008 vcrun2010 vcrun2012 vcrun2013 vcrun2015
+wine system/l2.exe
+winetricks corefonts
+winetricks sandbox
+winecfg and configure drivers</p>
+</blockquote>
+<p>Kill game guard (high-five), <a href="https://i.imgur.com/tQswxD4.png" class="external-link">method</a></p>
+<p>Requirements:</p>
+<ul>
+<li>xpeviewer</li>
+<li><a href="https://github.com/WerWolv/ImHex/releases" class="external-link">https://github.com/WerWolv/ImHex/releases</a></li>
+<li>
+<p>hex editor (I use &lt;<a href="https://github.com/RaafatTurki/hex.nvim&gt;" class="external-link">https://github.com/RaafatTurki/hex.nvim&gt;)</a>)</p>
+</li>
+<li>
+<p>Open in РЕ Editor core.dll (system\core.dll)</p>
+</li>
+<li>Go to exports → <code>?GL2UseGameGuard@@3HA</code> (<code>046c</code>)</li>
+<li>Go to hex and get offset, in my case: <code>000e0db4</code></li>
+<li>Open in hex editor core.dll and go to offset</li>
+</ul>
 <p><a href="http://l2maxi.ru/java/faq/1697-manual-redaktirovanie-modeley-ukx-v-lineagenormalnyy.html" class="external-link">http://l2maxi.ru/java/faq/1697-manual-redaktirovanie-modeley-ukx-v-lineagenormalnyy.html</a>
 <a href="https://maxcheaters.com/topic/240179-collection-l2-shares-updated-07042023google-drive/" class="external-link">https://maxcheaters.com/topic/240179-collection-l2-shares-updated-07042023google-drive/</a>
 <a href="https://www.youtube.com/watch?v=IMMynGIoSR0" class="external-link">https://www.youtube.com/watch?v=IMMynGIoSR0</a> - effect
@@ -516,13 +540,13 @@ just resave them with l2editor</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A284897728009925302409886883644684519321{level}" class="graph_div"></div>
+    <div id="A115567205947836852116071500706792035863{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B284897728009925302409886883644684519321{level}" level="{level}" note_temp_id="284897728009925302409886883644684519321" onclick="window.ObsHtmlGraph.run(this, '284897728009925302409886883644684519321', 'lineage 2 tools');">
+        <button class="graph_button graph_show_button" id="B115567205947836852116071500706792035863{level}" level="{level}" note_temp_id="115567205947836852116071500706792035863" onclick="window.ObsHtmlGraph.run(this, '115567205947836852116071500706792035863', 'lineage 2 tools');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C284897728009925302409886883644684519321{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C115567205947836852116071500706792035863{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
