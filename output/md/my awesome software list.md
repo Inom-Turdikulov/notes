@@ -469,3 +469,7 @@ TODO: actualize this list
 
 - [[Termux]
 - [Tachiyomi](./Tachiyomi.md)
+
+## TODO:
+
+- `faketime` - manipulate the system time for a given command
