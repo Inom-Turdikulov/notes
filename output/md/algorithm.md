@@ -39,9 +39,8 @@ processing.
 
 In computing, an algorithm is a precise list of operations that could be done by
 a [Turing machine](./Turing%20machine.md). For the purpose of [computing](./computation.md), algorithms
-are written in [pseudocode](./pseudocode.md), [flow charts](./flowchart.md), or
-[programming language](./programming%20language.md).
+are written in [pseudocode](./pseudocode.md), [flowchart](./flowchart.md), or [programming language](./programming%20language.md).
 
 Sometimes, it’s possible to have two different algorithms that accomplish the
-same task ()[computational complexity](./computational%20complexity.md). One algorithm can be faster than the
-other by orders of magnitude.
+same task [computational complexity](./computational%20complexity.md). One algorithm can be faster than the
+other by *orders of magnitude*.

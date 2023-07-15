@@ -33,6 +33,7 @@ on my [smartphone](./smartphone.md).
 
 
 - [lineage 2 tools](./lineage%202%20tools.md), long story..., 9.7/10
+- ~~`Brotato`~~, completed, too time-consuming, I 8/10
 - ~~`Dark Souls Prepare to Die Edition`~~, too time-consuming, 8/10 (bad port,
   but overall good game)
 
@@ -134,6 +135,9 @@ on my [smartphone](./smartphone.md).
 - `Screeps: World`
 
 ## Modding
+
+### Manual (steam)
+
 
 ### Skyrim
 
@@ -245,3 +249,7 @@ essential or "Highly recommended" mods.
   Allows you to unbind gameplay keys from menu keys, so that changing
   Activate to something other than "E" won't also ghost-change Use in
   menus to that other key.
+
+
+### Gothic 1
+[https://www.reddit.com/r/SteamDeck/comments/uxtomx/enjoying_gothic_on_my_steamdeck/](https://www.reddit.com/r/SteamDeck/comments/uxtomx/enjoying_gothic_on_my_steamdeck/)

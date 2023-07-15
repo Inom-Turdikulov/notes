@@ -296,38 +296,66 @@ styled (curly) underlines. One of the design goals of kitty is to be easily
 extensible, so that new features can be added in the future with relatively
 little effort.</p>
 </blockquote>
+<p>TODO: <a href="https://sw.kovidgoyal.net/kitty/overview" class="external-link">https://sw.kovidgoyal.net/kitty/overview</a></p>
 <h2 id="shortcuts">Shortcuts</h2>
-<p>Open URL in web browser
-?
-<code>C-S-e</code></p>
-<p>Edit kitty.conf
-?
-<code>C-S-f2</code></p>
-<p>Reload kitty.conf
-?
-<code>C-S-f5</code></p>
-<p>Go to specific tab
-?
-<code>C-M-n</code></p>
-<p>Close current tab
-?
-<code>C-S-q</code></p>
-<p>Move tab forward
-?
-<code>C-S-.</code></p>
-<p>Move tab backward
-?
-<code>C-S-,</code></p>
+<p>Kitty support any operation with keyboard (which is cool) and also supports all
+shortcuts customization.</p>
+<p><code>Mod</code> key in my configuration is <code>Ctrl+Shift</code>.</p>
+<h2 id="scrolling">Scrolling</h2>
+<p>These shortcuts are working only in terminal mode (not in any TUI/Full screen
+console application).</p>
+<p>Line up / Line down::<code>Mod+k</code> / <code>Mod+j</code></p>
+<p>Page up / Page down::<code>Mod+u</code> / <code>Mod+d</code></p>
+<p>Top / Bottom::<code>Mod+\</code> / <code>Mod+/</code></p>
+<p>Previous / Next shell prompt vertical position::<code>Mod+z</code> / <code>Mod+x</code></p>
+<p>Browse scrollback in less::<code>Mod+h</code></p>
+<p>Browse last cmd output::<code>Mod+g</code></p>
+<h2 id="tabs">Tabs</h2>
+<p>New tab::<code>Mod-t</code></p>
+<p>Close tab::<code>Mod-q</code></p>
+<p>Next tab / Previous tab::<code>C-&lt;tab&gt;</code> / <code>C-S-&lt;tab&gt;</code></p>
+<p>Switch layout::<code>Mod-l</code></p>
+<p>Go to specific tab::<code>C-M-&lt;tab number&gt;</code></p>
+<p>Close current tab::<code>Mod-q</code></p>
+<p>Move tab forward / backward::<code>Mod-.</code> / <code>Mod-,</code></p>
+<p>Set tab title::<code>C-S-M-t</code></p>
+<h2 id="windows">Windows</h2>
+<p>New window::<code>Mod-RET</code></p>
+<p>New OS window::<code>M-S-RET</code>, it's my custom shortcut</p>
+<p>Close window::<code>s-S-c</code>, it's my custom shortcut</p>
+<p>Resize window::<code>Mod-r</code></p>
+<p>Next window / Previous window::<code>Mod+]</code> / <code>Mod+[</code> * TODO: need rebind</p>
+<p>Move window forward::<code>Mod+f</code></p>
+<p>Move window backward::<code>Mod+b</code></p>
+<p>Move window to top `Mod+``</p>
+<p>Visually focus window (with number)::<code>Mod+F7</code></p>
+<p>Visually swap window (with number)::<code>Mod+F8</code></p>
+<p>Focus specific window::<code>Mod+&lt;window number&gt;</code> (1-9)</p>
+<p>TODO: check other window shortcuts</p>
+<h2 id="other">Other</h2>
+<p>Increase font size::<code>Mod-equal</code>
+Decrease font size::<code>Mod-minus</code>
+Restore font size::<code>Mod-backspace</code></p>
+<p>Open URL in web browser::<code>Mod-e</code></p>
+<p>Edit kitty.conf::<code>Mod-F2</code></p>
+<p>Reload kitty.conf::<code>Mod-F5</code></p>
+<p>Show help::<code>Mod-F1</code></p>
+<p>Copy to clipboard::<code>Mod-c</code></p>
+<p>Paste from clipboard::<code>Mod-v</code></p>
+<p>Paste from selection::<code>Mod-s</code></p>
+<p>Pass selection to program::<code>Mod-o</code> ?</p>
+<p>Toggle full-screen::<code>Mod-F11</code></p>
+<p>Input Unicode character::<code>C-M-u</code>, customized</p>
+<p>Reset the terminal::<code>Mod-delete</code> ?</p>
+<p>Edit kitty.conf::<code>Mod-f2</code>
+Reload kitty.conf::<code>Mod-f5</code>
+Debug kitty.conf::<code>Mod-f6</code></p>
+<p>Open a kitty shell::<code>Mod-escape</code></p>
 <h2 id="custom-shortcuts">Custom shortcuts</h2>
-<p>Switch project using sessionizer
-?
-<code>C-space</code></p>
-<p>Find tab
-?
-<code>C-M-f</code></p>
-<p>Start keyboard-driven text selection as a kitten, using <a href="https://github.com/yurikhan/kitty_grab" class="external-link">kitty_grab</a>
-?
-<code>C-M-c</code></p></div>
+<p>Switch project using sessionizer::<code>C-space</code></p>
+<p>Switch project using sessionizer and ignore duplicate tabs::<code>C-S-space</code></p>
+<p>Find tab::<code>C-M-F</code></p>
+<p>Start keyboard-driven text selection as a kitten, using <a href="https://github.com/yurikhan/kitty_grab" class="external-link">kitty_grab</a>::<code>C-M-c</code></p></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
@@ -347,13 +375,13 @@ little effort.</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A127628594396284569365102755112350831954{level}" class="graph_div"></div>
+    <div id="A245707049826343051317517122714578420505{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B127628594396284569365102755112350831954{level}" level="{level}" note_temp_id="127628594396284569365102755112350831954" onclick="window.ObsHtmlGraph.run(this, '127628594396284569365102755112350831954', 'kitty (terminal emulator)');">
+        <button class="graph_button graph_show_button" id="B245707049826343051317517122714578420505{level}" level="{level}" note_temp_id="245707049826343051317517122714578420505" onclick="window.ObsHtmlGraph.run(this, '245707049826343051317517122714578420505', 'kitty (terminal emulator)');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C127628594396284569365102755112350831954{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C245707049826343051317517122714578420505{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
