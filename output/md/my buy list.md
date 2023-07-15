@@ -18,17 +18,19 @@ My purchased items stored here: [my inventory](./my%20inventory.md).
 
 ## Repeating
 
+TODO: convert into taskwarrior task
 
-- [ ] 🧴 Mineral water x3
-- [ ] 🧀 Cheese 500g
+
+- [x] 🧴 Mineral water x3
+- [x] 🧀 Cheese 500g
 - [ ] 🥔 Potato
 - [ ] 🥕 Carrots
 - [ ] 🥛 Milk 3.2% x3
 - [ ] 🍗 Chicken - 1x, fillet - x2
-- [x] 🥚 Eggs
+- [ ] 🥚 Eggs
 - [ ] 🌯 Shawarma - 2x
 - [ ] 🍎 Apples - 1kg
-- [x] 🥪 Sandwiches
+- [ ] 🥪 Sandwiches
 - [ ] 🍫 Chocolate bars - x2
 - [ ] 🍌 Bananas
 - [ ] 🍊 Oranges
@@ -38,30 +40,30 @@ My purchased items stored here: [my inventory](./my%20inventory.md).
 - [ ] 🍒 Cherry / Bird-cherry
 
 
-- [x] 🧼 Soap
-- [x] 🧴 Shampoo
-- [x] 🧴 Body cream
+- [ ] 🧼 Soap
+- [ ] 🧴 Shampoo
+- [ ] 🧴 Body cream
 
 
 - [ ] 🧀 Cottage cheese
 - [ ] 🍇 Grapes
 - [ ] 🧃 Juice
 - [ ] 🌽 Corn sticks
-- [x] 🥣 Cereal
-- [x] 🌶️ Pepper
-- [x] 🌿 Flavoring
+- [ ] 🥣 Cereal
+- [ ] 🌶️ Pepper
+- [ ] 🌿 Flavoring
 - [ ] 🍗 Minced chicken
-- [-] 🧀 Curd
-- [x] 🧄 Garlic
+- [ ] 🧀 Curdw
+- [ ] 🧄 Garlic
 - [ ] 🟠 Persimmon (хурма)
 - [ ] 🍐 Pears (груши)
 - [ ] 🥭 Mango
-- [x] 🧻 Paper towels
-- [x] 🧻 Toilet paper
-- [x] 🧂 Salt
-- [x] 🍚 Semolina
-- [x] 🌾 Buckwheat
-- [x] 🦷 Toothpaste
+- [ ] 🧻 Paper towels
+- [ ] 🧻 Toilet paper
+- [ ] 🧂 Salt
+- [ ] 🍚 Semolina
+- [ ] 🌾 Buckwheat
+- [ ] 🦷 Toothpaste
 
 ## Inventory
 
