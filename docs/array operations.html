@@ -281,39 +281,46 @@
 <p>There are four basic operations that can be performed on an
 <a href="/array%20%28computer%20science%29.html">array (computer science)</a>.</p>
 <h2 id="reading">Reading</h2>
-<p>Array reading is <mark class="formatting_highlight">looking up (access/retrieve)</mark> a value at a particular index
-in an array. It's efficient and fastens operation, since require only one step. <!--SR:!2023-07-16,3,250--></p>
-<p>Array reading require <mark class="formatting_highlight">only one</mark> step, because we can retrieve value by some
-computation (array address + index). <!--SR:!2023-07-16,3,250--></p>
+<p>Array reading operation is <mark class="formatting_highlight">looking up (access/retrieve)</mark> a value at a
+particular index in an array. It's efficient and fastens operation, since
+require only one step.</p>
+<!--SR:!2023-07-30,11,250-->
+
+<p>Array reading require (steps) <mark class="formatting_highlight">only one step, <span class="arithmatex">\(\mathcal{O}(1)\)</span></mark>, because we
+can retrieve value by some computation (array address + index).</p>
+<!--SR:!2023-07-31,12,250-->
+
 <figure>
   <img src="/%21shopping_list_array.excalidraw.svg" width="" alt="shopping list array" title="shopping list array" />
   <figcaption>shopping list array</figcaption>
 </figure>
 
 <p><em>Schematic array representation in memory</em></p>
-<p>Facts about computers and arrays:</p>
-<ul>
-<li>
-<p>A computer can jump to any memory address in <mark class="formatting_highlight">one step</mark>. Fox example if we
+<h3 id="facts-about-computers-and-arrays">Facts about computers and arrays</h3>
+<p>A computer can jump to any memory address in <mark class="formatting_highlight">one</mark> step. Fox example if we
 jump to <code>1010</code> address, we can read "apples" value.</p>
-</li>
-<li>
 <p>When computer allocate an array, it makes note at which memory addresses the
 array begins, and knowing that address and index of any element, computer can
-calculate the memory address (simply addition) of that element in <mark class="formatting_highlight">one step</mark>. <!--SR:!2023-07-16,3,250--></p>
-</li>
-</ul>
+calculate the memory address (simply addition) of that element in <mark class="formatting_highlight">one</mark> step.</p>
+<!--SR:!2023-07-29,10,250-->
+
 <h2 id="searching">Searching</h2>
 <h3 id="linear-search">Linear search</h3>
 <p>Reading is looking to see if a particular value <mark class="formatting_highlight">exists</mark> within the array, and
 if so, at which index.</p>
+<!--SR:!2023-07-22,3,250-->
+
 <p>Basic search operation is "<mark class="formatting_highlight">linear</mark>" search. We check each cell one at time
 until we find the value we are looking for (or until we read all cells).</p>
 <p>Search is much slower than read (less efficient). Maximum steps are <code>N</code>, where
 <code>N</code> is <mark class="formatting_highlight">a number of cells in array</mark>.</p>
-<p>In other words, search for an index of a value in the array, sort of <mark class="formatting_highlight">inverse</mark>
-of reading. We provide a value to the computer and asking it to return the index
-of that value's location.</p>
+<!--SR:!2023-07-22,3,250-->
+
+<p>In other words, search for an <strong>index</strong> of a value in the array, is sort of
+<mark class="formatting_highlight">inverse</mark> of reading. We provide a value to the computer and asking it to
+return the index of that value's location.</p>
+<!--SR:!2023-07-20,1,229-->
+
 <div class="lang-ruby">
 
 <div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">linear_search</span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">search_value</span><span class="p">)</span>
@@ -346,6 +353,8 @@ of that value's location.</p>
 linear search can take up to <mark class="formatting_highlight">N steps</mark>. But if you use a binary search, which
 can be used with ordered arrays, effectiveness of search will raise
 dramatically.</p>
+<!--SR:!2023-07-22,3,250-->
+
 <h3 id="binary-search-for-ordered-array">Binary search for ordered array</h3>
 <p>NOTE: that binary search is only possible within an ordered array, with classic
 array we need to read all cells.</p>
@@ -371,8 +380,12 @@ array we need to read all cells.</p>
 <p>Array insertion is operation of?
 ?
 Adding a new value to an additional slot within the array.</p>
+<!--SR:!2023-07-22,3,250-->
+
 <p>When computer allocating an array, the computer always keeps track of the
 array's <mark class="formatting_highlight">size</mark>.</p>
+<!--SR:!2023-07-22,3,250-->
+
 <p>Efficiency depends on where we insert the value.</p>
 <ul>
 <li>
@@ -398,11 +411,15 @@ that index and shift all elements to the right.</p>
 ?
 <span class="arithmatex">\(N+1\)</span> steps, where <span class="arithmatex">\(N\)</span> is a number of items in array required to shift and 1 is
 insert operation.</p>
+<!--SR:!2023-07-22,3,250-->
+
 <h2 id="deletion">Deletion</h2>
 <p>Deletion is operation of?
 ?
 Removing a value from the array. In other words process of eliminating the
 value at a particular index.</p>
+<!--SR:!2023-07-22,3,250-->
+
 <figure>
   <img src="/%21shopping_list_array_delete.svg" width="" alt="shopping list array delete" title="shopping list array delete" />
   <figcaption>shopping list array delete</figcaption>
@@ -412,7 +429,8 @@ value at a particular index.</p>
 <p>In worst case deletion operation will take ?
 ?
 <span class="arithmatex">\(N\)</span> steps, where <span class="arithmatex">\(N\)</span> is a number of items in array. One step to delete value,
-and <span class="arithmatex">\(N-1\)</span> (we don't need to shift deleted value) steps to shift data.</p></div>
+and <span class="arithmatex">\(N-1\)</span> (we don't need to shift deleted value) steps to shift data.</p>
+<!--SR:!2023-07-20,1,230--></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
@@ -432,13 +450,13 @@ and <span class="arithmatex">\(N-1\)</span> (we don't need to shift deleted valu
 
 </div>
 <div class="graph requires_js ">
-    <div id="A66617626134835150326636836967536273797{level}" class="graph_div"></div>
+    <div id="A239398825420462949781792876324277558607{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B66617626134835150326636836967536273797{level}" level="{level}" note_temp_id="66617626134835150326636836967536273797" onclick="window.ObsHtmlGraph.run(this, '66617626134835150326636836967536273797', 'array operations');">
+        <button class="graph_button graph_show_button" id="B239398825420462949781792876324277558607{level}" level="{level}" note_temp_id="239398825420462949781792876324277558607" onclick="window.ObsHtmlGraph.run(this, '239398825420462949781792876324277558607', 'array operations');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C66617626134835150326636836967536273797{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C239398825420462949781792876324277558607{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

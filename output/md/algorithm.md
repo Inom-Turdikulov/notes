@@ -27,6 +27,7 @@ mathematician called 'Al-Khwārizmī' (he is practically from my **homeland**)
 > metaphorical ways was already practiced by Alan Turing with terms such as
 > "memory", "search" and "stimulus".\
 > —&thinsp;<cite>[Algorithm - Wikipedia](https://en.wikipedia.org/wiki/Algorithm)</cite>
+<!--SR:!2023-07-20,1,230-->
 
 In general, it's, set of finite step-by-step instructions for solving some
 problem ([logical](./logic.md) or [mathematical](./mathematics.md)), or to perform some

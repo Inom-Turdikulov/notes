@@ -291,7 +291,9 @@ or variables), each identified by at least one array index or key.</p>
 when you create it). Array usually at least has an <strong>address</strong> in memory and
 <strong>size</strong> (number of items in array). Each element of array has an index
 (location of elements or address), and first index is <code>0</code>.</p>
-<p>size_of_array = <mark class="formatting_highlight">last_index + 1</mark></p>
+<p>size_of_array = last_index <mark class="formatting_highlight">+ 1</mark></p>
+<!--SR:!2023-07-21,2,236-->
+
 <table>
 <thead>
 <tr>
@@ -386,6 +388,8 @@ when you create it). Array usually at least has an <strong>address</strong> in m
 </tr>
 </tbody>
 </table>
+<!--SR:!2023-07-21,2,239-->
+
 <h2 id="array-data-type">Array (data type)</h2>
 <blockquote>
 <p>In <a href="/computer%20science.html">computer science</a>, <strong>array</strong> is a <a href="/data%20type.html">data type</a> that represents a
@@ -407,13 +411,15 @@ to <code>n-1</code> where <code>n</code> is a number of items in array.</p>
 </blockquote>
 <p>In general array is <mark class="formatting_highlight">list of data elements</mark>.
 Size of an array is <mark class="formatting_highlight">how many data elements the array holds</mark>.</p>
-<!--SR:!2023-07-15,2,230-->
+<!--SR:!2023-07-27,8,230!2023-07-21,2,239-->
 
 <p>The index of an array is the number that identifies <mark class="formatting_highlight">where a piece of data
 lives</mark> inside the array.</p>
 <p>In most programming languages, arrays are <mark class="formatting_highlight">zero-indexed</mark>, meaning that the
 first element of the array is at index 0, the second element is at index 1, and
 so on.</p>
+<!--SR:!2023-07-20,1,219-->
+
 <div class="mermaid">
 graph LR
 A[Array] --- |Index 0| B(1)
@@ -424,8 +430,10 @@ A --- |Index 3| E(4)
 
 <p>When you create array (<a href="/initialization%20%28programming%29.html">initialization (programming)</a>) you must set array size
 (number of items stored in the array). Size of array is fixed. Also, computer
-<mark class="formatting_highlight">allocate some <a href="/computer%20memory.html">memory</a></mark> for array during its
+<mark class="formatting_highlight">allocate some <a href="/computer%20memory.html">memory</a></mark> to store array, during its
 initialization.</p>
+<!--SR:!2023-07-21,2,236-->
+
 <p>When allocating an array the computer always keeps track: ? Beginning address
 and array size</p>
 <p>An array is stored such that the <strong>position of each element</strong> can be computed
@@ -487,15 +495,17 @@ value at any index by performing simple addition.</p>
 <p>Array operations explained in <a href="/array%20operations.html">array operations</a>.</p>
 <h2 id="ordered-array">Ordered array</h2>
 <p>Ordered array is same as array, but with one difference: elements in ordered
-array are <mark class="formatting_highlight">sorted in some order</mark> (usually ascending or descending), and when you
-modify array, you must keep it sorted.</p>
+array are sorted <mark class="formatting_highlight">in some order</mark> (usually ascending or descending), and when
+you modify array, you must keep it sorted.</p>
 <p>Ordered array are identical to "classic" array, but here only one difference,
 whenever you modify the array, you must keep it in <mark class="formatting_highlight">sorted order</mark>.</p>
+<!--SR:!2023-07-21,2,239-->
+
 <p>And this brings some specific rules. For example, we want to add 75 into ordered
 array at some point</p>
 <div class="lang-general">
 
-<div class="codehilite"><pre><span></span><code><span class="mf">3.17.80.202</span><span class="w">          </span><span class="err">#</span><span class="w"> </span><span class="n">initial</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="kr">to</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="mf">75</span>
+<div class="codehilite"><pre><span></span><code><span class="mf">3.17.80.202</span><span class="w">                 </span><span class="err">#</span><span class="w"> </span><span class="n">initial</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="kr">to</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="mf">75</span>
 <span class="o">*</span><span class="mf">.</span><span class="o">**</span><span class="mf">.17</span><span class="o">&lt;</span><span class="mf">75</span><span class="o">&lt;</span><span class="mf">80.</span><span class="o">**</span><span class="mf">.</span><span class="o">***</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="kr">step</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="kr">go</span><span class="w"> </span><span class="n">through</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="kr">to</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="n">place</span><span class="w"> </span><span class="kr">for</span><span class="w"> </span><span class="mf">75</span>
 <span class="w">                     </span><span class="err">#</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="kr">step</span><span class="n">s</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">called</span><span class="w"> </span><span class="n">comparison</span>
 
@@ -511,11 +521,17 @@ array at some point</p>
 
 <p>When inserting into an ordered array, we need to always conduct a <mark class="formatting_highlight">search</mark>
 before the actual insertion to determine the correct spot for the insertion.</p>
+<!--SR:!2023-07-21,2,236-->
+
 <p>In the worst case when using linear search, we spent <mark class="formatting_highlight"><span class="arithmatex">\(N+2\)</span></mark> steps to insert
 new value into ordered array. But with <a href="/not_created.html" class="nonexistent-link">binary search</a> we can insert elements
 more effectively.</p>
+<!--SR:!2023-07-20,1,216-->
+
 <p>Main advantage of ordered array is that we can use <mark class="formatting_highlight"><a href="/not_created.html" class="nonexistent-link">binary search</a></mark> algorithm
 to find elements in array very efficiently.</p>
+<!--SR:!2023-07-21,2,239-->
+
 <script>
                     function initializeMermaid() {
                         mermaid.initialize({startOnLoad:true})
@@ -549,13 +565,13 @@ to find elements in array very efficiently.</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A201896769517025191338818449517558960819{level}" class="graph_div"></div>
+    <div id="A151147321436267774629270228399368363791{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B201896769517025191338818449517558960819{level}" level="{level}" note_temp_id="201896769517025191338818449517558960819" onclick="window.ObsHtmlGraph.run(this, '201896769517025191338818449517558960819', 'array (computer science)');">
+        <button class="graph_button graph_show_button" id="B151147321436267774629270228399368363791{level}" level="{level}" note_temp_id="151147321436267774629270228399368363791" onclick="window.ObsHtmlGraph.run(this, '151147321436267774629270228399368363791', 'array (computer science)');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C201896769517025191338818449517558960819{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C151147321436267774629270228399368363791{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
