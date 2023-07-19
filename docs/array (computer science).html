@@ -489,7 +489,33 @@ value at any index by performing simple addition.</p>
 <p>Ordered array is same as array, but with one difference: elements in ordered
 array are <mark class="formatting_highlight">sorted in some order</mark> (usually ascending or descending), and when you
 modify array, you must keep it sorted.</p>
-<p>In worst case insertion in ordered array is <mark class="formatting_highlight"><span class="arithmatex">\(N+2\)</span> steps</mark>.</p>
+<p>Ordered array are identical to "classic" array, but here only one difference,
+whenever you modify the array, you must keep it in <mark class="formatting_highlight">sorted order</mark>.</p>
+<p>And this brings some specific rules. For example, we want to add 75 into ordered
+array at some point</p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="mf">3.17.80.202</span><span class="w">          </span><span class="err">#</span><span class="w"> </span><span class="n">initial</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="kr">to</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="mf">75</span>
+<span class="o">*</span><span class="mf">.</span><span class="o">**</span><span class="mf">.17</span><span class="o">&lt;</span><span class="mf">75</span><span class="o">&lt;</span><span class="mf">80.</span><span class="o">**</span><span class="mf">.</span><span class="o">***</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="kr">step</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="kr">go</span><span class="w"> </span><span class="n">through</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="kr">to</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="n">place</span><span class="w"> </span><span class="kr">for</span><span class="w"> </span><span class="mf">75</span>
+<span class="w">                     </span><span class="err">#</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="kr">step</span><span class="n">s</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">called</span><span class="w"> </span><span class="n">comparison</span>
+
+<span class="mf">3.17.80.202.</span><span class="err">[</span><span class="w"> </span><span class="err">]</span><span class="w">      </span><span class="err">#</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">allocate</span><span class="w"> </span><span class="n">memory</span><span class="w"> </span><span class="kr">for</span><span class="w"> </span><span class="kr">new</span><span class="w"> </span><span class="n">element</span>
+<span class="mf">3.17.80.</span><span class="err">[</span><span class="w"> </span><span class="err">]</span><span class="mf">.202</span><span class="w">      </span><span class="err">#</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">shift</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">elements</span><span class="w"> </span><span class="n">after</span><span class="w"> </span><span class="mf">75</span>
+<span class="mf">3.17.</span><span class="err">[</span><span class="w"> </span><span class="err">]</span><span class="mf">.80.202</span><span class="w">      </span><span class="err">#</span><span class="w"> </span><span class="n">here</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">least</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="n">operations</span><span class="err">?</span>
+
+<span class="mf">3.17.75.80.202</span><span class="w">       </span><span class="err">#</span><span class="w"> </span><span class="kr">new</span><span class="w"> </span><span class="ow">or</span><span class="n">dered</span><span class="w"> </span><span class="n">array</span>
+</code></pre></div>
+
+
+</div>
+
+<p>When inserting into an ordered array, we need to always conduct a <mark class="formatting_highlight">search</mark>
+before the actual insertion to determine the correct spot for the insertion.</p>
+<p>In the worst case when using linear search, we spent <mark class="formatting_highlight"><span class="arithmatex">\(N+2\)</span></mark> steps to insert
+new value into ordered array. But with <a href="/not_created.html" class="nonexistent-link">binary search</a> we can insert elements
+more effectively.</p>
+<p>Main advantage of ordered array is that we can use <mark class="formatting_highlight"><a href="/not_created.html" class="nonexistent-link">binary search</a></mark> algorithm
+to find elements in array very efficiently.</p>
 <script>
                     function initializeMermaid() {
                         mermaid.initialize({startOnLoad:true})
@@ -523,13 +549,13 @@ modify array, you must keep it sorted.</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A240295681742482297567121900671093397721{level}" class="graph_div"></div>
+    <div id="A201896769517025191338818449517558960819{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B240295681742482297567121900671093397721{level}" level="{level}" note_temp_id="240295681742482297567121900671093397721" onclick="window.ObsHtmlGraph.run(this, '240295681742482297567121900671093397721', 'array (computer science)');">
+        <button class="graph_button graph_show_button" id="B201896769517025191338818449517558960819{level}" level="{level}" note_temp_id="201896769517025191338818449517558960819" onclick="window.ObsHtmlGraph.run(this, '201896769517025191338818449517558960819', 'array (computer science)');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C240295681742482297567121900671093397721{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C201896769517025191338818449517558960819{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

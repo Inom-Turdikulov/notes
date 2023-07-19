@@ -304,6 +304,7 @@ calculate the memory address (simply addition) of that element in <mark class="f
 </li>
 </ul>
 <h2 id="searching">Searching</h2>
+<h3 id="linear-search">Linear search</h3>
 <p>Reading is looking to see if a particular value <mark class="formatting_highlight">exists</mark> within the array, and
 if so, at which index.</p>
 <p>Basic search operation is "<mark class="formatting_highlight">linear</mark>" search. We check each cell one at time
@@ -313,6 +314,59 @@ until we find the value we are looking for (or until we read all cells).</p>
 <p>In other words, search for an index of a value in the array, sort of <mark class="formatting_highlight">inverse</mark>
 of reading. We provide a value to the computer and asking it to return the index
 of that value's location.</p>
+<div class="lang-ruby">
+
+<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">linear_search</span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">search_value</span><span class="p">)</span>
+<span class="w">    </span><span class="c1"># Warning this example designed for sorted array.</span>
+<span class="w">    </span><span class="c1"># We iterate through every element in the array:</span>
+<span class="w">    </span><span class="n">array</span><span class="o">.</span><span class="n">each_with_index</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="o">|</span><span class="n">element</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="o">|</span>
+<span class="w">        </span><span class="c1"># If we find the value we&#39;re looking for, we return its index:</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">search_value</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">index</span>
+
+<span class="w">        </span><span class="c1"># If we reach an element that is greater than the value</span>
+<span class="w">        </span><span class="c1"># we&#39;re looking for, we can exit the loop early:</span>
+<span class="w">        </span><span class="k">elsif</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">search_value</span>
+<span class="w">            </span><span class="k">break</span>
+<span class="w">        </span><span class="k">end</span>
+<span class="w">    </span><span class="k">end</span>
+
+<span class="w">    </span><span class="c1"># We return nil if we do not find the value within the array:</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kp">nil</span>
+<span class="k">end</span>
+
+<span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">linear_search</span><span class="p">(</span><span class="o">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">202</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="mi">202</span><span class="p">)</span>
+<span class="nb">puts</span><span class="w"> </span><span class="n">i</span>
+</code></pre></div>
+
+
+</div>
+
+<p>For both kinds of arrays (sorted and unsorted), if they contain N elements,
+linear search can take up to <mark class="formatting_highlight">N steps</mark>. But if you use a binary search, which
+can be used with ordered arrays, effectiveness of search will raise
+dramatically.</p>
+<h3 id="binary-search-for-ordered-array">Binary search for ordered array</h3>
+<p>NOTE: that binary search is only possible within an ordered array, with classic
+array we need to read all cells.</p>
+<p>Example of how binary search works:</p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>#<span class="w"> </span><span class="nv">input</span><span class="w"> </span><span class="nv">data</span>:<span class="w"> </span><span class="nv">ordered</span><span class="w"> </span><span class="nv">array</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="nv">elements</span>,<span class="w"> </span><span class="nv">need</span><span class="w"> </span><span class="nv">find</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="mi">7</span>
+
+?<span class="w"> </span>?<span class="w"> </span>?<span class="w"> </span>?<span class="w"> </span>?<span class="w"> </span>?<span class="w"> </span>?<span class="w"> </span>?<span class="w"> </span>?
+<span class="w">        </span><span class="mi">9</span><span class="w">          </span>#<span class="w"> </span><span class="nv">we</span><span class="w"> </span><span class="nv">begin</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">central</span><span class="w"> </span><span class="nv">cell</span>,<span class="w"> </span><span class="nv">wich</span><span class="w"> </span><span class="nv">was</span><span class="w"> </span><span class="nv">calclulated</span>
+?<span class="w"> </span>?<span class="w"> </span>?<span class="w"> </span>?<span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="nv">x</span><span class="w">  </span>#<span class="w"> </span><span class="nv">we</span><span class="w"> </span><span class="nv">eliminated</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="nv">items</span>,<span class="w"> </span><span class="nv">because</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">less</span><span class="w"> </span><span class="nv">than</span><span class="w"> </span><span class="mi">9</span>
+?<span class="w"> </span><span class="mi">4</span><span class="w"> </span>?<span class="w"> </span>?<span class="w">            </span>#<span class="w"> </span><span class="nv">we</span><span class="w"> </span><span class="nv">inspect</span><span class="w"> </span><span class="nv">middlemost</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="ss">(</span><span class="nv">left</span><span class="w"> </span><span class="nv">one</span><span class="ss">)</span>
+<span class="nv">x</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span>?<span class="w"> </span>?<span class="w">            </span>#<span class="w"> </span><span class="nv">we</span><span class="w"> </span><span class="nv">eliminated</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nv">items</span>,<span class="w"> </span><span class="nv">because</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">more</span><span class="w"> </span><span class="nv">than</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">    </span><span class="mi">6</span><span class="w"> </span>?<span class="w">            </span>#<span class="w"> </span><span class="nv">so</span><span class="w"> </span><span class="nv">left</span><span class="w"> </span><span class="nv">only</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="nv">cell</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">we</span><span class="w"> </span><span class="nv">need</span><span class="w"> </span><span class="nv">inspect</span><span class="w"> </span><span class="nv">it</span>
+<span class="w">    </span><span class="nv">x</span><span class="w"> </span><span class="mi">7</span><span class="w">            </span>#<span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nv">here</span><span class="w"> </span><span class="nv">no</span><span class="w"> </span><span class="mi">7</span>,<span class="w"> </span><span class="nv">we</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nv">index</span>,<span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">our</span><span class="w"> </span><span class="nv">case</span><span class="w"> </span><span class="nv">we</span>
+<span class="w">                   </span>#<span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nv">index</span><span class="w"> </span><span class="sc">#3</span>
+</code></pre></div>
+
+
+</div>
+
 <h2 id="insertion">Insertion</h2>
 <p>Array insertion is operation of?
 ?
@@ -327,9 +381,9 @@ array's <mark class="formatting_highlight">size</mark>.</p>
   for array while inserting, which cost some time/operations.</p>
 </li>
 <li>
-<p>Beginning or in the middle, this operation require shifting data. In the worst
-  case (begging of array) it's <span class="arithmatex">\(N+1\)</span> steps, where <span class="arithmatex">\(N\)</span> is a number of items in
-  array.</p>
+<p>Beginning or in the middle, this operation requires shifting data. In the
+worst case (begging of array) it's <span class="arithmatex">\(N+1\)</span> steps, where <span class="arithmatex">\(N\)</span> is a number of items
+in array.</p>
 </li>
 </ul>
 <p>Inserting element into array at index means we insert it at the right place of
@@ -378,13 +432,13 @@ and <span class="arithmatex">\(N-1\)</span> (we don't need to shift deleted valu
 
 </div>
 <div class="graph requires_js ">
-    <div id="A150616378549909241331924827526685360552{level}" class="graph_div"></div>
+    <div id="A66617626134835150326636836967536273797{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B150616378549909241331924827526685360552{level}" level="{level}" note_temp_id="150616378549909241331924827526685360552" onclick="window.ObsHtmlGraph.run(this, '150616378549909241331924827526685360552', 'array operations');">
+        <button class="graph_button graph_show_button" id="B66617626134835150326636836967536273797{level}" level="{level}" note_temp_id="66617626134835150326636836967536273797" onclick="window.ObsHtmlGraph.run(this, '66617626134835150326636836967536273797', 'array operations');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C150616378549909241331924827526685360552{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C66617626134835150326636836967536273797{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

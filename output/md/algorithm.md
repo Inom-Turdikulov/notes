@@ -44,3 +44,7 @@ are written in [pseudocode](./pseudocode.md), [flowchart](./flowchart.md), or [p
 Sometimes, it’s possible to have two different algorithms that accomplish the
 same task [computational complexity](./computational%20complexity.md). One algorithm can be faster than the
 other by *orders of magnitude*.
+
+> Often there is more than one way to achieve a particular computing goal, and
+> the algorithm you choose can seriously affect the speed of your code.
+> —&thinsp;<cite>@ACommonSenseWengro2020, p. 34</cite>

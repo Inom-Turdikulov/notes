@@ -5,7 +5,7 @@
 <head>
     <!-- Page information -->
     <meta charset="UTF-8" />
-    <meta name="node_id" content="btrfs" />
+    <meta name="node_id" content="btrfs (better f s) " />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -47,7 +47,7 @@
 
     <!-- Onload tweaks -->
     <script>
-        const CURRENT_NODE = "btrfs";
+        const CURRENT_NODE = "btrfs (better f s) ";
         const HTML_URL_PREFIX = "";
         const PAGE_DEPTH = 0;
     </script>
@@ -242,7 +242,7 @@
             }
         </script>
                                     <div class="graph_header_div requires_js">
-            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=btrfs" title="Open fullpage Graph">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=btrfs (better f s) " title="Open fullpage Graph">
                     <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
             </a>
         </div>
@@ -277,7 +277,47 @@
         <div class="flex_row">
             
             <div class="container">
-                <div class="content"><h1 id="btrfs">Btrfs</h1></div>
+                <div class="content"><h1 id="btrfs-better-f-s">Btrfs (better F S)</h1>
+<p>Btrfs includes native optimizations for SSD media. To enable
+these features, mount the Btrfs filesystem with the -o SSD mount option. These
+optimizations include enhanced SSD write performance by avoiding optimization
+such as seek optimizations which do not apply to solid-state media.</p>
+<p>Asynchronous discard support is available with mount option <code>discard=async</code>, and
+is enabled by default as of linux 6.2.</p>
+<p>Here list of "safe" commands for btrfs:</p>
+<div class="lang-sh">
+
+<div class="codehilite"><pre><span></span><code>mkfs.btrfs<span class="w"> </span><span class="c1"># create a btrfs filesystem</span>
+
+btrfs<span class="w"> </span>scrub<span class="w"> </span><span class="c1"># pass over all filesystem data and metadata and verifying the</span>
+<span class="w">            </span><span class="c1"># checksums, not same as fsck</span>
+
+btrfs<span class="w"> </span>balance<span class="w"> </span><span class="c1"># spread block groups across all devices so they match constraints</span>
+<span class="w">              </span><span class="c1"># defined by the respective profiles, it&#39;s NOT a defragmentation</span>
+
+btrfs<span class="w"> </span>device<span class="w"> </span>stats<span class="w"> </span><span class="c1"># show statistics about devices, 0 means no errors</span>
+
+btrfs<span class="w"> </span>filesystem<span class="w"> </span>df<span class="w"> </span><span class="c1"># show disk space usage information for a btrfs filesystem</span>
+
+btrfs<span class="w"> </span>filesystem<span class="w"> </span>du<span class="w"> </span><span class="c1"># show disk usage by files and directories for a btrfs</span>
+<span class="w">                    </span><span class="c1"># filesystem</span>
+</code></pre></div>
+
+
+</div>
+
+<p>Periods for maintenance:
+balance - weekly, example: <code>btrfs balance -dusage=50 -dlimit=2</code>
+scrub - monthly, with full system backup
+check <code>discard=async</code> is enabled by default as of linux 6.2. TODO: check actual
+mount options.</p>
+<p><code>btrfs check</code> is not safe, it's experimental and can corrupt data (2021).</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://btrfs.readthedocs.io/en/latest/index.html" class="external-link">https://btrfs.readthedocs.io/en/latest/index.html</a></li>
+<li><a href="https://docs.docker.com/storage/storagedriver/btrfs-driver/" class="external-link">https://docs.docker.com/storage/storagedriver/btrfs-driver/</a></li>
+<li><a href="https://www.reddit.com/r/GUIX/comments/qe7sd8/btrfs_maintenance_on_guix_system_partition/" class="external-link">https://www.reddit.com/r/GUIX/comments/qe7sd8/btrfs_maintenance_on_guix_system_partition/</a></li>
+</ul></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
@@ -296,13 +336,13 @@
 
 </div>
 <div class="graph requires_js ">
-    <div id="A57504289454454321914959796568351335730{level}" class="graph_div"></div>
+    <div id="A19612144883589535287522354505300678144{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B57504289454454321914959796568351335730{level}" level="{level}" note_temp_id="57504289454454321914959796568351335730" onclick="window.ObsHtmlGraph.run(this, '57504289454454321914959796568351335730', 'btrfs');">
+        <button class="graph_button graph_show_button" id="B19612144883589535287522354505300678144{level}" level="{level}" note_temp_id="19612144883589535287522354505300678144" onclick="window.ObsHtmlGraph.run(this, '19612144883589535287522354505300678144', 'btrfs (better f s) ');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C57504289454454321914959796568351335730{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C19612144883589535287522354505300678144{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
