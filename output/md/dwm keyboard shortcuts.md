@@ -14,131 +14,101 @@ tags:
 I swapped meta key (ALT/META) to super key (WIN), which used in DWM by default
 as modifier key, to decrease key conflicts in various programs.
 
-I use VIM key notation, exceptions - `WIN` key is `Super` and few others [vim keycodes](./vim%20keycodes.md).
+Key notation in flashcards - I just use vim key notation (`:h key-notation`),
+with some exceptions.
 
-## Specific
+Here core shortcuts, which I use in DWM.
 
-Toggle sticky window
-?
-<kbd>super</kbd>+<kbd>shift</kbd>+<kbd>s</kbd>
+Kill active window (hard to avoid mistakes)::`D-S-c`
 
-Run display fix script. Sometimes it's needed to fix display after suspend or hibernate (usually after switching display).
-?
-<kbd>super</kbd>+<kbd>shift</kbd>+<kbd>ctrl</kbd>+<kbd>w</kbd>
+Power menu ::`<D-S-C-Del>`, (all modifiers + `Del`)
 
-Enable Do not Disturb mode
-?
-<kbd>super</kbd>+<kbd>ctrl</kbd>+<kbd>n</kbd>
+Pass menu::`<D-p>`
 
-Sync email (TODO: need check)
-?
-<kbd>super</kbd>+<kbd>ctrl</kbd>+<kbd>e</kbd>
+Programs menu::`<D-space>`
 
-Create Screenshot::<kbd>PrntScrn</kbd>
+Active programs::`<D-a>`
 
-TODO: create fancy screenshot with border
+Unicode and [nerdfont](./nerdfont.md) menu::`<D-u>`
 
-Create full screenshot and save it in ~/Pictures/screenshots/::<kbd>Super-PrntScrn</kbd>
-Create active window screenshot and copy to clipboard::<kbd>Super-S-PrnScrn</kbd>
+Toggle sticky on active window (topmost)::`<D-S>`
 
-Toggle full screen mode
-?
-<kbd>Super-y</kbd>
+## Programs specific shortcuts
 
-## Media keys
+Actual programs shortcuts/specific hardware control, etc. located in
+[dwm config.h](file:///home/inom/Projects/suckless/dwm-flexipatch/config.h)
+Check `SHCMD()` functions.
 
-Volume Up::<kbd>RaiseVolume</kbd>
-Volume Down::<kbd>LowerVolume</kbd>
-
-Mpv Pause::<kbd>Play</kbd>
-Mpv Next::<kbd>Next</kbd>
-Mpv Prev::<kbd>Prev</kbd>
-Mpv Forward::<kbd>Forward</kbd>
-Mpv Rewind::<kbd>Rewind</kbd>
-
-Strawberry Pause::<kbd>Super-Play</kbd>
-Strawberry Next::<kbd>Super-Next</kbd>
-Strawberry Prev::<kbd>Super-Prev</kbd>
-Strawberry Forward::<kbd>Shift-Next</kbd>
-Strawberry Rewind::<kbd>Shift-Prev</kbd>
-Strawberry Volume Up::<kbd>Super-RaiseVolume</kbd>
-Strawberry Volume Down::<kbd>Super-LowerVolume</kbd>
-
-## Run
-
-Run Browser::<kbd><M-S-2></kbd>
-Run Dictionary and Translator::<kbd><M-S-3></kbd>
-Developer Documentation::<kbd><M-S-4></kbd>
-Instant Messaging::<kbd><M-S-5></kbd>
-Image Editor::<kbd><M-S-6></kbd>
-Music Player::<kbd><M-S-7></kbd>
-Research management::<kbd><M-S-8></kbd>
-Remote Server::<kbd><M-S-9></kbd>
-Games management::<kbd><M-S-F1></kbd>
-Virtual Machine management::<kbd><M-S-F2></kbd>
-Remote connect to mobile device::<kbd><M-S-F3></kbd>
-
-[dmenu](./dmenu.md) for running programs::<kbd>Super-p</kbd>
-Terminal::<kbd>S-M-CR</kbd>
-Kill active window::<kbd>Super-S-c</kbd>
-Show tags alternatives in top bar::<kbd>Super-n</kbd>
-Toggle top bar::<kbd>Super-b</kbd>
-Focus next window::<kbd>Super-h</kbd>
-Focus prev window::<kbd>Super-l</kbd>
-Resize window to right::<kbd>Super-shift-h</kbd>
-Resize window to left::<kbd>Super-shift-l</kbd>
-Power menu::<kbd>Super-S-C-Del</kbd>
-Pass menu::<kbd>Super-S-p</kbd>
-Active programs::<kbd>Super-a</kbd>
-Unicode menu::<kbd>Super-u</kbd>
-Morc menu::<kbd>M-S-p</kbd>
-Clipboard history::<kbd>Super-v</kbd>
+Also, I have predefined workspace programs shortcuts. For example to open
+browser and feed reader I use `<M-S-2>`.
 
 ## Resize windows
 
-increase / decrease number of windows on master::Super+{i,d}
-increase / decrease master size::Super+{l,h}
-push active window from stack to master (toggle)::Super+Return
+Toggle top bar (all workspaces go into sort of full-screen mode)::`D-b`
+
+Toggle full screen mode for current window (fake full-screen)::`<D-y>`
+
+Focus next window::`<D-h>`
+
+Focus previous window::`<D-l>`
+
+Resize window to right::`<D-S-h>`, you can also "prefire" changing width
+
+Resize window to left::`<D-S-l>`
+
+Increase / decrease number of windows on master
+?
+`<D-i>`, `<D-d>`. I see here user-case when you need multiple horizontal windows
+on master.
+
+Push active window from stack to master (toggle)::`<D-CR>`
 
 ## Tags adding/removing
 
-apply tag to active window (like move window to tag)::<kbd>Super-S-{1-F4}</kbd>
-view tag::<kbd>Super-{1-F4}</kbd>
-Toglge tags (sort of alt-tab per workspaces)::<kbd>Super-Tab</kbd>
-toggle bar::Super+b
-view all windows on screen (reset - apply tag)::Super+0
+Apply tag to active window (like move window to tag)::`<D-S-1>`, ..., `<D-S-9>`
 
-toggle tag 2 on focused window (add/remove to workspace)
-you can see same window on multiple tags, on active and on tag #2!
+View tag (or switch to workspace)::`<D-1>`, ..., `<D-9>`
+
+Switch per window in current workspace::`<D-Tab>`
+
+View all windows on screen (reset - apply tag)::`<D-S-0>`
+
+Toggle tag 2 on focused window (add/remove to workspace)
+You can see same window on multiple tags, on active and on tag #2!
 ?
-Super+Shift+Control+2
+`<D-S-C-2>`
 
-
-apply tag to all (window appear on all tags), to reset apply tag again.
+Apply tag to all (window appear on all tags), to reset apply some tag.
 ?
-Super+Shift+0
+`<D-S-0>`
 
-banish tags (add/remove all windows from #2 tag)
-it's sort of moving all windows from tag #2 to current tag. On tag switch - DWM reset this.
+Banish tags (add/remove all windows from #2 tag)
+It's sort of moving all windows from tag #2 to current tag. To reset press
+again.
 ?
-Super+Control+2
-
+`<D-C-2>`
 
 ## Toggle workspace layout
 
-Tiled layout::<kbd>Super-t</kbd>
-Floating layout::<kbd>Super-f</kbd>
-Monocle layout::<kbd>Super-m</kbd>
-Toggle between tiled and floating layout::<kbd>Super+space</kbd>
-Toggle active window layout (useful to set floating)::<kbd>Super+S+space</kbd>
+I recommend test layout using at least 2 windows.
+
+Tiled layout::`<D-t>`
+Floating layout::`<D-f>`
+Monocle layout::`<D-m>`
+
+Toggle between tiled and monocle layout::`<D-C-S-space>`
 
 ## Floating windows control
 
-Drag floating window::<kbd>Super-LeftMouse</kbd>
-Make individual window float/unfloat (using mouse)::<kbd>Super+LeftMouse</kbd>
-Resize floating window (modifiers)::<kbd>Super+RightMouse</kbd>
+Toggle floating on active window::`<D-S-space>`
 
-Which keys you use as floating window resize/move keys?
+Toggle floating on active window using mouse::`Super+LeftMouse`
+
+Drag floating window using mouse (with drag)::`<D-LeftMouse>`
+
+Resize floating window using mouse (with drag)::`<D-RightMouse>`
+
+Which keys you use as floating window resize/move keys (float position patch)?
 ```
 These directions:
 ↖ ↑ ↗
@@ -147,16 +117,36 @@ These directions:
 ```
 
 ?
-q w f
-a c s
-x r d
+q f p
+r c t
+x s d
 
-Move floating window, client position is limited to monitor window area::<kbd>Mod3Mask-</kbd>
-Move floating window, absolute positioning (allows moving windows between monitors)::<kbd>Mod3Mask-C-</kbd>
-Resize client, client center position is fixed which means that client expands in all directions including center::<kbd>Mod3Mask-S-</kbd>
-Resize client, client is positioned in a floating grid, movement is relative to client's current position (center include)::<kbd>Mod3Mask-M-</kbd>
+In my case `Mod3Mask` is bind to `XF86Tools` (`F13`) key, (added manually using
+[QMK frimware](./qmk.md)).
 
-## To-Do
+To enable mod3 key I run this command in [dwm](./dwm.md) autostart script:
+`xmodmap -e "clear mod3" -e "add mod3 = XF86Tools"`
+
+Move floating window using grid
+?
+`Mod3Mask-qfprtxsd`
+
+Move floating window (more precise)
+?
+`Mod3Mask-M-qfprtxsd`
+
+Resize client, client is positioned in a floating grid, movement is relative to
+client's current position (center include)
+?
+`Mod3Mask-S-qfprtxsdc`
+
+Move floating window, absolute positioning (allows moving windows between
+monitors)?
+?
+`Mod3Mask-C-qfprtxsd`, but it's probably useless for me.
 
 
-- TODO: rewrite keybindings in more readable format
+## TODO
+
+
+- TODO: create fancy screenshot with border

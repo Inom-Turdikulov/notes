@@ -307,6 +307,9 @@ Better to check live bindings using telescope/config/etc.</p>
 <p>[x] <code>cd</code> to current file path::<code>&lt;leader&gt;z%</code> n*</p>
 </li>
 <li>
+<p>[ ] Cd to various directories::parent dir <code>:cd ..</code>, current file dir. <code>:cd %:h</code>, home dir. <code>:cd</code>, previous dir <code>:cd -</code></p>
+</li>
+<li>
 <p>[x] focus editor::<code>&lt;c-'&gt;</code></p>
 </li>
 <li>
@@ -796,6 +799,9 @@ lines</p>
 <p>[x] rename object (using LSP):<code>&lt;Leader&gt;vrn</code></p>
 </li>
 <li>
+<p>[ ] close all windows except current::<code>&lt;C-w&gt;o</code></p>
+</li>
+<li>
 <p>[x] add/remove/list workspace folders
 ?
 <code>&lt;Leader&gt;wa</code>, <code>&lt;Leader&gt;wr</code>, <code>&lt;Leader&gt;wl</code>. Pycharm alternative is project
@@ -808,42 +814,8 @@ structure. n*</p>
 <p>[x] parsed syntax-tree view::<code>:TSPlaygroundToggle</code> n*</p>
 </li>
 </ul>
-<h2 id="netrw">netrw</h2>
-<ul>
-<li>
-<p>[x] <a href="https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/" class="external-link">Using Netrw, vim's builtin file explorer</a></p>
-</li>
-<li>
-<p>[x] locate file in file manager::<code>&lt;leader&gt;pv</code> or <code>:Explore</code> or <code>:Ex</code></p>
-</li>
-<li>
-<p>[x] Explore variants:<code>:Vexplore</code>, <code>:Hexplore</code>, <code>:Texplore</code>, <code>:Sexplore</code></p>
-</li>
-<li>
-<p>[x] Open/parent directory/previous directory/add bookmark/most recent bookmark
-?
-<code>&lt;cr&gt;</code>, <code>-</code>, <code>u</code>, <code>mb</code>, <code>gb</code></p>
-</li>
-<li>
-<p>[ ] remove the most recent bookmark::<code>mB</code></p>
-</li>
-<li>[x] preview window/close preview window::<code>p</code>, <code>&lt;C-w&gt;z</code></li>
-<li>[x] toggle hidden files::<code>gh</code></li>
-<li>[x] create file::<code>%</code></li>
-<li>[x] create directory::<code>d</code></li>
-<li>[x] rename (move) file::<code>R</code></li>
-<li>[x] Marks a file or directory::<code>mf</code></li>
-<li>[x] Clear marks in current buffer::<code>mF</code></li>
-<li>[x] Clear all marks::<code>mu</code></li>
-<li>[x] Assign the "target directory" used by the move and copy commands.::<code>mt</code></li>
-<li>[x] Assign target directory and copy in one command::<code>mtmc</code></li>
-<li>[x] Copy/move the marked files in the target directory.::<code>mc</code>, <code>mm</code></li>
-<li>[x] Runs an external command on the marked files.::<code>mx</code></li>
-<li>[x] Delete a file or an empty directory::<code>D</code></li>
-<li>[x] Delete a file or directory recursively::<code>mx</code> then <code>trash</code></li>
-<li>[x] Toggle banner::<code>I</code></li>
-<li>[x] List key mappings::<code>F1</code></li>
-</ul>
+<h2 id="netrw"><a href="/netrw.html">netrw</a></h2>
+<p>Main file manager</p>
 <h2 id="sql">SQL</h2>
 <ul>
 <li>[x] toggle DB UI::<code>&lt;leader&gt;qt</code></li>
@@ -902,7 +874,11 @@ structure. n*</p>
 <li>[ ] execute current file (open externally) leader o or leader O (run using xdg-open)</li>
 <li>[ ] <a href="https://github.com/stevearc/aerial.nvim" class="external-link">https://github.com/stevearc/aerial.nvim</a></li>
 <li>[ ] <a href="https://learnvim.irian.to/basics/fold" class="external-link">https://learnvim.irian.to/basics/fold</a></li>
-</ul></div>
+</ul>
+<h2 id="custom_1">Custom</h2>
+<p>replace single quotes to double: <code>:s/\'\(.*\)\'/\"\1\"</code></p>
+<p>map specific insert key in specific terminal: CTRL-K CTRL-F1 to get key code,
+then map it...</p></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
@@ -923,13 +899,13 @@ structure. n*</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A15761707639213124471661110099377976972{level}" class="graph_div"></div>
+    <div id="A49433519889638193481988408482713468814{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B15761707639213124471661110099377976972{level}" level="{level}" note_temp_id="15761707639213124471661110099377976972" onclick="window.ObsHtmlGraph.run(this, '15761707639213124471661110099377976972', 'my editing workflow');">
+        <button class="graph_button graph_show_button" id="B49433519889638193481988408482713468814{level}" level="{level}" note_temp_id="49433519889638193481988408482713468814" onclick="window.ObsHtmlGraph.run(this, '49433519889638193481988408482713468814', 'my editing workflow');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C15761707639213124471661110099377976972{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C49433519889638193481988408482713468814{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

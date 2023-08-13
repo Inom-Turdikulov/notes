@@ -312,6 +312,18 @@ scrub - monthly, with full system backup
 check <code>discard=async</code> is enabled by default as of linux 6.2. TODO: check actual
 mount options.</p>
 <p><code>btrfs check</code> is not safe, it's experimental and can corrupt data (2021).</p>
+<p>Resize filesystem (root volume) to maximum size</p>
+<div class="lang-sh">
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># first check lsblk -f</span>
+parted<span class="w"> </span>/dev/sdb<span class="w"> </span>resizepart<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="c1"># 2 here is partition numper</span>
+btrfs<span class="w"> </span>filesystem<span class="w"> </span>resize<span class="w"> </span>max<span class="w"> </span>/
+btrfs<span class="w"> </span><span class="k">fi</span><span class="w"> </span>show<span class="w"> </span>/<span class="w"> </span><span class="c1"># validate size</span>
+</code></pre></div>
+
+
+</div>
+
 <h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://btrfs.readthedocs.io/en/latest/index.html" class="external-link">https://btrfs.readthedocs.io/en/latest/index.html</a></li>
@@ -336,13 +348,13 @@ mount options.</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A19612144883589535287522354505300678144{level}" class="graph_div"></div>
+    <div id="A291567090987025629114036526166064377906{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B19612144883589535287522354505300678144{level}" level="{level}" note_temp_id="19612144883589535287522354505300678144" onclick="window.ObsHtmlGraph.run(this, '19612144883589535287522354505300678144', 'btrfs (better f s) ');">
+        <button class="graph_button graph_show_button" id="B291567090987025629114036526166064377906{level}" level="{level}" note_temp_id="291567090987025629114036526166064377906" onclick="window.ObsHtmlGraph.run(this, '291567090987025629114036526166064377906', 'btrfs (better f s) ');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C19612144883589535287522354505300678144{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C291567090987025629114036526166064377906{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

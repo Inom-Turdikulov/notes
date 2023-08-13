@@ -5,7 +5,7 @@
 <head>
     <!-- Page information -->
     <meta charset="UTF-8" />
-    <meta name="node_id" content="dwm keyboard shortcuts" />
+    <meta name="node_id" content="nerdfont" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -47,7 +47,7 @@
 
     <!-- Onload tweaks -->
     <script>
-        const CURRENT_NODE = "dwm keyboard shortcuts";
+        const CURRENT_NODE = "nerdfont";
         const HTML_URL_PREFIX = "";
         const PAGE_DEPTH = 0;
     </script>
@@ -242,7 +242,7 @@
             }
         </script>
                                     <div class="graph_header_div requires_js">
-            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=dwm keyboard shortcuts" title="Open fullpage Graph">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=nerdfont" title="Open fullpage Graph">
                     <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
             </a>
         </div>
@@ -277,108 +277,12 @@
         <div class="flex_row">
             
             <div class="container">
-                <div class="content"><h1 id="dwm-keyboard-shortcuts">dwm keyboard shortcuts</h1>
-<p>I swapped meta key (ALT/META) to super key (WIN), which used in DWM by default
-as modifier key, to decrease key conflicts in various programs.</p>
-<p>Key notation in flashcards - I just use vim key notation (<code>:h key-notation</code>),
-with some exceptions.</p>
-<p>Here core shortcuts, which I use in DWM.</p>
-<p>Kill active window (hard to avoid mistakes)::<code>D-S-c</code></p>
-<p>Power menu ::<code>&lt;D-S-C-Del&gt;</code>, (all modifiers + <code>Del</code>)</p>
-<p>Pass menu::<code>&lt;D-p&gt;</code></p>
-<p>Programs menu::<code>&lt;D-space&gt;</code></p>
-<p>Active programs::<code>&lt;D-a&gt;</code></p>
-<p>Unicode and <a href="/nerdfont.html">nerdfont</a> menu::<code>&lt;D-u&gt;</code></p>
-<p>Toggle sticky on active window (topmost)::<code>&lt;D-S&gt;</code></p>
-<h2 id="programs-specific-shortcuts">Programs specific shortcuts</h2>
-<p>Actual programs shortcuts/specific hardware control, etc. located in
-<a href="file:///home/inom/Projects/suckless/dwm-flexipatch/config.h" class="external-link">dwm config.h</a>
-Check <code>SHCMD()</code> functions.</p>
-<p>Also, I have predefined workspace programs shortcuts. For example to open
-browser and feed reader I use <code>&lt;M-S-2&gt;</code>.</p>
-<h2 id="resize-windows">Resize windows</h2>
-<p>Toggle top bar (all workspaces go into sort of full-screen mode)::<code>D-b</code></p>
-<p>Toggle full screen mode for current window (fake full-screen)::<code>&lt;D-y&gt;</code></p>
-<p>Focus next window::<code>&lt;D-h&gt;</code></p>
-<p>Focus previous window::<code>&lt;D-l&gt;</code></p>
-<p>Resize window to right::<code>&lt;D-S-h&gt;</code>, you can also "prefire" changing width</p>
-<p>Resize window to left::<code>&lt;D-S-l&gt;</code></p>
-<p>Increase / decrease number of windows on master
-?
-<code>&lt;D-i&gt;</code>, <code>&lt;D-d&gt;</code>. I see here user-case when you need multiple horizontal windows
-on master.</p>
-<p>Push active window from stack to master (toggle)::<code>&lt;D-CR&gt;</code></p>
-<h2 id="tags-adding-removing">Tags adding/removing</h2>
-<p>Apply tag to active window (like move window to tag)::<code>&lt;D-S-1&gt;</code>, ..., <code>&lt;D-S-9&gt;</code></p>
-<p>View tag (or switch to workspace)::<code>&lt;D-1&gt;</code>, ..., <code>&lt;D-9&gt;</code></p>
-<p>Switch per window in current workspace::<code>&lt;D-Tab&gt;</code></p>
-<p>View all windows on screen (reset - apply tag)::<code>&lt;D-S-0&gt;</code></p>
-<p>Toggle tag 2 on focused window (add/remove to workspace)
-You can see same window on multiple tags, on active and on tag #2!
-?
-<code>&lt;D-S-C-2&gt;</code></p>
-<p>Apply tag to all (window appear on all tags), to reset apply some tag.
-?
-<code>&lt;D-S-0&gt;</code></p>
-<p>Banish tags (add/remove all windows from #2 tag)
-It's sort of moving all windows from tag #2 to current tag. To reset press
-again.
-?
-<code>&lt;D-C-2&gt;</code></p>
-<h2 id="toggle-workspace-layout">Toggle workspace layout</h2>
-<p>I recommend test layout using at least 2 windows.</p>
-<p>Tiled layout::<code>&lt;D-t&gt;</code>
-Floating layout::<code>&lt;D-f&gt;</code>
-Monocle layout::<code>&lt;D-m&gt;</code></p>
-<p>Toggle between tiled and monocle layout::<code>&lt;D-C-S-space&gt;</code></p>
-<h2 id="floating-windows-control">Floating windows control</h2>
-<p>Toggle floating on active window::<code>&lt;D-S-space&gt;</code></p>
-<p>Toggle floating on active window using mouse::<code>Super+LeftMouse</code></p>
-<p>Drag floating window using mouse (with drag)::<code>&lt;D-LeftMouse&gt;</code></p>
-<p>Resize floating window using mouse (with drag)::<code>&lt;D-RightMouse&gt;</code></p>
-<p>Which keys you use as floating window resize/move keys (float position patch)?</p>
-<div class="lang-general">
-
-<div class="codehilite"><pre><span></span><code>These directions:
-↖ ↑ ↗
-← . →
-↙ ↓ ↘
-</code></pre></div>
-
-
-</div>
-
-<p>?
-q f p
-r c t
-x s d</p>
-<p>In my case <code>Mod3Mask</code> is bind to <code>XF86Tools</code> (<code>F13</code>) key, (added manually using
-<a href="/qmk.html">QMK frimware</a>).</p>
-<p>To enable mod3 key I run this command in <a href="/dwm.html">dwm</a> autostart script:
-<code>xmodmap -e "clear mod3" -e "add mod3 = XF86Tools"</code></p>
-<p>Move floating window using grid
-?
-<code>Mod3Mask-qfprtxsd</code></p>
-<p>Move floating window (more precise)
-?
-<code>Mod3Mask-M-qfprtxsd</code></p>
-<p>Resize client, client is positioned in a floating grid, movement is relative to
-client's current position (center include)
-?
-<code>Mod3Mask-S-qfprtxsdc</code></p>
-<p>Move floating window, absolute positioning (allows moving windows between
-monitors)?
-?
-<code>Mod3Mask-C-qfprtxsd</code>, but it's probably useless for me.</p>
-<h2 id="todo">TODO</h2>
-<ul>
-<li>TODO: create fancy screenshot with border</li>
-</ul></div>
+                <div class="content"><h1 id="nerdfont">Nerdfont</h1></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
 <ul>
-	<li><a class="backlink" href="/dwm.html">dwm</a></li>
+	<li><a class="backlink" href="/dwm keyboard shortcuts.html">dwm keyboard shortcuts</a></li>
 </ul>
 </div>
 
@@ -386,19 +290,19 @@ monitors)?
 <h2>Tags</h2>
 <ul>
 	<li><a class="backlink" href="/obs.html/tags/inbox/index.html">inbox</a></li>
-	<li><a class="backlink" href="/obs.html/tags/dev-tip/index.html">dev-tip</a></li>
+	<li><a class="backlink" href="/obs.html/tags/definition/index.html">definition</a></li>
 </ul>
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A265933159656487464683168808800153200096{level}" class="graph_div"></div>
+    <div id="A280035925053258760188107102463617382458{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B265933159656487464683168808800153200096{level}" level="{level}" note_temp_id="265933159656487464683168808800153200096" onclick="window.ObsHtmlGraph.run(this, '265933159656487464683168808800153200096', 'dwm keyboard shortcuts');">
+        <button class="graph_button graph_show_button" id="B280035925053258760188107102463617382458{level}" level="{level}" note_temp_id="280035925053258760188107102463617382458" onclick="window.ObsHtmlGraph.run(this, '280035925053258760188107102463617382458', 'nerdfont');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C265933159656487464683168808800153200096{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C280035925053258760188107102463617382458{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

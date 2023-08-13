@@ -13,7 +13,7 @@ tags:
 # dwm (dynamic window manager)
 
 > dwm is a dynamic window manager for X. It manages windows in tiled, monocle
-> and floating layouts. All of the layouts can be applied dynamically,
+> and floating layouts. All the layouts can be applied dynamically,
 > optimizing the environment for the application in use and the task performed\
 > —&thinsp;<cite>[dwm](https://dwm.suckless.org/)</cite>
 
@@ -28,7 +28,7 @@ maybe not clear logic if you use it first time, but It's all manageable and
 solvable. Especially if you use something like `DWM flexipatch`.
 
 Right now I use various patches, with this DWM fork:
-[bakkeby/dwm-flexipatch](https://github.com/bakkeby/dwm-flexipatch).
+[bakkeby/dwm-flexipatch](https://github.com/Inom-Turdikulov/dwm-flexipatch).
 
 To use dwm effectively, I use my own [dwm keyboard shortcuts](./dwm%20keyboard%20shortcuts.md).
 
@@ -101,6 +101,19 @@ Keyboard shortcuts are described in [dwm keyboard shortcuts](./dwm%20keyboard%20
 - <[https://ratfactor.com/dwm>](https://ratfactor.com/dwm>)
 - <[https://wiki.gentoo.org/wiki/Dwm>](https://wiki.gentoo.org/wiki/Dwm>)
 - <[https://dwm.suckless.org/customisation/windows_key/>](https://dwm.suckless.org/customisation/windows_key/>)
+
+## Workspaces (beta)
+
+
+- [1] My main working workspace. Usually tmux session in pair with terminal.
+- [2] Browser workspace, also contains [newsboat](./newsboat.md) tmux session.
+- [3] [ChatGPT](./chatgpt.md) + and [translate-shell](./translate-shell.md) workspace
+- [4] My personal wiki/education workspace, neovim with wiki project
+- [5] My personal art/game_dev workspace, [krita](./krita.md), [godot engine](./godot%20engine.md), etc.
+- [6] VM/ssh workspace
+- [7] Free* workspaces
+- [8] Working Chat workspace, usually Slack++
+- [9] Personal [chat](./weechat.md), stream and [music](/not_created.md) workspace.
 
 ## To-Do
 

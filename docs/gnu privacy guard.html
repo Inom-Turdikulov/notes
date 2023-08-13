@@ -294,7 +294,262 @@ standard and has been part of PGP from its first version.</p>
 <p>The GnuPG 1.x series uses an integrated cryptographic library, while the GnuPG
 1.x series replaces this with Libgcrypt.</p>
 <p>-- <a href="https://en.wikipedia.org/wiki/GNU_Privacy_Guard" class="external-link">Wikipedia</a></p>
-</blockquote></div>
+</blockquote>
+<h2 id="subkeys-usage">Subkeys Usage</h2>
+<p>Being able to store the primary key offline or a more secure device. If a
+machine with a subkey is harmed, you can easily revoke the subkey without all
+the hassles of revoking your primary key (sharing a new key, getting new
+signatures, ...).</p>
+<p>Having different subkeys on different machines, for example a signing subkey on
+a build server. Again, revoking single keys is easy.</p>
+<p>Using a larger primary key for long lifetime, and shorter, but faster subkeys
+for day-to-day usage.</p>
+<p>Some algorithms do not support both encrypting and signing. For example, a DSA
+primary key requires another key for encryption, typically paired with ElGamal.</p>
+<h2 id="basic-commands">Basic commands</h2>
+<p>You can generate GPG key with <code>gpg --generate-key</code> command.
+Or <code>gpg --full-generate-key --expert</code> for more options.</p>
+<p>To check GPG keys, installed on your system run <code>gpg --list-key</code>.</p>
+<p>To export public key with specific email,
+run <code>gpg --output &lt;path/key_name.gpg&gt; --export --armor &lt;email&gt;</code>.</p>
+<p>To export private key with specific email,
+run <code>gpg --output &lt;path/key_name.gpg&gt; --export-secret-key --armor &lt;email&gt;</code>.</p>
+<p>If required backup, recommended using this command:
+<code>gpg --output &lt;path/key_name.gpg&gt; --armor --export-secret-keys --export-options export-backup &lt;email&gt;</code></p>
+<p>If required, you can trust your own key with this algorithm:
+1. <code>gpg --edit-key &lt;email&gt;</code>
+2. <code>trust</code>
+3. <code>5</code> (ultimate trust, in our case)
+4. <code>y</code> (yes)
+5. <code>quit</code></p>
+<h2 id="gnupg-backup-steps">GnuPG backup steps</h2>
+<p>First, before we begin, your@id.here represents your GPG key ID. This
+could be your email address or the key ID.</p>
+<p>Indeed, your private key is critical, but other files are also important.</p>
+<p>If you want save your user attributes, signatures (including local signatures),
+and ownertrust values use <code>--export-options backup</code> on export and
+<code>--import-options restore</code> on import.</p>
+<ol>
+<li>Export keys and ownertrust:</li>
+</ol>
+<p>These commands are intended to export your keys and trust level. Public and
+private keys are used for encryption/decryption, and the trust level determines
+how much you trust other keys in your keyring.</p>
+<p>Run the following commands in your command line (Command Prompt for Windows,
+Terminal for macOS and Linux). Replace "your@id.here" with your GPG key ID:</p>
+<div class="lang-sh">
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># First get your keys list with keygrips</span>
+gpg<span class="w"> </span>-k
+
+<span class="c1"># --armor option to, in order to create an ASCII version of the key that is not</span>
+<span class="c1"># binary and readable</span>
+
+<span class="c1"># In order to save all the Public Keys we have imported to our system, we need to</span>
+<span class="c1"># backup them. The Public Keys are saved at the ~/.gnupg/pubring.kbx and</span>
+<span class="c1"># ~/.gnupg/pubring.gpg files. But we do need to backup the files directly, it is</span>
+<span class="c1"># better to use the --export option.</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">KEYGRIP</span><span class="o">=</span>0X1234567890ABCDEF...
+gpg<span class="w"> </span>--output<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">KEYGRIP</span><span class="si">}</span><span class="s2">_public.pub&quot;</span><span class="w"> </span>--export<span class="w"> </span>--armor<span class="w"> </span><span class="nv">$KEYGRIP</span>
+
+<span class="c1"># Export private key</span>
+<span class="c1"># Note: Although the exported Private Key is encrypted with your passphrase, be</span>
+<span class="c1"># very carefull with this file, as if it gets compromised and brute-forced,</span>
+<span class="c1"># anyone can impersonate you and read all your encrypted files and emails.</span>
+gpg<span class="w"> </span>--export-secret-keys<span class="w"> </span>--armor<span class="w"> </span>--output<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">KEYGRIP</span><span class="si">}</span><span class="s2">_private.asc&quot;</span><span class="w"> </span><span class="nv">$KEYGRIP</span>
+gpg<span class="w"> </span>--export-secret-subkeys<span class="w"> </span>--armor<span class="w"> </span>--output<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">KEYGRIP</span><span class="si">}</span><span class="s2">_private_sub.asc&quot;</span><span class="w"> </span><span class="nv">$KEYGRIP</span>
+
+<span class="c1"># The GPG Trust Database is used to keep the trust values for each of the Public</span>
+<span class="c1"># Keys you have.</span>
+gpg<span class="w"> </span>--export-ownertrust<span class="w"> </span>&gt;<span class="w"> </span>all_keys_ownertrust.txt
+
+<span class="c1"># ~/.gnupg/openpgp-revocs.d/ # This is the directory where gpg stores</span>
+<span class="c1"># pre-generated revocation certificates. The file name corresponds to the OpenPGP</span>
+<span class="c1"># fingerprint of the respective key. It is suggested to backup those certificates</span>
+<span class="c1"># and if the primary private key is not stored on the disk to move them to an</span>
+<span class="c1"># external storage device. Anyone who can access these files is able to revoke the</span>
+<span class="c1"># corresponding key. You may want to print them out. You should backup all files</span>
+<span class="c1"># in this directory and take care to keep this backup closed away.</span>
+
+<span class="c1"># Generate revoke key</span>
+gpg<span class="w"> </span>--gen-revoke<span class="w"> </span>--armor<span class="w"> </span>--output<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">KEYGRIP</span><span class="si">}</span><span class="s2">_revoke.asc&quot;</span><span class="w"> </span><span class="nv">$KEYGRIP</span>
+</code></pre></div>
+
+
+</div>
+
+<ol>
+<li>Import keys and ownertrust:</li>
+</ol>
+<p>If you need to restore your keys and trust level (e.g., after reinstalling the
+system or on a new computer), use the following commands:</p>
+<div class="lang-sh">
+
+<div class="codehilite"><pre><span></span><code>gpg<span class="w"> </span>--import<span class="w"> </span>..._public.pub
+gpg<span class="w"> </span>--import<span class="w"> </span>..._private.asc
+gpg<span class="w"> </span>--import<span class="w"> </span>..._private_sub.asc
+
+<span class="c1"># NOTE: To import the Trust Database, we need to first delete the current one:</span>
+<span class="c1"># rm ~/.gnupg/trustdb.gpg</span>
+gpg<span class="w"> </span>--import-ownertrust<span class="w"> </span>ownertrust.txt
+</code></pre></div>
+
+
+</div>
+
+<ol>
+<li>Ultimately trust the imported key (optional if ownertrust is not imported):</li>
+</ol>
+<p>This step is needed to set the ultimate trust level for your keys. Run the
+following command, then type trust, then 5 (which means "ultimate trust") and
+hit Enter:</p>
+<div class="lang-sh">
+
+<div class="codehilite"><pre><span></span><code>gpg<span class="w"> </span>--edit-key<span class="w"> </span>your@id.here<span class="w"> </span>gpg&gt;<span class="w"> </span>trust<span class="w"> </span>Your<span class="w"> </span>decision?<span class="w"> </span><span class="m">5</span><span class="w"> </span>Note:<span class="w"> </span>If<span class="w"> </span>you<span class="err">&#39;</span>re
+</code></pre></div>
+
+
+</div>
+
+<ol>
+<li>Import revocation certificate (optional, if you need revoke key):</li>
+</ol>
+<div class="lang-sh">
+
+<div class="codehilite"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;-----BEGIN PGP PUBLIC KEY BLOCK-----</span>
+<span class="s2">Comment: This is a revocation certificate</span>
+
+<span class="s2">....</span>
+<span class="s2">-----END PGP PUBLIC KEY BLOCK-----&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--import<span class="w"> </span>-
+</code></pre></div>
+
+
+</div>
+
+<ol>
+<li>Delete keys (optional!)</li>
+</ol>
+<div class="lang-sh">
+
+<div class="codehilite"><pre><span></span><code>gpg<span class="w"> </span>-k
+gpg<span class="w"> </span>--delete-keys<span class="w"> </span>...
+gpg<span class="w"> </span>--delete-secret-keys<span class="w"> </span>...
+gpg<span class="w"> </span>-k
+</code></pre></div>
+
+
+</div>
+
+<p>If you want to delete the Private Key file you created, you can use the
+<a href="/shred.html">shred</a> utility to delete the file permanently and make it harder to be
+recovered by overwriting it:</p>
+<div class="lang-sh">
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># The shred options, do the following:</span>
+<span class="c1">#</span>
+<span class="c1"># z: add a final overwrite with zeros to hide shredding</span>
+<span class="c1"># u: de-allocate and remove file after overwriting</span>
+<span class="c1"># v: show progress</span>
+
+shred<span class="w"> </span>-zuv<span class="w"> </span>privatekey.asc
+</code></pre></div>
+
+
+</div>
+
+<h2 id="gnupg-to-ssh">GnuPG to SSH</h2>
+<ol>
+<li>Find fingerprint of your RSA key:
+   <code>gpg --list-secret-keys --keyid-format short</code> or <code>gpg -K</code></li>
+<li>Next, you can use openpgp2ssh tool distributed in with monkeyshpere project:</li>
+</ol>
+<div class="lang-sh">
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># 01234567 must be fingerprint of a RSA key (or subkey)</span>
+<span class="c1"># gpg --export-secret-keys also accept finger print of global key  (in this</span>
+<span class="c1"># case, it exports all sub-keys). # However, openpgp2ssh only accept finger</span>
+<span class="c1"># print of an RSA key If no arguments are provided, openpgp2ssh export RSA</span>
+<span class="c1"># keys it find</span>
+gpg<span class="w"> </span>--export-secret-keys<span class="w"> </span><span class="o">(</span>or<span class="w"> </span>--export-secret-subkeys<span class="o">)</span><span class="w"> </span><span class="m">01234567</span>!<span class="w"> </span><span class="p">|</span><span class="w"> </span>openpgp2ssh<span class="w"> </span><span class="m">01234567</span><span class="w"> </span>&gt;<span class="w"> </span>id_rsa
+</code></pre></div>
+
+
+</div>
+
+<ol>
+<li>You can now extract ssh public key using: <code>ssh-keygen -y -f id_rsa &gt; id_rsa.pub</code></li>
+</ol>
+<h2 id="uploading-the-key-to-keyserver">Uploading the key to keyserver</h2>
+<p>This section explains how to upload your public key to a keyserver so that
+anyone can download it. Once you have uploaded it to one keyserver, it will
+propagate to the other keyservers. Eventually most of the keyservers will have a
+copy of your key. You can accelerate the process by uploading your key to
+several keyservers.</p>
+<p>To upload the key, enter:</p>
+<div class="lang-sh">
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># get key id</span>
+gpg<span class="w"> </span>--list-keys<span class="w"> </span>--keyid-format<span class="w"> </span>short
+<span class="nb">export</span><span class="w"> </span><span class="nv">GPGKEY</span><span class="o">=</span><span class="m">01234567</span>
+gpg<span class="w"> </span>--send-keys<span class="w"> </span>--keyserver<span class="w"> </span>keyserver.ubuntu.com<span class="w"> </span><span class="nv">$GPGKEY</span>
+</code></pre></div>
+
+
+</div>
+
+<p>Note that keyserver.ubuntu.com is only reachable via IPv4.</p>
+<h2 id="test-gnupg">Test GnuPG</h2>
+<p>A useful gpg option to experiment is <code>--homedir</code>:</p>
+<div class="lang-sh">
+
+<div class="codehilite"><pre><span></span><code>gpg<span class="w"> </span>--homedir<span class="w"> </span>~/tmp<span class="w"> </span>--list-keys
+<span class="c1"># Or alternatively use GNUPGHOME</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">GNUPGHOME</span><span class="o">=</span>~/tmp
+gpg<span class="w"> </span>--list-keys
+</code></pre></div>
+
+
+</div>
+
+<p>This way your default keyring, trust database, etc. get ignored, and you have a
+fresh keyring with which you can test if the conversion/import was successful.</p>
+<h2 id="fix-permissions">Fix permissions</h2>
+<p>To fix the " gpg: WARNING: unsafe permissions on homedir '/home/path/to/user/.gnupg' " error</p>
+<div class="lang-sh">
+
+<div class="codehilite"><pre><span></span><code>chown<span class="w"> </span>-R<span class="w"> </span><span class="k">$(</span>whoami<span class="k">)</span><span class="w"> </span>~/.gnupg/
+
+<span class="c1"># Also correct the permissions and access rights on the directory</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.gnupg/*
+chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>~/.gnupg
+</code></pre></div>
+
+
+</div>
+
+<h3 id="key-servers-list">Key servers list:</h3>
+<ul>
+<li>
+<p><a href="https://keyserver.ubuntu.com/." class="external-link">https://keyserver.ubuntu.com/.</a> Ubuntu keyserver: federated, no verification,
+keys cannot be deleted.</p>
+</li>
+<li>
+<p><a href="https://keys.mailvelope.com/." class="external-link">https://keys.mailvelope.com/.</a> Mailvelope keyserver: central, verification of
+email IDs, keys can be deleted.</p>
+</li>
+<li>
+<p><a href="https://keys.openpgp.org/." class="external-link">https://keys.openpgp.org/.</a> central, verification of email IDs, keys can be
+deleted, no third-party signatures (i.e. no Web of Trust support).</p>
+</li>
+<li>
+<p>keybase.io</p>
+</li>
+</ul>
+<p>More: <a href="https://en.wikipedia.org/wiki/Key_server_(cryptographic)#Keyserver_examples" class="external-link">https://en.wikipedia.org/wiki/Key_server_(cryptographic)#Keyserver_examples</a></p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://wiki.archlinux.org/title/GnuPG" class="external-link">https://wiki.archlinux.org/title/GnuPG</a></li>
+</ul></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
@@ -315,13 +570,13 @@ standard and has been part of PGP from its first version.</p>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A263663564290083759380232641800783962865{level}" class="graph_div"></div>
+    <div id="A212175695568804572245660583735052570949{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B263663564290083759380232641800783962865{level}" level="{level}" note_temp_id="263663564290083759380232641800783962865" onclick="window.ObsHtmlGraph.run(this, '263663564290083759380232641800783962865', 'gnu privacy guard');">
+        <button class="graph_button graph_show_button" id="B212175695568804572245660583735052570949{level}" level="{level}" note_temp_id="212175695568804572245660583735052570949" onclick="window.ObsHtmlGraph.run(this, '212175695568804572245660583735052570949', 'gnu privacy guard');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C263663564290083759380232641800783962865{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C212175695568804572245660583735052570949{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

@@ -48,6 +48,9 @@ Insert new line above/below::`[<space>`, `]<space>`
 - [x] `cd` to current file path::`<leader>z%` n\*
 
 
+- [ ] Cd to various directories::parent dir `:cd ..`, current file dir. `:cd %:h`, home dir. `:cd`, previous dir `:cd -`
+
+
 - [x] focus editor::`<c-'>`
 
 
@@ -541,6 +544,9 @@ lines
 - [x] rename object (using LSP):`<Leader>vrn`
 
 
+- [ ] close all windows except current::`<C-w>o`
+
+
 - [x] add/remove/list workspace folders
 ?
 `<Leader>wa`, `<Leader>wr`, `<Leader>wl`. Pycharm alternative is project
@@ -552,37 +558,9 @@ structure. n\*
 
 - [x] parsed syntax-tree view::`:TSPlaygroundToggle` n\*
 
-## netrw
+## [netrw](./netrw.md)
 
-
-- [x] [Using Netrw, vim's builtin file explorer](https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/)
-
-
-- [x] locate file in file manager::`<leader>pv` or `:Explore` or `:Ex`
-
-
-- [x] Explore variants:`:Vexplore`, `:Hexplore`, `:Texplore`, `:Sexplore`
-- [x] Open/parent directory/previous directory/add bookmark/most recent bookmark
-?
-`<cr>`, `-`, `u`, `mb`, `gb`
-
-- [ ] remove the most recent bookmark::`mB`
-- [x] preview window/close preview window::`p`, `<C-w>z`
-- [x] toggle hidden files::`gh`
-- [x] create file::`%`
-- [x] create directory::`d`
-- [x] rename (move) file::`R`
-- [x] Marks a file or directory::`mf`
-- [x] Clear marks in current buffer::`mF`
-- [x] Clear all marks::`mu`
-- [x] Assign the "target directory" used by the move and copy commands.::`mt`
-- [x] Assign target directory and copy in one command::`mtmc`
-- [x] Copy/move the marked files in the target directory.::`mc`, `mm`
-- [x] Runs an external command on the marked files.::`mx`
-- [x] Delete a file or an empty directory::`D`
-- [x] Delete a file or directory recursively::`mx` then `trash`
-- [x] Toggle banner::`I`
-- [x] List key mappings::`F1`
+Main file manager
 
 ## SQL
 
@@ -648,3 +626,11 @@ structure. n\*
 - [ ] execute current file (open externally) leader o or leader O (run using xdg-open)
 - [ ] [https://github.com/stevearc/aerial.nvim](https://github.com/stevearc/aerial.nvim)
 - [ ] [https://learnvim.irian.to/basics/fold](https://learnvim.irian.to/basics/fold)
+
+
+
+## Custom
+replace single quotes to double: `:s/\'\(.*\)\'/\"\1\"`
+
+map specific insert key in specific terminal: CTRL-K CTRL-F1 to get key code,
+then map it...
